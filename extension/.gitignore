@@ -1,0 +1,8 @@
+# WXT / Node
+node_modules/
+.wxt/
+.output/
+dist/
+
+# 不要把构建产物提交
+*.zip

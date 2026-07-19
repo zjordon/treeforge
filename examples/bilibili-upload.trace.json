@@ -1,0 +1,135 @@
+{
+  "host": "bilibili.com",
+  "task_instruction": "在 B 站投稿上传一个视频",
+  "events": [
+    {
+      "type": "navigate",
+      "target": "B 站首页",
+      "selector": null,
+      "url": "https://www.bilibili.com/",
+      "value": null,
+      "timestamp": 0
+    },
+    {
+      "type": "click",
+      "target": "投稿按钮",
+      "selector": ".header-entry .upload-btn, [aria-label='投稿']",
+      "url": "https://www.bilibili.com/",
+      "value": null,
+      "timestamp": 1200
+    },
+    {
+      "type": "navigate",
+      "target": "投稿页",
+      "selector": null,
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "timestamp": 2400
+    },
+    {
+      "type": "change",
+      "target": "视频文件选择",
+      "selector": "input[type='file'][accept='video/*']",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": "my-video.mp4",
+      "timestamp": 3600
+    },
+    {
+      "type": "scroll",
+      "target": null,
+      "selector": null,
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "timestamp": 18000
+    },
+    {
+      "type": "input",
+      "target": "标题输入框",
+      "selector": "input[placeholder='请输入标题']",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": "我的第一个视频",
+      "timestamp": 19200
+    },
+    {
+      "type": "click",
+      "target": "分区选择",
+      "selector": ".select-wrap .select-text, [data-testid='category-select']",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "timestamp": 20400
+    },
+    {
+      "type": "click",
+      "target": "分区：科技",
+      "selector": ".select-list li:nth-child(3), [role='option']:has-text('科技')",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "timestamp": 21000
+    },
+    {
+      "type": "input",
+      "target": "简介输入框",
+      "selector": "textarea[placeholder='填写更加全面的信息']",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": "这是一个测试视频",
+      "timestamp": 22000
+    },
+    {
+      "type": "click",
+      "target": "标签添加按钮",
+      "selector": ".tag-input .btn-add, [aria-label='添加标签']",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "timestamp": 23000
+    },
+    {
+      "type": "input",
+      "target": "标签输入",
+      "selector": "input.tag-input, [data-testid='tag-input']",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": "测试",
+      "timestamp": 23100
+    },
+    {
+      "type": "keydown",
+      "target": "确认标签",
+      "selector": "input.tag-input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "key": "Enter",
+      "timestamp": 23200
+    },
+    {
+      "type": "click",
+      "target": "原创声明",
+      "selector": "radio[value='original'], [data-testid='original-radio']",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "timestamp": 24000
+    },
+    {
+      "type": "click",
+      "target": "立即投稿按钮",
+      "selector": ".submit-btn .submit-add, [data-testid='submit-btn']",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "timestamp": 32000
+    },
+    {
+      "type": "submit",
+      "target": "投稿表单",
+      "selector": "form.upload-form",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "value": null,
+      "timestamp": 32100
+    },
+    {
+      "type": "navigate",
+      "target": "投稿成功页",
+      "selector": null,
+      "url": "https://member.bilibili.com/platform/upload/video/success",
+      "value": null,
+      "timestamp": 40000
+    }
+  ]
+}

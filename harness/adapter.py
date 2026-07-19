@@ -1,0 +1,165 @@
+"""Stage ① ADAPT：原始 trace → 内部 ``Trace`` 格式。
+
+接受多种输入格式（本期 P0 至少支持 init-plan §7.6 的最小格式 ``{host, events[]}``），
+做事件规整 + 脱敏 + 推断缺失字段。
+
+【与 Browser-BC 的差异】Browser-BC 接受 human-tracks / recorder / journey_trace_v1 三种
+格式 + 一套 NormalizedEvent 富字段。TreeForge 用最小子集，把更丰富的输入收敛到 ``TraceEvent``。
+
+【脱敏】本期做最小脱敏（密码字段值替换、邮箱打码）。完整 Browser-BC redact 逻辑
+（卡号 / CVV / OTP / account token）后续 P1+ 补——P0 示例 trace 不含真实敏感数据。
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+from pathlib import Path
+from typing import Any
+from urllib.parse import urlparse
+
+from . import progress
+from .models import Trace, TraceEvent
+
+# 敏感字段名（值要脱敏）——大小写不敏感子串匹配
+_SENSITIVE_FIELD_HINTS = ("password", "passwd", "pwd", "secret", "token", "cvv", "cvc", "otp")
+
+# 邮箱打码
+_EMAIL_RE = re.compile(r"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}", re.IGNORECASE)
+
+# 数字卡号（13-19 位，允许空格/连字符）——本期保守，只在 value 字段做
+_CARD_RE = re.compile(r"\b(?:\d[ -]?){13,19}\b")
+
+
+def _redact_value(field_hint: str, value: str | None) -> str | None:
+    """对单个 value 做脱敏。
+
+    field_hint 是字段名/标签（用于判断是否敏感字段）；value 是值。
+    """
+    if value is None or value == "":
+        return value
+    hint = (field_hint or "").lower()
+    if any(s in hint for s in _SENSITIVE_FIELD_HINTS):
+        return "<redacted>"
+    # 邮箱 / 卡号二级脱敏（非敏感字段也可能含）
+    v = _EMAIL_RE.sub("<runtime-email>", value)
+    v = _CARD_RE.sub("<runtime-payment-card>", v)
+    return v
+
+
+def _detect_host_from_url(url: str) -> str | None:
+    if not url:
+        return None
+    try:
+        host = urlparse(url).hostname
+        return host.lower() if host else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _normalize_event(raw: dict[str, Any], fallback_idx: int) -> TraceEvent:
+    """把任意 dict 收敛到 ``TraceEvent``。
+
+    宽容处理多种 key 名：timestamp/ts/time、selector/css/xpath、target/label/text。
+    """
+    etype = str(raw.get("type") or raw.get("event") or "action").lower()
+    # Browser-BC 的事件类型规整
+    if etype in {"dblclick", "double_click"}:
+        etype = "click"
+    elif etype in {"wheel"}:
+        etype = "scroll"
+    elif etype in {"file_select"}:
+        etype = "change"
+    elif etype in {"focus", "blur"}:
+        # Browser-BC 直接丢弃 focus/blur；这里也丢，返回一个 type=skip 哨兵由上层过滤
+        etype = "_skip"
+    elif etype in {"navigation", "navigate", "page_load", "pageload"}:
+        etype = "navigate"
+
+    target = raw.get("target") or raw.get("label") or raw.get("text")
+    selector = raw.get("selector") or raw.get("css") or raw.get("xpath")
+    url = raw.get("url") or raw.get("href")
+    value = raw.get("value")
+    key = raw.get("key")
+    ts = raw.get("timestamp")
+    if ts is None:
+        ts = raw.get("ts") or raw.get("time") or fallback_idx
+
+    # 脱敏（hint 用 target/selector 推断字段名）
+    hint = " ".join(
+        str(x) for x in (target, selector, raw.get("name"), raw.get("id")) if x
+    )
+    value = _redact_value(hint, value)
+
+    return TraceEvent(
+        type=etype,
+        target=str(target) if target is not None else None,
+        selector=str(selector) if selector is not None else None,
+        url=str(url) if url is not None else None,
+        value=value,
+        key=str(key) if key is not None else None,
+        timestamp=int(ts) if ts is not None else fallback_idx,
+    )
+
+
+def _stable_track_id(payload: dict[str, Any], source: str) -> str:
+    """从 trace 内容生成稳定的 track_id（同一文件多次跑得到同一 id）。"""
+    host = str(payload.get("host") or payload.get("domain") or "unknown")
+    h = hashlib.sha1(
+        json.dumps({"source": source, "host": host, "n_events": len(payload.get("events") or [])},
+                   sort_keys=True).encode("utf-8")
+    ).hexdigest()[:12]
+    return f"track-{h}"
+
+
+def adapt(payload: dict[str, Any], *, source: str = "<inline>") -> Trace:
+    """把 dict 形态的 trace 规整为 ``Trace``。
+
+    payload 至少要有 events（list）。host 从顶层取，缺则从首个事件的 url 推断。
+    """
+    progress.report("ADAPT", detail=f"loading {source}")
+    raw_events = payload.get("events") or payload.get("track") or []
+    if not isinstance(raw_events, list):
+        raise ValueError(f"trace 缺少 events 列表（source={source}）")
+
+    host = payload.get("host") or payload.get("domain")
+    if not host:
+        for ev in raw_events:
+            host = _detect_host_from_url(ev.get("url") or ev.get("href") or "")
+            if host:
+                break
+    if not host:
+        raise ValueError(
+            f"无法确定 host：trace 既无顶层 host/domain，也无事件 url（source={source}）"
+        )
+    host = str(host).lower().strip()
+
+    events: list[TraceEvent] = []
+    for i, raw in enumerate(raw_events):
+        if not isinstance(raw, dict):
+            continue
+        ev = _normalize_event(raw, fallback_idx=i)
+        if ev.type == "_skip":
+            continue
+        events.append(ev)
+
+    track_id = payload.get("track_id") or payload.get("id") or _stable_track_id(payload, source)
+    task = payload.get("task_instruction") or payload.get("task") or payload.get("instruction")
+
+    trace = Trace(
+        host=host,
+        events=events,
+        task_instruction=task,
+        track_id=str(track_id),
+    )
+    progress.report("ADAPT", current=len(events), total=len(events), detail=f"host={host}")
+    return trace
+
+
+def load_trace(path: str | Path) -> Trace:
+    """从 JSON 文件加载并 adapt。"""
+    p = Path(path)
+    with p.open("r", encoding="utf-8") as f:
+        payload = json.load(f)
+    return adapt(payload, source=str(p))

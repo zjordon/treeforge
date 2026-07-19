@@ -1,0 +1,8 @@
+# content script —— P2 实现
+#
+# 计划：
+#   - 14 种 DOM 事件采集（click/input/change/submit/keydown/scroll/...）
+#   - DOM 快照（≤300 visible+interactive 元素，sha256 去重，10s 节流）
+#   - 表单摘要（opened/edited/submitted/reset 四阶段）
+#   - selector 多级 fallback（data-testid → aria-label → name → [role] → xpath）
+#   - 直接写 IndexedDB（SW 回收不丢事件）

@@ -1,0 +1,86 @@
+{
+  "host": "github.com",
+  "task_instruction": "登录 GitHub（用户名 + 密码 + 2FA）",
+  "events": [
+    {
+      "type": "navigate",
+      "target": "GitHub 首页",
+      "selector": null,
+      "url": "https://github.com/",
+      "value": null,
+      "timestamp": 0
+    },
+    {
+      "type": "click",
+      "target": "Sign in 按钮",
+      "selector": "a[href='/login'], [data-testid='sign-in']",
+      "url": "https://github.com/",
+      "value": null,
+      "timestamp": 1500
+    },
+    {
+      "type": "navigate",
+      "target": "登录页",
+      "selector": null,
+      "url": "https://github.com/login",
+      "value": null,
+      "timestamp": 3000
+    },
+    {
+      "type": "input",
+      "target": "用户名/邮箱输入框",
+      "selector": "input[name='login'], #login_field",
+      "url": "https://github.com/login",
+      "value": "user@example.com",
+      "timestamp": 4000
+    },
+    {
+      "type": "input",
+      "target": "密码输入框",
+      "selector": "input[name='password'], #password",
+      "url": "https://github.com/login",
+      "value": "my-secret-password-123",
+      "timestamp": 4500
+    },
+    {
+      "type": "click",
+      "target": "Sign in 提交按钮",
+      "selector": "input[type='submit'][value='Sign in'], [data-testid='submit']",
+      "url": "https://github.com/login",
+      "value": null,
+      "timestamp": 5000
+    },
+    {
+      "type": "navigate",
+      "target": "2FA 验证页",
+      "selector": null,
+      "url": "https://github.com/sessions/two-factor",
+      "value": null,
+      "timestamp": 8000
+    },
+    {
+      "type": "input",
+      "target": "2FA 验证码输入框",
+      "selector": "input[name='app_otp'], #app_otp, input[name='otp']",
+      "url": "https://github.com/sessions/two-factor",
+      "value": "123456",
+      "timestamp": 9000
+    },
+    {
+      "type": "click",
+      "target": "验证按钮",
+      "selector": "button[type='submit'], [data-testid='verify-btn']",
+      "url": "https://github.com/sessions/two-factor",
+      "value": null,
+      "timestamp": 9500
+    },
+    {
+      "type": "navigate",
+      "target": "登录后首页 dashboard",
+      "selector": null,
+      "url": "https://github.com/dashboard",
+      "value": null,
+      "timestamp": 12000
+    }
+  ]
+}

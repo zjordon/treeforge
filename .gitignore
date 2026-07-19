@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# uv
+uv.lock
+
+# Runtime data (local distill output, registry, buckets, checkpoints)
+data/
+!data/.gitkeep
+
+# Secrets
+.env
+.env.local
+
+# Extension build artifacts
+node_modules/
+.wxt/
+.output/
+extension/dist/
+extension/.output/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

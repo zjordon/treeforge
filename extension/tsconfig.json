@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "types": ["chrome"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".wxt/types/**/*.d.ts",
+    "wxt.config.ts"
+  ],
+  "exclude": ["node_modules", "dist", ".output"]
+}

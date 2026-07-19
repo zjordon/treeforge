@@ -1,0 +1,5 @@
+# injected (page context) —— P2 实现
+#
+# 计划：monkey-patch fetch / XHR / WebSocket / EventSource / history.pushState
+# 用于捕获私有 API 调用（落到 skill 的 api.md）和 SPA 导航事件（落到 quirks.md）。
+# 通过随机 channel CustomEvent 与 content script 通信（isolated world 桥接）。
