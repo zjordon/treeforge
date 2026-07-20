@@ -108,17 +108,17 @@ def _resolve(
     return raw
 
 
-def load(env_path: Path | None = None) -> None:
+def load(env_path: Path | str | None = None) -> None:
     """从 .env + 环境变量加载配置到本模块的全局变量。
 
-    幂等：可重复调用。env_path 缺省时尝试 REPO_ROOT/.env。
+    幂等：可重复调用。env_path 缺省时尝试 REPO_ROOT/.env。接受 str 或 Path。
     """
     global LLM_KEY, LLM_BASE, LLM_INSECURE, DISTILL_MODEL, CLASSIFY_MODEL
     global LLM_TIMEOUT, LLM_RETRIES, DISTILL_MAX_TOKENS, CLASSIFY_MAX_TOKENS
     global MIN_BUCKET_SIZE, MAX_SEGMENT_EVENTS
     global OUTPUT_DIR, DATA_DIR
 
-    env_path = env_path or (REPO_ROOT / ".env")
+    env_path = Path(env_path) if env_path else (REPO_ROOT / ".env")
     env = _parse_env_file(env_path)
 
     LLM_KEY = _resolve(env, "LLM_KEY", LLM_KEY, current=LLM_KEY)  # type: ignore[assignment]
