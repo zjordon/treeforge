@@ -43,7 +43,7 @@
 | **蒸馏层** | **完整实现**（五阶段管线 + LLM 客户端 + 模板 fallback） |
 | **输出层** | **完整实现**（treewalker + browserbc 双 adapter） |
 
-P0 用 `CLI` 替代接入层：`uv run treewalker distill <trace.json>` 直接读文件 → 跑管线 → 写产物。
+P0 用 `CLI` 替代接入层：`uv run treeforge distill <trace.json>` 直接读文件 → 跑管线 → 写产物。
 
 ## 二、与 Browser-BC 的对照
 

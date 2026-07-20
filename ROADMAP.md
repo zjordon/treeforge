@@ -15,7 +15,7 @@
   - [x] DISTILL（distiller.py）：★站点特定四字段 prompt + 模板 fallback
 - [x] LLM 客户端（llm.py）：urllib 双协议探测（Anthropic / OpenAI）
 - [x] 输出 adapter（treewalker + browserbc）
-- [x] CLI（`treewalker distill` / `treewalker info`）
+- [x] CLI（`treeforge distill` / `treeforge info`）
 - [x] 示例 trace（bilibili-upload + github-login）
 - [x] 测试（atomizer / classifier / distiller / adapters / llm）
 - [x] 文档（README / ARCHITECTURE / ROADMAP）
@@ -27,7 +27,7 @@
 uv sync --extra dev
 echo "LLM_KEY=sk-xxx" > .env
 echo "LLM_BASE=https://api.example.com" >> .env
-uv run treewalker distill examples/bilibili-upload.trace.json --output ./data/skills
+uv run treeforge distill examples/bilibili-upload.trace.json --output ./data/skills
 ls ./data/skills/domain-skills/bilibili.com/
 # → _sop.md / selectors.md / quirks.md / api.md
 ```
@@ -35,7 +35,7 @@ ls ./data/skills/domain-skills/bilibili.com/
 模板模式（不调 LLM 也能跑）：
 
 ```bash
-uv run treewalker distill examples/bilibili-upload.trace.json --output ./data/skills --no-llm
+uv run treeforge distill examples/bilibili-upload.trace.json --output ./data/skills --no-llm
 ```
 
 ---
@@ -92,7 +92,7 @@ uv run treewalker distill examples/bilibili-upload.trace.json --output ./data/sk
 - [ ] registry.json 持久化
 - [ ] `query_top_k`：LLM-as-ranker 语义召回（无 embedding）
 - [ ] `synthesize_playbook`：LLM 编排多 skill playbook
-- [ ] MCP stdio server（`treewalker mcp-skill` 子命令）
+- [ ] MCP stdio server（`treeforge mcp-skill` 子命令）
 - [ ] 两层召回路由（单强匹配直返 / 多匹配 playbook / degrade 链）
 
 ---

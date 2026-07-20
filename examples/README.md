@@ -89,8 +89,8 @@ ADAPT 层自动脱敏（详见 `harness/adapter.py`）：
 
 ```bash
 # 模板模式（不调 LLM，验证链路）
-uv run treewalker distill examples/bilibili-upload.trace.json --output ./data/skills --no-llm
+uv run treeforge distill examples/bilibili-upload.trace.json --output ./data/skills --no-llm
 
 # 真调 LLM（先配 .env，见 README）
-uv run treewalker distill examples/bilibili-upload.trace.json --output ./data/skills
+uv run treeforge distill examples/bilibili-upload.trace.json --output ./data/skills
 ```

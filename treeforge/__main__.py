@@ -1,6 +1,6 @@
 """TreeForge CLI 入口。
 
-支持 ``python -m treeforge`` 和 console script ``treewalker`` 两种调用。
+支持 ``python -m treeforge`` 和 console script ``treeforge`` 两种调用（等价）。
 
 子命令：
   distill <trace.json> [--output <dir>] [--adapter {treewalker,browserbc}] [--no-llm]
@@ -8,6 +8,9 @@
 
   info
     打印当前生效配置（脱敏 key），用于诊断。
+
+注意：``--adapter treewalker`` 的 ``treewalker`` 是 adapter 名（按消费方命名，
+产 TreeWalker 消费的多文件格式），与命令名 ``treeforge`` 是两个不同概念。
 
 用 argparse（零额外依赖）。init-plan §7.4 提到可选用 typer，但 argparse 零依赖更符合哲学。
 """
@@ -103,7 +106,7 @@ def _run_info() -> int:
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="treewalker",
+        prog="treeforge",
         description=(
             "TreeForge（树锻）—— 把浏览器示教 trace 蒸馏成 site-specific skill 文件。"
         ),

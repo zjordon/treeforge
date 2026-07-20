@@ -17,10 +17,11 @@ dev = [
 ]
 
 [project.scripts]
-# Console entry named `treewalker` (the consumer name) so the P0 acceptance
-# command `uv run treewalker distill ...` works. Package import name stays
-# `treeforge`. See init-plan.md §6.
-treewalker = "treeforge.__main__:main"
+# Console script 名与项目名/包名一致：treeforge。三种调用等价：
+#   uv run treeforge distill ...
+#   uv run python -m treeforge distill ...
+#   import treeforge
+treeforge = "treeforge.__main__:main"
 
 [build-system]
 requires = ["hatchling"]

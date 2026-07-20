@@ -56,15 +56,12 @@ TreeWalker 的采集层是**重放语义**（忠于原操作、可重新执行�
 # 1. 安装
 uv sync --extra dev
 
-# 2. 配置 LLM（.env）
-cat > .env <<EOF
-LLM_KEY=sk-xxx
-LLM_BASE=https://api.anthropic.com
-DISTILL_MODEL=claude-opus-4-8
-EOF
+# 2. 配置 LLM（.env）—— 从示例复制后填 key
+cp .env.example .env
+# 编辑 .env：至少填 LLM_KEY=sk-xxx（其余默认值可用）
 
 # 3. 跑通蒸馏
-uv run treewalker distill examples/bilibili-upload.trace.json --output ./data/skills
+uv run treeforge distill examples/bilibili-upload.trace.json --output ./data/skills
 # 或：uv run python -m treeforge distill examples/bilibili-upload.trace.json --output ./data/skills
 
 # 4. 看产物
@@ -95,4 +92,4 @@ treeforge/
 
 ## License
 
-MIT
+本项目采用 [CC BY-NC 4.0](LICENSE) 协议开源，仅供非商业用途。
