@@ -31,6 +31,7 @@ extension/.output/
 # IDE / OS
 .idea/
 .vscode/
+.zcode/
 *.swp
 .DS_Store
 Thumbs.db
