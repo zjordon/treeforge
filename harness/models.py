@@ -21,7 +21,17 @@ class TraceEvent(BaseModel):
 
     type: str = Field(description="事件类型：navigate/click/input/change/submit/scroll/keydown 等")
     target: str | None = Field(default=None, description="元素的人类可读标签/文本")
-    selector: str | None = Field(default=None, description="CSS/XPath 选择器")
+    selector: str | None = Field(default=None, description="CSS/XPath 选择器（老格式，双轨兼容）")
+    element_attrs: dict = Field(
+        default_factory=dict,
+        description=(
+            "白名单属性 dict（新格式，优先于 selector）："
+            "id/name/type/placeholder/aria-label/role/data-testid/data-test/data-cy/"
+            "contenteditable/visible_text/tag/visible。"
+            "对齐 TreeWalker DOM 的 [index]<tag attr=val /> text 呈现，"
+            "让 distiller 能产元素描述表（见 docs/skill-format-alignment.md）。"
+        ),
+    )
     url: str | None = Field(default=None, description="事件发生时的页面 URL")
     value: str | None = Field(default=None, description="input/change 的值（已脱敏）")
     key: str | None = Field(default=None, description="keydown/keyup 的键名")
@@ -39,6 +49,17 @@ class Trace(BaseModel):
     events: list[TraceEvent] = Field(default_factory=list)
     task_instruction: str | None = Field(
         default=None, description="本次示教的任务描述（可空，蒸馏时若空会推断）"
+    )
+    page_context: dict[str, str] = Field(
+        default_factory=dict,
+        description=(
+            "页面阶段 → DOM 文本快照（如 {'upload-conver': '...DOM 文本...'}）。"
+            "提供操作时的空间上下文，让 distiller 推出跨阶段 quirks（如标题框某阶段缺失、"
+            "立即投稿是 span 不是 button）。来源：TreeWalker get_state().dom_state.element_tree_text"
+            "（见 examples/debug_model_page_view.py:56）。老 trace 不带时为空 dict，"
+            "distiller 跳过 DOM 段。当前阶段 DOM 来自人工导出（验证实验），"
+            "P2 采集层就绪后替换成自动采集。"
+        ),
     )
     track_id: str | None = Field(default=None, description="trace 唯一 id（缺省时 ADAPT 生成）")
 

@@ -91,3 +91,69 @@ def test_atomize_empty_trace():
     trace = Trace(host="x.com", events=[])
     segments = atomizer.atomize(trace)
     assert segments == []
+
+
+# ---------------------------------------------------------------------------
+# 阶段 2：element_attrs 双轨测试
+# ---------------------------------------------------------------------------
+
+
+def test_format_attrs_summary_empty():
+    """空 dict 返回空串。"""
+    from harness.atomizer import _format_attrs_summary
+
+    assert _format_attrs_summary({}) == ""
+    assert _format_attrs_summary(None) == ""  # type: ignore[arg-type]
+
+
+def test_format_attrs_summary_whitelist_only():
+    """只渲染白名单属性，过滤 class/style 等不稳定属性。"""
+    from harness.atomizer import _format_attrs_summary
+
+    out = _format_attrs_summary({
+        "tag": "input",
+        "id": "title",
+        "class": "form-control",  # 不在白名单，应被丢
+        "style": "color:red",     # 不在白名单，应被丢
+        "placeholder": "请输入",
+        "visible_text": "标题",
+    })
+    assert "input" in out           # tag
+    assert "id=title" in out
+    assert "placeholder=请输入" in out
+    assert '可见文本"标题"' in out
+    assert "class" not in out
+    assert "style" not in out
+
+
+def test_render_summary_prefers_element_attrs():
+    """有 element_attrs 时，summary 用 attrs 渲染（不用 selector）。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    ev = TraceEvent(
+        type="click",
+        target="投稿按钮",
+        selector=".legacy-selector",  # 应被忽略
+        element_attrs={"tag": "a", "id": "nav_upload_btn", "visible_text": "投稿"},
+        timestamp=0,
+    )
+    summary = _render_summary([ev])
+    assert "nav_upload_btn" in summary  # 用了 element_attrs
+    assert ".legacy-selector" not in summary  # 没用 selector
+
+
+def test_render_summary_falls_back_to_selector_when_no_attrs():
+    """无 element_attrs（老 trace）时，summary 退化用 selector。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    ev = TraceEvent(
+        type="click",
+        target="按钮",
+        selector=".btn",
+        element_attrs={},  # 空
+        timestamp=0,
+    )
+    summary = _render_summary([ev])
+    assert ".btn" in summary  # 退化用 selector

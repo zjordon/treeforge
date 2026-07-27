@@ -57,29 +57,71 @@ file-injected into a browser agent when it navigates to `{domain}`, and it must 
 # Evidence segments ({n_segments} total, on {domain})
 {evidence_blocks}
 
+# Page context (DOM snapshots)
+The following are DOM snapshots of the page at different stages (sourced from TreeWalker \
+`get_state().dom_state.element_tree_text`). Use them to understand what elements exist on the page \
+AT EACH STAGE — this is the PRIMARY source for quirks (cross-stage differences, element-type surprises).
+
+**How to use this section:**
+- Compare the SAME element across stages: does it appear/disappear? does its tag/attrs change? \
+(e.g. "标题框在封面阶段不在 DOM，publish 阶段才出现" = a quirk worth recording)
+- Look for elements whose tag/attrs contradict common assumptions (e.g. "立即投稿" is `<span>` not \
+`<button>`; 创作声明 is `<input type=text>` not `<radio>`; 简介 is `<div contenteditable>` not `<textarea>`)
+- Cite the stage name when referencing a finding (e.g. "in upload-conver stage, ...")
+
+{page_context_block}
+
 # Output spec — produce FOUR markdown sections
 
 1. `sop_md` (skeleton, LOW volume): The 1-3 common task flows for THIS site that this capacity covers. \
 Browser-BC-style distilled procedure, but bound to this site (real URLs, real button labels). \
 This is the entry index file.
 
-2. `selectors_md` (flesh, HIGH volume, actionable): Every stable selector you can extract from the \
-evidence. PREFER in this order: `data-testid` / `data-cy` / `aria-label` / `name` / `[role]` / \
-`#id` / `tag.class:nth-of-type` / XPath. Include the accessibility name (AX name) where known. \
-Format as a markdown table or bullet list: `selector | what it is | notes`. This is the most \
-important file — agents reach for it first.
+2. `selectors_md` (flesh, HIGH volume, actionable): An **ELEMENT DESCRIPTION TABLE** — NOT CSS \
+selectors. The consumer is an LLM agent that reads DOM as `[index]<tag attr=val /> text`, so \
+describe elements in the language that LLM can match against that DOM text. This is the most \
+important file — agents reach for it first. **只收录 `{capacity}` 实际涉及的元素**——不要把整站所有元素都列进来，跨 capacity 的元素由各自的桶覆盖。
 
-3. `quirks_md` (quirks): Hidden waits (e.g. "wait for networkidle after clicking Publish — the \
-success toast is async"), SPA navigation patterns (history.pushState routes), framework behavior \
+   Output a 4-column markdown table:
+   | 元素用途 (element purpose) | 怎么找到它 (how to find it) | 稳定标识 (stable identity) | 备注 (notes) |
+
+   Column spec:
+   - 元素用途: what this element is for (e.g. "投稿入口", "标题输入框").
+   - 怎么找到它: natural-language location/context (e.g. "首页右上角导航区", "标题文字下方").
+   - 稳定标识: whitelist attributes + visible text ONLY. Allowed attributes: `id`, `name`, `type`, \
+`placeholder`, `aria-label`, `role`, `data-testid`, `data-test`, `data-cy`, `contenteditable`, \
+visible text. Format as `attr=value` pairs separated by commas, e.g. `id=nav_upload_btn, 可见文本"投稿"`.
+   - 备注: pitfalls, timing notes, element-type surprises (e.g. "是 span 不是 button", "隐藏 input").
+
+   HARD CONSTRAINTS (must obey):
+   - Do NOT produce CSS selectors: no `.class-name`, no `div > span`, no `#id` selector syntax, \
+no `tag.class:nth-of-type`, no XPath.
+   - Only use the 11 whitelist attributes above in 稳定标识. Other attributes (class, style, src, \
+href-as-locator) are NOT allowed.
+   - If an element has no whitelist attribute, rely on visible text + natural-language location.
+
+   After the table, you MAY add a "## 元素识别要点" section with general tips for the LLM \
+(e.g. "靠可见文本优先", "警惕同名 file input").
+
+3. `quirks_md` (quirks): **PRIORITIZE quirks inferred from the # Page context DOM snapshots** — \
+cross-stage element differences (element appears/disappears across stages), tag/attribute surprises \
+(span acting as button, input acting as radio, contenteditable instead of textarea), and visibility \
+changes. ALSO include: hidden waits (e.g. "点投稿后等 DOM 渲染"、wait for networkidle), SPA \
+navigation patterns (history.pushState routes, URL unchanged across stages), framework behavior \
 (React/Vue re-render timing), anti-bot detection signals (Cloudflare challenge, rate limits). \
-Only include quirks you actually observe or can strongly infer from the evidence.
+**只收录与 `{capacity}` 操作直接相关的 quirks**——一个站点会被蒸馏成多个 capacity，每个只覆盖自己范围内用到的元素，避免跨 capacity 重复（例如「立即投稿是 span」只在涉及提交动作的 capacity 里写，导航类 capacity 不写表单元素怪癖）。Only include quirks you actually observe or can strongly infer. Cite the stage name where relevant.
 
 4. `api_md` (private API): Any internal/private API calls, XHR/fetch endpoints, URL patterns, \
 hidden endpoints observed. If none observed, output a one-line note saying so rather than inventing.
 
 # Rules
-- Use OBSERVED selectors and URLs from the evidence. Quote them verbatim where possible.
-- Do NOT invent selectors or endpoints you didn't see. If unsure, say so explicitly.
+- **产出语言：中文**（除非站点元素本身是英文，如 placeholder 文本）。所有说明文字、备注、quirks 描述用中文写，保持与站点语言一致。元素用途/可见文本保留站点原文。
+- **聚焦本 capacity**：selectors_md / quirks_md 只写与 `{capacity}` 强相关的元素和怪癖，不要把整站通用的知识塞进每个 capacity。同一站点可能蒸馏出多个 capacity（如 navigate-to-upload / fill-form / publish），各自只覆盖自己范围内涉及的元素——避免跨 capacity 内容重复。
+- Use OBSERVED element attributes and visible text from the evidence. Quote them verbatim where possible.
+- Do NOT invent selectors, attributes, or endpoints you didn't see. If unsure, say so explicitly.
+- If the evidence only contains CSS selectors (legacy trace format), extract any whitelist \
+attributes embedded in them (e.g. `input[placeholder='x']` → `placeholder=x`), but PREFER \
+describing what the element IS over reusing the selector syntax. Do NOT echo CSS selectors verbatim.
 - Keep markdown clean — these files are read by an LLM agent, not a human browser.
 - `skill_name`: human-readable name (Title Case). `scope`: one-sentence use case.
 
@@ -132,47 +174,149 @@ def _evidence_block(bucket: Bucket) -> str:
     return "\n\n".join(parts) if parts else "(no segments)"
 
 
+def _render_page_context(page_context: dict[str, str]) -> str:
+    """把 trace.page_context（阶段名→DOM 文本）渲染成 prompt 段。
+
+    空 dict 返回占位（distiller 跳过 DOM 推断）。非空按阶段渲染，
+    让 LLM 看到每个页面阶段的 DOM 快照，重点对照跨阶段差异推 quirks。
+    """
+    if not page_context:
+        return "(no DOM snapshots provided — quirks 只能从操作时序推)"
+    parts: list[str] = []
+    for stage, dom_text in page_context.items():
+        n_chars = len(dom_text or "")
+        parts.append(f"## Stage: {stage} ({n_chars} chars)\n{dom_text or '(empty)'}")
+    return "\n\n".join(parts)
+
+
 # ---------------------------------------------------------------------------
 # 模板 fallback（无 LLM 时用）
 # ---------------------------------------------------------------------------
 
 
+# element_attrs 里渲染到「稳定标识」列的属性顺序（对齐 distiller prompt 的白名单）
+_TEMPLATE_ATTR_ORDER: tuple[str, ...] = (
+    "id", "name", "type", "placeholder", "aria-label", "role",
+    "data-testid", "data-test", "data-cy", "contenteditable",
+)
+
+
+def _format_stable_identity(element_attrs: dict) -> str:
+    """把 element_attrs 渲染成「稳定标识」列文本：`id=x, name=y, 可见文本"z"`。"""
+    parts: list[str] = []
+    for k in _TEMPLATE_ATTR_ORDER:
+        v = element_attrs.get(k)
+        if v in (None, "", False):
+            continue
+        parts.append(f"{k}={v}")
+    vt = element_attrs.get("visible_text")
+    if vt:
+        parts.append(f'可见文本"{vt}"')
+    return ", ".join(parts)
+
+
+def _render_template_element_table(domain: str, capacity: str, elements: list[dict]) -> str:
+    """新格式：把带 element_attrs 的元素渲染成元素描述表四列。
+
+    对齐 LLM 模式 prompt 的 selectors_md 要求。模板模式虽不如 LLM 智能，
+    但至少能产出结构正确的表（不依赖 selector 字符串）。
+    """
+    header = f"# Selectors — {domain}\n\n"
+    header += (
+        "> 模板模式产出（--no-llm），基于 trace 的 element_attrs 字段。"
+        "以下为机械提炼的元素描述表，配置 LLM_KEY 用 LLM 模式可获更智能的描述。\n\n"
+    )
+    header += f"为 `{capacity}` 观察到的元素：\n\n"
+    header += "| 元素用途 | 怎么找到它 | 稳定标识 | 备注 |\n"
+    header += "|---|---|---|---|\n"
+    rows: list[str] = []
+    for el in elements:
+        ea = el["element_attrs"]
+        purpose = el["target"] or ea.get("visible_text") or el["ev_type"]
+        # 「怎么找到它」模板模式只能给 tag + 是否可见，位置上下文需 LLM 模式才能给
+        tag = ea.get("tag") or "?"
+        visible = ea.get("visible")
+        location = f"<{tag}>"
+        if visible is not None:
+            location += f" (visible={visible})"
+        stable = _format_stable_identity(ea) or "(无白名单属性)"
+        note = el["ev_type"]
+        rows.append(f"| {purpose} | {location} | {stable} | {note} |")
+    return header + "\n".join(rows)
+
+
+def _render_template_selector_fallback(
+    domain: str, capacity: str, selectors: list[str]
+) -> str:
+    """老格式 fallback：trace 只有 selector（无 element_attrs）时用。
+
+    保留 P1 的警告头注，说明质量低、引导用 LLM 模式或带 element_attrs 的 trace。
+    """
+    notice = (
+        f"# Selectors — {domain}\n\n"
+        "> ⚠️ **模板模式产出（--no-llm）**。当前 trace 格式只有 CSS selector 字符串，"
+        "无法产出真正的元素描述表。以下为机械列出的 selector，与真实 DOM 可能对不上。\n"
+        "> 配置 LLM_KEY 用 LLM 模式可产出符合新格式的元素描述表（4 列："
+        "元素用途 / 怎么找到它 / 稳定标识 / 备注），详见 "
+        "`docs/skill-format-alignment.md`。\n\n"
+    )
+    if selectors:
+        return notice + f"Observed selectors for `{capacity}`:\n\n" + "\n".join(
+            f"- `{s}`" for s in selectors
+        )
+    return notice + f"No selectors observed for `{capacity}`."
+
+
 def _template_skill_card(bucket: Bucket) -> SkillCard:
-    """无 LLM 时从 segment event_summary 提炼一个最小可用的 SkillCard。
+    """无 LLM 时从 segment events 提炼一个最小可用的 SkillCard。
 
     目的：让 P0 链路在没配 LLM 的情况下也能产出非空文件，验证 adapter/install 正确。
     产物质量低，但结构完整。
+
+    【阶段 2 双轨】
+      - 若 events 带 element_attrs（新格式）：产出元素描述表四列（对齐 LLM 模式 prompt）
+      - 若 events 只有 selector（老格式）：保留 P1 警告头注 + 机械列 selector
     """
-    # 收集所有 selector
+    # 收集元素（双轨）：优先收集 element_attrs，同时兜底 selector + url
+    seen_keys: set[tuple] = set()
+    elements: list[dict] = []  # 每个 dict 含 element_attrs / target / selector / ev_type
     selectors: list[str] = []
     urls: list[str] = []
     for seg in bucket.segments:
         for ev in seg.events:
-            if ev.selector and ev.selector not in selectors:
-                selectors.append(ev.selector)
             if ev.url and ev.url not in urls:
                 urls.append(ev.url)
+            if ev.element_attrs:
+                # 用 (tag, id, name, placeholder) 元组去重
+                ea = ev.element_attrs
+                key = (
+                    ea.get("tag"),
+                    ea.get("id"),
+                    ea.get("name"),
+                    ea.get("placeholder"),
+                    ea.get("aria-label"),
+                    ea.get("visible_text"),
+                )
+                if key not in seen_keys:
+                    seen_keys.add(key)
+                    elements.append({
+                        "element_attrs": ea,
+                        "target": ev.target or "",
+                        "ev_type": ev.type,
+                    })
+            elif ev.selector and ev.selector not in selectors:
+                selectors.append(ev.selector)
 
     domain = bucket.domain
     capacity = bucket.canonical_capacity
 
-    # selectors.md
-    if selectors:
-        sel_lines = []
-        for sel in selectors:
-            # 找一个匹配的 event 作为注释
-            note = ""
-            for seg in bucket.segments:
-                for ev in seg.events:
-                    if ev.selector == sel:
-                        note = ev.target or ev.type
-                        break
-                if note:
-                    break
-            sel_lines.append(f"- `{sel}` — {note}" if note else f"- `{sel}`")
-        selectors_md = f"# Selectors — {domain}\n\nObserved for `{capacity}`:\n\n" + "\n".join(sel_lines)
+    # selectors.md —— 双轨渲染
+    if elements:
+        # 新格式：元素描述表四列
+        selectors_md = _render_template_element_table(domain, capacity, elements)
     else:
-        selectors_md = f"# Selectors — {domain}\n\nNo stable selectors observed."
+        # 老格式：警告头注 + selector 列表
+        selectors_md = _render_template_selector_fallback(domain, capacity, selectors)
 
     # sop.md（从 event_summary 直接抽前若干行）
     summary_lines: list[str] = []
@@ -218,10 +362,14 @@ def distill_bucket(
     bucket: Bucket,
     *,
     use_llm: bool | None = None,
+    page_context: dict[str, str] | None = None,
 ) -> SkillCard:
     """蒸馏一个桶 → SkillCard。
 
     use_llm=None 时：有 LLM_KEY 就用 LLM，否则用模板 fallback。
+    page_context: trace 级 DOM 快照（阶段名→DOM 文本）。LLM 路径注入 prompt 让它推 quirks；
+                  模板路径忽略（机械提炼不出 quirks）。bucket 是 capacity 级不带此字段，
+                  由调用方从 trace 透传。
     """
     if use_llm is None:
         use_llm = bool(config.LLM_KEY)
@@ -242,6 +390,7 @@ def distill_bucket(
         capacity_desc=bucket.description or "(no description)",
         n_segments=len(bucket.segments),
         evidence_blocks=_evidence_block(bucket),
+        page_context_block=_render_page_context(page_context or {}),
     )
 
     # 增量：如果 bucket 已经蒸馏过，把旧 sop 塞进去
@@ -290,8 +439,9 @@ def distill_buckets(
     buckets: list[Bucket],
     *,
     use_llm: bool | None = None,
+    page_context: dict[str, str] | None = None,
 ) -> list[SkillCard]:
-    """蒸馏多个桶。"""
+    """蒸馏多个桶。page_context 从 trace 透传给每个桶的 distill_bucket。"""
     out: list[SkillCard] = []
     progress.report("DISTILL", total=len(buckets))
     for i, b in enumerate(buckets):
@@ -304,7 +454,7 @@ def distill_buckets(
                 detail=f"skip {b.bucket_id} (too small)",
             )
             continue
-        card = distill_bucket(b, use_llm=use_llm)
+        card = distill_bucket(b, use_llm=use_llm, page_context=page_context)
         out.append(card)
         progress.report("DISTILL", current=i + 1, total=len(buckets), detail=b.bucket_id)
     return out

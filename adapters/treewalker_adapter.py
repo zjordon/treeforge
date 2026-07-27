@@ -52,6 +52,9 @@ class TreeWalkerAdapter(OutputAdapter):
     name = "treewalker"
 
     def write_skill(self, skill: SkillCard, output_dir: Path) -> list[Path]:
+        """单 card 写盘（向后兼容）。多 card 同 host 会互相覆盖——
+        多 bucket 场景应优先用 write_skills_merged。
+        """
         host_dir = output_dir / "domain-skills" / skill.domain
         host_dir.mkdir(parents=True, exist_ok=True)
 
@@ -64,3 +67,64 @@ class TreeWalkerAdapter(OutputAdapter):
             atomic_write_text(p, content)
             written.append(p)
         return written
+
+    def write_skills_merged(self, cards: list[SkillCard], output_dir: Path) -> list[Path]:
+        """合并同 host 的所有 card 到一组 4 文件（避免多 bucket 互相覆盖）。
+
+        每个 card 的内容按 capacity 分节合并：
+          - _sop.md / selectors.md / quirks.md / api.md 各自合并
+          - 单个 host 只产出一组 4 文件（消费侧 domain-skills/<host>/*.md 约定不变）
+
+        cards 假定同 host（调用方按 host 分组后传入）。空列表返回 []。
+        """
+        if not cards:
+            return []
+        # 按 host 分组（防御：调用方应已分组，这里再保一次）
+        by_host: dict[str, list[SkillCard]] = {}
+        for card in cards:
+            by_host.setdefault(card.domain, []).append(card)
+
+        written: list[Path] = []
+        for host, host_cards in by_host.items():
+            host_dir = output_dir / "domain-skills" / host
+            host_dir.mkdir(parents=True, exist_ok=True)
+            for fname, field in _FILES:
+                merged = _merge_field(host_cards, field, host)
+                p = host_dir / fname
+                atomic_write_text(p, merged)
+                written.append(p)
+        return written
+
+
+def _merge_field(cards: list[SkillCard], field: str, host: str) -> str:
+    """合并多个 card 的同一字段为一个 markdown 文件内容。
+
+    单 card：直接用其内容（加 H1）。
+    多 card：H1 是 host 总标题，每个 card 一个 `## <capacity>` 二级标题分节。
+    """
+    # 过滤掉空内容的 card
+    parts = [(c.capacity, getattr(c, field, "") or "") for c in cards]
+    parts = [(cap, md) for cap, md in parts if md.strip()]
+
+    if not parts:
+        title = f"{host} — {field.replace('_md', '').title()}"
+        return f"# {title}\n\n_(empty — no evidence for this dimension.)_\n"
+
+    # 单 card 且内容已有 H1：直接返回（保持原 LLM 产出的标题）
+    if len(parts) == 1:
+        _, md = parts[0]
+        if md.lstrip().startswith("#"):
+            return md
+        return f"# {host}\n\n{md}"
+
+    # 多 card：H1 总标题 + 每个 card 一个 ## capacity 分节
+    field_label = field.replace("_md", "").title() or "Skill"
+    out = [f"# {field_label} — {host} ({len(parts)} capacities)\n"]
+    for capacity, md in parts:
+        # 去掉 card 自带的 H1（避免标题层级混乱），保留其余
+        body_lines = md.splitlines()
+        while body_lines and body_lines[0].lstrip().startswith("#"):
+            body_lines.pop(0)
+        body = "\n".join(body_lines).strip()
+        out.append(f"\n## {capacity}\n\n{body}\n")
+    return "".join(out)

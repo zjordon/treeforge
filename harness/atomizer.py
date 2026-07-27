@@ -125,6 +125,39 @@ def _filter_noise(events: list[TraceEvent]) -> list[TraceEvent]:
     return out
 
 
+# element_attrs 里「稳定标识」属性的白名单——对齐 distiller prompt 的 selectors.md 要求。
+# 只渲染这些属性，过滤 class/style 等不稳定属性。
+_ATTR_WHITELIST: tuple[str, ...] = (
+    "id", "name", "type", "placeholder", "aria-label", "role",
+    "data-testid", "data-test", "data-cy", "contenteditable", "tag",
+)
+
+
+def _format_attrs_summary(element_attrs: dict) -> str:
+    """把 element_attrs 渲染成单行「tag=#id name=x placeholder=y」文本。
+
+    用于 event_summary 里让 LLM 看到元素的白名单属性。空 dict 返回 ""。
+    """
+    if not element_attrs:
+        return ""
+    parts: list[str] = []
+    tag = element_attrs.get("tag")
+    if tag:
+        parts.append(str(tag))
+    for k in _ATTR_WHITELIST:
+        if k == "tag":
+            continue
+        v = element_attrs.get(k)
+        if v in (None, "", False):
+            continue
+        parts.append(f"{k}={v}")
+    # 可见文本单独处理（不是 attr=val 格式）
+    visible_text = element_attrs.get("visible_text")
+    if visible_text:
+        parts.append(f'可见文本"{visible_text}"')
+    return " ".join(parts)
+
+
 def _render_summary(events: list[TraceEvent], cap_lines: int = 120) -> str:
     """把 events 渲染成多行文本喂给 LLM。
 
@@ -133,7 +166,12 @@ def _render_summary(events: list[TraceEvent], cap_lines: int = 120) -> str:
     """
     lines: list[str] = []
     for ev in events:
-        path = ev.selector or ev.url or "/"
+        # 双轨：优先用 element_attrs（新格式），fallback 到 selector（老格式）
+        attrs_summary = _format_attrs_summary(ev.element_attrs)
+        if attrs_summary:
+            path = attrs_summary
+        else:
+            path = ev.selector or ev.url or "/"
         label = ev.target or ev.value or ev.key or ""
         line = f"{ev.type:<10} {path} :: {label}".rstrip()
         lines.append(line)

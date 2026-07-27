@@ -30,12 +30,28 @@ def atomic_write_text(path: Path, content: str) -> None:
 def install_cards(cards: list[SkillCard], output_dir: Path, adapter) -> list[Path]:
     """把 SkillCard[] 通过 adapter 写到 output_dir。
 
-    adapter 须实现 ``write_skill(card: SkillCard, output_dir: Path) -> Path | list[Path]``。
+    adapter 须实现 ``write_skill(card, output_dir)``。
+    若 adapter 还实现了 ``write_skills_merged(cards, output_dir)``（如 treewalker），
+    优先走合并路径——避免同 host 多 bucket 互相覆盖。
+
     返回所有写入的文件路径列表。
     """
     written: list[Path] = []
     progress.report("INSTALL", total=len(cards))
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    # 优先走合并接口（treewalker adapter 支持，避免多 bucket 覆盖）
+    merge_fn = getattr(adapter, "write_skills_merged", None)
+    if callable(merge_fn):
+        result = merge_fn(cards, output_dir)
+        if isinstance(result, list):
+            written.extend(result)
+        elif isinstance(result, Path):
+            written.append(result)
+        progress.report("INSTALL", current=len(cards), total=len(cards), detail=f"merged {len(cards)} cards")
+        return written
+
+    # 否则逐 card 写（browserbc adapter 等）
     for i, card in enumerate(cards):
         result = adapter.write_skill(card, output_dir)
         if isinstance(result, list):

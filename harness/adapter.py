@@ -31,6 +31,16 @@ _EMAIL_RE = re.compile(r"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}", re.IGNORECASE)
 # 数字卡号（13-19 位，允许空格/连字符）——本期保守，只在 value 字段做
 _CARD_RE = re.compile(r"\b(?:\d[ -]?){13,19}\b")
 
+# 文件路径检测：含路径分隔符（\ 或 /）且以 .扩展名结尾。
+# 用于跳过卡号脱敏——文件名里的数字串（如 2026-04-29-20-41-59.mp4）不该被当卡号。
+_FILE_EXT_RE = re.compile(r"\.[a-zA-Z0-9]{2,5}$")
+
+
+def _looks_like_file_path(value: str) -> bool:
+    """值是否像文件路径（含分隔符 + 扩展名结尾）。"""
+    has_sep = ("\\" in value) or ("/" in value)
+    return has_sep and bool(_FILE_EXT_RE.search(value))
+
 
 def _redact_value(field_hint: str, value: str | None) -> str | None:
     """对单个 value 做脱敏。
@@ -42,6 +52,9 @@ def _redact_value(field_hint: str, value: str | None) -> str | None:
     hint = (field_hint or "").lower()
     if any(s in hint for s in _SENSITIVE_FIELD_HINTS):
         return "<redacted>"
+    # 文件路径跳过卡号脱敏（文件名数字串如 2026-04-29-20-41-59.mp4 不是卡号）
+    if _looks_like_file_path(value):
+        return _EMAIL_RE.sub("<runtime-email>", value)
     # 邮箱 / 卡号二级脱敏（非敏感字段也可能含）
     v = _EMAIL_RE.sub("<runtime-email>", value)
     v = _CARD_RE.sub("<runtime-payment-card>", v)
@@ -92,10 +105,16 @@ def _normalize_event(raw: dict[str, Any], fallback_idx: int) -> TraceEvent:
     )
     value = _redact_value(hint, value)
 
+    # element_attrs（新格式）：原样保留 raw 里的 element_attrs dict，缺则空。
+    # 不做白名单过滤——信任输入；阶段 3 采集层就绪后才严格过滤。
+    element_attrs_raw = raw.get("element_attrs")
+    element_attrs = dict(element_attrs_raw) if isinstance(element_attrs_raw, dict) else {}
+
     return TraceEvent(
         type=etype,
         target=str(target) if target is not None else None,
         selector=str(selector) if selector is not None else None,
+        element_attrs=element_attrs,
         url=str(url) if url is not None else None,
         value=value,
         key=str(key) if key is not None else None,
@@ -146,11 +165,15 @@ def adapt(payload: dict[str, Any], *, source: str = "<inline>") -> Trace:
 
     track_id = payload.get("track_id") or payload.get("id") or _stable_track_id(payload, source)
     task = payload.get("task_instruction") or payload.get("task") or payload.get("instruction")
+    # page_context（DOM 快照）：原样保留 raw 里的 dict，缺则空。老 trace 不带时为 {}。
+    page_context_raw = payload.get("page_context")
+    page_context = dict(page_context_raw) if isinstance(page_context_raw, dict) else {}
 
     trace = Trace(
         host=host,
         events=events,
         task_instruction=task,
+        page_context=page_context,
         track_id=str(track_id),
     )
     progress.report("ADAPT", current=len(events), total=len(events), detail=f"host={host}")

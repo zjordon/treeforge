@@ -61,8 +61,10 @@ def _run_distill(trace_path: Path, output_dir: Path, adapter_name: str, no_llm: 
         progress.report("DISTILL", detail="无 bucket，退出")
         return 1
 
-    # ⑤ DISTILL
-    cards: list[SkillCard] = distiller.distill_buckets(buckets, use_llm=use_llm)
+    # ⑤ DISTILL（透传 trace 级 page_context，让 LLM 能看到 DOM 快照推 quirks）
+    cards: list[SkillCard] = distiller.distill_buckets(
+        buckets, use_llm=use_llm, page_context=trace.page_context
+    )
     if not cards:
         progress.report("DISTILL", detail="无 card 产出，退出")
         return 1
