@@ -157,3 +157,61 @@ def test_render_summary_falls_back_to_selector_when_no_attrs():
     )
     summary = _render_summary([ev])
     assert ".btn" in summary  # 退化用 selector
+
+
+# ---------------------------------------------------------------------------
+# 阶段 4：stage 标记
+# ---------------------------------------------------------------------------
+
+
+def test_render_summary_marks_stage_suffix():
+    """有 stage 的 event，summary 行尾应带 [stage=xxx] 标记。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    ev = TraceEvent(
+        type="click",
+        target="投稿",
+        element_attrs={"tag": "a", "id": "nav_upload_btn"},
+        stage="upload",
+        timestamp=0,
+    )
+    summary = _render_summary([ev])
+    assert "[stage=upload]" in summary
+
+
+def test_render_summary_inferred_stage_with_question_mark():
+    """带? 的推断 stage 也要正确标记。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    ev = TraceEvent(type="click", target="x", stage="publish?", timestamp=0)
+    summary = _render_summary([ev])
+    assert "[stage=publish?]" in summary
+
+
+def test_render_summary_no_stage_suffix_when_none():
+    """无 stage（None）的 event 不带 stage 标记。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    ev = TraceEvent(type="click", target="x", stage=None, timestamp=0)
+    summary = _render_summary([ev])
+    assert "[stage=" not in summary
+
+
+def test_render_summary_different_stages_not_folded():
+    """不同 stage 的相同动作不应被折叠（不同阶段是不同上下文）。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    # 两个相同 type/target/selector 但不同 stage 的 event
+    events = [
+        TraceEvent(type="click", target="btn", selector="#x", stage="upload", timestamp=0),
+        TraceEvent(type="click", target="btn", selector="#x", stage="publish", timestamp=100),
+    ]
+    summary = _render_summary(events)
+    # 应有两行（不折叠成 x2）
+    assert summary.count("[stage=upload]") == 1
+    assert summary.count("[stage=publish]") == 1
+    assert "x2" not in summary

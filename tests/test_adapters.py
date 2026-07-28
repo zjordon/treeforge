@@ -19,20 +19,19 @@ def _make_card() -> SkillCard:
         sop_md="# SOP\n\nstep 1",
         selectors_md="# Selectors\n\n`#btn`",
         quirks_md="# Quirks\n\nwait async",
-        api_md="# API\n\nPOST /x/pre",
         meta={"model": "test", "segment_count": 1, "distill_version": 1},
     )
 
 
-def test_treewalker_adapter_writes_four_files(tmp_path: Path):
+def test_treewalker_adapter_writes_three_files(tmp_path: Path):
     adapter = TreeWalkerAdapter()
     written = adapter.write_skill(_make_card(), tmp_path)
 
     host_dir = tmp_path / "domain-skills" / "bilibili.com"
-    expected = {"_sop.md", "selectors.md", "quirks.md", "api.md"}
+    expected = {"_sop.md", "selectors.md", "quirks.md"}
     actual = {p.name for p in host_dir.glob("*.md")}
     assert expected.issubset(actual), f"缺文件: {expected - actual}"
-    assert len(written) == 4
+    assert len(written) == 3
 
 
 def test_treewalker_adapter_files_sorted_alphabetically_sop_first(tmp_path: Path):
@@ -91,7 +90,7 @@ def test_install_atomic_write_overwrites_existing(tmp_path: Path):
 
 
 def test_treewalker_merge_multiple_buckets_same_host(tmp_path: Path):
-    """验收点：同 host 多 bucket 合并成一组 4 文件，不互相覆盖。"""
+    """验收点：同 host 多 bucket 合并成一组 3 文件，不互相覆盖。"""
     adapter = TreeWalkerAdapter()
     card1 = _make_card()  # bilibili.com / upload-content
     card1.sop_md = "# upload-content SOP\n\nstep A"
@@ -102,11 +101,11 @@ def test_treewalker_merge_multiple_buckets_same_host(tmp_path: Path):
 
     written = adapter.write_skills_merged([card1, card2], tmp_path)
 
-    # 只产出 4 个文件（不是 8 个）
+    # 只产出 3 个文件（不是 6 个）
     host_dir = tmp_path / "domain-skills" / "bilibili.com"
     files = sorted(p.name for p in host_dir.glob("*.md"))
-    assert files == ["_sop.md", "api.md", "quirks.md", "selectors.md"]
-    assert len(written) == 4
+    assert files == ["_sop.md", "quirks.md", "selectors.md"]
+    assert len(written) == 3
 
     # 两个 bucket 的内容都在 _sop.md（按 capacity 分节）
     sop = (host_dir / "_sop.md").read_text(encoding="utf-8")
@@ -139,10 +138,10 @@ def test_install_cards_uses_merge_when_available(tmp_path: Path):
 
     written = install_cards([card1, card2], tmp_path, adapter)
 
-    # 合并路径：4 个文件（不是 8）
+    # 合并路径：3 个文件（不是 6）
     host_dir = tmp_path / "domain-skills" / "bilibili.com"
-    assert len(list(host_dir.glob("*.md"))) == 4
-    assert len(written) == 4
+    assert len(list(host_dir.glob("*.md"))) == 3
+    assert len(written) == 3
 
 
 def test_treewalker_merge_empty_cards_returns_empty(tmp_path: Path):

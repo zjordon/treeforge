@@ -110,12 +110,17 @@ def _normalize_event(raw: dict[str, Any], fallback_idx: int) -> TraceEvent:
     element_attrs_raw = raw.get("element_attrs")
     element_attrs = dict(element_attrs_raw) if isinstance(element_attrs_raw, dict) else {}
 
+    # stage（阶段 4）：指向 trace.page_context 的 key。原样读，缺则 None。
+    stage = raw.get("stage")
+    stage = str(stage) if stage is not None else None
+
     return TraceEvent(
         type=etype,
         target=str(target) if target is not None else None,
         selector=str(selector) if selector is not None else None,
         element_attrs=element_attrs,
         url=str(url) if url is not None else None,
+        stage=stage,
         value=value,
         key=str(key) if key is not None else None,
         timestamp=int(ts) if ts is not None else fallback_idx,

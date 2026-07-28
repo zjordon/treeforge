@@ -33,6 +33,14 @@ class TraceEvent(BaseModel):
         ),
     )
     url: str | None = Field(default=None, description="事件发生时的页面 URL")
+    stage: str | None = Field(
+        default=None,
+        description=(
+            "事件所属页面阶段名，指向 trace.page_context 的 key（DOM 快照阶段）。"
+            "None=无对应快照（老 trace / 阶段外）；带?后缀=启发式推断（如 'upload?'）。"
+            "向后兼容。详见 docs/skill-format-alignment-plan.md 阶段 4。"
+        ),
+    )
     value: str | None = Field(default=None, description="input/change 的值（已脱敏）")
     key: str | None = Field(default=None, description="keydown/keyup 的键名")
     timestamp: int = Field(default=0, description="毫秒时间戳")
@@ -86,7 +94,9 @@ class Segment(BaseModel):
     entry_url: str | None = None
     exit_url: str | None = None
     duration_ms: int = 0
-    event_summary: str = Field(default="", description="渲染后喂给 LLM 的多行文本（不含原始 events）")
+    event_summary: str = Field(
+        default="", description="渲染后喂给 LLM 的多行文本（不含原始 events）"
+    )
 
 
 # ---- Stage ③ CLASSIFY 产物 -------------------------------------------------
@@ -135,22 +145,28 @@ class Bucket(BaseModel):
 class SkillCard(BaseModel):
     """蒸馏产物——站点特定知识卡。
 
-    【关键分叉点】Browser-BC 的 DistilledSkill 存 skill_md / trace_guide_md 两个通用 SOP 字段；
-    TreeForge 存四个站点特定字段，对应 init-plan §5 的多文件输出 spec：
+    【形态演进】原四件套（sop/selectors/quirks/api）经 A/B 测试发现 api.md 在无网络采集
+    时恒为「未观察到私有 API」零信息，浪费文件槽位；按 host 合并后改为三件套，删 api_md。
+    详见 docs/skill-simplification-plan.md。
 
-        sop_md        → _sop.md       骨架：这个站点常见任务流程
-        selectors_md  → selectors.md  血肉：稳定 selector、AX name、元素定位
-        quirks_md     → quirks.md     怪癖：隐藏等待、SPA 导航、框架行为、反爬
-        api_md        → api.md        私有 API、URL 模式、隐藏端点
+        sop_md        → _sop.md       骨架：连贯步骤剧本（host 级，不分 capacity）
+        selectors_md  → selectors.md  附录：只收需要特征指纹的少数元素
+        quirks_md     → quirks.md     怪癖：只写 DOM 看不出来的坑
+
+    【关键分叉点】Browser-BC 的 DistilledSkill 存 skill_md / trace_guide_md 两个通用 SOP 字段；
+    TreeForge 存上述三个站点特定字段，对应 init-plan §5 的多文件输出 spec。
+
+    【capacity 字段】host 级蒸馏后 capacity 降级为 meta 索引（host 级蒸馏时存 capacity 列表
+    如 "upload-video, fill-video-metadata"）。CLASSIFY 产出的 capacity 标签仍保留信息量，
+    但不再作为产物组织维度。
     """
 
     bucket_id: str
     domain: str
-    capacity: str
+    capacity: str = ""
     skill_name: str = ""
     scope: str = Field(default="", description="一句话用例说明")
     sop_md: str = ""
     selectors_md: str = ""
     quirks_md: str = ""
-    api_md: str = ""
     meta: dict = Field(default_factory=dict)

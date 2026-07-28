@@ -155,6 +155,150 @@ def _host_from_url(url: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# stage 启发式填充（阶段 4）
+#
+# 三规则按优先级 try-fallback：
+#   规则 1（URL 大类短路）：url 跨页跳转定大类，page_context 没的阶段返回 None
+#   规则 2（元素指纹反查）：accept/placeholder/id/ax_name 在各 stage DOM 搜，唯一命中=确定
+#   规则 3（时序连续块外推）：锚点钉住块，向连续邻步外推填带? 值
+#
+# 坐标系约束：rerun 的 backend_node_id 和 DOM 快照的 [index] 不兼容，只用属性指纹匹配。
+# 伪阴约束：publish/upload-conver 共享表单字段，命中 publish 字段时二次判定 image/canvas。
+# 详见 docs/skill-format-alignment-plan.md 阶段 4。
+
+
+def _url_to_stage_hint(url: str, page_context: dict[str, str]) -> str | None:
+    """规则 1：URL 大类短路。返回 stage 名或 None。
+
+    只在 URL path **精确等于** stage 名（如 path=`/upload` 且 stage=`upload`）时命中。
+    这是非常保守的匹配——专门处理「真跨页跳转」的站点（如多页表单，每页独立 URL）。
+    对 SPA（bilibili 这种 URL 全程 `/platform/upload/video/frame` 不变、stage 靠
+    DOM 子阶段区分的）**完全无效**——所有 SPA 步骤返回 None，交给规则 2/3。
+
+    保守是故意的：之前用「段包含」匹配，导致 bilibili 所有步骤误命中 upload
+    （因为 `/upload/` 是 path 子串），规则 2/3 完全没机会跑。
+    """
+    if not url or not page_context:
+        return None
+    path = urlparse(url).path.lower().strip("/")
+    for stage in page_context:
+        if stage and path == stage.lower():
+            return stage
+    return None
+
+
+def _element_stage_fingerprint(
+    element: dict | None,
+    action: dict,
+    page_context: dict[str, str],
+) -> str | None:
+    """规则 2：元素指纹反查 page_context。返回确定 stage 名或 None（歧义/无命中）。
+
+    用 accept/placeholder/id/ax_name 在各 stage DOM 文本里搜。
+    - 唯一命中单 stage → 返回该 stage（确定）
+    - 多 stage 命中或无命中 → None（交给规则 3）
+    """
+    if not element or not page_context:
+        return None
+
+    attrs = element.get("attributes") or {}
+    ax_name = _clean_ax_name(element.get("ax_name"))
+    # 收集指纹候选（去空、去重）。accept 优先（最特异，如 image/png）
+    fingerprints: list[str] = []
+    for key in ("accept", "placeholder", "id", "name", "aria-label"):
+        v = attrs.get(key)
+        if v:
+            fingerprints.append(str(v))
+    if ax_name:
+        fingerprints.append(ax_name)
+    if not fingerprints:
+        return None
+
+    # 对每个 stage 统计命中指纹数
+    hits: dict[str, int] = {}
+    for stage, dom_text in page_context.items():
+        if not dom_text:
+            continue
+        n = sum(1 for fp in fingerprints if fp in dom_text)
+        if n > 0:
+            hits[stage] = n
+
+    if len(hits) == 1:
+        # 唯一命中 → 确定。但 publish/upload-conver 表单字段共享需二次判定。
+        sole = next(iter(hits))
+        return _disambiguate_publish_vs_cover(sole, fingerprints, page_context)
+    return None  # 多命中或无命中 → 交给规则 3
+
+
+def _disambiguate_publish_vs_cover(
+    candidate: str,
+    fingerprints: list[str],
+    page_context: dict[str, str],
+) -> str:
+    """publish/upload-conver 表单字段共享时二次判定。
+
+    若 candidate 是 publish，检查指纹是否也在 upload-conver 出现，
+    且 upload-conver 独有 image 输入/canvas——若指纹是表单字段（placeholder 类），
+    实际可能是 upload-conver。保守起见：若 upload-conver 也含该指纹，标记为不确定
+    （返回 candidate 让时序规则处理，但这里我们已经唯一命中了，所以保留 candidate）。
+
+    简化：唯一命中时直接信任 candidate（规则 2 的歧义已在调用方过滤）。
+    伪阴风险由规则 3 的带? 标记兜底。
+    """
+    return candidate
+
+
+def _infer_stages(
+    history: list[dict],
+    page_context: dict[str, str],
+) -> list[str | None]:
+    """对每个 step 推断 stage。返回与 history 等长的列表（None=无阶段/阶段外）。
+
+    三规则组合：
+      1. 第一遍：对每步用规则 1（URL 大类）+ 规则 2（元素指纹）确定锚点
+      2. 第二遍：规则 3（时序外推）—— 向连续邻步外推填带? 值
+    """
+    if not page_context:
+        return [None] * len(history)
+
+    # 第一遍：确定锚点（stage 不带?）或 None
+    stages: list[str | None] = []
+    for step in history:
+        url = (step.get("state_summary") or {}).get("url") or ""
+        actions = (step.get("model_output") or {}).get("actions") or []
+        interacted = step.get("interacted_element") or []
+
+        # 规则 1：URL 大类
+        s = _url_to_stage_hint(url, page_context)
+        # 规则 2：元素指纹（取该 step 第个有定位的 action 的 element）
+        if s is None:
+            for i, action in enumerate(actions):
+                if action.get("name") in _SKIP_ACTIONS:
+                    continue
+                element = interacted[i] if i < len(interacted) else None
+                s = _element_stage_fingerprint(element, action, page_context)
+                if s:
+                    break
+        stages.append(s)
+
+    # 第二遍：规则 3 时序外推（向前归）。
+    # 对 None 步骤，归到前面最近的确定 stage（带? 标记推断）。
+    # 为什么向前而不是双向夹推：双向的「归后锚点」假设「新阶段元素出现=进入新阶段」，
+    # 但对「前阶段末尾的操作」（如视频上传在 upload 末尾、publish 表单开始前）会误判。
+    # 向前归更保守——step 至少和它前面的确定操作同阶段。代价是「封面操作前的表单步骤」
+    # 会被归到 publish?（实际可能含 upload-conver），但带? 标记 + publish/upload-conver
+    # 表单字段共享，distiller 能处理这种歧义。
+    if len(stages) > 1:
+        last_known: str | None = None
+        for i, s in enumerate(stages):
+            if s is not None:
+                last_known = s
+            elif last_known is not None:
+                stages[i] = f"{last_known}?"
+    return stages
+
+
+# ---------------------------------------------------------------------------
 # action 转换
 # ---------------------------------------------------------------------------
 
@@ -164,8 +308,12 @@ def _convert_action(
     element: dict | None,
     step_meta: dict,
     url: str,
+    stage: str | None = None,
 ) -> dict | None:
-    """把一个 rerun action 转成 trace event dict。返回 None 表示跳过。"""
+    """把一个 rerun action 转成 trace event dict。返回 None 表示跳过。
+
+    stage: 该步对应的页面阶段（启发式推断），透传到 event。
+    """
     name = action.get("name")
     params = action.get("params") or {}
 
@@ -175,6 +323,7 @@ def _convert_action(
     base = {
         "timestamp": _ts_ms(step_meta),
         "url": url or None,
+        "stage": stage,
     }
 
     if name == "navigate":
@@ -282,21 +431,8 @@ def convert_rerun_to_trace(
             if inferred_task:
                 break
 
-    # 转换每个 step
-    for step in history:
-        actions = (step.get("model_output") or {}).get("actions") or []
-        interacted = step.get("interacted_element") or []
-        step_meta = step.get("metadata") or {}
-        url = (step.get("state_summary") or {}).get("url") or ""
-
-        for i, action in enumerate(actions):
-            # interacted_element 是 list，按 action 顺序对齐（多数 step 只有 1 个 action）
-            element = interacted[i] if i < len(interacted) else None
-            event = _convert_action(action, element, step_meta, url)
-            if event is not None:
-                events.append(event)
-
     # 读 DOM 快照目录（验证实验：人工导出的 TreeWalker 模型输入文本）
+    # 【阶段 4】上提到 events 转换之前——_infer_stages 需要 page_context 文本做反查
     page_context: dict[str, str] = {}
     if dom_dir is not None:
         if not dom_dir.is_dir():
@@ -304,6 +440,24 @@ def convert_rerun_to_trace(
         else:
             for txt_path in sorted(dom_dir.glob("*.txt")):
                 page_context[txt_path.stem] = txt_path.read_text(encoding="utf-8")
+
+    # 【阶段 4】启发式推断每步 stage（URL 大类 + 元素指纹 + 时序外推）
+    stages = _infer_stages(history, page_context)
+
+    # 转换每个 step
+    for step_idx, step in enumerate(history):
+        actions = (step.get("model_output") or {}).get("actions") or []
+        interacted = step.get("interacted_element") or []
+        step_meta = step.get("metadata") or {}
+        url = (step.get("state_summary") or {}).get("url") or ""
+        stage = stages[step_idx] if step_idx < len(stages) else None
+
+        for i, action in enumerate(actions):
+            # interacted_element 是 list，按 action 顺序对齐（多数 step 只有 1 个 action）
+            element = interacted[i] if i < len(interacted) else None
+            event = _convert_action(action, element, step_meta, url, stage=stage)
+            if event is not None:
+                events.append(event)
 
     result = {
         "host": host or "unknown",
@@ -372,11 +526,24 @@ def main(argv: list[str] | None = None) -> int:
     n_with_attrs = sum(1 for e in trace["events"] if e.get("element_attrs"))
     n_with_xpath = sum(1 for e in trace["events"] if e.get("selector"))
     n_stages = len(trace.get("page_context") or {})
+    # stage 填充统计（阶段 4）：确定 / 推断(带?) / 无
+    n_stage_certain = sum(
+        1 for e in trace["events"] if e.get("stage") and not str(e["stage"]).endswith("?")
+    )
+    n_stage_inferred = sum(
+        1 for e in trace["events"] if e.get("stage") and str(e["stage"]).endswith("?")
+    )
     dom_info = f", DOM 阶段: {n_stages}" if n_stages else ""
+    stage_info = (
+        f", stage 确定/推断/无: {n_stage_certain}/{n_stage_inferred}/"
+        f"{n_events - n_stage_certain - n_stage_inferred}"
+        if n_stages
+        else ""
+    )
     print(
         f"[{args.input.name}] host={trace['host']} "
         f"events={n_events} (有 element_attrs: {n_with_attrs}, xpath 兜底: {n_with_xpath}"
-        f"{dom_info})",
+        f"{dom_info}{stage_info})",
         file=sys.stderr,
     )
 

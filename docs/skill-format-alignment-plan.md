@@ -200,6 +200,162 @@ TreeWalker DOM: [142]<a id=nav_upload_btn /> 投稿
 2. **借鉴 TreeWalker record-replay 采集端**：`recording_extension/capture/selector.ts` 的 `buildElementRef` 已经采集了 tag/id/classes/role/name/text/selector/xpath/rect——可以参考
 3. **trace 格式直接用 `element_attrs`**：采集产出的 trace 天然带白名单属性，distiller 直接消费
 
+### 阶段 4：event 加 stage 字段，建立「步骤↔页面阶段」对应（2026-07-28 计划）
+
+> 状态：**待实施**（已设计，未编码）。
+
+#### 背景与问题
+
+阶段 3 给 trace 加了 `page_context`（三个 DOM 快照），但是**全局平铺**的——所有操作步骤关联所有快照，distiller 无法精确说「步骤 N 在哪个阶段」。
+
+```
+当前结构（无对应关系）：
+trace = {
+    events: [18 个操作步骤，每个只有 timestamp/url/type/element_attrs],
+    page_context: {upload: ..., upload-conver: ..., publish: ...}  ← 三个阶段快照，平铺
+}
+```
+
+导致两个问题：
+1. **LLM 推 quirks 时靠猜**：三个阶段 URL 完全相同（SPA），LLM 只能从 event 的 url/element_attrs 反推阶段，不可靠
+2. **selectors 推不准「怎么找到它」**：「标题文字下方」「页面底部右侧」本该来自操作时元素在页面里的位置，但没对应关系时 LLM 只能从三个快照猜
+
+#### 目标结构
+
+改成「每个 event 带 stage 字段指向 page_context 的 key」：
+
+```
+目标结构（精确对应）：
+trace = {
+    events: [
+        {..., stage: "upload"},        # 该步对应 upload 阶段快照
+        {..., stage: "publish"},       # 该步对应 publish 阶段快照
+        {..., stage: "upload-conver?"},# 带? = 启发式推断（非确定）
+        {..., stage: null},            # 无对应快照（首页/done 等阶段外）
+    ],
+    page_context: {upload: ..., upload-conver: ..., publish: ...}  # 不变
+}
+```
+
+**设计原则**（已确认决策）：
+- 一个步骤只对应一个快照上下文；SPA 时多个步骤可共享同一 stage
+- schema 用 `stage: str | None`（默认 None 向后兼容）
+- 推断值用带 `?` 后缀标记（如 `"upload?"`），distiller 看到 `?` 知道是推断——轻量，不引入独立 confidence 字段
+
+#### 改动清单（6 文件）
+
+**1. `harness/models.py` — TraceEvent 加 stage 字段**
+
+在 `url` 后、`value` 前加：
+```python
+stage: str | None = Field(
+    default=None,
+    description="事件所属页面阶段名，指向 trace.page_context 的 key。"
+                "None=无对应快照；带?后缀=推断（如 'upload?'）。向后兼容。",
+)
+```
+Trace.page_context 不动（保持 dict[str,str]）。
+
+**2. `harness/adapter.py` — `_normalize_event` 读 stage**
+
+构造 TraceEvent 处加 `stage=raw.get("stage")`。无需多 key 兼容（新字段）+ 无需白名单校验。
+
+**3. `harness/atomizer.py` — `_render_summary` 行尾标 stage**
+
+行渲染加 stage 后缀（让 LLM 在 evidence 段看到每步阶段）：
+```python
+stage_suffix = f" [stage={ev.stage}]" if ev.stage else ""
+line = f"{ev.type:<10} {path} :: {label}{stage_suffix}".rstrip()
+```
+**折叠逻辑影响**：不同 stage 的相同动作不再折叠——这是期望行为（不同阶段是不同上下文）。带 `?` 的推断 stage 自然也参与折叠判断（`upload?` 和 `upload` 视为不同，不折叠）。
+
+**4. `harness/distiller.py` — `_evidence_block` 加 Stages 行**
+
+每个 segment 头部加 stages 清单（从 `seg.events[*].stage` 聚合）：
+```python
+stages = sorted({ev.stage for ev in seg.events if ev.stage})
+stages_line = f"Stages: {', '.join(stages)}" if stages else "Stages: (unknown)"
+```
+插在 Segment 头部的 Entry/Exit/Outcome 行后。`_render_page_context` 和 prompt 的 `# Page context` 段**完全不动**（保留全局段让 LLM 做跨阶段对比）。
+
+**5. `tools/rerun_to_trace.py` — 启发式 stage 填充（核心）**
+
+三处改动：
+
+**(a) dom_dir 读取上提**：当前 `convert_rerun_to_trace` 在 events 转换**之后**才读 dom_dir。启发式反查需要 page_context 文本，必须上提到 events 转换**之前**。
+
+**(b) 新增 `_infer_stage_for_step` 启发式函数**，按优先级 try-fallback：
+
+1. **URL 大类短路**：`state_summary.url` 跨页跳转（如 `/platform/home` vs `/upload/...` vs `/upload-manager/...`）→ 立即定大类。home/draft 页 stage=None（page_context 没这些阶段）。
+2. **元素指纹反查 page_context**（主路径，确定）：用 `interacted_element` 的 accept/placeholder/id/ax_name 在各 stage DOM 文本里搜。
+   - 唯一命中单阶段 → 填确定值（如 accept=image/png → upload-conver）
+   - 多阶段命中或无命中 → 降级规则 3
+3. **时序连续块外推**（推断，带 `?`）：靠规则 2 产出的锚点钉住阶段块，向连续邻步外推填带 `?` 值。块边界靠「形态标记触发器」：dropzone 文本消失/upload 进度文本出现 → upload→publish；image 输入+canvas 出现 → 进 upload-conver；modal 关闭 → 回 publish。
+
+**(c) `_convert_action` base dict 加 stage**：从主循环先按 step 推断 stage，再传进 `_convert_action`。
+
+**实现注意**（基于 rerun 数据调研）：
+- rerun 的 `backend_node_id`（4-5 万段）和 DOM 快照的 `[index]`（322/4995 等）**坐标系不兼容**，只能靠属性指纹匹配，不能靠 id
+- publish 和 upload-conver 共享全部表单字段，靠 placeholder 区分有伪阴风险——凡是命中 publish 表单字段的，二次判定「是否同时存在 image 输入/canvas」确认不是 upload-conver
+- 预期 bilibili 20 步分布：确定填 ~20%（4 步）、推断填 ~70%（14 步带?）、留空 ~10%（2 步：首页+done）
+
+**6. `tests/` — 加 stage 相关测试**
+
+- `test_adapter.py`：+3 测试（读 stage / 老格式默认 None / 异常输入规整）
+- `test_atomizer.py`：+1 测试（`_render_summary` 行尾标 stage + 不破坏折叠）
+- `test_distiller.py`：扩展 prompt 契约测试（断言 evidence_block 含 Stages 行）+ 现有 page_context 测试检查带 stage 的 event 不报错
+
+#### distiller 消费策略：折中方案
+
+为什么不用「每个 event 只看自己 stage 的快照」（精准方案）？
+- 架构约束：`distill_bucket` 入参 bucket 是 capacity 级，不带 trace 引用，page_context 靠函数参数透传。精准方案要么改 Bucket 模型（破坏语义边界），要么按 event.stage 重组 prompt（重写 evidence 管线 + token 爆炸）
+- 现有全局 `# Page context` 段已经能让 LLM 推 quirks（实验验证）
+
+**event.stage 的价值是「精确锚点」而非「替换全局段」**：让 LLM 在 evidence 段看到「这一步属于 upload-conver 阶段」，再去全局段对照该阶段 DOM——比让它从 event_summary 文本里猜阶段名靠谱。
+
+落地动作（distiller 侧）：只改 `_evidence_block` 加 Stages 行；`_render_page_context` 和 prompt 的 `# Page context` 段完全不动。`distill_bucket` 签名不动（stage 跟着 events 进 bucket）。
+
+#### 启发式可行性量化（基于 ab_treatment_1.json 调研）
+
+| 填充方式 | 步数 | 占比 | 说明 |
+|---|---|---|---|
+| 精确填（元素唯一命中） | 1 | 5% | 仅 step 12（accept=image/png → upload-conver） |
+| 精确填（严格快照命中） | +3 | 15% | step 2/5/10（视频投稿文本/标题 placeholder） |
+| 时序推断填（带?） | 14 | 70% | 锚点 + 连续块外推，高可靠 |
+| 留空（真阶段外） | 2 | 10% | step 0（首页）、step 19（done/已跳走） |
+
+**结论**：纯元素匹配几乎不可用（5%），必须依赖「精确锚点 + 时序外推」组合，可填到 18/20 步（90%）。最大风险：publish/upload-conver 表单字段共享，靠 placeholder 区分有伪阴——用 image 输入/canvas 二次判定 + 带? 标记缓解。
+
+#### 验收
+
+1. `uv run pytest` 全绿 + ruff 干净
+2. 重跑 rerun_to_trace，断言 stage 字段填充分布合理（确定/推断/空）
+3. 真 LLM distill，看 evidence_block 含 Stages 行、prompt 含 stage 标记
+4. 双轨：老 trace（无 stage）仍跑通，stage 为 None 不报错
+
+#### 关键风险与缓解
+
+- **启发式误判**：publish/upload-conver 表单字段共享 → 二次判定 image 输入/canvas；推断值带? 让 LLM 知道不确定性
+- **坐标系不兼容**：backend_node_id ≠ DOM index → 只用属性指纹匹配，不用 id
+- **时序外推边界 ±1 步：阶段转换处可能差一步 → 转换触发器用「形态标记」（文本/独有元素）而非固定步号
+
+#### 不做的事
+
+- 不改 Bucket 模型（capacity 级 vs trace 级边界）
+- 不改 `_render_page_context` 和全局 `# Page context` 段（保留跨阶段对比能力）
+- 不做 stage_confidence 独立字段（用阶段名带? 表达，更轻量）
+- 不自动调 TreeWalker get_state（仍用人工 txt，P2 再自动采集）
+
+#### 工作量预估
+
+- models + adapter：~10 分钟
+- atomizer summary：~15 分钟（含折叠逻辑验证）
+- distiller _evidence_block：~10 分钟
+- rerun_to_trace 启发式：~60 分钟（最复杂，三规则组合 + 边界处理）
+- 测试：~30 分钟
+- 跑 LLM 验证：~15 分钟
+- **合计约 2.5 小时**
+
 ---
 
 ## 四、动作顺序与依赖

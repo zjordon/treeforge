@@ -5,6 +5,7 @@
     {
       "timestamp": 0,
       "url": "https://member.bilibili.com/platform/home",
+      "stage": "upload",
       "type": "click",
       "element_attrs": {
         "tag": "a",
@@ -13,8 +14,9 @@
       }
     },
     {
-      "timestamp": 14290,
+      "timestamp": 11742,
       "url": "https://member.bilibili.com/platform/home",
+      "stage": "upload",
       "type": "click",
       "element_attrs": {
         "tag": "a",
@@ -22,13 +24,23 @@
       }
     },
     {
-      "timestamp": 24443,
+      "timestamp": 22075,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
-      "type": "navigate"
+      "stage": "upload",
+      "type": "change",
+      "value": "D:\\Videos\\test\\final\\2026-04-29-20-41-59.mp4",
+      "element_attrs": {
+        "tag": "input",
+        "name": "buploader",
+        "type": "file",
+        "visible_text": "选择文件",
+        "accept": ".mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f4v,.m2t,.3g2,.asf"
+      }
     },
     {
-      "timestamp": 45255,
+      "timestamp": 34290,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload",
       "type": "change",
       "value": "D:\\Videos\\test\\final\\2026-04-29-20-41-59.mp4",
       "element_attrs": {
@@ -38,8 +50,9 @@
       }
     },
     {
-      "timestamp": 55412,
+      "timestamp": 44701,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish",
       "type": "input",
       "value": "ai浏览器第五期-browse-use",
       "element_attrs": {
@@ -50,20 +63,20 @@
       }
     },
     {
-      "timestamp": 69009,
+      "timestamp": 44701,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish",
       "type": "input",
       "value": "ai浏览器第五期-browse-use",
       "element_attrs": {
-        "tag": "input",
-        "type": "text",
-        "placeholder": "请输入稿件标题",
-        "visible_text": "请输入稿件标题"
+        "tag": "div",
+        "contenteditable": "true"
       }
     },
     {
-      "timestamp": 69009,
+      "timestamp": 44701,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish",
       "type": "click",
       "element_attrs": {
         "tag": "input",
@@ -73,17 +86,9 @@
       }
     },
     {
-      "timestamp": 69009,
+      "timestamp": 71449,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
-      "type": "click",
-      "element_attrs": {
-        "tag": "div"
-      },
-      "selector": "/html/body/div[1]/div[2]/div[4]/div[2]/div/div/div/micro-app/micro-app-body/div[1]/div[2]/div[1]/div[2]/div[5]/div/div[2]/div/div"
-    },
-    {
-      "timestamp": 95311,
-      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish?",
       "type": "click",
       "element_attrs": {
         "tag": "span"
@@ -91,8 +96,19 @@
       "selector": "/html/body/div[1]/div[2]/div[4]/div[2]/div/div/div/micro-app/micro-app-body/div[1]/div[2]/div[1]/div[2]/div[4]/div/div/div[2]/div/div[2]/ul/article[5]/li/span"
     },
     {
-      "timestamp": 95311,
+      "timestamp": 81191,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish?",
+      "type": "click",
+      "element_attrs": {
+        "tag": "div"
+      },
+      "selector": "/html/body/div/div[2]/div[4]/div[2]/div/div/div/micro-app/micro-app-body/div[1]/div[2]/div[1]/div[2]/div[5]/div/div[2]/div/div"
+    },
+    {
+      "timestamp": 93778,
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish?",
       "type": "click",
       "element_attrs": {
         "tag": "div"
@@ -100,8 +116,9 @@
       "selector": "/html/body/div[1]/div[2]/div[4]/div[2]/div/div/div/micro-app/micro-app-body/div[1]/div[2]/div[1]/div[2]/div[5]/div/div[2]/div/div[2]/div/div[12]"
     },
     {
-      "timestamp": 103344,
+      "timestamp": 106591,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish?",
       "type": "input",
       "value": "浏览器Agent",
       "element_attrs": {
@@ -112,43 +129,39 @@
       }
     },
     {
-      "timestamp": 103344,
+      "timestamp": 106591,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish?",
       "type": "keydown",
       "key": "Enter",
       "element_attrs": {}
     },
     {
-      "timestamp": 103344,
+      "timestamp": 126936,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish",
       "type": "click",
       "element_attrs": {
-        "tag": "div",
-        "contenteditable": "true"
+        "tag": "input",
+        "type": "text",
+        "placeholder": "请输入稿件标题",
+        "visible_text": "请输入稿件标题"
       }
     },
     {
-      "timestamp": 103344,
+      "timestamp": 142910,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
-      "type": "input",
-      "value": "ai浏览器第五期-browse-use",
-      "element_attrs": {
-        "tag": "div",
-        "contenteditable": "true"
-      }
-    },
-    {
-      "timestamp": 112008,
-      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "publish?",
       "type": "click",
       "element_attrs": {
         "tag": "div"
       },
-      "selector": "/html/body/div/div[2]/div[4]/div[2]/div/div/div/micro-app/micro-app-body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/div[1]/div"
+      "selector": "/html/body/div[1]/div[2]/div[4]/div[2]/div/div/div/micro-app/micro-app-body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/div[1]/div"
     },
     {
-      "timestamp": 127328,
+      "timestamp": 155820,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-conver",
       "type": "change",
       "value": "D:\\dev\\git\\claude\\skills-deom\\ppt\\browser-use\\横封面.png",
       "element_attrs": {
@@ -158,8 +171,9 @@
       }
     },
     {
-      "timestamp": 153484,
+      "timestamp": 181655,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-conver?",
       "type": "click",
       "element_attrs": {
         "tag": "div"
@@ -167,8 +181,9 @@
       "selector": "/html/body/div/div[2]/div[4]/div[2]/div/div/div/micro-app/micro-app-body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div/div[2]/div/div[2]/div[2]/div[2]"
     },
     {
-      "timestamp": 180288,
+      "timestamp": 207502,
       "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-conver?",
       "type": "click",
       "element_attrs": {
         "tag": "span"

@@ -126,3 +126,43 @@ def test_adact_page_context_non_dict_defaults_empty():
     }
     trace = adapt(payload, source="test")
     assert trace.page_context == {}
+
+
+# ---------------------------------------------------------------------------
+# stage 读取（阶段 4）
+# ---------------------------------------------------------------------------
+
+
+def test_normalize_event_reads_stage():
+    """带 stage 的 event 应正确读取（含带? 的推断值）。"""
+    payload = {
+        "host": "x.com",
+        "events": [
+            {"type": "click", "timestamp": 0, "stage": "upload"},
+            {"type": "input", "timestamp": 100, "stage": "publish?"},
+        ],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.events[0].stage == "upload"
+    assert trace.events[1].stage == "publish?"
+
+
+def test_normalize_event_stage_defaults_none():
+    """老 event（无 stage 字段）应为 None，不报错。"""
+    payload = {
+        "host": "x.com",
+        "events": [{"type": "click", "selector": ".btn", "timestamp": 0}],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.events[0].stage is None
+
+
+def test_normalize_event_stage_non_string_coerced():
+    """stage 是非字符串（异常输入）时应规整为 str 或 None。"""
+    payload = {
+        "host": "x.com",
+        "events": [{"type": "click", "timestamp": 0, "stage": 123}],
+    }
+    trace = adapt(payload, source="test")
+    # 数字被 str() 规整
+    assert trace.events[0].stage == "123"

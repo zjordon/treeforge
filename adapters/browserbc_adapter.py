@@ -45,10 +45,6 @@ distill_version: {distill_version}
 ## Quirks
 
 {quirks_md}
-
-## API
-
-{api_md}
 """
 
 
@@ -74,7 +70,6 @@ class BrowserBcAdapter(OutputAdapter):
             sop_md=skill.sop_md or "_(empty)_",
             selectors_md=skill.selectors_md or "_(empty)_",
             quirks_md=skill.quirks_md or "_(empty)_",
-            api_md=skill.api_md or "_(empty)_",
         )
 
         p = skill_dir / "SKILL.md"

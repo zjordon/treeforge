@@ -173,7 +173,10 @@ def _render_summary(events: list[TraceEvent], cap_lines: int = 120) -> str:
         else:
             path = ev.selector or ev.url or "/"
         label = ev.target or ev.value or ev.key or ""
-        line = f"{ev.type:<10} {path} :: {label}".rstrip()
+        # stage 标记（阶段 4）：行尾追加 [stage=xxx]，让 LLM 在 evidence 段看到每步阶段。
+        # 带? 的推断值也参与折叠判断（upload? 和 upload 视为不同 stage，不折叠——期望行为）。
+        stage_suffix = f" [stage={ev.stage}]" if ev.stage else ""
+        line = f"{ev.type:<10} {path} :: {label}{stage_suffix}".rstrip()
         lines.append(line)
 
     # 折叠连续重复
