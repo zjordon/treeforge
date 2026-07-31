@@ -18,6 +18,14 @@ from __future__ import annotations
 
 from treeforge.capture.backend import DEFAULT_HOST, DEFAULT_PORT, CaptureBackend, CollectorLike
 from treeforge.capture.cdp_session import CaptureState, CdpSession
+from treeforge.capture.collector import CapturedEvent, CaptureSession, Collector
+from treeforge.capture.distill_schema import (
+    DistillEventPayload,
+    extract_element_attrs,
+    payload_to_trace_fields,
+)
+from treeforge.capture.export import export_capture
+from treeforge.capture.stage import StageTracker, dom_similarity
 
 __all__ = [
     "CdpSession",
@@ -26,4 +34,17 @@ __all__ = [
     "CollectorLike",
     "DEFAULT_HOST",
     "DEFAULT_PORT",
+    # collector
+    "Collector",
+    "CapturedEvent",
+    "CaptureSession",
+    # export
+    "export_capture",
+    # stage
+    "StageTracker",
+    "dom_similarity",
+    # distill schema（collector + 扩展共同契约）
+    "DistillEventPayload",
+    "extract_element_attrs",
+    "payload_to_trace_fields",
 ]
