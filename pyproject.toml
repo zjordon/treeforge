@@ -8,12 +8,19 @@ license = { text = "MIT" }
 authors = [{ name = "jason" }]
 dependencies = [
     "pydantic>=2.6,<3.0",
+    # P2 采集层：DOM 快照公共库（本地 editable 见 [tool.uv.sources]）
+    "dom-snapshot>=0.1.0",
+    # P2 采集层：连浏览器（CdpSession 用）
+    "cdp-use>=1.4.5",
+    # P2 采集层：backend.py 收扩展事件（aiohttp HTTP server）
+    "aiohttp>=3.9,<4.0",
 ]
 
 [project.optional-dependencies]
 dev = [
     "ruff>=0.5,<1.0",
     "pytest>=8.0,<9.0",
+    "pytest-asyncio>=0.23,<1.0",
 ]
 
 [project.scripts]
@@ -41,7 +48,13 @@ ignore = ["E501"]  # line length handled by formatter
 [tool.ruff.lint.isort]
 known-first-party = ["treeforge", "harness", "adapters"]
 
+[tool.uv.sources]
+# 本地 editable 开发：dom-snapshot 源码在 ../dom-snapshot（与 treeforge 同级）。
+# 远端/CI 可改成 { git = "https://github.com/zjordon/dom-snapshot.git", tag = "v0.1.0" }。
+dom-snapshot = { path = "../dom-snapshot", editable = true }
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
 addopts = "-ra -q"
+asyncio_mode = "auto"
