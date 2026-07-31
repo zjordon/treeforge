@@ -21,6 +21,7 @@ P2.2.1 阶段：只实现骨架（收事件 + scenario 路由 + 日志打印）�
 from __future__ import annotations
 
 import logging
+from collections.abc import Callable
 from typing import Any, Protocol
 
 from aiohttp import web
@@ -71,11 +72,19 @@ class CaptureBackend:
         await backend.run()  # 阻塞跑 aiohttp
     """
 
-    def __init__(self, collector: CollectorLike, host: str = DEFAULT_HOST, port: int = DEFAULT_PORT) -> None:
+    def __init__(
+        self,
+        collector: CollectorLike,
+        host: str = DEFAULT_HOST,
+        port: int = DEFAULT_PORT,
+        on_stop: Callable[[], None] | None = None,
+    ) -> None:
         self.collector = collector
         self.host = host
         self.port = port
         self._current_scenario: str | None = None
+        # /stop 时的回调（cli 用它设置 stop_event，让 run_capture 优雅退出）
+        self._on_stop = on_stop
 
     def make_app(self) -> web.Application:
         """建 aiohttp app，注册路由。
@@ -151,10 +160,17 @@ class CaptureBackend:
             return web.json_response({"ok": False, "error": str(e)}, status=500)
 
     async def _handle_stop(self, request: web.Request) -> web.Response:
-        """POST /stop → { ok, result }"""
+        """POST /stop → { ok, result }
+
+        collector.stop() 内部完成导出（trace.json + snapshots/），返回产物路径。
+        导出后触发 on_stop 回调，让 cli 的 run_capture 优雅退出。
+        """
         try:
             result = await self.collector.stop()
             logger.info("Capture stopped: %s", result)
+            # 通知 cli 退出（设置 stop_event）
+            if self._on_stop:
+                self._on_stop()
             return web.json_response({"ok": True, "result": _safe_result(result)})
         except Exception as e:  # noqa: BLE001
             logger.exception("Stop failed")

@@ -6,6 +6,10 @@
   distill <trace.json> [--output <dir>] [--adapter {treewalker,browserbc}] [--no-llm]
     串起 ADAPT → ATOMIZE → CLASSIFY → BUCKET → DISTILL → INSTALL 全链路。
 
+  capture [--task <desc>] [--host <domain>] [--output <dir>] [--cdp-port <n>]
+    起采集后端 + 连 Chrome CDP，等扩展事件，Ctrl+C 导出 trace + 快照。
+    需配合 Chrome 扩展（extension/）使用。
+
   info
     打印当前生效配置（脱敏 key），用于诊断。
 
@@ -18,6 +22,7 @@
 from __future__ import annotations
 
 import argparse
+import asyncio
 import sys
 from collections.abc import Sequence
 from pathlib import Path
@@ -102,6 +107,51 @@ def _run_info() -> int:
 
 
 # ---------------------------------------------------------------------------
+# capture 子命令（P2 采集层）
+# ---------------------------------------------------------------------------
+
+
+def _run_capture(args: argparse.Namespace) -> int:
+    """起采集后端，阻塞收扩展事件，Ctrl+C 导出产物。
+
+    Ctrl+C 处理：不用 asyncio.run（它在 Windows 的 Ctrl+C 会取消主任务，
+    导致 export 逻辑跑不完）。改用手动 event loop + 传统 signal.signal 注册，
+    Ctrl+C 时通过 loop.call_soon_threadsafe 设置 stop_event，让协程优雅退出并导出。
+    """
+    import signal as signal_mod
+
+    from treeforge.capture.cli import run_capture
+    from treeforge.capture.ws_discover import DEFAULT_CDP_HOST, DEFAULT_CDP_PORT
+
+    output_dir = args.output or Path("./data/captures")
+    kwargs = {
+        "output_dir": output_dir,
+        "task": args.task or "",
+        "host": args.host or "",
+        "cdp_host": args.cdp_host or DEFAULT_CDP_HOST,
+        "cdp_port": args.cdp_port or DEFAULT_CDP_PORT,
+        "backend_host": args.backend_host or "127.0.0.1",
+        "backend_port": args.backend_port or 8765,
+        "stage_threshold": args.stage_threshold,
+    }
+
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    stop_event = asyncio.Event()
+
+    # 注册 SIGINT handler：Ctrl+C 时线程安全地设置 stop_event（不取消主任务）
+    def _sigint_handler(signum, frame):
+        loop.call_soon_threadsafe(stop_event.set)
+
+    original_handler = signal_mod.signal(signal_mod.SIGINT, _sigint_handler)
+    try:
+        return loop.run_until_complete(run_capture(stop_event=stop_event, **kwargs))
+    finally:
+        signal_mod.signal(signal_mod.SIGINT, original_handler)
+        loop.close()
+
+
+# ---------------------------------------------------------------------------
 # argparse
 # ---------------------------------------------------------------------------
 
@@ -141,6 +191,30 @@ def _build_parser() -> argparse.ArgumentParser:
     # info
     sub.add_parser("info", help="打印当前生效配置")
 
+    # capture（P2 采集层）
+    p_capture = sub.add_parser(
+        "capture",
+        help="起采集后端 + 连 Chrome CDP，等扩展事件，Ctrl+C 导出 trace + 快照",
+    )
+    p_capture.add_argument("--task", "-t", default="", help="任务描述（写进 trace.task_instruction）")
+    p_capture.add_argument("--host", default="", help="目标站点主域名（默认自动从 URL 提取）")
+    p_capture.add_argument(
+        "--output", "-o",
+        type=Path,
+        default=Path("./data/captures"),
+        help="采集产物输出目录（默认 ./data/captures）",
+    )
+    p_capture.add_argument("--cdp-host", default="localhost", help="Chrome 远程调试 host（默认 localhost）")
+    p_capture.add_argument("--cdp-port", type=int, default=9222, help="Chrome 远程调试端口（默认 9222）")
+    p_capture.add_argument("--backend-host", default="127.0.0.1", help="采集后端监听 host（默认 127.0.0.1）")
+    p_capture.add_argument("--backend-port", type=int, default=8765, help="采集后端监听端口（默认 8765）")
+    p_capture.add_argument(
+        "--stage-threshold",
+        type=float,
+        default=None,
+        help="阶段切换 DOM 相似度阈值（默认 0.7，低于此值视为新阶段）",
+    )
+
     return parser
 
 
@@ -150,6 +224,9 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if args.command == "info":
         return _run_info()
+
+    if args.command == "capture":
+        return _run_capture(args)
 
     if args.command == "distill":
         trace_path: Path = args.trace

@@ -1,7 +1,0 @@
-# popup UI —— P2 实现
-#
-# 计划：React 录制控制面板
-#   - 开始 / 暂停 / 停止录制
-#   - 任务描述输入（→ trace.task_instruction）
-#   - 上传到 server（P1 接入层就绪后）
-#   - 录制状态显示（来自 background SW）

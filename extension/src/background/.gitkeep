@@ -1,7 +1,0 @@
-# background service worker —— P2 实现
-#
-# 计划（对齐 Browser-BC，详见 ARCHITECTURE.md + 知识库 browserbc-extension-capture-layer.md）：
-#   - recorder 状态机（idle / recording / paused）
-#   - MV3 SW 30s 回收恢复（启动时从 IndexedDB 拿最新 status=recording 行）
-#   - 与 content script 桥接（CustomEvent 随机 channel）
-#   - 分块上传到 server（P1 接入层就绪后）

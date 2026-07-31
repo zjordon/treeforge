@@ -65,7 +65,12 @@ def _make_mock_collector():
     collector = AsyncMock()
     collector.start.return_value = "test-session-1"
     collector.ingest.return_value = None
-    collector.stop.return_value = {"output_dir": "/tmp/captures/test"}
+    collector.stop.return_value = {
+        "output_dir": "/tmp/captures/test",
+        "capture_dir": "/tmp/captures/test/session-1",
+        "trace_path": "/tmp/captures/test/session-1/trace.json",
+        "events": 5,
+    }
     return collector
 
 
@@ -78,6 +83,19 @@ async def backend_client():
     client = TestClient(server)
     await client.start_server()
     yield client, collector
+    await client.close()
+
+
+@pytest.fixture
+async def backend_with_stop_callback():
+    """带 on_stop 回调的 backend（验证 /stop 触发回调）。"""
+    collector = _make_mock_collector()
+    stop_called = []
+    backend = CaptureBackend(collector, on_stop=lambda: stop_called.append(True))
+    server = TestServer(backend.make_app())
+    client = TestClient(server)
+    await client.start_server()
+    yield client, collector, stop_called
     await client.close()
 
 
@@ -138,14 +156,24 @@ async def test_ingest_unknown_scenario_returns_400(backend_client):
 
 
 async def test_stop_returns_collector_result(backend_client):
-    """POST /stop → 调 collector.stop，返产物信息。"""
+    """POST /stop → 调 collector.stop，返产物信息（含 capture_dir/trace_path）。"""
     client, collector = backend_client
     resp = await client.post("/stop", json={})
     assert resp.status == 200
     data = await resp.json()
     assert data["ok"] is True
-    assert data["result"] == {"output_dir": "/tmp/captures/test"}
+    assert data["result"]["capture_dir"] == "/tmp/captures/test/session-1"
+    assert data["result"]["trace_path"] == "/tmp/captures/test/session-1/trace.json"
     collector.stop.assert_called_once()
+
+
+async def test_stop_triggers_on_stop_callback(backend_with_stop_callback):
+    """POST /stop → 调 collector.stop 后触发 on_stop 回调（让 cli 退出）。"""
+    client, collector, stop_called = backend_with_stop_callback
+    resp = await client.post("/stop", json={})
+    assert resp.status == 200
+    collector.stop.assert_called_once()
+    assert len(stop_called) == 1, "on_stop 回调应被调用一次"
 
 
 async def test_start_failure_returns_500(backend_client):

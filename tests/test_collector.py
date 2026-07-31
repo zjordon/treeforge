@@ -221,10 +221,10 @@ async def test_collector_ingest_before_start_ignored():
     assert collector.session is None or len(collector.session.events) == 0
 
 
-async def test_collector_stop_disconnects_cdp():
-    """stop 断开 CdpSession + 返回元数据。"""
+async def test_collector_stop_exports_and_disconnects(tmp_path):
+    """stop 导出产物 + 断开 CdpSession + 返回产物路径。"""
     cdp = _make_mock_cdp()
-    collector = Collector(cdp, output_dir="/tmp/test")
+    collector = Collector(cdp, output_dir=str(tmp_path))
     await collector.start()
     await collector.ingest({
         "scenario": "distill", "session_id": "t", "ts": 0,
@@ -236,6 +236,12 @@ async def test_collector_stop_disconnects_cdp():
     assert result["events"] == 1
     assert result["host"] == "member.bilibili.com"
     assert "stages" in result
+    # 新增：stop 应导出产物并返回路径
+    assert result["capture_dir"] is not None
+    assert result["trace_path"] is not None
+    from pathlib import Path
+    trace_path = Path(result["trace_path"])
+    assert trace_path.is_file()  # trace.json 真的写了
 
 
 async def test_collector_get_state_failure_doesnt_block_event():

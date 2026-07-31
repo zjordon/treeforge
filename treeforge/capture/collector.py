@@ -179,12 +179,23 @@ class Collector:
         self._session.events.append(event)
 
     async def stop(self) -> dict[str, Any]:
-        """停止采集，返回产物信息。
+        """停止采集，导出产物，返回产物信息。
 
-        产物落盘由 export.py 负责（P2.2.5）；此处只断开 CdpSession + 返回元数据。
+        这是「停止录制」的正确归属：扩展 popup 点「停止」→ POST /stop → backend 调此方法。
+        导出产物（trace.json + snapshots/）在这里完成，返回产物路径供扩展展示。
+        Ctrl+C（cli.py 的兜底路径）也会调这里保底导出。
         """
         if not self._session:
             return {"error": "no active session"}
+
+        # 导出产物（trace.json + snapshots/）
+        capture_dir = None
+        if self._session.events:
+            # 延迟 import 避免 collector 依赖 export（export import collector，会循环）
+            from treeforge.capture.export import export_capture
+
+            capture_dir = export_capture(self._session, self.output_dir)
+            logger.info("Exported capture: %s", capture_dir)
 
         # 断开 CdpSession
         try:
@@ -198,6 +209,8 @@ class Collector:
             "events": len(self._session.events),
             "stages": list(self._session.page_context.keys()),
             "output_dir": self.output_dir,
+            "capture_dir": str(capture_dir) if capture_dir else None,
+            "trace_path": str(capture_dir / "trace.json") if capture_dir else None,
         }
         logger.info("Capture stopped: %s", result)
         self._started = False
