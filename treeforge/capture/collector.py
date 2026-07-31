@@ -81,12 +81,17 @@ class Collector:
     ) -> None:
         self.cdp = cdp_session
         self.output_dir = output_dir
-        if stage_threshold is not None:
-            self.stage_tracker = StageTracker(similarity_threshold=stage_threshold)
-        else:
-            self.stage_tracker = StageTracker()
+        self._stage_threshold = stage_threshold
+        # stage_tracker 在每次 start 时重建（避免跨 session stage 状态串）
+        self.stage_tracker = self._new_stage_tracker()
         self._session: CaptureSession | None = None
         self._started = False
+
+    def _new_stage_tracker(self) -> StageTracker:
+        """新建 StageTracker（每次 start 调用，确保跨 session 状态隔离）。"""
+        if self._stage_threshold is not None:
+            return StageTracker(similarity_threshold=self._stage_threshold)
+        return StageTracker()
 
     # ---- CollectorLike 协议（backend 调用）----
 
@@ -95,8 +100,12 @@ class Collector:
 
         config 可含：task_instruction（任务描述）、host（主域名）。
         会连 CdpSession（若未连）+ 初始化首阶段。
+        每次调用重建 session + StageTracker（支持多次录制循环，stage 状态不串）。
         """
         import uuid
+
+        # 重建 StageTracker（关键：避免上次录制的 stage 计数/last_dom 污染本次）
+        self.stage_tracker = self._new_stage_tracker()
 
         session_id = str(uuid.uuid4())[:8]
         config = config or {}
@@ -214,6 +223,7 @@ class Collector:
         }
         logger.info("Capture stopped: %s", result)
         self._started = False
+        self._session = None  # 清空 session，下次 start 干净启动（支持循环录制）
         return result
 
     # ---- 内部 ----

@@ -276,3 +276,86 @@ async def test_collector_navigation_event_triggers_stage_change():
     event = collector.session.events[-1]
     assert event.type == "navigate"
     assert event.stage == "page2"  # 新阶段命名
+
+
+# ---------------------------------------------------------------------------
+# session 可循环（start/stop 多次录制，stage 状态不串）
+# ---------------------------------------------------------------------------
+
+
+async def test_collector_start_stop_loop_clears_session(tmp_path):
+    """stop 后 session 清空，下次 start 重建（支持连续录制多次）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+
+    # 第一次录制
+    await collector.start()
+    assert collector.session is not None
+    sid1 = collector.session.session_id
+    await collector.ingest({
+        "scenario": "distill", "session_id": "t", "ts": 0,
+        "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+    })
+    assert len(collector.session.events) == 1
+    await collector.stop()
+
+    # stop 后 session 应清空
+    assert collector.session is None
+    assert collector._started is False
+
+    # 第二次录制（新 session_id，不继承上次的 events）
+    await collector.start()
+    assert collector.session is not None
+    sid2 = collector.session.session_id
+    assert sid1 != sid2  # 新 session_id
+    assert len(collector.session.events) == 0  # 不继承上次的事件
+    await collector.stop()
+
+
+async def test_collector_start_rebuilds_stage_tracker(tmp_path):
+    """每次 start 重建 StageTracker，stage 计数/last_dom 不跨 session 串。"""
+    cdp = _make_mock_cdp(url="https://x.com/upload")
+    collector = Collector(cdp, output_dir=str(tmp_path))
+
+    # 第一次录制：触发一个 stage，counter 应该是某个值
+    await collector.start()
+    tracker1 = collector.stage_tracker
+    first_stage = tracker1.current_stage
+    assert first_stage == "upload"
+    await collector.stop()
+
+    # 第二次录制：StageTracker 应是全新实例，current_stage 重新从 force_new_stage 开始
+    await collector.start()
+    tracker2 = collector.stage_tracker
+    assert tracker1 is not tracker2  # 不同实例
+    # 第二次的首阶段名应和第一次相同（同 URL），但 counter 不应叠加
+    assert tracker2.current_stage == "upload"
+    assert tracker2._stage_counter == 0  # 新实例 counter 归零
+    await collector.stop()
+
+
+async def test_collector_multiple_recordings_all_export(tmp_path):
+    """连续多次录制，每次都能独立导出产物（产物不互相覆盖）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+
+    for i in range(3):
+        await collector.start()
+        await collector.ingest({
+            "scenario": "distill", "session_id": f"rec{i}", "ts": i * 1000,
+            "payload": {"type": "click", "raw_attrs": {"tag": "button", "id": f"btn{i}"}},
+        })
+        result = await collector.stop()
+        assert result["events"] == 1
+        assert result["trace_path"] is not None
+
+    # 三个录制的 trace.json 都应存在（session_id 不同，目录不覆盖）
+    import json
+    from pathlib import Path
+
+    traces = list(Path(tmp_path).rglob("trace.json"))
+    assert len(traces) == 3
+    # 每个含各自的 element id
+    for t in traces:
+        data = json.loads(t.read_text(encoding="utf-8"))
+        assert len(data["events"]) == 1

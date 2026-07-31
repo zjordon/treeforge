@@ -141,10 +141,9 @@ async def _stop_and_export(
         else:
             print("[CAPTURE] 无事件采集（未录制或扩展未连接）", flush=True)
     else:
-        # 主路径：扩展已调 collector.stop()，导出已完成。只清理 runner。
-        session = collector.session
-        if session and session.events:
-            print(f"\n[CAPTURE] 扩展已停止，产物已导出到 {collector.output_dir}", flush=True)
+        # 主路径：扩展已调 collector.stop()，导出已完成（stop 清空了 session，这里读不到也无妨）。
+        # 产物路径已由 backend /stop 响应返回给扩展，这里只清理 runner。
+        print(f"\n[CAPTURE] 扩展已停止，产物已导出到 {collector.output_dir}", flush=True)
 
     # 清理 backend runner（CDP 已由 collector.stop() 断开，兜底路径也已断开）
     try:
