@@ -223,3 +223,6 @@ class CdpSession:
                 self.current_target_id = None
                 self.current_session_id = None
                 self.current_tab_id = None
+        # 清轮转缓存（无条件）：serve 长期运行时跨 session 不清，会让下次首屏 DOM 把旧
+        # selector_map 当「上一次」对比，新元素检测（* 标记）失真。即使 client 已断也清。
+        self._previous_selector_map = None

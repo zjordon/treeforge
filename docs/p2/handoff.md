@@ -143,7 +143,7 @@ contenteditable MutationObserver、scroll 去抖可配置化、extractor 注册�
 
 ## 五、P3（常驻服务）预告
 
-P3 的方案已写在 `docs/p2/serve-plan.md`（标记为 P3 范围，暂不实施）：
+P3 的方案已迁到 `docs/p3/serve-plan.md`（架构方案）+ `docs/p3/p3-implement-plan.md`（落地计划）：
 - 把一次性 capture 命令改成 FastAPI 常驻服务（`treeforge serve`）
 - 控制面板（配模型参数 + 触发蒸馏 + 查看产物）
 - distill 提炼为可被 HTTP 触发的后台任务
@@ -186,8 +186,8 @@ tools/
 ```
 docs/p2/
 ├── README.md                # P2 完整设计方案（采集层架构）
-├── serve-plan.md            # P3 常驻服务方案（暂不实施）
-└── debug-retrospective.md   # 端到端调试复盘（6 bug）
+├── debug-retrospective.md   # 端到端调试复盘（6 bug）
+└── ...                      # P3 方案已迁至 docs/p3/
 ```
 
 ## 七、端到端使用流程（备忘）

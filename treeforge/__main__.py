@@ -8,7 +8,11 @@
 
   capture [--task <desc>] [--host <domain>] [--output <dir>] [--cdp-port <n>]
     起采集后端 + 连 Chrome CDP，等扩展事件，Ctrl+C 导出 trace + 快照。
-    需配合 Chrome 扩展（extension/）使用。
+    需配合 Chrome 扩展（extension/）使用。一次性命令（录完即退出）。
+
+  serve [--host <ip>] [--port <n>] [--cdp-port <n>] [--captures-dir <dir>] [--skills-dir <dir>]
+    起 FastAPI 常驻服务：采集（4 端点，扩展零改动）+ 蒸馏 API + 配置/状态 API + 控制面板 SPA。
+    Chrome 未开也能启动（蒸馏/配置/状态可用）；扩展点「停止」不退出进程（session 可循环）。
 
   info
     打印当前生效配置（脱敏 key），用于诊断。
@@ -27,9 +31,7 @@ import sys
 from collections.abc import Sequence
 from pathlib import Path
 
-from adapters import get_adapter
-from harness import adapter, atomizer, bucketer, classifier, config, distiller, install, progress
-from harness.models import SkillCard
+from harness import config, progress
 
 # ---------------------------------------------------------------------------
 # distill 子命令
@@ -37,58 +39,32 @@ from harness.models import SkillCard
 
 
 def _run_distill(trace_path: Path, output_dir: Path, adapter_name: str, no_llm: bool) -> int:
-    """跑完整蒸馏链路。返回退出码。"""
-    config.load()  # 刷新 .env（幂等）
+    """跑完整蒸馏链路（CLI 薄包装）。
 
-    use_llm = (not no_llm) and bool(config.LLM_KEY)
-    if not no_llm and not config.LLM_KEY:
-        progress.report(
-            "DISTILL",
-            detail="LLM_KEY 未配置，自动退回模板模式（产物质量低，仅供链路验证）",
-        )
+    实际管线在 ``server.distill_api.run_distill_pipeline``（与 HTTP 后台任务共用），
+    这里只负责 CLI 的 print + 退出码。
+    """
+    from server.distill_api import run_distill_pipeline
 
-    # ① ADAPT
-    trace = adapter.load_trace(trace_path)
-
-    # ② ATOMIZE
-    segments = atomizer.atomize(trace)
-    if not segments:
-        progress.report("DISTILL", detail="无 segment，退出")
-        return 1
-
-    # ③ CLASSIFY
-    use_llm_classify = use_llm
-    classified = classifier.classify(segments, use_llm=use_llm_classify)
-
-    # ④ BUCKET
-    buckets = bucketer.bucket(classified)
-    if not buckets:
-        progress.report("DISTILL", detail="无 bucket，退出")
-        return 1
-
-    # ⑤ DISTILL（透传 trace 级 page_context，让 LLM 能看到 DOM 快照推 quirks）
-    cards: list[SkillCard] = distiller.distill_buckets(
-        buckets, use_llm=use_llm, page_context=trace.page_context
+    result = run_distill_pipeline(
+        trace_path=trace_path,
+        output_dir=output_dir,
+        adapter_name=adapter_name,
+        no_llm=no_llm,
     )
-    if not cards:
-        progress.report("DISTILL", detail="无 card 产出，退出")
+
+    if not result.ok:
+        progress.report("DISTILL", detail=result.error or "失败")
         return 1
 
-    # INSTALL
-    adp = get_adapter(adapter_name)
-    written = install.install_cards(cards, output_dir, adp)
-
-    # 汇总
-    progress.report("DONE", detail=f"wrote {len(written)} files to {output_dir}")
-    for p in written:
+    for p in result.written:
         print(f"  wrote: {p}")
 
     # 验收提示
-    if adapter_name == "treewalker" and cards:
-        host_dir = output_dir / "domain-skills" / cards[0].domain
+    if adapter_name == "treewalker" and result.host_dir:
         print()
-        print(f"TreeWalker 注入目录：{host_dir}")
-        print("包含文件：", sorted(p.name for p in host_dir.glob("*.md")))
+        print(f"TreeWalker 注入目录：{result.host_dir}")
+        print("包含文件：", sorted(p.name for p in result.host_dir.glob("*.md")))
     return 0
 
 
@@ -149,6 +125,27 @@ def _run_capture(args: argparse.Namespace) -> int:
     finally:
         signal_mod.signal(signal_mod.SIGINT, original_handler)
         loop.close()
+
+
+# ---------------------------------------------------------------------------
+# serve 子命令（P3 常驻服务）
+# ---------------------------------------------------------------------------
+
+
+def _run_serve(args: argparse.Namespace) -> int:
+    """起 FastAPI 常驻服务（uvicorn 阻塞跑，Ctrl+C 由 uvicorn 管）。"""
+    from treeforge.serve import run_serve
+
+    skills_dir = args.skills_dir or config.OUTPUT_DIR
+    return run_serve(
+        host=args.host,
+        port=args.port,
+        cdp_host=args.cdp_host,
+        cdp_port=args.cdp_port,
+        captures_dir=args.captures_dir,
+        skills_dir=skills_dir,
+        reload=args.reload,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -224,6 +221,39 @@ def _build_parser() -> argparse.ArgumentParser:
         help="阶段切换 DOM 相似度阈值（默认 0.7，低于此值视为新阶段）",
     )
 
+    # serve（P3 常驻服务）
+    p_serve = sub.add_parser(
+        "serve",
+        help="起 FastAPI 常驻服务（采集 + 蒸馏 API + 控制面板），阻塞跑",
+    )
+    p_serve.add_argument("--host", default="127.0.0.1", help="服务监听 host（默认 127.0.0.1）")
+    p_serve.add_argument(
+        "--port", type=int, default=8765, help="服务监听端口（默认 8765，扩展默认连此端口）"
+    )
+    p_serve.add_argument(
+        "--cdp-host", default="localhost", help="Chrome 远程调试 host（默认 localhost）"
+    )
+    p_serve.add_argument(
+        "--cdp-port", type=int, default=9222, help="Chrome 远程调试端口（默认 9222）"
+    )
+    p_serve.add_argument(
+        "--captures-dir",
+        type=Path,
+        default=Path("./data/captures"),
+        help="采集产物根目录（默认 ./data/captures）",
+    )
+    p_serve.add_argument(
+        "--skills-dir",
+        type=Path,
+        default=None,
+        help="蒸馏产物根目录（默认 ./data/skills 或 .env 的 OUTPUT_DIR）",
+    )
+    p_serve.add_argument(
+        "--reload",
+        action="store_true",
+        help="开发模式热重载（uvicorn reload）",
+    )
+
     return parser
 
 
@@ -236,6 +266,9 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if args.command == "capture":
         return _run_capture(args)
+
+    if args.command == "serve":
+        return _run_serve(args)
 
     if args.command == "distill":
         trace_path: Path = args.trace

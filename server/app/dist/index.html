@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TreeForge 控制面板</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      max-width: 920px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6;
+    }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #8884; padding-bottom: .3rem; }
+    .card {
+      border: 1px solid #8886; border-radius: 8px; padding: 1rem 1.2rem; margin: .8rem 0;
+      background: var(--card-bg, #f9f9fb);
+    }
+    @media (prefers-color-scheme: dark) { .card { background: #1c1c20; } }
+    .row { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; }
+    input[type=text] { padding: .4rem .6rem; border-radius: 6px; border: 1px solid #8886; min-width: 220px; }
+    button {
+      padding: .45rem .9rem; border-radius: 6px; border: 0; cursor: pointer;
+      background: #2563eb; color: #fff; font-size: .95rem;
+    }
+    button:hover { background: #1d4ed8; }
+    button.ghost { background: #555; }
+    button:disabled { opacity: .5; cursor: default; }
+    pre { background: #0001; padding: .6rem; border-radius: 6px; overflow-x: auto; font-size: .85rem; }
+    .muted { color: #888; font-size: .9rem; }
+    .badge { display: inline-block; padding: .1rem .5rem; border-radius: 99px; font-size: .8rem; background: #8883; }
+    .badge.running { background: #f59e0b33; color: #b45309; }
+    .badge.done { background: #22c55e33; color: #15803d; }
+    .badge.failed { background: #ef444433; color: #b91c1c; }
+    @media (prefers-color-scheme: dark) {
+      .badge.running { color: #fbbf24; }
+      .badge.done { color: #4ade80; }
+      .badge.failed { color: #f87171; }
+    }
+  </style>
+</head>
+<body>
+  <h1>TreeForge 控制面板</h1>
+  <p class="muted">常驻服务：采集 + 蒸馏 + 配置。扩展请配置后端地址为当前页面 URL。</p>
+
+  <h2>服务状态</h2>
+  <div class="card" id="status-card">加载中…</div>
+
+  <h2>触发蒸馏</h2>
+  <div class="card">
+    <div class="row">
+      <input type="text" id="trace-path" placeholder="trace 路径（如 data/captures/xxx/trace.json）" style="flex:1;min-width:300px" />
+      <label class="muted"><input type="checkbox" id="no-llm" /> 模板模式（不调 LLM）</label>
+      <button id="distill-btn">开始蒸馏</button>
+    </div>
+    <pre id="distill-out" class="muted">（点击「开始蒸馏」后此处显示进度）</pre>
+  </div>
+
+  <h2>采集产物</h2>
+  <div class="card" id="captures-card">加载中…</div>
+
+  <h2>蒸馏产物（skills）</h2>
+  <div class="card" id="skills-card">加载中…</div>
+
+  <h2>当前配置</h2>
+  <div class="card"><pre id="config-out">加载中…</pre></div>
+
+  <script>
+    const api = (p, opts) => fetch(p, opts).then(r => r.json());
+
+    async function refreshStatus() {
+      try {
+        const s = await api('/api/status');
+        const st = s.status || {};
+        document.getElementById('status-card').innerHTML =
+          `录制中：<span class="badge ${st.recording ? 'running' : ''}">${st.recording ? '是' : '否'}</span> &nbsp; ` +
+          `Chrome：<span class="badge ${st.chrome_connected ? 'done' : 'failed'}">${st.chrome_connected ? '已连接' : '未连接'}</span><br>` +
+          `<span class="muted">captures: ${st.captures_dir || '-'}<br>skills: ${st.skills_dir || '-'}</span>`;
+      } catch (e) { document.getElementById('status-card').textContent = '状态获取失败：' + e; }
+    }
+
+    async function refreshCaptures() {
+      try {
+        const c = await api('/api/captures');
+        const items = c.items || [];
+        document.getElementById('captures-card').innerHTML = items.length
+          ? items.map(i => `${i.name} <span class="muted">(${i.md_count} md)</span>`).join('<br>')
+          : '<span class="muted">暂无采集产物（录一段 → POST /stop 导出后出现）</span>';
+      } catch (e) { document.getElementById('captures-card').textContent = '失败：' + e; }
+    }
+
+    async function refreshSkills() {
+      try {
+        const s = await api('/api/skills');
+        const hosts = s.hosts || [];
+        document.getElementById('skills-card').innerHTML = hosts.length
+          ? hosts.map(h => `${h.name} <span class="muted">(${h.md_count} md)</span>`).join('<br>')
+          : '<span class="muted">暂无蒸馏产物</span>';
+      } catch (e) { document.getElementById('skills-card').textContent = '失败：' + e; }
+    }
+
+    async function refreshConfig() {
+      try {
+        const c = await api('/api/config');
+        document.getElementById('config-out').textContent = JSON.stringify(c.config, null, 2);
+      } catch (e) { document.getElementById('config-out').textContent = '失败：' + e; }
+    }
+
+    // 触发蒸馏 + 轮询进度
+    let pollTimer = null;
+    document.getElementById('distill-btn').addEventListener('click', async () => {
+      const trace = document.getElementById('trace-path').value.trim();
+      const noLlm = document.getElementById('no-llm').checked;
+      if (!trace) { alert('请填 trace 路径'); return; }
+      const out = document.getElementById('distill-out');
+      out.textContent = '触发中…';
+      try {
+        const r = await api('/api/distill', {
+          method: 'POST', headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ trace_path: trace, no_llm: noLlm })
+        });
+        if (!r.ok) { out.textContent = '触发失败：' + (r.error || JSON.stringify(r)); return; }
+        out.textContent = '已提交，job_id=' + r.job_id + '，轮询中…';
+        if (pollTimer) clearInterval(pollTimer);
+        pollTimer = setInterval(() => pollJob(r.job_id, out), 1000);
+      } catch (e) { out.textContent = '错误：' + e; }
+    });
+
+    async function pollJob(jobId, outEl) {
+      try {
+        const r = await api('/api/distill/' + jobId);
+        if (!r.ok) { outEl.textContent = '查询失败：' + JSON.stringify(r); return; }
+        const j = r.job;
+        outEl.textContent =
+          `[${j.status}] ${j.phase} ${j.current}/${j.total} ${j.detail}`.trim() +
+          (j.error ? '\n错误：' + j.error : '') +
+          (j.status === 'done' && j.result ? '\n产出：' + (j.result.written || []).join('\n        ') : '');
+        if (j.status === 'done' || j.status === 'failed') {
+          clearInterval(pollTimer); pollTimer = null;
+          refreshSkills(); refreshCaptures();
+        }
+      } catch (e) { outEl.textContent = '轮询错误：' + e; }
+    }
+
+    // 初次加载
+    refreshStatus(); refreshCaptures(); refreshSkills(); refreshConfig();
+    setInterval(refreshStatus, 3000);  // 每 3s 刷录制状态
+  </script>
+</body>
+</html>
