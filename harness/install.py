@@ -48,7 +48,9 @@ def install_cards(cards: list[SkillCard], output_dir: Path, adapter) -> list[Pat
             written.extend(result)
         elif isinstance(result, Path):
             written.append(result)
-        progress.report("INSTALL", current=len(cards), total=len(cards), detail=f"merged {len(cards)} cards")
+        progress.report(
+            "INSTALL", current=len(cards), total=len(cards), detail=f"merged {len(cards)} cards"
+        )
         return written
 
     # 否则逐 card 写（browserbc adapter 等）

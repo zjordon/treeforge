@@ -108,6 +108,23 @@ def test_extract_attrs_skips_empty_values():
     assert attrs == {"tag": "div"}  # id/name 空，class 非白名单
 
 
+def test_extract_attrs_keeps_contenteditable_and_aria_labelledby():
+    """contenteditable + aria-labelledby 富文本编辑器场景（如 bilibili 简介）。
+
+    aria-labelledby 是 contenteditable 常见的语义关联（关联上方 <h3>标题</h3>），
+    必须保留到 element_attrs，让 distiller 能识别编辑器用途。
+    """
+    raw = {
+        "tag": "div",
+        "contenteditable": "true",
+        "aria-labelledby": "intro-label",
+    }
+    attrs = extract_element_attrs(raw)
+    assert attrs["tag"] == "div"
+    assert attrs["contenteditable"] == "true"
+    assert attrs["aria-labelledby"] == "intro-label"
+
+
 # ---------------------------------------------------------------------------
 # payload_to_trace_fields
 # ---------------------------------------------------------------------------
@@ -195,8 +212,16 @@ def test_whitelist_superset_of_atomizer():
     """ELEMENT_ATTR_WHITELIST 应是 atomizer 白名单的超集（多了 accept）。"""
     # atomizer 的白名单（harness/atomizer.py:130）
     atomizer_whitelist = {
-        "id", "name", "type", "placeholder", "aria-label", "role",
-        "data-testid", "data-test", "data-cy", "contenteditable",
+        "id",
+        "name",
+        "type",
+        "placeholder",
+        "aria-label",
+        "role",
+        "data-testid",
+        "data-test",
+        "data-cy",
+        "contenteditable",
     }
     assert atomizer_whitelist.issubset(set(ELEMENT_ATTR_WHITELIST))
     assert "accept" in ELEMENT_ATTR_WHITELIST  # 额外保留

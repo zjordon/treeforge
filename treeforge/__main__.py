@@ -159,9 +159,7 @@ def _run_capture(args: argparse.Namespace) -> int:
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="treeforge",
-        description=(
-            "TreeForge（树锻）—— 把浏览器示教 trace 蒸馏成 site-specific skill 文件。"
-        ),
+        description=("TreeForge（树锻）—— 把浏览器示教 trace 蒸馏成 site-specific skill 文件。"),
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -196,18 +194,29 @@ def _build_parser() -> argparse.ArgumentParser:
         "capture",
         help="起采集后端 + 连 Chrome CDP，等扩展事件，Ctrl+C 导出 trace + 快照",
     )
-    p_capture.add_argument("--task", "-t", default="", help="任务描述（写进 trace.task_instruction）")
+    p_capture.add_argument(
+        "--task", "-t", default="", help="任务描述（写进 trace.task_instruction）"
+    )
     p_capture.add_argument("--host", default="", help="目标站点主域名（默认自动从 URL 提取）")
     p_capture.add_argument(
-        "--output", "-o",
+        "--output",
+        "-o",
         type=Path,
         default=Path("./data/captures"),
         help="采集产物输出目录（默认 ./data/captures）",
     )
-    p_capture.add_argument("--cdp-host", default="localhost", help="Chrome 远程调试 host（默认 localhost）")
-    p_capture.add_argument("--cdp-port", type=int, default=9222, help="Chrome 远程调试端口（默认 9222）")
-    p_capture.add_argument("--backend-host", default="127.0.0.1", help="采集后端监听 host（默认 127.0.0.1）")
-    p_capture.add_argument("--backend-port", type=int, default=8765, help="采集后端监听端口（默认 8765）")
+    p_capture.add_argument(
+        "--cdp-host", default="localhost", help="Chrome 远程调试 host（默认 localhost）"
+    )
+    p_capture.add_argument(
+        "--cdp-port", type=int, default=9222, help="Chrome 远程调试端口（默认 9222）"
+    )
+    p_capture.add_argument(
+        "--backend-host", default="127.0.0.1", help="采集后端监听 host（默认 127.0.0.1）"
+    )
+    p_capture.add_argument(
+        "--backend-port", type=int, default=8765, help="采集后端监听端口（默认 8765）"
+    )
     p_capture.add_argument(
         "--stage-threshold",
         type=float,

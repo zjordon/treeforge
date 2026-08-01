@@ -100,9 +100,7 @@ def _normalize_event(raw: dict[str, Any], fallback_idx: int) -> TraceEvent:
         ts = raw.get("ts") or raw.get("time") or fallback_idx
 
     # 脱敏（hint 用 target/selector 推断字段名）
-    hint = " ".join(
-        str(x) for x in (target, selector, raw.get("name"), raw.get("id")) if x
-    )
+    hint = " ".join(str(x) for x in (target, selector, raw.get("name"), raw.get("id")) if x)
     value = _redact_value(hint, value)
 
     # element_attrs（新格式）：原样保留 raw 里的 element_attrs dict，缺则空。
@@ -131,8 +129,10 @@ def _stable_track_id(payload: dict[str, Any], source: str) -> str:
     """从 trace 内容生成稳定的 track_id（同一文件多次跑得到同一 id）。"""
     host = str(payload.get("host") or payload.get("domain") or "unknown")
     h = hashlib.sha1(
-        json.dumps({"source": source, "host": host, "n_events": len(payload.get("events") or [])},
-                   sort_keys=True).encode("utf-8")
+        json.dumps(
+            {"source": source, "host": host, "n_events": len(payload.get("events") or [])},
+            sort_keys=True,
+        ).encode("utf-8")
     ).hexdigest()[:12]
     return f"track-{h}"
 

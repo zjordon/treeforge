@@ -23,14 +23,30 @@ def _make_session(
         task_instruction="测试投稿",
         host=host,
     )
-    session.page_context = stages if stages is not None else {
-        "upload": "[1]<a id=nav_upload />投稿",
-        "publish": "[100]<input type=text placeholder=标题 />",
-    }
+    session.page_context = (
+        stages
+        if stages is not None
+        else {
+            "upload": "[1]<a id=nav_upload />投稿",
+            "publish": "[100]<input type=text placeholder=标题 />",
+        }
+    )
     if events is None:
         session.events = [
-            CapturedEvent(type="click", target="投稿", element_attrs={"tag": "a", "id": "nav_upload"}, stage="upload", timestamp=0),
-            CapturedEvent(type="input", element_attrs={"tag": "input", "type": "text"}, value="视频标题", stage="publish", timestamp=1000),
+            CapturedEvent(
+                type="click",
+                target="投稿",
+                element_attrs={"tag": "a", "id": "nav_upload"},
+                stage="upload",
+                timestamp=0,
+            ),
+            CapturedEvent(
+                type="input",
+                element_attrs={"tag": "input", "type": "text"},
+                value="视频标题",
+                stage="publish",
+                timestamp=1000,
+            ),
         ]
     else:
         session.events = events

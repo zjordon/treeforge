@@ -131,6 +131,47 @@ def test_tracker_name_stage_dom_signal_avoids_duplicate():
 
 
 # ---------------------------------------------------------------------------
+# stage 语义命名（DOM 特征检测）
+# ---------------------------------------------------------------------------
+
+
+def test_name_stage_semantic_upload_cover():
+    """DOM 含 accept=image/png → 命名 upload-cover（封面上传）。"""
+    tracker = StageTracker()
+    dom_text = '[133]<input type="file" accept="image/png, image/jpeg" />'
+    name = tracker.name_stage("https://x.com/up", "dom:0.20", dom_text)
+    assert name == "upload-cover"
+
+
+def test_name_stage_semantic_edit_cover():
+    """DOM 含 <canvas> → 命名 edit-cover（封面裁剪，最特异优先于 upload-cover）。"""
+    tracker = StageTracker()
+    dom_text = '[149]<canvas id="editor_4_3" />\n[165]<canvas id="editor_16_9" />'
+    name = tracker.name_stage("https://x.com/up", "dom:0.10", dom_text)
+    assert name == "edit-cover"  # canvas 优先于 accept
+
+
+def test_name_stage_semantic_falls_back_when_no_feature():
+    """DOM 无特征 → 退化 URL 命名（向后兼容）。"""
+    tracker = StageTracker()
+    dom_text = "[1]<a />投稿\n[2]<button />登录"
+    name = tracker.name_stage("https://x.com/platform/home", "url:/home", dom_text)
+    assert name == "home"  # 无特征，退化 URL 段
+
+
+def test_name_stage_semantic_dedup_suffix():
+    """两次命中同语义特征 → 第二次加 _N 后缀（防 page_context 覆盖）。"""
+    tracker = StageTracker()
+    dom_text = '[1]<input type="file" accept="image/png" />'
+    first = tracker.name_stage("https://x.com/up", "dom:0.20", dom_text)
+    assert first == "upload-cover"
+    # 第二次同特征（封面 modal 关了又开）
+    second = tracker.name_stage("https://x.com/up", "dom:0.15", dom_text)
+    assert second != "upload-cover"
+    assert second.startswith("upload-cover_")
+
+
+# ---------------------------------------------------------------------------
 # Collector（mock CdpSession）
 # ---------------------------------------------------------------------------
 
@@ -146,9 +187,11 @@ def _make_mock_cdp(url="https://member.bilibili.com/platform/home", dom_text="[1
 
     cdp = MagicMock(spec=CdpSession)
     cdp.current_session_id = None
+    cdp.current_tab_id = None
     cdp.get_state = AsyncMock(return_value=CaptureState(url=url, title="Test", dom_state=dom_state))
     cdp.start = AsyncMock()
     cdp.stop = AsyncMock()
+    cdp.attach_tab = AsyncMock(return_value=True)
     return cdp
 
 
@@ -203,10 +246,14 @@ async def test_collector_ingest_no_stage_marker():
     await collector.start()
 
     for i in range(3):
-        await collector.ingest({
-            "scenario": "distill", "session_id": "t", "ts": i * 1000,
-            "payload": {"type": "click", "raw_attrs": {"tag": "button"}},
-        })
+        await collector.ingest(
+            {
+                "scenario": "distill",
+                "session_id": "t",
+                "ts": i * 1000,
+                "payload": {"type": "click", "raw_attrs": {"tag": "button"}},
+            }
+        )
 
     for event in collector.session.events:
         assert event.stage is not None
@@ -226,10 +273,14 @@ async def test_collector_stop_exports_and_disconnects(tmp_path):
     cdp = _make_mock_cdp()
     collector = Collector(cdp, output_dir=str(tmp_path))
     await collector.start()
-    await collector.ingest({
-        "scenario": "distill", "session_id": "t", "ts": 0,
-        "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
-    })
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 0,
+            "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+        }
+    )
 
     result = await collector.stop()
     cdp.stop.assert_called_once()
@@ -240,6 +291,7 @@ async def test_collector_stop_exports_and_disconnects(tmp_path):
     assert result["capture_dir"] is not None
     assert result["trace_path"] is not None
     from pathlib import Path
+
     trace_path = Path(result["trace_path"])
     assert trace_path.is_file()  # trace.json 真的写了
 
@@ -252,10 +304,14 @@ async def test_collector_get_state_failure_doesnt_block_event():
     # start 也会失败 get_state，但不阻断
     await collector.start()
 
-    await collector.ingest({
-        "scenario": "distill", "session_id": "t", "ts": 0,
-        "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
-    })
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 0,
+            "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+        }
+    )
     # 事件仍累积
     assert len(collector.session.events) == 1
 
@@ -268,10 +324,14 @@ async def test_collector_navigation_event_triggers_stage_change():
 
     # 模拟导航到 page2
     cdp.get_state.return_value.url = "https://x.com/page2"
-    await collector.ingest({
-        "scenario": "distill", "session_id": "t", "ts": 1000,
-        "payload": {"type": "navigate", "url": "https://x.com/page2"},
-    })
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 1000,
+            "payload": {"type": "navigate", "url": "https://x.com/page2"},
+        }
+    )
 
     event = collector.session.events[-1]
     assert event.type == "navigate"
@@ -290,11 +350,15 @@ async def test_collector_envelope_url_overrides_cdp_url():
     await collector.start()
 
     # 事件的 envelope 外层 url 是真实 bilibili 页面
-    await collector.ingest({
-        "scenario": "distill", "session_id": "t", "ts": 0,
-        "url": "https://member.bilibili.com/platform/upload/video/frame",
-        "payload": {"type": "click", "raw_attrs": {"tag": "a", "id": "nav_upload"}},
-    })
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 0,
+            "url": "https://member.bilibili.com/platform/upload/video/frame",
+            "payload": {"type": "click", "raw_attrs": {"tag": "a", "id": "nav_upload"}},
+        }
+    )
 
     event = collector.session.events[-1]
     # 事件 url 应是 envelope 外层的 bilibili，不是 CdpSession 的 popup
@@ -302,6 +366,96 @@ async def test_collector_envelope_url_overrides_cdp_url():
     assert "popup" not in (event.url or "")
     # host 也应从 envelope url 提取，不是 popup
     assert collector.session.host == "member.bilibili.com"
+
+
+# ---------------------------------------------------------------------------
+# tab 跟随（envelope.tab_id → CdpSession.attach_tab 精确重 attach）
+# ---------------------------------------------------------------------------
+
+
+async def test_collector_attaches_tab_from_envelope():
+    """envelope 带 tab_id → collector 调 cdp.attach_tab 精确 attach。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir="/tmp/test")
+    await collector.start()
+    cdp.attach_tab.reset_mock()
+
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 0,
+            "tab_id": 5,
+            "url": "https://x.com/up",
+            "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+        }
+    )
+    cdp.attach_tab.assert_called_once_with(5)
+    assert collector._attached_tab == 5
+
+
+async def test_collector_skips_reattach_same_tab():
+    """同 tab_id 连续事件 → attach_tab 只调一次（幂等）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir="/tmp/test")
+    await collector.start()
+    cdp.attach_tab.reset_mock()
+
+    envelope = {
+        "scenario": "distill",
+        "session_id": "t",
+        "ts": 0,
+        "tab_id": 5,
+        "url": "https://x.com/up",
+        "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+    }
+    await collector.ingest(envelope)
+    await collector.ingest({**envelope, "ts": 1000})  # 同 tab 第二个事件
+
+    cdp.attach_tab.assert_called_once_with(5)  # 只调一次
+
+
+async def test_collector_reattaches_on_tab_switch():
+    """tab_id 变化（用户切 tab）→ attach_tab 再调一次。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir="/tmp/test")
+    await collector.start()
+    cdp.attach_tab.reset_mock()
+
+    base = {
+        "scenario": "distill",
+        "session_id": "t",
+        "ts": 0,
+        "url": "https://x.com/up",
+        "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+    }
+    await collector.ingest({**base, "tab_id": 5})
+    await collector.ingest({**base, "tab_id": 7, "ts": 1000})  # 切到 tab 7
+
+    assert cdp.attach_tab.call_count == 2
+    cdp.attach_tab.assert_any_call(5)
+    cdp.attach_tab.assert_any_call(7)
+    assert collector._attached_tab == 7
+
+
+async def test_collector_no_tab_id_uses_eager_fallback():
+    """无 tab_id 的老 envelope → 不调 attach_tab（用 start 的 eager fallback）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir="/tmp/test")
+    await collector.start()
+    cdp.attach_tab.reset_mock()
+
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 0,
+            "url": "https://x.com/up",
+            "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+        }
+    )
+    cdp.attach_tab.assert_not_called()  # 无 tab_id，不重 attach
+    assert collector._attached_tab is None
 
 
 # ---------------------------------------------------------------------------
@@ -318,10 +472,14 @@ async def test_collector_start_stop_loop_clears_session(tmp_path):
     await collector.start()
     assert collector.session is not None
     sid1 = collector.session.session_id
-    await collector.ingest({
-        "scenario": "distill", "session_id": "t", "ts": 0,
-        "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
-    })
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 0,
+            "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+        }
+    )
     assert len(collector.session.events) == 1
     await collector.stop()
 
@@ -367,10 +525,14 @@ async def test_collector_multiple_recordings_all_export(tmp_path):
 
     for i in range(3):
         await collector.start()
-        await collector.ingest({
-            "scenario": "distill", "session_id": f"rec{i}", "ts": i * 1000,
-            "payload": {"type": "click", "raw_attrs": {"tag": "button", "id": f"btn{i}"}},
-        })
+        await collector.ingest(
+            {
+                "scenario": "distill",
+                "session_id": f"rec{i}",
+                "ts": i * 1000,
+                "payload": {"type": "click", "raw_attrs": {"tag": "button", "id": f"btn{i}"}},
+            }
+        )
         result = await collector.stop()
         assert result["events"] == 1
         assert result["trace_path"] is not None
@@ -427,9 +589,13 @@ async def test_collector_host_filled_on_real_page(tmp_path):
 
     # 第一个事件在真实页面
     cdp.get_state.return_value.url = "https://member.bilibili.com/platform/home"
-    await collector.ingest({
-        "scenario": "distill", "session_id": "t", "ts": 0,
-        "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
-    })
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 0,
+            "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+        }
+    )
     assert collector.session.host == "member.bilibili.com"  # host 兜底填充
     await collector.stop()

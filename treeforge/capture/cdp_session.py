@@ -56,42 +56,98 @@ class CdpSession:
         self.current_session_id: str | None = None
         # 轮转缓存：上一次 selector_map，供 dom-snapshot 检测新元素（* 标记）
         self._previous_selector_map: dict | None = None
+        # 已 attach 的 chrome tabId（与 current_target_id 对应），用于跟随用户切 tab。
+        # None = 未按 tabId attach（用 start 的 eager fallback）。
+        self.current_tab_id: int | None = None
 
     async def start(self) -> None:
-        """连 CDP，发现 page target，attach，enable Page/DOM 域。
+        """连 CDP（browser-level ws），eager attach 首个 http target 作 fallback。
 
         参照 TreeWalker session.py:_connect（1203-1269），但去掉熔断器/网络空闲/高亮/file-chooser。
         Chrome 需以 --remote-debugging-port=9222 启动。
 
-        target 选择：优先 http/https 真实页面，跳过 chrome-extension://（popup）、
-        chrome://（内部页）、devtools://。避免连到扩展 popup 导致采错 DOM。
+        target 选择（eager fallback）：优先 http/https 真实页面，跳过 chrome-extension://（popup）、
+        chrome://（内部页）、devtools://。这个 eager attach 是给「无 tab_id 的老流程」兜底；
+        有 tab_id 的事件会触发 attach_tab 精确重 attach（见 collector.ingest）。
         """
         self.client = CDPClient(self.ws_url)
         await self.client.start()
 
-        # 发现 page target 并 attach
-        # 策略：优先选 http/https 真实页面；跳过 chrome-extension://（popup）、
-        # chrome://（内部页）、devtools://。否则会连到扩展 popup 采到错误 DOM。
+        # eager attach：选首个真实页面 target（fallback，无 tab_id 时用）
+        target = await self._find_first_http_target()
+        if target:
+            await self._attach_and_enable(target["targetId"])
+            logger.info("CdpSession eager-attached: target=%s", self.current_target_id)
+        else:
+            # 无 page target 也允许 start（等首个事件带 tab_id 时再 attach）
+            logger.info("CdpSession connected, no page target yet (waiting for tab_id)")
+
+    async def attach_tab(self, tab_id: int) -> bool:
+        """精确 attach 指定 chrome tab 的 CDP target。
+
+        通过 Target.getTargets 的 tabId 字段（与 chrome.tabs API 同 id 空间）定位 target。
+        若已是当前 target（幂等）跳过；否则 detach 旧的、attach 新的 + enable 域。
+
+        Returns: True 表示已 attach 到目标 tab；False 表示找不到对应 target。
+        """
+        if not self.client:
+            return False
+        # 幂等：已是当前 tab 不重 attach
+        if tab_id == self.current_tab_id and self.current_session_id:
+            return True
+
+        target = await self._find_target_by_tab_id(tab_id)
+        if not target:
+            logger.warning("attach_tab: no target for tabId=%s (fallback to current)", tab_id)
+            return False
+
+        await self._attach_and_enable(target["targetId"])
+        self.current_tab_id = tab_id
+        logger.info("CdpSession attached tab=%s target=%s", tab_id, self.current_target_id)
+        return True
+
+    async def _find_first_http_target(self) -> dict | None:
+        """发现首个 http/https page target（跳过 chrome-extension/chrome/devtools）。"""
+        if not self.client:
+            return None
         targets = await self.client.send.Target.getTargets({})
         page_targets = [t for t in targets.get("targetInfos", []) if t.get("type") == "page"]
-        # 按优先级排序：http/https 优先，其它（chrome-extension/chrome/devtools）排后
-        real_pages = [t for t in page_targets if t.get("url", "").startswith(("http://", "https://"))]
-        # 优先选真实页面；没有才退而求其次（可能用户在 chrome:// 页面操作）
+        real_pages = [
+            t for t in page_targets if t.get("url", "").startswith(("http://", "https://"))
+        ]
         candidates = real_pages or page_targets
-        if candidates:
-            t = candidates[0]
-            self.current_target_id = t["targetId"]
-            result = await self.client.send.Target.attachToTarget(
-                {"targetId": self.current_target_id, "flatten": True},
-            )
-            self.current_session_id = result["sessionId"]
+        return candidates[0] if candidates else None
 
-        if not self.current_session_id:
-            raise RuntimeError(
-                "No page target found. Is Chrome running with --remote-debugging-port?"
-            )
+    async def _find_target_by_tab_id(self, tab_id: int) -> dict | None:
+        """按 chrome tabId 找 CDP page target。
 
-        # enable 必需的 CDP 域（Page/DOM）。Network 可选（采集不需要网络空闲追踪）。
+        tabId 是 Target.getTargets 的实验性字段（近年 Chrome 稳定支持），
+        TypedDict 未声明但运行时 t.get('tabId') 可读。
+        """
+        if not self.client:
+            return None
+        targets = await self.client.send.Target.getTargets({})
+        for t in targets.get("targetInfos", []):
+            if t.get("type") != "page":
+                continue
+            if t.get("tabId") == tab_id:
+                return t
+        return None
+
+    async def _attach_and_enable(self, target_id: str) -> None:
+        """attach 指定 target + enable Page/DOM 域 + setAutoAttach + 禁 file-chooser。
+
+        切 tab 时会被多次调用：先 attach 新 target（旧的 sessionId 自然废弃）。
+        """
+        if not self.client:
+            return
+        self.current_target_id = target_id
+        result = await self.client.send.Target.attachToTarget(
+            {"targetId": target_id, "flatten": True},
+        )
+        self.current_session_id = result["sessionId"]
+
+        # enable 必需的 CDP 域（Page/DOM）
         await self.client.send.Page.enable({}, session_id=self.current_session_id)
         await self.client.send.DOM.enable({}, session_id=self.current_session_id)
 
@@ -104,16 +160,13 @@ class CdpSession:
         except Exception as e:  # noqa: BLE001 - setAutoAttach 失败降级（老 Chrome 可能不支持）
             logger.warning("Target.setAutoAttach failed (degrading): %s", e)
 
-        # 录制要禁用 file-chooser intercept（让原生 picker 弹出，用户能手动选文件）。
-        # 与 TreeWalker 相反（TW agent 要 intercept 拦截 picker）。best-effort。
+        # 录制要禁用 file-chooser intercept（让原生 picker 弹出，用户能手动选文件）
         try:
             await self.client.send.Page.setInterceptFileChooserDialog(
                 {"enabled": False}, session_id=self.current_session_id
             )
         except Exception as e:  # noqa: BLE001 - 老版本 Chrome 可能无此命令
             logger.debug("setInterceptFileChooserDialog(False) failed: %s", e)
-
-        logger.info("CdpSession connected: target=%s", self.current_target_id)
 
     async def get_state(self) -> CaptureState:
         """取页面状态：url/title + DOM 快照（委托 dom-snapshot.build_dom_state）。
@@ -169,3 +222,4 @@ class CdpSession:
                 self.client = None
                 self.current_target_id = None
                 self.current_session_id = None
+                self.current_tab_id = None

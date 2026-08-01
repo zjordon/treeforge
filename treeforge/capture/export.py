@@ -91,7 +91,9 @@ def export_capture(
 
     logger.info(
         "Exported capture: %s (%d events, %d stages)",
-        trace_path, len(events), len(page_context),
+        trace_path,
+        len(events),
+        len(page_context),
     )
     return capture_dir
 

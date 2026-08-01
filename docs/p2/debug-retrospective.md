@@ -155,9 +155,11 @@ url = envelope.get("url") or fields.get("url")  # 优先 content script 报的�
   可能不是用户操作的页面）。两者可能不一致，要以前者为准
 - TreeWalker 能跑是因为它的使用场景（启动即连）恰好避开了 target 选择问题，不代表机制本身健壮
 
-### 遗留限制
-CdpSession 仍连固定 target，不跟随用户切 tab。如果用户开了多个 http tab，可能选错。
-彻底解决需要 content script 报告 tab id，CdpSession 精确 attach——较大改动，留后续。
+### 遗留限制（已解决）
+~~CdpSession 仍连固定 target，不跟随用户切 tab。~~ **已解决**：方案 B——扩展 background
+用 `sender.tab.id` 打 `tab_id` 进 envelope，后端 collector 检测 tab_id 变化调
+`CdpSession.attach_tab(tab_id)` 精确重 attach（Target.getTargets 的 tabId 关联 CDP targetId）。
+无 tab_id 的老 envelope 用 start 的 eager fallback 兜底。详见 `docs/p2/p2-low-priority-plan.md`。
 
 ---
 

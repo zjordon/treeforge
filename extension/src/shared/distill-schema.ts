@@ -31,6 +31,7 @@ export const RAW_ATTR_KEYS = [
   "role",
   "aria-label",
   "ariaLabel", // 兜底：aria-label 取不到时用可访问名计算
+  "aria-labelledby", // contenteditable 常用：关联标题元素（如 bilibili 简介 <h3>）
   // 表单提示
   "placeholder",
   // 测试标识（蒸馏「稳定标识」关键来源）

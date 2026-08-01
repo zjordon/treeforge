@@ -24,7 +24,7 @@ LLM_INSECURE: bool = False  # 1/true/yes 跳过 TLS 验证（自签 / 企业 MIT
 DISTILL_MODEL: str = "claude-opus-4-8"
 CLASSIFY_MODEL: str = "claude-haiku-4-5"
 
-LLM_TIMEOUT: int = 180          # 秒
+LLM_TIMEOUT: int = 180  # 秒
 LLM_RETRIES: int = 6
 LLM_USER_AGENT: str = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -35,10 +35,10 @@ CLASSIFY_MAX_TOKENS: int = 2048
 
 # ---- 管线参数（对齐 Browser-BC 默认值）------------------------------------
 
-MIN_BUCKET_SIZE: int = 1        # 单条录制即可蒸馏（P0 验收需要）
+MIN_BUCKET_SIZE: int = 1  # 单条录制即可蒸馏（P0 验收需要）
 MAX_SEGMENT_EVENTS: int = 80
 MIN_SEGMENT_EVENTS: int = 3
-IDLE_GAP_MS: int = 15_000       # 15s 静默 → 切 segment
+IDLE_GAP_MS: int = 15_000  # 15s 静默 → 切 segment
 SUBMIT_LOOKAHEAD: int = 5
 PATH_DEPTH: int = 2
 
@@ -124,7 +124,11 @@ def load(env_path: Path | str | None = None) -> None:
     LLM_KEY = _resolve(env, "LLM_KEY", LLM_KEY, current=LLM_KEY)  # type: ignore[assignment]
     LLM_BASE = _resolve(env, "LLM_BASE", LLM_BASE, current=LLM_BASE)  # type: ignore[assignment]
     LLM_INSECURE = _resolve(  # type: ignore[assignment]
-        env, "LLM_INSECURE", "false" if not LLM_INSECURE else "true", cast=bool, current=LLM_INSECURE
+        env,
+        "LLM_INSECURE",
+        "false" if not LLM_INSECURE else "true",
+        cast=bool,
+        current=LLM_INSECURE,
     )
     DISTILL_MODEL = _resolve(  # type: ignore[assignment]
         env, "DISTILL_MODEL", DISTILL_MODEL, current=DISTILL_MODEL

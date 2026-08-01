@@ -137,7 +137,10 @@ async def _stop_and_export(
             print(f"  trace:  {result.get('trace_path')}", flush=True)
             print(flush=True)
             print("可蒸馏：", flush=True)
-            print(f"  uv run treeforge distill {result.get('trace_path')} --output ./data/skills", flush=True)
+            print(
+                f"  uv run treeforge distill {result.get('trace_path')} --output ./data/skills",
+                flush=True,
+            )
         else:
             print("[CAPTURE] 无事件采集（未录制或扩展未连接）", flush=True)
     else:

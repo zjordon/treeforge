@@ -80,13 +80,36 @@ INTERACTIVE_ATTR_KEYS: tuple[str, ...] = (
 # 用「包含」匹配，覆盖各种变体（投稿/立即投稿/确认投稿、保存/存草稿 等）。
 ACTION_KEYWORDS: tuple[str, ...] = (
     # 提交/确认类
-    "投稿", "提交", "确认", "发布", "发布视频", "保存", "存草稿", "下一步",
+    "投稿",
+    "提交",
+    "确认",
+    "发布",
+    "发布视频",
+    "保存",
+    "存草稿",
+    "下一步",
     # 选择/展开类
-    "分区", "选择", "展开", "更多", "折叠",
+    "分区",
+    "选择",
+    "展开",
+    "更多",
+    "折叠",
     # 通用动作
-    "上传", "下载", "添加", "删除", "编辑", "修改", "取消", "返回",
+    "上传",
+    "下载",
+    "添加",
+    "删除",
+    "编辑",
+    "修改",
+    "取消",
+    "返回",
     # 英文
-    "submit", "publish", "save", "cancel", "select", "upload",
+    "submit",
+    "publish",
+    "save",
+    "cancel",
+    "select",
+    "upload",
 )
 
 # 这类「靠文本触发的非标准可交互元素」的 tag 限定——避免给所有 div/span 都检测
@@ -256,8 +279,10 @@ def parse_dom_text(text: str, source_name: str) -> tuple[list[dict], list[dict]]
 
         indent_str = m.group("indent")
         # 缩进层级：用 tab 数（每 \t 一级）。混合空格/tab 时按字符宽估算。
-        indent_level = indent_str.count("\t") + indent_str.count("    ") + (
-            len(indent_str.replace("\t", "").replace("    ", "")) // 2
+        indent_level = (
+            indent_str.count("\t")
+            + indent_str.count("    ")
+            + (len(indent_str.replace("\t", "").replace("    ", "")) // 2)
         )
         index = int(m.group("index"))
         tag = m.group("tag")

@@ -9,13 +9,15 @@
   2. DOM 文本变化率超阈值（Jaccard 行集合相似度 < 阈值）→ SPA 阶段切换
   3. 导航事件（整页跳转）→ 传统多页站点
 
-命名：
-  - URL path 段优先（如 /platform/upload → upload）
-  - 无法提取时用 stage_N（序号）
+命名（DOM 特征增强 + URL 兜底）：
+  - 先跑 DOM 特征检测：命中特异性 DOM 特征用语义名（如 upload-cover / edit-cover）
+  - 未命中时退化 URL path 段（如 /platform/upload → upload）
+  - 都失败用 stage_N（序号）
 """
 
 from __future__ import annotations
 
+import re
 from urllib.parse import urlparse
 
 # DOM 相似度阈值：低于此值视为阶段切换。
@@ -27,6 +29,32 @@ DEFAULT_SIMILARITY_THRESHOLD = 0.33
 
 # 命名时跳过的 URL path 段（无语义的通用段）
 _PATH_SKIP_SEGMENTS = frozenset({"api", "platform", "www", "app", "v1", "v2"})
+
+# stage 语义特征检测：DOM 文本含特异性特征时用语义名，而非 URL 段。
+# 按特异性排序，首个命中即用。特征来自 bilibili 真机数据校准
+# （data/captures/72111447 / 0ddbaa84 快照分析）：
+#   <canvas> 仅封面裁剪编辑器出现；accept=image/png 仅封面 modal；accept=.mp4 在所有上传页都有。
+_STAGE_FEATURES: tuple[tuple[re.Pattern[str], str], ...] = (
+    # 封面裁剪编辑器：canvas 仅在裁剪阶段出现（最特异）
+    (re.compile(r"<canvas[^>]*>"), "edit-cover"),
+    # 封面上传：image/png|jpeg 输入仅在封面 modal 打开时出现
+    (re.compile(r'accept=["\']?image/(?:png|jpeg)', re.IGNORECASE), "upload-cover"),
+    # 视频上传表单：.mp4 输入（在所有上传子阶段都有，特异性最低）
+    (re.compile(r'accept=["\']?\.?(?:mp4|flv|avi)', re.IGNORECASE), "upload-video"),
+)
+
+
+def detect_semantic(dom_text: str) -> str | None:
+    """从 DOM 文本检测语义阶段名。命中返回语义名，未命中返回 None。
+
+    按特异性顺序匹配 _STAGE_FEATURES，首个命中即返回。
+    """
+    if not dom_text:
+        return None
+    for pattern, name in _STAGE_FEATURES:
+        if pattern.search(dom_text):
+            return name
+    return None
 
 
 def dom_similarity(text_a: str, text_b: str) -> float:
@@ -110,50 +138,68 @@ class StageTracker:
             self._last_dom_text = dom_text
         return None
 
-    def name_stage(self, url: str, raw_stage: str) -> str:
+    def name_stage(self, url: str, raw_stage: str, dom_text: str = "") -> str:
         """给 detect_change 返回的原始标识命名。
 
-        命名策略：
-        1. URL path 段优先（取最后一个有意义的段）
-        2. 若 URL 提取的名字和当前 stage 相同（SPA 切换 URL 不变），用 stage_N 避免冲突
-        3. 无法提取时用 stage_N（序号）
+        命名策略（DOM 特征优先 + URL 兜底）：
+        1. DOM 特征检测：dom_text 含特异性特征（如 accept=image/png）用语义名
+        2. URL path 段优先（取最后一个有意义的段）
+        3. 若名字和当前 stage 相同（SPA 切换 URL 不变），用 stage_N 避免冲突
+        4. 无法提取时用 stage_N（序号）
 
         避免冲突很重要：page_context 用 stage 名作 key，两个不同阶段同名会导致快照覆盖。
+
+        dom_text: 当前 DOM 文本（element_tree_text），用于语义特征检测。空则跳过。
         """
-        # 所有信号都尝试用 URL 命名（nav/url 是 URL 变，dom 是 SPA 切换但 URL 可能不变）
+        # 1. DOM 特征语义命名（优先，特异性最强）
+        semantic = detect_semantic(dom_text)
+        if semantic:
+            return self._finalize_name(semantic)
+
+        # 2. URL path 段命名（兜底：nav/url 是 URL 变，dom 是 SPA 切换但 URL 可能不变）
         if url:
             path = urlparse(url).path.strip("/")
             if path:
-                segments = [s for s in path.split("/") if s and s.lower() not in _PATH_SKIP_SEGMENTS]
+                segments = [
+                    s for s in path.split("/") if s and s.lower() not in _PATH_SKIP_SEGMENTS
+                ]
                 if segments:
-                    name = segments[-1].lower()
-                    # 清理：去掉扩展名
-                    name = name.split(".")[0]
-                    # 避免和当前 stage 同名（SPA 切换 URL 不变时，name 会等于 current_stage）
-                    if name != self.current_stage:
-                        self.current_stage = name
-                        return name
-                    # 同名：用 stage_N 兜底
-                    self._stage_counter += 1
-                    unique = f"{name}_{self._stage_counter}"
-                    self.current_stage = unique
-                    return unique
+                    name = segments[-1].lower().split(".")[0]  # 清理：去掉扩展名
+                    return self._finalize_name(name)
 
-        # 兜底：序号命名
+        # 3. 序号兜底
         self._stage_counter += 1
         name = f"stage_{self._stage_counter}"
         self.current_stage = name
         return name
 
-    def force_new_stage(self, url: str) -> str:
+    def _finalize_name(self, name: str) -> str:
+        """处理命名冲突：与 current_stage 同名时加 _N 后缀（防 page_context 覆盖）。"""
+        if name != self.current_stage:
+            self.current_stage = name
+            return name
+        # 同名：用 _N 兜底（SPA 切换 URL 不变时，name 会等于 current_stage）
+        self._stage_counter += 1
+        unique = f"{name}_{self._stage_counter}"
+        self.current_stage = unique
+        return unique
+
+    def force_new_stage(self, url: str, dom_text: str = "") -> str:
         """强制开新阶段（如录制开始时的首页）。
 
         返回命名的 stage，同时更新内部状态（current_stage + _last_url_path）。
         detect_change 后续会基于这个状态判定切换。
+
+        dom_text: 当前 DOM 文本，用于语义特征检测（首阶段也语义化）。
         """
         # 同步 _last_url_path，避免首事件误判 URL 变化
         self._last_url_path = urlparse(url).path if url else ""
-        # 命名
+        # 1. DOM 特征语义命名（优先）
+        semantic = detect_semantic(dom_text)
+        if semantic:
+            self.current_stage = semantic
+            return semantic
+        # 2. URL path 段命名
         path = urlparse(url).path.strip("/") if url else ""
         if path:
             segments = [s for s in path.split("/") if s and s.lower() not in _PATH_SKIP_SEGMENTS]
@@ -161,6 +207,7 @@ class StageTracker:
                 name = segments[-1].lower().split(".")[0]
                 self.current_stage = name
                 return name
+        # 3. 序号兜底
         self._stage_counter += 1
         name = f"stage_{self._stage_counter}"
         self.current_stage = name

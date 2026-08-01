@@ -13,6 +13,7 @@
   - iframe 域名黑名单（stripe/recaptcha/cloudflare/google...）的 pageLoad 丢弃
   - 孤立修饰键（Shift/Meta/Alt/Ctrl/CapsLock，500ms 内无其它键）
   - 连续重复点击（同 xpath+url，间隔 < 2s）合并
+  - 连续同目标 input（同输入框 + url，间隔 < 30s）合并保留终值
 
 【后处理】
   - 长度 < 3 的 segment 合并进前一个（**绝不跨域边界**）
@@ -41,6 +42,20 @@ _IFRAME_DOMAINS = {
 
 # 孤立修饰键
 _MODIFIER_KEYS = {"Shift", "Meta", "Alt", "Control", "CapsLock"}
+
+# input 合并窗口（毫秒）：同目标连续输入在此窗口内合并保留终值。
+# 比 click 的 2s 宽——真实打字停顿（思考/选词）可达数秒（实测 0.6–3.8s）。
+_INPUT_MERGE_WINDOW_MS = 30_000
+
+# input 同目标判定的「稳定标识」属性：任一相同即视为同一输入框。
+# 都无标识时退化到同 tag（兜底，避免漏合并）。
+_INPUT_STABLE_ATTRS: tuple[str, ...] = (
+    "id",
+    "name",
+    "placeholder",
+    "aria-label",
+    "aria-labelledby",
+)
 
 
 def _registered_domain(host: str | None) -> str:
@@ -80,8 +95,30 @@ def _path_prefix(url: str | None, depth: int) -> str:
     return "/" + "/".join(parts[:depth])
 
 
+def _same_input_target(a: TraceEvent, b: TraceEvent) -> bool:
+    """判定两个 input 事件是否作用于同一输入框（用于连续输入合并）。
+
+    优先用 element_attrs 的稳定标识（id/name/placeholder/aria-label/aria-labelledby）
+    任一相同即同一目标；都无标识时退化到同 tag + 同 selector（老格式兜底）。
+    """
+    ea, eb = a.element_attrs or {}, b.element_attrs or {}
+    # 稳定标识命中
+    for k in _INPUT_STABLE_ATTRS:
+        va, vb = ea.get(k), eb.get(k)
+        if va and vb and va == vb:
+            return True
+    # 都无稳定标识：退化到同 tag + 同 selector（兜底）
+    has_stable_a = any(ea.get(k) for k in _INPUT_STABLE_ATTRS)
+    has_stable_b = any(eb.get(k) for k in _INPUT_STABLE_ATTRS)
+    if not has_stable_a and not has_stable_b:
+        same_tag = (ea.get("tag") or "") == (eb.get("tag") or "")
+        same_sel = (a.selector or "") == (b.selector or "")
+        return bool(same_tag and same_sel)
+    return False
+
+
 def _filter_noise(events: list[TraceEvent]) -> list[TraceEvent]:
-    """三类去噪：iframe pageLoad / 孤立修饰键 / 重复点击合并。"""
+    """四类去噪：iframe pageLoad / 孤立修饰键 / 重复点击合并 / 连续同目标 input 合并。"""
     out: list[TraceEvent] = []
     i = 0
     while i < len(events):
@@ -112,11 +149,28 @@ def _filter_noise(events: list[TraceEvent]) -> list[TraceEvent]:
         # 3. 重复点击合并：同 selector+url，间隔 < 2s，保留后者
         if ev.type == "click" and out:
             prev = out[-1]
-            same = (prev.type == "click"
-                    and (prev.selector or "") == (ev.selector or "")
-                    and (prev.url or "") == (ev.url or ""))
+            same = (
+                prev.type == "click"
+                and (prev.selector or "") == (ev.selector or "")
+                and (prev.url or "") == (ev.url or "")
+            )
             if same and 0 <= ev.timestamp - prev.timestamp < 2000:
                 out[-1] = ev  # 用后者覆盖
+                i += 1
+                continue
+
+        # 4. 连续同目标 input 合并：同输入框 + 同 url，间隔 < 30s，保留终值。
+        # 真机录制里一次标题输入常被扩展 debounce 切成 N 条（人类打字停顿 0.6–3.8s
+        # 远超 400ms 窗口），每条带完整累积值——合并后只保留终值，summary 不再被噪声撑大。
+        if ev.type == "input" and out:
+            prev = out[-1]
+            if (
+                prev.type == "input"
+                and (prev.url or "") == (ev.url or "")
+                and 0 <= ev.timestamp - prev.timestamp < _INPUT_MERGE_WINDOW_MS
+                and _same_input_target(prev, ev)
+            ):
+                out[-1] = ev  # 终值覆盖（保留 ev 的 value + timestamp）
                 i += 1
                 continue
 
@@ -128,8 +182,18 @@ def _filter_noise(events: list[TraceEvent]) -> list[TraceEvent]:
 # element_attrs 里「稳定标识」属性的白名单——对齐 distiller prompt 的 selectors.md 要求。
 # 只渲染这些属性，过滤 class/style 等不稳定属性。
 _ATTR_WHITELIST: tuple[str, ...] = (
-    "id", "name", "type", "placeholder", "aria-label", "role",
-    "data-testid", "data-test", "data-cy", "contenteditable", "tag",
+    "id",
+    "name",
+    "type",
+    "placeholder",
+    "aria-label",
+    "aria-labelledby",
+    "role",
+    "data-testid",
+    "data-test",
+    "data-cy",
+    "contenteditable",
+    "tag",
 )
 
 
@@ -235,9 +299,7 @@ def _find_boundaries(events: list[TraceEvent], track_domain: str) -> list[tuple[
             lookahead = events[i + 1 : i + 1 + config.SUBMIT_LOOKAHEAD]
             if any(la.type == "navigate" for la in lookahead):
                 # 切点在 navigate 那个事件
-                nav_idx = i + 1 + next(
-                    k for k, la in enumerate(lookahead) if la.type == "navigate"
-                )
+                nav_idx = i + 1 + next(k for k, la in enumerate(lookahead) if la.type == "navigate")
                 # 切点延后到 nav_idx（submit_nav 边界）
                 cuts.append((nav_idx, "submit_nav"))
                 # prev 推进
@@ -313,11 +375,7 @@ def _merge_short(segs: list[Segment]) -> list[Segment]:
         return segs
     out: list[Segment] = [segs[0]]
     for seg in segs[1:]:
-        if (
-            len(seg.events) < config.MIN_SEGMENT_EVENTS
-            and out
-            and out[-1].domain == seg.domain
-        ):
+        if len(seg.events) < config.MIN_SEGMENT_EVENTS and out and out[-1].domain == seg.domain:
             prev = out[-1]
             merged_events = prev.events + seg.events
             out[-1] = prev.model_copy(

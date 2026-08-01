@@ -73,5 +73,7 @@ def bucket(
             buckets[bid].capacity_labels.append(label)
 
     result = list(buckets.values())
-    progress.report("BUCKET", current=len(result), total=len(result), detail=f"→ {len(result)} buckets")
+    progress.report(
+        "BUCKET", current=len(result), total=len(result), detail=f"→ {len(result)} buckets"
+    )
     return result

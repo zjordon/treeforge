@@ -108,6 +108,8 @@ class Collector:
         self.stage_tracker = self._new_stage_tracker()
         self._session: CaptureSession | None = None
         self._started = False
+        # 已 attach 的 tab id（跟随用户切 tab）：None=用 CdpSession eager fallback
+        self._attached_tab: int | None = None
 
     def _new_stage_tracker(self) -> StageTracker:
         """新建 StageTracker（每次 start 调用，确保跨 session 状态隔离）。"""
@@ -128,6 +130,7 @@ class Collector:
 
         # 重建 StageTracker（关键：避免上次录制的 stage 计数/last_dom 污染本次）
         self.stage_tracker = self._new_stage_tracker()
+        self._attached_tab = None  # 重置 tab 跟随状态（跨 session 隔离）
 
         session_id = str(uuid.uuid4())[:8]
         config = config or {}
@@ -150,12 +153,15 @@ class Collector:
             state = await self.cdp.get_state()
             real_host = _extract_real_host(state.url)
             if real_host:  # 是真实页面才采首阶段
-                initial_stage = self.stage_tracker.force_new_stage(state.url)
-                self._session.page_context[initial_stage] = state.dom_state.element_tree_text or ""
+                dom_text = state.dom_state.element_tree_text or ""
+                initial_stage = self.stage_tracker.force_new_stage(state.url, dom_text)
+                self._session.page_context[initial_stage] = dom_text
                 self._session.host = real_host
                 logger.info(
                     "Capture started: session=%s stage=%s host=%s",
-                    session_id, initial_stage, self._session.host,
+                    session_id,
+                    initial_stage,
+                    self._session.host,
                 )
             else:
                 logger.info(
@@ -191,6 +197,11 @@ class Collector:
         # 实时采快照 + 判 stage（实时采集原则：趁 DOM 活的）
         dom_text = ""
         try:
+            # 跟随用户 tab：envelope 带 tab_id 且与当前不同 → 重 attach 精确 target
+            tab_id = envelope.get("tab_id")
+            if tab_id is not None and tab_id != self._attached_tab:
+                if await self.cdp.attach_tab(tab_id):
+                    self._attached_tab = tab_id
             state = await self.cdp.get_state()
             dom_text = state.dom_state.element_tree_text or ""
             # host 兜底（首次遇到真实页面时填充，跳过 chrome:// 等内部页）
@@ -267,8 +278,8 @@ class Collector:
 
         raw = self.stage_tracker.detect_change(url, dom_text, is_navigation=is_navigation)
         if raw:
-            # 新阶段：命名 + 存快照
-            stage_name = self.stage_tracker.name_stage(url, raw)
+            # 新阶段：命名（DOM 特征优先）+ 存快照
+            stage_name = self.stage_tracker.name_stage(url, raw, dom_text)
             if dom_text:
                 self._session.page_context[stage_name] = dom_text
             return stage_name

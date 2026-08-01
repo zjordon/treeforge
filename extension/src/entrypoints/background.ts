@@ -118,7 +118,7 @@ export default defineBackground(() => {
 
   // ---- 采集事件（来自 content）----
 
-  chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+  chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     if (msg?.type !== "capture-event") return;
     (async () => {
       const state = await getState();
@@ -126,6 +126,9 @@ export default defineBackground(() => {
       const envelope = msg.envelope as CaptureEnvelope;
       // 确保 envelope 有 session_id（content 可能没填）
       if (!envelope.session_id) envelope.session_id = state.sessionId || "";
+      // 注入来源 tab id：后端据此精确 attach CDP target（解决多 tab 误连）。
+      // content script 无法访问 chrome.tabs，只能由 background 从 sender.tab.id 取。
+      if (sender.tab?.id) envelope.tab_id = sender.tab.id;
       try {
         await postIngest(state.endpoint, envelope);
         await setState({ eventCount: state.eventCount + 1 });

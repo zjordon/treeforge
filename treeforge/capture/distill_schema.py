@@ -42,6 +42,7 @@ RAW_ATTR_KEYS: tuple[str, ...] = (
     "role",
     "aria-label",
     "ariaLabel",  # 兼容：部分场景 getAttribute('aria-label') 取不到，用可访问名计算
+    "aria-labelledby",  # contenteditable 常用：关联标题元素（如 bilibili 简介 <h3>）
     # 表单提示
     "placeholder",
     # 测试标识（蒸馏「稳定标识」关键来源）
@@ -131,6 +132,7 @@ ELEMENT_ATTR_WHITELIST: tuple[str, ...] = (
     "type",
     "placeholder",
     "aria-label",
+    "aria-labelledby",
     "role",
     "data-testid",
     "data-test",

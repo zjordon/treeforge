@@ -45,12 +45,12 @@ def test_parse_json_from_model_plain():
 
 
 def test_parse_json_from_model_with_fence():
-    text = "```json\n{\"a\": 1}\n```"
+    text = '```json\n{"a": 1}\n```'
     assert parse_json_from_model(text) == {"a": 1}
 
 
 def test_parse_json_from_model_with_prose_around():
-    text = "Here is the result:\n```json\n{\"capacity\": \"login\"}\n```\nDone."
+    text = 'Here is the result:\n```json\n{"capacity": "login"}\n```\nDone.'
     assert parse_json_from_model(text) == {"capacity": "login"}
 
 

@@ -97,17 +97,17 @@ def main(trace_path: str) -> int:
             print(f"  建议阈值：{suggested:.2f}（区分真阶段和误切）")
             print(f"  判定：相似度 < {suggested:.2f} 算新阶段")
             # 列出哪些会被合并
-            print(f"  按此阈值，以下切换会被合并（视为同阶段）：")
+            print("  按此阈值，以下切换会被合并（视为同阶段）：")
             for prev, curr, sim in sims:
                 if sim >= suggested:
                     print(f"    {prev} → {curr}（相似度 {sim:.3f} ≥ {suggested:.2f}）")
-            print(f"  以下切换会保留（视为真阶段切换）：")
+            print("  以下切换会保留（视为真阶段切换）：")
             for prev, curr, sim in sims:
                 if sim < suggested:
                     print(f"    {prev} → {curr}（相似度 {sim:.3f} < {suggested:.2f}）")
         else:
             print(f"  相似度集中（跨度 {sim_max - sim_min:.3f} ≤ 0.2），难以区分")
-            print(f"  可能需要结合其他信号（如 URL、关键元素出现）而非纯相似度")
+            print("  可能需要结合其他信号（如 URL、关键元素出现）而非纯相似度")
 
     return 0
 

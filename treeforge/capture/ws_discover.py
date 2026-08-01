@@ -18,7 +18,9 @@ DEFAULT_CDP_HOST = "localhost"
 DEFAULT_CDP_PORT = 9222
 
 
-def fetch_ws_url(host: str = DEFAULT_CDP_HOST, port: int = DEFAULT_CDP_PORT, timeout: float = 5.0) -> str | None:
+def fetch_ws_url(
+    host: str = DEFAULT_CDP_HOST, port: int = DEFAULT_CDP_PORT, timeout: float = 5.0
+) -> str | None:
     """从 Chrome 的 /json/version 拿 webSocketDebuggerUrl。
 
     Returns:
@@ -38,6 +40,8 @@ def fetch_ws_url(host: str = DEFAULT_CDP_HOST, port: int = DEFAULT_CDP_PORT, tim
     except Exception as e:  # noqa: BLE001 - 连接失败返回 None（Chrome 未启动）
         logger.warning(
             "无法连接 Chrome（%s）。确认以 --remote-debugging-port=%d 启动：%s",
-            url, port, e,
+            url,
+            port,
+            e,
         )
         return None

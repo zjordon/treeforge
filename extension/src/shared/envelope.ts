@@ -23,6 +23,8 @@ export interface CaptureEnvelope<TPayload = unknown> {
   url?: string;
   /** 是否顶层 frame */
   is_top_frame?: boolean;
+  /** 来源 tab id（background 从 sender.tab.id 注入，后端据此精确 attach CDP target） */
+  tab_id?: number;
   /** 场景特定 payload（distill 场景见 distill-schema.ts） */
   payload: TPayload;
 }

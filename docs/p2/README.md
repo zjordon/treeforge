@@ -649,20 +649,19 @@ interface CaptureEnvelope {
 | 快照时机 | 人工手动导出，可能错过阶段 | DOM hash 自动检测，精确到事件级 |
 | 关联强度 | 事后元素指纹反查 | 采集时直接绑定 |
 
-#### 3.3.3 ADAPT 层简化
+#### 3.3.3 ADAPT 层简化（P2.4 已完成）
 
-P2 产物确定后，`tools/rerun_to_trace.py` 可大幅简化：
+P2 产物确定后，`tools/rerun_to_trace.py` 已大幅简化为纯格式转换器：
 
 ```python
-# 当前：_infer_stages 三规则（URL/元素指纹/时序外推），约 50 行
-# 删除整个 _infer_stages（rerun_to_trace.py:251-298）
-
-# 当前：dom_dir 参数读人工 .txt 注入 page_context（rerun_to_trace.py:434-442）
-# 删除：P2 trace 已自带 page_context，无需外部注入
+# 已删除：_infer_stages 三规则（URL/元素指纹/时序外推），约 50 行
+# 已删除：dom_dir 参数读人工 .txt 注入 page_context
+# 已删除：_url_to_stage_hint / _element_stage_fingerprint / _disambiguate_publish_vs_cover
 ```
 
-rerun_to_trace.py 退化为「格式转换器」：rerun-history → treeforge trace，
-stage 和 page_context 直接透传，不再有任何推断逻辑。
+rerun_to_trace.py 现在是纯「格式转换器」：rerun-history → treeforge trace，
+不推断 stage、不注入 page_context（rerun-history 本身不含这些信息，产出 trace
+无 stage 字段，distiller 容错处理）。
 
 ---
 
@@ -704,7 +703,7 @@ stage 和 page_context 直接透传，不再有任何推断逻辑。
 
 | 步骤 | 内容 | 验证 | 依赖 |
 |---|---|---|---|
-| **P2.4.1** | 删除 `rerun_to_trace.py` 的 `_infer_stages` + `dom_dir` 逻辑 | treeforge 测试全过 | P2.2.5 |
+| **P2.4.1** ✅ | 删除 `rerun_to_trace.py` 的 `_infer_stages` + `dom_dir` 逻辑 | treeforge 测试全过（149 passed） | P2.2.5 |
 | **P2.4.2** | 更新 examples（用 P2 产物替换人工 trace） | distill 跑通 | P2.4.1 |
 | **P2.4.3** | 更新 ROADMAP / 文档 | 人工审阅 | P2.4.2 |
 

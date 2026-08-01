@@ -22,10 +22,11 @@
 | 阶段 | 状态 | 说明 |
 |---|---|---|
 | **P2.1 dom-snapshot 公共库** | ✅ 完成 | 独立仓库 `D:/dev/git/z_jordon/dom-snapshot`，0.1.0 已发版，TreeWalker + treeforge 均已接入 |
-| **P2.2 采集后端（Python）** | ✅ 完成 | treeforge/capture/ 全模块，144 测试全过 |
-| **P2.3 扩展（Chrome MV3）** | ✅ 最小可用 | P2.3.1 完成（click/input/keydown/scroll），P2.3.2/3 待补 |
+| **P2.2 采集后端（Python）** | ✅ 完成 | treeforge/capture/ 全模块，149 测试全过 |
+| **P2.3 扩展（Chrome MV3）** | ✅ 最小可用 | P2.3.1 完成（click/input/keydown/scroll），P2.3.2 数据驱动补全完成 |
 | **P2.2.4 阈值调参** | ✅ 完成 | 0.7→0.33，数据驱动 |
-| **P2.4 ADAPT 简化** | ⏳ 待做 | 删除 _infer_stages（低优先级） |
+| **P2.3.2 扩展补全** | ✅ 完成 | atomizer 输入合并 + contenteditable 语义标签 + 双端 aria-labelledby 契约（详见 docs/p2/p2.3.2-plan.md） |
+| **P2.4 ADAPT 简化** | ✅ 完成 | rerun_to_trace 退化为纯格式转换器，删除 _infer_stages/dom_dir |
 | **端到端验证** | ✅ 通过 | 真机录 bilibili 投稿 → LLM 蒸馏出高质量 skill |
 
 ### 关键里程碑
@@ -99,35 +100,46 @@ WXT + TypeScript MV3 扩展，自研面向蒸馏采集（不复用 TreeWalker �
 
 ### 中优先级
 
-#### P2.3.2 扩展补全
-- IME（compositionstart/end）完善（当前只处理了 compositionend flush）
-- scroll 去抖优化
-- contenteditable MutationObserver（富文本编辑器，如 bilibili 简介）
-- extractor 注册表（字段提取从单体改为可配置，为 replay 策略铺路）
-- 位置：`extension/src/core/recorder-engine.ts` + `extension/src/strategies/distill/`
+#### ✅ P2.3.2 扩展补全（已完成）
+按数据驱动聚焦方案实施（详见 `docs/p2/p2.3.2-plan.md`），实测真机录制后发现
+handoff 原清单的 IME/MutationObserver/scroll 优化项**已被现有实现覆盖或低价值**，
+改为聚焦两个真实痛点：
+- **atomizer 输入合并**（`harness/atomizer.py` `_filter_noise` 第 4 类去噪）：同目标
+  连续 input 合并保留终值，解决真机录制里标题一次输入被切成 5 个 input 事件的问题
+- **contenteditable 语义标签**（`extension/src/strategies/distill/index.ts`）：补抓
+  aria-labelledby / 邻近标题，让点简介不再只是 `div contenteditable=true`
+- **双端 aria-labelledby 契约**：distill_schema.py + distill-schema.ts + atomizer 同步
+- **扩展 debounce 调优**：INPUT_COALESCE_MS 400→1200（兜底）
 
-#### P2.4 ADAPT 层简化
-- 删除 `tools/rerun_to_trace.py` 的 `_infer_stages`（stage 已采集时绑定，无需事后推断）
-- 删除 `dom_dir` 参数（P2 trace 自带 page_context，无需外部注入）
-- rerun_to_trace 退化为纯格式转换器
-- 位置：`tools/rerun_to_trace.py`
+**明确排除**（数据证明低价值或已工作）：IME compositionstart/update 完善、
+contenteditable MutationObserver、scroll 去抖可配置化、extractor 注册表。
+
+#### ✅ P2.4 ADAPT 层简化（已完成）
+`tools/rerun_to_trace.py` 退化为纯格式转换器：
+- 删除 `_infer_stages`（三规则 stage 启发式：URL 大类 + 元素指纹 + 时序外推）
+- 删除 `dom_dir` 参数 + page_context 注入
+- 删除 `_url_to_stage_hint` / `_element_stage_fingerprint` / `_disambiguate_publish_vs_cover`
+- `_convert_action` 删除 stage 参数
+- 产出 trace 无 stage/page_context（rerun-history 本身不含这些信息，distiller 容错处理）
 
 ### 低优先级（已知限制，非阻塞）
 
-#### CdpSession 跟随 tab
-- 当前：start 时选第一个 http target，之后固定。多 tab 场景可能选错。
-- 彻底解决：content script 报告 tab id，CdpSession 精确 attach 用户操作的 tab。
-- 位置：`treeforge/capture/cdp_session.py` + `extension/src/entrypoints/content.ts`
+#### ✅ CdpSession 跟随 tab（已完成）
+- 方案 B：扩展 background 用 `sender.tab.id` 打 `tab_id` 进 envelope（content script 无法
+  访问 chrome.tabs，只能由 background 注入），后端 collector 检测 tab_id 变化调
+  `CdpSession.attach_tab(tab_id)` 精确重 attach（Target.getTargets 的 tabId 关联 CDP targetId）。
+- 幂等：同 tab 不重 attach；无 tab_id 的老 envelope 用 start 的 eager fallback 兜底。
+- 位置：`treeforge/capture/cdp_session.py`（start 拆分 + 新增 attach_tab）+ `collector.py`
+  （ingest 按 tab_id 重 attach）+ `extension/src/entrypoints/background.ts`（注入 tab_id）
 
-#### stage 命名语义化
-- 当前：URL path 段命名（如 frame / frame_1），不够语义化。
-- 优化：用 DOM 特征命名（如检测到 canvas + accept=image/png → upload-conver）。
-- 位置：`treeforge/capture/stage.py` 的 name_stage
+#### ✅ stage 命名语义化（已完成）
+- DOM 特征增强（向后兼容）：name_stage/force_new_stage 加 dom_text 参数，前置一道 DOM
+  特征检测（`<canvas>` → edit-cover，`accept=image/png` → upload-cover，`accept=.mp4` →
+  upload-video），命中用语义名，未命中退化原 URL 命名逻辑。
+- 位置：`treeforge/capture/stage.py`（detect_semantic + name_stage 加 dom_text）
 
-#### 标题输入切成多段 input
-- 现象：连续输入标题被切成 5 个 input 事件（去抖没合并好）。
-- 影响：不影响蒸馏（都有 placeholder 标识同一框），后续可优化。
-- 位置：`extension/src/core/recorder-engine.ts` 的 input 去抖逻辑
+#### ✅ 标题输入切成多段 input（已完成，P2.3.2 解决）
+- 已在 P2.3.2 的 atomizer 输入合并解决：同目标连续 input 合并保留终值（`_filter_noise` 第 4 类）。
 
 ## 五、P3（常驻服务）预告
 
@@ -166,7 +178,7 @@ extension/src/
 ### 工具
 ```
 tools/
-├── rerun_to_trace.py       # rerun-history → trace（待 P2.4 简化）
+├── rerun_to_trace.py       # rerun-history → trace（纯格式转换器，P2.4 已简化）
 └── analyze_stage_threshold.py  # stage 阈值分析（调试用）
 ```
 
