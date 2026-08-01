@@ -20,7 +20,8 @@ export interface RecordingState {
 export type ControlMessage =
   | { type: "start-recording"; scenario: "distill" | "replay"; endpoint?: string }
   | { type: "stop-recording" }
-  | { type: "query-state" };
+  | { type: "query-state" }
+  | { type: "recording-active-query" }; // content 启动时问是否在录
 
 /** background → popup/content 的状态广播 */
 export type StateBroadcast = { type: "state"; state: RecordingState };

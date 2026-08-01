@@ -15,7 +15,7 @@ import type { DistillEventPayload } from "../shared/distill-schema";
 import type { RecordingState, StateBroadcast } from "../shared/types";
 
 export default defineContentScript({
-  matches: ["<all_urls>"],
+  matches: ["http://*/*", "https://*/*"],
   allFrames: true,
   runAt: "document_idle",
   main() {
@@ -34,6 +34,7 @@ export default defineContentScript({
         is_top_frame: window === window.top,
         payload,
       };
+      console.info("[treeforge-content] emit", payload.type, "from", location.href.slice(0, 50));
       chrome.runtime.sendMessage({ type: "capture-event", envelope }).catch(() => {});
     }
 
@@ -46,6 +47,7 @@ export default defineContentScript({
       const strategy = state.scenario === "distill" ? new DistillStrategy() : new DistillStrategy();
       engine = new RecorderEngine(strategy, emitToBackground);
       engine.install();
+      console.info("[treeforge-content] recorder installed on", location.href, "session=", state.sessionId);
     }
 
     /** 卸载 recorder */
@@ -54,11 +56,13 @@ export default defineContentScript({
       engine.uninstall();
       engine = null;
       currentSessionId = null;
+      console.info("[treeforge-content] recorder uninstalled on", location.href);
     }
 
     // 监听 background 的状态广播
     chrome.runtime.onMessage.addListener((msg: StateBroadcast) => {
       if (msg?.type !== "state") return;
+      console.info("[treeforge-content] received state broadcast:", msg.state.recording ? "recording" : "idle", "on", location.href);
       if (msg.state.recording && msg.state.sessionId) {
         startRecording(msg.state);
       } else {
@@ -67,6 +71,11 @@ export default defineContentScript({
     });
 
     // content 启动时问 background 当前是否在录（处理页面刷新/SW 重连）
-    chrome.runtime.sendMessage({ type: "recording-active-query" }).catch(() => {});
+    // background 会回 RecordingState；若在录则装配 recorder
+    chrome.runtime.sendMessage({ type: "recording-active-query" }).then((state: RecordingState | undefined) => {
+      if (state?.recording && state?.sessionId) {
+        startRecording(state);
+      }
+    }).catch(() => {});
   },
 });

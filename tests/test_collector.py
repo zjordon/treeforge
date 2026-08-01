@@ -278,6 +278,32 @@ async def test_collector_navigation_event_triggers_stage_change():
     assert event.stage == "page2"  # 新阶段命名
 
 
+async def test_collector_envelope_url_overrides_cdp_url():
+    """envelope 外层 url（content script 报的真实页面）优先于 CdpSession 的 url。
+
+    场景：CdpSession 连的 target 是 popup（url=popup.html），但用户在 bilibili 操作。
+    content script 报 envelope.url=bilibili。事件应记录 bilibili 的 url，不是 popup。
+    """
+    # mock CdpSession 返回 popup 的 url（模拟连错 target）
+    cdp = _make_mock_cdp(url="chrome-extension://abc/popup.html")
+    collector = Collector(cdp, output_dir="/tmp/test")
+    await collector.start()
+
+    # 事件的 envelope 外层 url 是真实 bilibili 页面
+    await collector.ingest({
+        "scenario": "distill", "session_id": "t", "ts": 0,
+        "url": "https://member.bilibili.com/platform/upload/video/frame",
+        "payload": {"type": "click", "raw_attrs": {"tag": "a", "id": "nav_upload"}},
+    })
+
+    event = collector.session.events[-1]
+    # 事件 url 应是 envelope 外层的 bilibili，不是 CdpSession 的 popup
+    assert "member.bilibili.com" in (event.url or "")
+    assert "popup" not in (event.url or "")
+    # host 也应从 envelope url 提取，不是 popup
+    assert collector.session.host == "member.bilibili.com"
+
+
 # ---------------------------------------------------------------------------
 # session 可循环（start/stop 多次录制，stage 状态不串）
 # ---------------------------------------------------------------------------
@@ -359,3 +385,51 @@ async def test_collector_multiple_recordings_all_export(tmp_path):
     for t in traces:
         data = json.loads(t.read_text(encoding="utf-8"))
         assert len(data["events"]) == 1
+
+
+# ---------------------------------------------------------------------------
+# host 提取（跳过浏览器内部页面）
+# ---------------------------------------------------------------------------
+
+
+def test_extract_real_host_skips_chrome_internal():
+    """chrome:// / chrome-extension:// / about: 等内部页面不返回 host。"""
+    from treeforge.capture.collector import _extract_real_host
+
+    assert _extract_real_host("chrome://newtab/") == ""
+    assert _extract_real_host("chrome-extension://abc123/popup.html") == ""
+    assert _extract_real_host("about:blank") == ""
+
+
+def test_extract_real_host_skips_new_tab_page():
+    """new-tab-page 等浏览器内部 host 跳过（hostname 是 new-tab-page 不是真实站点）。"""
+    from treeforge.capture.collector import _extract_real_host
+
+    assert _extract_real_host("chrome://newtab/") == ""
+    assert _extract_real_host("https://new-tab-page/") == ""
+
+
+def test_extract_real_host_real_site():
+    """真实站点返回 hostname。"""
+    from treeforge.capture.collector import _extract_real_host
+
+    assert _extract_real_host("https://member.bilibili.com/platform/home") == "member.bilibili.com"
+    assert _extract_real_host("http://localhost:8080/") == "localhost"
+
+
+async def test_collector_host_filled_on_real_page(tmp_path):
+    """录制开始时在 chrome:// 页，首个真实页面事件后 host 正确填充。"""
+    # 模拟：start 时 url 是 chrome://newtab（首页），ingest 时 url 是真实页面
+    cdp = _make_mock_cdp(url="chrome://newtab/")
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    assert collector.session.host == ""  # 首页是 chrome://，host 暂空
+
+    # 第一个事件在真实页面
+    cdp.get_state.return_value.url = "https://member.bilibili.com/platform/home"
+    await collector.ingest({
+        "scenario": "distill", "session_id": "t", "ts": 0,
+        "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
+    })
+    assert collector.session.host == "member.bilibili.com"  # host 兜底填充
+    await collector.stop()

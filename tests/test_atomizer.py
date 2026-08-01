@@ -215,3 +215,20 @@ def test_render_summary_different_stages_not_folded():
     assert summary.count("[stage=upload]") == 1
     assert summary.count("[stage=publish]") == 1
     assert "x2" not in summary
+
+
+def test_render_summary_fold_three_same_lines():
+    """连续 3 个相同行折叠成 x3（回归测试：tail[3:] off-by-one 崩溃）。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    # 3 个完全相同的 input 事件（同 stage，模拟连续输入被切成多段）
+    events = [
+        TraceEvent(type="input", target="标题", selector="#title", value="a", stage="frame", timestamp=0),
+        TraceEvent(type="input", target="标题", selector="#title", value="a", stage="frame", timestamp=100),
+        TraceEvent(type="input", target="标题", selector="#title", value="a", stage="frame", timestamp=200),
+    ]
+    summary = _render_summary(events)
+    # 应折叠成 1 行 x3（不崩溃）
+    assert "x3" in summary
+    assert summary.count("\n") == 0  # 只剩一行

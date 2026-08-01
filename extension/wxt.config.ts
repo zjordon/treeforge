@@ -11,8 +11,15 @@ export default defineConfig({
     // storage: 录制状态；activeTab/scripting: content script 注入；
     // tabs: background 状态广播给所有 tab 的 content
     permissions: ["storage", "activeTab", "scripting", "tabs"],
-    // host_permissions: 访问任意页面（采集）+ Python 后端（localhost:8765）
-    host_permissions: ["http://localhost:8765/*", "http://*/*", "https://*/*"],
+    // host_permissions: 访问任意页面（采集）+ Python 后端
+    // 注意：localhost 和 127.0.0.1 在 MV3 host_permissions 里不是一回事，都要声明
+    // （否则扩展 fetch 到未声明的地址会被拦截，导致 /start 静默失败）
+    host_permissions: [
+      "http://localhost:8765/*",
+      "http://127.0.0.1:8765/*",
+      "http://*/*",
+      "https://*/*",
+    ],
   },
   srcDir: "src",
   outDir: ".output",

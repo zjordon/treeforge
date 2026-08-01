@@ -187,7 +187,8 @@ def _render_summary(events: list[TraceEvent], cap_lines: int = 120) -> str:
             base = line
             tail = folded[-1][len(base) :]
             if tail.startswith(" x"):
-                n = int(tail[3:]) + 1
+                # tail 形如 " x2" / " x3"，数字部分在 [2:]（跳过 " x" 两字符）
+                n = int(tail[2:]) + 1
                 folded[-1] = f"{base} x{n}"
             else:
                 folded[-1] = f"{line} x2"

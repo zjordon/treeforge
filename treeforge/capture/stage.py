@@ -19,9 +19,11 @@ from __future__ import annotations
 from urllib.parse import urlparse
 
 # DOM 相似度阈值：低于此值视为阶段切换。
-# 初版 0.7（经验值），需用 bilibili 实测数据校准（见 P2.2.4）。
-# bilibili 三阶段（upload/publish/upload-conver）DOM 差异应远大于 0.3。
-DEFAULT_SIMILARITY_THRESHOLD = 0.7
+# P2.2.4 用 bilibili 实测数据校准（data/captures/0ddbaa84）：
+#   真阶段切换（不同页面/大变）相似度 0.04~0.25
+#   同页误切（滚动/面板展开）相似度 0.41~0.62
+#   0.33 卡在两类之间，8 stage 合并到 5 stage。
+DEFAULT_SIMILARITY_THRESHOLD = 0.33
 
 # 命名时跳过的 URL path 段（无语义的通用段）
 _PATH_SKIP_SEGMENTS = frozenset({"api", "platform", "www", "app", "v1", "v2"})
@@ -93,13 +95,19 @@ class StageTracker:
             return f"url:{new_path}"
 
         # 信号 3：DOM 文本变化率超阈值（SPA 阶段切换）
+        # 关键：只在判为切换时才更新 _last_dom_text（和上一个 stage 的 DOM 比，
+        # 而非和上一个事件比）。避免连续小变化累积成大变化导致误切。
         if self._last_dom_text is not None and dom_text != self._last_dom_text:
             similarity = dom_similarity(self._last_dom_text, dom_text)
             if similarity < self.similarity_threshold:
-                self._last_dom_text = dom_text
+                self._last_dom_text = dom_text  # 切换了：更新基准为新 stage 的 DOM
                 return f"dom:{similarity:.2f}"
+            # 未切换：不更新 _last_dom_text，下次仍和上一个 stage 的 DOM 比（避免累积漂移）
+            return None
 
-        self._last_dom_text = dom_text
+        # 首次（_last_dom_text is None）：初始化基准
+        if self._last_dom_text is None:
+            self._last_dom_text = dom_text
         return None
 
     def name_stage(self, url: str, raw_stage: str) -> str:

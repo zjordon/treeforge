@@ -29,6 +29,28 @@ from treeforge.capture.stage import StageTracker
 logger = logging.getLogger(__name__)
 
 
+def _extract_real_host(url: str) -> str:
+    """从 URL 提取真实站点 host，跳过浏览器内部页面。
+
+    chrome://、chrome-extension://、about:、new-tab-page 等不是真实站点，
+    hostname 会是 None 或浏览器内部值（如 'new-tab-page'），应跳过等待真实页面。
+    """
+    if not url:
+        return ""
+    from urllib.parse import urlparse
+
+    parsed = urlparse(url)
+    # 只认 http/https（跳过 chrome:// chrome-extension:// about: 等）
+    if parsed.scheme not in ("http", "https"):
+        return ""
+    hostname = parsed.hostname or ""
+    # 跳过浏览器内部 host（new-tab-page 等）
+    internal_hosts = {"new-tab-page", "newtab", "blank"}
+    if hostname in internal_hosts:
+        return ""
+    return hostname
+
+
 @dataclass
 class CapturedEvent:
     """采集到的一个事件（对应一个扩展事件 + 采集时的页面状态）。
@@ -121,18 +143,25 @@ class Collector:
             await self.cdp.start()
 
         # 首阶段：采首页快照作为 stage 0
+        # 注意：CdpSession 连的 target 可能不是用户操作的页面（连了第一个 page target）。
+        # 如果首屏是 chrome-extension:// 等内部页（如 popup），跳过首阶段采集，
+        # 等第一个真实事件（envelope url 是 http 页面）时再采。
         try:
             state = await self.cdp.get_state()
-            initial_stage = self.stage_tracker.force_new_stage(state.url)
-            self._session.page_context[initial_stage] = state.dom_state.element_tree_text or ""
-            if not self._session.host and state.url:
-                from urllib.parse import urlparse
-
-                self._session.host = urlparse(state.url).hostname or ""
-            logger.info(
-                "Capture started: session=%s stage=%s host=%s",
-                session_id, initial_stage, self._session.host,
-            )
+            real_host = _extract_real_host(state.url)
+            if real_host:  # 是真实页面才采首阶段
+                initial_stage = self.stage_tracker.force_new_stage(state.url)
+                self._session.page_context[initial_stage] = state.dom_state.element_tree_text or ""
+                self._session.host = real_host
+                logger.info(
+                    "Capture started: session=%s stage=%s host=%s",
+                    session_id, initial_stage, self._session.host,
+                )
+            else:
+                logger.info(
+                    "Capture started: session=%s (首屏非真实页面，等首个事件采快照)",
+                    session_id,
+                )
         except Exception as e:  # noqa: BLE001 - 首页采集失败不阻断录制（后续事件会补救）
             logger.warning("Initial state capture failed (will retry on first event): %s", e)
 
@@ -154,19 +183,19 @@ class Collector:
         # 转换 payload → TraceEvent 字段
         fields = payload_to_trace_fields(payload)
 
+        # url 优先级：envelope 外层（content script 报的真实页面 url）>
+        #            payload（navigate 事件的 url）> CdpSession 兜底
+        # 关键：不能用 CdpSession 的 url 兜底——它连的 target 可能不是用户操作的页面
+        url = envelope.get("url") or fields.get("url")
+
         # 实时采快照 + 判 stage（实时采集原则：趁 DOM 活的）
         dom_text = ""
-        url = fields.get("url")
         try:
             state = await self.cdp.get_state()
             dom_text = state.dom_state.element_tree_text or ""
-            if not url:
-                url = state.url
-            # host 兜底
-            if not self._session.host and state.url:
-                from urllib.parse import urlparse
-
-                self._session.host = urlparse(state.url).hostname or ""
+            # host 兜底（首次遇到真实页面时填充，跳过 chrome:// 等内部页）
+            if not self._session.host:
+                self._session.host = _extract_real_host(url or state.url)
         except Exception as e:  # noqa: BLE001 - 快照失败不阻断事件记录
             logger.warning("get_state failed for event (recording without snapshot): %s", e)
 

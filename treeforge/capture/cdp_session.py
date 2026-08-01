@@ -62,20 +62,29 @@ class CdpSession:
 
         参照 TreeWalker session.py:_connect（1203-1269），但去掉熔断器/网络空闲/高亮/file-chooser。
         Chrome 需以 --remote-debugging-port=9222 启动。
+
+        target 选择：优先 http/https 真实页面，跳过 chrome-extension://（popup）、
+        chrome://（内部页）、devtools://。避免连到扩展 popup 导致采错 DOM。
         """
         self.client = CDPClient(self.ws_url)
         await self.client.start()
 
-        # 发现 page target 并 attach（取第一个 page）
+        # 发现 page target 并 attach
+        # 策略：优先选 http/https 真实页面；跳过 chrome-extension://（popup）、
+        # chrome://（内部页）、devtools://。否则会连到扩展 popup 采到错误 DOM。
         targets = await self.client.send.Target.getTargets({})
-        for t in targets.get("targetInfos", []):
-            if t.get("type") == "page":
-                self.current_target_id = t["targetId"]
-                result = await self.client.send.Target.attachToTarget(
-                    {"targetId": self.current_target_id, "flatten": True},
-                )
-                self.current_session_id = result["sessionId"]
-                break
+        page_targets = [t for t in targets.get("targetInfos", []) if t.get("type") == "page"]
+        # 按优先级排序：http/https 优先，其它（chrome-extension/chrome/devtools）排后
+        real_pages = [t for t in page_targets if t.get("url", "").startswith(("http://", "https://"))]
+        # 优先选真实页面；没有才退而求其次（可能用户在 chrome:// 页面操作）
+        candidates = real_pages or page_targets
+        if candidates:
+            t = candidates[0]
+            self.current_target_id = t["targetId"]
+            result = await self.client.send.Target.attachToTarget(
+                {"targetId": self.current_target_id, "flatten": True},
+            )
+            self.current_session_id = result["sessionId"]
 
         if not self.current_session_id:
             raise RuntimeError(

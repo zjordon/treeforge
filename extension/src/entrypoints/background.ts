@@ -37,8 +37,12 @@ export default defineBackground(() => {
     return next;
   }
 
-  function broadcastState(state: RecordingState): void {
+  function broadcastState(state: RecordingState, onlyTabId?: number): void {
     const msg: StateBroadcast = { type: "state", state };
+    if (onlyTabId !== undefined) {
+      chrome.tabs.sendMessage(onlyTabId, msg).catch(() => {});
+      return;
+    }
     chrome.tabs.query({}, (tabs) => {
       for (const tab of tabs) {
         if (tab.id) chrome.tabs.sendMessage(tab.id, msg).catch(() => {});
@@ -62,6 +66,16 @@ export default defineBackground(() => {
       if (msg.type === "stop-recording") {
         await handleStop();
         sendResponse(await getState());
+        return;
+      }
+      if (msg.type === "recording-active-query") {
+        // content script 启动时询问是否在录（页面刷新/新开/SW 重连后恢复）
+        const state = await getState();
+        sendResponse(state);
+        // 如果正在录，主动给这个 tab 补发一次 state（让 content 装配 recorder）
+        if (state.recording && _sender.tab?.id) {
+          broadcastState(state, _sender.tab.id);
+        }
         return;
       }
     })();
