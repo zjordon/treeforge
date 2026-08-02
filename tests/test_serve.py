@@ -369,6 +369,68 @@ def test_post_config_writes_env_and_reloads(tmp_path, monkeypatch):
 
 
 # ---------------------------------------------------------------------------
+# 配置自检（P3.5 S3：GET /api/config/check）
+# ---------------------------------------------------------------------------
+
+
+def test_config_check_no_key_returns_error(monkeypatch):
+    """LLM_KEY 未配置 → /api/config/check 返 {ok:false, error}（不 500）。"""
+    import harness.config as cfg
+
+    monkeypatch.setattr(cfg, "LLM_KEY", "")
+    monkeypatch.setattr("server.server.config.LLM_KEY", "")
+    app, _ = _make_app()
+    with TestClient(app) as c:
+        resp = c.get("/api/config/check")
+    data = resp.json()
+    assert resp.status_code == 200
+    assert data["ok"] is False
+    assert "LLM_KEY" in data["error"]
+
+
+def test_config_check_success(monkeypatch):
+    """call_llm_fast 成功 → 返 {ok:true, model, reply_len}（mock，不真发）。"""
+    import harness.config as cfg
+
+    monkeypatch.setattr(cfg, "LLM_KEY", "fake-key")
+    monkeypatch.setattr("server.server.config.LLM_KEY", "fake-key")
+    monkeypatch.setattr(cfg, "CLASSIFY_MODEL", "test-cls")
+    monkeypatch.setattr("server.server.config.CLASSIFY_MODEL", "test-cls")
+    # mock 掉 call_llm_fast（不真发网络请求，对齐 AGENTS.md 测试原则）
+    monkeypatch.setattr(
+        "harness.llm.call_llm_fast",
+        lambda prompt, **kw: ("pong", {"in": 1, "out": 1}),
+    )
+    app, _ = _make_app()
+    with TestClient(app) as c:
+        resp = c.get("/api/config/check")
+    data = resp.json()
+    assert resp.status_code == 200
+    assert data["ok"] is True
+    assert data["model"] == "test-cls"
+    assert data["reply_len"] == 4
+
+
+def test_config_check_failure_returns_error(monkeypatch):
+    """call_llm_fast 抛异常 → 返 {ok:false, error}（不 500，前端友好）。"""
+    import harness.config as cfg
+
+    monkeypatch.setattr(cfg, "LLM_KEY", "fake-key")
+    monkeypatch.setattr("server.server.config.LLM_KEY", "fake-key")
+    monkeypatch.setattr(
+        "harness.llm.call_llm_fast",
+        lambda prompt, **kw: (_ for _ in ()).throw(ConnectionError("refused")),
+    )
+    app, _ = _make_app()
+    with TestClient(app) as c:
+        resp = c.get("/api/config/check")
+    data = resp.json()
+    assert resp.status_code == 200  # 不 500（设计：自检失败返 200 + ok:false）
+    assert data["ok"] is False
+    assert "refused" in data["error"]
+
+
+# ---------------------------------------------------------------------------
 # 状态/产物 router（S4）
 # ---------------------------------------------------------------------------
 
@@ -383,7 +445,7 @@ def test_status_reflects_recording(client):
 
 
 def test_captures_lists_dirs(tmp_path):
-    """GET /api/captures → 列 captures_dir 子目录。"""
+    """GET /api/captures → 列 captures_dir 子目录（含 mtime 创建时间字段）。"""
     (tmp_path / "cap-1").mkdir()
     (tmp_path / "cap-1" / "trace.json").write_text("{}", encoding="utf-8")
     (tmp_path / "cap-2").mkdir()
@@ -394,6 +456,39 @@ def test_captures_lists_dirs(tmp_path):
     assert data["ok"] is True
     names = [i["name"] for i in data["items"]]
     assert "cap-1" in names and "cap-2" in names
+    # 每个 item 含创建时间（mtime_ms 毫秒整数戳 + ISO 字符串，前端展示/排序用）
+    for item in data["items"]:
+        assert "mtime_ms" in item and isinstance(item["mtime_ms"], int)
+        # 毫秒戳应在「最近」量级（> 2000 年），防 st_mtime 秒级浮点未乘 1000 的回归
+        assert item["mtime_ms"] > 946684800000  # 2000-01-01 的毫秒戳
+        assert "mtime_iso" in item and "T" in item["mtime_iso"]  # ISO 格式
+
+
+def test_captures_sorted_by_mtime_newest_first(tmp_path):
+    """GET /api/captures → 按 mtime 倒序（最新在前），让用户一眼看到最新产物。"""
+    import os
+    import time
+
+    # 建两个 capture，old 先建（mtime 早），new 后建（mtime 晚）
+    old_dir = tmp_path / "old"
+    old_dir.mkdir()
+    (old_dir / "trace.json").write_text("{}", encoding="utf-8")
+    # 强制 old 的 mtime 比 now 早 1 小时
+    old_ts = time.time() - 3600
+    os.utime(old_dir / "trace.json", (old_ts, old_ts))
+
+    time.sleep(0.05)  # 确保 new 的 mtime 严格晚于 old
+    new_dir = tmp_path / "new"
+    new_dir.mkdir()
+    (new_dir / "trace.json").write_text("{}", encoding="utf-8")
+
+    app, _ = _make_app(captures_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.get("/api/captures")
+    items = resp.json()["items"]
+    # 最新（new）应排第一
+    assert [i["name"] for i in items] == ["new", "old"]
+    assert items[0]["mtime_ms"] > items[1]["mtime_ms"]
 
 
 def test_skills_lists_hosts(tmp_path):
@@ -408,6 +503,128 @@ def test_skills_lists_hosts(tmp_path):
     assert data["ok"] is True
     hosts = [h["name"] for h in data["hosts"]]
     assert "example.com" in hosts
+
+
+# ---------------------------------------------------------------------------
+# 配套 API（P3.5 S1：status 扩展 / capture 详情 / skills 文件列表与预览）
+# ---------------------------------------------------------------------------
+
+
+def test_status_includes_session_when_recording():
+    """录制中时 /api/status 返 session 详情（session_id/events/stages/current_stage）。"""
+    app, collector = _make_app()
+    # 模拟录制中：collector._session 有值，含 events + page_context
+    session = type(
+        "S",
+        (),
+        {
+            "session_id": "sess-xyz",
+            "host": "example.com",
+            "task_instruction": "demo",
+            "events": [type("E", (), {"stage": "upload"})(), type("E", (), {"stage": "upload"})()],
+            "page_context": {"upload": "<dom>", "publish": "<dom2>"},
+        },
+    )()
+    collector._session = session
+    with TestClient(app) as c:
+        resp = c.get("/api/status")
+    st = resp.json()["status"]
+    assert st["recording"] is True
+    assert st["session"]["session_id"] == "sess-xyz"
+    assert st["session"]["host"] == "example.com"
+    assert st["session"]["events"] == 2
+    assert st["session"]["current_stage"] == "upload"
+    assert st["session"]["stages"] == ["upload", "publish"]
+
+
+def test_status_no_session_when_not_recording(client):
+    """未录制时 /api/status 不含 session 字段。"""
+    resp = client.get("/api/status")
+    st = resp.json()["status"]
+    assert st["recording"] is False
+    assert "session" not in st
+
+
+def test_capture_detail_returns_trace_summary(tmp_path):
+    """GET /api/captures/{name} → 读 trace.json 摘要（events 数 + stages + snapshots）。"""
+    cap = tmp_path / "cap-1"
+    cap.mkdir()
+    (cap / "trace.json").write_text(
+        '{"host":"example.com","task_instruction":"demo",'
+        '"events":[{"type":"click"},{"type":"input"}],"page_context":{"upload":"<dom>"}}',
+        encoding="utf-8",
+    )
+    snaps = cap / "snapshots"
+    snaps.mkdir()
+    (snaps / "upload.txt").write_text("dom", encoding="utf-8")
+    app, _ = _make_app(captures_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.get("/api/captures/cap-1")
+    data = resp.json()
+    assert resp.status_code == 200
+    assert data["ok"] is True
+    assert data["host"] == "example.com"
+    assert data["events"] == 2
+    assert data["stages"] == ["upload"]
+    assert data["snapshots"] == ["upload.txt"]
+
+
+def test_capture_detail_404_when_missing(tmp_path):
+    """GET /api/captures/{不存在} → 404。"""
+    app, _ = _make_app(captures_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.get("/api/captures/nope")
+    assert resp.status_code == 404
+
+
+def test_skill_files_lists_md(tmp_path):
+    """GET /api/skills/{host}/files → 列 md 文件（名 + 大小）。"""
+    ds = tmp_path / "domain-skills" / "example.com"
+    ds.mkdir(parents=True)
+    (ds / "_sop.md").write_text("# sop content", encoding="utf-8")
+    (ds / "quirks.md").write_text("# quirks", encoding="utf-8")
+    app, _ = _make_app(skills_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.get("/api/skills/example.com/files")
+    data = resp.json()
+    assert resp.status_code == 200
+    names = [f["name"] for f in data["files"]]
+    assert "_sop.md" in names and "quirks.md" in names
+    assert all("size" in f for f in data["files"])
+
+
+def test_skill_file_content_returns_text(tmp_path):
+    """GET /api/skills/{host}/files/{filename} → 返 md 原文。"""
+    ds = tmp_path / "domain-skills" / "example.com"
+    ds.mkdir(parents=True)
+    (ds / "_sop.md").write_text("# 标题\n\n正文内容", encoding="utf-8")
+    app, _ = _make_app(skills_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.get("/api/skills/example.com/files/_sop.md")
+    data = resp.json()
+    assert resp.status_code == 200
+    assert "# 标题" in data["content"]
+    assert "正文内容" in data["content"]
+
+
+def test_skill_file_content_404_when_missing(tmp_path):
+    """GET /api/skills/{host}/files/{不存在} → 404。"""
+    ds = tmp_path / "domain-skills" / "example.com"
+    ds.mkdir(parents=True)
+    app, _ = _make_app(skills_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.get("/api/skills/example.com/files/nope.md")
+    assert resp.status_code == 404
+
+
+def test_skill_file_content_rejects_path_traversal(tmp_path):
+    """GET /api/skills/{host}/files/{含分隔符} → 400（防路径越界）。"""
+    app, _ = _make_app(skills_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.get("/api/skills/example.com/files/..%2F..md")
+    # 文件名含 / （URL 解码后）→ 不匹配 [^/\\]+\.md → 400 或不存在的安全路径
+    # 关键：不能读到 domain-skills 之外的文件
+    assert resp.status_code in (400, 404)
 
 
 # ---------------------------------------------------------------------------
