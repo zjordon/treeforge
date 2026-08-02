@@ -137,7 +137,7 @@ treeforge/
 ## 相关文档
 
 - [架构（四层分层 + 五阶段蒸馏）](./ARCHITECTURE.md)
-- [路线图（P0–P4 + 已完成里程碑）](./ROADMAP.md)
+- [路线图（P0–P3.5，已完成里程碑；P4 检索层明确不做）](./ROADMAP.md)
 - P2 采集层调试复盘：`docs/p2/debug-retrospective.md`
 - P3 常驻服务方案：`docs/p3/serve-plan.md` + 落地计划 `docs/p3/p3-implement-plan.md`
 

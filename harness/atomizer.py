@@ -193,6 +193,9 @@ _ATTR_WHITELIST: tuple[str, ...] = (
     "data-test",
     "data-cy",
     "contenteditable",
+    # P3.6：upload 的 accept（file input 专属，quirks 原料）+ JS 点击标记（MAIN-world hook 打的）
+    "accept",
+    "data-tw-jsclick",
     "tag",
 )
 
@@ -240,7 +243,15 @@ def _render_summary(events: list[TraceEvent], cap_lines: int = 120) -> str:
         # stage 标记（阶段 4）：行尾追加 [stage=xxx]，让 LLM 在 evidence 段看到每步阶段。
         # 带? 的推断值也参与折叠判断（upload? 和 upload 视为不同 stage，不折叠——期望行为）。
         stage_suffix = f" [stage={ev.stage}]" if ev.stage else ""
-        line = f"{ev.type:<10} {path} :: {label}{stage_suffix}".rstrip()
+        # 副作用信号（P3.6）：行尾追加 [signal=modal_opened/dropdown_opened]，
+        # 让 LLM 看到该动作触发了弹窗/下拉——写 quirks.md 的关键原料。
+        signal_suffix = ""
+        if ev.signals:
+            kinds = [s.get("type", "") for s in ev.signals if isinstance(s, dict)]
+            kinds = [k for k in kinds if k]  # 滤空（缺 type 字段的信号）
+            if kinds:
+                signal_suffix = " [signal=" + ",".join(kinds) + "]"
+        line = f"{ev.type:<10} {path} :: {label}{stage_suffix}{signal_suffix}".rstrip()
         lines.append(line)
 
     # 折叠连续重复

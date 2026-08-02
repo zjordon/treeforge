@@ -367,3 +367,64 @@ def test_render_summary_fold_three_same_lines():
     # 应折叠成 1 行 x3（不崩溃）
     assert "x3" in summary
     assert summary.count("\n") == 0  # 只剩一行
+
+
+# ---------------------------------------------------------------------------
+# P3.6：signal 标记渲染（让 LLM 在 summary 看到动作触发的弹窗/下拉）
+# ---------------------------------------------------------------------------
+
+
+def test_render_summary_marks_signal_suffix():
+    """有 signals 的 event，summary 行尾应带 [signal=modal_opened] 标记。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    ev = TraceEvent(
+        type="click",
+        target="上传",
+        selector="#upload-btn",
+        signals=[{"type": "modal_opened", "selector": "div.modal", "ts": 100}],
+        timestamp=0,
+    )
+    summary = _render_summary([ev])
+    assert "[signal=modal_opened]" in summary
+
+
+def test_render_summary_marks_multiple_signal_kinds():
+    """多个信号（modal + dropdown）应合并到一行标记里。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    ev = TraceEvent(
+        type="click",
+        target="x",
+        signals=[
+            {"type": "modal_opened"},
+            {"type": "dropdown_opened"},
+        ],
+        timestamp=0,
+    )
+    summary = _render_summary([ev])
+    assert "modal_opened" in summary
+    assert "dropdown_opened" in summary
+
+
+def test_render_summary_no_signal_suffix_when_empty():
+    """无 signals 的 event 不带 signal 标记。"""
+    from harness.atomizer import _render_summary
+    from harness.models import TraceEvent
+
+    ev = TraceEvent(type="click", target="x", signals=[], timestamp=0)
+    summary = _render_summary([ev])
+    assert "[signal=" not in summary
+
+
+def test_format_attrs_includes_accept_and_jsclick():
+    """P3.6：accept（upload）+ data-tw-jsclick（JS 点击标记）应进 attrs summary。"""
+    from harness.atomizer import _format_attrs_summary
+
+    summary = _format_attrs_summary(
+        {"tag": "input", "type": "file", "accept": "image/*", "data-tw-jsclick": "1"}
+    )
+    assert "accept=image/*" in summary
+    assert "data-tw-jsclick=1" in summary

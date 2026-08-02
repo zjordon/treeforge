@@ -11,11 +11,15 @@
 /** distill 动作类型（通用浏览器动作，非 TreeWalker action 注册表镜像） */
 export type DistillActionType =
   | "click" // click 事件
-  | "input" // input 事件（文本输入）
-  | "change" // change 事件（select/checkbox/file）
-  | "keydown" // keydown 事件（Enter/快捷键）
+  | "input" // input 事件（文本输入 / contenteditable 富文本）
+  | "change" // change 事件（select/checkbox/file）—— 老通用槽位，P3.6 后大多由更具体的类型承担
+  | "keydown" // keydown 事件（Enter/快捷键）—— 老通用槽位
   | "scroll" // wheel 事件（已去抖合并）
-  | "navigate"; // SPA 导航或整页跳转
+  | "navigate" // SPA 导航或整页跳转
+  // P3.6 扩词（迁移自 TreeWalker 扩展，作 distill 采集补充）：
+  | "select_dropdown" // <select> 的 change → 选中项 value
+  | "upload_file" // <input type=file> 的 change → 文件名 + upload_ctx 语义身份
+  | "send_keys"; // 修饰键组合（Ctrl+S）+ 命名非打印键（Tab/Escape/方向键/F1-12）
 
 /**
  * 扩展采集的原始元素属性键（对齐 Python RAW_ATTR_KEYS）。
@@ -42,7 +46,22 @@ export const RAW_ATTR_KEYS = [
   "contenteditable",
   // 文件上传（file input 专属，对 quirks 关键）
   "accept",
+  // P3.6：MAIN-world addEventListener hook 给注册了点击监听器的元素打的标记。
+  // 让 distiller 能识别「无可交互特征但 JS 监听了点击」的 div（对齐 TreeWalker has_js_click_listener）。
+  "data-tw-jsclick",
 ] as const;
+
+/** upload_file 的站点无关通用身份线索（P3.6 迁自 TreeWalker issue #139 通用化）。 */
+export interface UploadCtx {
+  /** 原生 <label for> 关联文本（input.labels） */
+  label_text?: string;
+  /** aria-labelledby IDREF 解析的目标文本 */
+  aria_text?: string;
+  /** 就近可见文本祖先（≤5 层） */
+  region_text?: string;
+  /** 在 ARIA dialog 内（[role=dialog] / [aria-modal=true]） */
+  in_dialog?: boolean;
+}
 
 /** distill 事件 payload（CaptureEnvelope.payload 的 distill 场景形状） */
 export interface DistillEventPayload {
@@ -50,9 +69,9 @@ export interface DistillEventPayload {
   type: DistillActionType;
   /** 操作目标元素的原始属性（collector 过滤成 element_attrs）。可能为空（navigate 无目标） */
   raw_attrs?: Record<string, string>;
-  /** 输入值（input/change 用） */
+  /** 输入值（input/select_dropdown 用）；upload_file 用：文件名 */
   value?: string;
-  /** 按键（keydown 用），如 "Enter" */
+  /** 按键（keydown/send_keys 用），如 "Enter" "Control+S" */
   key?: string;
   /** 滚动量（scroll 用） */
   scroll_amount?: number;
@@ -60,8 +79,31 @@ export interface DistillEventPayload {
   url?: string;
   /** 目标元素可读标签（扩展算的人类可读描述，作为 target 字段），可选 */
   target?: string;
+  /** upload_file 的站点无关身份线索（P3.6 迁自 TreeWalker） */
+  upload_ctx?: UploadCtx;
   /** 时间戳（毫秒），由 envelope.ts 填，这里冗余便于单独传递 */
   ts?: number;
+}
+
+// ---------------------------------------------------------------------------
+// 副作用信号（P3.6 迁自 TreeWalker side-effect-observer，POST /signal 单独通道）
+// ---------------------------------------------------------------------------
+
+/** 信号类型：modal/dropdown 打开（动作引发的 DOM 变化，作为 quirks.md 原料）。 */
+export type SignalKind = "modal_opened" | "dropdown_opened";
+
+/**
+ * 副作用信号（POST /signal 的 body 内层 payload）。
+ *
+ * 扩展 side-effect-observer 在每动作后 1s 窗口检测 modal/dropdown 新增节点，
+ * 通过 /signal 通道发到 collector，attach 到最近 capture event 作为 quirks 原料。
+ */
+export interface DistillSignal {
+  type: SignalKind;
+  /** 新增节点的简易选择器（tag + #id + 前两 class），作 detail 不参与定位 */
+  selector: string;
+  /** 毫秒时间戳（扩展填） */
+  ts: number;
 }
 
 /**

@@ -53,6 +53,10 @@ RAW_ATTR_KEYS: tuple[str, ...] = (
     "contenteditable",
     # 文件上传（file input 专属，对 quirks 很关键）
     "accept",
+    # P3.6：MAIN-world addEventListener hook 给注册了点击监听器的元素打的标记
+    # （data-tw-jsclick="1"）。让 distiller 能识别「无可交互特征但 JS 监听了点击」的 div。
+    # 对齐 TreeWalker has_js_click_listener；详见 injected.ts。
+    "data-tw-jsclick",
     # 可见文本（扩展用 textContent/innerText 计算，已清洗字体图标 \ue000-\uf8ff）
     # 作为独立字段而非属性，因为它是「计算的」不是 getAttribute 的
 )
@@ -67,12 +71,29 @@ RAW_ATTR_KEYS: tuple[str, ...] = (
 # collector 转成 TraceEvent.type（见 ACTION_TYPE_MAP）。
 DistillActionType = Literal[
     "click",  # click 事件
-    "input",  # input 事件（文本输入）
-    "change",  # change 事件（select/checkbox/file）
-    "keydown",  # keydown 事件（Enter/快捷键）
+    "input",  # input 事件（文本输入 / contenteditable 富文本）
+    "change",  # change 事件（select/checkbox/file）—— 老通用槽位，P3.6 后大多由更具体的类型承担
+    "keydown",  # keydown 事件（Enter/快捷键）—— 老通用槽位
     "scroll",  # wheel 事件（已去抖合并）
     "navigate",  # SPA 导航（pushState/popstate）或整页跳转
+    # P3.6 扩词（迁移自 TreeWalker 扩展，作 distill 采集补充）：
+    "select_dropdown",  # <select> 的 change → 选中项 value
+    "upload_file",  # <input type=file> 的 change → 文件名 + upload_ctx 语义身份
+    "send_keys",  # 修饰键组合（Ctrl+S）+ 命名非打印键（Tab/Escape/方向键/F1-12）
 ]
+
+
+class UploadCtx(TypedDict, total=False):
+    """upload_file 的站点无关通用身份线索（迁移自 TreeWalker issue #139 通用化）。
+
+    让 distiller 在 quirks.md 里描述「这个上传框是什么」，而不是依赖站点特定 selector。
+    重放端不再用——distill 只要「LLM 可读」，不参与五级匹配。
+    """
+
+    label_text: str  # 原生 <label for> 关联文本（input.labels）
+    aria_text: str  # aria-labelledby IDREF 解析的目标文本
+    region_text: str  # 就近可见文本祖先（≤5 层）
+    in_dialog: bool  # 在 ARIA dialog 内（[role=dialog] / [aria-modal=true]）
 
 
 class DistillEventPayload(TypedDict, total=False):
@@ -89,10 +110,11 @@ class DistillEventPayload(TypedDict, total=False):
     # 扩展用 RAW_ATTR_KEYS 列的字段采集。可能为空（如 navigate 无目标元素）。
     raw_attrs: dict[str, str]
 
-    # 输入值（input/change 用）：用户输入的文本或选择的值
+    # 输入值（input/select_dropdown 用）：用户输入的文本或选择的值
+    # upload_file 用：文件名（浏览器安全限制只给文件名）
     value: str
 
-    # 按键（keydown 用）：键名，如 "Enter" "Escape"
+    # 按键（keydown/send_keys 用）：键名，如 "Enter" "Escape" "Control+S"
     key: str
 
     # 滚动量（scroll 用）：归一化后的滚动量
@@ -105,8 +127,32 @@ class DistillEventPayload(TypedDict, total=False):
     # 如 "投稿按钮" "标题输入框"。可选，扩展尽力采。
     target: str
 
+    # upload_file 的站点无关身份线索（P3.6 迁自 TreeWalker）。distiller 据此写 quirks。
+    upload_ctx: UploadCtx
+
     # 时间戳（毫秒，扩展填）
     ts: int
+
+
+# ---------------------------------------------------------------------------
+# 副作用信号（P3.6 迁自 TreeWalker side-effect-observer，POST /signal 单独通道）
+# ---------------------------------------------------------------------------
+
+# 信号类型：modal/dropdown 打开（动作引发的 DOM 变化，作为 quirks.md 原料）。
+# 与 TreeWalker SignalKind 对齐子集（navigation/dialog/download 是 replay 专用，distill 不采）。
+SignalKind = Literal["modal_opened", "dropdown_opened"]
+
+
+class DistillSignal(TypedDict, total=False):
+    """副作用信号（POST /signal 的 body 内层 payload）。
+
+    扩展 side-effect-observer 在每动作后 1s 窗口检测 modal/dropdown 新增节点，
+    通过 /signal 通道发到 collector，attach 到最近 capture event 作为 quirks 原料。
+    """
+
+    type: SignalKind  # modal_opened / dropdown_opened
+    selector: str  # 新增节点的简易选择器（tag + #id + 前两 class），作 detail 不参与定位
+    ts: int  # 毫秒时间戳（扩展填）
 
 
 # ---------------------------------------------------------------------------
@@ -115,6 +161,7 @@ class DistillEventPayload(TypedDict, total=False):
 
 # 扩展动作类型 → treeforge TraceEvent.type 的映射
 # （TraceEvent.type 见 harness/models.py:22，蒸馏用）
+# 新增 P3.6 类型原样透传（TraceEvent.type 是自由字符串，下游 ADAPT/atomizer 不按枚举过滤）
 ACTION_TYPE_MAP: dict[str, str] = {
     "click": "click",
     "input": "input",
@@ -122,6 +169,10 @@ ACTION_TYPE_MAP: dict[str, str] = {
     "keydown": "keydown",
     "scroll": "scroll",
     "navigate": "navigate",
+    # P3.6 扩词（迁自 TreeWalker）：原样透传成 TraceEvent.type
+    "select_dropdown": "select_dropdown",
+    "upload_file": "upload_file",
+    "send_keys": "send_keys",
 }
 
 # collector 提炼 element_attrs 时保留的白名单（对齐 harness/atomizer._ATTR_WHITELIST + accept）
@@ -140,6 +191,8 @@ ELEMENT_ATTR_WHITELIST: tuple[str, ...] = (
     "contenteditable",
     # accept 不在 atomizer 白名单，但 rerun_to_trace 保留了对 file input quirks 关键
     "accept",
+    # P3.6：JS 点击标记（MAIN-world addEventListener hook 打的），见 RAW_ATTR_KEYS 注释
+    "data-tw-jsclick",
 )
 
 # 私有 Unicode 区（字体图标），清洗 visible_text 用（对齐 rerun_to_trace._clean_ax_name）
@@ -209,6 +262,11 @@ def payload_to_trace_fields(payload: DistillEventPayload) -> dict[str, Any]:
 
     返回 dict 含：type, target, element_attrs, value, key, url（按 payload 内容有的才填）。
     collector 拿这个 dict + timestamp + stage 组装成 TraceEvent。
+
+    P3.6 新事件类型落地：
+      - select_dropdown：value = 选中项 value
+      - upload_file：value = 文件名；upload_ctx 折叠进 target 后缀（让 LLM 读到「在上传区域」）
+      - send_keys：key = 键名（可能含修饰符，如 "Control+S"）
     """
     action_type = payload.get("type", "")
     trace_type = ACTION_TYPE_MAP.get(action_type, action_type)  # 未知类型原样透传
@@ -229,6 +287,14 @@ def payload_to_trace_fields(payload: DistillEventPayload) -> dict[str, Any]:
     if target:
         fields["target"] = target
 
+    # upload_ctx 折叠进 target 后缀（TraceEvent 无独立 upload_ctx 字段，但 distiller 要能读到）
+    upload_ctx = payload.get("upload_ctx")
+    if upload_ctx and isinstance(upload_ctx, dict):
+        ctx_hint = _format_upload_ctx(upload_ctx)
+        if ctx_hint:
+            base = fields.get("target") or target or "文件上传"
+            fields["target"] = f"{base}（{ctx_hint}）"
+
     # 动作值
     if "value" in payload:
         fields["value"] = payload["value"]
@@ -241,3 +307,18 @@ def payload_to_trace_fields(payload: DistillEventPayload) -> dict[str, Any]:
         fields["value"] = str(payload["scroll_amount"])
 
     return fields
+
+
+def _format_upload_ctx(ctx: dict[str, Any]) -> str:
+    """把 upload_ctx 折叠成一句人类可读提示，附进 target 让 distiller 写 quirks。
+
+    优先级：label_text > aria_text > region_text，再补 in_dialog 标记。
+    例：{label_text:"封面图", in_dialog:true} → "封面图（在弹窗内）"
+    """
+    parts: list[str] = []
+    label = ctx.get("label_text") or ctx.get("aria_text") or ctx.get("region_text")
+    if label:
+        parts.append(str(label)[:40])
+    if ctx.get("in_dialog"):
+        parts.append("在弹窗内")
+    return "，".join(parts)

@@ -67,6 +67,10 @@ def export_capture(
             event_dict["value"] = ev.value
         if ev.key is not None:
             event_dict["key"] = ev.key
+        # P3.6：副作用信号（modal/dropdown 打开）——非空才写，保持老 trace 兼容。
+        # distiller 据此写 quirks.md（「点这个按钮会弹 modal」）。
+        if ev.signals:
+            event_dict["signals"] = ev.signals
         events.append(event_dict)
 
     # page_context（stage → element_tree_text）

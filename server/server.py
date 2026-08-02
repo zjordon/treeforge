@@ -69,6 +69,17 @@ class EnvelopeModel(BaseModel):
     payload: dict[str, Any] = Field(default_factory=dict)
 
 
+class SignalRequest(BaseModel):
+    """POST /signal body（副作用信号，P3.6 迁自 TreeWalker）。
+
+    扩展 side-effect-observer 在动作后 1s 窗口检测 modal/dropdown 新增节点 →
+    background POST 此 body。collector.attach_signal 把 payload 附到最近 capture event。
+    """
+
+    session_id: str = ""
+    payload: dict[str, Any] = Field(default_factory=dict)
+
+
 class DistillRequest(BaseModel):
     """POST /api/distill body（触发蒸馏）。"""
 
@@ -167,6 +178,22 @@ def _register_capture_router(app: FastAPI) -> None:
             return JSONResponse({"ok": True})
         except Exception as e:  # noqa: BLE001
             logger.exception("Ingest failed")
+            return JSONResponse({"ok": False, "error": str(e)}, status_code=500)
+
+    @app.post("/signal")
+    async def signal(req: SignalRequest) -> JSONResponse:
+        """POST /signal：副作用信号（modal/dropdown 打开），P3.6 迁自 TreeWalker。
+
+        把 payload attach 到最近 capture event 作 quirks 原料；signal 不进 events 列表。
+        """
+        try:
+            collector = app.state.collector
+            if collector is None:
+                return JSONResponse({"ok": False, "error": "no active session"}, status_code=400)
+            attached = await collector.attach_signal(req.payload)
+            return JSONResponse({"ok": True, "attached": attached})
+        except Exception as e:  # noqa: BLE001
+            logger.exception("Signal attach failed")
             return JSONResponse({"ok": False, "error": str(e)}, status_code=500)
 
     @app.post("/stop")

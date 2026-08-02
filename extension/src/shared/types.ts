@@ -29,6 +29,12 @@ export type StateBroadcast = { type: "state"; state: RecordingState };
 /** content → background 的采集事件（content 采到事件后转发） */
 export type ContentMessage =
   | { type: "capture-event"; envelope: import("./envelope").CaptureEnvelope }
+  // P3.6：副作用信号（modal/dropdown 打开），走单独的 /signal 通道
+  | {
+      type: "capture-signal";
+      signal: import("./distill-schema").DistillSignal;
+      sessionId: string;
+    }
   | { type: "recording-active-query" }; // content 启动时问 background 是否在录
 
 /** chrome.storage 的 key */

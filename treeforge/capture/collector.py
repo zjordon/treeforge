@@ -70,6 +70,10 @@ class CapturedEvent:
     # 采集时绑定（P2.2.3）：确定的 stage，无 ?
     stage: str | None = None
 
+    # P3.6：副作用信号（modal/dropdown 打开），attach 到本事件作为 quirks 原料。
+    # collector.attach_signal 在 2s 窗口内把信号附到最近事件；export 时落进 TraceEvent.signals。
+    signals: list[dict[str, Any]] = field(default_factory=list)
+
 
 @dataclass
 class CaptureSession:
@@ -226,6 +230,38 @@ class Collector:
             stage=stage,
         )
         self._session.events.append(event)
+
+    async def attach_signal(self, payload: dict[str, Any]) -> bool:
+        """把副作用信号（modal/dropdown 打开）attach 到最近 capture event。
+
+        P3.6 迁自 TreeWalker Recorder.attach_signal。信号本身不是动作（不进 events 列表），
+        而是附到最近的 capture event 上，作为 distiller 写 quirks.md 的原料
+        （「点这个按钮会弹出 modal」「选这个下拉会展开选项」）。
+
+        payload = { type: 'modal_opened'|'dropdown_opened', selector, ts }
+        返回是否成功 attach（最近事件在 2s 窗口内才算）。
+        """
+        if not self._session or not self._session.events:
+            return False
+
+        signal_type = payload.get("type")
+        if signal_type not in ("modal_opened", "dropdown_opened"):
+            return False
+
+        ts = int(payload.get("ts", 0))
+        # 附到最近事件：ts 在最近事件 2s 后才算（动作引发副作用的合理窗口）
+        last = self._session.events[-1]
+        if ts and last.timestamp and ts - last.timestamp > 2000:
+            return False
+
+        last.signals.append(
+            {
+                "type": signal_type,
+                "selector": payload.get("selector", ""),
+                "ts": ts,
+            }
+        )
+        return True
 
     async def stop(self) -> dict[str, Any]:
         """停止采集，导出产物，返回产物信息。

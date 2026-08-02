@@ -3,24 +3,34 @@
  *
  * 与 TreeWalker replay 策略的关键差异（docs/p2/README.md 3.2.5）：
  *   - click 不跳过误操作（蒸馏想看用户真实路径，含误点）
- *   - 字段采 raw_attrs（extractRawAttrs），不采 xpath/rect/upload_ctx（重放专属）
- *   - 不需要 data-tw-jsclick 标记
+ *   - 字段采 raw_attrs（extractRawAttrs），不采 xpath/rect（重放专属定位字段）
  *
- * P2.3.1 最小版：click/input/keydown(Enter)/scroll 各实现 buildXxxPayload。
+ * P3.6 扩词（迁自 TreeWalker 扩展）：在保持 distill「LLM 可读」精度约束下，
+ * 补 TreeForge 缺的事件词汇：select_dropdown / upload_file / send_keys。
+ *   - upload_file 采 upload_ctx（站点无关语义身份），让 distiller 写进 quirks.md。
+ *     与 TreeWalker 的差异：distill 不采 trigger_affordance（重放专用语义），
+ *     不采 rect（定位字段，distill 不要）。
+ *   - data-tw-jsclick 标记（MAIN-world addEventListener hook 打的）也纳入：distill
+ *     要让 LLM 看到「这个 div 虽然 cursor:pointer 都没有，但 JS 监听了点击」。
  */
 
 import type { CollectionStrategy } from "../../core/strategy";
-import { cleanVisibleText, extractRawAttrs, type DistillEventPayload } from "../../shared/distill-schema";
+import {
+  cleanVisibleText,
+  extractRawAttrs,
+  type DistillEventPayload,
+  type UploadCtx,
+} from "../../shared/distill-schema";
 
 /**
- * input 去抖时长（毫秒）—— 通用录制去噪值。
- * 1200ms 能合并大部分连续打字，又不至于误合并用户有意停顿后切换的操作
- * （onInput 的 target-switch flush 会先冲刷前一个）。主要去碎片化靠后端
- * atomizer 的「同目标连续 input 合并」（确定性兜底），这里只是预防性窗口。
+ * input 去抖时长（毫秒）—— 对齐 TreeWalker 通用录制去噪值。
+ * P3.6 从 1200ms 调到 400ms（与 TreeWalker 一致）：final value only，
+ * 主要去碎片化靠后端 atomizer 的「同目标连续 input 合并」（确定性兜底）。
  */
-const INPUT_COALESCE_MS = 1200;
+const INPUT_COALESCE_MS = 400;
 
-/** 可交互元素选择器（通用 a11y/交互元素，不含 data-tw-jsclick 私有标记）。
+/** 可交互元素选择器（通用 a11y/交互元素）。
+ * data-tw-jsclick 标记不在选择器里，由 findInteractiveAncestor 单独查（迁自 TreeWalker）。
  * contenteditable 同时覆盖 ="true" 和 =""（空字符串也是可编辑，按 HTML spec）。 */
 const INTERACTIVE_SELECTOR = [
   "a[href]",
@@ -98,16 +108,6 @@ export class DistillStrategy implements CollectionStrategy {
     };
   }
 
-  buildKeydownPayload(key: string, target: Element | null): DistillEventPayload | null {
-    // 只采 Enter（标签确认等关键操作）；Escape/Tab 暂不采（避免噪声）
-    if (key !== "Enter") return null;
-    return {
-      type: "keydown",
-      key,
-      raw_attrs: target ? this.extractAttrs(target) : undefined,
-    };
-  }
-
   buildScrollPayload(amount: number): DistillEventPayload {
     return { type: "scroll", scroll_amount: amount };
   }
@@ -115,15 +115,52 @@ export class DistillStrategy implements CollectionStrategy {
   buildNavigatePayload(url: string): DistillEventPayload {
     return { type: "navigate", url };
   }
+
+  // ---- P3.6 扩词：select / upload / send_keys（迁自 TreeWalker）----
+
+  buildSelectPayload(target: Element, value: string): DistillEventPayload | null {
+    return {
+      type: "select_dropdown",
+      raw_attrs: this.extractAttrs(target),
+      value,
+      target: this.computeTargetLabel(target),
+    };
+  }
+
+  buildUploadPayload(input: HTMLInputElement, fileName: string): DistillEventPayload {
+    // upload_ctx（站点无关语义身份，迁自 TreeWalker issue #139）：让 distiller 在 quirks.md
+    // 描述「这个上传框是什么」，不依赖站点特定 selector。
+    // 与 TreeWalker 的差异：不采 trigger_affordance（重放专用，distill 不要）。
+    const uploadCtx = captureUploadCtx(input);
+    const target = this.computeTargetLabel(input);
+    return {
+      type: "upload_file",
+      raw_attrs: this.extractAttrs(input),
+      value: fileName,
+      target,
+      upload_ctx: uploadCtx,
+    };
+  }
+
+  buildSendKeysPayload(key: string, target: Element | null): DistillEventPayload | null {
+    // distill 保留所有 send_keys（含纯命名键如 Enter）——LLM 看 SOP 要知道用户按了什么键。
+    // 与 keydown 的区别：keydown 只采 Enter（P2.3.1），send_keys 覆盖修饰键组合 + 全部命名键。
+    return {
+      type: "send_keys",
+      key,
+      raw_attrs: target ? this.extractAttrs(target) : undefined,
+    };
+  }
 }
 
 /**
- * 找可交互祖先（通用 DOM 启发式，借鉴 TreeWalker findInteractiveAncestor 前三道）。
+ * 找可交互祖先（通用 DOM 启发式，对齐 TreeWalker findInteractiveAncestor 四道）。
  *
- * 三道启发式（不含 TreeWalker 的第四道 data-tw-jsclick 私有标记）：
+ * 四道启发式（P3.6 补第四道 data-tw-jsclick 标记，补 content script 看不到 JS 监听器的盲区）：
  *   1. 元素匹配 INTERACTIVE_SELECTOR
- *   2. DIV 且 cursor:pointer（排除内联元素）
+ *   2. DIV 且 cursor:pointer（排除内联元素——span/svg 常继承父按钮的 cursor:pointer）
  *   3. onclick/onmousedown 属性
+ *   4. data-tw-jsclick 标记（MAIN-world addEventListener hook 打的，对齐 TreeWalker）
  */
 function findInteractiveAncestor(el: Element): Element | null {
   let node: Element | null = el;
@@ -141,9 +178,60 @@ function findInteractiveAncestor(el: Element): Element | null {
     if (node.hasAttribute("onclick") || node.hasAttribute("onmousedown")) {
       return node;
     }
+    // data-tw-jsclick 标记（MAIN-world hook 打的，补 content script 看不到 addEventListener 的盲区）
+    if (node.hasAttribute("data-tw-jsclick")) {
+      return node;
+    }
     node = node.parentElement;
   }
   return null;
+}
+
+/**
+ * 取 upload file input 的通用身份线索（站点无关，迁自 TreeWalker issue #139 通用化）。
+ *
+ * 让 distiller 在 quirks.md 描述「这个上传框是什么」，跨框架/站点稳定
+ * （Ant ant-upload / 原生 <label for> / Element el-upload 都覆盖）。
+ *
+ * 与 TreeWalker 的差异：不附 trigger_affordance（重放专用语义，distill 不要）。
+ */
+function captureUploadCtx(input: Element): UploadCtx {
+  const norm = (s: string | null): string => (s ?? "").replace(/\s+/g, " ").trim();
+  const htmlInput = input as HTMLInputElement;
+
+  // 1. 原生 label 关联（W3C）：input.labels 同时含 <label for> 指向与包裹 <label>
+  const labelText = norm(
+    Array.from(htmlInput.labels ?? [])
+      .map((l) => l.textContent ?? "")
+      .join(" "),
+  );
+
+  // 2. aria-labelledby → 目标元素 textContent（IDREF 解析）
+  const ariaText = norm(
+    (input.getAttribute("aria-labelledby") ?? "")
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el)
+      .map((el) => el.textContent ?? "")
+      .join(" "),
+  );
+
+  // 3. 就近可见文本祖先（≤5 层，首个 textContent 非空且 <200 字）
+  let region = "";
+  let p: Element | null = input.parentElement;
+  let depth = 0;
+  while (p && depth < 5 && !region) {
+    const t = norm(p.textContent ?? "");
+    if (t && t.length < 200) region = t;
+    p = p.parentElement;
+    depth += 1;
+  }
+
+  // 4. ARIA dialog（[role=dialog] / [aria-modal=true]）
+  const inDialog = !!(input.closest('[role="dialog"]') ?? input.closest('[aria-modal="true"]'));
+
+  return { label_text: labelText, aria_text: ariaText, region_text: region, in_dialog: inDialog };
 }
 
 /**
@@ -175,7 +263,7 @@ function contentEditableLabel(el: HTMLElement): string {
   // 容器界定：向上最多 5 层，找到一个有多个子节点或 role=group/form 的祖先。
   let container: Element | null = el;
   for (let i = 0; i < 5 && container; i++) {
-    const parent = container.parentElement;
+    const parent: Element | null = container.parentElement;
     if (!parent) break;
     container = parent;
     // 容器内查标题/标签（限定在容器范围，避免命中页面其它无关标题）

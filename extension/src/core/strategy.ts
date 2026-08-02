@@ -52,7 +52,30 @@ export interface CollectionStrategy {
   /** 把采集到的原始信息构建成 payload（策略决定 payload 形状） */
   buildClickPayload(target: Element): DistillEventPayload;
   buildInputPayload(target: Element, value: string): DistillEventPayload;
-  buildKeydownPayload(key: string, target: Element | null): DistillEventPayload | null;
   buildScrollPayload(amount: number): DistillEventPayload;
   buildNavigatePayload(url: string): DistillEventPayload;
+
+  // ---- P3.6 扩词（迁自 TreeWalker）：新事件类型的 payload 构建 ----
+
+  /**
+   * <select> 的 change → 选中项 value。
+   * 返回 null 表示策略决定跳过（distill 保留，replay 可能严格过滤）。
+   */
+  buildSelectPayload(target: Element, value: string): DistillEventPayload | null;
+
+  /**
+   * <input type=file> 的 change → 文件名 + upload_ctx 语义身份。
+   * files 为空（用户取消选择）时调用方应跳过；此处假定 files 非空。
+   */
+  buildUploadPayload(
+    input: HTMLInputElement,
+    fileName: string,
+  ): DistillEventPayload;
+
+  /**
+   * 快捷键 / 命名非打印键 → send_keys。
+   * RecorderEngine 已判定该键属于 send_keys（修饰键组合或命名键），key 是组合后的
+   * 字符串（如 "Control+S" "Enter" "F5"）。返回 null 表示策略跳过。
+   */
+  buildSendKeysPayload(key: string, target: Element | null): DistillEventPayload | null;
 }
