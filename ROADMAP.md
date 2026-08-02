@@ -1,6 +1,6 @@
 # TreeForge 路线图
 
-> 从 [init-plan.md](./init-plan.md) 抽取，2026-07-18 按核心机制重新排优先级，2026-07-28 按实际进展更新。
+> 从 init-plan 抽取，2026-07-18 按核心机制重新排优先级，2026-07-28 / 2026-08-01 按实际进展更新。
 >
 > **核心机制确认**：skill 是「给 LLM 看的上下文提示」，不是「给 CDP 直接执行的结构化 selector 库」。
 > 这个定位决定了整个路线图——验证「skill 能不能让 agent 探索更准」是最高优先级，
@@ -169,7 +169,7 @@ ls ./data/skills/domain-skills/bilibili.com/
 
 ---
 
-## P2 —— 采集层（精度对准「LLM 可读」）
+## P2 —— 采集层（精度对准「LLM 可读」，已完成 ✅）
 
 **目标**：MV3 扩展录制真实浏览器操作，产出可蒸馏的 trace。
 
@@ -191,38 +191,109 @@ ls ./data/skills/domain-skills/bilibili.com/
 - 不需要 D1/semantic_clue 兜底（蒸馏容错）
 - 不需要 xpath 与 CDP 对齐（skill 给 LLM 看不参与匹配）
 
-- [ ] WXT 扩展真实实现（基于现有脚手架）
-  - [ ] background SW + recorder 状态机（MV3 SW 30s 回收恢复，借鉴 BrowserBC）
-  - [ ] content script：DOM 事件采集（借鉴 TreeWalker action-recorder，精简到蒸馏所需）
-  - [ ] injected：history.pushState/replaceState monkey-patch（SPA 导航）
-  - [ ] popup：录制控制 UI
-- [ ] **element_attrs 采集**：白名单属性提取（id/name/type/placeholder/aria-label/role 等）
-- [ ] **page_context 采集**：阶段性 DOM 快照（`element_tree_text` 格式，对齐 P0.5 已验证的输入）
-- [ ] selector 多级 fallback（`data-testid` → `aria-label` → `name` → `[role]` → xpath）
-- [ ] Dexie (IndexedDB) 存储（MV3 SW 回收不丢事件，借鉴 BrowserBC）
-- [ ] **P1 已验证的 skill 注入机制作为采集端验收标准**：录一个站点 → 蒸馏 → 注入 agent → 探索成功率达标（P1 已证明蒸馏精简版达 100% 成功）
+### 已完成
+
+- [x] WXT 扩展真实实现（`extension/`：WXT + React + TypeScript，MV3）
+  - [x] background SW + recorder 状态机（MV3 SW 回收恢复，借鉴 BrowserBC）
+  - [x] content script：DOM 事件采集 + 实时去噪（input 合并 / 孤立修饰键 / 重复点击 / 同目标连续输入）
+  - [x] injected：history.pushState/replaceState monkey-patch（SPA 导航）
+  - [x] popup：录制控制 UI
+- [x] **element_attrs 采集**：白名单属性提取（id/name/type/placeholder/aria-label/aria-labelledby/role 等）
+- [x] **page_context 采集**：阶段性 DOM 快照（`element_tree_text` 格式，对齐 P0.5 已验证的输入）
+- [x] selector 多级 fallback（`data-testid` → `aria-label` → `name` → `[role]` → xpath）
+- [x] Dexie (IndexedDB) 存储（MV3 SW 回收不丢事件，借鉴 BrowserBC）
+- [x] **采集后端**（`treeforge/capture/`）：
+  - [x] CdpSession：轻量 CDP 包装，委托 dom-snapshot.build_dom_state 采快照
+  - [x] Collector：收扩展事件 → 实时采快照 → 判 stage（实时采集原则：趁 DOM 活的）
+  - [x] StageTracker：URL/DOM Jaccard 相似度（0.33 阈值）+ 导航信号 + 语义化命名（DOM 特征检测）
+  - [x] tab 跟随：envelope 带 tab_id → CdpSession.attach_tab 精确重 attach
+  - [x] distill_schema 双端契约（Python ↔ TS）：RAW_ATTR_KEYS / ELEMENT_ATTR_WHITELIST
+  - [x] export：trace.json + snapshots/ 双文件，原子写（os.replace）
+  - [x] session 可循环（start 重建 StageTracker + stop 清空，支持连续多次录制）
+- [x] 通用 CaptureEnvelope + scenario 路由（distill/replay），4 端点协议对齐扩展
+
+**P2 端到端调试**（6 bug 修复，见 `docs/p2/debug-retrospective.md`）：URL/DOM host 提取、
+stage 切碎（阈值 + 累积漂移）、CdpSession target 选择、input 去噪、contenteditable 语义等。
 
 ---
 
-## P3 —— 接入层（原 P1，缓做）
+
+## P3 —— 接入层（已完成 ✅）
 
 **目标**：扩展 → server → 蒸馏全自动，人录一遍就出 skill。
 
-> **缓做理由**：接入层是工程优化（自动化、可恢复上传、进度轮询），不是核心价值。
-> P1（验证）+ P2（采集）用 CLI 跑通蒸馏链路已足够。
-> 接入层等闭环验证成立、采集层稳定后再做，避免过早优化。
+> 接入层是工程优化（常驻服务、蒸馏可 HTTP 触发、进度轮询）。P1（验证）+ P2（采集）用 CLI
+> 跑通蒸馏链路后，P3 把「一次性 capture 命令」升级为 FastAPI 常驻服务。详见 `docs/p3/serve-plan.md`。
 
-- [ ] FastAPI 单文件 server（`server/server.py`）
-  - [ ] 分块上传协议（init/finalize/status 四端点）
-  - [ ] 可恢复上传（sha256 校验 + 幂等 upload_id）
-  - [ ] 异步蒸馏（全局 `_PIPELINE_LOCK`）
-  - [ ] 进度轮询（内存 dict + harness.progress 注入）
+### 已完成
+
+- [x] FastAPI 常驻服务（`server/server.py`：`create_app()` app 工厂）
+  - [x] 采集 router：`POST /start` `/ingest` `/stop` + `GET /health`（协议与 aiohttp backend 逐字一致，扩展零改动）
+  - [x] 蒸馏 router：`POST /api/distill`（后台任务）+ `GET /api/distill/{id}` + `GET /api/jobs`
+  - [x] 配置 router：`GET/POST /api/config`（白名单 key 原子写 .env）
+  - [x] 状态/产物 router：`GET /api/status` `/api/captures` `/api/skills`
+  - [x] 控制面板 SPA 托管（StaticFiles，目录不存在优雅跳过）
+- [x] 蒸馏后台任务（`server/distill_api.py`）
+  - [x] 提炼 `run_distill_pipeline`（去 CLI 味，返 DistillResult dataclass）
+  - [x] 异步蒸馏（全局 `_PIPELINE_LOCK` 串行化 + `asyncio.to_thread` 包同步 LLM 不阻塞事件循环）
+  - [x] 进度轮询（内存 job dict + `harness.progress.set_reporter` 注入）
+- [x] `treeforge serve` 子命令（uvicorn 阻塞跑，Ctrl+C 由 uvicorn 管，无 Windows bug）
+- [x] Chrome 缺席策略：照常启动（蒸馏/配置/状态可用），`/start` 时 Chrome 没连返 503
+- [x] session 可循环：`/stop` 不退出进程，下次 `/start` 重建 session（serve 常驻）
+- [x] cdp_session.stop() 清轮转缓存（跨 session 不污染新元素检测）
+- [x] 控制面板 SPA（`server/app/dist/index.html`：纯 HTML+fetch，状态卡 / 触发蒸馏表单 / 配置展示）
+- [x] `_run_distill` 提炼为 CLI 薄包装（与 HTTP 后台任务共用 `run_distill_pipeline`）
+- [x] 端到端冒烟：起 serve → curl /health → POST /api/distill → 轮询到 done，三件套产出
+
+**P3 决策**（已确认）：① 新增 `serve`，保留 `capture`（一次性命令给无 UI 脚本场景）② 换 FastAPI
+③ P3 实施（不提前到 P2）。验证：183 测试全过（含 26 个 serve 测试），ruff clean。
+
+### 延后（P3 未做，列入 P3.5 / 后续）
+
+以下原计划项 P3 未实现，挪到后续阶段：
 - [ ] 接入层 Windows 适配（msvcrt 文件锁 / `_ResilientStream` / 双写日志）
 - [ ] 完整 redact（CVV / OTP / account token 正则，对齐 Browser-BC）
 - [ ] distiller 增量蒸馏真接通（registry 持久化旧 SkillCard，8000 字符截断塞 prompt）
 - [ ] host 级增量蒸馏（P0.5 host 级蒸馏后，增量逻辑改为 host 级）
 
+> **注**：原 P3 设想的「分块上传协议（init/finalize/status）+ sha256 可恢复上传」最终未采用——
+> serve 走的是直接 POST CaptureEnvelope（采集）+ HTTP 触发蒸馏（读已落盘 trace），不需要分块上传。
+> 这条从路线图移除（采集层扩展直连后端 POST 事件，无大文件上传场景）。
+
 ---
+
+## P3.5 —— 控制面板优化与配置增强（进行中 ⏳）
+
+**目标**：把 P3 落地的最小 SPA（纯 HTML+fetch 骨架）打磨成可日常使用的运维台，并补齐配置管理。
+
+> P3 只做了最小可用 SPA（录制状态卡 / 触发蒸馏表单 / 配置展示只读）。P3.5 聚焦「能真正
+> 替代 CLI 日常使用」的体验闭环，不引入前端框架（保持纯 HTML+fetch 哲学，与 P3 一致）。
+
+### 计划
+
+- [ ] **控制面板细节优化**
+  - [ ] 蒸馏任务列表视图（历史 job + 状态/耗时/产物，替代单纯轮询单个 job）
+  - [ ] 蒸馏进度条可视化（phase/current/total 实时渲染，失败原因高亮）
+  - [ ] 产物浏览树（captures/ 与 skills/ 下钻：点 host → 看 md 文件 → 预览内容）
+  - [ ] 录制状态实时刷新（已有 3s 轮询，加 session_id / 已采事件数 / 当前 stage 展示）
+  - [ ] 触发蒸馏时支持「从最近一次 capture 选 trace」（下拉，免手填路径）
+  - [ ] 错误/通知反馈（toast 或内联，替代 alert）
+  - [ ] 响应式与暗色模式打磨（现有 prefers-color-scheme 基础上完善）
+- [ ] **配置功能增强**
+  - [ ] 配置编辑表单（当前 `POST /api/config` 只支持白名单 key，UI 加表单校验 + 提交）
+  - [ ] LLM 连通性自检（新增 `GET /api/config/check`：实际调一次最小 LLM 请求验证 key/base/model 可用）
+  - [ ] 配置项分组（模型参数 / 管线参数 / 路径，对齐 `config.describe()` 字段）
+  - [ ] 配置变更后蒸馏产物的输出目录可视化（改 OUTPUT_DIR 后 skills 列表跟着变）
+- [ ] **配套 API 补充**
+  - [ ] `GET /api/captures/{name}`：单个 capture 详情（事件数 / stages / trace 路径）
+  - [ ] `GET /api/skills/{host}/files`：列某 host 下的 md 文件 + 内容预览
+  - [ ] `GET /api/status` 扩展：当前 session 的 session_id / 事件数 / stage
+
+**验收**：浏览器访问控制面板能完成「录一段 → 看状态 → 选 trace → 触发蒸馏 → 看进度 → 浏览产物」
+全流程，无需回到命令行；配置改动有表单 + 自检反馈。
+
+---
+
 
 ## P4 —— 检索层（可选）
 
@@ -258,8 +329,9 @@ ls ./data/skills/domain-skills/bilibili.com/
 | P0 | CLI 跑通 + skill 输出（最小闭环） | ✅ | 完成 |
 | **P0.5** | **skill 形态对齐（element_attrs/page_context/stage）+ 精简重构（host 级三件套）** | ✅ | **A/B 失败后诊断修正，73 测试** |
 | **P1** | **A/B 验证 skill 能否提升 agent 准确率** | ✅ | **蒸馏精简版 100% 达手写水平，核心闭环成立** |
-| P2 | MV3 扩展录制（精度对准 LLM 可读，含 element_attrs/page_context） | ⏳ | P1 已验证，可投入 |
-| P3 | FastAPI 接入层 | ⏳ | 缓做，工程优化 |
+| **P2** | **MV3 扩展录制（精度对准 LLM 可读，含 element_attrs/page_context + 采集后端）** | ✅ | **采集层 + 后端全链路打通，端到端调试 6 bug 修复** |
+| **P3** | **FastAPI 常驻服务（采集 + 蒸馏 API + 控制面板 SPA）** | ✅ | **serve 子命令，183 测试（含 26 serve），端到端冒烟通过** |
+| **P3.5** | **控制面板优化与配置增强** | ⏳ | **P3 最小 SPA 打磨成可日常使用的运维台** |
 | P4 | MCP 检索（可选） | ⏳ | 学习用，不影响主链路 |
 
 ---
@@ -288,3 +360,17 @@ ls ./data/skills/domain-skills/bilibili.com/
 核心逻辑：先用最小代价（手写 skill + 改注入）验证闭环成立，再投入最重的采集层。
 **P1 已验证闭环成立**（蒸馏精简版 100% 成功、零异常，达手写精简版水平）——
 P2 采集层核心风险解除，可投入最重的采集层开发。
+
+### 2026-08-01 更新（P2/P3 完成，新增 P3.5）
+
+| 项 | 原 | 现 | 理由 |
+|---|---|---|---|
+| P2 状态 | ⏳ 未开始 | **✅ 完成** | 采集层（MV3 扩展 + CdpSession + Collector + stage）全链路打通，端到端调试 6 bug 修复 |
+| P3 状态 | ⏳ 缓做 | **✅ 完成** | FastAPI 常驻服务（serve）落地：采集 router + 蒸馏后台任务 + 配置/状态 API + 控制面板 SPA |
+| P3 上传协议 | 分块上传（init/finalize/status + sha256 可恢复） | **直接 POST envelope**（移除分块上传） | 采集层扩展直连后端 POST 事件，无大文件上传场景；蒸馏读已落盘 trace |
+| 蒸馏管线 | CLI 专用 `_run_distill` | **提炼 `run_distill_pipeline`，CLI/HTTP 共用** | serve 蒸馏 router 与 CLI distill 共用同一管线（DistillResult dataclass） |
+| 接入层 Windows 适配 / 完整 redact / 增量蒸馏 | P3 范围 | **延后到后续** | P3 聚焦常驻服务骨架，这些工程加固项后做 |
+| **P3.5** | — | **新增（控制面板优化 + 配置增强）** | P3 只做了最小 SPA，P3.5 把它打磨成可日常使用的运维台（产物浏览树 / 配置编辑表单 / LLM 自检等） |
+
+核心逻辑：P0→P3 主链路全部打通（蒸馏 → 采集 → 常驻服务），v0.1.0 已发布。
+P3.5 聚焦控制面板体验闭环，让浏览器能完成「录一段 → 蒸馏 → 浏览产物」全流程，无需回到命令行。
