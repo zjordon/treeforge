@@ -10,8 +10,9 @@
  * MV3 友好：用 fetch POST（非 WebSocket 长连接），SW 按需唤醒。
  */
 
-import { postIngest, postStart, postStop } from "../shared/backend";
+import { postIngest, postSignal, postStart, postStop } from "../shared/backend";
 import type { CaptureEnvelope } from "../shared/envelope";
+import type { DistillSignal } from "../shared/distill-schema";
 import {
   INITIAL_STATE,
   STORAGE_KEY,
@@ -116,28 +117,51 @@ export default defineBackground(() => {
     console.info("[treeforge] recording stopped");
   }
 
-  // ---- 采集事件（来自 content）----
+  // ---- 采集事件 / 副作用信号（来自 content）----
 
   chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    if (msg?.type !== "capture-event") return;
-    (async () => {
-      const state = await getState();
-      if (!state.recording) return; // 未录制忽略
-      const envelope = msg.envelope as CaptureEnvelope;
-      // 确保 envelope 有 session_id（content 可能没填）
-      if (!envelope.session_id) envelope.session_id = state.sessionId || "";
-      // 注入来源 tab id：后端据此精确 attach CDP target（解决多 tab 误连）。
-      // content script 无法访问 chrome.tabs，只能由 background 从 sender.tab.id 取。
-      if (sender.tab?.id) envelope.tab_id = sender.tab.id;
-      try {
-        await postIngest(state.endpoint, envelope);
-        await setState({ eventCount: state.eventCount + 1 });
-      } catch (e) {
-        console.error("[treeforge] ingest error:", e);
-      }
-    })();
-    sendResponse({ ok: true });
-    return false; // 同步响应
+    // 采集事件（POST /ingest）
+    if (msg?.type === "capture-event") {
+      (async () => {
+        const state = await getState();
+        if (!state.recording) return; // 未录制忽略
+        const envelope = msg.envelope as CaptureEnvelope;
+        // 确保 envelope 有 session_id（content 可能没填）
+        if (!envelope.session_id) envelope.session_id = state.sessionId || "";
+        // 注入来源 tab id：后端据此精确 attach CDP target（解决多 tab 误连）。
+        // content script 无法访问 chrome.tabs，只能由 background 从 sender.tab.id 取。
+        if (sender.tab?.id) envelope.tab_id = sender.tab.id;
+        try {
+          await postIngest(state.endpoint, envelope);
+          await setState({ eventCount: state.eventCount + 1 });
+        } catch (e) {
+          console.error("[treeforge] ingest error:", e);
+        }
+      })();
+      sendResponse({ ok: true });
+      return false; // 同步响应
+    }
+
+    // 副作用信号（POST /signal）—— P3.6 迁自 TreeWalker
+    if (msg?.type === "capture-signal") {
+      (async () => {
+        const state = await getState();
+        if (!state.recording) return; // 未录制忽略
+        const { signal, sessionId } = msg as {
+          signal: DistillSignal;
+          sessionId: string;
+        };
+        try {
+          await postSignal(state.endpoint, state.sessionId || sessionId, signal);
+        } catch (e) {
+          console.error("[treeforge] signal error:", e);
+        }
+      })();
+      sendResponse({ ok: true });
+      return false; // 同步响应
+    }
+
+    return false; // 非采集消息，不处理
   });
 
   // SW 启动时同步状态（MV3 SW 被唤醒后恢复）

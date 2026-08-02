@@ -112,6 +112,11 @@ def _normalize_event(raw: dict[str, Any], fallback_idx: int) -> TraceEvent:
     stage = raw.get("stage")
     stage = str(stage) if stage is not None else None
 
+    # signals（P3.6）：副作用信号（modal/dropdown 打开），原样读，缺则空 list。
+    # distiller 据此写 quirks.md；采集层 attach 到事件，老 trace 无此字段。
+    signals_raw = raw.get("signals")
+    signals = list(signals_raw) if isinstance(signals_raw, list) else []
+
     return TraceEvent(
         type=etype,
         target=str(target) if target is not None else None,
@@ -122,6 +127,7 @@ def _normalize_event(raw: dict[str, Any], fallback_idx: int) -> TraceEvent:
         value=value,
         key=str(key) if key is not None else None,
         timestamp=int(ts) if ts is not None else fallback_idx,
+        signals=signals,
     )
 
 

@@ -48,9 +48,11 @@ def _make_mock_collector():
 
 @pytest.fixture
 def client():
-    """带 mock collector 的 TestClient。"""
-    app, _ = _make_app()
+    """带 mock collector 的 TestClient。collector 挂到 c._collector 便于断言调用。"""
+    app, collector = _make_app()
+    collector.attach_signal = AsyncMock(return_value=True)
     with TestClient(app) as c:
+        c._collector = collector  # type: ignore[attr-defined]
         yield c
 
 
@@ -136,6 +138,53 @@ def test_stop_returns_collector_result(client):
     assert data["ok"] is True
     assert data["result"]["capture_dir"] == "/tmp/captures/test/session-1"
     assert data["result"]["trace_path"] == "/tmp/captures/test/session-1/trace.json"
+
+
+# ---------------------------------------------------------------------------
+# /signal 端点（P3.6 副作用信号，迁自 TreeWalker）
+# ---------------------------------------------------------------------------
+
+
+def test_signal_attaches_to_collector(client):
+    """POST /signal → 调 collector.attach_signal，返 {ok, attached}。"""
+    client._collector.attach_signal.return_value = True  # type: ignore[attr-defined]
+    resp = client.post(
+        "/signal",
+        json={
+            "session_id": "test-session-1",
+            "payload": {"type": "modal_opened", "selector": "div.ant-modal", "ts": 1700000000000},
+        },
+    )
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["ok"] is True
+    assert data["attached"] is True
+    # 确认 collector.attach_signal 被调，payload 透传
+    client._collector.attach_signal.assert_called_once()  # type: ignore[attr-defined]
+    called_payload = client._collector.attach_signal.call_args[0][0]  # type: ignore[attr-defined]
+    assert called_payload["type"] == "modal_opened"
+
+
+def test_signal_no_active_session_returns_400():
+    """POST /signal 但 collector 未注入（无活跃 session）→ 400。"""
+    app = create_app()
+    # 不注入 collector（app.state.collector 仍是 None）
+    with TestClient(app) as c:
+        resp = c.post("/signal", json={"session_id": "s1", "payload": {"type": "modal_opened"}})
+    assert resp.status_code == 400
+    assert resp.json()["ok"] is False
+
+
+def test_signal_failure_returns_500():
+    """collector.attach_signal 抛错 → /signal 返 500。"""
+    app = create_app()
+    collector = _make_mock_collector()
+    collector.attach_signal.side_effect = RuntimeError("boom")
+    app.state.collector = collector
+    with TestClient(app) as c:
+        resp = c.post("/signal", json={"session_id": "s1", "payload": {"type": "modal_opened"}})
+    assert resp.status_code == 500
+    assert "boom" in resp.json()["error"]
 
 
 # ---------------------------------------------------------------------------

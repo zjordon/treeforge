@@ -59,6 +59,13 @@ class CollectorLike(Protocol):
         """处理一个采集信封（按 scenario 已路由）。"""
         ...
 
+    async def attach_signal(self, payload: dict[str, Any]) -> bool:
+        """把副作用信号（modal/dropdown 打开）attach 到最近 capture event（P3.6）。
+
+        返回是否成功 attach。signal 不进 events 列表，附到最近事件作 quirks 原料。
+        """
+        ...
+
     async def stop(self) -> Any:
         """停止采集，返回产物信息（如输出路径）。"""
         ...
@@ -92,12 +99,14 @@ class CaptureBackend:
         端点（对齐扩展 backend.ts 调用 + 通用 /ingest）：
         - POST /start { scenario, config }    开始采集
         - POST /ingest { CaptureEnvelope }    通用事件入口（按 envelope.scenario 路由）
+        - POST /signal { session_id, payload } 副作用信号（modal/dropdown，P3.6）
         - POST /stop                          停止采集，返产物
         - GET  /health                        健康检查
         """
         app = web.Application()
         app.router.add_post("/start", self._handle_start)
         app.router.add_post("/ingest", self._handle_ingest)
+        app.router.add_post("/signal", self._handle_signal)
         app.router.add_post("/stop", self._handle_stop)
         app.router.add_get("/health", self._handle_health)
         return app
@@ -157,6 +166,21 @@ class CaptureBackend:
             return web.json_response({"ok": True})
         except Exception as e:  # noqa: BLE001
             logger.exception("Ingest failed")
+            return web.json_response({"ok": False, "error": str(e)}, status=500)
+
+    async def _handle_signal(self, request: web.Request) -> web.Response:
+        """POST /signal { session_id, payload: DistillSignal } → { ok, attached }
+
+        P3.6 迁自 TreeWalker。把副作用信号（modal/dropdown 打开）attach 到最近
+        capture event，作为 distiller 写 quirks.md 的原料。signal 不进 events 列表。
+        """
+        body = await request.json()
+        payload = body.get("payload") or {}
+        try:
+            attached = await self.collector.attach_signal(payload)
+            return web.json_response({"ok": True, "attached": attached})
+        except Exception as e:  # noqa: BLE001
+            logger.exception("Signal attach failed")
             return web.json_response({"ok": False, "error": str(e)}, status=500)
 
     async def _handle_stop(self, request: web.Request) -> web.Response:

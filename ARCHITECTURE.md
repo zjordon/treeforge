@@ -54,7 +54,7 @@ P0 用 `CLI` 替代接入层：`uv run treeforge distill <trace.json>` 直接读
 | **distill 产物形态** | 单 `SKILL.md`（**去站点化**通用 SOP） | **多文件站点特定知识卡**（4 文件） |
 | **distill prompt 取向** | "Abstract away site-specific selectors and IDs" | **反过来**："Capture site-specific selectors" |
 | **消费方式** | MCP stdio 检索（LLM-as-ranker） | **文件注入**到 `domain-skills/<host>/`（零运行时依赖） |
-| **检索层** | 两层召回（query_top_k + synthesize_playbook） | P4 才做（TreeWalker 文件注入不需要） |
+| **检索层** | 两层召回（query_top_k + synthesize_playbook） | **明确不做**（TreeWalker 文件注入已够，无需 MCP 检索） |
 | **接入层** | FastAPI 单文件 + 分块上传 | P1 才做（P0 用 CLI） |
 | **Python 数据模型** | `@dataclass` | **Pydantic v2** |
 | **LLM 客户端** | 标准库 urllib，双协议探测 | **同**（复刻 + 双协议 `/anthropic` 修复） |
@@ -140,7 +140,7 @@ treeforge/
 │   ├── classifier.py          # ③ CLASSIFY（串行增量命名）
 │   ├── bucketer.py            # ④ BUCKET
 │   ├── distiller.py           # ⑤ DISTILL ★核心 prompt
-│   ├── registry.py            # 检索（P4，本期空实现）
+│   ├── registry.py            # 检索层占位（明确不做，残留空实现）
 │   ├── install.py             # 原子写（os.replace）
 │   ├── llm.py                 # urllib 双协议客户端
 │   ├── config.py              # .env 配置

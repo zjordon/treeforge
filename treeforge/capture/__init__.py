@@ -21,6 +21,9 @@ from treeforge.capture.cdp_session import CaptureState, CdpSession
 from treeforge.capture.collector import CapturedEvent, CaptureSession, Collector
 from treeforge.capture.distill_schema import (
     DistillEventPayload,
+    DistillSignal,
+    SignalKind,
+    UploadCtx,
     extract_element_attrs,
     payload_to_trace_fields,
 )
@@ -45,6 +48,9 @@ __all__ = [
     "dom_similarity",
     # distill schema（collector + 扩展共同契约）
     "DistillEventPayload",
+    "DistillSignal",
+    "SignalKind",
+    "UploadCtx",
     "extract_element_attrs",
     "payload_to_trace_fields",
 ]

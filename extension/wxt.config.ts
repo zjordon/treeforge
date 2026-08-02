@@ -20,6 +20,15 @@ export default defineConfig({
       "http://*/*",
       "https://*/*",
     ],
+    // P3.6：injected.js（MAIN-world 脚本）需 web_accessible_resources 才能用 <script src>
+    // 注入到页面主世界（hook history.pushState + addEventListener）。content script 在
+    // ISOLATED world 无法覆盖页面 history/EventTarget，必须注入到 MAIN world。
+    web_accessible_resources: [
+      {
+        resources: ["injected.js"],
+        matches: ["http://*/*", "https://*/*"],
+      },
+    ],
   },
   srcDir: "src",
   outDir: ".output",

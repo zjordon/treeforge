@@ -193,6 +193,87 @@ def test_payload_unknown_type_passthrough():
 
 
 # ---------------------------------------------------------------------------
+# P3.6 扩词：select_dropdown / upload_file / send_keys + upload_ctx 折叠
+# ---------------------------------------------------------------------------
+
+
+def test_payload_select_dropdown_passes_value():
+    """select_dropdown：选中项 value 透传，raw_attrs 提炼成 element_attrs。"""
+    payload = {
+        "type": "select_dropdown",
+        "value": "公开",
+        "raw_attrs": {"tag": "select", "id": "privacy", "name": "privacy"},
+        "target": "隐私设置",
+    }
+    fields = payload_to_trace_fields(payload)
+    assert fields["type"] == "select_dropdown"
+    assert fields["value"] == "公开"
+    assert fields["element_attrs"]["tag"] == "select"
+    assert fields["element_attrs"]["id"] == "privacy"
+    assert fields["target"] == "隐私设置"
+
+
+def test_payload_send_keys_passes_combo_key():
+    """send_keys：组合键 key 透传（如 Control+S / Enter / F5）。"""
+    payload = {"type": "send_keys", "key": "Control+S"}
+    fields = payload_to_trace_fields(payload)
+    assert fields["type"] == "send_keys"
+    assert fields["key"] == "Control+S"
+
+
+def test_payload_upload_file_value_is_filename():
+    """upload_file：value = 文件名，accept 进 element_attrs，upload_ctx 折叠进 target。"""
+    payload = {
+        "type": "upload_file",
+        "value": "cover.png",
+        "raw_attrs": {"tag": "input", "type": "file", "accept": "image/*"},
+        "target": "封面上传",
+        "upload_ctx": {"label_text": "封面图", "in_dialog": True},
+    }
+    fields = payload_to_trace_fields(payload)
+    assert fields["type"] == "upload_file"
+    assert fields["value"] == "cover.png"
+    assert fields["element_attrs"]["accept"] == "image/*"
+    # upload_ctx 折叠进 target：label_text + 在弹窗内 提示
+    assert "封面图" in fields["target"]
+    assert "弹窗" in fields["target"]
+
+
+def test_payload_upload_file_no_ctx_keeps_target():
+    """upload_file 无 upload_ctx：target 原样保留（不强制折叠）。"""
+    payload = {
+        "type": "upload_file",
+        "value": "a.jpg",
+        "raw_attrs": {"tag": "input", "type": "file"},
+        "target": "上传文件",
+    }
+    fields = payload_to_trace_fields(payload)
+    assert fields["target"] == "上传文件"
+
+
+def test_payload_upload_ctx_region_text_fallback():
+    """upload_ctx：label/aria 都空时，region_text 兜底折叠进 target。"""
+    payload = {
+        "type": "upload_file",
+        "value": "v.mp4",
+        "raw_attrs": {"tag": "input", "type": "file"},
+        "upload_ctx": {"region_text": "点击或拖拽视频到此处上传"},
+    }
+    fields = payload_to_trace_fields(payload)
+    # 无 target 时用「文件上传」兜底 + region_text 折叠
+    assert "点击或拖拽视频到此处上传" in fields["target"]
+
+
+def test_data_tw_jsclick_in_whitelist():
+    """P3.6：data-tw-jsclick（MAIN-world addEventListener hook 标记）应在双端白名单里。"""
+    assert "data-tw-jsclick" in RAW_ATTR_KEYS
+    assert "data-tw-jsclick" in ELEMENT_ATTR_WHITELIST
+    # extract_element_attrs 应保留它
+    attrs = extract_element_attrs({"tag": "div", "data-tw-jsclick": "1"})
+    assert attrs.get("data-tw-jsclick") == "1"
+
+
+# ---------------------------------------------------------------------------
 # 契约一致性（schema 常量）
 # ---------------------------------------------------------------------------
 

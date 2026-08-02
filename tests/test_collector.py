@@ -599,3 +599,90 @@ async def test_collector_host_filled_on_real_page(tmp_path):
     )
     assert collector.session.host == "member.bilibili.com"  # host 兜底填充
     await collector.stop()
+
+
+# ---------------------------------------------------------------------------
+# P3.6：attach_signal（副作用信号 → attach 到最近 capture event）
+# ---------------------------------------------------------------------------
+
+
+async def test_attach_signal_appends_to_recent_event(tmp_path):
+    """attach_signal 把 modal_opened 信号附到最近 capture event（2s 窗口内）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    await collector.ingest(
+        {
+            "scenario": "distill",
+            "session_id": "t",
+            "ts": 1000,
+            "payload": {"type": "click", "raw_attrs": {"tag": "button"}},
+        }
+    )
+
+    attached = await collector.attach_signal(
+        {"type": "modal_opened", "selector": "div.ant-modal", "ts": 1500}
+    )
+    assert attached is True
+    assert len(collector.session.events) == 1
+    sigs = collector.session.events[-1].signals
+    assert len(sigs) == 1
+    assert sigs[0]["type"] == "modal_opened"
+    assert sigs[0]["selector"] == "div.ant-modal"
+    await collector.stop()
+
+
+async def test_attach_signal_rejects_unknown_type(tmp_path):
+    """未知信号类型（如 navigation）→ 不 attach（distill 只收 modal/dropdown）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    await collector.ingest({"payload": {"type": "click"}, "ts": 0})
+
+    attached = await collector.attach_signal({"type": "navigation", "selector": "x"})
+    assert attached is False
+    assert collector.session.events[-1].signals == []
+    await collector.stop()
+
+
+async def test_attach_signal_outside_window_not_attached(tmp_path):
+    """信号 ts 距最近事件超 2s → 不 attach（动作引发副作用的合理窗口外）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    await collector.ingest({"payload": {"type": "click"}, "ts": 1000})
+
+    attached = await collector.attach_signal(
+        {"type": "dropdown_opened", "selector": "ul", "ts": 5000}  # 4s 后，超 2s 窗口
+    )
+    assert attached is False
+    await collector.stop()
+
+
+async def test_attach_signal_no_events_returns_false(tmp_path):
+    """无 capture event 时 attach_signal 返 False（没事件可附）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    attached = await collector.attach_signal({"type": "modal_opened", "ts": 0})
+    assert attached is False
+    await collector.stop()
+
+
+async def test_signals_exported_to_trace_json(tmp_path):
+    """信号 attach 后，stop → export 落进 trace.json 的 event.signals 字段。"""
+    import json
+
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    await collector.ingest({"payload": {"type": "click"}, "ts": 1000})
+    await collector.attach_signal({"type": "modal_opened", "selector": "div.modal", "ts": 1200})
+    result = await collector.stop()
+
+    trace_path = tmp_path / result["session_id"] / "trace.json"
+    trace = json.loads(trace_path.read_text(encoding="utf-8"))
+    assert len(trace["events"]) == 1
+    assert trace["events"][0]["signals"] == [
+        {"type": "modal_opened", "selector": "div.modal", "ts": 1200}
+    ]

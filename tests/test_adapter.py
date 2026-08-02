@@ -166,3 +166,46 @@ def test_normalize_event_stage_non_string_coerced():
     trace = adapt(payload, source="test")
     # 数字被 str() 规整
     assert trace.events[0].stage == "123"
+
+
+# ---------------------------------------------------------------------------
+# P3.6：signals 透传（采集层 attach → TraceEvent.signals → distiller）
+# ---------------------------------------------------------------------------
+
+
+def test_normalize_event_reads_signals():
+    """带 signals 的 event（采集层 attach 的 modal/dropdown）应透传到 TraceEvent。"""
+    payload = {
+        "host": "x.com",
+        "events": [
+            {
+                "type": "click",
+                "timestamp": 0,
+                "signals": [{"type": "modal_opened", "selector": "div.ant-modal", "ts": 1200}],
+            },
+        ],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.events[0].signals == [
+        {"type": "modal_opened", "selector": "div.ant-modal", "ts": 1200}
+    ]
+
+
+def test_normalize_event_signals_defaults_empty():
+    """老 event（无 signals 字段）应为空 list，不报错。"""
+    payload = {
+        "host": "x.com",
+        "events": [{"type": "click", "selector": ".btn", "timestamp": 0}],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.events[0].signals == []
+
+
+def test_normalize_event_signals_non_list_defaults_empty():
+    """signals 是非 list（异常输入）时应规整为空 list。"""
+    payload = {
+        "host": "x.com",
+        "events": [{"type": "click", "timestamp": 0, "signals": "oops"}],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.events[0].signals == []

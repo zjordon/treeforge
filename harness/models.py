@@ -44,6 +44,15 @@ class TraceEvent(BaseModel):
     value: str | None = Field(default=None, description="input/change 的值（已脱敏）")
     key: str | None = Field(default=None, description="keydown/keyup 的键名")
     timestamp: int = Field(default=0, description="毫秒时间戳")
+    signals: list = Field(
+        default_factory=list,
+        description=(
+            "副作用信号（P3.6 迁自 TreeWalker）：动作引发的 modal/dropdown 打开。"
+            "每条 {type:'modal_opened'|'dropdown_opened', selector, ts}。"
+            "distiller 据此写 quirks.md（如「点这个按钮会弹出 modal」）。"
+            "采集层 attach 到最近事件；老 trace 无此字段（默认空 list）。"
+        ),
+    )
 
 
 class Trace(BaseModel):

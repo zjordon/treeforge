@@ -294,26 +294,93 @@ stage 切碎（阈值 + 累积漂移）、CdpSession target 选择、input 去�
 
 ---
 
+## P3.6 —— 录制功能扩展（迁移自 TreeWalker，作为现有采集的补充，⏳ 计划中）
 
-## P4 —— 检索层（可选）
+**目标**：把 TreeWalker 扩展端的 DOM 事件采集能力作为「补充」迁入 TreeForge，扩宽 distill
+采集的事件词汇（select / upload / send_keys / SPA 导航 / modal·dropdown 副作用），让一些
+「现有 distill 策略采不全」的简单操作也能录。**不动**现有 distill 采集主链路，**不迁**
+TreeWalker replay 专有的指纹 / 定位 / 重放格式重机器。
 
-**目标**：MCP stdio 检索。
+> 由来：P3.5 收尾后，TreeForge 主链路已完成。但实测 distill 采集的事件词汇偏窄
+> （click / input 仅 Enter 的 keydown / scroll；navigate 与 change 声明了没接线），一些操作
+> （下拉选择 / 文件上传 / 快捷键 / SPA 内跳转 / 弹窗副作用）采不到，影响 quirks.md 原料
+> 完整度。TreeWalker 同源的扩展端正好覆盖这些场景，作「补充」迁入——同团队、同采集哲学
+> （扩展采 DOM 事件 + 后端采 CDP 快照），但服务不同产物（trace.json 喂蒸馏 vs
+> AgentHistoryList 喂重放）。
 
-> **明确不做**：TreeWalker 用文件注入（P1 落地的机制）不需要 MCP 检索。
-> 此阶段仅作学习 BrowserBC 检索层用，不影响主链路。
+### 定位与复用边界（避免两份相似代码）
 
-- [ ] registry.json 持久化
-- [ ] `query_top_k`：LLM-as-ranker 语义召回（无 embedding）
-- [ ] `synthesize_playbook`：LLM 编排多 skill playbook
-- [ ] MCP stdio server（`treeforge mcp-skill` 子命令）
-- [ ] 两层召回路由（单强匹配直返 / 多匹配 playbook / degrade 链）
+迁移只取 TreeForge 缺的四件能力（事件词汇广度 / SPA 导航 hook / JS 点击标记 / 副作用信号），
+**复用** TreeForge 已有的策略模式 / Envelope / Collector / CdpSession / export 全链路。
+精度约束不变——仍对准「LLM 可读」，不追求 CDP 精确匹配，所以 TreeWalker 的指纹 / 定位那套
+搬过来反而过度工程。
+
+| TreeWalker 文件 | TreeForge 现状 | 处置 |
+|---|---|---|
+| `capture/action-recorder.ts` | `core/recorder-engine.ts` + `strategies/distill/` | **不迁整体**——在 distill 策略内补 click/input 之外的词汇 |
+| `capture/navigation-recorder.ts` | 缺（navigate 接线缺口） | **迁**——补 SPA nav 监听（distill 一直缺这块） |
+| `entrypoints/injected.ts` | 不存在 | **迁**——MAIN-world hook（pushState 拦截 + addEventListener 给 JS 点击监听打标） |
+| `capture/side-effect-observer.ts` | 不存在 | **迁**——modal/dropdown MutationObserver 信号（quirks.md 原料） |
+| `capture/selector.ts` | 已有更简单的白名单 attrs | **不迁**——现有已满足「LLM 可读」精度 |
+| `shared/types.ts` RecorderEvent | `shared/distill-schema.ts` DistillEventPayload | **不另建**——在 distill-schema 内扩 DistillActionType 联合类型 |
+| `shared/backend.ts` postSignal | 4 端点 | **扩展**——加 postSignal（4 端点 → 5 端点） |
+| `recorder/*` 后端全套 | `treeforge/capture/` 已有轻量版 | **不迁**——replay 重机器，与「给 LLM 看」定位冲突 |
+
+### 计划项
+
+- [ ] **S1 扩展端事件词汇补齐**（distill 策略内扩展，不动 RecorderEngine）
+  - [ ] `select_dropdown`：`change` on `<select>` → emit value
+  - [ ] `upload_file`：`change` on `<input type=file>` → emit accept + upload_ctx
+    （label_text / aria-labelledby / region_text / in_dialog + trigger_affordance 语义身份）
+  - [ ] `send_keys`：Ctrl/Alt/Meta 组合键 + 命名非打印键（Enter/Tab/Esc/方向键/F1-12）；
+    纯字符仍走 input
+  - [ ] `input` 对齐 TreeWalker 400ms coalesce（final value only）+ IME-aware
+  - [ ] contentEditable：MutationObserver 读 innerText（替代当前 bilibili 专用启发式）
+- [ ] **S2 SPA 导航 hook + JS 点击标记**（补 distill 的 navigate 接线缺口）
+  - [ ] `injected.ts` MAIN-world 脚本（web_accessible_resources）：wrap
+    `history.pushState`/`replaceState` → 派发 `tf:nav` CustomEvent
+  - [ ] content script 监听 `tf:nav` + `popstate` + `hashchange` → emit navigate
+  - [ ] wrap `EventTarget.prototype.addEventListener` 给 click/mousedown/pointerdown 监听元素
+    打 `data-tw-jsclick` 标记；`findInteractiveAncestor` 加该属性一级回退
+- [ ] **S3 副作用信号**（modal/dropdown MutationObserver）
+  - [ ] `side-effect-observer.ts`：每动作后 1s 窗口 MutationObserver 检测
+    MODAL/DROPDOWN_SELECTOR 新增节点 → emit `modal_opened`/`dropdown_opened`
+  - [ ] 扩展协议加 `POST /signal`（4 端点 → 5 端点），background 转发
+  - [ ] Collector.attach_signal：信号 attach 到最近 2s 内的 capture event
+- [ ] **S4 双端 schema 扩展 + 蒸馏层适配**
+  - [ ] `distill_schema.py` / `distill-schema.ts`：DistillActionType 加
+    `select_dropdown`/`upload_file`/`send_keys`；RAW_ATTR_KEYS 加 `data-tw-jsclick`、
+    select 选项文本、upload 的 `accept`
+  - [ ] `payload_to_trace_fields` 加新事件分支；trace.json 增选填 `signals` 字段
+  - [ ] harness ADAPT 适配新事件类型；distiller prompt 引导 LLM 把 upload_ctx / signal
+    当 quirks 原料
+- [ ] **测试**：扩展端策略单元测试（mock DOM events）+ 后端 schema/collector 测试
+  （mock envelope/signal，不连真 Chrome / 真 LLM）
+
+### 明确不迁（避免重复 / 定位不符）
+
+- ❌ TreeWalker `BrowserSession`（3818 行 CDP action 执行器）—— TreeForge 已有轻量 `CdpSession`
+  （只读不执行），定位相反
+- ❌ `compute_stable_hash` 指纹计算 —— 服务 replay 五级匹配，distill 只要 LLM 可读
+- ❌ `locate_by_ref` 四级定位（TEXT/XPATH/ATTR/RECT）—— 实时定位给 replay，distill 采集时快照
+- ❌ `flatten` → AgentHistoryList —— replay 重放格式，distill 走 trace.json
+- ❌ React popup —— TreeForge popup 已是纯 JS（避免重复前端栈）
+- ❌ `_semantic_clue` 兜底 / `user_pause_seconds` —— replay 专用语义
+
+### 验收
+
+- 现有 distill 采集链路行为不变（回归测试全过，P0-P3.5 的 194 测试不破）
+- 新增词汇在真实站点能采到（select / upload / send_keys / SPA 跳转 / 弹窗），蒸馏产物
+  quirks.md 出现对应条目
+- 扩展端不出现两份相似代码（RecorderEngine / Envelope / popup / background 单一来源）
+- 后端 `/signal` 端点与 `/ingest` 协议风格一致（Pydantic 模型 + 同样的 ok/error 返包）
 
 ---
 
 ## 不做（明确排除）
 
 - **向量化检索** —— Browser-BC 哲学：LLM-as-ranker, no embeddings
-- **DB 持久化** —— 文件系统是唯一持久层（checkpoint.json / registry.json / skills/）
+- **DB 持久化** —— 文件系统是唯一持久层（skills/、captures/ 等运行时产物）
 - **SDK 依赖** —— anthropic / openai SDK 不引入，LLM 走 urllib
 - **subprocess 管线** —— in-process import（避免 PyInstaller frozen-subprocess 坑）
 - **结构化 selector 库** —— skill 给 LLM 看自然语言描述，不做「给 CDP 直接执行」的结构化 selector（精度要求与 record-replay 同档，违背「给 LLM 看」定位）
@@ -332,7 +399,7 @@ stage 切碎（阈值 + 累积漂移）、CdpSession target 选择、input 去�
 | **P2** | **MV3 扩展录制（精度对准 LLM 可读，含 element_attrs/page_context + 采集后端）** | ✅ | **采集层 + 后端全链路打通，端到端调试 6 bug 修复** |
 | **P3** | **FastAPI 常驻服务（采集 + 蒸馏 API + 控制面板 SPA）** | ✅ | **serve 子命令，183 测试（含 26 serve），端到端冒烟通过** |
 | **P3.5** | **控制面板优化与配置增强** | ✅ | **P3 最小 SPA 打磨成可日常使用的运维台，194 测试（+11）** |
-| P4 | MCP 检索（可选） | ⏳ | 学习用，不影响主链路 |
+| **P3.6** | **录制功能扩展（迁移自 TreeWalker，作 distill 采集补充）** | ⏳ | **计划中：扩事件词汇（select/upload/send_keys）+ SPA nav hook + modal/dropdown 信号** |
 
 ---
 
@@ -374,3 +441,24 @@ P2 采集层核心风险解除，可投入最重的采集层开发。
 
 核心逻辑：P0→P3 主链路全部打通（蒸馏 → 采集 → 常驻服务），v0.1.0 已发布。
 P3.5 聚焦控制面板体验闭环，让浏览器能完成「录一段 → 蒸馏 → 浏览产物」全流程，无需回到命令行。
+
+### 2026-08-02 更新（P4 明确不做，路线图收尾）
+
+| 项 | 原 | 现 | 理由 |
+|---|---|---|---|
+| **P4 检索层** | ⏳ 可选（MCP stdio 检索） | **明确不做（从路线图删除）** | TreeWalker 用文件注入（P1 落地）已足够，无需 MCP 检索；曾留作学习 BrowserBC 检索层用，现确认不做 |
+
+核心逻辑：TreeForge 主链路（蒸馏 → 采集 → 常驻服务 → 控制面板）已全部完成。
+检索层（MCP）明确不做——文件注入零运行时依赖，比 MCP stdio 更简单可靠。
+
+### 2026-08-02 更新（新增 P3.6：迁移 TreeWalker 录制能力作 distill 采集补充）
+
+| 项 | 原 | 现 | 理由 |
+|---|---|---|---|
+| distill 采集事件词汇 | click / input(仅 Enter) / scroll / navigate(声明未接线) / change(声明未接线) | **加 select_dropdown / upload_file / send_keys / SPA nav hook / modal·dropdown 信号** | 实测部分简单操作（下拉/上传/快捷键/弹窗）采不到，quirks.md 原料不完整 |
+| TreeWalker 录制扩展 | 不在 TreeForge 范围 | **部分迁入作 P3.6**（只取事件词汇广度 + SPA nav + JS 点击标记 + 副作用信号，复用现有策略/Envelope/Collector） | 同团队同采集哲学，互补不重复；TreeWalker replay 重机器（指纹/定位/flatten）定位相反不迁 |
+| 路线图终点 | P3.5 | **P3.6**（P3.5 是主链路终点，P3.6 是采集能力的横向补充，非新阶段） | 主链路已完成，P3.6 只是补 distill 采集的事件覆盖度 |
+
+核心逻辑：P3.6 不是新阶段，是「distill 采集横向扩词」的补充——把 TreeWalker 同源扩展里
+TreeForge 缺的四件能力迁过来，不重复已有代码，不迁定位相反的 replay 重机器。
+
