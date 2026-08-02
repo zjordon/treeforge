@@ -262,35 +262,35 @@ stage 切碎（阈值 + 累积漂移）、CdpSession target 选择、input 去�
 
 ---
 
-## P3.5 —— 控制面板优化与配置增强（进行中 ⏳）
+## P3.5 —— 控制面板优化与配置增强（已完成 ✅）
 
 **目标**：把 P3 落地的最小 SPA（纯 HTML+fetch 骨架）打磨成可日常使用的运维台，并补齐配置管理。
 
 > P3 只做了最小可用 SPA（录制状态卡 / 触发蒸馏表单 / 配置展示只读）。P3.5 聚焦「能真正
 > 替代 CLI 日常使用」的体验闭环，不引入前端框架（保持纯 HTML+fetch 哲学，与 P3 一致）。
 
-### 计划
+### 已完成
 
-- [ ] **控制面板细节优化**
-  - [ ] 蒸馏任务列表视图（历史 job + 状态/耗时/产物，替代单纯轮询单个 job）
-  - [ ] 蒸馏进度条可视化（phase/current/total 实时渲染，失败原因高亮）
-  - [ ] 产物浏览树（captures/ 与 skills/ 下钻：点 host → 看 md 文件 → 预览内容）
-  - [ ] 录制状态实时刷新（已有 3s 轮询，加 session_id / 已采事件数 / 当前 stage 展示）
-  - [ ] 触发蒸馏时支持「从最近一次 capture 选 trace」（下拉，免手填路径）
-  - [ ] 错误/通知反馈（toast 或内联，替代 alert）
-  - [ ] 响应式与暗色模式打磨（现有 prefers-color-scheme 基础上完善）
-- [ ] **配置功能增强**
-  - [ ] 配置编辑表单（当前 `POST /api/config` 只支持白名单 key，UI 加表单校验 + 提交）
-  - [ ] LLM 连通性自检（新增 `GET /api/config/check`：实际调一次最小 LLM 请求验证 key/base/model 可用）
-  - [ ] 配置项分组（模型参数 / 管线参数 / 路径，对齐 `config.describe()` 字段）
-  - [ ] 配置变更后蒸馏产物的输出目录可视化（改 OUTPUT_DIR 后 skills 列表跟着变）
-- [ ] **配套 API 补充**
-  - [ ] `GET /api/captures/{name}`：单个 capture 详情（事件数 / stages / trace 路径）
-  - [ ] `GET /api/skills/{host}/files`：列某 host 下的 md 文件 + 内容预览
-  - [ ] `GET /api/status` 扩展：当前 session 的 session_id / 事件数 / stage
+- [x] **控制面板细节优化**
+  - [x] 蒸馏任务列表视图（历史 job + 状态/耗时/产物，替代单纯轮询单个 job；耗时从 started_at/finished_at 算，每 4s 刷新）
+  - [x] 蒸馏进度条可视化（current/total 渲染百分比条；total=0 时 indeterminate 脉冲动画；done/failed 行高亮边框）
+  - [x] 产物浏览树（captures/ 与 skills/ 下钻：点 capture → 详情 + 「用此 trace 蒸馏」；点 host → md 文件列表 → 点文件内联预览）
+  - [x] 录制状态实时刷新（3s 轮询，加 session_id / 已采事件数 / 当前 stage / host 展示，录制中状态卡高亮）
+  - [x] 触发蒸馏时支持「从最近一次 capture 选 trace」（下拉 + 浏览时按钮两种入口）
+  - [x] 错误/通知反馈（顶部 toast，success/error/info，3.5s 消失，替换所有 alert）
+  - [x] 响应式与暗色模式打磨（窄屏 flex-wrap、产物树展开不撑破布局、暗色 badge 配色完善）
+- [x] **配置功能增强**
+  - [x] 配置编辑表单（白名单 4 key 可编辑：DISTILL_MODEL/CLASSIFY_MODEL/LLM_BASE/LLM_TIMEOUT，前端校验 LLM_TIMEOUT 正整数）
+  - [x] LLM 连通性自检（新增 `GET /api/config/check`：`asyncio.to_thread` 包 `call_llm_fast` 发最小请求，真环境验证通过返 model/reply_len/usage；失败返 error 不 500）
+  - [x] 配置项分组（模型参数可编辑 / 只读项分组展示，对齐 `config.describe()` 字段）
+  - [~] 配置变更后蒸馏产物的输出目录可视化——**部分实现**：output_dir 只读展示 + skills 卡顶部显示当前 skills_dir；OUTPUT_DIR 暂不加白名单（路径错丢产物风险，留后续）
+- [x] **配套 API 补充**
+  - [x] `GET /api/captures/{name}`：单个 capture 详情（host/task/events/stages/snapshots，读 trace.json）
+  - [x] `GET /api/skills/{host}/files` + `GET /api/skills/{host}/files/{filename}`：列 md 文件（名+大小）+ 内容预览（路径越界防护 `[^/\\]+\.md`）
+  - [x] `GET /api/status` 扩展：录制中时返 session 的 session_id / events / stages / current_stage / host
 
 **验收**：浏览器访问控制面板能完成「录一段 → 看状态 → 选 trace → 触发蒸馏 → 看进度 → 浏览产物」
-全流程，无需回到命令行；配置改动有表单 + 自检反馈。
+全流程，无需回到命令行；配置改动有表单 + 自检反馈。真环境冒烟通过（含 `/api/config/check` 真调 LLM 返 usage）。194 测试全过（+11 个 P3.5 测试），ruff clean。
 
 ---
 
@@ -331,7 +331,7 @@ stage 切碎（阈值 + 累积漂移）、CdpSession target 选择、input 去�
 | **P1** | **A/B 验证 skill 能否提升 agent 准确率** | ✅ | **蒸馏精简版 100% 达手写水平，核心闭环成立** |
 | **P2** | **MV3 扩展录制（精度对准 LLM 可读，含 element_attrs/page_context + 采集后端）** | ✅ | **采集层 + 后端全链路打通，端到端调试 6 bug 修复** |
 | **P3** | **FastAPI 常驻服务（采集 + 蒸馏 API + 控制面板 SPA）** | ✅ | **serve 子命令，183 测试（含 26 serve），端到端冒烟通过** |
-| **P3.5** | **控制面板优化与配置增强** | ⏳ | **P3 最小 SPA 打磨成可日常使用的运维台** |
+| **P3.5** | **控制面板优化与配置增强** | ✅ | **P3 最小 SPA 打磨成可日常使用的运维台，194 测试（+11）** |
 | P4 | MCP 检索（可选） | ⏳ | 学习用，不影响主链路 |
 
 ---

@@ -295,6 +295,36 @@ def _register_config_router(app: FastAPI) -> None:
             logger.exception("config update failed")
             return JSONResponse({"ok": False, "error": str(e)}, status_code=500)
 
+    @app.get("/api/config/check")
+    async def config_check() -> JSONResponse:
+        """LLM 连通性自检：调 call_llm_fast 发一个最小请求验证 key/base/model 可用。
+
+        用户在控制面板主动点「LLM 自检」触发（非自动化）。LLM 是同步 urllib，
+        用 asyncio.to_thread 包，不阻塞事件循环（对齐 distill_api 模式）。
+        成功返 {ok,model,reply_len,usage}；失败返 {ok:false,model,error}（不 500，便于前端展示）。
+        """
+        import asyncio
+
+        from harness.llm import call_llm_fast
+
+        if not config.LLM_KEY:
+            return JSONResponse(
+                {"ok": False, "model": config.CLASSIFY_MODEL, "error": "LLM_KEY 未配置"}
+            )
+        try:
+            text, usage = await asyncio.to_thread(call_llm_fast, "ping", max_tokens=8)
+            return JSONResponse(
+                {
+                    "ok": True,
+                    "model": config.CLASSIFY_MODEL,
+                    "reply_len": len(text),
+                    "usage": usage,
+                }
+            )
+        except Exception as e:  # noqa: BLE001 - 自检失败记进 error，不 500（前端友好）
+            logger.warning("LLM self-check failed: %s", e)
+            return JSONResponse({"ok": False, "model": config.CLASSIFY_MODEL, "error": str(e)})
+
 
 def _write_env(updates: dict[str, str]) -> None:
     """原子写 .env（保留已有行，更新/追加白名单 key）。
@@ -347,24 +377,93 @@ def _register_status_router(app: FastAPI) -> None:
     @app.get("/api/status")
     async def status() -> JSONResponse:
         collector = app.state.collector
-        recording = bool(collector is not None and getattr(collector, "_session", None) is not None)
-        return JSONResponse(
-            {
-                "ok": True,
-                "status": {
-                    "recording": recording,
-                    "chrome_connected": collector is not None,
-                    "captures_dir": str(app.state.captures_dir),
-                    "skills_dir": str(app.state.skills_dir),
-                },
+        session_obj = getattr(collector, "_session", None) if collector is not None else None
+        recording = session_obj is not None
+        out: dict[str, Any] = {
+            "recording": recording,
+            "chrome_connected": collector is not None,
+            "captures_dir": str(app.state.captures_dir),
+            "skills_dir": str(app.state.skills_dir),
+        }
+        # 录制中时附带 session 详情（session_id / 事件数 / stages / 当前 stage / host）
+        if recording:
+            events = getattr(session_obj, "events", []) or []
+            page_context = getattr(session_obj, "page_context", {}) or {}
+            out["session"] = {
+                "session_id": getattr(session_obj, "session_id", ""),
+                "host": getattr(session_obj, "host", ""),
+                "task_instruction": getattr(session_obj, "task_instruction", ""),
+                "events": len(events),
+                "stages": list(page_context.keys()),
+                "current_stage": events[-1].stage if events else None,
             }
-        )
+        return JSONResponse({"ok": True, "status": out})
 
     @app.get("/api/captures")
     async def captures() -> JSONResponse:
-        caps = _list_subdirs(app.state.captures_dir)
+        """列采集产物：每个含 name / md_count / mtime（创建时间，ISO + 毫秒戳）。
+
+        mtime 取 trace.json 的（导出落盘时刻，最准），不存在时退到目录 mtime。
+        前端用 mtime 显示创建时间 + 按新→旧排序，让用户一眼看到最新产物。
+        """
+        from datetime import UTC, datetime
+
+        caps_root = Path(app.state.captures_dir)
+        items: list[dict[str, Any]] = []
+        if caps_root.is_dir():
+            for child in sorted(caps_root.iterdir()):
+                if not child.is_dir():
+                    continue
+                # mtime 优先 trace.json（精确导出时刻），否则目录本身
+                trace_path = child / "trace.json"
+                ref = trace_path if trace_path.is_file() else child
+                # st_mtime 是秒级浮点，前端 new Date(ms) 要毫秒 → 乘 1000
+                mtime = ref.stat().st_mtime
+                items.append(
+                    {
+                        "name": child.name,
+                        "md_count": sum(1 for _ in child.glob("*.md")),
+                        "mtime_ms": int(mtime * 1000),  # 毫秒戳（前端 new Date 用）
+                        "mtime_iso": datetime.fromtimestamp(mtime, UTC).isoformat(),
+                    }
+                )
+        # 按创建时间倒序（最新在前）
+        items.sort(key=lambda x: x["mtime_ms"], reverse=True)
         return JSONResponse(
-            {"ok": True, "captures_dir": str(app.state.captures_dir), "items": caps}
+            {"ok": True, "captures_dir": str(app.state.captures_dir), "items": items}
+        )
+
+    @app.get("/api/captures/{name}")
+    async def capture_detail(name: str) -> JSONResponse:
+        """单个 capture 详情：读 <captures_dir>/<name>/trace.json 摘要 + snapshots 列表。"""
+        cap_dir = Path(app.state.captures_dir) / name
+        trace_path = cap_dir / "trace.json"
+        if not trace_path.is_file():
+            return JSONResponse({"ok": False, "error": f"capture 不存在：{name}"}, status_code=404)
+        import json
+
+        try:
+            data = json.loads(trace_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as e:
+            return JSONResponse(
+                {"ok": False, "error": f"trace.json 解析失败：{e}"}, status_code=500
+            )
+        events = data.get("events", []) or []
+        page_context = data.get("page_context", {}) or {}
+        # snapshots/ 下的 .txt 文件名
+        snaps_dir = cap_dir / "snapshots"
+        snapshots = sorted(p.name for p in snaps_dir.glob("*.txt")) if snaps_dir.is_dir() else []
+        return JSONResponse(
+            {
+                "ok": True,
+                "name": name,
+                "trace_path": str(trace_path),
+                "host": data.get("host", ""),
+                "task_instruction": data.get("task_instruction", ""),
+                "events": len(events),
+                "stages": list(page_context.keys()),
+                "snapshots": snapshots,
+            }
         )
 
     @app.get("/api/skills")
@@ -373,6 +472,36 @@ def _register_status_router(app: FastAPI) -> None:
         skills_root = app.state.skills_dir / "domain-skills"
         hosts = _list_subdirs(skills_root) if skills_root.is_dir() else []
         return JSONResponse({"ok": True, "skills_dir": str(app.state.skills_dir), "hosts": hosts})
+
+    @app.get("/api/skills/{host}/files")
+    async def skill_files(host: str) -> JSONResponse:
+        """列 <skills_dir>/domain-skills/<host>/ 下的 md 文件（名 + 大小）。"""
+        host_dir = Path(app.state.skills_dir) / "domain-skills" / host
+        if not host_dir.is_dir():
+            return JSONResponse({"ok": False, "error": f"host 不存在：{host}"}, status_code=404)
+        files = [{"name": p.name, "size": p.stat().st_size} for p in sorted(host_dir.glob("*.md"))]
+        return JSONResponse({"ok": True, "host": host, "files": files})
+
+    @app.get("/api/skills/{host}/files/{filename}")
+    async def skill_file_content(host: str, filename: str) -> JSONResponse:
+        """返回某 md 文件原文（前端预览用）。路径越界防护：filename 不含分隔符。"""
+        import re
+
+        if not re.fullmatch(r"[^/\\]+\.md", filename):
+            return JSONResponse({"ok": False, "error": f"非法文件名：{filename}"}, status_code=400)
+        fpath = Path(app.state.skills_dir) / "domain-skills" / host / filename
+        if not fpath.is_file():
+            return JSONResponse(
+                {"ok": False, "error": f"文件不存在：{host}/{filename}"}, status_code=404
+            )
+        return JSONResponse(
+            {
+                "ok": True,
+                "host": host,
+                "filename": filename,
+                "content": fpath.read_text(encoding="utf-8"),
+            }
+        )
 
 
 def _list_subdirs(root: Path | str) -> list[dict[str, Any]]:

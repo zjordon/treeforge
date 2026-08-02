@@ -8,7 +8,7 @@
     :root { color-scheme: light dark; }
     body {
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      max-width: 920px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6;
+      max-width: 960px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6;
     }
     h1 { font-size: 1.5rem; }
     h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #8884; padding-bottom: .3rem; }
@@ -18,7 +18,11 @@
     }
     @media (prefers-color-scheme: dark) { .card { background: #1c1c20; } }
     .row { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; }
-    input[type=text] { padding: .4rem .6rem; border-radius: 6px; border: 1px solid #8886; min-width: 220px; }
+    input[type=text], input[type=number], select {
+      padding: .4rem .6rem; border-radius: 6px; border: 1px solid #8886;
+      background: inherit; color: inherit; min-width: 0;
+    }
+    input[type=text], select { min-width: 180px; }
     button {
       padding: .45rem .9rem; border-radius: 6px; border: 0; cursor: pointer;
       background: #2563eb; color: #fff; font-size: .95rem;
@@ -26,20 +30,46 @@
     button:hover { background: #1d4ed8; }
     button.ghost { background: #555; }
     button:disabled { opacity: .5; cursor: default; }
-    pre { background: #0001; padding: .6rem; border-radius: 6px; overflow-x: auto; font-size: .85rem; }
+    pre { background: #0001; padding: .6rem; border-radius: 6px; overflow-x: auto; font-size: .85rem; white-space: pre-wrap; word-break: break-word; }
     .muted { color: #888; font-size: .9rem; }
     .badge { display: inline-block; padding: .1rem .5rem; border-radius: 99px; font-size: .8rem; background: #8883; }
     .badge.running { background: #f59e0b33; color: #b45309; }
     .badge.done { background: #22c55e33; color: #15803d; }
     .badge.failed { background: #ef444433; color: #b91c1c; }
+    .badge.pending { background: #8883; }
     @media (prefers-color-scheme: dark) {
       .badge.running { color: #fbbf24; }
       .badge.done { color: #4ade80; }
       .badge.failed { color: #f87171; }
     }
+    /* 进度条 */
+    .progress { height: 8px; border-radius: 99px; background: #8883; overflow: hidden; margin: .3rem 0; min-width: 120px; flex: 1; }
+    .progress > div { height: 100%; background: #2563eb; transition: width .3s; }
+    .progress.indeterminate > div { width: 35% !important; animation: pulse 1.2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{ opacity:.4; margin-left:0; } 50%{ opacity:1; margin-left:65%; } }
+    /* 任务行 / 产物树 */
+    .job-row, .tree-item { padding: .4rem .2rem; border-bottom: 1px solid #8882; display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+    .job-row.failed { border-left: 3px solid #ef4444; padding-left: .5rem; }
+    .job-row.done { border-left: 3px solid #22c55e; padding-left: .5rem; }
+    .tree-children { margin-left: 1.2rem; width: 100%; }
+    .tree-item clickable, .clickable { cursor: pointer; color: #2563eb; }
+    .tree-item clickable:hover, .clickable:hover { text-decoration: underline; }
+    .recording-on { border-color: #f59e0b; box-shadow: 0 0 0 1px #f59e0b; }
+    /* Toast */
+    #toast { position: fixed; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 100; display: flex; flex-direction: column; gap: .4rem; }
+    .toast { padding: .6rem 1rem; border-radius: 6px; color: #fff; font-size: .9rem; box-shadow: 0 2px 8px #0004; animation: fadein .2s; max-width: 90vw; }
+    .toast.success { background: #16a34a; }
+    .toast.error { background: #dc2626; }
+    .toast.info { background: #2563eb; }
+    @keyframes fadein { from{opacity:0; transform: translateY(-8px);} to{opacity:1; transform:none;} }
+    label.field { display: flex; gap: .4rem; align-items: center; margin: .3rem 0; }
+    label.field span { min-width: 120px; color: #888; font-size: .85rem; }
+    .group-title { font-weight: 600; margin: .6rem 0 .2rem; color: #888; font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; }
+    .readonly-field { color: #888; }
   </style>
 </head>
 <body>
+  <div id="toast"></div>
   <h1>TreeForge 控制面板</h1>
   <p class="muted">常驻服务：采集 + 蒸馏 + 配置。扩展请配置后端地址为当前页面 URL。</p>
 
@@ -49,102 +79,323 @@
   <h2>触发蒸馏</h2>
   <div class="card">
     <div class="row">
-      <input type="text" id="trace-path" placeholder="trace 路径（如 data/captures/xxx/trace.json）" style="flex:1;min-width:300px" />
-      <label class="muted"><input type="checkbox" id="no-llm" /> 模板模式（不调 LLM）</label>
+      <select id="trace-select"><option value="">-- 从采集产物选 trace --</option></select>
+      <input type="text" id="trace-path" placeholder="trace 路径（如 data/captures/xxx/trace.json）" style="flex:1;min-width:240px" />
+      <label class="muted"><input type="checkbox" id="no-llm" /> 模板模式</label>
       <button id="distill-btn">开始蒸馏</button>
     </div>
-    <pre id="distill-out" class="muted">（点击「开始蒸馏」后此处显示进度）</pre>
   </div>
 
-  <h2>采集产物</h2>
+  <h2>蒸馏任务</h2>
+  <div class="card" id="jobs-card">加载中…</div>
+
+  <h2>采集产物 <button class="ghost" id="refresh-btn" style="font-size:.8rem;padding:.2rem .6rem;vertical-align:middle">↻ 刷新产物</button></h2>
   <div class="card" id="captures-card">加载中…</div>
 
-  <h2>蒸馏产物（skills）</h2>
+  <h2>蒸馏产物（skills）<span class="muted" id="skills-dir-hint" style="font-size:.85rem;font-weight:normal"></span></h2>
   <div class="card" id="skills-card">加载中…</div>
 
-  <h2>当前配置</h2>
-  <div class="card"><pre id="config-out">加载中…</pre></div>
+  <h2>配置</h2>
+  <div class="card" id="config-card">加载中…</div>
 
   <script>
+    // ---- 基础工具 ----
     const api = (p, opts) => fetch(p, opts).then(r => r.json());
+    const $ = id => document.getElementById(id);
 
+    function showToast(msg, type = 'info') {
+      const el = document.createElement('div');
+      el.className = 'toast ' + type;
+      el.textContent = msg;
+      $('toast').appendChild(el);
+      setTimeout(() => el.remove(), 3500);
+    }
+
+    function fmtDuration(start, finish) {
+      if (!start) return '-';
+      const s = new Date(start), e = finish ? new Date(finish) : new Date();
+      const sec = Math.max(0, Math.round((e - s) / 1000));
+      if (sec < 60) return sec + 's';
+      return Math.floor(sec / 60) + 'm' + (sec % 60) + 's';
+    }
+
+    function escapeHtml(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+    }
+
+    // ---- 状态卡 ----
+    // 边缘检测：recording 从 true→false 表示「录制刚结束」，自动刷 captures
+    // （复用已有 3s status 轮询，零额外请求；延迟 500ms 等导出落盘）
+    let prevRecording = false;
     async function refreshStatus() {
       try {
-        const s = await api('/api/status');
-        const st = s.status || {};
-        document.getElementById('status-card').innerHTML =
-          `录制中：<span class="badge ${st.recording ? 'running' : ''}">${st.recording ? '是' : '否'}</span> &nbsp; ` +
-          `Chrome：<span class="badge ${st.chrome_connected ? 'done' : 'failed'}">${st.chrome_connected ? '已连接' : '未连接'}</span><br>` +
-          `<span class="muted">captures: ${st.captures_dir || '-'}<br>skills: ${st.skills_dir || '-'}</span>`;
-      } catch (e) { document.getElementById('status-card').textContent = '状态获取失败：' + e; }
+        const r = await api('/api/status'), st = r.status || {};
+        // 录制刚结束（扩展点「停止」→ POST /stop → recording 转 false）→ 自动刷新采集产物 + 下拉
+        if (prevRecording && !st.recording) {
+          showToast('录制结束，刷新采集产物…', 'info');
+          setTimeout(refreshCaptures, 500);
+        }
+        prevRecording = !!st.recording;
+        const card = $('status-card');
+        let html = `录制中：<span class="badge ${st.recording ? 'running' : ''}">${st.recording ? '是' : '否'}</span> &nbsp; ` +
+          `Chrome：<span class="badge ${st.chrome_connected ? 'done' : 'failed'}">${st.chrome_connected ? '已连接' : '未连接'}</span>`;
+        if (st.session) {
+          const s = st.session;
+          html += `<br><span class="muted">session: ${escapeHtml(s.session_id)} | host: ${escapeHtml(s.host || '-')} | ` +
+            `事件: ${s.events} | 当前阶段: ${escapeHtml(s.current_stage || '-')}` +
+            (s.stages && s.stages.length ? ` | 阶段: ${s.stages.map(escapeHtml).join(', ')}` : '') + `</span>`;
+        } else {
+          html += `<br><span class="muted">captures: ${escapeHtml(st.captures_dir || '-')}<br>skills: ${escapeHtml(st.skills_dir || '-')}</span>`;
+        }
+        card.innerHTML = html;
+        card.classList.toggle('recording-on', !!st.recording);
+      } catch (e) { $('status-card').textContent = '状态获取失败：' + e; }
+    }
+
+    // ---- captures（列表 + 下拉 + 详情下钻）----
+    // 后端已按 mtime 倒序返回（最新在前），前端直接渲染即可。
+    // 注意：用毫秒时间戳（数字，i.mtime）而非 ISO 字符串，避免浏览器对 ISO 串的
+    // 时区解析歧义（带 +00:00 的 UTC 串在不同环境可能被当本地时间，导致「N 分钟前」算错）。
+    function fmtRelTime(ms) {
+      if (!ms) return '-';
+      const diff = (Date.now() - ms) / 1000;  // 秒（纯数字运算，无时区歧义）
+      const t = new Date(ms);  // 仅用于取月份/日期/时分（本地时区展示）
+      const pad = n => String(n).padStart(2, '0');
+      const absTime = `${pad(t.getMonth() + 1)}-${pad(t.getDate())} ${pad(t.getHours())}:${pad(t.getMinutes())}`;
+      // 相对时间 + 绝对时间一起显示，既看新旧又看准点
+      if (diff < 60) return `刚刚（${absTime}）`;
+      if (diff < 3600) return `${Math.floor(diff / 60)} 分钟前（${absTime}）`;
+      if (diff < 86400) return `${Math.floor(diff / 3600)} 小时前（${absTime}）`;
+      return absTime;  // 超过 1 天只显示绝对时间
     }
 
     async function refreshCaptures() {
       try {
-        const c = await api('/api/captures');
-        const items = c.items || [];
-        document.getElementById('captures-card').innerHTML = items.length
-          ? items.map(i => `${i.name} <span class="muted">(${i.md_count} md)</span>`).join('<br>')
+        const c = await api('/api/captures'), items = c.items || [];
+        // 下拉（带创建时间，最新在前）
+        const sel = $('trace-select');
+        const cur = $('trace-path').value;
+        sel.innerHTML = '<option value="">-- 从采集产物选 trace --</option>' +
+          items.map(i => `<option value="${escapeHtml(c.captures_dir)}/${escapeHtml(i.name)}/trace.json">${escapeHtml(i.name)}（${fmtRelTime(i.mtime_ms)}）</option>`).join('');
+        if (cur) sel.value = '';  // 手填的优先，不覆盖
+        // 列表（可下钻，显示创建时间；最新在前）
+        $('captures-card').innerHTML = items.length
+          ? items.map(i => `<div class="tree-item"><span class="clickable" onclick="toggleCapture('${escapeHtml(i.name)}')">▸ ${escapeHtml(i.name)}</span> <span class="muted">(${i.md_count} md)</span> <span class="muted">· ${fmtRelTime(i.mtime_ms)}</span><div class="tree-children" id="cap-${escapeHtml(i.name)}" style="display:none"></div></div>`).join('')
           : '<span class="muted">暂无采集产物（录一段 → POST /stop 导出后出现）</span>';
-      } catch (e) { document.getElementById('captures-card').textContent = '失败：' + e; }
+      } catch (e) { $('captures-card').textContent = '失败：' + e; }
     }
 
+    async function toggleCapture(name) {
+      const el = $('cap-' + name);
+      if (el.dataset.loaded !== '1') {
+        try {
+          const d = await api('/api/captures/' + encodeURIComponent(name));
+          el.innerHTML = `<span class="muted">host: ${escapeHtml(d.host || '-')} | 事件: ${d.events} | 任务: ${escapeHtml(d.task_instruction || '-')}</span><br>` +
+            `<span class="muted">stages: ${(d.stages || []).map(escapeHtml).join(', ') || '-'}</span><br>` +
+            `<button class="ghost" onclick="useTrace('${escapeHtml(d.trace_path)}')">用此 trace 蒸馏</button>`;
+          el.dataset.loaded = '1';
+        } catch (e) { el.innerHTML = '<span class="muted">详情获取失败</span>'; }
+      }
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function useTrace(path) {
+      $('trace-path').value = path;
+      $('trace-select').value = '';
+      showToast('已填入 trace：' + path, 'info');
+    }
+
+    // ---- skills（host 树 → md 文件 → 预览）----
     async function refreshSkills() {
       try {
         const s = await api('/api/skills');
+        $('skills-dir-hint').textContent = '（' + (s.skills_dir || '-') + '）';
         const hosts = s.hosts || [];
-        document.getElementById('skills-card').innerHTML = hosts.length
-          ? hosts.map(h => `${h.name} <span class="muted">(${h.md_count} md)</span>`).join('<br>')
+        $('skills-card').innerHTML = hosts.length
+          ? hosts.map(h => `<div class="tree-item"><span class="clickable" onclick="toggleHost('${escapeHtml(h.name)}')">▸ ${escapeHtml(h.name)}</span> <span class="muted">(${h.md_count} md)</span><div class="tree-children" id="host-${escapeHtml(h.name)}" style="display:none"></div></div>`).join('')
           : '<span class="muted">暂无蒸馏产物</span>';
-      } catch (e) { document.getElementById('skills-card').textContent = '失败：' + e; }
+      } catch (e) { $('skills-card').textContent = '失败：' + e; }
     }
 
-    async function refreshConfig() {
-      try {
-        const c = await api('/api/config');
-        document.getElementById('config-out').textContent = JSON.stringify(c.config, null, 2);
-      } catch (e) { document.getElementById('config-out').textContent = '失败：' + e; }
+    async function toggleHost(host) {
+      const el = $('host-' + host);
+      if (el.dataset.loaded !== '1') {
+        try {
+          const r = await api('/api/skills/' + encodeURIComponent(host) + '/files');
+          el.innerHTML = (r.files || []).map(f =>
+            `<div class="tree-item"><span class="clickable" onclick="previewFile('${escapeHtml(host)}','${escapeHtml(f.name)}')">  ${escapeHtml(f.name)}</span> <span class="muted">(${f.size}B)</span></div>`).join('');
+          el.dataset.loaded = '1';
+        } catch (e) { el.innerHTML = '<span class="muted">文件列表获取失败</span>'; }
+      }
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
     }
 
-    // 触发蒸馏 + 轮询进度
-    let pollTimer = null;
-    document.getElementById('distill-btn').addEventListener('click', async () => {
-      const trace = document.getElementById('trace-path').value.trim();
-      const noLlm = document.getElementById('no-llm').checked;
-      if (!trace) { alert('请填 trace 路径'); return; }
-      const out = document.getElementById('distill-out');
-      out.textContent = '触发中…';
+    async function previewFile(host, filename) {
+      let el = $('file-preview');
+      if (!el) {
+        el = document.createElement('div'); el.id = 'file-preview'; el.className = 'tree-children';
+        $('skills-card').appendChild(el);
+      }
+      el.innerHTML = '<span class="muted">加载中…</span>';
       try {
-        const r = await api('/api/distill', {
-          method: 'POST', headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({ trace_path: trace, no_llm: noLlm })
-        });
-        if (!r.ok) { out.textContent = '触发失败：' + (r.error || JSON.stringify(r)); return; }
-        out.textContent = '已提交，job_id=' + r.job_id + '，轮询中…';
-        if (pollTimer) clearInterval(pollTimer);
-        pollTimer = setInterval(() => pollJob(r.job_id, out), 1000);
-      } catch (e) { out.textContent = '错误：' + e; }
+        const r = await api('/api/skills/' + encodeURIComponent(host) + '/files/' + encodeURIComponent(filename));
+        el.innerHTML = `<div class="row"><strong>${escapeHtml(host)}/${escapeHtml(filename)}</strong><button class="ghost" onclick="$('file-preview').remove()">关闭</button></div><pre>${escapeHtml(r.content)}</pre>`;
+      } catch (e) { el.innerHTML = '<span class="muted">预览失败：' + e + '</span>'; }
+    }
+
+    // ---- 蒸馏任务列表 + 进度 ----
+    let activeJobPoll = null;
+    async function refreshJobs() {
+      try {
+        const r = await api('/api/jobs'), jobs = r.jobs || [];
+        $('jobs-card').innerHTML = jobs.length
+          ? jobs.map(renderJobRow).join('')
+          : '<span class="muted">暂无蒸馏任务</span>';
+      } catch (e) { $('jobs-card').textContent = '失败：' + e; }
+    }
+
+    function renderJobRow(j) {
+      const dur = fmtDuration(j.started_at, j.finished_at);
+      const finished = j.status === 'done' || j.status === 'failed';
+      // 进度条：done/failed 不渲染（任务已结束，不需要 indeterminate 滚动条）；
+      // running 时 total>0 显示百分比，total=0（DISTILL 阶段无 total）显示 indeterminate 脉冲
+      let bar = '';
+      if (!finished) {
+        const pct = j.total > 0 ? Math.round(j.current / j.total * 100) : null;
+        bar = pct !== null
+          ? `<div class="progress"><div style="width:${pct}%"></div></div>`
+          : `<div class="progress indeterminate"><div></div></div>`;
+      }
+      const pctTxt = (!finished && j.total > 0) ? Math.round(j.current / j.total * 100) + '%' : '';
+      const err = j.error ? ` <span class="muted" title="${escapeHtml(j.error)}">⚠ ${escapeHtml(j.error.slice(0, 60))}</span>` : '';
+      // done 时展开列出产出的文件（对齐旧版行为，不只是「N 文件」摘要）
+      let result = '';
+      if (j.status === 'done' && j.result) {
+        const written = j.result.written || [];
+        const fileList = written.length
+          ? `<div class="tree-children"><span class="muted">产出 ${written.length} 文件 → ${escapeHtml(j.result.host_dir || '')}：</span><br>${written.map(p => `<code class="muted" style="font-size:.8rem">  ${escapeHtml(p)}</code>`).join('<br>')}</div>`
+          : '';
+        result = fileList;
+      }
+      return `<div class="job-row ${j.status}" data-job="${escapeHtml(j.job_id)}">
+        <span class="badge ${j.status}">${j.status}</span>
+        <code class="muted">${escapeHtml(j.job_id)}</code>
+        <span>${escapeHtml(j.phase || '')}</span> ${bar}
+        <span class="muted">${pctTxt} ${dur}</span>
+        ${err}
+        ${result}
+      </div>`;
+    }
+
+    // ---- 触发蒸馏 ----
+    $('trace-select').addEventListener('change', e => {
+      if (e.target.value) { $('trace-path').value = e.target.value; }
     });
 
-    async function pollJob(jobId, outEl) {
+    $('distill-btn').addEventListener('click', async () => {
+      const trace = $('trace-path').value.trim();
+      const noLlm = $('no-llm').checked;
+      if (!trace) { showToast('请填 trace 路径或从下拉选择', 'error'); return; }
       try {
-        const r = await api('/api/distill/' + jobId);
-        if (!r.ok) { outEl.textContent = '查询失败：' + JSON.stringify(r); return; }
-        const j = r.job;
-        outEl.textContent =
-          `[${j.status}] ${j.phase} ${j.current}/${j.total} ${j.detail}`.trim() +
-          (j.error ? '\n错误：' + j.error : '') +
-          (j.status === 'done' && j.result ? '\n产出：' + (j.result.written || []).join('\n        ') : '');
-        if (j.status === 'done' || j.status === 'failed') {
-          clearInterval(pollTimer); pollTimer = null;
-          refreshSkills(); refreshCaptures();
-        }
-      } catch (e) { outEl.textContent = '轮询错误：' + e; }
+        const r = await api('/api/distill', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ trace_path: trace, no_llm: noLlm })
+        });
+        if (!r.ok) { showToast('触发失败：' + (r.error || ''), 'error'); return; }
+        showToast('已提交蒸馏 job=' + r.job_id, 'success');
+        await refreshJobs();
+        startJobPoll(r.job_id);
+      } catch (e) { showToast('错误：' + e, 'error'); }
+    });
+
+    function startJobPoll(jobId) {
+      if (activeJobPoll) clearInterval(activeJobPoll);
+      activeJobPoll = setInterval(async () => {
+        await refreshJobs();
+        try {
+          const r = await api('/api/distill/' + jobId);
+          if (r.ok && (r.job.status === 'done' || r.job.status === 'failed')) {
+            clearInterval(activeJobPoll); activeJobPoll = null;
+            if (r.job.status === 'done') {
+              showToast('蒸馏完成：' + ((r.job.result || {}).written || []).length + ' 文件', 'success');
+            } else {
+              showToast('蒸馏失败：' + (r.job.error || ''), 'error');
+            }
+            refreshSkills(); refreshCaptures();
+          }
+        } catch (e) { /* 忽略单次轮询错误 */ }
+      }, 1500);
     }
 
-    // 初次加载
-    refreshStatus(); refreshCaptures(); refreshSkills(); refreshConfig();
-    setInterval(refreshStatus, 3000);  // 每 3s 刷录制状态
+    // ---- 配置卡（分组表单 + 自检）----
+    const WRITABLE = ['DISTILL_MODEL', 'CLASSIFY_MODEL', 'LLM_BASE', 'LLM_TIMEOUT'];
+    async function refreshConfig() {
+      try {
+        const c = (await api('/api/config')).config || {};
+        const cfgKey = v => ({
+          DISTILL_MODEL: c.distill_model, CLASSIFY_MODEL: c.classify_model,
+          LLM_BASE: c.llm_base, LLM_TIMEOUT: undefined  // timeout 不在 describe，保留输入
+        })[v];
+        let html = '<div class="group-title">模型参数（可编辑）</div>';
+        WRITABLE.forEach(k => {
+          const val = cfgKey(k);
+          html += `<label class="field"><span>${k}</span><input type="text" id="cfg-${k}" value="${escapeHtml(val ?? '')}" placeholder="${k}"/></label>`;
+        });
+        html += '<div class="row"><button id="cfg-save">保存配置</button><button class="ghost" id="cfg-check">LLM 自检</button></div>';
+        html += '<div class="group-title">只读（改 .env）</div>';
+        html += `<div class="readonly-field muted">llm_key_set: ${c.llm_key_set} | llm_insecure: ${c.llm_insecure}<br>output_dir: ${escapeHtml(c.output_dir)} | min_bucket_size: ${c.min_bucket_size}</div>`;
+        $('config-card').innerHTML = html;
+        $('cfg-save').addEventListener('click', saveConfig);
+        $('cfg-check').addEventListener('click', checkLlm);
+      } catch (e) { $('config-card').textContent = '配置加载失败：' + e; }
+    }
+
+    async function saveConfig() {
+      const values = {};
+      WRITABLE.forEach(k => values[k] = $('cfg-' + k).value.trim());
+      if (values.LLM_TIMEOUT && !/^\d+$/.test(values.LLM_TIMEOUT)) {
+        showToast('LLM_TIMEOUT 必须是正整数', 'error'); return;
+      }
+      const btn = $('cfg-save'); btn.disabled = true;
+      try {
+        const r = await api('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ values }) });
+        if (r.ok) { showToast('配置已保存并重载', 'success'); refreshConfig(); refreshSkills(); }
+        else { showToast('保存失败：' + (r.error || ''), 'error'); }
+      } catch (e) { showToast('错误：' + e, 'error'); }
+      finally { btn.disabled = false; }
+    }
+
+    async function checkLlm() {
+      const btn = $('cfg-check'); const orig = btn.textContent; btn.disabled = true; btn.textContent = '自检中…';
+      try {
+        const r = await api('/api/config/check');
+        if (r.ok) { showToast(`LLM 自检通过：${r.model}（回复 ${r.reply_len} 字符）`, 'success'); }
+        else { showToast('LLM 自检失败：' + (r.error || ''), 'error'); }
+      } catch (e) { showToast('自检错误：' + e, 'error'); }
+      finally { btn.disabled = false; btn.textContent = orig; }
+    }
+
+    // ---- 手动刷新产物（兜底：边缘检测漏触发或强制刷新时用）----
+    $('refresh-btn').addEventListener('click', async () => {
+      const btn = $('refresh-btn'); const orig = btn.textContent;
+      btn.disabled = true; btn.textContent = '刷新中…';
+      try {
+        await Promise.all([refreshCaptures(), refreshSkills()]);
+        showToast('产物已刷新', 'success');
+      } catch (e) { showToast('刷新失败：' + e, 'error'); }
+      finally { btn.disabled = false; btn.textContent = orig; }
+    });
+
+    // 暴露给 inline onclick
+    window.toggleCapture = toggleCapture;
+    window.useTrace = useTrace;
+    window.toggleHost = toggleHost;
+    window.previewFile = previewFile;
+
+    // ---- 初次加载 + 定时刷新 ----
+    refreshStatus(); refreshCaptures(); refreshSkills(); refreshJobs(); refreshConfig();
+    setInterval(refreshStatus, 3000);
+    setInterval(refreshJobs, 4000);  // 任务列表每 4s 刷（含耗时更新）
   </script>
 </body>
 </html>
