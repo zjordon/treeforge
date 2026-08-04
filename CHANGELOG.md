@@ -5,27 +5,27 @@
 
 ## [Unreleased]
 
-P3.5 控制面板优化与配置增强（issue #1）。把 P3 最小 SPA 打磨成可日常使用的运维台。
+## [0.2.0] - 2026-08-02
+
+P3.5（控制面板体验闭环）+ P3.6（迁移 TreeWalker 扩展端事件词汇作 distill 采集补充）。
 
 ### Added
-- **配套 API**：`GET /api/captures/{name}`（capture 详情：host/events/stages/snapshots）、`GET /api/skills/{host}/files`（列 md 文件 + 大小）、`GET /api/skills/{host}/files/{filename}`（md 内容预览，路径越界防护）。
-- **LLM 连通性自检**：`GET /api/config/check`（`asyncio.to_thread` 包 `call_llm_fast` 发最小请求，返 model/reply_len/usage；失败返 error 不 500）。
-- **控制面板**：蒸馏任务列表视图（历史 job + 耗时 + 产物，每 4s 刷新）、进度条可视化（百分比/indeterminate 脉冲/done-failed 行高亮）、产物浏览树（captures/skills 下钻 + md 内联预览）、capture 下拉选 trace、顶部 toast 通知。
-- **配置编辑表单**：白名单 4 key 可编辑（DISTILL_MODEL/CLASSIFY_MODEL/LLM_BASE/LLM_TIMEOUT）+ 分组展示 + LLM 自检按钮。
-- **status 扩展**：录制中时 `/api/status` 返 session 的 session_id/events/stages/current_stage/host。
-- **采集产物创建时间**：`/api/captures` 每个 item 含 `mtime_ms`（毫秒戳）+ `mtime_iso`，按新→旧排序；控制面板显示相对时间 + 绝对本地时间（如「16 小时前（08-01 18:10）」）。
-- **录制结束自动刷新**：status 轮询做边缘检测，`recording` 从 true→false 时延迟 500ms 自动刷新采集产物 + 下拉；另加「↻ 刷新产物」手动按钮兜底。
+- **P3.6 事件词汇扩宽**：distill 采集加 `select_dropdown`（`<select>` change → value）、`upload_file`（`<input type=file>` change → 文件名 + upload_ctx 站点无关语义身份）、`send_keys`（修饰键组合 + 命名非打印键）；contenteditable 富文本用 MutationObserver 观察（替代 bilibili 专用启发式）。
+- **P3.6 SPA 导航 hook**：新增 `injected.ts` MAIN-world 脚本（wrap `pushState`/`replaceState` → 派发 `tf:nav`；wrap `addEventListener` 给点击监听器打 `data-tw-jsclick` 标记），新增 `navigation-recorder.ts` 收 `tf:nav`/`popstate`/`hashchange`，补 distill 一直缺的 navigate 接线；`findInteractiveAncestor` 加第四道回退。
+- **P3.6 副作用信号**：新增 `side-effect-observer.ts`（动作后 1s 窗口检测 modal/dropdown 新增），协议 4→5 端点加 `POST /signal`，`Collector.attach_signal` attach 到最近 capture event，`CapturedEvent.signals` 落进 trace.json，atomizer 渲染进 summary 行（`[signal=modal_opened]`）作 quirks.md 原料。
+- **P3.6 双端 schema 扩展**：`DistillActionType` 加 3 新类型 + `UploadCtx` + `DistillSignal`/`SignalKind`；`RAW_ATTR_KEYS` + 白名单加 `data-tw-jsclick`/`accept`。
+- **P3.5 配套 API**：`GET /api/captures/{name}`、`GET /api/skills/{host}/files`、`GET /api/skills/{host}/files/{filename}`、`GET /api/config/check`（LLM 自检）。
+- **P3.5 控制面板**：蒸馏任务列表 + 进度条 + 产物浏览树 + capture 下拉 + toast + 配置编辑表单；采集产物显示创建时间（mtime_ms）+ 录制结束边缘检测自动刷新 + 手动刷新按钮。
 
 ### Changed
-- `/api/status` 录制中时附带 session 详情（向后兼容：未录制时无 session 字段）。
-- 蒸馏任务行 done/failed 时不渲染进度条（避免结束后 indeterminate 滚动条不停）；done 时展开列出产出的每个文件路径（对齐旧版行为）。
+- input coalesce 1200→400ms 对齐 TreeWalker；`TraceEvent` 加 `signals` 字段（默认空 list，向后兼容）。
 
 ### Fixed
-- **产物时间显示错误（00:00/23:59）**：`/api/captures` 的 mtime 误传秒级浮点（`st_mtime`），前端 `new Date(ms)` 按毫秒解析导致时刻错乱；改为乘 1000 转毫秒戳（字段重命名 `mtime_ms`），并加 `> 946684800000` 回归断言。
-- **蒸馏完成后进度条不停止**：done 时 `total=0`（DISTILL 阶段无 total）触发 indeterminate 滚动条；改为 done/failed 不渲染进度条。
+- **P3.5 产物时间显示错误（00:00/23:59）**：`st_mtime` 秒级浮点未乘 1000；改 `mtime_ms` + 回归断言。
+- **P3.5 蒸馏完成后进度条不停止**：done 时 `total=0` 触发 indeterminate；改为 done/failed 不渲染进度条。
 
-### 部分实现
-- OUTPUT_DIR 可写：暂只读展示 + skills 卡显示当前 skills_dir（路径错丢产物风险，可写留后续）。
+### Docs
+- ROADMAP.md 加 P3.5/P3.6 章节 + 里程碑 + 历史调整；P4 检索层明确不做（删除）；README/ARCHITECTURE 同步。
 
 ## [0.1.0] - 2026-08-01
 
