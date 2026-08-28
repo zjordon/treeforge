@@ -33,8 +33,8 @@ def test_capture_state_dataclass():
 
 def test_cdp_session_init_defaults():
     """CdpSession 初始化：client/target/session 都未连接。"""
-    session = CdpSession(ws_url="ws://localhost:9222/devtools/browser/xxx")
-    assert session.ws_url == "ws://localhost:9222/devtools/browser/xxx"
+    session = CdpSession(ws_url="ws://localhost:9223/devtools/browser/xxx")
+    assert session.ws_url == "ws://localhost:9223/devtools/browser/xxx"
     assert session.client is None
     assert session.current_target_id is None
     assert session.current_session_id is None
@@ -42,7 +42,7 @@ def test_cdp_session_init_defaults():
 
 async def test_cdp_session_stop_without_start_no_error():
     """未 start 直接 stop 不报错（防御）。"""
-    session = CdpSession(ws_url="ws://localhost:9222/xxx")
+    session = CdpSession(ws_url="ws://localhost:9223/xxx")
     # 不应抛异常
     await session.stop()
     assert session.client is None
@@ -50,7 +50,7 @@ async def test_cdp_session_stop_without_start_no_error():
 
 async def test_cdp_session_get_state_before_start_raises():
     """未 start 调 get_state 应抛 RuntimeError。"""
-    session = CdpSession(ws_url="ws://localhost:9222/xxx")
+    session = CdpSession(ws_url="ws://localhost:9223/xxx")
     with pytest.raises(RuntimeError, match="not started"):
         await session.get_state()
 

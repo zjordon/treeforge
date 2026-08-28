@@ -374,7 +374,7 @@ async def test_collector_envelope_url_overrides_cdp_url():
 
 
 async def test_collector_attaches_tab_from_envelope():
-    """envelope 带 tab_id → collector 调 cdp.attach_tab 精确 attach。"""
+    """envelope 带 tab_id → collector 调 cdp.attach_tab 精确 attach（含 url 兜底参数）。"""
     cdp = _make_mock_cdp()
     collector = Collector(cdp, output_dir="/tmp/test")
     await collector.start()
@@ -390,7 +390,8 @@ async def test_collector_attaches_tab_from_envelope():
             "payload": {"type": "click", "raw_attrs": {"tag": "a"}},
         }
     )
-    cdp.attach_tab.assert_called_once_with(5)
+    # attach_tab 现在收 (tab_id, url=...)——url 给 CdpSession 作 tabId 缺失时的兜底
+    cdp.attach_tab.assert_called_once_with(5, url="https://x.com/up")
     assert collector._attached_tab == 5
 
 
@@ -412,7 +413,7 @@ async def test_collector_skips_reattach_same_tab():
     await collector.ingest(envelope)
     await collector.ingest({**envelope, "ts": 1000})  # 同 tab 第二个事件
 
-    cdp.attach_tab.assert_called_once_with(5)  # 只调一次
+    cdp.attach_tab.assert_called_once_with(5, url="https://x.com/up")  # 只调一次
 
 
 async def test_collector_reattaches_on_tab_switch():
@@ -433,8 +434,8 @@ async def test_collector_reattaches_on_tab_switch():
     await collector.ingest({**base, "tab_id": 7, "ts": 1000})  # 切到 tab 7
 
     assert cdp.attach_tab.call_count == 2
-    cdp.attach_tab.assert_any_call(5)
-    cdp.attach_tab.assert_any_call(7)
+    cdp.attach_tab.assert_any_call(5, url="https://x.com/up")
+    cdp.attach_tab.assert_any_call(7, url="https://x.com/up")
     assert collector._attached_tab == 7
 
 
@@ -456,6 +457,131 @@ async def test_collector_no_tab_id_uses_eager_fallback():
     )
     cdp.attach_tab.assert_not_called()  # 无 tab_id，不重 attach
     assert collector._attached_tab is None
+
+
+# ---------------------------------------------------------------------------
+# CdpSession._find_target_by_tab_id url 兜底回归（e708be22 抖音 trace 发现的 bug）：
+# 部分 Chrome 环境 CDP 不填 tabId 字段（实测 tabId=None），纯 tabId 匹配完全失效，
+# 快照采到错误的 target（扩展 popup）。修复后 tabId 缺失/找不到时按 url 匹配 http page target。
+# ---------------------------------------------------------------------------
+
+
+async def test_find_target_by_tab_id_url_fallback_when_tabid_none():
+    """tabId 全 None（环境不填）时，按 url 匹配 http page target。"""
+    from treeforge.capture.cdp_session import CdpSession
+
+    cdp = CdpSession(ws_url="ws://x")
+    cdp.client = MagicMock()
+    # 模拟 e708be22 场景：douyin 页 tabId=None，但 url 可用
+    cdp.client.send.Target.getTargets = AsyncMock(
+        return_value={
+            "targetInfos": [
+                {
+                    "type": "page",
+                    "targetId": "T1",
+                    "tabId": None,
+                    "url": "chrome-extension://abc/popup.html",
+                },
+                {
+                    "type": "page",
+                    "targetId": "T2",
+                    "tabId": None,
+                    "url": "https://creator.douyin.com/creator-micro/content/upload?enter_from=publish",
+                },
+            ]
+        }
+    )
+    # tab_id=5 在 CDP 里匹配不上（都 None）→ url 兜底应找到 T2（douyin）
+    target = await cdp._find_target_by_tab_id(
+        5, "https://creator.douyin.com/creator-micro/content/upload?enter_from=publish"
+    )
+    assert target is not None
+    assert target["targetId"] == "T2", "tabId=None 时应按 url 找到 douyin target，不是 popup"
+
+
+async def test_find_target_by_tab_id_prefers_tabid_when_available():
+    """tabId 可用时优先按 tabId 匹配（不退化到 url）。"""
+    from treeforge.capture.cdp_session import CdpSession
+
+    cdp = CdpSession(ws_url="ws://x")
+    cdp.client = MagicMock()
+    cdp.client.send.Target.getTargets = AsyncMock(
+        return_value={
+            "targetInfos": [
+                {"type": "page", "targetId": "T1", "tabId": 5, "url": "https://x.com/a"},
+                {
+                    "type": "page",
+                    "targetId": "T2",
+                    "tabId": 7,
+                    "url": "https://x.com/a",
+                },  # 同 url 不同 tab
+            ]
+        }
+    )
+    # tab_id=5 应精确命中 T1，不是 T2（即使 url 相同）
+    target = await cdp._find_target_by_tab_id(5, "https://x.com/a")
+    assert target["targetId"] == "T1"
+
+
+async def test_find_target_by_tab_id_url_fallback_ignores_non_http():
+    """url 兜底只认 http/https page，跳过 chrome-extension/chrome 内部页。"""
+    from treeforge.capture.cdp_session import CdpSession
+
+    cdp = CdpSession(ws_url="ws://x")
+    cdp.client = MagicMock()
+    cdp.client.send.Target.getTargets = AsyncMock(
+        return_value={
+            "targetInfos": [
+                {
+                    "type": "page",
+                    "targetId": "T1",
+                    "tabId": None,
+                    "url": "chrome-extension://abc/popup.html",
+                },
+                {"type": "page", "targetId": "T2", "tabId": None, "url": "chrome://newtab/"},
+            ]
+        }
+    )
+    # 没有 http page，url 兜底也找不到 → None（不应误命中 popup/newtab）
+    target = await cdp._find_target_by_tab_id(5, "https://x.com/a")
+    assert target is None
+
+
+async def test_find_target_by_tab_id_url_normalizes_query():
+    """url 匹配按 host+path 规范化（忽略 query），容忍导航中 query 变化。"""
+    from treeforge.capture.cdp_session import CdpSession
+
+    cdp = CdpSession(ws_url="ws://x")
+    cdp.client = MagicMock()
+    cdp.client.send.Target.getTargets = AsyncMock(
+        return_value={
+            "targetInfos": [
+                {"type": "page", "targetId": "T1", "tabId": None, "url": "https://x.com/a?foo=1"},
+            ]
+        }
+    )
+    # 事件 url 的 query 不同（?bar=2），但 host+path 相同 → 应命中
+    target = await cdp._find_target_by_tab_id(5, "https://x.com/a?bar=2#top")
+    assert target is not None
+    assert target["targetId"] == "T1"
+
+
+async def test_find_target_by_tab_id_no_match_returns_none():
+    """tabId 和 url 都匹配不上 → None（不乱选）。"""
+    from treeforge.capture.cdp_session import CdpSession
+
+    cdp = CdpSession(ws_url="ws://x")
+    cdp.client = MagicMock()
+    cdp.client.send.Target.getTargets = AsyncMock(
+        return_value={
+            "targetInfos": [
+                {"type": "page", "targetId": "T1", "tabId": 9, "url": "https://other.com/"},
+            ]
+        }
+    )
+    # tab_id=5 不匹配 T1(tabId=9)，url(x.com) 也不匹配 other.com → None
+    target = await cdp._find_target_by_tab_id(5, "https://x.com/a")
+    assert target is None
 
 
 # ---------------------------------------------------------------------------
@@ -686,3 +812,124 @@ async def test_signals_exported_to_trace_json(tmp_path):
     assert trace["events"][0]["signals"] == [
         {"type": "modal_opened", "selector": "div.modal", "ts": 1200}
     ]
+
+
+# ---------------------------------------------------------------------------
+# attach_signal 信号归属修复回归（ae99467f 抖音 trace 发现的 bug）：
+# 原逻辑附到 events[-1]（最近事件），信号到达时最近事件可能是无关的 scroll/passive input
+# （与信号时间重叠）。修复后按 action 类型 + 1s 因果窗口向前找触发 action event。
+# ---------------------------------------------------------------------------
+
+
+async def test_attach_signal_goes_to_triggering_click_not_later_scroll(tmp_path):
+    """信号应附到触发它的 click，不是信号到达后才 ingest 的 scroll。
+
+    ae99467f 抖音 trace 的真机场景：点「选择封面」(click) → 弹 modal →
+    信号 modal_opened 到达 → 同期 scroll 被 ingest 成 events[-1]。原逻辑把信号挂到 scroll，
+    修复后应挂到 click。
+    """
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    # click 选择封面 (ts=1000)
+    await collector.ingest({"payload": {"type": "click", "raw_attrs": {"tag": "div"}}, "ts": 1000})
+    # scroll 在 click 之后、信号之前 ingest（成为 events[-1]）
+    await collector.ingest({"payload": {"type": "scroll"}, "ts": 1500})
+    # 信号 ts=1150（click 后 150ms，scroll 前）—— click 是真正触发者
+    attached = await collector.attach_signal(
+        {"type": "modal_opened", "selector": "div.modal", "ts": 1150}
+    )
+    assert attached is True
+    events = collector.session.events
+    assert len(events) == 2
+    # 信号应挂在 click（events[0]），不是 scroll（events[1]）
+    assert len(events[0].signals) == 1, "信号应挂到触发 click，不是后来的 scroll"
+    assert events[0].signals[0]["type"] == "modal_opened"
+    assert events[1].signals == [], "scroll 不应被挂信号"
+    await collector.stop()
+
+
+async def test_attach_signal_skips_passive_input_finds_click(tmp_path):
+    """信号应跳过被动 input，向前找最近的 action event（click）。
+
+    场景：点按钮 (click) → 继续打字 (input) → 弹出 modal 信号。input 不触发 modal，
+    信号应回溯到 click。
+    """
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    await collector.ingest(
+        {"payload": {"type": "click", "raw_attrs": {"tag": "button"}}, "ts": 1000}
+    )
+    await collector.ingest(
+        {"payload": {"type": "input", "raw_attrs": {"tag": "input"}}, "ts": 1200}
+    )
+    # 信号 ts=1300（input 后 100ms，但 input 不是触发者；click 在 300ms 内）
+    attached = await collector.attach_signal(
+        {"type": "dropdown_opened", "selector": "ul.opts", "ts": 1300}
+    )
+    assert attached is True
+    events = collector.session.events
+    # 信号挂在 click（events[0]），不挂在 input（events[1]）
+    assert len(events[0].signals) == 1
+    assert events[1].signals == []
+    await collector.stop()
+
+
+async def test_attach_signal_window_is_1s_not_2s(tmp_path):
+    """因果窗口是 1s（对齐扩展 side-effect-observer 的 ACTION_WINDOW_MS）。
+
+    click ts=1000，信号 ts=2100（>1s 后）→ 不 attach（超因果窗口）。
+    旧逻辑用 2s 窗口会误 attach；修复后 1s。
+    """
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    await collector.ingest({"payload": {"type": "click"}, "ts": 1000})
+    # 1100ms 后——超 1s 因果窗口
+    attached = await collector.attach_signal(
+        {"type": "modal_opened", "selector": "div", "ts": 2100}
+    )
+    assert attached is False
+    assert collector.session.events[-1].signals == []
+    await collector.stop()
+
+
+async def test_attach_signal_no_trigger_action_returns_false(tmp_path):
+    """无 action event（只有 scroll/input）时 → 不 attach（没触发者可附）。
+
+    场景：纯 scroll/input 序列里来了个 modal 信号——这些事件不触发 modal，找不到触发者。
+    """
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    await collector.ingest({"payload": {"type": "scroll"}, "ts": 1000})
+    await collector.ingest({"payload": {"type": "input"}, "ts": 1100})
+    attached = await collector.attach_signal(
+        {"type": "modal_opened", "selector": "div", "ts": 1200}
+    )
+    assert attached is False
+    for ev in collector.session.events:
+        assert ev.signals == []
+    await collector.stop()
+
+
+async def test_attach_signal_picks_nearest_of_multiple_clicks(tmp_path):
+    """多个候选 click 时，选最近的（时间上离信号最近的那个）。"""
+    cdp = _make_mock_cdp()
+    collector = Collector(cdp, output_dir=str(tmp_path))
+    await collector.start()
+    await collector.ingest({"payload": {"type": "click", "raw_attrs": {"tag": "a"}}, "ts": 1000})
+    await collector.ingest(
+        {"payload": {"type": "click", "raw_attrs": {"tag": "button"}}, "ts": 1500}
+    )
+    # 信号 ts=1600（最近的 click 在 100ms 前，更早的 click 在 600ms 前）
+    attached = await collector.attach_signal(
+        {"type": "modal_opened", "selector": "div", "ts": 1600}
+    )
+    assert attached is True
+    events = collector.session.events
+    # 挂到最近的 click（events[1]，button），不是早的 click（events[0]，a）
+    assert events[1].signals == [{"type": "modal_opened", "selector": "div", "ts": 1600}]
+    assert events[0].signals == []
+    await collector.stop()

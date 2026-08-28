@@ -468,3 +468,122 @@ def test_evidence_block_stages_unknown_when_no_stage():
     )
     block = _evidence_block(bucket)
     assert "Stages: (unknown)" in block
+
+
+# ---------------------------------------------------------------------------
+# P3.7：蒸馏注入消费端上下文（TreeWalker agent 能力模型）
+# ---------------------------------------------------------------------------
+
+
+def test_prompt_contains_consumer_context_section():
+    """P3.7 验收：prompt 模板应含消费端上下文段（agent 动作词汇 + 自动处理清单）。
+
+    这是个 prompt 契约测试——防止后续误改 prompt 时把消费端上下文段删掉。
+    """
+    prompt = distiller._DISTILL_PROMPT_TEMPLATE
+
+    # 占位符必须在模板里（format 调用填 _CONSUMER_CONTEXT）
+    assert "{consumer_context}" in prompt, "prompt 应有 consumer_context 占位符"
+
+    # 消费端上下文常量含关键片段
+    ctx = distiller._CONSUMER_CONTEXT
+    assert "TreeWalker agent" in ctx, "消费端上下文应指明消费端是 TreeWalker agent"
+    # 动作词汇：关键动作名必须列（钉住镜像同步——改 TreeWalker 动作集时这里会红）
+    for action in ("upload_file", "select_dropdown", "send_keys", "click", "input_text"):
+        assert action in ctx, f"消费端上下文应含动作词汇：{action}"
+    # 「已自动处理别写」清单（比动作表更值钱的部分）
+    assert "ALREADY handles automatically" in ctx
+    assert "JS click" in ctx or "occlusion" in ctx, "应列 JS 点击/遮挡自动兜底"
+
+
+def test_prompt_quirks_rules_reference_auto_handling():
+    """P3.7 验收：quirks Do-NOT-WRITE 规则应含「agent 自动处理的不写」+ 两问决策启发式。"""
+    prompt = distiller._DISTILL_PROMPT_TEMPLATE
+
+    # Do-NOT-WRITE 加了「session 层自动处理」一条
+    assert "already handles automatically" in prompt, (
+        "quirks Do-NOT-WRITE 应含「agent session 层自动处理的不写」规则"
+    )
+    # 决策启发式从一问扩成两问（DOM 可见 + 自动兜底）
+    assert "TWO questions" in prompt or "two questions" in prompt, (
+        "决策启发式应扩成两问（DOM 可见 + 自动兜底）"
+    )
+    # Action-method requirements 规则应指向 Consumer context 的动作词汇
+    assert "Consumer context above" in prompt or "action name from the vocabulary" in prompt, (
+        "Action-method requirements 规则应指向消费端动作词汇"
+    )
+
+
+def test_distill_bucket_prompt_includes_consumer_context(bilibili_trace_payload):
+    """P3.7 验收：真发 LLM 时，user message 应含消费端上下文（mock LLM，不真调）。"""
+    bucket = _make_bucket(bilibili_trace_payload)
+    captured_prompt = []
+
+    def fake_call_llm(prompt, **kwargs):
+        captured_prompt.append(prompt)
+        return (json.dumps(_FAKE_LLM_RESPONSE), {"input_tokens": 10, "output_tokens": 20})
+
+    with (
+        patch("harness.distiller.call_llm", side_effect=fake_call_llm),
+        patch("harness.distiller.config.LLM_KEY", "fake-key"),
+    ):
+        distiller.distill_bucket(bucket, use_llm=True)
+
+    sent = captured_prompt[0]
+    # 消费端上下文确实进了 LLM 看到的 prompt
+    assert "TreeWalker agent" in sent, "发往 LLM 的 prompt 应含消费端上下文"
+    assert "upload_file(index, path)" in sent
+    assert "select_dropdown(index, value)" in sent
+    assert "ALREADY handles automatically" in sent
+
+
+def test_consumer_context_mirrors_treewalker_key_actions():
+    """P3.7 验收：消费端上下文的动作名应对齐 TreeWalker 动作集关键成员。
+
+    防镜像漂移——TreeWalker 动作集变化时改一边漏改另一边，此测试会红。
+    （TreeWalker ACTION_DEFINITIONS 见 src/tree_walker/tools/models.py）
+    """
+    ctx = distiller._CONSUMER_CONTEXT
+    # 这些是 TreeWalker 动作集里蒸馏最相关的、且动作名/签名稳定的成员。
+    # 签名串对齐 ACTION_DEFINITIONS + 各 Params 模型（index/value/path/keys 等参数名）。
+    must_have = {
+        "click": "click(index=…)",
+        "input_text": "input_text(index=…, text, clear=true)",
+        "select_dropdown": "select_dropdown(index, value)",
+        "dropdown_options": "dropdown_options(index)",  # 读下拉选项（select 前探查）
+        "upload_file": "upload_file(index, path)",
+        "send_keys": "send_keys(keys)",
+        "navigate": "navigate(url, new_tab=false)",
+        "go_back": "go_back()",
+        "wait": "wait(seconds)",
+        "done": "done(text, success)",
+        "scroll": "scroll(amount, direction)",
+        "switch_tab": "switch_tab(tab_id)",
+        "close_tab": "close_tab(tab_id",
+    }
+    for name, signature in must_have.items():
+        assert signature in ctx, (
+            f"消费端上下文应含 TreeWalker 动作 {name} 的签名（防镜像漂移）：期望含「{signature}」"
+        )
+
+    # 关键操作约束（对齐 TreeWalker 原文）——这些是 distiller 必须传达给 LLM 的高价值信息：
+    # select_dropdown / upload_file 都明确「不要先点击」，否则 LLM 写出的 sop 会误导 agent。
+    assert "click it first" in ctx, (
+        "select_dropdown 应传达「不要先点击下拉」（对齐 TreeWalker 原文）"
+    )
+    assert "Do NOT click the input" in ctx, (
+        "upload_file 应传达「不要先点击 input/上传按钮」（对齐 TreeWalker 原文）"
+    )
+    # send_keys 的组合键格式（对齐 SendKeysParams 原文）
+    assert "Control+a" in ctx, "send_keys 应含组合键格式示例（对齐 TreeWalker 原文）"
+
+    # select_dropdown 能力边界（对齐 TreeWalker 原文 "native <select>, role=combobox,
+    # role=listbox, or custom dropdown"）——必须明确支持自定义下拉，否则 LLM 看到
+    # <div> 下拉会误判「不能用 select_dropdown」（抖音 trace 实测踩过这个坑）。
+    assert "custom dropdown" in ctx.lower(), (
+        "select_dropdown 应明确支持自定义下拉（对齐 TreeWalker 原文），否则 LLM 会误判"
+    )
+    # 必须明确警告：不要因为「是 div 不是 select」就否定 select_dropdown
+    assert "not a `<select>`" in ctx or "not a `<select>`".lower() in ctx.lower(), (
+        "消费端上下文应明确警告：不要因「是 div 不是 select」就否定 select_dropdown"
+    )

@@ -1,6 +1,6 @@
 """发现 Chrome 的 WebSocket 调试 URL（ws_url）。
 
-Chrome 以 --remote-debugging-port=9222 启动后，可通过 HTTP GET /json/version
+Chrome 以 --remote-debugging-port=9223 启动后，可通过 HTTP GET /json/version
 拿到 webSocketDebuggerUrl，供 CDPClient 连接。
 
 用 stdlib urllib（不引 httpx/requests，符合 treeforge 不引额外依赖原则）。
@@ -15,7 +15,7 @@ import urllib.request
 logger = logging.getLogger(__name__)
 
 DEFAULT_CDP_HOST = "localhost"
-DEFAULT_CDP_PORT = 9222
+DEFAULT_CDP_PORT = 9223
 
 
 def fetch_ws_url(
@@ -24,7 +24,7 @@ def fetch_ws_url(
     """从 Chrome 的 /json/version 拿 webSocketDebuggerUrl。
 
     Returns:
-        ws_url（如 ws://localhost:9222/devtools/browser/xxx）；Chrome 未启动或不可达返回 None。
+        ws_url（如 ws://localhost:9223/devtools/browser/xxx）；Chrome 未启动或不可达返回 None。
     """
     url = f"http://{host}:{port}/json/version"
     try:

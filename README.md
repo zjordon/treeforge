@@ -111,7 +111,7 @@ uv run treeforge serve --port 8765
 
 ### 采集真实操作（配合扩展）
 
-1. 以远程调试端口启动 Chrome：`chrome --remote-debugging-port=9222 --user-data-dir=<profile>`
+1. 以远程调试端口启动 Chrome：`chrome --remote-debugging-port=9223 --user-data-dir=<profile>`
 2. 加载扩展：`cd extension && npm install && npm run build`，然后 Chrome 加载 `extension/.output/chrome-mv3`（或开发模式 `npm run dev`）
 3. 起后端：`uv run treeforge serve`（或一次性 `treeforge capture`）
 4. 扩展 popup 点「开始录制」→ 操作浏览器 → 点「停止」→ 后端导出 trace 到 `data/captures/`

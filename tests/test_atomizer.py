@@ -57,6 +57,92 @@ def test_filter_noise_keeps_clicks_over_2s():
 
 
 # ---------------------------------------------------------------------------
+# click 合并 bug 回归（P3.7 期间发现）：
+# 原逻辑只比 selector，新格式 trace 用 element_attrs 不填 selector，两个空 selector
+# 恒等（"" == ""）导致同页面任意两个 < 2s 的 click 都被判重被吞（误杀「选择合集」「确定」
+# 等不同按钮）。修复后按 element_attrs 稳定标识判等，都无标识时保守判不同（不合并）。
+# ---------------------------------------------------------------------------
+
+
+def test_filter_noise_keeps_different_clicks_with_element_attrs():
+    """不同按钮的 click（element_attrs 稳定标识不同，selector 都空）不应被合并。
+
+    这是 ae99467f 抖音 trace 漏「选择合集」的根因回归：同页面连续点击不同按钮，
+    selector 都为空时旧逻辑误判为重复。修复后必须全保留。
+    """
+    events = [
+        TraceEvent(
+            type="click",
+            element_attrs={"tag": "div", "aria-label": "请选择合集"},
+            url="https://x.com/up",
+            timestamp=0,
+        ),
+        TraceEvent(
+            type="click",
+            element_attrs={"tag": "div", "aria-label": "请选择自主声明"},
+            url="https://x.com/up",
+            timestamp=500,
+        ),
+        TraceEvent(
+            type="click",
+            element_attrs={"tag": "button", "aria-label": "确定"},
+            url="https://x.com/up",
+            timestamp=900,
+        ),
+    ]
+    cleaned = _filter_noise(events)
+    # 三个不同按钮（aria-label 不同）必须全保留——修复前会被合并成 1 个
+    assert len(cleaned) == 3, "不同按钮的 click（element_attrs 标识不同）不应被合并"
+
+
+def test_filter_noise_merges_duplicate_clicks_by_element_attrs():
+    """同一按钮的连续重复 click（element_attrs 稳定标识相同）应合并。
+
+    修复后判等改走 element_attrs，要确保真正的重复点击（同 id/aria-label）仍能合并。
+    """
+    attrs = {"tag": "button", "id": "submit-btn", "aria-label": "提交"}
+    events = [
+        TraceEvent(type="click", element_attrs=attrs, url="https://x.com/", timestamp=0),
+        TraceEvent(type="click", element_attrs=attrs, url="https://x.com/", timestamp=500),
+    ]
+    cleaned = _filter_noise(events)
+    assert len(cleaned) == 1, "同 id 同 aria-label 的连续 click 应合并"
+
+
+def test_filter_noise_keeps_clicks_when_both_attrs_missing():
+    """两边都无 element_attrs 且都无 selector 时保守判不同（不合并）。
+
+    防止回到「空 selector 恒等」的旧 bug：信息不足时不合并，宁可多保留也不误杀。
+    """
+    events = [
+        TraceEvent(type="click", url="https://x.com/", timestamp=0),  # 无 selector 无 attrs
+        TraceEvent(type="click", url="https://x.com/", timestamp=500),  # 同上
+    ]
+    cleaned = _filter_noise(events)
+    assert len(cleaned) == 2, "都无 selector 且都无 element_attrs 时应保守保留（不合并）"
+
+
+def test_filter_noise_merges_duplicate_clicks_by_visible_text():
+    """同 tag + 同 visible_text 的连续 click（无稳定标识）应合并（同种按钮重复点）。"""
+    events = [
+        TraceEvent(
+            type="click",
+            element_attrs={"tag": "span", "visible_text": "展开"},
+            url="https://x.com/",
+            timestamp=0,
+        ),
+        TraceEvent(
+            type="click",
+            element_attrs={"tag": "span", "visible_text": "展开"},
+            url="https://x.com/",
+            timestamp=800,
+        ),
+    ]
+    cleaned = _filter_noise(events)
+    assert len(cleaned) == 1, "同 tag+visible_text 的连续 click（无稳定标识）应合并"
+
+
+# ---------------------------------------------------------------------------
 # input 合并（P2.3.2）：同目标连续 input 合并保留终值
 # 真机场景：标题一次输入被扩展 debounce 切成 5 条（人类停顿 0.6–3.8s 远超 400ms 窗口）
 # ---------------------------------------------------------------------------
