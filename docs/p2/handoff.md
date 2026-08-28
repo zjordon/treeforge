@@ -197,7 +197,7 @@ docs/p2/
 cd treeforge/extension && npm run build
 
 # 2. Chrome 以远程调试端口启动
-chrome --remote-debugging-port=9222 --user-data-dir=<profile>
+chrome --remote-debugging-port=9223 --user-data-dir=<profile>
 # chrome://extensions → 加载 extension/.output/chrome-mv3/
 
 # 3. 启动采集后端

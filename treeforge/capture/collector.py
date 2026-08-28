@@ -51,6 +51,48 @@ def _extract_real_host(url: str) -> str:
     return hostname
 
 
+# 可触发 modal/dropdown 副作用的事件类型（attach_signal 找触发 action 用）。
+# scroll/input（被动输入）不会打开 modal/dropdown，跳过；upload_file 点开文件选择器
+# 是 OS 级（不产 modal signal），但上传区点击常先有个 click 触发，故 upload_file 保留
+# 作候选（少见，但若上传触发了页面 modal 仍算）。
+_SIGNAL_TRIGGER_TYPES: frozenset[str] = frozenset(
+    {"click", "upload_file", "navigate", "select_dropdown", "send_keys"}
+)
+
+# 信号因果窗口：扩展 side-effect-observer 在动作后 1s 窗口检测副作用（见 side-effect-observer.ts
+# 的 ACTION_WINDOW_MS=1000），故信号 ts 距触发 action ts 应在 1s 内（含轻微时序抖动余量）。
+_SIGNAL_CAUSAL_WINDOW_MS = 1000
+
+
+def _find_signal_trigger(
+    events: list[CapturedEvent], signal_ts: int, window_ms: int
+) -> CapturedEvent | None:
+    """在 signal_ts 之前找最近的可触发副作用 action event（click/upload_file/...）。
+
+    向前扫描（从最新到最旧），返回最后一个 timestamp ≤ signal_ts 且在 window_ms 窗口内的
+    action event。scroll/input（被动）跳过——它们不触发 modal/dropdown 打开。
+
+    为什么不直接用 events[-1]：信号到达时 events[-1] 可能是个与信号时间重叠的无关 scroll/passive
+    input（/signal 与 /ingest 的处理顺序不保证反映因果）。按 action 类型 + 因果窗口找更准。
+    """
+    best: CapturedEvent | None = None
+    for ev in reversed(events):
+        if ev.type not in _SIGNAL_TRIGGER_TYPES:
+            continue
+        if not ev.timestamp:
+            continue
+        # 只认在 signal 之前发生的（timestamp ≤ signal_ts）
+        if ev.timestamp > signal_ts:
+            continue
+        delta = signal_ts - ev.timestamp
+        if delta > window_ms:
+            break  # 继续向前只会更远（events 按时间序），停
+        # 窗口内最近的 action（reversed 扫描遇到的第一个就是最近的）
+        best = ev
+        break
+    return best
+
+
 @dataclass
 class CapturedEvent:
     """采集到的一个事件（对应一个扩展事件 + 采集时的页面状态）。
@@ -201,10 +243,11 @@ class Collector:
         # 实时采快照 + 判 stage（实时采集原则：趁 DOM 活的）
         dom_text = ""
         try:
-            # 跟随用户 tab：envelope 带 tab_id 且与当前不同 → 重 attach 精确 target
+            # 跟随用户 tab：envelope 带 tab_id 且与当前不同 → 重 attach 精确 target。
+            # 传 url 给 attach_tab 作兜底（部分 Chrome 环境 tabId=None，靠 url 匹配 target）。
             tab_id = envelope.get("tab_id")
             if tab_id is not None and tab_id != self._attached_tab:
-                if await self.cdp.attach_tab(tab_id):
+                if await self.cdp.attach_tab(tab_id, url=url):
                     self._attached_tab = tab_id
             state = await self.cdp.get_state()
             dom_text = state.dom_state.element_tree_text or ""
@@ -232,14 +275,20 @@ class Collector:
         self._session.events.append(event)
 
     async def attach_signal(self, payload: dict[str, Any]) -> bool:
-        """把副作用信号（modal/dropdown 打开）attach 到最近 capture event。
+        """把副作用信号（modal/dropdown 打开）attach 到触发它的 action event。
 
         P3.6 迁自 TreeWalker Recorder.attach_signal。信号本身不是动作（不进 events 列表），
-        而是附到最近的 capture event 上，作为 distiller 写 quirks.md 的原料
+        而是附到触发它的 action event 上，作为 distiller 写 quirks.md 的原料
         （「点这个按钮会弹出 modal」「选这个下拉会展开选项」）。
 
+        【信号归属修复】原逻辑附到 ``events[-1]``（最近事件），但信号到达时最近事件可能
+        是个无关的 scroll/passive input（与信号时间重叠、且 /signal 与 /ingest 的处理顺序
+        不保证反映因果）。修复：在信号时间戳向前找最近的可触发副作用的 action event
+        （click/upload_file/navigate/select_dropdown/send_keys），在因果窗口（≤1s）内才算。
+        scroll/input（被动输入）不会触发 modal/dropdown 打开，跳过。
+
         payload = { type: 'modal_opened'|'dropdown_opened', selector, ts }
-        返回是否成功 attach（最近事件在 2s 窗口内才算）。
+        返回是否成功 attach（找到 ≤1s 窗口内的触发 action 才算）。
         """
         if not self._session or not self._session.events:
             return False
@@ -249,12 +298,14 @@ class Collector:
             return False
 
         ts = int(payload.get("ts", 0))
-        # 附到最近事件：ts 在最近事件 2s 后才算（动作引发副作用的合理窗口）
-        last = self._session.events[-1]
-        if ts and last.timestamp and ts - last.timestamp > 2000:
+
+        # 向前找最近的可触发副作用的 action event（scroll/input 跳过）。
+        # 扩展 side-effect-observer 在动作后 1s 窗口检测，故因果窗口用 1s（对齐扩展端）。
+        trigger = _find_signal_trigger(self._session.events, ts, _SIGNAL_CAUSAL_WINDOW_MS)
+        if trigger is None:
             return False
 
-        last.signals.append(
+        trigger.signals.append(
             {
                 "type": signal_type,
                 "selector": payload.get("selector", ""),

@@ -117,6 +117,62 @@ def _same_input_target(a: TraceEvent, b: TraceEvent) -> bool:
     return False
 
 
+def _same_click_target(a: TraceEvent, b: TraceEvent) -> bool:
+    """判定两个 click 事件是否作用于同一元素（用于重复点击合并）。
+
+    【修复】原逻辑只比 selector，新格式 trace 用 element_attrs 不填 selector，
+    导致两个空 selector 恒等（"" == ""），同页面任意两个 < 2s 的 click 都被判重被吞
+    （误杀「选择合集」「确定」等不同按钮）。修复策略对齐 _same_input_target：
+
+      1. 都有 element_attrs：按稳定标识（id/name/aria-label/role/data-testid 等）判等，
+         任一稳定标识相同才算同一目标；稳定标识都无时，退化到 tag + visible_text 联合判
+         （二者都必须非空且相同——避免「同 tag 同空文本」误判）。
+      2. 都无 element_attrs（老格式）：退化到 selector 判等，但 selector 必须非空
+         （两个空 selector 不算同——避免回到原 bug）。
+      3. 一方有 element_attrs 一方无：保守判不同（不合并，避免误杀）。
+
+    核心原则：信息不足时返回 False（保守保留），宁可多保留也不误杀不同按钮。
+    """
+    ea, eb = a.element_attrs or {}, b.element_attrs or {}
+    has_attrs_a = bool(ea)
+    has_attrs_b = bool(eb)
+
+    # 两边都有 element_attrs（新格式）
+    if has_attrs_a and has_attrs_b:
+        # 任一稳定标识相同 → 同一目标
+        for k in _CLICK_STABLE_ATTRS:
+            va, vb = ea.get(k), eb.get(k)
+            if va and vb and va == vb:
+                return True
+        # 稳定标识都不同：退化到 tag + visible_text 联合判（都非空且相同才算同）
+        tag_a, tag_b = ea.get("tag") or "", eb.get("tag") or ""
+        text_a, text_b = ea.get("visible_text") or "", eb.get("visible_text") or ""
+        return bool(tag_a and tag_b and tag_a == tag_b and text_a and text_b and text_a == text_b)
+
+    # 两边都无 element_attrs（老格式）：退化到 selector，但必须非空
+    if not has_attrs_a and not has_attrs_b:
+        sel_a, sel_b = a.selector or "", b.selector or ""
+        return bool(sel_a and sel_a == sel_b)
+
+    # 一方有一方无：保守判不同（不合并）
+    return False
+
+
+# click 判等用的稳定标识（比 input 多 role/data-testid/data-test/data-cy——按钮常用）。
+# 注意：不含 placeholder（按钮没有），不含 visible_text（visible_text 单独按 tag+text 联合判）。
+_CLICK_STABLE_ATTRS: tuple[str, ...] = (
+    "id",
+    "name",
+    "aria-label",
+    "aria-labelledby",
+    "role",
+    "data-testid",
+    "data-test",
+    "data-cy",
+    "data-tw-jsclick",
+)
+
+
 def _filter_noise(events: list[TraceEvent]) -> list[TraceEvent]:
     """四类去噪：iframe pageLoad / 孤立修饰键 / 重复点击合并 / 连续同目标 input 合并。"""
     out: list[TraceEvent] = []
@@ -146,13 +202,17 @@ def _filter_noise(events: list[TraceEvent]) -> list[TraceEvent]:
                 i += 1
                 continue
 
-        # 3. 重复点击合并：同 selector+url，间隔 < 2s，保留后者
+        # 3. 重复点击合并：同目标元素 + 同 url，间隔 < 2s，保留后者。
+        # 【修复】原逻辑只比 selector，新格式 trace 用 element_attrs 不填 selector，
+        # 两个空 selector 恒等导致同页面任意两个 < 2s 的 click 都被判重（误杀「选择合集」
+        # 等不同按钮）。改用 _same_click_target：按 element_attrs 稳定标识判等，
+        # 都无标识时保守判不同（不合并）。
         if ev.type == "click" and out:
             prev = out[-1]
             same = (
                 prev.type == "click"
-                and (prev.selector or "") == (ev.selector or "")
                 and (prev.url or "") == (ev.url or "")
+                and _same_click_target(prev, ev)
             )
             if same and 0 <= ev.timestamp - prev.timestamp < 2000:
                 out[-1] = ev  # 用后者覆盖

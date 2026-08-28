@@ -21,6 +21,22 @@ from dom_snapshot import EMPTY_DOM_STATE, SerializedDOMState, build_dom_state
 logger = logging.getLogger(__name__)
 
 
+def _url_host_path(url: str) -> str:
+    """规范化 url 为 host + path（去 query/hash），用于 target url 匹配。
+
+    例：``https://x.com/a?b=1#top`` → ``x.com/a``。非 http(s) 返回空串。
+    容忍导航中的 url 细微差异（query 变化不影响 target 归属）。
+    """
+    if not url:
+        return ""
+    from urllib.parse import urlparse
+
+    parsed = urlparse(url)
+    if parsed.scheme not in ("http", "https"):
+        return ""
+    return f"{parsed.hostname or ''}{parsed.path or ''}"
+
+
 @dataclass
 class CaptureState:
     """采集层需要的页面状态：url/title + DOM 快照。
@@ -43,7 +59,7 @@ class CdpSession:
     - get_state 委托 dom-snapshot.build_dom_state（与 TreeWalker 同源，保证快照格式一致）
 
     用法：
-        session = CdpSession(ws_url="ws://localhost:9222/...")
+        session = CdpSession(ws_url="ws://localhost:9223/...")
         await session.start()
         state = await session.get_state()  # CaptureState(url, title, dom_state)
         await session.stop()
@@ -64,7 +80,7 @@ class CdpSession:
         """连 CDP（browser-level ws），eager attach 首个 http target 作 fallback。
 
         参照 TreeWalker session.py:_connect（1203-1269），但去掉熔断器/网络空闲/高亮/file-chooser。
-        Chrome 需以 --remote-debugging-port=9222 启动。
+        Chrome 需以 --remote-debugging-port=9223 启动（默认端口，见 ws_discover.DEFAULT_CDP_PORT）。
 
         target 选择（eager fallback）：优先 http/https 真实页面，跳过 chrome-extension://（popup）、
         chrome://（内部页）、devtools://。这个 eager attach 是给「无 tab_id 的老流程」兜底；
@@ -82,10 +98,18 @@ class CdpSession:
             # 无 page target 也允许 start（等首个事件带 tab_id 时再 attach）
             logger.info("CdpSession connected, no page target yet (waiting for tab_id)")
 
-    async def attach_tab(self, tab_id: int) -> bool:
+    async def attach_tab(self, tab_id: int | None, url: str | None = None) -> bool:
         """精确 attach 指定 chrome tab 的 CDP target。
 
-        通过 Target.getTargets 的 tabId 字段（与 chrome.tabs API 同 id 空间）定位 target。
+        定位策略（两道，tabId 优先，url 兜底）：
+          1. 按 tabId 匹配（Target.getTargets 的 tabId 字段，与 chrome.tabs API 同 id 空间）。
+          2. tabId 缺失或找不到时，按 url 匹配——collector 知道每个事件的真实页面 url
+             （content script 报的），用它找 url 匹配的 http page target。
+
+        【为什么加 url 兜底】部分 Chrome 环境（如某些启动方式/版本）CDP 不填 tabId 字段
+        （实测 tabId=None），导致纯 tabId 匹配完全失效，tab 跟随瘫痪，快照采到错误的 target
+        （如扩展 popup）。url 兜底让 target 选择不依赖 tabId 这单一不稳定字段。
+
         若已是当前 target（幂等）跳过；否则 detach 旧的、attach 新的 + enable 域。
 
         Returns: True 表示已 attach 到目标 tab；False 表示找不到对应 target。
@@ -96,9 +120,13 @@ class CdpSession:
         if tab_id == self.current_tab_id and self.current_session_id:
             return True
 
-        target = await self._find_target_by_tab_id(tab_id)
+        target = await self._find_target_by_tab_id(tab_id, url)
         if not target:
-            logger.warning("attach_tab: no target for tabId=%s (fallback to current)", tab_id)
+            logger.warning(
+                "attach_tab: no target for tabId=%s url=%s (fallback to current)",
+                tab_id,
+                (url or "")[:60],
+            )
             return False
 
         await self._attach_and_enable(target["targetId"])
@@ -118,20 +146,50 @@ class CdpSession:
         candidates = real_pages or page_targets
         return candidates[0] if candidates else None
 
-    async def _find_target_by_tab_id(self, tab_id: int) -> dict | None:
-        """按 chrome tabId 找 CDP page target。
+    async def _find_target_by_tab_id(
+        self, tab_id: int | None, url: str | None = None
+    ) -> dict | None:
+        """按 chrome tabId 找 CDP page target；tabId 缺失/找不到时按 url 匹配。
 
-        tabId 是 Target.getTargets 的实验性字段（近年 Chrome 稳定支持），
-        TypedDict 未声明但运行时 t.get('tabId') 可读。
+        tabId 是 Target.getTargets 的实验性字段（近年 Chrome 稳定支持），但部分环境不填
+        （实测 tabId=None）。url 兜底：collector 传事件真实页面 url，按 host+path 规范化匹配
+        http/https page target（忽略 query/hash，容忍导航中的 url 细微差异）。
+
+        两道都试：tabId 命中直接返回；否则按 url 匹配（都找不到返回 None）。
         """
         if not self.client:
             return None
         targets = await self.client.send.Target.getTargets({})
-        for t in targets.get("targetInfos", []):
-            if t.get("type") != "page":
-                continue
-            if t.get("tabId") == tab_id:
-                return t
+        page_targets = [t for t in targets.get("targetInfos", []) if t.get("type") == "page"]
+
+        # 1. 按 tabId 匹配（tabId 非空才试——None == None 会误命中无 tabId 的 target）
+        if tab_id is not None:
+            for t in page_targets:
+                if t.get("tabId") == tab_id:
+                    return t
+
+        # 2. 按 url 匹配（tabId 缺失/找不到时兜底）：只认 http/https page，host+path 规范化
+        if url:
+            target_key = _url_host_path(url)
+            if target_key:  # url 是有效 http(s) 才匹配（跳过 chrome:// 等）
+                best: dict | None = None
+                best_len = -1
+                for t in page_targets:
+                    t_url = t.get("url", "")
+                    t_key = _url_host_path(t_url)
+                    if not t_key:
+                        continue
+                    # 完全匹配 host+path 最优；否则取 host 匹配里 path 最长的（最相近的页面）
+                    if t_key == target_key:
+                        return t
+                    if t_key.split("/")[0] == target_key.split("/")[0]:  # 同 host
+                        # 记 host 匹配的候选（path 最长的优先，近似度最高）
+                        tpath_len = len(t_key)
+                        if tpath_len > best_len:
+                            best_len = tpath_len
+                            best = t
+                if best:
+                    return best
         return None
 
     async def _attach_and_enable(self, target_id: str) -> None:

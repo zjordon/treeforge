@@ -206,7 +206,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--cdp-host", default="localhost", help="Chrome 远程调试 host（默认 localhost）"
     )
     p_capture.add_argument(
-        "--cdp-port", type=int, default=9222, help="Chrome 远程调试端口（默认 9222）"
+        "--cdp-port", type=int, default=9223, help="Chrome 远程调试端口（默认 9223）"
     )
     p_capture.add_argument(
         "--backend-host", default="127.0.0.1", help="采集后端监听 host（默认 127.0.0.1）"
@@ -234,7 +234,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--cdp-host", default="localhost", help="Chrome 远程调试 host（默认 localhost）"
     )
     p_serve.add_argument(
-        "--cdp-port", type=int, default=9222, help="Chrome 远程调试端口（默认 9222）"
+        "--cdp-port", type=int, default=9223, help="Chrome 远程调试端口（默认 9223）"
     )
     p_serve.add_argument(
         "--captures-dir",

@@ -50,6 +50,95 @@ _DISTILL_SYSTEM = (
     "Output STRICT JSON only, no prose, no markdown fences."
 )
 
+# ---------------------------------------------------------------------------
+# 消费端上下文（P3.7）——蒸馏 LLM 需要知道消费端（TreeWalker agent）的能力边界
+# ---------------------------------------------------------------------------
+# 镜像自 TreeWalker src/tree_walker/tools/models.py ACTION_DEFINITIONS（24 动作）+
+# browser/session.py 自动兜底逻辑。TreeWalker 动作集稳定（变化慢），维护一份 prompt
+# 片段成本可控。改 TreeWalker 动作集时需手动同步此处——test_distiller 有测试钉关键动作名。
+#
+# 【为什么需要这个】原 prompt 只说「消费端是读 [index]<tag attr=val /> text DOM 的 agent」
+# （感知模型），完全没说能做什么动作（能力模型）——"tool" 在 prompt 里出现 0 次，唯一动作名
+# upload_file 埋在一个 quirks 示例里。结果 sop 动词落不到真实 tool 名，quirks 该写「upload_file
+# 直注」这类方法要求的也容易漏（A/B 测蒸馏版比手写差 38% 主要就漏这条）。
+#
+# 【关键洞察：「别写」比「能做」更值钱】agent 有很多能力是 session 层自动处理的（JS 点击/
+# 遮挡、下拉降级、多 file input 元数据），写进 skill 反而浪费 token 甚至误导。所以这里同时给
+# 「动作词汇」（让 sop/quirks 引用真实动作名）+「已自动处理别写」（避免废话）。
+_CONSUMER_CONTEXT = """\
+# Consumer context — the agent that will use this skill
+
+The consumer is **TreeWalker agent**. It drives the browser via a fixed action vocabulary \
+(`ACTION_DEFINITIONS`, 24 actions total). When you describe a method requirement (e.g. \
+"must upload via direct injection"), reference the action by its EXACT name and signature \
+so the agent recognizes it. The signatures below are the authoritative params.
+
+## Action vocabulary (distill-relevant subset, verbatim from ACTION_DEFINITIONS)
+
+Navigation / tabs:
+- `navigate(url, new_tab=false)` — go to a URL in the current tab, or open in a new tab.
+- `go_back()` — navigate back to the previous page in history.
+- `switch_tab(tab_id)` — switch to a different browser tab (tab_id = last 4 chars of the id).
+- `close_tab(tab_id="")` — close a browser tab ("" = current).
+
+Element interaction (target by `index` from the DOM tree, or `element_id` from find_elements):
+- `click(index=…)` — click an element by its index. index === backend_node_id.
+- `input_text(index=…, text, clear=true)` — type into `<input>`/`<textarea>`/`contenteditable`; \
+`clear=true` clears existing text first.
+- `send_keys(keys)` — key combos / named keys. Combos use '+': `Control+a`, `Shift+T`, `Alt+F4`. \
+Named keys: `Enter`, `Tab`, `Escape`, `ArrowUp`, `F5`. Plain text is typed char-by-char. \
+Use this for non-printable keys (e.g. a tag input that commits with `Enter`).
+
+Dropdowns — `select_dropdown` works on ALL of these (not just native `<select>`):
+native `<select>`, `role=combobox`, `role=listbox`, **and custom dropdowns built from `<div>`/`<span>`/`<ul>`**. Many sites (e.g. 抖音/飞书) render dropdowns as `<div>`+`<span>` lists rather than `<select>` — `select_dropdown` STILL applies; do NOT conclude "must use click because it's not a `<select>`".
+- `dropdown_options(index)` — get all options from a dropdown element (any of the above types).
+- `select_dropdown(index, value)` — select an option. **Pass the dropdown's index — do NOT \
+click it first.** (The agent handles the open+select internally.) Prefer this over \
+`click(index)` on individual option nodes when the element is a dropdown (the agent's \
+select logic is more robust than manual click-on-option).
+
+File upload:
+- `upload_file(index, path)` — upload a file to a file input element. **Do NOT click the input \
+or an upload button first — `upload_file` sets the file directly without opening the OS file \
+picker.** This is the ONLY way to handle `<input type=file>` (clicking opens an OS-native \
+dialog the agent cannot drive). The `index` may target the hidden input OR its labeled upload \
+area / dropzone.
+
+Scroll / wait:
+- `scroll(amount, direction)` — scroll the page up or down; `amount` is viewport-heights (1-10). \
+Check the 'X pages below' hint on scrollable elements in the DOM to judge how much remains.
+- `wait(seconds)` — wait 1-30 seconds (use when an async render must complete before the next step).
+
+Completion:
+- `done(text, success)` — signal task complete and stop. Must be the only action in its step.
+
+The agent looks up `index` directly in its current DOM snapshot — there is **NO xpath/attribute \
+fuzzy matching at runtime**. So for ambiguous elements, skills must guide attribute-based \
+identification (that's what `selectors_md` is for); a stale index makes the agent error and \
+re-read the DOM, not auto-resolve.
+
+## What the agent ALREADY handles automatically — DO NOT write these into the skill
+
+Writing these wastes the agent's attention budget and may mislead it. They are silent \
+robustness layers in the agent's session code, not things the skill should teach.
+
+- **JS click / occlusion**: if an element is covered by an overlay, the agent auto-falls-back \
+to a JS click. Do NOT write "use JS click" / "element is occluded" / "force click".
+- **Dropdown handling**: `select_dropdown(index, value)` opens and selects in one action — the \
+agent does NOT need a prior `click` to open it. Do NOT write "click the dropdown first, then \
+select the option"; one `select_dropdown` (or `dropdown_options` to read choices) suffices. \
+**IMPORTANT: `select_dropdown` works on custom `<div>`/`<span>` dropdowns, not just native \
+`<select>` — do NOT write "don't use `select_dropdown` because it's a `<div>` not a `<select>`"; \
+that is FALSE. Only fall back to `click(index)` on option nodes when the element is genuinely \
+not a dropdown (e.g. a modal dialog with radio-like choices, where `click` is the right action).
+- **Multi file-input metadata**: the DOM already lists each `<input type=file>` with its \
+`class`, `accept`, visible/hidden status in a `[File Inputs]` section. Do NOT copy this \
+verbatim — only note it when the disambiguation is NON-obvious (e.g. conditional rendering, \
+or `accept` is the only distinguisher among same-name inputs).
+- **Runtime fuzzy matching**: there is NONE (see above). Do NOT suggest the agent will "find \
+the closest element" if the index is stale.
+"""
+
 _DISTILL_PROMPT_TEMPLATE = """\
 Distill the following browser interaction evidence into a **site-specific knowledge card** for `{domain}`.
 
@@ -57,6 +146,8 @@ Distill the following browser interaction evidence into a **site-specific knowle
 Do NOT abstract away site-specific selectors, IDs, or URLs. Capture them — this knowledge will be \
 file-injected into a browser agent when it navigates to `{domain}`, and it must be actionable as-is. \
 "Record the map, not the diary."
+
+{consumer_context}
 
 # Domain
 `{domain}`
@@ -135,8 +226,10 @@ This is the SINGLE MOST IMPORTANT file for agent success, and noise here directl
 '封面设置' to open the modal — it's not in the DOM during upload stage")
    - Element identity ambiguities (e.g. "page has multiple `name=buploader` file inputs; distinguish \
 by `accept`: `.mp4`=video, `.txt`=subtitle, `.zip`=attachment")
-   - Action-method requirements (e.g. "hidden file input — MUST use `upload_file(index, path)` \
-direct injection, clicking opens an OS dialog the agent can't drive")
+   - Action-method requirements — when the correct ACTION from the Consumer context above matters \
+(e.g. "hidden file input — MUST use `upload_file(index, path)` direct injection, clicking opens \
+an OS dialog the agent can't drive"; "tag input commits with `send_keys('Enter')`, not blur/click"). \
+Reference the exact action name from the vocabulary so the agent recognizes it.
    - SPA stage-transition cues (e.g. "URL stays constant across upload/cover/info stages; detect \
 stage by DOM content, not URL")
    - Non-AJAX vs AJAX submission behavior (e.g. "'立即投稿' triggers a full-page redirect to \
@@ -144,17 +237,24 @@ stage by DOM content, not URL")
    - Timing/ordering requirements (e.g. "title input is absent during cover-editing stage; finish \
 cover editing first, wait for info-edit stage")
 
-   **Do NOT WRITE these (agent can see them in the DOM text — writing them wastes attention):**
+   **Do NOT WRITE these (writing them wastes the agent's attention):**
    - Element tag/attribute observations (e.g. "立即投稿 is `<span>` not `<button>`" — the DOM shows \
 `[3819]<span />立即投稿`, agent sees this directly)
    - Element-type-vs-expectation mismatches that are visible (e.g. "简介 is `<div contenteditable=true>` \
 not `<textarea>`" — DOM shows `[3788]<div contenteditable=true />`, agent sees it)
    - Field labels, placeholders, maxlength — all visible in DOM text
    - Anything that's just "describing what the DOM shows"
+   - **Things the agent's session layer already handles automatically** (see Consumer context \
+"ALREADY handles automatically" list): JS click / occlusion fallback, dropdown click degradation, \
+multi file-input metadata already in the DOM. Writing "use JS click" or "click the dropdown first" \
+is noise — the agent does this silently.
 
-   When in doubt, ask: "If the agent reads the DOM text, can it figure this out itself?" If yes, \
-do NOT write it. If no (because the fact is about sequencing, hidden state, identity ambiguity, or \
-expected action method), write it. Cite the stage name where relevant.
+   When in doubt, ask TWO questions:
+   1. "If the agent reads the DOM text, can it figure this out itself?" If yes, do NOT write it.
+   2. "Does the agent's session layer already handle this automatically?" (JS click / occlusion / \
+dropdown / file-input metadata) If yes, do NOT write it.
+   Write it only if the answer to both is NO — i.e. the fact is about sequencing, hidden state, \
+identity ambiguity, or a required action method the agent won't infer. Cite the stage name where relevant.
 
 # Rules
 - **产出语言：中文**（除非站点元素本身是英文，如 placeholder 文本）。所有说明文字、备注、quirks 描述用中文写，保持与站点语言一致。元素用途/可见文本保留站点原文。
@@ -503,6 +603,7 @@ def distill_host(
 
     prompt = _DISTILL_PROMPT_TEMPLATE.format(
         domain=host,
+        consumer_context=_CONSUMER_CONTEXT,
         capacities_line=capacities_line,
         n_segments=len(merged.segments),
         evidence_blocks=_evidence_block(merged),

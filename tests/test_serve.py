@@ -211,11 +211,11 @@ def test_chrome_present_builds_collector():
 
     Collector.start 会真连 CDP（会失败），这里 mock 掉 Collector 避免真连。
     """
-    app = create_app(cdp_host="localhost", cdp_port=9222)
+    app = create_app(cdp_host="localhost", cdp_port=9223)
     mock_collector = _make_mock_collector()
     with (
         patch(
-            "server.server.fetch_ws_url", return_value="ws://localhost:9222/devtools/browser/xxx"
+            "server.server.fetch_ws_url", return_value="ws://localhost:9223/devtools/browser/xxx"
         ),
         patch("server.server.CdpSession") as MockCdp,
         patch("server.server.Collector", return_value=mock_collector),
@@ -224,7 +224,7 @@ def test_chrome_present_builds_collector():
         resp = c.post("/start", json={"scenario": "distill"})
     assert resp.status_code == 200
     assert resp.json()["session_id"] == "test-session-1"
-    MockCdp.assert_called_once_with("ws://localhost:9222/devtools/browser/xxx")
+    MockCdp.assert_called_once_with("ws://localhost:9223/devtools/browser/xxx")
 
 
 # ---------------------------------------------------------------------------
@@ -713,7 +713,7 @@ async def test_cdp_session_stop_clears_previous_selector_map():
     """stop() 后 _previous_selector_map 应清空（serve 跨 session 不污染新元素检测）。"""
     from treeforge.capture.cdp_session import CdpSession
 
-    session = CdpSession(ws_url="ws://localhost:9222/xxx")
+    session = CdpSession(ws_url="ws://localhost:9223/xxx")
     # 模拟 start 过 + 采过一次快照（_previous_selector_map 被填充）
     session._previous_selector_map = {"a": object()}
     await session.stop()
