@@ -1,0 +1,141 @@
+{
+  "host": "localhost",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1788090380157,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Scope: function eventListenerQPbMrq2hxF () { switchScope(thi",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "Scope: function eventListenerQPbMrq2hxF () { switchScope(this);; } var listenedElementQPbMrq2hxFArray = document.querySelectorAll(\"#store_switcher\"); if(listenedElementQPbMrq2hxFArray.length !== 'undefined'){ listenedElementQPbMrq2hxFArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerQPbMrq2hxF.apply(targetElement); }; } }); } function eventListenerqzIJNp7iMJ () { switchScope(this);; } var listenedElementqzIJNp7iMJArray = document.querySelectorAll(\"#store_group_switcher\"); if(listenedElementqzIJNp7iMJArray.length !== 'undefined'){ listenedElementqzIJNp7iMJArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerqzIJNp7iMJ.apply(targetElement); }; } }); } function eventListenernI6rWMS6kJ () { switchScope(this);; } var listenedElementnI6rWMS6kJArray = document.querySelectorAll(\"#website_switcher\"); if(listenedElementnI6rWMS6kJArray.length !== 'undefined'){ listenedElementnI6rWMS6kJArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenernI6rWMS6kJ.apply(targetElement); }; } }); } All Store Views All Store Views Main Website Main Website Store Default Store View What is this? Reload Data"
+      }
+    },
+    {
+      "timestamp": 1788090381456,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Sales",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "Sales"
+      }
+    },
+    {
+      "timestamp": 1788090382824,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard_1",
+      "target": "Orders",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "Orders"
+      }
+    },
+    {
+      "timestamp": 1788090386808,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order",
+      "target": "Filters",
+      "element_attrs": {
+        "tag": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Filters"
+      }
+    },
+    {
+      "timestamp": 1788090388750,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order_2",
+      "target": "CanceledClosedCompleteSuspected FraudOn HoldPayment ReviewPa",
+      "element_attrs": {
+        "tag": "select",
+        "id": "YOIRBEI",
+        "name": "status",
+        "aria-label": "notice-YOIRBEI",
+        "visible_text": "CanceledClosedCompleteSuspected FraudOn HoldPayment ReviewPayPal Canceled ReversalPayPal ReversedPendingPending PaymentPending PayPalProcessing"
+      }
+    },
+    {
+      "timestamp": 1788090391462,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order_2",
+      "target": "CanceledClosedCompleteSuspected FraudOn HoldPayment ReviewPa",
+      "element_attrs": {
+        "tag": "select",
+        "id": "YOIRBEI",
+        "name": "status",
+        "aria-label": "notice-YOIRBEI",
+        "visible_text": "CanceledClosedCompleteSuspected FraudOn HoldPayment ReviewPayPal Canceled ReversalPayPal ReversedPendingPending PaymentPending PayPalProcessing"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788090391462,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order_2",
+      "target": "CanceledClosedCompleteSuspected FraudOn HoldPayment ReviewPa",
+      "element_attrs": {
+        "tag": "select",
+        "id": "YOIRBEI",
+        "name": "status",
+        "aria-label": "notice-YOIRBEI",
+        "visible_text": "CanceledClosedCompleteSuspected FraudOn HoldPayment ReviewPayPal Canceled ReversalPayPal ReversedPendingPending PaymentPending PayPalProcessing"
+      },
+      "value": "canceled"
+    },
+    {
+      "timestamp": 1788090391463,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order_2",
+      "target": "CanceledClosedCompleteSuspected FraudOn HoldPayment ReviewPa",
+      "element_attrs": {
+        "tag": "select",
+        "id": "YOIRBEI",
+        "name": "status",
+        "aria-label": "notice-YOIRBEI",
+        "visible_text": "CanceledClosedCompleteSuspected FraudOn HoldPayment ReviewPayPal Canceled ReversalPayPal ReversedPendingPending PaymentPending PayPalProcessing"
+      }
+    },
+    {
+      "timestamp": 1788090392562,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order_2",
+      "target": "Apply Filters",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Apply Filters"
+      }
+    },
+    {
+      "timestamp": 1788090396898,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order",
+      "target": "Lily Potter",
+      "element_attrs": {
+        "tag": "td",
+        "data-tw-jsclick": "1",
+        "visible_text": "Lily Potter"
+      }
+    }
+  ],
+  "page_context": {
+    "dashboard": "[101480]<a />\n[101215]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[101216]<a />\n\t\tDashboard\n[101217]<li id=menu-magento-sales-sales role=menu-item />\n\t[101218]<a />\n\t\tSales\n[101220]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[101221]<a />\n\t\tCatalog\n[101223]<li id=menu-magento-customer-customer role=menu-item />\n\t[101224]<a />\n\t\tCustomers\n[101226]<li id=menu-magento-backend-marketing role=menu-item />\n\t[101227]<a />\n\t\tMarketing\n[101229]<li id=menu-magento-backend-content role=menu-item />\n\t[101230]<a />\n\t\tContent\n[101232]<li id=menu-magento-reports-report role=menu-item />\n\t[101233]<a />\n\t\tReports\n[101235]<li id=menu-magento-backend-stores role=menu-item />\n\t[101236]<a />\n\t\tStores\n[101238]<li id=menu-magento-backend-system role=menu-item />\n\t[101239]<a />\n\t\tSystem\n[101241]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[101242]<a />\n\t\tFind Partners & Extensions\nDashboard\n[101245]<a title=My Account />\n\tadmin\n[102236]<a title=Notifications />\n[101246]<div />\n\t[101206]<form id=form-search />\n\t\t[102243]<div />\n\t\t\t[101207]<input type=text id=search-global autocomplete=off />\n[102272]<span />\n\tScope:\n[101251]<button id=store-change-button />\n\tAll Store Views\n[101253]<a title=What is this? />\n\t[102321]<span />\n\t\tWhat is this?\n[102335]<button title=Reload Data type=submit />\n\tReload Data\nAdvanced Reporting\nGain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\n[102358]<a title=Go to Advanced Reporting />\n\tGo to Advanced Reporting\nChart is disabled. To enable the chart, click\n[102378]<a />\n\there\nRevenue\n$0.00\nTax\n$0.00\nShipping\n$0.00\nQuantity\n[102437]<strong />\n[101256]<li role=tab selected=true expanded=true />\n\t[101257]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />\n\t\t[102459]<span title=The information in this tab has been changed. />\n\t\t[102461]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[102463]<span title=Loading... />\n\t\tBestsellers\n[101258]<li role=tab selected=false expanded=false />\n\t[101259]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />\n\t\t[102476]<span title=The information in this tab has been changed. />\n\t\t[102478]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[102480]<span title=Loading... />\n\t\tMost Viewed Products\n[101260]<li role=tab selected=false expanded=false />\n\t[101261]<a title=New Customers id=grid_tab_new_customers role=presentation />\n\t\t[102495]<span title=The information in this tab has been changed. />\n\t\t[102497]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[102499]<span title=Loading... />\n\t\tNew Customers\n[101262]<li role=tab selected=false expanded=false />\n\t[101263]<a title=Customers id=grid_tab_customers role=presentation />\n\t\t[102514]<span title=The information in this tab has been changed. />\n\t\t[102516]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[102518]<span title=Loading... />\n\t\tCustomers\n[102542]<tr />\n\tProduct\n\tPrice\n\tQuantity\n[101265]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />\n\t[102560]<td />\n\t\tQuest Lumaflex™ Band\n\t[102563]<td />\n\t\t$19.00\n\t[102566]<td />\n[101266]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />\n\t[102571]<td />\n\t\tSprite Yoga Strap 6 foot\n\t[102574]<td />\n\t\t$14.00\n\t[102577]<td />\n[101267]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />\n\t[102582]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[102585]<td />\n\t\t$27.00\n\t[102588]<td />\n[101268]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />\n\t[102593]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[102596]<td />\n\t\t$23.00\n\t[102599]<td />\n[101269]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />\n\t[102604]<td />\n\t\tOvernight Duffle\n\t[102607]<td />\n\t\t$45.00\n\t[102610]<td />\nLifetime Sales\n$0.00\nAverage Order\n$0.00\nLast Orders\n[102668]<tr />\n\tCustomer\n\tItems\n\tTotal\n[101273]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />\n\t[102687]<td />\n\t\tSarah Miller\n\t[102690]<td />\n\t[102693]<td />\n\t\t$194.40\n[101274]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />\n\t[102698]<td />\n\t\tGrace Nguyen\n\t[102701]<td />\n\t[102704]<td />\n\t\t$190.00\n[101275]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />\n\t[102709]<td />\n\t\tMatt Baker\n\t[102712]<td />\n\t[102715]<td />\n\t\t$151.40\n[101276]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />\n\t[102720]<td />\n\t\tLily Potter\n\t[102723]<td />\n\t[102726]<td />\n\t\t$188.20\n[101277]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />\n\t[102731]<td />\n\t\tAva Brown\n\t[102734]<td />\n\t[102737]<td />\n\t\t$83.40\nLast Search Terms\n[102755]<table id=lastSearchGrid_table />\n\t[102759]<tr />\n\t\t[102761]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[101278]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[102778]<td />\n\t\t\tAntonia\n\t\t[102781]<td />\n\t\t[102784]<td />\n\t[101279]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[102789]<td />\n\t\t\ttanks\n\t\t[102792]<td />\n\t\t\t23\n\t\t[102795]<td />\n\t[101280]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />\n\t\t[102800]<td />\n\t\t\tnike\n\t\t[102803]<td />\n\t\t[102806]<td />\n\t[101281]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[102811]<td />\n\t\t\tJoust Bag\n\t\t[102814]<td />\n\t\t\t10\n\t\t[102817]<td />\n\t[101282]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[102822]<td />\n\t\t\thollister\n\t\t[102825]<td />\n\t\t[102828]<td />\n\t\t\t19\nTop Search Terms\n[102846]<table id=topSearchGrid_table />\n\t[102850]<tr />\n\t\t[102852]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[101283]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[102869]<td />\n\t\t\thollister\n\t\t[102872]<td />\n\t\t[102875]<td />\n\t\t\t19\n\t[101284]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[102880]<td />\n\t\t\tJoust Bag\n\t\t[102883]<td />\n\t\t\t10\n\t\t[102886]<td />\n\t[101285]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />\n\t\t[102891]<td />\n\t\t\tAntonia Racer Tank\n\t\t[102894]<td />\n\t\t\t23\n\t\t[102897]<td />\n\t[101286]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[102902]<td />\n\t\t\tAntonia\n\t\t[102905]<td />\n\t\t[102908]<td />\n\t[101287]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[102913]<td />\n\t\t\ttanks\n\t\t[102916]<td />\n\t\t\t23\n\t\t[102919]<td />\n[102937]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[102947]<a id=footer_privacy />\n\tPrivacy Policy\n[101288]<a id=footer_account_activity />\n\tAccount Activity\n[102952]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "dashboard_1": "*[103079]<a />\n*[103088]<a />\n\tDashboard\n*[102995]<a />\n\tSales\n*[102996]<a />\n\tCatalog\n*[102997]<a />\n\tCustomers\n*[102998]<a />\n\tMarketing\n*[102999]<a />\n\tContent\n*[103000]<a />\n\tReports\n*[103001]<a />\n\tStores\n*[103002]<a />\n\tSystem\n*[103691]<a />\n\tFind Partners & Extensions\nOrders\n*[103753]<a title=My Account />\n\tadmin\n*[103791]<a title=Notifications />\n*[103796]<div />\n\t*[102987]<form id=form-search />\n\t\t*[103799]<div />\n\t\t\t*[102988]<input type=text id=search-global name=query />\n*[103003]<button title=Create New Order id=add />\n\tCreate New Order\n*[103842]<div />\n*[103866]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[103876]<a id=footer_privacy />\n\tPrivacy Policy\n*[103879]<a id=footer_account_activity />\n\tAccount Activity\n*[103882]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "order": "*[137280]<a />\n*[137289]<a />\n\tDashboard\n*[137167]<a />\n\tSales\n*[137168]<a />\n\tCatalog\n*[137169]<a />\n\tCustomers\n*[137170]<a />\n\tMarketing\n*[137171]<a />\n\tContent\n*[137172]<a />\n\tReports\n*[137173]<a />\n\tStores\n*[137174]<a />\n\tSystem\n*[137891]<a />\n\tFind Partners & Extensions\n#000000136\n*[137953]<a title=My Account />\n\tadmin\n*[137991]<a title=Notifications />\n*[137996]<div />\n\t*[137147]<form id=form-search />\n\t\t*[137999]<div />\n\t\t\t*[137148]<input type=text id=search-global name=query />\n*[137175]<button title=Back id=back />\n\tBack\n*[137176]<button title=Login as Customer id=guest_to_customer />\n\tLogin as Customer\n*[137177]<button title=Reorder id=order_reorder />\n\tReorder\nOrder View\n*[138085]<li id=sales_order_view_tabs_order_info selected=true expanded=true />\n\t*[138087]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info />\n\t\tInformation\n\t\t*[138092]<span />\n*[139077]<li id=sales_order_view_tabs_order_invoices selected=false expanded=false />\n\t*[139079]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices />\n\t\tInvoices\n\t\t*[139084]<span />\n*[139154]<li id=sales_order_view_tabs_order_creditmemos selected=false expanded=false />\n\t*[139156]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos />\n\t\tCredit Memos\n\t\t*[139161]<span />\n*[139231]<li id=sales_order_view_tabs_order_shipments selected=false expanded=false />\n\t*[139233]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments />\n\t\tShipments\n\t\t*[139238]<span />\n*[139308]<li id=sales_order_view_tabs_order_history selected=false expanded=false />\n\t*[139310]<a title=Order History id=sales_order_view_tabs_order_history name=order_history />\n\t\tComments History\n\t\t*[139315]<span />\n*[139380]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[139388]<a id=footer_privacy />\n\tPrivacy Policy\n*[139391]<a id=footer_account_activity />\n\tAccount Activity\n*[139394]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "order_2": "[103079]<a />\n[103087]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[103088]<a />\n\t\tDashboard\n[103093]<li id=menu-magento-sales-sales role=menu-item />\n\t[102995]<a />\n\t\tSales\n[103136]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[102996]<a />\n\t\tCatalog\n[103159]<li id=menu-magento-customer-customer role=menu-item />\n\t[102997]<a />\n\t\tCustomers\n[103184]<li id=menu-magento-backend-marketing role=menu-item />\n\t[102998]<a />\n\t\tMarketing\n[103269]<li id=menu-magento-backend-content role=menu-item />\n\t[102999]<a />\n\t\tContent\n[103328]<li id=menu-magento-reports-report role=menu-item />\n\t[103000]<a />\n\t\tReports\n[103489]<li id=menu-magento-backend-stores role=menu-item />\n\t[103001]<a />\n\t\tStores\n[103585]<li id=menu-magento-backend-system role=menu-item />\n\t[103002]<a />\n\t\tSystem\n[103690]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[103691]<a />\n\t\tFind Partners & Extensions\nOrders\n[103753]<a title=My Account />\n\tadmin\n[103791]<a title=Notifications />\n[103796]<div />\n\t[102987]<form id=form-search />\n\t\t[103799]<div />\n\t\t\t[102988]<input type=text id=search-global autocomplete=off />\n[103003]<button title=Create New Order id=add />\n\tCreate New Order\n[104185]<button />\n\tDefault View\n[104199]<button />\n\tColumns\n[104254]<button />\n\tExport\n[104109]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />\n[104269]<button aria-label=Search />\n[104273]<button />\n\tFilters\nPurchase Date\nfrom\n[104083]<input type=text id=LUC7NCS name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[104293]<button />\n\t[104294]<span />\n\t\tundefined\nto\n[104084]<input type=text id=IYEEGIH name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[104300]<button />\n\t[104301]<span />\n\t\tundefined\nGrand Total (Base)\nfrom\n[104110]<input type=text id=X7H0L9F name=base_grand_total[from] maxlength=255 />\nto\n[104111]<input type=text id=RPRM6NY name=base_grand_total[to] maxlength=255 />\nGrand Total (Purchased)\nfrom\n[104112]<input type=text id=Q6UTLU3 name=grand_total[from] maxlength=255 />\nto\n[104113]<input type=text id=FE1BW8D name=grand_total[to] maxlength=255 />\nPurchase Point\n*[104120]<select id=VUGWB5D name=store_id aria-label=notice-VUGWB5D expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />\nID\n[104121]<input type=text id=G24NELH name=increment_id maxlength=255 />\nBill-to Name\n[104122]<input type=text id=B87GDIO name=billing_name maxlength=255 />\nShip-to Name\n[104123]<input type=text id=E3YAX67 name=shipping_name maxlength=255 />\nStatus\n*[104124]<select id=YOIRBEI name=status aria-label=notice-YOIRBEI expanded=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Canceled|Closed|Complete|Suspected Fraud) />\nBraintree Transaction Source\n[104133]<input type=text id=U7SJ43J name=transaction_source maxlength=255 />\n[104600]<button />\n\tCancel\n[104602]<button />\n\tApply Filters\n[104606]<button title=Select Items />\n\tActions\n308\nrecords found\n[104632]<div />\n\t[104073]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />\n[104634]<button />\n\tSelect\nper page\n[104662]<button title=Previous Page disabled=true />\n*[104068]<input type=number id=25 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />\nof 2\n[104668]<button title=Next Page />\n[104879]<tr />\n\t[104881]<div />\n\t\t[104159]<input type=checkbox checked=false id=51 />\n\t\t[104883]<button />\n\t\t\tOptions\n\t[104894]<th />\n\t\t[104895]<span />\n\t\t\tID\n\t[104896]<th />\n\t\tPurchase Point\n\t[104898]<th />\n\t\t[104899]<span />\n\t\t\tPurchase Date\n\t[104900]<th />\n\t\t[104901]<span />\n\t\t\tBill-to Name\n\t[104902]<th />\n\t\t[104903]<span />\n\t\t\tShip-to Name\n\t[104904]<th />\n\t\t[104905]<span />\n\t\t\tGrand Total (Base)\n\t[104906]<th />\n\t\t[104907]<span />\n\t\t\tGrand Total (Purchased)\n\t[104908]<th />\n\t\t[104909]<span />\n\t\t\tStatus\n\t[104910]<th />\n\t\t[104911]<span />\n\t\t\tAction\n\t[104912]<th />\n\t\tAllocated sources\n\t[104914]<th />\n\t\t[104915]<span />\n\t\t\tBraintree Transaction Source\n[105969]<tr />\n\t[106570]<td />\n\t\t[108986]<label />\n\t\t\t[108984]<input type=checkbox checked=false id=idscheck299 value=299 />\n\t[106571]<td />\n\t\t000000299\n\t[106572]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[106573]<td />\n\t\tMay 31, 2023 2:55:09 AM\n\t[106574]<td />\n\t\tSarah Miller\n\t[106575]<td />\n\t\tSarah Miller\n\t[106576]<td />\n\t\t$219.40\n\t[106577]<td />\n\t\t$219.40\n\t[106578]<td />\n\t\tPending\n\t[106579]<td />\n\t\t[114409]<a />\n\t\t\tView\n\t[106580]<td />\n\t[106581]<td />\n[105972]<tr />\n\t[106582]<td />\n\t\t[108989]<label />\n\t\t\t[108987]<input type=checkbox checked=false id=idscheck65 value=65 />\n\t[106583]<td />\n\t\t000000065\n\t[106584]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[106585]<td />\n\t\tMay 28, 2023 6:43:55 AM\n\t[106586]<td />\n\t\tGrace Nguyen\n\t[106587]<td />\n\t\tGrace Nguyen\n\t[106588]<td />\n\t\t$210.00\n\t[106589]<td />\n\t\t$210.00\n\t[106590]<td />\n\t\tPending\n\t[106591]<td />\n\t\t[114429]<a />\n\t\t\tView\n\t[106592]<td />\n\t[106593]<td />\n[105975]<tr />\n\t[106594]<td />\n\t\t[108992]<label />\n\t\t\t[108990]<input type=checkbox checked=false id=idscheck125 value=125 />\n\t[106595]<td />\n\t\t000000125\n\t[106596]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[106597]<td />\n\t\tMay 24, 2023 8:28:12 AM\n\t[106598]<td />\n\t\tMatt Baker\n\t[106599]<td />\n\t\tMatt Baker\n\t[106600]<td />\n\t\t$166.40\n\t[106601]<td />\n\t\t$166.40\n\t[106602]<td />\n\t\tProcessing\n\t[106603]<td />\n\t\t[114449]<a />\n\t\t\tView\n\t[106604]<td />\n\t[106605]<td />\n[105978]<tr />\n\t[106606]<td />\n\t\t[108995]<label />\n\t\t\t[108993]<input type=checkbox checked=false id=idscheck136 value=136 />\n\t[106607]<td />\n\t\t000000136\n\t[106608]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[106609]<td />\n\t\tMay 23, 2023 9:20:01 PM\n\t[106610]<td />\n\t\tLily Potter\n\t[106611]<td />\n\t\tLily Potter\n\t[106612]<td />\n\t\t$208.20\n\t[106613]<td />\n\t\t$208.20\n\t[106614]<td />\n\t\tCanceled\n\t[106615]<td />\n\t\t[114469]<a />\n\t\t\tView\n\t[106616]<td />\n\t[106617]<td />\n[105981]<tr />\n\t[106618]<td />\n\t\t[108998]<label />\n\t\t\t[108996]<input type=checkbox checked=false id=idscheck230 value=230 />\n\t[106619]<td />\n\t\t000000230\n\t[106620]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[106621]<td />\n\t\tMay 19, 2023 8:11:51 AM\n\t[106622]<td />\n\t\tAva Brown\n\t[106623]<td />\n\t\tAva Brown\n\t[106624]<td />\n\t\t$93.40\n\t[106625]<td />\n\t\t$93.40\n\t[106626]<td />\n\t\tComplete\n\t[106627]<td />\n\t\t[114489]<a />\n\t\t\tView\n\t[106628]<td />\n\t[106629]<td />\n[105984]<tr />\n\t[106630]<td />\n\t\t[109001]<label />\n\t\t\t[108999]<input type=checkbox checked=false id=idscheck242 value=242 />\n\t[106631]<td />\n\t\t000000242\n\t[106632]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[106633]<td />\n\t\tMay 15, 2023 9:09:53 AM\n\t[106634]<td />\n\t\tOlivia Lee\n\t[106635]<td />\n\t\tOlivia Lee\n\t[106636]<td />\n\t\t$183.00\n\t[106637]<td />\n\t\t$183.00\n\t[106638]<td />\n\t\tCanceled\n\t[106639]<td />\n\t\t[114509]<a />\n\t\t\tView\n\t[106640]<td />\n\t[106641]<td />\n[105987]<tr />\n\t[106642]<td />\n\t\t[109004]<label />\n\t\t\t[109002]<input type=checkbox checked=false id=idscheck25 value=25 />\n\t[106643]<td />\n\t\t000000025\n\t[106644]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[106645]<td />\n\t\tMay 14, 2023 10:38:35 AM\n\t[106646]<td />\n\t\tJohn Doe\n\t[106647]<td />\n\t\tJohn Doe\n\t[106648]<td />\n\t\t$204.25\n\t[106649]<td />\n\t\t$204.25\n\t[106650]<td />\n\t\tCanceled\n\t[106651]<td />\n\t\t[114529]<a />\n\t\t\tView\n\t[106652]<td />\n\t[106653]<td />\n[105990]<tr />\n\t[106654]<td />\n\t\t[109007]<label />\n\t\t\t[109005]<input type=checkbox checked=false id=idscheck256 value=256 />\n\t[106655]<td />\n\t\t000000256\n\t[106656]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[106657]<td />\n\t\tMay 14, 2023 1:22:46 AM\n\t[106658]<td />\n\t\tAdam Garcia\n\t[106659]<td />\n\t\tAdam Garcia\n\t[106660]<td />\n\t\t$89.00\n\t[106661]<td />\n\t\t$89.00\n\t[106662]<td />\n\t\tComplete\n\t[106663]<td />\n\t\t[114549]<a />\n\t\t\tView\n\t[106664]<td />\n\t[106665]<td />\n[105993]<tr />\n\t[106666]<td />\n\t[106667]<td />\n\t[106668]<td />\n\t\tMain Website\n\t[106669]<td />\n\t[106670]<td />\n\t[106671]<td />\n\t[106672]<td />\n\t[106673]<td />\n\t[106674]<td />\n\t[106675]<td />\n\t[106676]<td />\n\t[106677]<td />"
+  }
+}

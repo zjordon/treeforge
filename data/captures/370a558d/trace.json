@@ -1,0 +1,389 @@
+{
+  "host": "member.bilibili.com",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1785549427345,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/home",
+      "stage": "home",
+      "target": "视频投稿",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "视频投稿"
+      }
+    },
+    {
+      "timestamp": 1785549429944,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "点击上传或将视频拖拽到此区域 上传视频",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "点击上传或将视频拖拽到此区域 上传视频"
+      }
+    },
+    {
+      "timestamp": 1785549429945,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": ".mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f4v,.m2t,.3g2,.asf"
+      }
+    },
+    {
+      "timestamp": 1785549435634,
+      "type": "input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": ".mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f4v,.m2t,.3g2,.asf"
+      },
+      "value": "C:\\fakepath\\2026-04-29-20-41-59.mp4"
+    },
+    {
+      "timestamp": 1785549436783,
+      "type": "scroll",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "value": "1"
+    },
+    {
+      "timestamp": 1785549437189,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-cover",
+      "target": "添加封面",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "添加封面"
+      }
+    },
+    {
+      "timestamp": 1785549439350,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-cover",
+      "target": "canvas",
+      "element_attrs": {
+        "tag": "canvas"
+      }
+    },
+    {
+      "timestamp": 1785549440352,
+      "type": "scroll",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-cover",
+      "value": "4"
+    },
+    {
+      "timestamp": 1785549440570,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-cover",
+      "target": "上传封面建议上传尺寸≥1200x900的高清图片 拖拽图片或点击上传",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "上传封面建议上传尺寸≥1200x900的高清图片 拖拽图片或点击上传"
+      }
+    },
+    {
+      "timestamp": 1785549440571,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-cover",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "image/png, image/jpeg"
+      }
+    },
+    {
+      "timestamp": 1785549446236,
+      "type": "input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-cover",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "image/png, image/jpeg"
+      },
+      "value": "C:\\fakepath\\browser-harness-heng.png"
+    },
+    {
+      "timestamp": 1785549446584,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-cover",
+      "target": "完成",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "完成"
+      }
+    },
+    {
+      "timestamp": 1785549449773,
+      "type": "scroll",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "value": "3"
+    },
+    {
+      "timestamp": 1785549450735,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "19/80",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "19/80"
+      }
+    },
+    {
+      "timestamp": 1785549453945,
+      "type": "input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "请输入稿件标题",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "请输入稿件标题"
+      },
+      "value": "ai"
+    },
+    {
+      "timestamp": 1785549455807,
+      "type": "input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "请输入稿件标题",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "请输入稿件标题"
+      },
+      "value": "aiiy"
+    },
+    {
+      "timestamp": 1785549459069,
+      "type": "input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "请输入稿件标题",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "请输入稿件标题"
+      },
+      "value": "ai浏览器第5期"
+    },
+    {
+      "timestamp": 1785549463031,
+      "type": "input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "请输入稿件标题",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "请输入稿件标题"
+      },
+      "value": "ai浏览器第5期-browser-use"
+    },
+    {
+      "timestamp": 1785549463800,
+      "type": "scroll",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "value": "2"
+    },
+    {
+      "timestamp": 1785549464352,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "请选择符合您视频内容的创作声明",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "请选择符合您视频内容的创作声明"
+      }
+    },
+    {
+      "timestamp": 1785549466303,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "内容为自制：未经作者允许，禁止转载",
+      "element_attrs": {
+        "tag": "span",
+        "visible_text": "内容为自制：未经作者允许，禁止转载"
+      }
+    },
+    {
+      "timestamp": 1785549466815,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "内容授权声明仅支持非转载稿件添加",
+      "element_attrs": {
+        "tag": "section",
+        "visible_text": "内容授权声明仅支持非转载稿件添加"
+      }
+    },
+    {
+      "timestamp": 1785549468896,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "人工智能",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "人工智能"
+      }
+    },
+    {
+      "timestamp": 1785549469911,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "人工智能",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "人工智能"
+      }
+    },
+    {
+      "timestamp": 1785549470613,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "use",
+      "element_attrs": {
+        "tag": "use"
+      }
+    },
+    {
+      "timestamp": 1785549471639,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "svg",
+      "element_attrs": {
+        "tag": "svg"
+      }
+    },
+    {
+      "timestamp": 1785549472519,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "svg",
+      "element_attrs": {
+        "tag": "svg"
+      }
+    },
+    {
+      "timestamp": 1785549472951,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "按回车键Enter创建标签",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "按回车键Enter创建标签"
+      }
+    },
+    {
+      "timestamp": 1785549477362,
+      "type": "input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "按回车键Enter创建标签",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "按回车键Enter创建标签"
+      },
+      "value": "浏览器agnet"
+    },
+    {
+      "timestamp": 1785549477363,
+      "type": "keydown",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "按回车键Enter创建标签"
+      },
+      "key": "Enter"
+    },
+    {
+      "timestamp": 1785549479742,
+      "type": "scroll",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "value": "2"
+    },
+    {
+      "timestamp": 1785549480045,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "简介",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true"
+      }
+    },
+    {
+      "timestamp": 1785549483714,
+      "type": "input",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "简介",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true",
+        "visible_text": "browser-usews"
+      },
+      "value": "browser-usews"
+    },
+    {
+      "timestamp": 1785549487906,
+      "type": "scroll",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "value": "4"
+    },
+    {
+      "timestamp": 1785549488335,
+      "type": "click",
+      "url": "https://member.bilibili.com/platform/upload/video/frame",
+      "stage": "upload-video",
+      "target": "存草稿",
+      "element_attrs": {
+        "tag": "span",
+        "visible_text": "存草稿"
+      }
+    }
+  ],
+  "page_context": {
+    "home": "*[115]<i />\n*[80]<a />\n\t主站\n[55]<div />\n\t*[1078]<div />\n\t\t[21]<img />\n\t\t[24]<img />\n\t*[1079]<span />\n\t\t试试更多AI创作工具吧\n\t*[1081]<i />\n[56]<div />\n\t*[119]<div />\n\t\t*[1084]<div />\n\t\t*[120]<a />\n\t\t\t*[1087]<i />\n*[121]<div />\n\t成为UP主的第\n\t*[1095]<span />\n\t\t53\n*[1122]<span />\n\t*[129]<a />\n*[131]<div />\n\t*[132]<div role=region aria-label=scrollable content />\n\t\t*[134]<a id=nav_upload_btn />\n\t\t\t投稿\n\t\t*[1144]<div />\n\t\t\t*[135]<div />\n\t\t\t\t*[136]<span />\n\t\t\t\t\t*[1145]<i />\n\t\t\t\t\t*[1147]<span />\n\t\t\t\t\t\t*[1148]<span />\n\t\t\t\t\t\t\t首页\n\t\t*[1159]<div id=upload-manager />\n\t\t\t*[137]<div />\n\t\t\t\t*[138]<span />\n\t\t\t\t\t*[1160]<i />\n\t\t\t\t\t*[1162]<span />\n\t\t\t\t\t\t*[1163]<span />\n\t\t\t\t\t\t\t内容管理\n\t\t\t\t\t*[1168]<i />\n\t\t*[1442]<div id=data-up />\n\t\t\t*[205]<div />\n\t\t\t\t*[206]<span />\n\t\t\t\t\t*[1443]<i />\n\t\t\t\t\t[1445]<span />\n\t\t\t\t\t\t*[1446]<span />\n\t\t\t\t\t\t\t数据中心\n\t\t*[1480]<div id=fans />\n\t\t\t*[213]<div />\n\t\t\t\t*[214]<span />\n\t\t\t\t\t*[1481]<i />\n\t\t\t\t\t*[1483]<span />\n\t\t\t\t\t\t*[1484]<span />\n\t\t\t\t\t\t\t粉丝管理\n\t\t*[1524]<div />\n\t\t\t*[223]<div />\n\t\t\t\t*[224]<span />\n\t\t\t\t\t*[1525]<i />\n\t\t\t\t\t*[1527]<span />\n\t\t\t\t\t\t*[1528]<span />\n\t\t\t\t\t\t\t互动管理\n\t\t\t\t\t*[1533]<i />\n\t\t*[1601]<div />\n\t\t\t*[239]<div />\n\t\t\t\t*[240]<span />\n\t\t\t\t\t*[1602]<i />\n\t\t\t\t\t*[1604]<span />\n\t\t\t\t\t\t*[1605]<span />\n\t\t\t\t\t\t\t收益管理\n\t\t\t\t\t*[1610]<i />\n\t\t*[267]<div />\n\t\t\t*[1778]<div />\n\t\t\t\t*[1779]<span />\n\t\t\t\t\t[19]<i />\n\t\t\t\t\t*[1780]<span />\n\t\t\t\t\t\t*[1781]<span />\n\t\t\t\t\t\t\t花生\n\t\t*[268]<div />\n\t\t\t*[1785]<div />\n\t\t\t\t*[1786]<span />\n\t\t\t\t\t[20]<i />\n\t\t\t\t\t*[1787]<span />\n\t\t\t\t\t\t*[1788]<span />\n\t\t\t\t\t\t\tupdream\n\t\t*[1792]<div id=growing-up />\n\t\t\t*[269]<div />\n\t\t\t\t*[270]<span />\n\t\t\t\t\t*[1793]<i />\n\t\t\t\t\t*[1795]<span />\n\t\t\t\t\t\t*[1796]<span />\n\t\t\t\t\t\t\t创作成长\n\t\t\t\t\t*[1801]<i />\n\t\t\t*[1803]<div />\n\t\t\t\t*[271]<div />\n\t\t\t\t\t*[1804]<div />\n\t\t\t\t\t\t*[272]<span />\n\t\t\t\t\t\t\t*[1806]<span />\n\t\t\t\t\t\t\t\t*[1808]<span />\n\t\t\t\t\t\t\t\t\t任务中心\n\t\t\t\t*[273]<div />\n\t\t\t\t\t*[1812]<div />\n\t\t\t\t\t\t*[274]<span />\n\t\t\t\t\t\t\t*[1814]<span />\n\t\t\t\t\t\t\t\t*[1816]<span />\n\t\t\t\t\t\t\t\t\t必火推广\n\t\t\t\t*[275]<div />\n\t\t\t\t\t*[1820]<div />\n\t\t\t\t\t\t*[276]<a />\n\t\t\t\t\t\t\t*[1821]<i />\n\t\t\t\t\t\t\t创作学院\n\t\t[27]<div />\n\t\t\t*[279]<div />\n\t\t\t\t[28]<span />\n\t\t\t\t\t*[1837]<i />\n\t\t\t\t\t[29]<span />\n\t\t\t\t\t\t*[1839]<span />\n\t\t\t\t\t\t\t创作权益\n\t\t\t\t\t*[1844]<i />\n\t\t[30]<div />\n\t\t\t*[290]<div />\n\t\t\t\t[31]<span />\n\t\t\t\t\t*[1892]<i />\n\t\t\t\t\t[32]<span />\n\t\t\t\t\t\t*[1894]<span />\n\t\t\t\t\t\t\t社区公约\n\t\t[33]<div />\n\t\t\t*[293]<div />\n\t\t\t\t[34]<span />\n\t\t\t\t\t*[1912]<i />\n\t\t\t\t\t*[35]<span />\n\t\t\t\t\t\t*[1914]<span />\n\t\t\t\t\t\t\t创作设置\n*[1996]<div />\n*[294]<a />\n\t视频投稿\n*[295]<a />\n\t短剧投稿\n*[296]<a />\n\t专栏投稿\n*[297]<a />\n\tUP动画\n*[298]<a />\n\t互动视频投稿\n*[306]<div id=reference-help />\n\t*[2064]<div />\n\t\t[77]<img />\n\t*[2065]<div />\n\t\t遇到问题\n*[307]<div id=topBtn />\n*[316]<div role=spinner />\n\t*[2119]<div />",
+    "upload-video": "[115]<i />\n[80]<a />\n\t主站\n[55]<div />\n\t*[1078]<div />\n\t\t*[21]<img />\n\t\t*[24]<img />\n\t*[1079]<span />\n\t\t试试更多AI创作工具吧\n\t*[1081]<i />\n[56]<div />\n\t*[119]<div />\n\t\t*[1084]<div />\n\t\t[120]<a />\n\t\t\t*[1087]<i />\n[121]<div />\n\t成为UP主的第\n\t*[1095]<span />\n\t\t53\n*[1122]<span />\n\t[129]<a />\n[131]<div />\n\t[132]<div role=region aria-label=scrollable content />\n\t\t[134]<a id=nav_upload_btn />\n\t\t\t投稿\n\t\t*[1144]<div />\n\t\t\t[135]<div />\n\t\t\t\t[136]<span />\n\t\t\t\t\t*[1145]<i />\n\t\t\t\t\t*[1147]<span />\n\t\t\t\t\t\t*[1148]<span />\n\t\t\t\t\t\t\t首页\n\t\t*[1159]<div id=upload-manager />\n\t\t\t[137]<div />\n\t\t\t\t[138]<span />\n\t\t\t\t\t*[1160]<i />\n\t\t\t\t\t*[1162]<span />\n\t\t\t\t\t\t*[1163]<span />\n\t\t\t\t\t\t\t内容管理\n\t\t\t\t\t*[1168]<i />\n\t\t*[1442]<div id=data-up />\n\t\t\t[205]<div />\n\t\t\t\t[206]<span />\n\t\t\t\t\t*[1443]<i />\n\t\t\t\t\t*[1445]<span />\n\t\t\t\t\t\t*[1446]<span />\n\t\t\t\t\t\t\t数据中心\n\t\t*[1480]<div id=fans />\n\t\t\t[213]<div />\n\t\t\t\t[214]<span />\n\t\t\t\t\t*[1481]<i />\n\t\t\t\t\t*[1483]<span />\n\t\t\t\t\t\t*[1484]<span />\n\t\t\t\t\t\t\t粉丝管理\n\t\t*[1524]<div />\n\t\t\t[223]<div />\n\t\t\t\t[224]<span />\n\t\t\t\t\t*[1525]<i />\n\t\t\t\t\t*[1527]<span />\n\t\t\t\t\t\t*[1528]<span />\n\t\t\t\t\t\t\t互动管理\n\t\t\t\t\t*[1533]<i />\n\t\t*[1601]<div />\n\t\t\t[239]<div />\n\t\t\t\t[240]<span />\n\t\t\t\t\t*[1602]<i />\n\t\t\t\t\t*[1604]<span />\n\t\t\t\t\t\t*[1605]<span />\n\t\t\t\t\t\t\t收益管理\n\t\t\t\t\t*[1610]<i />\n\t\t[267]<div />\n\t\t\t*[1778]<div />\n\t\t\t\t*[1779]<span />\n\t\t\t\t\t*[19]<i />\n\t\t\t\t\t*[1780]<span />\n\t\t\t\t\t\t*[1781]<span />\n\t\t\t\t\t\t\t花生\n\t\t[268]<div />\n\t\t\t*[1785]<div />\n\t\t\t\t*[1786]<span />\n\t\t\t\t\t*[20]<i />\n\t\t\t\t\t*[1787]<span />\n\t\t\t\t\t\t*[1788]<span />\n\t\t\t\t\t\t\tupdream\n\t\t*[1792]<div id=growing-up />\n\t\t\t[269]<div />\n\t\t\t\t[270]<span />\n\t\t\t\t\t*[1793]<i />\n\t\t\t\t\t*[1795]<span />\n\t\t\t\t\t\t*[1796]<span />\n\t\t\t\t\t\t\t创作成长\n\t\t\t\t\t*[1801]<i />\n\t\t\t*[1803]<div />\n\t\t\t\t[271]<div />\n\t\t\t\t\t*[1804]<div />\n\t\t\t\t\t\t[272]<span />\n\t\t\t\t\t\t\t*[1806]<span />\n\t\t\t\t\t\t\t\t*[1808]<span />\n\t\t\t\t\t\t\t\t\t任务中心\n\t\t\t\t[273]<div />\n\t\t\t\t\t*[1812]<div />\n\t\t\t\t\t\t[274]<span />\n\t\t\t\t\t\t\t*[1814]<span />\n\t\t\t\t\t\t\t\t*[1816]<span />\n\t\t\t\t\t\t\t\t\t必火推广\n\t\t\t\t[275]<div />\n\t\t\t\t\t*[1820]<div />\n\t\t\t\t\t\t[276]<a />\n\t\t\t\t\t\t\t*[1821]<i />\n\t\t\t\t\t\t\t创作学院\n\t\t[27]<div />\n\t\t\t[279]<div />\n\t\t\t\t[28]<span />\n\t\t\t\t\t[1837]<i />\n\t\t\t\t\t[29]<span />\n\t\t\t\t\t\t[1839]<span />\n\t\t\t\t\t\t\t创作权益\n\t\t\t\t\t[1844]<i />\n\t\t[30]<div />\n\t\t\t[290]<div />\n\t\t\t\t[31]<span />\n\t\t\t\t\t[1892]<i />\n\t\t\t\t\t[32]<span />\n\t\t\t\t\t\t[1894]<span />\n\t\t\t\t\t\t\t社区公约\n\t\t[33]<div />\n\t\t\t[293]<div />\n\t\t\t\t[34]<span />\n\t\t\t\t\t[1912]<i />\n\t\t\t\t\t[35]<span />\n\t\t\t\t\t\t[1914]<span />\n\t\t\t\t\t\t\t创作设置\n*[2966]<input type=file accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=multiple compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />\n发布视频\n[3860]<button />\n\t批量操作\n*[3864]<div />\n[4368]<div title=2026-04-29-20-41-59 />\n\t*[4365]<div />\n\t\t*[4363]<span />\n\t\t*[4364]<span />\n\t\t\t2026-04-29-20-41-59\n\t*[4367]<div />\n\t\t[5847]<svg /> <!-- SVG content collapsed -->\n\t\t*[4366]<span />\n\t\t\t上传完成\n[3868]<div />\n\t[3866]<svg /> <!-- SVG content collapsed -->\n\t*[3867]<div />\n\t\t添加视频\n[3874]<button />\n\t添加分P\n[3876]<div />\n\t*[4370]<div />\n\t[4372]<div />\n\t\t2026-04-29-20-41-59\n\t[5849]<svg /> <!-- SVG content collapsed -->\n\t*[4374]<span />\n\t\t上传完成\n\t[4382]<div />\n\t\t[4381]<svg /> <!-- SVG content collapsed -->\n\t\t*[5851]<span />\n\t\t\t更换视频\n基本设置\n[3882]<span />\n\t一键填写\n*[3885]<p />\n*[3886]<h3 level=3 />\n\t封面\n[3891]<div />\n\t*[6075]<span />\n\t\t封面设置\n\t*[3890]<div />\n\t\t*[6078]<svg /> <!-- SVG content collapsed -->\n以下为系统推荐封面，使用AI生成可获取更优质封面\n*[3903]<div />\n\t[3902]<svg /> <!-- SVG content collapsed -->\n[3909]<div />\n\t*[3907]<span />\n\t\t[3906]<svg /> <!-- SVG content collapsed -->\n\t*[3908]<span />\n\t\tAI生成\n[5151]<div />\n[5153]<div />\n[5155]<div />\n[5157]<div />\n[5159]<div />\n*[3925]<p />\n*[3926]<h3 level=3 />\n\t标题\n*[3928]<input type=text placeholder=请输入稿件标题 maxlength=80 />\n*[3930]<p />\n\t19/80\n[3937]<p />\n创作声明\n[3941]<i />\n\t[3940]<svg /> <!-- SVG content collapsed -->\n[3987]<div />\n\t[3946]<input type=text placeholder=请选择符合您视频内容的创作声明 />\n\t[3947]<i />\n[3993]<p />\n[3994]<h3 level=3 />\n\t分区\n[3999]<div />\n\t[3996]<p />\n\t\t科技数码\n\t[3998]<svg /> <!-- SVG content collapsed -->\n[4020]<div id=tag-container />\n\t[4005]<p />\n\t[4006]<h3 level=3 />\n\t\t标签\n\t[4009]<i />\n\t\t[4008]<svg /> <!-- SVG content collapsed -->\n\t[4702]<div />\n\t\t[4699]<p />\n\t\t\t原神\n\t\t[4701]<svg /> <!-- SVG content collapsed -->\n\t[4706]<div />\n\t\t[4703]<p />\n\t\t\t游戏杂谈\n\t\t[4705]<svg /> <!-- SVG content collapsed -->\n\t[4710]<div />\n\t\t[4707]<p />\n\t\t\tAPEX\n\t\t[4709]<svg /> <!-- SVG content collapsed -->\n\t[4015]<input type=text placeholder=按回车键Enter创建标签 maxlength=20 />\n\t还可以添加7个标签\n推荐标签：\n[4713]<div />\n\t[4712]<div />\n\t\t[4711]<span />\n\t\t\t编程\n[4716]<div />\n\t[4715]<div />\n\t\t[4714]<span />\n\t\t\t编程开发\n[4719]<div />\n\t[4718]<div />\n\t\t[4717]<span />\n\t\t\t教程\n[4722]<div />\n\t[4721]<div />\n\t\t[4720]<span />\n\t\t\t资源\n参与话题：\n[5878]<div />\n\t[5877]<div />\n\t\t[5873]<svg /> <!-- SVG content collapsed -->\n\t\t[5874]<span />\n\t\t\t上B站看播客\n\t\t[5876]<svg /> <!-- SVG content collapsed -->\n[5889]<div />\n\t[5888]<div />\n\t\t[5884]<svg /> <!-- SVG content collapsed -->\n\t\t[5885]<span />\n\t\t\t开麦聊体育\n\t\t[5887]<svg /> <!-- SVG content collapsed -->\n[5900]<div />\n\t[5899]<div />\n\t\t[5895]<svg /> <!-- SVG content collapsed -->\n\t\t[5896]<span />\n\t\t\t高能量自律\n\t\t[5898]<svg /> <!-- SVG content collapsed -->\n[5911]<div />\n\t[5910]<div />\n\t\t[5906]<svg /> <!-- SVG content collapsed -->\n\t\t[5907]<span />\n\t\t\t评论区摄影大赛\n\t\t[5909]<svg /> <!-- SVG content collapsed -->\n[5922]<div />\n\t[5921]<div />\n\t\t[5917]<svg /> <!-- SVG content collapsed -->\n\t\t[5918]<span />\n\t\t\t上B站看视频播客\n\t\t[5920]<svg /> <!-- SVG content collapsed -->\n[5933]<div />\n\t[5932]<div />\n\t\t[5928]<svg /> <!-- SVG content collapsed -->\n\t\t[5929]<span />\n\t\t\t时髦人一起聊\n\t\t[5931]<svg /> <!-- SVG content collapsed -->\n[4668]<div />\n\t搜索更多话题 >\n[4042]<div />\n\t[4029]<h3 level=3 />\n\t\t简介\n\t[4031]<div />\n\t\t[4243]<div contenteditable=true />\n\t\t\t[4352]<p />\n\t\t\t\t[4353]<br />\n\t[4039]<div />\n\t\t/2000\n定时发布\n[4048]<div />\n\t[4047]<span />\n(可选择距离当前最早≥5分钟/最晚≤15天的时间，花火、预约、互动视频稿件不可修改/取消)\n加入合集\n合集功能可用于收集整理系列性稿件\n开通合集功能需满足权益中心等级达Lv2，您可前往创作中心-权益中心查看相关数据\n商业推广\n[4396]<i />\n\t[4395]<svg /> <!-- SVG content collapsed -->\n[4073]<label />\n\t[4071]<span />\n\t[4072]<span />\n\t\t增加商业推广信息\n[4083]<span />\n\t更多设置\n\t[4079]<span />\n\t\t（含声明与权益、视频元素、互动管理等）\n\t[4082]<span />\n\t\t[4081]<svg /> <!-- SVG content collapsed -->\n[4179]<span />\n\t存草稿\n[4180]<span />\n\t立即投稿\n<svg /> <!-- SVG content collapsed -->\n*[2259]<input type=file name=buploader accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />\n*[2264]<input type=file name=buploader accept=.txt compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n<svg /> <!-- SVG content collapsed -->\n*[5164]<input type=file name=buploader accept=.zip multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />\n*[6126]<div />\n\t*[6125]<div />\n\t\t*[6124]<div />\n\t\t\t*[6123]<i />\n*[306]<div id=reference-help />\n\t*[2064]<div />\n\t\t*[77]<img />\n\t*[2065]<div />\n\t\t遇到问题\n[307]<div id=topBtn />",
+    "upload-cover": "[115]<i />\n[80]<a />\n\t主站\n[55]<div />\n\t试试更多AI创作工具吧\n[56]<div />\n\t[120]<a />\n[121]<div />\n\t成为UP主的第\n\t53\n[129]<a />\n[131]<div />\n\t[132]<div role=region aria-label=scrollable content />\n\t\t[134]<a id=nav_upload_btn />\n\t\t\t投稿\n\t\t[135]<div />\n\t\t\t[136]<span />\n\t\t\t\t首页\n\t\t[137]<div />\n\t\t\t[138]<span />\n\t\t\t\t内容管理\n\t\t[205]<div />\n\t\t\t[206]<span />\n\t\t\t\t数据中心\n\t\t[213]<div />\n\t\t\t[214]<span />\n\t\t\t\t粉丝管理\n\t\t[223]<div />\n\t\t\t[224]<span />\n\t\t\t\t互动管理\n\t\t[239]<div />\n\t\t\t[240]<span />\n\t\t\t\t收益管理\n\t\t[267]<div />\n\t\t\t花生\n\t\t[268]<div />\n\t\t\tupdream\n\t\t[269]<div />\n\t\t\t[270]<span />\n\t\t\t\t创作成长\n\t\t[271]<div />\n\t\t\t[272]<span />\n\t\t\t\t任务中心\n\t\t[273]<div />\n\t\t\t[274]<span />\n\t\t\t\t必火推广\n\t\t[275]<div />\n\t\t\t[276]<a />\n\t\t\t\t创作学院\n\t\t[27]<div />\n\t\t\t[279]<div />\n\t\t\t\t[28]<span />\n\t\t\t\t\t[1837]<i />\n\t\t\t\t\t[29]<span />\n\t\t\t\t\t\t[1839]<span />\n\t\t\t\t\t\t\t创作权益\n\t\t[30]<div />\n\t\t\t[290]<div />\n\t\t\t\t[31]<span />\n\t\t\t\t\t[1892]<i />\n\t\t\t\t\t[32]<span />\n\t\t\t\t\t\t[1894]<span />\n\t\t\t\t\t\t\t社区公约\n\t\t[33]<div />\n\t\t\t[293]<div />\n\t\t\t\t[34]<span />\n\t\t\t\t\t[1912]<i />\n\t\t\t\t\t[35]<span />\n\t\t\t\t\t\t[1914]<span />\n\t\t\t\t\t\t\t创作设置\n*[2966]<input type=file accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=multiple compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />\n发布视频\n[3860]<button />\n\t批量操作\n[4368]<div title=2026-04-29-20-41-59 />\n\t2026-04-29-20-41-59\n\t上传中...\n[3868]<div />\n\t[3866]<svg /> <!-- SVG content collapsed -->\n\t添加视频\n[3874]<button />\n\t添加分P\n[3876]<div />\n\t[4372]<div />\n\t\t2026-04-29-20-41-59\n\t已经上传：0.7MB/3.2MB\n\t当前速度： 0.2MB/s 剩余时间：12.6秒\n\t21%\n\t[4382]<div />\n\t\t[4381]<svg /> <!-- SVG content collapsed -->\n\t[4385]<div />\n\t\t[4384]<svg /> <!-- SVG content collapsed -->\n基本设置\n[3882]<span />\n\t一键填写\n封面\n[3891]<div />\n\t添加封面\n以下为系统推荐封面，使用AI生成可获取更优质封面\n[3902]<svg /> <!-- SVG content collapsed -->\n[3909]<div />\n\t[3906]<svg /> <!-- SVG content collapsed -->\n\tAI生成\n[5151]<div />\n[5153]<div />\n[5155]<div />\n[5157]<div />\n[5159]<div />\n|scroll element|<div /> (scroll: 0%, 0.2 pages below, total: 1.2 pages)\n\t封面制作\n\t*[5217]<div />\n\t\t*[5216]<img />\n\t*[5221]<div />\n\t\t*[5220]<img />\n\t\t智能\n\t*[5223]<div />\n\t\t*[5222]<img />\n\t\t模版\n\t*[5225]<div />\n\t\t*[5224]<img />\n\t\t文字\n\t*[5227]<div />\n\t\t*[5226]<img />\n\t\t贴纸\n\t*[5229]<div />\n\t\t*[5228]<img />\n\t\t滤镜\n\t*[5235]<div />\n\t\t*[5233]<span />\n\t\t\t*[5232]<svg /> <!-- SVG content collapsed -->\n\t\t*[5234]<span />\n\t\t\t智能生成封面\n\t*[5239]<div />\n\t\t*[5237]<svg /> <!-- SVG content collapsed -->\n\t\t*[5238]<div />\n\t\t\t不使用\n\t*[5240]<div />\n\t*[5242]<div />\n\t*[5244]<div />\n\t*[5246]<div />\n\t*[5248]<div />\n\t*[5277]<svg /> <!-- SVG content collapsed -->\n\t两个比例的封面都会被展示给观众，请确认 4:3、16:9 比例下的封面效果\n\t*[5279]<span />\n\t\t配置封面遇到问题？\n\t*[5284]<span />\n\t\t首页推荐封面（4:3）\n\t*[5316]<span />\n\t\t个人空间封面（16:9）\n\t*[5363]<div />\n\t\t*[5358]<div />\n\t\t\t*[5356]<div />\n\t\t\t\t*[5349]<span />\n\t\t\t\t\t上传封面\n\t\t\t\t*[5355]<div />\n\t\t\t\t\t*[5351]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[5357]<span />\n\t\t\t\t拖拽图片或点击上传\n\t\t*[5362]<input type=file accept=image/png, image/jpeg compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t*[5562]<div />\n\t\t*[5560]<div role=slider aria-valuemin=0 aria-valuemax=92 aria-valuenow=0 valuemin=0 valuemax=92 valuetext=00:00 />\n\t\t\t*[5556]<div />\n\t*[5563]<div />\n\t*[5564]<div />\n\t*[5565]<div />\n\t*[5566]<div />\n\t*[5567]<div />\n\t*[5568]<div />\n\t*[5569]<div />\n\t*[5367]<div />\n\t\t首页推荐\n\t*[5368]<div />\n\t\t个人空间\n\t这些UP主，带着粉丝们干了件“大事儿”……\n\t哔哩哔哩创作中心\n\t*[5375]<span />\n\t\t*[5373]<img alt=player />\n\t\t--\n\t*[5378]<span />\n\t\t*[5376]<img alt=danmu />\n\t\t--\n\t--\n\t2026-04-29-20-41-59\n\t树哥ai\n\t*[5387]<span />\n\t\t*[5385]<img alt=player />\n\t\t--\n\t*[5390]<span />\n\t\t*[5388]<img alt=danmu />\n\t\t--\n\t--\n\t干杯！去做喜欢的一切\n\t哔哩哔哩创作中心\n\t4:3封面预览\n\t*[5419]<img alt=help />\n\t*[5425]<div />\n\t\t取消\n\t*[5426]<div />\n\t\t完成\n标题\n19/80\n创作声明\n[3940]<svg /> <!-- SVG content collapsed -->\n[3987]<div />\n\t[3947]<i />\n分区\n游戏\n[3998]<svg /> <!-- SVG content collapsed -->\n[4020]<div id=tag-container />\n\t[4005]<p />\n\t[4006]<h3 level=3 />\n\t\t标签\n\t[4009]<i />\n\t\t[4008]<svg /> <!-- SVG content collapsed -->\n\t[4702]<div />\n\t\t[4699]<p />\n\t\t\t原神\n\t\t[4701]<svg /> <!-- SVG content collapsed -->\n\t[4706]<div />\n\t\t[4703]<p />\n\t\t\t游戏杂谈\n\t\t[4705]<svg /> <!-- SVG content collapsed -->\n\t[4710]<div />\n\t\t[4707]<p />\n\t\t\tAPEX\n\t\t[4709]<svg /> <!-- SVG content collapsed -->\n\t[4015]<input type=text placeholder=按回车键Enter创建标签 maxlength=20 />\n\t还可以添加7个标签\n推荐标签：\n[4713]<div />\n\t[4712]<div />\n\t\t原神\n[4716]<div />\n\t[4715]<div />\n\t\t游戏杂谈\n[4719]<div />\n\t[4718]<div />\n\t\tAPEX\n[4722]<div />\n\t[4721]<div />\n\t\t[4720]<span />\n\t\t\t守望先锋\n[4725]<div />\n\t[4724]<div />\n\t\t[4723]<span />\n\t\t\t吃鸡\n[4728]<div />\n\t[4727]<div />\n\t\t[4726]<span />\n\t\t\t全场最佳\n[4731]<div />\n\t[4730]<div />\n\t\t[4729]<span />\n\t\t\t搞笑\n[4734]<div />\n\t[4733]<div />\n\t\t[4732]<span />\n\t\t\tMOBA\n[4737]<div />\n\t[4736]<div />\n\t\t[4735]<span />\n\t\t\tPVP\n[4740]<div />\n\t[4739]<div />\n\t\t[4738]<span />\n\t\t\t永劫无间\n参与话题：\n[5037]<div />\n\t[5036]<div />\n\t\t[5032]<svg /> <!-- SVG content collapsed -->\n\t\t[5033]<span />\n\t\t\t2026LPL第三赛段\n\t\t[5035]<svg /> <!-- SVG content collapsed -->\n[5048]<div />\n\t[5047]<div />\n\t\t[5043]<svg /> <!-- SVG content collapsed -->\n\t\t[5044]<span />\n\t\t\t无畏契约三周年\n\t\t[5046]<svg /> <!-- SVG content collapsed -->\n[5059]<div />\n\t[5058]<div />\n\t\t[5054]<svg /> <!-- SVG content collapsed -->\n\t\t[5055]<span />\n\t\t\t崩坏：星穹铁道创作者激励计划\n\t\t[5057]<svg /> <!-- SVG content collapsed -->\n[5070]<div />\n\t[5069]<div />\n\t\t[5065]<svg /> <!-- SVG content collapsed -->\n\t\t[5066]<span />\n\t\t\t绝区零UP主激励计划\n\t\t[5068]<svg /> <!-- SVG content collapsed -->\n[5081]<div />\n\t[5080]<div />\n\t\t[5076]<svg /> <!-- SVG content collapsed -->\n\t\t[5077]<span />\n\t\t\t蛋仔奇思妙想计划\n\t\t[5079]<svg /> <!-- SVG content collapsed -->\n[5092]<div />\n\t[5091]<div />\n\t\t[5087]<svg /> <!-- SVG content collapsed -->\n\t\t[5088]<span />\n\t\t\t王者荣耀UP主激励计划\n\t\t[5090]<svg /> <!-- SVG content collapsed -->\n[4668]<div />\n\t搜索更多话题 >\n[4042]<div />\n\t[4029]<h3 level=3 />\n\t\t简介\n\t[4031]<div />\n\t\t[4243]<div contenteditable=true />\n\t\t\t[4352]<p />\n\t\t\t\t[4353]<br />\n\t[4039]<div />\n\t\t/2000\n定时发布\n[4048]<div />\n\t[4047]<span />\n(可选择距离当前最早≥5分钟/最晚≤15天的时间，花火、预约、互动视频稿件不可修改/取消)\n加入合集\n合集功能可用于收集整理系列性稿件\n开通合集功能需满足权益中心等级达Lv2，您可前往创作中心-权益中心查看相关数据\n商业推广\n[4396]<i />\n\t[4395]<svg /> <!-- SVG content collapsed -->\n[4073]<label />\n\t[4071]<span />\n\t[4072]<span />\n\t\t增加商业推广信息\n[4083]<span />\n\t更多设置\n\t[4079]<span />\n\t\t（含声明与权益、视频元素、互动管理等）\n\t[4082]<span />\n\t\t[4081]<svg /> <!-- SVG content collapsed -->\n[4179]<span />\n\t存草稿\n[4180]<span />\n\t立即投稿\n<svg /> <!-- SVG content collapsed -->\n*[2259]<input type=file name=buploader accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />\n*[2264]<input type=file name=buploader accept=.txt compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n<svg /> <!-- SVG content collapsed -->\n*[5164]<input type=file name=buploader accept=.zip multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />\n遇到问题\n[307]<div id=topBtn />"
+  }
+}

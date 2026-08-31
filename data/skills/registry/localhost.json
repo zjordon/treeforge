@@ -1,0 +1,63 @@
+{
+  "host": "localhost",
+  "skill_name": "Magento Admin On Localhost Site Knowledge",
+  "scope": "Drive the TreeWalker agent through the Magento 2.4.6 admin (localhost:7780) for grid filtering, reviews/orders/customers/products browsing, and detail-page tasks.",
+  "sop_md": "# localhost (Magento Admin) 站点卡片\n\n## 站点功能地图（Site Function Map）\n\n- 入口: `http://localhost:7780/admin/admin/dashboard/`（Bestsellers/Most Viewed/New Customers/Customers 标签、Lifetime Sales、Last Orders 面板；表格行 `tr` 的 title 属性即详情 URL）\n- 商品管理: `Catalog` → `Products` → `/admin/catalog/product/`\n- 订单管理: `Sales` → `Orders` → `/admin/sales/order/`（300+ records）\n- 订单详情: `sales/order/view/order_id/N/`，顶部 Back/Edit/Cancel/Invoice/Ship；Information/Invoices/Credit Memos/Shipments/Comments History 标签；底部 Notes：`id=history_status` 下拉、`id=history_comment` textarea、`title=Submit Comment`\n- 发票管理: `Sales` → `Invoices` → `/admin/sales/invoice/`；详情 `sales/invoice/view/invoice_id/N/`\n- 客户管理: `Customers` → `All Customers` → `/admin/customer/index/`（`Add New Customer` id=add）\n- 商品评论: `Marketing` → `Reviews` → `All Reviews` → `/admin/review/product/index/`（全部约 351 records；顶部 `New Review`(id=add)、Search、Reset Filter）。按 Status 筛选（如 Pending）后剩约 5 条，URL 变为 `/admin/review/product/index/filter/<base64>/internal_reviews//form_key/<随机>/`\n- 评论详情/编辑: `/admin/review/product/edit/id/N/`。字段：Status `id=status_id`（Approved|Pending|Not Approved）、Nickname `id=nickname`、Summary `id=title`、正文 `id=detail`；按钮 Back(id=back)/Reset/Delete Review/Save Review(id=save_button)/Save and Next/Next/Previous——按评论位置显示不同组合\n- 侧边菜单（li id 稳定）: Dashboard `menu-magento-backend-dashboard` / Sales / Catalog / Customers / Marketing `menu-magento-backend-marketing` / Content / Reports / Stores / System / Find Partners & Extensions\n- 页头全局搜索: `input id=search-global`；UI-Component 网格右上全文搜索 `id=fulltext placeholder=\"Search by keyword\"` + Search 按钮\n- Scope 切换: `id=store-change-button`（All Store Views）+ Reload Data 按钮\n\n## 站点通用操作知识\n\n- 侧边菜单两级：点一级项（Sales/Marketing）展开后二级项（Orders/All Reviews）才出现；每步点击后重读 DOM，index 会变。\n- 两代网格：\n  - 新 UI-Component 网格（订单/客户/商品）：`Default View`/`Columns`/`Export`/`Filters` 控制条；点 `Filters` 同页 AJAX 展开筛选面板，填完 `Apply Filters`（靠可见文本），清除用 `Clear all` 或单个 chip 旁 `Remove`。\n  - 旧版网格（评论页 reviewGrid）：**无 Filters 按钮**，筛选行直接在表头下方；填完点顶部 `Search`（title=Search），清除用 `Reset Filter`。筛选字段 id 稳定：`reviewGrid_filter_name/sku/status/type/title/nickname/detail/review_id`、created_at[from]/[to]。\n- 订单 Filters 面板字段（靠 name，id 均随机）：`created_at[from]/[to]`、`base_grand_total[from]/[to]`、`grand_total[from]/[to]`、`store_id`、`increment_id`、`billing_name`/`shipping_name`、`status`、`transaction_source`；客户面板另含 `billing_telephone`/`email`/`group_id`/`billing_country_id` 等。\n- 下拉筛选（Status/Type/Store、评论网格下拉）直接 `select_dropdown(index, value)`，无需先点击展开；`dropdown_options` 可先读选项。\n- 日期输入 `placeholder=mm/dd/yyyy`，手输日期最稳（弹层按钮文本为 undefined，不可靠）。\n- 筛选结果确认：UI 网格看 \"records found\" 计数 + \"Active filters:\"；旧版评论网格 Search 后整页跳转，看行数、\"N records found\" 与输入框保留值确认。\n- 列排序：点表头 th 同页 AJAX，行序与 index 变化。\n- 分页：网格底部每页条数下拉（评论网格 `id=reviewGrid_page-limit`，20|30|50|100|200）、当前页 input（`id=reviewGrid_page-current`）、`of N`、Next/Previous page 按钮（title 指示方向）。\n- 批量操作（评论网格）：`reviewGrid_massaction-select`（Actions|Delete|Update Status）+ `reviewGrid_massaction-mass-select`（Select All/Select Visible 等）+ 行首 `name=reviews` checkbox，最后 Submit。\n- 进入详情页：点行内 View/Edit 链接、点行本身（评论行可点击，tr title 即编辑 URL），或直接 `navigate` 详情 URL；详情页长需多次 `scroll`；返回列表用顶部 `Back`（id=back）。\n- 回到列表后筛选值保留，可继续操作其余结果行。",
+  "selectors_md": "# Selectors — localhost\n\n多数元素已在 sop_md 用稳定 id/name 描述。需指纹的补充：\n\n| 元素用途 | 怎么找到它 | 稳定标识 | 备注 |\n|---|---|---|---|\n| 网格行选中 checkbox（订单/客户） | 每行首列 | `type=checkbox`, id 形如 `idscheck25` | id/value 数字即实体 id |\n| 评论网格行 checkbox | 每行首列 | `type=checkbox`, `name=reviews`, value=评论 id | 靠 name+value 定位行 |\n| 评论筛选输入（商品名/SKU/标题等） | 评论网格表头下筛选行 | `id=reviewGrid_filter_name` / `_sku` / `_title` / `_nickname` / `_detail` / `_review_id` | id 稳定可复用 |\n| 评论 Status/Type 筛选下拉 | 评论网格筛选行 | `id=reviewGrid_filter_status` / `id=reviewGrid_filter_type` | |\n| 评论日期范围输入 | 筛选行 | `name=created_at[from]`, `name=created_at[to]`, `placeholder=mm/dd/yyyy` | id 含随机后缀，勿用 |\n| 评论 Search / Reset Filter 按钮 | 评论页网格右上方 | `title=Search` / `title=Reset Filter` | id 为随机长串，每次加载变 |\n| 评论每页条数 / 当前页 / 翻页 | 网格底部 | `id=reviewGrid_page-limit` / `id=reviewGrid_page-current`, 可见文本\"Next page\" | page-limit 选项 20|30|50|100|200 |\n| 评论批量操作下拉 | 网格上方 | `id=reviewGrid_massaction-select` / `id=reviewGrid_massaction-mass-select` | Submit 按钮靠可见文本 |\n| 订单 Status 筛选下拉 | 订单 Filters 面板 | `name=status` | id 随机；直接 select_dropdown |\n| 订单金额/ID/姓名筛选 | Filters 面板 | `name=base_grand_total[from]` / `name=increment_id` / `name=billing_name` / `name=shipping_name` / `name=transaction_source` | id 均随机 |\n| 客户电话/姓名/邮箱筛选 | Filters 面板 | `name=billing_telephone` / `name=name` / `name=email` / `name=billing_postcode` / `name=billing_region` | id 随机，靠 name |\n| Group/Country/Purchase Point 下拉 | Filters 面板 | `name=group_id` / `name=billing_country_id` / `name=store_id` | |\n| Apply Filters / Filters / Clear all 按钮 | Filters 面板底部 / 控制条 | 可见文本\"Apply Filters\" / \"Filters\" / \"Clear all\" | id 随机，靠可见文本 |\n| 激活筛选 chip 的 Remove 按钮 | \"Active filters:\" 行 chip 旁 | 可见文本\"Remove\" | type=button |\n| UI 网格全文搜索框 | 列表页控制条右侧 | `id=fulltext`, `placeholder=Search by keyword` | 各 UI 网格通用 |\n| 详情页返回按钮 | 订单/发票/评论详情页顶部 | `id=back`, 可见文本\"Back\" | |\n| 评论编辑页字段 | Edit Review 页 | `id=nickname` / `id=title` / `id=detail` / `id=status_id` | 均 required，提交用 `id=save_button` |\n| 订单评论输入/状态下拉 | 订单详情底部 Notes 区 | `id=history_comment` / `id=history_status` | 提交按钮靠 `title=Submit Comment` |",
+  "quirks_md": "# Quirks — localhost\n\n- **两类网格行为不同**：UI-Component 网格（订单/客户/商品）筛选为同页 AJAX，URL 不变；评论旧版网格（reviewGrid）点 Search 或 Reset Filter 后是**整页跳转**，URL 变为 `/admin/review/product/index/filter/<base64>/internal_reviews//form_key/<随机>/`——提交后必须重读 DOM（index 全变），勿从 URL 解码筛选条件。\n- **功能性 id 稳定 vs 随机 id 混存**：评论筛选输入 id `reviewGrid_filter_name`、`reviewGrid_page-limit`、`reviewGrid_massaction-select` 等稳定；但 Search/Reset Filter 按钮 id、created_at 输入 id、UI 网格 Filters 面板输入/下拉 id 均为随机串，每次加载变化——按钮靠 title/可见文本定位，输入/下拉靠 `name=` 属性。\n- **Search/Reset Filter/Apply Filters 提交后 DOM 整体重建**：网格行集与所有 index 更换；确认筛选生效看 \"N records found\"（如 Pending 筛后 \"5 records found\"）与 \"Active filters:\"，勿复用旧 index。\n- **日期选择器弹层按钮内容为 \"undefined\"**：弹层不可靠，对日期输入框直接 `input_text` 手输 `mm/dd/yyyy`。\n- **菜单展开为渐进式 DOM 更新**：点一级菜单（Sales/Marketing）后二级项（Orders/All Reviews）才出现；每步点击后必须重读 DOM。\n- **列表/详情页 DOM 随滚动渐进加载**：网格后续行、详情页各区需多次 `scroll` 后才出现（评论筛选结果页滚动多次后底部 massaction/分页区才完整可见）。\n- **每次页面切换（筛选、排序、翻页、进出详情、Back 返回）index 全变**，操作前重读 DOM；Back 返回列表后筛选值仍保留。\n- **移除激活筛选**：chip 旁 `Remove` 按钮（单个）或 `Clear all`（全部）；移除后网格刷新。\n- **点表头 th 排序是同页 AJAX**，点击后行序与 index 变化，勿复用旧行 index。\n- **网格行 checkbox 含实体 id**：订单/客户行 `idscheckN`；评论行 `name=reviews` value=评论 id——按实体定位行用此指纹，勿依赖行 index。\n- **评论编辑页翻页按钮组合随位置变化**：按钮存在与否由评论在结果集中的排序位置决定，勿假设固定按钮集。\n- **Dashboard 各 tab 前的装饰性 span**（title \"The information in this tab has been changed.\" 等）：非真实状态提示，忽略。\n- **Dashboard/评论表格行详情 URL 在 `tr` 的 title 属性**中，可直接 navigate；评论列表行同样可整行点击进入编辑页。",
+  "meta": {
+    "model": "glm-5.2",
+    "usage": {
+      "input_tokens": 27141,
+      "output_tokens": 2874
+    },
+    "segment_count": 1,
+    "domains": [
+      "localhost"
+    ],
+    "capacities": [
+      "filter-products-by-quantity",
+      "filter-orders-by-status",
+      "view-invoice-detail",
+      "view-order-details",
+      "filter-customers-by-telephone",
+      "search-product-reviews",
+      "browse-product-reviews",
+      "navigate-to-product-reviews",
+      "filter-reviews-by-status"
+    ],
+    "distill_version": 16,
+    "distilled_at": "2026-08-31T12:25:18.959662+00:00"
+  },
+  "trace_sources": [
+    "data\\captures\\d81eea6f\\trace.json",
+    "data\\captures\\3e803a1c\\trace.json",
+    "data\\captures\\84445757\\trace.json",
+    "data\\captures\\5b362f32\\trace.json",
+    "data\\captures\\c7c46c44\\trace.json",
+    "data\\captures\\260fc3f0\\trace.json",
+    "data\\captures\\f1479b1d\\trace.json",
+    "data\\captures\\d66b1380\\trace.json",
+    "data\\captures\\4675a501\\trace.json",
+    "data\\captures\\2d8582e1\\trace.json",
+    "data\\captures\\5ab0f2ad\\trace.json",
+    "data\\captures\\45978f64\\trace.json",
+    "data\\captures\\bf62e5e7\\trace.json",
+    "data\\captures\\2d186dd7\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\d81eea6f\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\3e803a1c\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\84445757\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\5b362f32\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\c7c46c44\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\260fc3f0\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\f1479b1d\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\d66b1380\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\4675a501\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\2d8582e1\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\5ab0f2ad\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\45978f64\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\bf62e5e7\\trace.json",
+    "D:\\dev\\git\\z_jordon\\treeforge\\data\\captures\\2d186dd7\\trace.json",
+    "data\\captures\\c2f9582c\\trace.json"
+  ]
+}

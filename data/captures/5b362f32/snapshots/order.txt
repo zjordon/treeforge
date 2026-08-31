@@ -1,0 +1,367 @@
+[52298]<a />
+*[52306]<li id=menu-magento-backend-dashboard role=menu-item />
+	[52307]<a />
+		Dashboard
+*[52312]<li id=menu-magento-sales-sales role=menu-item />
+	[52209]<a />
+		Sales
+*[52355]<li id=menu-magento-catalog-catalog role=menu-item />
+	[52210]<a />
+		Catalog
+*[52378]<li id=menu-magento-customer-customer role=menu-item />
+	[52211]<a />
+		Customers
+*[52403]<li id=menu-magento-backend-marketing role=menu-item />
+	[52212]<a />
+		Marketing
+*[52488]<li id=menu-magento-backend-content role=menu-item />
+	[52213]<a />
+		Content
+*[52547]<li id=menu-magento-reports-report role=menu-item />
+	[52214]<a />
+		Reports
+*[52708]<li id=menu-magento-backend-stores role=menu-item />
+	[52215]<a />
+		Stores
+*[52804]<li id=menu-magento-backend-system role=menu-item />
+	[52216]<a />
+		System
+*[52909]<li id=menu-magento-marketplace-partners role=menu-item />
+	[52910]<a />
+		Find Partners & Extensions
+Orders
+[52972]<a title=My Account />
+	admin
+[53010]<a title=Notifications />
+[53015]<div />
+	[52201]<form id=form-search />
+		[53018]<div />
+			[52202]<input type=text id=search-global autocomplete=off />
+[52217]<button title=Create New Order id=add />
+	Create New Order
+*[53447]<button />
+	Default View
+*[53688]<button />
+	Columns
+*[53808]<button />
+	Export
+*[53580]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+*[53581]<button aria-label=Search />
+*[53589]<button />
+	Filters
+Purchase Date
+from
+*[55556]<input type=text id=B94DJHV name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[55598]<button />
+	*[55601]<span />
+		undefined
+to
+*[55558]<input type=text id=QVB6DO7 name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[62950]<button />
+	*[62953]<span />
+		undefined
+Grand Total (Base)
+from
+*[55536]<input type=text id=OXM3VGA name=base_grand_total[from] maxlength=255 />
+to
+*[55538]<input type=text id=B0PH7DK name=base_grand_total[to] maxlength=255 />
+Grand Total (Purchased)
+from
+*[55540]<input type=text id=JARQF58 name=grand_total[from] maxlength=255 />
+to
+*[55542]<input type=text id=XIPX27U name=grand_total[to] maxlength=255 />
+Purchase Point
+*[55350]<select id=V9TB7EA name=store_id aria-label=notice-V9TB7EA expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />
+ID
+*[55516]<input type=text id=OD1H78T name=increment_id maxlength=255 />
+Bill-to Name
+*[55518]<input type=text id=VM9UFPW name=billing_name maxlength=255 />
+Ship-to Name
+*[55520]<input type=text id=W5UEFU0 name=shipping_name maxlength=255 />
+Status
+*[55371]<select id=KAOICUI name=status aria-label=notice-KAOICUI expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Canceled|Closed|Complete|Suspected Fraud) />
+Braintree Transaction Source
+*[55534]<input type=text id=GG1IVFR name=transaction_source maxlength=255 />
+*[53597]<button />
+	Cancel
+*[53599]<button />
+	Apply Filters
+*[53631]<button title=Select Items />
+	Actions
+308
+records found
+*[54694]<div />
+	*[54696]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />
+*[54697]<button />
+	Select
+per page
+*[53831]<button title=Previous Page disabled=true />
+*[53836]<input type=number id=25 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 2
+*[53838]<button title=Next Page />
+*[53411]<tr />
+	*[54098]<div />
+		*[54099]<input type=checkbox checked=false id=51 />
+		*[54101]<button />
+			Options
+	*[54251]<th />
+		*[54250]<span />
+			ID
+	*[54254]<th />
+		Purchase Point
+	*[54257]<th />
+		*[54256]<span />
+			Purchase Date
+	*[54260]<th />
+		*[54259]<span />
+			Bill-to Name
+	*[54263]<th />
+		*[54262]<span />
+			Ship-to Name
+	*[54266]<th />
+		*[54265]<span />
+			Grand Total (Base)
+	*[54269]<th />
+		*[54268]<span />
+			Grand Total (Purchased)
+	*[54272]<th />
+		*[54271]<span />
+			Status
+	*[54275]<th />
+		*[54274]<span />
+			Action
+	*[54278]<th />
+		Allocated sources
+	*[54281]<th />
+		*[54280]<span />
+			Braintree Transaction Source
+*[70648]<tr />
+	*[71249]<td />
+		*[73659]<label />
+			*[73657]<input type=checkbox checked=false id=idscheck299 value=299 />
+	*[71250]<td />
+		000000299
+	*[71251]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[71252]<td />
+		May 31, 2023 2:55:09 AM
+	*[71253]<td />
+		Sarah Miller
+	*[71254]<td />
+		Sarah Miller
+	*[71255]<td />
+		$219.40
+	*[71256]<td />
+		$219.40
+	*[71257]<td />
+		Pending
+	*[71258]<td />
+		*[79081]<a />
+			View
+	*[71259]<td />
+	*[71260]<td />
+*[70651]<tr />
+	*[71261]<td />
+		*[73662]<label />
+			*[73660]<input type=checkbox checked=false id=idscheck65 value=65 />
+	*[71262]<td />
+		000000065
+	*[71263]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[71264]<td />
+		May 28, 2023 6:43:55 AM
+	*[71265]<td />
+		Grace Nguyen
+	*[71266]<td />
+		Grace Nguyen
+	*[71267]<td />
+		$210.00
+	*[71268]<td />
+		$210.00
+	*[71269]<td />
+		Pending
+	*[71270]<td />
+		*[79101]<a />
+			View
+	*[71271]<td />
+	*[71272]<td />
+*[70654]<tr />
+	*[71273]<td />
+		*[73665]<label />
+			*[73663]<input type=checkbox checked=false id=idscheck125 value=125 />
+	*[71274]<td />
+		000000125
+	*[71275]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[71276]<td />
+		May 24, 2023 8:28:12 AM
+	*[71277]<td />
+		Matt Baker
+	*[71278]<td />
+		Matt Baker
+	*[71279]<td />
+		$166.40
+	*[71280]<td />
+		$166.40
+	*[71281]<td />
+		Processing
+	*[71282]<td />
+		*[79121]<a />
+			View
+	*[71283]<td />
+	*[71284]<td />
+*[70657]<tr />
+	*[71285]<td />
+		*[73668]<label />
+			*[73666]<input type=checkbox checked=false id=idscheck136 value=136 />
+	*[71286]<td />
+		000000136
+	*[71287]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[71288]<td />
+		May 23, 2023 9:20:01 PM
+	*[71289]<td />
+		Lily Potter
+	*[71290]<td />
+		Lily Potter
+	*[71291]<td />
+		$208.20
+	*[71292]<td />
+		$208.20
+	*[71293]<td />
+		Canceled
+	*[71294]<td />
+		*[79141]<a />
+			View
+	*[71295]<td />
+	*[71296]<td />
+*[70660]<tr />
+	*[71297]<td />
+		*[73671]<label />
+			*[73669]<input type=checkbox checked=false id=idscheck230 value=230 />
+	*[71298]<td />
+		000000230
+	*[71299]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[71300]<td />
+		May 19, 2023 8:11:51 AM
+	*[71301]<td />
+		Ava Brown
+	*[71302]<td />
+		Ava Brown
+	*[71303]<td />
+		$93.40
+	*[71304]<td />
+		$93.40
+	*[71305]<td />
+		Complete
+	*[71306]<td />
+		*[79161]<a />
+			View
+	*[71307]<td />
+	*[71308]<td />
+*[70663]<tr />
+	*[71309]<td />
+		*[73674]<label />
+			*[73672]<input type=checkbox checked=false id=idscheck242 value=242 />
+	*[71310]<td />
+		000000242
+	*[71311]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[71312]<td />
+		May 15, 2023 9:09:53 AM
+	*[71313]<td />
+		Olivia Lee
+	*[71314]<td />
+		Olivia Lee
+	*[71315]<td />
+		$183.00
+	*[71316]<td />
+		$183.00
+	*[71317]<td />
+		Canceled
+	*[71318]<td />
+		*[79181]<a />
+			View
+	*[71319]<td />
+	*[71320]<td />
+*[70666]<tr />
+	*[71321]<td />
+		*[73677]<label />
+			*[73675]<input type=checkbox checked=false id=idscheck25 value=25 />
+	*[71322]<td />
+		000000025
+	*[71323]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[71324]<td />
+		May 14, 2023 10:38:35 AM
+	*[71325]<td />
+		John Doe
+	*[71326]<td />
+		John Doe
+	*[71327]<td />
+		$204.25
+	*[71328]<td />
+		$204.25
+	*[71329]<td />
+		Canceled
+	*[71330]<td />
+		*[79201]<a />
+			View
+	*[71331]<td />
+	*[71332]<td />
+*[70669]<tr />
+	*[71333]<td />
+		*[73680]<label />
+			*[73678]<input type=checkbox checked=false id=idscheck256 value=256 />
+	*[71334]<td />
+		000000256
+	*[71335]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[71336]<td />
+		May 14, 2023 1:22:46 AM
+	*[71337]<td />
+		Adam Garcia
+	*[71338]<td />
+		Adam Garcia
+	*[71339]<td />
+		$89.00
+	*[71340]<td />
+		$89.00
+	*[71341]<td />
+		Complete
+	*[71342]<td />
+		*[79221]<a />
+			View
+	*[71343]<td />
+	*[71344]<td />
+*[70672]<tr />
+	*[71345]<td />
+	*[71346]<td />
+	*[71347]<td />
+		Main Website
+	*[71348]<td />
+	*[71349]<td />
+	*[71350]<td />
+	*[71351]<td />
+	*[71352]<td />
+	*[71353]<td />
+	*[71354]<td />
+	*[71355]<td />
+	*[71356]<td />

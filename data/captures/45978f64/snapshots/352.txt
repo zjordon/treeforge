@@ -1,0 +1,166 @@
+*[634107]<a />
+*[634116]<a />
+	Dashboard
+*[634018]<a />
+	Sales
+*[634019]<a />
+	Catalog
+*[634020]<a />
+	Customers
+*[634021]<a />
+	Marketing
+*[634022]<a />
+	Content
+*[634023]<a />
+	Reports
+*[634024]<a />
+	Stores
+*[634025]<a />
+	System
+*[634719]<a />
+	Find Partners & Extensions
+Reviews
+*[634781]<a title=My Account />
+	admin
+*[634819]<a title=Notifications />
+*[634824]<div />
+	*[633989]<form id=form-search />
+		*[634827]<div />
+			*[633990]<input type=text id=search-global name=query />
+*[634026]<button title=New Review id=add />
+	New Review
+*[634027]<button title=Search id=id_2ubTxvYtbatMroqMRfPQfZ8Ix2FN0eDd />
+	Search
+*[634028]<button title=Reset Filter id=id_utKRzQhbtkLWRcVAWjvOhgefXn4YwsQb />
+	Reset Filter
+*[633998]<select id=reviewGrid_massaction-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Actions|Delete|Update Status) />
+*[634960]<div />
+	*[633992]<select id=reviewGrid_massaction-mass-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Select All|Unselect All|Select Visible|Unselect Visible) />
+records found
+*[633993]<select id=reviewGrid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />
+per page
+*[635028]<button />
+*[633994]<input type=text id=reviewGrid_page-current name=page value=1 />
+of
+*[635045]<button />
+*[635062]<tr />
+	*[635067]<th />
+		*[635069]<span />
+			ID
+	*[635072]<th />
+		*[635073]<span />
+			Created
+	*[635076]<th />
+		*[635077]<span />
+			Status
+	*[635080]<th />
+		*[635081]<span />
+			Title
+	*[635084]<th />
+		*[635085]<span />
+			Nickname
+	*[635088]<th />
+		*[635089]<span />
+			Review
+	Visibility
+	*[635096]<th />
+		*[635097]<span />
+			Type
+	*[635100]<th />
+		*[635101]<span />
+			Product
+	*[635104]<th />
+		*[635105]<span />
+			SKU
+	Action
+*[635113]<tr />
+	*[635115]<td />
+		*[633999]<select id=reviewGrid_filter_massaction name=massaction expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Any|Yes|No) />
+	*[635126]<td />
+		*[634000]<input type=text id=reviewGrid_filter_review_id name=review_id />
+	*[635130]<td />
+		*[634001]<input type=text id=reviewGrid_filter_created_atzqaj9s4GbkyQ53aC7iKD8TBTaqRYzG6F_from name=created_at[from] placeholder=From />
+		*[634002]<input type=text id=reviewGrid_filter_created_atzqaj9s4GbkyQ53aC7iKD8TBTaqRYzG6F_to name=created_at[to] placeholder=To />
+	*[635140]<td />
+		*[634003]<select id=reviewGrid_filter_status name=status expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	*[635151]<td />
+		*[634004]<input type=text id=reviewGrid_filter_title name=title />
+	*[635155]<td />
+		*[634005]<input type=text id=reviewGrid_filter_nickname name=nickname />
+	*[635159]<td />
+		*[634006]<input type=text id=reviewGrid_filter_detail name=detail />
+	*[635163]<td />
+		*[634007]<select name=visible_in expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Default Store View) />
+	*[635172]<td />
+		*[634008]<select id=reviewGrid_filter_type name=type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Administrator|Customer|Guest,format=numeric) />
+	*[635183]<td />
+		*[634009]<input type=text id=reviewGrid_filter_name name=name value=Circe />
+	*[635187]<td />
+		*[634010]<input type=text id=reviewGrid_filter_sku name=sku />
+	*[635191]<td />
+*[635198]<tr title=http://localhost:7780/admin/review/product/edit/id/353/ />
+	*[635200]<td />
+		*[633995]<input type=checkbox checked=false id=id_186 name=reviews value=353 />
+	*[635207]<td />
+		353
+	*[635210]<td />
+		Apr 24, 2023, 2:55:10 PM
+	*[635213]<td />
+		Pending
+	*[635216]<td />
+		Bad!
+	*[635219]<td />
+		Hannah Lim
+	*[635222]<td />
+		I was really disappointed with the Circe Hooded...
+	*[635225]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[635234]<td />
+		Guest
+	*[635237]<td />
+		Circe Hooded Ice Fleece
+	*[635240]<td />
+		WH12
+	*[635243]<td />
+		*[635245]<a id=id1OIINIkJI6 />
+			Edit
+*[635250]<tr title=http://localhost:7780/admin/review/product/edit/id/352/ />
+	*[635252]<td />
+		*[633996]<input type=checkbox checked=false id=id_289 name=reviews value=352 />
+	*[635259]<td />
+		352
+	*[635262]<td />
+		Apr 24, 2023, 2:53:49 PM
+	*[635265]<td />
+		Pending
+	*[635268]<td />
+		Good but not perfect
+	*[635271]<td />
+		customer
+	*[635274]<td />
+		I recently purchased the Circe Hooded Ice Fleec...
+	*[635277]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[635286]<td />
+		Guest
+	*[635289]<td />
+		Circe Hooded Ice Fleece
+	*[635292]<td />
+		WH12
+	*[635295]<td />
+		*[635297]<a id=idmmu51BJe6E />
+			Edit
+*[635313]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[635323]<a id=footer_privacy />
+	Privacy Policy
+*[635326]<a id=footer_account_activity />
+	Account Activity
+*[635329]<a id=footer_bug_tracking />
+	Report an Issue

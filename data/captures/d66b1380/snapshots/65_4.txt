@@ -1,0 +1,354 @@
+[172227]<a />
+[172235]<li id=menu-magento-backend-dashboard role=menu-item />
+	[172236]<a />
+		Dashboard
+[172241]<li id=menu-magento-sales-sales role=menu-item />
+	[172103]<a />
+		Sales
+[172284]<li id=menu-magento-catalog-catalog role=menu-item />
+	[172104]<a />
+		Catalog
+[172307]<li id=menu-magento-customer-customer role=menu-item />
+	[172105]<a />
+		Customers
+[172332]<li id=menu-magento-backend-marketing role=menu-item />
+	[172106]<a />
+		Marketing
+[172417]<li id=menu-magento-backend-content role=menu-item />
+	[172107]<a />
+		Content
+[172476]<li id=menu-magento-reports-report role=menu-item />
+	[172108]<a />
+		Reports
+[172637]<li id=menu-magento-backend-stores role=menu-item />
+	[172109]<a />
+		Stores
+[172733]<li id=menu-magento-backend-system role=menu-item />
+	[172110]<a />
+		System
+[172838]<li id=menu-magento-marketplace-partners role=menu-item />
+	[172839]<a />
+		Find Partners & Extensions
+#000000065
+[172901]<a title=My Account />
+	admin
+[172939]<a title=Notifications />
+[172944]<div />
+	[172097]<form id=form-search />
+		[172947]<div />
+			[172098]<input type=text id=search-global autocomplete=off />
+[172111]<button title=Back id=back />
+	Back
+[172112]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+[172113]<button title=Edit id=order_edit />
+	Edit
+[172994]<button title=Cancel id=order-view-cancel-button />
+	Cancel
+[172114]<button title=Send Email id=send_notification />
+	Send Email
+[173007]<button title=Hold id=order-view-hold-button />
+	Hold
+[172115]<button title=Invoice id=order_invoice />
+	Invoice
+[172116]<button title=Ship id=order_ship />
+	Ship
+[172117]<button title=Reorder id=order_reorder />
+	Reorder
+Order & Account Information
+Order # 000000065 (
+The order confirmation email was sent
+[173146]<tr />
+	Order Date
+	[173151]<td />
+		May 28, 2023, 6:43:55 AM
+[173155]<tr />
+	Order Status
+	[173160]<td />
+		Pending
+[173165]<tr />
+	Purchased From
+	[173170]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+*[173178]<tr />
+	Placed from IP
+	*[173183]<td />
+		128.2.205.52
+Account Information
+[173199]<a />
+	Edit Customer
+[173209]<tr />
+	Customer Name
+	[173214]<td />
+		[173216]<a />
+			Grace Nguyen
+[173224]<tr />
+	Email
+	[173229]<td />
+		[173230]<a />
+			avidreader99@yahoo.com
+[173234]<tr />
+	Customer Group
+	[173239]<td />
+		General
+Address Information
+Billing Address
+[173265]<div />
+	[173266]<a />
+		Edit
+Grace Nguyen
+789 Harvard Square
+Cambridge,  Massachusetts, 02138
+United States
+T: 6175555555
+Shipping Address
+[173289]<div />
+	[173290]<a />
+		Edit
+Grace Nguyen
+789 Harvard Square
+Cambridge,  Massachusetts, 02138
+United States
+T: 6175555555
+Payment & Shipping Method
+Payment Information
+Check / Money order
+The order was placed using USD.
+Shipping & Handling Information
+Flat Rate - Fixed
+[173354]<span />
+	$20.00
+Items Ordered
+[173375]<tr />
+	Product
+	Item Status
+	Original Price
+	Price
+	Qty
+	Subtotal
+	Tax Amount
+	Tax Percent
+	Discount Amount
+	Row Total
+[173421]<tr />
+	[173423]<td />
+		Neve Studio Dance Jacket
+		SKU:
+		WJ11-M-Black
+		Color:
+		Black
+		Size:
+	[173453]<td />
+		Ordered
+	[173456]<td />
+		[173458]<span />
+			$69.00
+	[173462]<td />
+		[173464]<div />
+			[173466]<span />
+				$69.00
+	[173471]<td />
+		[173476]<tr />
+			Ordered
+			[173481]<td />
+	[173487]<td />
+		[173491]<span />
+			$69.00
+	[173496]<td />
+		[173498]<span />
+			$0.00
+	[173502]<td />
+		0%
+	[173505]<td />
+		[173507]<span />
+			$0.00
+	[173511]<td />
+		[173513]<span />
+			$69.00
+[173521]<tr />
+	[173523]<td />
+		Minerva LumaTech™ V-Tee
+		SKU:
+		WS08-XS-Red
+		Color:
+		Red
+		Size:
+		XS
+	[173553]<td />
+		Ordered
+	[173556]<td />
+		[173558]<span />
+			$32.00
+	[173562]<td />
+		[173564]<div />
+			[173566]<span />
+				$32.00
+	[173571]<td />
+		[173576]<tr />
+			Ordered
+			[173581]<td />
+	[173587]<td />
+		[173591]<span />
+			$32.00
+	[173596]<td />
+		[173598]<span />
+			$0.00
+	[173602]<td />
+		0%
+	[173605]<td />
+		[173607]<span />
+			$0.00
+	[173611]<td />
+		[173613]<span />
+			$32.00
+[173621]<tr />
+	[173623]<td />
+		Frankie  Sweatshirt
+		SKU:
+		MH04-XS-Green
+		Color:
+		Green
+		Size:
+		XS
+	[173653]<td />
+		Ordered
+	[173656]<td />
+		[173658]<span />
+			$60.00
+	[173662]<td />
+		[173664]<div />
+			[173666]<span />
+				$60.00
+	[173671]<td />
+		[173676]<tr />
+			Ordered
+			[173681]<td />
+	[173687]<td />
+		[173691]<span />
+			$60.00
+	[173696]<td />
+		[173698]<span />
+			$0.00
+	[173702]<td />
+		0%
+	[173705]<td />
+		[173707]<span />
+			$0.00
+	[173711]<td />
+		[173713]<span />
+			$60.00
+[173721]<tr />
+	[173723]<td />
+		Sparta Gym Tank
+		SKU:
+		MT08-XL-Green
+		Color:
+		Green
+		Size:
+		XL
+	[173753]<td />
+		Ordered
+	[173756]<td />
+		[173758]<span />
+			$29.00
+	[173762]<td />
+		[173764]<div />
+			[173766]<span />
+				$29.00
+	[173771]<td />
+		[173776]<tr />
+			Ordered
+			[173781]<td />
+	[173787]<td />
+		[173791]<span />
+			$29.00
+	[173796]<td />
+		[173798]<span />
+			$0.00
+	[173802]<td />
+		0%
+	[173805]<td />
+		[173807]<span />
+			$0.00
+	[173811]<td />
+		[173813]<span />
+			$29.00
+Order Total
+Notes for this Order
+Status
+*[172099]<select id=history_status name=history[status] expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox) />
+Comment
+[172100]<textarea id=history_comment name=history[comment] />
+[172101]<input type=checkbox checked=false id=history_notify name=history[is_customer_notified] value=1 />
+Notify Customer by Email
+[172102]<input type=checkbox checked=false id=history_visible name=history[is_visible_on_front] value=1 />
+Visible on Storefront
+[172118]<button title=Submit Comment id=id_DACZHiqKakGv4EhZGaUvZLtqQTL6OO8F />
+	Submit Comment
+Order Totals
+[173916]<tr />
+	[173918]<td />
+		Grand Total
+	[173924]<td />
+		$210.00
+[173932]<tr />
+	[173934]<td />
+		Total Paid
+	[173940]<td />
+		[173943]<span />
+			$0.00
+[173948]<tr />
+	[173950]<td />
+		Total Refunded
+	[173956]<td />
+		[173959]<span />
+			$0.00
+[173964]<tr />
+	[173966]<td />
+		Total Due
+	[173972]<td />
+		$210.00
+[173983]<tr />
+	[173985]<td />
+		Subtotal
+	[173988]<td />
+		$190.00
+[173996]<tr />
+	[173998]<td />
+		Shipping & Handling
+	[174001]<td />
+		[174004]<span />
+			$20.00
+Order View
+[173072]<li id=sales_order_view_tabs_order_info role=tab selected=true expanded=true />
+	[173074]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info role=presentation />
+		Information
+		[173079]<span />
+[174061]<li id=sales_order_view_tabs_order_invoices role=tab selected=false expanded=false />
+	[174063]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices role=presentation />
+		Invoices
+		[174068]<span />
+[174138]<li id=sales_order_view_tabs_order_creditmemos role=tab selected=false expanded=false />
+	[174140]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos role=presentation />
+		Credit Memos
+		[174145]<span />
+[174215]<li id=sales_order_view_tabs_order_shipments role=tab selected=false expanded=false />
+	[174217]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments role=presentation />
+		Shipments
+		*[174222]<span />
+[174292]<li id=sales_order_view_tabs_order_history role=tab selected=false expanded=false />
+	[174294]<a title=Order History id=sales_order_view_tabs_order_history name=order_history role=presentation />
+		Comments History
+		*[174299]<span />
+*[174364]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[174372]<a id=footer_privacy />
+	Privacy Policy
+*[174375]<a id=footer_account_activity />
+	Account Activity
+*[174378]<a id=footer_bug_tracking />
+	Report an Issue

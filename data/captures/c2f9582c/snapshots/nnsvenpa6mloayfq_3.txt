@@ -1,0 +1,264 @@
+[14962]<a />
+*[14970]<li id=menu-magento-backend-dashboard role=menu-item />
+	[14971]<a />
+		Dashboard
+*[14976]<li id=menu-magento-sales-sales role=menu-item />
+	[14853]<a />
+		Sales
+*[15019]<li id=menu-magento-catalog-catalog role=menu-item />
+	[14854]<a />
+		Catalog
+*[15042]<li id=menu-magento-customer-customer role=menu-item />
+	[14855]<a />
+		Customers
+*[15067]<li id=menu-magento-backend-marketing role=menu-item />
+	[14856]<a />
+		Marketing
+*[15152]<li id=menu-magento-backend-content role=menu-item />
+	[14857]<a />
+		Content
+*[15211]<li id=menu-magento-reports-report role=menu-item />
+	[14858]<a />
+		Reports
+*[15372]<li id=menu-magento-backend-stores role=menu-item />
+	[14859]<a />
+		Stores
+*[15468]<li id=menu-magento-backend-system role=menu-item />
+	[14860]<a />
+		System
+*[15573]<li id=menu-magento-marketplace-partners role=menu-item />
+	[15574]<a />
+		Find Partners & Extensions
+Reviews
+[15636]<a title=My Account />
+	admin
+[15674]<a title=Notifications />
+[15679]<div />
+	[14814]<form id=form-search />
+		[15682]<div />
+			[14815]<input type=text id=search-global autocomplete=off />
+[14861]<button title=New Review id=add />
+	New Review
+[14862]<button title=Search id=id_RF13GBpESHU1EO7AgojrJbXtl67JjcWl />
+	Search
+[14863]<button title=Reset Filter id=id_zfOd0jgGwIQyZvc9Da6IEAxrldl4G2Uk />
+	Reset Filter
+*[14825]<form id=reviewGrid_massaction-form />
+	*[14826]<select id=reviewGrid_massaction-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Actions|Delete|Update Status) />
+[15815]<div />
+	*[14817]<select id=reviewGrid_massaction-mass-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Select All|Unselect All|Select Visible|Unselect Visible) />
+records found
+*[14818]<select id=reviewGrid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />
+per page
+[15883]<button />
+[14819]<input type=text id=reviewGrid_page-current name=page value=1 />
+of
+[15900]<button />
+[15917]<tr />
+	[15922]<th />
+		ID
+	[15927]<th />
+		Created
+	[15931]<th />
+		Status
+	[15935]<th />
+		Title
+	[14873]<th />
+		Nickname
+	[15942]<th />
+		Review
+	Visibility
+	[15950]<th />
+		Type
+	[15954]<th />
+		Product
+	[15958]<th />
+		SKU
+	Action
+[15967]<tr />
+	[15969]<td />
+		*[14827]<select id=reviewGrid_filter_massaction name=massaction expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Any|Yes|No) />
+	[15980]<td />
+		[14828]<input type=text id=reviewGrid_filter_review_id name=review_id />
+	[15984]<td />
+		[14829]<input type=text id=reviewGrid_filter_created_atjGFOAay6zMwFj6VEDh6nG5mZbt99UsYV_from name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		[15988]<button />
+			[15990]<span />
+				undefined
+		[14830]<input type=text id=reviewGrid_filter_created_atjGFOAay6zMwFj6VEDh6nG5mZbt99UsYV_to name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		[15993]<button />
+			[15995]<span />
+				undefined
+	[16002]<td />
+		*[14831]<select id=reviewGrid_filter_status name=status expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	[16013]<td />
+		[14832]<input type=text id=reviewGrid_filter_title name=title />
+	[16017]<td />
+		[14833]<input type=text id=reviewGrid_filter_nickname name=nickname />
+	[16021]<td />
+		[14834]<input type=text id=reviewGrid_filter_detail name=detail />
+	[16025]<td />
+		*[14835]<select name=visible_in expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Default Store View) />
+	[16034]<td />
+		*[14836]<select id=reviewGrid_filter_type name=type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Administrator|Customer|Guest,format=numeric) />
+	[16045]<td />
+		[14837]<input type=text id=reviewGrid_filter_name name=name />
+	[16049]<td />
+		[14838]<input type=text id=reviewGrid_filter_sku name=sku />
+	[16053]<td />
+[16060]<tr title=http://localhost:7780/admin/review/product/edit/id/353/ />
+	[16062]<td />
+		[14820]<input type=checkbox checked=false id=id_716 name=reviews value=353 />
+	[16069]<td />
+		353
+	[16072]<td />
+		Apr 24, 2023, 2:55:10 PM
+	[16075]<td />
+		Pending
+	[16078]<td />
+		Bad!
+	[16081]<td />
+		Hannah Lim
+	[16084]<td />
+		I was really disappointed with the Circe Hooded...
+	[16087]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[16096]<td />
+		Guest
+	[16099]<td />
+		Circe Hooded Ice Fleece
+	[16102]<td />
+		WH12
+	[16105]<td />
+		[16107]<a id=idlOWC2PW1W7 />
+			Edit
+[16112]<tr title=http://localhost:7780/admin/review/product/edit/id/352/ />
+	[16114]<td />
+		[14821]<input type=checkbox checked=false id=id_972 name=reviews value=352 />
+	[16121]<td />
+		352
+	[16124]<td />
+		Apr 24, 2023, 2:53:49 PM
+	[16127]<td />
+		Pending
+	[16130]<td />
+		Good but not perfect
+	[14874]<td />
+		customer
+	[16135]<td />
+		I recently purchased the Circe Hooded Ice Fleec...
+	[16138]<td />
+		Main Website
+		*[16140]<br />
+		Main Website Store
+		*[16142]<br />
+		Default Store View
+		*[16144]<br />
+	[16147]<td />
+		Guest
+	[16150]<td />
+		Circe Hooded Ice Fleece
+	[16153]<td />
+		WH12
+	[16156]<td />
+		[16158]<a id=idDq44sLb2Ji />
+			Edit
+[16163]<tr title=http://localhost:7780/admin/review/product/edit/id/351/ />
+	[16165]<td />
+		[14822]<input type=checkbox checked=false id=id_122 name=reviews value=351 />
+	[16172]<td />
+		351
+	[16175]<td />
+		Apr 24, 2023, 2:49:50 PM
+	[16178]<td />
+		Pending
+	[16181]<td />
+		won't recommand
+	[16184]<td />
+		Emma
+	[16187]<td />
+		I was really disappointed with the Olivia 1/4 Z...
+	[16190]<td />
+		Main Website
+		*[16192]<br />
+		Main Website Store
+		*[16194]<br />
+		Default Store View
+		*[16196]<br />
+	[16199]<td />
+		Customer
+	[16202]<td />
+		Olivia 1/4 Zip Light Jacket
+	[16205]<td />
+		WJ12
+	[16208]<td />
+		[16210]<a id=idxCvLgU7sEK />
+			Edit
+[16215]<tr title=http://localhost:7780/admin/review/product/edit/id/349/ />
+	[16217]<td />
+		[14823]<input type=checkbox checked=false id=id_625 name=reviews value=349 />
+	[16224]<td />
+		349
+	[16227]<td />
+		Apr 24, 2023, 2:44:16 PM
+	[16230]<td />
+		Pending
+	[16233]<td />
+		OKish
+	[16236]<td />
+		seam miller
+	[16239]<td />
+		I have to say, I'm not impressed with the Olivi...
+	[16242]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[16251]<td />
+		Guest
+	[16254]<td />
+		Olivia 1/4 Zip Light Jacket
+	[16257]<td />
+		WJ12
+	[16260]<td />
+		[16262]<a id=idTN4GEal0PX />
+			Edit
+[16267]<tr title=http://localhost:7780/admin/review/product/edit/id/347/ />
+	[16269]<td />
+		[14824]<input type=checkbox checked=false id=id_28 name=reviews value=347 />
+	[16276]<td />
+		347
+	[16279]<td />
+		Apr 24, 2023, 2:42:23 PM
+	[16282]<td />
+		Pending
+	[16285]<td />
+		Quite good
+	[16288]<td />
+		Jane Smith
+	[16291]<td />
+		I recently purchased the Olivia 1/4 Zip Light J...
+	[16294]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[16303]<td />
+		Guest
+	[16306]<td />
+		Olivia 1/4 Zip Light Jacket
+	[16309]<td />
+		WJ12
+	[16312]<td />
+		[16314]<a id=idP8Zq3AC3IT />
+			Edit
+[16330]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[16340]<a id=footer_privacy />
+	Privacy Policy
+[16343]<a id=footer_account_activity />
+	Account Activity
+[16346]<a id=footer_bug_tracking />
+	Report an Issue

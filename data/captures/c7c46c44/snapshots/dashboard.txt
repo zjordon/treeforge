@@ -1,0 +1,241 @@
+[235027]<a />
+[234763]<li id=menu-magento-backend-dashboard role=menu-item />
+	[234764]<a />
+		Dashboard
+[234765]<li id=menu-magento-sales-sales role=menu-item />
+	[234766]<a />
+		Sales
+[234767]<li id=menu-magento-catalog-catalog role=menu-item />
+	[234768]<a />
+		Catalog
+[234770]<li id=menu-magento-customer-customer role=menu-item />
+	[234771]<a />
+		Customers
+[234773]<li id=menu-magento-backend-marketing role=menu-item />
+	[234774]<a />
+		Marketing
+[234776]<li id=menu-magento-backend-content role=menu-item />
+	[234777]<a />
+		Content
+[234779]<li id=menu-magento-reports-report role=menu-item />
+	[234780]<a />
+		Reports
+[234782]<li id=menu-magento-backend-stores role=menu-item />
+	[234783]<a />
+		Stores
+[234785]<li id=menu-magento-backend-system role=menu-item />
+	[234786]<a />
+		System
+[234788]<li id=menu-magento-marketplace-partners role=menu-item />
+	[234789]<a />
+		Find Partners & Extensions
+Dashboard
+[234792]<a title=My Account />
+	admin
+[235781]<a title=Notifications />
+[234793]<div />
+	[234751]<form id=form-search />
+		[235788]<div />
+			[234752]<input type=text id=search-global autocomplete=off />
+[235817]<span />
+	Scope:
+[234798]<button id=store-change-button />
+	All Store Views
+[234800]<a title=What is this? />
+	[235866]<span />
+		What is this?
+[235880]<button title=Reload Data type=submit />
+	Reload Data
+Advanced Reporting
+Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.
+[235903]<a title=Go to Advanced Reporting />
+	Go to Advanced Reporting
+Chart is disabled. To enable the chart, click
+[235923]<a />
+	here
+Revenue
+$0.00
+Tax
+$0.00
+Shipping
+$0.00
+Quantity
+[235982]<strong />
+[234803]<li role=tab selected=true expanded=true />
+	[234804]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />
+		[236004]<span title=The information in this tab has been changed. />
+		[236006]<span title=This tab contains invalid data. Please resolve this before saving. />
+		[236008]<span title=Loading... />
+		Bestsellers
+[234805]<li role=tab selected=false expanded=false />
+	[234806]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />
+		[236021]<span title=The information in this tab has been changed. />
+		[236023]<span title=This tab contains invalid data. Please resolve this before saving. />
+		[236025]<span title=Loading... />
+		Most Viewed Products
+[234807]<li role=tab selected=false expanded=false />
+	[234808]<a title=New Customers id=grid_tab_new_customers role=presentation />
+		[236040]<span title=The information in this tab has been changed. />
+		[236042]<span title=This tab contains invalid data. Please resolve this before saving. />
+		[236044]<span title=Loading... />
+		New Customers
+[234809]<li role=tab selected=false expanded=false />
+	[234810]<a title=Customers id=grid_tab_customers role=presentation />
+		[236059]<span title=The information in this tab has been changed. />
+		[236061]<span title=This tab contains invalid data. Please resolve this before saving. />
+		[236063]<span title=Loading... />
+		Customers
+[236087]<tr />
+	Product
+	Price
+	Quantity
+[234812]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />
+	[236105]<td />
+		Sprite Stasis Ball 65 cm
+	[236108]<td />
+		$27.00
+	[236111]<td />
+[234813]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />
+	[236116]<td />
+		Quest Lumaflex™ Band
+	[236119]<td />
+		$19.00
+	[236122]<td />
+[234814]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />
+	[236127]<td />
+		Sprite Yoga Strap 6 foot
+	[236130]<td />
+		$14.00
+	[236133]<td />
+[234815]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />
+	[236138]<td />
+		Sprite Stasis Ball 55 cm
+	[236141]<td />
+		$23.00
+	[236144]<td />
+[234816]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />
+	[236149]<td />
+		Overnight Duffle
+	[236152]<td />
+		$45.00
+	[236155]<td />
+Lifetime Sales
+$0.00
+Average Order
+$0.00
+Last Orders
+[236213]<tr />
+	Customer
+	Items
+	Total
+[234820]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />
+	[236232]<td />
+		Sarah Miller
+	[236235]<td />
+	[236238]<td />
+		$194.40
+[234821]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />
+	[236243]<td />
+		Grace Nguyen
+	[236246]<td />
+	[236249]<td />
+		$190.00
+[234822]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />
+	[236254]<td />
+		Matt Baker
+	[236257]<td />
+	[236260]<td />
+		$151.40
+[234823]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />
+	[236265]<td />
+		Lily Potter
+	[236268]<td />
+	[236271]<td />
+		$188.20
+[234824]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />
+	[236276]<td />
+		Ava Brown
+	[236279]<td />
+	[236282]<td />
+		$83.40
+Last Search Terms
+[236300]<table id=lastSearchGrid_table />
+	[236304]<tr />
+		[236306]<th />
+			Search Term
+		Results
+		Uses
+	[234825]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />
+		[236323]<td />
+			Antonia
+		[236326]<td />
+		[236329]<td />
+	[234826]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />
+		[236334]<td />
+			tanks
+		[236337]<td />
+			23
+		[236340]<td />
+	[234827]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />
+		[236345]<td />
+			nike
+		[236348]<td />
+		[236351]<td />
+	[234828]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />
+		[236356]<td />
+			Joust Bag
+		[236359]<td />
+			10
+		[236362]<td />
+	[234829]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />
+		[236367]<td />
+			hollister
+		[236370]<td />
+		[236373]<td />
+			19
+Top Search Terms
+[236391]<table id=topSearchGrid_table />
+	[236395]<tr />
+		[236397]<th />
+			Search Term
+		Results
+		Uses
+	[234830]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />
+		[236414]<td />
+			hollister
+		[236417]<td />
+		[236420]<td />
+			19
+	[234831]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />
+		[236425]<td />
+			Joust Bag
+		[236428]<td />
+			10
+		[236431]<td />
+	[234832]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />
+		[236436]<td />
+			Antonia Racer Tank
+		[236439]<td />
+			23
+		[236442]<td />
+	[234833]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />
+		[236447]<td />
+			Antonia
+		[236450]<td />
+		[236453]<td />
+	[234834]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />
+		[236458]<td />
+			tanks
+		[236461]<td />
+			23
+		[236464]<td />
+[236482]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[236492]<a id=footer_privacy />
+	Privacy Policy
+[234835]<a id=footer_account_activity />
+	Account Activity
+[236497]<a id=footer_bug_tracking />
+	Report an Issue

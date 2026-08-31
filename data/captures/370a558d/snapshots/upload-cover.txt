@@ -1,0 +1,345 @@
+[115]<i />
+[80]<a />
+	主站
+[55]<div />
+	试试更多AI创作工具吧
+[56]<div />
+	[120]<a />
+[121]<div />
+	成为UP主的第
+	53
+[129]<a />
+[131]<div />
+	[132]<div role=region aria-label=scrollable content />
+		[134]<a id=nav_upload_btn />
+			投稿
+		[135]<div />
+			[136]<span />
+				首页
+		[137]<div />
+			[138]<span />
+				内容管理
+		[205]<div />
+			[206]<span />
+				数据中心
+		[213]<div />
+			[214]<span />
+				粉丝管理
+		[223]<div />
+			[224]<span />
+				互动管理
+		[239]<div />
+			[240]<span />
+				收益管理
+		[267]<div />
+			花生
+		[268]<div />
+			updream
+		[269]<div />
+			[270]<span />
+				创作成长
+		[271]<div />
+			[272]<span />
+				任务中心
+		[273]<div />
+			[274]<span />
+				必火推广
+		[275]<div />
+			[276]<a />
+				创作学院
+		[27]<div />
+			[279]<div />
+				[28]<span />
+					[1837]<i />
+					[29]<span />
+						[1839]<span />
+							创作权益
+		[30]<div />
+			[290]<div />
+				[31]<span />
+					[1892]<i />
+					[32]<span />
+						[1894]<span />
+							社区公约
+		[33]<div />
+			[293]<div />
+				[34]<span />
+					[1912]<i />
+					[35]<span />
+						[1914]<span />
+							创作设置
+*[2966]<input type=file accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=multiple compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+发布视频
+[3860]<button />
+	批量操作
+[4368]<div title=2026-04-29-20-41-59 />
+	2026-04-29-20-41-59
+	上传中...
+[3868]<div />
+	[3866]<svg /> <!-- SVG content collapsed -->
+	添加视频
+[3874]<button />
+	添加分P
+[3876]<div />
+	[4372]<div />
+		2026-04-29-20-41-59
+	已经上传：0.7MB/3.2MB
+	当前速度： 0.2MB/s 剩余时间：12.6秒
+	21%
+	[4382]<div />
+		[4381]<svg /> <!-- SVG content collapsed -->
+	[4385]<div />
+		[4384]<svg /> <!-- SVG content collapsed -->
+基本设置
+[3882]<span />
+	一键填写
+封面
+[3891]<div />
+	添加封面
+以下为系统推荐封面，使用AI生成可获取更优质封面
+[3902]<svg /> <!-- SVG content collapsed -->
+[3909]<div />
+	[3906]<svg /> <!-- SVG content collapsed -->
+	AI生成
+[5151]<div />
+[5153]<div />
+[5155]<div />
+[5157]<div />
+[5159]<div />
+|scroll element|<div /> (scroll: 0%, 0.2 pages below, total: 1.2 pages)
+	封面制作
+	*[5217]<div />
+		*[5216]<img />
+	*[5221]<div />
+		*[5220]<img />
+		智能
+	*[5223]<div />
+		*[5222]<img />
+		模版
+	*[5225]<div />
+		*[5224]<img />
+		文字
+	*[5227]<div />
+		*[5226]<img />
+		贴纸
+	*[5229]<div />
+		*[5228]<img />
+		滤镜
+	*[5235]<div />
+		*[5233]<span />
+			*[5232]<svg /> <!-- SVG content collapsed -->
+		*[5234]<span />
+			智能生成封面
+	*[5239]<div />
+		*[5237]<svg /> <!-- SVG content collapsed -->
+		*[5238]<div />
+			不使用
+	*[5240]<div />
+	*[5242]<div />
+	*[5244]<div />
+	*[5246]<div />
+	*[5248]<div />
+	*[5277]<svg /> <!-- SVG content collapsed -->
+	两个比例的封面都会被展示给观众，请确认 4:3、16:9 比例下的封面效果
+	*[5279]<span />
+		配置封面遇到问题？
+	*[5284]<span />
+		首页推荐封面（4:3）
+	*[5316]<span />
+		个人空间封面（16:9）
+	*[5363]<div />
+		*[5358]<div />
+			*[5356]<div />
+				*[5349]<span />
+					上传封面
+				*[5355]<div />
+					*[5351]<svg /> <!-- SVG content collapsed -->
+			*[5357]<span />
+				拖拽图片或点击上传
+		*[5362]<input type=file accept=image/png, image/jpeg compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+	*[5562]<div />
+		*[5560]<div role=slider aria-valuemin=0 aria-valuemax=92 aria-valuenow=0 valuemin=0 valuemax=92 valuetext=00:00 />
+			*[5556]<div />
+	*[5563]<div />
+	*[5564]<div />
+	*[5565]<div />
+	*[5566]<div />
+	*[5567]<div />
+	*[5568]<div />
+	*[5569]<div />
+	*[5367]<div />
+		首页推荐
+	*[5368]<div />
+		个人空间
+	这些UP主，带着粉丝们干了件“大事儿”……
+	哔哩哔哩创作中心
+	*[5375]<span />
+		*[5373]<img alt=player />
+		--
+	*[5378]<span />
+		*[5376]<img alt=danmu />
+		--
+	--
+	2026-04-29-20-41-59
+	树哥ai
+	*[5387]<span />
+		*[5385]<img alt=player />
+		--
+	*[5390]<span />
+		*[5388]<img alt=danmu />
+		--
+	--
+	干杯！去做喜欢的一切
+	哔哩哔哩创作中心
+	4:3封面预览
+	*[5419]<img alt=help />
+	*[5425]<div />
+		取消
+	*[5426]<div />
+		完成
+标题
+19/80
+创作声明
+[3940]<svg /> <!-- SVG content collapsed -->
+[3987]<div />
+	[3947]<i />
+分区
+游戏
+[3998]<svg /> <!-- SVG content collapsed -->
+[4020]<div id=tag-container />
+	[4005]<p />
+	[4006]<h3 level=3 />
+		标签
+	[4009]<i />
+		[4008]<svg /> <!-- SVG content collapsed -->
+	[4702]<div />
+		[4699]<p />
+			原神
+		[4701]<svg /> <!-- SVG content collapsed -->
+	[4706]<div />
+		[4703]<p />
+			游戏杂谈
+		[4705]<svg /> <!-- SVG content collapsed -->
+	[4710]<div />
+		[4707]<p />
+			APEX
+		[4709]<svg /> <!-- SVG content collapsed -->
+	[4015]<input type=text placeholder=按回车键Enter创建标签 maxlength=20 />
+	还可以添加7个标签
+推荐标签：
+[4713]<div />
+	[4712]<div />
+		原神
+[4716]<div />
+	[4715]<div />
+		游戏杂谈
+[4719]<div />
+	[4718]<div />
+		APEX
+[4722]<div />
+	[4721]<div />
+		[4720]<span />
+			守望先锋
+[4725]<div />
+	[4724]<div />
+		[4723]<span />
+			吃鸡
+[4728]<div />
+	[4727]<div />
+		[4726]<span />
+			全场最佳
+[4731]<div />
+	[4730]<div />
+		[4729]<span />
+			搞笑
+[4734]<div />
+	[4733]<div />
+		[4732]<span />
+			MOBA
+[4737]<div />
+	[4736]<div />
+		[4735]<span />
+			PVP
+[4740]<div />
+	[4739]<div />
+		[4738]<span />
+			永劫无间
+参与话题：
+[5037]<div />
+	[5036]<div />
+		[5032]<svg /> <!-- SVG content collapsed -->
+		[5033]<span />
+			2026LPL第三赛段
+		[5035]<svg /> <!-- SVG content collapsed -->
+[5048]<div />
+	[5047]<div />
+		[5043]<svg /> <!-- SVG content collapsed -->
+		[5044]<span />
+			无畏契约三周年
+		[5046]<svg /> <!-- SVG content collapsed -->
+[5059]<div />
+	[5058]<div />
+		[5054]<svg /> <!-- SVG content collapsed -->
+		[5055]<span />
+			崩坏：星穹铁道创作者激励计划
+		[5057]<svg /> <!-- SVG content collapsed -->
+[5070]<div />
+	[5069]<div />
+		[5065]<svg /> <!-- SVG content collapsed -->
+		[5066]<span />
+			绝区零UP主激励计划
+		[5068]<svg /> <!-- SVG content collapsed -->
+[5081]<div />
+	[5080]<div />
+		[5076]<svg /> <!-- SVG content collapsed -->
+		[5077]<span />
+			蛋仔奇思妙想计划
+		[5079]<svg /> <!-- SVG content collapsed -->
+[5092]<div />
+	[5091]<div />
+		[5087]<svg /> <!-- SVG content collapsed -->
+		[5088]<span />
+			王者荣耀UP主激励计划
+		[5090]<svg /> <!-- SVG content collapsed -->
+[4668]<div />
+	搜索更多话题 >
+[4042]<div />
+	[4029]<h3 level=3 />
+		简介
+	[4031]<div />
+		[4243]<div contenteditable=true />
+			[4352]<p />
+				[4353]<br />
+	[4039]<div />
+		/2000
+定时发布
+[4048]<div />
+	[4047]<span />
+(可选择距离当前最早≥5分钟/最晚≤15天的时间，花火、预约、互动视频稿件不可修改/取消)
+加入合集
+合集功能可用于收集整理系列性稿件
+开通合集功能需满足权益中心等级达Lv2，您可前往创作中心-权益中心查看相关数据
+商业推广
+[4396]<i />
+	[4395]<svg /> <!-- SVG content collapsed -->
+[4073]<label />
+	[4071]<span />
+	[4072]<span />
+		增加商业推广信息
+[4083]<span />
+	更多设置
+	[4079]<span />
+		（含声明与权益、视频元素、互动管理等）
+	[4082]<span />
+		[4081]<svg /> <!-- SVG content collapsed -->
+[4179]<span />
+	存草稿
+[4180]<span />
+	立即投稿
+<svg /> <!-- SVG content collapsed -->
+*[2259]<input type=file name=buploader accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+*[2264]<input type=file name=buploader accept=.txt compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+<svg /> <!-- SVG content collapsed -->
+*[5164]<input type=file name=buploader accept=.zip multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+遇到问题
+[307]<div id=topBtn />

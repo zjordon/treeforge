@@ -1,0 +1,457 @@
+{
+  "host": "creator.douyin.com",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1786316930879,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/home",
+      "stage": "home",
+      "target": "发布视频",
+      "element_attrs": {
+        "tag": "li",
+        "role": "menuitem",
+        "visible_text": "发布视频"
+      }
+    },
+    {
+      "timestamp": 1786316930885,
+      "type": "navigate",
+      "url": "https://creator.douyin.com/creator-micro/content/upload",
+      "stage": "upload"
+    },
+    {
+      "timestamp": 1786316933255,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/upload",
+      "stage": "upload_1",
+      "target": "上传视频",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "visible_text": "上传视频"
+      }
+    },
+    {
+      "timestamp": 1786316938634,
+      "type": "upload_file",
+      "url": "https://creator.douyin.com/creator-micro/content/upload",
+      "stage": "upload_1",
+      "target": "input（点击上传 或直接将视频文件拖入此区域为了更好的观看体验和平台安全，平台将对上传的）",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "video/x-flv,video/mp4,video/x-m4v,video/*,.flv,.avi,.wmv,.webm,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,.m4"
+      },
+      "value": "2026-04-29-20-41-59.mp4"
+    },
+    {
+      "timestamp": 1786316938708,
+      "type": "navigate",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video"
+    },
+    {
+      "timestamp": 1786316940505,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      }
+    },
+    {
+      "timestamp": 1786316943147,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai"
+    },
+    {
+      "timestamp": 1786316944409,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器"
+    },
+    {
+      "timestamp": 1786316944818,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器tx"
+    },
+    {
+      "timestamp": 1786316945534,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器第"
+    },
+    {
+      "timestamp": 1786316946214,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器第5a"
+    },
+    {
+      "timestamp": 1786316947624,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器第5期"
+    },
+    {
+      "timestamp": 1786316950054,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器第5期-borwser"
+    },
+    {
+      "timestamp": 1786316951326,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器第5期-borwser-use"
+    },
+    {
+      "timestamp": 1786316952304,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "​",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true",
+        "visible_text": "​"
+      }
+    },
+    {
+      "timestamp": 1786316956158,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "browser-usew​",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true",
+        "visible_text": "browser-usew​"
+      },
+      "value": "browser-usew​"
+    },
+    {
+      "timestamp": 1786316957774,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "browser-use体验ey​",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true",
+        "visible_text": "browser-use体验ey​"
+      },
+      "value": "browser-use体验ey​"
+    },
+    {
+      "timestamp": 1786316958641,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "browser-use体验及w​",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true",
+        "visible_text": "browser-use体验及w​"
+      },
+      "value": "browser-use体验及w​"
+    },
+    {
+      "timestamp": 1786316959537,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "browser-use体验及分析​",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true",
+        "visible_text": "browser-use体验及分析​"
+      },
+      "value": "browser-use体验及分析​"
+    },
+    {
+      "timestamp": 1786316960770,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "选择封面",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "选择封面"
+      },
+      "signals": [
+        {
+          "type": "modal_opened",
+          "selector": "div.dy-creator-content-modal-content.dy-creator-content-modal-content-animate-show",
+          "ts": 1786316960990
+        }
+      ]
+    },
+    {
+      "timestamp": 1786316962432,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "use",
+      "element_attrs": {
+        "tag": "use"
+      }
+    },
+    {
+      "timestamp": 1786316967663,
+      "type": "upload_file",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "input（点击上传文件或拖拽文件到这里，在弹窗内）",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif"
+      },
+      "value": "browser-harness-heng.png"
+    },
+    {
+      "timestamp": 1786316969079,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "设置竖封面",
+      "element_attrs": {
+        "tag": "span",
+        "visible_text": "设置竖封面"
+      }
+    },
+    {
+      "timestamp": 1786316970889,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "svg",
+      "element_attrs": {
+        "tag": "svg"
+      }
+    },
+    {
+      "timestamp": 1786316972548,
+      "type": "upload_file",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "input（点击上传文件或拖拽文件到这里，在弹窗内）",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif"
+      },
+      "value": "browser-harness-shu.png"
+    },
+    {
+      "timestamp": 1786316973965,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "完成",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "visible_text": "完成"
+      }
+    },
+    {
+      "timestamp": 1786316977248,
+      "type": "scroll",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "value": "3"
+    },
+    {
+      "timestamp": 1786316978130,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "请选择合集",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "请选择合集"
+      },
+      "signals": [
+        {
+          "type": "dropdown_opened",
+          "selector": "div.semi-popover",
+          "ts": 1786316978190
+        }
+      ]
+    },
+    {
+      "timestamp": 1786316979274,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "请选择合集不选择合集TreeWalker合集共14个作品AI浏览器共15个作品OpenClaw合集共11个作品拆解ai ",
+      "element_attrs": {
+        "tag": "div",
+        "data-tw-jsclick": "1",
+        "visible_text": "请选择合集不选择合集TreeWalker合集共14个作品AI浏览器共15个作品OpenClaw合集共11个作品拆解ai agent共3个作品"
+      },
+      "signals": [
+        {
+          "type": "modal_opened",
+          "selector": "div#dialog-0.semi-modal.semi-modal-small",
+          "ts": 1786316980137
+        }
+      ]
+    },
+    {
+      "timestamp": 1786316980130,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "请选择自主声明",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "请选择自主声明"
+      }
+    },
+    {
+      "timestamp": 1786316981257,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "对作品内容添加声明可在作品发布前添加声明，帮助他人减少困惑移动端展示效果作者声明：此处显示具体的声明内容请选择声明类型（",
+      "element_attrs": {
+        "tag": "div",
+        "role": "modal",
+        "visible_text": "对作品内容添加声明可在作品发布前添加声明，帮助他人减少困惑移动端展示效果作者声明：此处显示具体的声明内容请选择声明类型（单选）内容由AI生成内容为个人观点或见解内容为转载信息内容含营销推广信息虚构演绎，仅供娱乐无需添加自主声明取消确定"
+      }
+    },
+    {
+      "timestamp": 1786316981259,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "name": "default",
+        "type": "radio"
+      }
+    },
+    {
+      "timestamp": 1786316982048,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "确定",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "visible_text": "确定"
+      }
+    },
+    {
+      "timestamp": 1786316983572,
+      "type": "scroll",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "value": "7"
+    },
+    {
+      "timestamp": 1786316984256,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video_2",
+      "target": "暂存离开",
+      "element_attrs": {
+        "tag": "button",
+        "visible_text": "暂存离开"
+      }
+    },
+    {
+      "timestamp": 1786316984271,
+      "type": "navigate",
+      "url": "https://creator.douyin.com/creator-micro/content/upload?enter_from=publish",
+      "stage": "upload"
+    },
+    {
+      "timestamp": 1786316984696,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/upload?enter_from=publish",
+      "stage": "upload_3",
+      "target": "div",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true"
+      },
+      "value": ""
+    }
+  ],
+  "page_context": {
+    "home": "TreeForge Capture\n录制中（distill）\n后端\n场景\n[4]<button id=toggle />\n\t停止录制\n事件数：",
+    "upload": "TreeForge Capture\n录制中（distill）\n后端\n场景\n[4]<button id=toggle />\n\t停止录制\n事件数：\n31",
+    "upload_1": "TreeForge Capture\n录制中（distill）\n后端\n场景\n[4]<button id=toggle />\n\t停止录制\n事件数：",
+    "video": "TreeForge Capture\n录制中（distill）\n后端\n场景\n[4]<button id=toggle />\n\t停止录制\n事件数：",
+    "video_2": "TreeForge Capture\n录制中（distill）\n后端\n场景\n[4]<button id=toggle />\n\t停止录制\n事件数：",
+    "upload_3": "TreeForge Capture\n录制中（distill）\n后端\n场景\n[4]<button id=toggle />\n\t停止录制\n事件数：\n33"
+  }
+}

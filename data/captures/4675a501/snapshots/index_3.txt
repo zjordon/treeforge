@@ -1,0 +1,128 @@
+[308739]<a />
+[308747]<li id=menu-magento-backend-dashboard role=menu-item />
+	[308748]<a />
+		Dashboard
+[308753]<li id=menu-magento-sales-sales role=menu-item />
+	[308658]<a />
+		Sales
+[308796]<li id=menu-magento-catalog-catalog role=menu-item />
+	[308659]<a />
+		Catalog
+[308819]<li id=menu-magento-customer-customer role=menu-item />
+	[308660]<a />
+		Customers
+[308844]<li id=menu-magento-backend-marketing role=menu-item />
+	[308661]<a />
+		Marketing
+[308929]<li id=menu-magento-backend-content role=menu-item />
+	[308662]<a />
+		Content
+[308988]<li id=menu-magento-reports-report role=menu-item />
+	[308663]<a />
+		Reports
+[309148]<li id=menu-magento-backend-stores role=menu-item />
+	[308664]<a />
+		Stores
+[309244]<li id=menu-magento-backend-system role=menu-item />
+	[308665]<a />
+		System
+[309349]<li id=menu-magento-marketplace-partners role=menu-item />
+	[309350]<a />
+		Find Partners & Extensions
+Customers
+[309412]<a title=My Account />
+	admin
+[309450]<a title=Notifications />
+[309455]<div />
+	[308648]<form id=form-search />
+		[309458]<div />
+			[308649]<input type=text id=search-global autocomplete=off />
+[308666]<button title=Add New Customer id=add />
+	Add New Customer
+[310023]<button />
+	Default View
+[310043]<button />
+	Columns
+[310169]<button />
+	Export
+[310194]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[310195]<button aria-label=Search />
+[310203]<button />
+	Filters
+Active filters:
+Phone:
+2058812302
+*[353657]<button />
+*[311643]<button />
+	Clear all
+[310225]<button title=Select Items />
+	Actions
+records found
+[311856]<div />
+	[311858]<input type=text id=customer_listing.customer_listing.listing_top.listing_paging_sizes />
+[311859]<button />
+	Select
+per page
+[310276]<button title=Previous Page disabled=true />
+*[310281]<input type=number id=29 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[310283]<button title=Next Page disabled=true />
+[309852]<tr />
+	[310542]<div />
+		[310543]<input type=checkbox checked=false id=59 />
+		[310545]<button />
+			Options
+	[310565]<th />
+		[310564]<span />
+			Name
+	[310568]<th />
+		[310567]<span />
+			Email
+	[310571]<th />
+		[310570]<span />
+			Group
+	[310574]<th />
+		[310573]<span />
+			Phone
+	[310577]<th />
+		[310576]<span />
+			ZIP
+	[310580]<th />
+		[310579]<span />
+			Country
+	[310583]<th />
+		[310582]<span />
+			State/Province
+	[310586]<th />
+		[310585]<span />
+			Customer Since
+[345816]<tr />
+	[345829]<td />
+		[345846]<label />
+			[345844]<input type=checkbox checked=false id=idscheck2 value=2 />
+	[345830]<td />
+		John Smith
+	[345831]<td />
+		john.smith.xyz@gmail.com
+	[345832]<td />
+		General
+	[345833]<td />
+		2058812302
+	[345834]<td />
+		35213
+	[345835]<td />
+		United States
+	[345836]<td />
+		Alabama
+	[345837]<td />
+		Apr 19, 2023 5:44:57 PM
+*[309522]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[309532]<a id=footer_privacy />
+	Privacy Policy
+*[309535]<a id=footer_account_activity />
+	Account Activity
+*[309538]<a id=footer_bug_tracking />
+	Report an Issue

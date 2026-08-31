@@ -1,0 +1,302 @@
+[2314]<div id=root />
+	[2315]<button />
+		高清发布
+	[2317]<li id=douyin-creator-master-menu-nav-home role=menuitem />
+		[3115]<i />
+			[3116]<span role=img />
+				[3117]<svg /> <!-- SVG content collapsed -->
+		[3119]<span />
+			首页
+		[3121]<i />
+	[2318]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />
+		[3122]<i />
+			[3123]<span role=img />
+				[3124]<svg /> <!-- SVG content collapsed -->
+		[3126]<span />
+			活动管理
+		[3128]<i />
+	[2295]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />
+		[2319]<div role=menuitem expanded=false />
+			[3129]<div />
+				[3130]<i />
+					[3131]<span role=img />
+						[3132]<svg /> <!-- SVG content collapsed -->
+				[3135]<span />
+					内容管理
+				[3137]<i />
+					[3138]<span role=img aria-label=chevron_down />
+						[3139]<svg /> <!-- SVG content collapsed -->
+		[3142]<div />
+	[2296]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />
+		[2320]<div role=menuitem expanded=false />
+			[3143]<div />
+				[3144]<i />
+					[3145]<span role=img />
+						[3146]<svg /> <!-- SVG content collapsed -->
+				[3149]<span />
+					互动管理
+				[3151]<i />
+					[3152]<span role=img aria-label=chevron_down />
+						[3153]<svg /> <!-- SVG content collapsed -->
+		[3156]<div />
+	[2297]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />
+		[2321]<div role=menuitem expanded=false />
+			[3157]<div />
+				[3158]<i />
+					[3159]<span role=img />
+						[3160]<svg /> <!-- SVG content collapsed -->
+				[3163]<span />
+					数据中心
+				[3165]<i />
+					[3166]<span role=img aria-label=chevron_down />
+						[3167]<svg /> <!-- SVG content collapsed -->
+		[3170]<div />
+	[2298]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />
+		[2322]<div role=menuitem expanded=false />
+			[3171]<div />
+				[3172]<i />
+					[3173]<span role=img />
+						[3174]<svg /> <!-- SVG content collapsed -->
+				[3176]<span />
+					变现中心
+				[3178]<i />
+					[3179]<span role=img aria-label=chevron_down />
+						[3180]<svg /> <!-- SVG content collapsed -->
+		[3183]<div />
+	[2299]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />
+		[2323]<div role=menuitem expanded=false />
+			[3184]<div />
+				[3185]<i />
+					[3186]<span role=img />
+						[3187]<svg /> <!-- SVG content collapsed -->
+				[3189]<span />
+					创作中心
+				[3191]<i />
+					[3192]<span role=img aria-label=chevron_down />
+						[3193]<svg /> <!-- SVG content collapsed -->
+		[3196]<div />
+	[2324]<div />
+		[2326]<img />
+	[2327]<a />
+		通知
+		[3208]<span />
+	[2291]<div />
+		[3209]<div />
+			[3210]<div />
+				[3211]<span role=img />
+					[2292]<svg /> <!-- SVG content collapsed -->
+			[3214]<div />
+				网址
+	[2293]<div />
+		[3216]<div />
+			[3217]<span role=img />
+				[2294]<svg /> <!-- SVG content collapsed -->
+		[3219]<div />
+			抖音
+	[3222]<div id=header-avatar />
+		[3223]<div />
+	[2300]<div id=micro />
+		[2329]<div id=root />
+			基础信息
+			作品描述
+			[4221]<span />
+				[4219]<svg /> <!-- SVG content collapsed -->
+			*[4547]<div />
+				*[4631]<div />
+					[4629]<input type=text placeholder=填写作品标题，为作品获得更多流量 />
+					[4630]<div />
+						[4628]<div />
+							[4627]<div />
+								30
+			[4227]<div contenteditable=true />
+				[4225]<div />
+			*[4549]<div />
+				[4633]<div />
+					#添加话题
+				[4634]<div />
+					@好友
+			0 / 1000
+			*[4552]<div />
+				官方活动
+				*[5041]<span />
+					*[5039]<svg /> <!-- SVG content collapsed -->
+				*[5061]<div />
+					*[5047]<div />
+						*[5044]<svg /> <!-- SVG content collapsed -->
+						*[5045]<span />
+							2026抖音创作者大会
+					*[5048]<div />
+						*[5046]<div />
+							热度：998
+				*[5062]<div />
+					*[5053]<div />
+						*[5050]<svg /> <!-- SVG content collapsed -->
+						*[5051]<span />
+							典籍里的科技
+					*[5054]<div />
+						*[5052]<div />
+							热度：103
+				*[5063]<div />
+					*[5059]<div />
+						*[5056]<svg /> <!-- SVG content collapsed -->
+						*[5057]<span />
+							千万流量！征集难题，回答时代困惑
+					*[5060]<div />
+						*[5058]<div />
+							热度：324
+				*[5064]<div />
+			设置封面
+			[4239]<span />
+				[4237]<svg /> <!-- SVG content collapsed -->
+			*[5087]<div />
+				*[5082]<svg /> <!-- SVG content collapsed -->
+				选择封面
+			横封面4:3
+			*[5095]<div />
+				*[5090]<svg /> <!-- SVG content collapsed -->
+				选择封面
+			竖封面3:4
+			Ai智能推荐封面生成中...
+			*[5100]<div />
+				*[5097]<div />
+				*[5098]<div />
+					生成中
+			*[5104]<div />
+				*[5101]<div />
+				*[5102]<div />
+					生成中
+			*[5108]<div />
+				*[5105]<div />
+				*[5106]<div />
+					生成中
+			好封面会吸引更多人浏览作品
+			优质封面示例
+			添加合集
+			[4277]<div />
+				[4269]<div />
+					[4266]<div />
+						[4265]<span />
+							合集
+				[4270]<div />
+					[4268]<svg /> <!-- SVG content collapsed -->
+			[4278]<div />
+				[4275]<div />
+					[4272]<div />
+						[4271]<span />
+							[4613]<div />
+								请选择合集
+				[4276]<div />
+					[4274]<svg /> <!-- SVG content collapsed -->
+			[4295]<section />
+				[4290]<div />
+					[4285]<div />
+						自主声明
+				[4291]<div />
+					[4289]<div />
+						[4287]<div />
+							请选择自主声明
+						[4288]<span />
+							[4286]<img />
+			扩展信息
+			*[4358]<input type=file name=upload-btn accept=image/png,image/jpeg,image/jpg class=upload-btn-input-UY_qeY compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			视频章节
+			*[4428]<div />
+				[4425]<div />
+					<svg /> <!-- SVG content collapsed -->
+				为进度条增加章节信息，让视频结构更清晰
+				已添加的章节数量会在这里显示
+			如上传视频属于中插植入类型，请您按照标准添加章节信息，具体详见
+			[4661]<a />
+				查看详情
+			添加标签
+			*[5008]<span />
+				*[5006]<svg /> <!-- SVG content collapsed -->
+			*[5022]<div />
+				*[5014]<div />
+					*[5011]<div />
+						*[5010]<span />
+							*[5036]<div />
+								位置
+				*[5015]<div />
+					*[5013]<svg /> <!-- SVG content collapsed -->
+			*[5020]<div />
+				*[5018]<div />
+					*[5017]<div />
+						*[5016]<span />
+							输入地理位置
+				*[5019]<div />
+			关联热点
+			[4437]<span />
+				[4435]<svg /> <!-- SVG content collapsed -->
+			[4445]<div />
+				[4443]<div />
+					[4440]<div />
+						[4439]<span />
+							点击输入热点词
+				[4444]<div />
+					[4442]<svg /> <!-- SVG content collapsed -->
+			发布设置
+			同时发布
+			*[5170]<span />
+				*[5168]<svg /> <!-- SVG content collapsed -->
+			*[5180]<label />
+				*[5174]<svg /> <!-- SVG content collapsed -->
+				不同时发布
+			*[5181]<label />
+				*[5178]<svg /> <!-- SVG content collapsed -->
+				同时发布到
+			谁可以看
+			[4615]<label />
+				[4586]<svg /> <!-- SVG content collapsed -->
+				公开
+			[4616]<label />
+				[4590]<svg /> <!-- SVG content collapsed -->
+				好友可见
+			[4617]<label />
+				[4594]<svg /> <!-- SVG content collapsed -->
+				仅自己可见
+			保存权限
+			[4465]<span />
+				[4463]<svg /> <!-- SVG content collapsed -->
+			[4475]<label />
+				[4643]<svg /> <!-- SVG content collapsed -->
+				允许
+			[4476]<label />
+				[4644]<svg /> <!-- SVG content collapsed -->
+				不允许
+			发布时间
+			[4485]<span />
+				[4483]<svg /> <!-- SVG content collapsed -->
+			[4495]<label />
+				[4489]<svg /> <!-- SVG content collapsed -->
+				立即发布
+			[4496]<label />
+				[4493]<svg /> <!-- SVG content collapsed -->
+				定时发布
+			[4519]<div />
+				快速填写
+			[4508]<button />
+				发布
+			[4510]<button />
+				暂存离开
+			<svg /> <!-- SVG content collapsed -->
+			2026-04-29...9.mp4
+			上传过程中请不要删除/移动文件
+			*[5126]<span />
+				0%
+			文件解析中，请稍等...
+			*[5128]<div />
+				取消上传
+			*[5000]<section />
+				<svg /> <!-- SVG content collapsed -->
+				发文助手
+				*[4995]<p />
+					*[4994]<svg /> <!-- SVG content collapsed -->
+	[3672]<div />
+		[3673]<span role=img />
+			[3674]<svg /> <!-- SVG content collapsed -->
+|IFRAME|<iframe id=summon-web-iframe />
+	[280]<div id=root />
+[4125]<div id=portal-container />
+*[4583]<div />
+*[5071]<div />

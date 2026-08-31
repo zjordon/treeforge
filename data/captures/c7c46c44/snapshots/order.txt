@@ -1,0 +1,65 @@
+*[281275]<a />
+*[281284]<a />
+	Dashboard
+*[281174]<a />
+	Sales
+*[281175]<a />
+	Catalog
+*[281176]<a />
+	Customers
+*[281177]<a />
+	Marketing
+*[281178]<a />
+	Content
+*[281179]<a />
+	Reports
+*[281180]<a />
+	Stores
+*[281181]<a />
+	System
+*[281887]<a />
+	Find Partners & Extensions
+#000000260
+*[281949]<a title=My Account />
+	admin
+*[281987]<a title=Notifications />
+*[281992]<div />
+	*[281155]<form id=form-search />
+		*[281995]<div />
+			*[281156]<input type=text id=search-global name=query />
+*[281182]<button title=Back id=back />
+	Back
+*[281183]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+*[281184]<button title=Send Email id=send_notification />
+	Send Email
+*[281185]<button title=Ship id=order_ship />
+	Ship
+*[281186]<button title=Reorder id=order_reorder />
+	Reorder
+Order View
+*[282096]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info />
+	Information
+	*[282101]<span />
+*[283073]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices />
+	Invoices
+	*[283078]<span />
+*[283150]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos />
+	Credit Memos
+	*[283155]<span />
+*[283227]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments />
+	Shipments
+	*[283232]<span />
+*[283304]<a title=Order History id=sales_order_view_tabs_order_history name=order_history />
+	Comments History
+	*[283309]<span />
+*[283374]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[283382]<a id=footer_privacy />
+	Privacy Policy
+*[283385]<a id=footer_account_activity />
+	Account Activity
+*[283388]<a id=footer_bug_tracking />
+	Report an Issue

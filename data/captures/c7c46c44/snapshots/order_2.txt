@@ -1,0 +1,359 @@
+[236621]<a />
+[236629]<li id=menu-magento-backend-dashboard role=menu-item />
+	[236630]<a />
+		Dashboard
+[236635]<li id=menu-magento-sales-sales role=menu-item />
+	[236541]<a />
+		Sales
+[236678]<li id=menu-magento-catalog-catalog role=menu-item />
+	[236542]<a />
+		Catalog
+[236701]<li id=menu-magento-customer-customer role=menu-item />
+	[236543]<a />
+		Customers
+[236726]<li id=menu-magento-backend-marketing role=menu-item />
+	[236544]<a />
+		Marketing
+[236811]<li id=menu-magento-backend-content role=menu-item />
+	[236545]<a />
+		Content
+[236870]<li id=menu-magento-reports-report role=menu-item />
+	[236546]<a />
+		Reports
+[237030]<li id=menu-magento-backend-stores role=menu-item />
+	[236547]<a />
+		Stores
+[237126]<li id=menu-magento-backend-system role=menu-item />
+	[236548]<a />
+		System
+[237231]<li id=menu-magento-marketplace-partners role=menu-item />
+	[237232]<a />
+		Find Partners & Extensions
+Orders
+[237294]<a title=My Account />
+	admin
+[237332]<a title=Notifications />
+[237337]<div />
+	[236532]<form id=form-search />
+		[237340]<div />
+			[236533]<input type=text id=search-global autocomplete=off />
+[236549]<button title=Create New Order id=add />
+	Create New Order
+[237792]<button />
+	Default View
+[237811]<button />
+	Columns
+[237978]<button />
+	Export
+[238084]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[238085]<button aria-label=Search />
+[238093]<button />
+	Filters
+Active filters:
+Status:
+Canceled
+[240308]<button />
+[238772]<button />
+	Clear all
+Purchase Date
+from
+[240632]<input type=text id=WR7TS0E name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+[240639]<button />
+	[240642]<span />
+		undefined
+to
+[240634]<input type=text id=K4CBAG5 name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+[247991]<button />
+	[247994]<span />
+		undefined
+Grand Total (Base)
+from
+[240612]<input type=text id=WFLLXKU name=base_grand_total[from] maxlength=255 />
+to
+[240614]<input type=text id=U6XPIR9 name=base_grand_total[to] maxlength=255 />
+Grand Total (Purchased)
+from
+[240616]<input type=text id=NS8TQ3V name=grand_total[from] maxlength=255 />
+to
+[240618]<input type=text id=YY79EC5 name=grand_total[to] maxlength=255 />
+Purchase Point
+*[240389]<select id=VRUKM0J name=store_id aria-label=notice-VRUKM0J expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />
+ID
+[240592]<input type=text id=J709E1A name=increment_id maxlength=255 />
+Bill-to Name
+[240594]<input type=text id=HT6MI8W name=billing_name maxlength=255 />
+Ship-to Name
+[240596]<input type=text id=BG3PLVR name=shipping_name maxlength=255 />
+Status
+*[240410]<select id=IVLDAU4 name=status aria-label=notice-IVLDAU4 expanded=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Canceled|Closed|Complete|Suspected Fraud) />
+Braintree Transaction Source
+[240610]<input type=text id=QRN1A71 name=transaction_source maxlength=255 />
+[238101]<button />
+	Cancel
+[238103]<button />
+	Apply Filters
+[238135]<button title=Select Items />
+	Actions
+142
+records found
+[239086]<div />
+	[239088]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />
+[239089]<button />
+	Select
+per page
+[238203]<button title=Previous Page disabled=true />
+*[238208]<input type=number id=25 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[238210]<button title=Next Page disabled=true />
+[237741]<tr />
+	[238470]<div />
+		[238471]<input type=checkbox checked=false id=51 />
+		[238473]<button />
+			Options
+	[238493]<th />
+		[238492]<span />
+			ID
+	[238496]<th />
+		Purchase Point
+	[238499]<th />
+		[238498]<span />
+			Purchase Date
+	[238502]<th />
+		[238501]<span />
+			Bill-to Name
+	[238505]<th />
+		[238504]<span />
+			Ship-to Name
+	[238508]<th />
+		[238507]<span />
+			Grand Total (Base)
+	[238511]<th />
+		[238510]<span />
+			Grand Total (Purchased)
+	[238514]<th />
+		[238513]<span />
+			Status
+	[238517]<th />
+		[238516]<span />
+			Action
+	[238520]<th />
+		Allocated sources
+	[238523]<th />
+		[238522]<span />
+			Braintree Transaction Source
+[255687]<tr />
+	[256114]<td />
+		[257850]<label />
+			[257848]<input type=checkbox checked=false id=idscheck136 value=136 />
+	[256115]<td />
+		000000136
+	[256116]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[256117]<td />
+		May 23, 2023 9:20:01 PM
+	[256118]<td />
+		Lily Potter
+	[256119]<td />
+		Lily Potter
+	[256120]<td />
+		$208.20
+	[256121]<td />
+		$208.20
+	[256122]<td />
+		Canceled
+	[256123]<td />
+		[261262]<a />
+			View
+	[256124]<td />
+	[256125]<td />
+[255690]<tr />
+	[256126]<td />
+		[257853]<label />
+			[257851]<input type=checkbox checked=false id=idscheck242 value=242 />
+	[256127]<td />
+		000000242
+	[256128]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[256129]<td />
+		May 15, 2023 9:09:53 AM
+	[256130]<td />
+		Olivia Lee
+	[256131]<td />
+		Olivia Lee
+	[256132]<td />
+		$183.00
+	[256133]<td />
+		$183.00
+	[256134]<td />
+		Canceled
+	[256135]<td />
+		[261282]<a />
+			View
+	[256136]<td />
+	[256137]<td />
+[255693]<tr />
+	[256138]<td />
+		[257856]<label />
+			[257854]<input type=checkbox checked=false id=idscheck25 value=25 />
+	[256139]<td />
+		000000025
+	[256140]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[256141]<td />
+		May 14, 2023 10:38:35 AM
+	[256142]<td />
+		John Doe
+	[256143]<td />
+		John Doe
+	[256144]<td />
+		$204.25
+	[256145]<td />
+		$204.25
+	[256146]<td />
+		Canceled
+	[256147]<td />
+		[261302]<a />
+			View
+	[256148]<td />
+	[256149]<td />
+[255696]<tr />
+	[256150]<td />
+		[257859]<label />
+			[257857]<input type=checkbox checked=false id=idscheck118 value=118 />
+	[256151]<td />
+		000000118
+	[256152]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[256153]<td />
+		May 6, 2023 11:54:21 PM
+	[256154]<td />
+		Brian Smith
+	[256155]<td />
+		Brian Smith
+	[256156]<td />
+		$29.00
+	[256157]<td />
+		$29.00
+	[256158]<td />
+		Canceled
+	[256159]<td />
+		[261322]<a />
+			View
+	[256160]<td />
+	[256161]<td />
+[255699]<tr />
+	[256162]<td />
+		[257862]<label />
+			[257860]<input type=checkbox checked=false id=idscheck98 value=98 />
+	[256163]<td />
+		000000098
+	[256164]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[256165]<td />
+		Apr 24, 2023 7:19:36 PM
+	[256166]<td />
+		Julia Williams
+	[256167]<td />
+		Julia Williams
+	[256168]<td />
+		$223.60
+	[256169]<td />
+		$223.60
+	[256170]<td />
+		Canceled
+	[256171]<td />
+		[261342]<a />
+			View
+	[256172]<td />
+	[256173]<td />
+[255702]<tr />
+	[256174]<td />
+		[257865]<label />
+			[257863]<input type=checkbox checked=false id=idscheck109 value=109 />
+	[256175]<td />
+		000000109
+	[256176]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[256177]<td />
+		Apr 24, 2023 1:32:26 PM
+	[256178]<td />
+		Jason Miller
+	[256179]<td />
+		Jason Miller
+	[256180]<td />
+		$136.40
+	[256181]<td />
+		$136.40
+	[256182]<td />
+		Canceled
+	[256183]<td />
+		[261362]<a />
+			View
+	[256184]<td />
+	[256185]<td />
+[255705]<tr />
+	[256186]<td />
+		[257868]<label />
+			[257866]<input type=checkbox checked=false id=idscheck255 value=255 />
+	[256187]<td />
+		000000255
+	[256188]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[256189]<td />
+		Apr 17, 2023 3:35:01 AM
+	[256190]<td />
+		Lisa Kim
+	[256191]<td />
+		Lisa Kim
+	[256192]<td />
+		$34.00
+	[256193]<td />
+		$34.00
+	[256194]<td />
+		Canceled
+	[256195]<td />
+		[261382]<a />
+			View
+	[256196]<td />
+	[256197]<td />
+[255708]<tr />
+	[256198]<td />
+		[257871]<label />
+			[257869]<input type=checkbox checked=false id=idscheck283 value=283 />
+	[256199]<td />
+		000000283
+	[256200]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[256201]<td />
+		Apr 14, 2023 11:19:45 AM
+	[256202]<td />
+		Bob Jones
+	[256203]<td />
+		Bob Jones
+	[256204]<td />
+		$154.80
+	[256205]<td />
+		$154.80
+	[256206]<td />
+		Canceled
+	[256207]<td />
+		[261402]<a />
+			View
+	[256208]<td />
+	[256209]<td />

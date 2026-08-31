@@ -55,7 +55,7 @@ uv run treewalker distill examples/bilibili-upload.trace.json --output ./data/sk
 - `adapters/` —— 输出 adapter（`treewalker` 多文件 vs `browserbc` 单文件），关键缓冲设计。
 - `treeforge/` —— Python 包根 + CLI 入口（`treeforge.__main__:main`，console script 名是 `treeforge`，与项目名/包名一致）。
 - `examples/` —— 示例 trace JSON，测试 fixture 引用它们。
-- `data/` —— 运行时产物（已 gitignore，不要提交）。
+- `data/` —— 运行时产物（skills 蒸馏产物 / captures 录制 / registry 卡片；2026-08-31 起纳入版本跟踪，captures 含本机路径与真实录制内容，提交前自行评估）。
 - `server/`、`extension/` —— P1/P2 占位，本期 P0 不实现。
 
 修改 harness 五阶段时，留意「★站点特定四字段」是 TreeForge 与 Browser-BC 的核心分叉点：DISTILL 要 capture site-specific selectors，不是 abstract away。
@@ -66,5 +66,5 @@ uv run treewalker distill examples/bilibili-upload.trace.json --output ./data/sk
 - **不要在任务结束时主动询问"要不要提交"**——这相当于变相催促用户提交。完成代码改动并跑完测试后直接结束汇报即可。
 - 即使测试全过、ruff 无告警、改动看起来完整且符合 plan，也**不主动提交**。
 - 只有当用户**明确要求提交**（如"提交一下"、"commit"、"创建 PR"）时，才执行 git 提交流程。
-- 用户授权提交时，仍需遵守通用 git 安全约定：不 force push、不 amend 已发布提交、不跳过 hooks、不提交 `.env` / `data/` / `uv.lock`（`uv.lock` 在本仓库 `.gitignore` 内，与 TreeWalker 一致）。
+- 用户授权提交时，仍需遵守通用 git 安全约定：不 force push、不 amend 已发布提交、不跳过 hooks、不提交 `.env` / `uv.lock`（`data/` 已于 2026-08-31 解除忽略、可入库；`uv.lock` 在本仓库 `.gitignore` 内，与 TreeWalker 一致）。
 - 当前默认分支是 `master`（注意不是 `main`）；如需开新功能分支再操作，不要直接在 `master` 上做大改动除非用户要求。

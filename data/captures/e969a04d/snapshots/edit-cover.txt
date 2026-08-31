@@ -1,0 +1,382 @@
+[319]<div id=root />
+	[2]<button />
+		高清发布
+	[53]<li id=douyin-creator-master-menu-nav-home role=menuitem />
+		<svg /> <!-- SVG content collapsed -->
+		首页
+	[321]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />
+		<svg /> <!-- SVG content collapsed -->
+		活动管理
+	[56]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />
+		[322]<div role=menuitem expanded=false />
+			<svg /> <!-- SVG content collapsed -->
+			内容管理
+			<svg /> <!-- SVG content collapsed -->
+	[60]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />
+		[323]<div role=menuitem expanded=false />
+			<svg /> <!-- SVG content collapsed -->
+			互动管理
+			<svg /> <!-- SVG content collapsed -->
+	[64]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />
+		[324]<div role=menuitem expanded=false />
+			<svg /> <!-- SVG content collapsed -->
+			数据中心
+			<svg /> <!-- SVG content collapsed -->
+	[68]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />
+		[325]<div role=menuitem expanded=false />
+			<svg /> <!-- SVG content collapsed -->
+			变现中心
+			<svg /> <!-- SVG content collapsed -->
+	[72]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />
+		[326]<div role=menuitem expanded=false />
+			<svg /> <!-- SVG content collapsed -->
+			创作中心
+			<svg /> <!-- SVG content collapsed -->
+	[327]<div />
+	[77]<a />
+		通知
+	<svg /> <!-- SVG content collapsed -->
+	网址
+	[329]<div />
+		<svg /> <!-- SVG content collapsed -->
+		抖音
+	[5]<div id=micro />
+		[1195]<div id=root />
+			基础信息
+			作品描述
+			<svg /> <!-- SVG content collapsed -->
+			[2429]<div />
+				[2513]<div />
+					[2512]<div />
+						20
+						30
+			brwoser-use体验及技术分析
+			[2431]<div />
+				[2515]<div />
+					#添加话题
+				[2516]<div />
+					@好友
+			18 / 1000
+			[2433]<div />
+				推荐
+				[3346]<div />
+					安卓
+				[3347]<div />
+					ae教程
+				[3348]<div />
+					电竞显示器
+				[3349]<div />
+					初学ps
+				[3350]<div />
+					小米手机
+				[3351]<div />
+					在线学习
+				[3337]<div />
+					14
+			[2434]<div />
+				官方活动
+				<svg /> <!-- SVG content collapsed -->
+				[3250]<div />
+					<svg /> <!-- SVG content collapsed -->
+					千万流量！征集难题，回答时代困惑
+					热度：281
+				[3251]<div />
+					<svg /> <!-- SVG content collapsed -->
+					音为有你全民开唱挑战赛
+					热度：2.6k
+				[3252]<div />
+					<svg /> <!-- SVG content collapsed -->
+					火山拍作品分10万
+					热度：102
+				[3253]<div />
+			设置封面
+			<svg /> <!-- SVG content collapsed -->
+			[2782]<div />
+				[2777]<svg /> <!-- SVG content collapsed -->
+				选择封面
+			横封面4:3
+			[2790]<div />
+				[2785]<svg /> <!-- SVG content collapsed -->
+				选择封面
+			竖封面3:4
+			Ai智能推荐封面生成中...
+			生成中
+			[3309]<div />
+			[3310]<div />
+			好封面会吸引更多人浏览作品
+			优质封面示例
+			添加合集
+			[2159]<div />
+				合集
+				[2150]<svg /> <!-- SVG content collapsed -->
+			[2160]<div />
+				请选择合集
+				[2156]<svg /> <!-- SVG content collapsed -->
+			[2177]<section />
+				[2172]<div />
+					[2167]<div />
+						自主声明
+				[2173]<div />
+					[2171]<div />
+						[2169]<div />
+							请选择自主声明
+			扩展信息
+			*[2240]<input type=file name=upload-btn accept=image/png,image/jpeg,image/jpg class=upload-btn-input-UY_qeY compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			视频章节
+			[2310]<div />
+				[2307]<div />
+					[2304]<svg /> <!-- SVG content collapsed -->
+				[2308]<div />
+					[2305]<p />
+						为进度条增加章节信息，让视频结构更清晰
+					[2306]<p />
+						已添加的章节数量会在这里显示
+				[2309]<div />
+					[3468]<svg /> <!-- SVG content collapsed -->
+					[3469]<p />
+						智能章节已上线，试试吧
+					[3471]<svg /> <!-- SVG content collapsed -->
+			如上传视频属于中插植入类型，请您按照标准添加章节信息，具体详见
+			[2543]<a />
+				查看详情
+			添加标签
+			[3177]<span />
+				[3175]<svg /> <!-- SVG content collapsed -->
+			[3191]<div />
+				[3183]<div />
+					[3180]<div />
+						[3179]<span />
+							[3205]<div />
+								位置
+				[3184]<div />
+					[3182]<svg /> <!-- SVG content collapsed -->
+			[3189]<div />
+				[3187]<div />
+					[3186]<div />
+						[3185]<span />
+							输入地理位置
+				[3188]<div />
+			关联热点
+			[2319]<span />
+				[2317]<svg /> <!-- SVG content collapsed -->
+			[2327]<div />
+				[2325]<div />
+					[2322]<div />
+						[2321]<span />
+							点击输入热点词
+				[2326]<div />
+					[2324]<svg /> <!-- SVG content collapsed -->
+			发布设置
+			同时发布
+			[3273]<span />
+				[3271]<svg /> <!-- SVG content collapsed -->
+			[3283]<label />
+				[3277]<svg /> <!-- SVG content collapsed -->
+				不同时发布
+			[3284]<label />
+				[3281]<svg /> <!-- SVG content collapsed -->
+				同时发布到
+			谁可以看
+			[2497]<label />
+				[2468]<svg /> <!-- SVG content collapsed -->
+				公开
+			[2498]<label />
+				[2472]<svg /> <!-- SVG content collapsed -->
+				好友可见
+			[2499]<label />
+				[2476]<svg /> <!-- SVG content collapsed -->
+				仅自己可见
+			保存权限
+			[2347]<span />
+				[2345]<svg /> <!-- SVG content collapsed -->
+			[2357]<label />
+				[2525]<svg /> <!-- SVG content collapsed -->
+				允许
+			[2358]<label />
+				[2526]<svg /> <!-- SVG content collapsed -->
+				不允许
+			发布时间
+			[2367]<span />
+				[2365]<svg /> <!-- SVG content collapsed -->
+			[2377]<label />
+				[2371]<svg /> <!-- SVG content collapsed -->
+				立即发布
+			[2378]<label />
+				[2375]<svg /> <!-- SVG content collapsed -->
+				定时发布
+			[2401]<div />
+				快速填写
+			[2390]<button />
+				发布
+			[2392]<button />
+				暂存离开
+			[3461]<div />
+				预览视频
+				<svg /> <!-- SVG content collapsed -->
+			[3462]<div />
+				预览封面/标题
+			树哥AI
+			ai浏览器第5期-browser-use brwoser-use体验及技术分析
+			[3503]<svg /> <!-- SVG content collapsed -->
+			树哥AI创作的原声 - @树哥AI   树哥AI创作的原声 - @树哥AI   树哥AI创作的原声 - @树哥AI
+			[3403]<div />
+				<svg /> <!-- SVG content collapsed -->
+			添加音乐
+			*[3411]<input type=file name=upload-btn accept=video/mp4,video/x-m4v,video/x-flv,.flv,.avi,.wmv,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,.m4,video/* class=upload-btn-input-UY_qeY compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			[3412]<button />
+			重新上传
+			[3220]<section />
+				<svg /> <!-- SVG content collapsed -->
+				发文助手
+				[3421]<div />
+					[3419]<p />
+						快速检测
+						[3418]<svg /> <!-- SVG content collapsed -->
+				[3465]<svg /> <!-- SVG content collapsed -->
+				检测中6%
+				横/竖双封面缺失
+				为增加作品的流量，建议同时设置横版和竖版的封面
+				[3215]<p />
+					[3214]<svg /> <!-- SVG content collapsed -->
+	<svg /> <!-- SVG content collapsed -->
+|IFRAME|<iframe id=summon-web-iframe />
+	[2]<div id=root />
+[2007]<div id=portal-container />
+[2465]<div />
+[3260]<div />
+[3376]<div id=toast-wrapper-178554971753 />
+[3429]<div />
+*[3654]<div />
+	|scroll element|<div role=none /> (scroll: 0%, 0.1 pages below, total: 1.1 pages)
+		*[3657]<div />
+			*[3655]<span />
+				设置
+				封面
+		*[3658]<div />
+			*[3656]<span />
+				设置
+				封面
+		*[3701]<li level=1 />
+			*[3663]<div />
+				*[3662]<svg /> <!-- SVG content collapsed -->
+			*[3664]<div />
+				AI封面
+		*[3702]<li level=1 />
+			*[3668]<div />
+				*[3667]<svg /> <!-- SVG content collapsed -->
+			*[3669]<div />
+				模板
+		*[3703]<li level=1 />
+			*[3676]<div />
+				*[3675]<svg /> <!-- SVG content collapsed -->
+			*[3677]<div />
+				贴纸
+		*[3704]<li level=1 />
+			*[3681]<div />
+				*[3680]<svg /> <!-- SVG content collapsed -->
+			*[3682]<div />
+				标题
+		*[3705]<li level=1 />
+			*[3689]<div />
+				*[3688]<svg /> <!-- SVG content collapsed -->
+			*[3690]<div />
+				文字
+		*[3706]<li level=1 />
+			*[3699]<div />
+				*[3698]<svg /> <!-- SVG content collapsed -->
+			*[3700]<div />
+				滤镜
+		*[3713]<div />
+			*[3712]<div />
+				*[3710]<div />
+				*[3711]<div />
+					*[3708]<div />
+					*[3709]<div />
+						生成中
+		生成参考图
+		*[3724]<div />
+		*[3725]<div />
+			*[3721]<div />
+				*[3718]<div />
+					*[3717]<span />
+						智能参考
+			*[3722]<div />
+				*[3720]<svg /> <!-- SVG content collapsed -->
+		*[3735]<input type=file accept=image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif autocomplete=off class=semi-upload-hidden-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+		*[3736]<input type=file accept=image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif autocomplete=off class=semi-upload-hidden-input-replace compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+		*[3737]<div />
+			*[3734]<div />
+				*[3733]<svg /> <!-- SVG content collapsed -->
+		|scroll element|<div />
+			*[3738]<div />
+			*[3739]<div />
+			*[3740]<div />
+		*[3759]<button />
+			AI生成封面
+		*[4160]<canvas />
+		*[3895]<div />
+			*[3889]<svg /> <!-- SVG content collapsed -->
+			*[3890]<div />
+				增强
+		*[3897]<div />
+			*[3893]<svg /> <!-- SVG content collapsed -->
+			*[3894]<div />
+				对比
+		*[3913]<svg /> <!-- SVG content collapsed -->
+		*[3904]<div />
+		*[3905]<div />
+		*[3901]<span />
+		*[3915]<svg /> <!-- SVG content collapsed -->
+		*[3938]<div />
+			*[3919]<div />
+			*[3920]<div />
+			*[3921]<div />
+			*[3922]<div />
+			*[3923]<div />
+			*[3924]<div />
+			*[3925]<div />
+			*[3926]<div />
+			*[3927]<div />
+		*[3939]<div />
+			*[3933]<div />
+			*[3934]<div />
+				*[3930]<svg /> <!-- SVG content collapsed -->
+				*[3931]<div />
+				*[3932]<svg /> <!-- SVG content collapsed -->
+		*[3940]<div />
+		*[3942]<div />
+		*[3944]<div />
+		<svg /> <!-- SVG content collapsed -->
+		上传封面
+		*[3963]<input type=file accept=image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif autocomplete=off class=semi-upload-hidden-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+		*[3964]<input type=file accept=image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif autocomplete=off class=semi-upload-hidden-input-replace compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+		*[3965]<div />
+			*[3961]<div />
+				*[3957]<svg /> <!-- SVG content collapsed -->
+			*[3962]<div />
+				*[3958]<div />
+					点击上传文件或拖拽文件到这里
+				*[3959]<div />
+				*[3960]<div />
+		*[3982]<div />
+			<svg /> <!-- SVG content collapsed -->
+			*[3977]<span />
+				封面检测
+		*[3980]<button />
+			完成
+		*[3981]<button />
+			设置竖封面
+		*[4152]<div />
+			*[4157]<div />
+				设置两张封面将获得更多曝光和推荐
+				<svg /> <!-- SVG content collapsed -->
+		<svg /> <!-- SVG content collapsed -->
+		*[4344]<canvas />
+		<svg /> <!-- SVG content collapsed -->
+		<svg /> <!-- SVG content collapsed -->
+		<svg /> <!-- SVG content collapsed -->
+		<svg /> <!-- SVG content collapsed -->
+		<svg /> <!-- SVG content collapsed -->
+		<svg /> <!-- SVG content collapsed -->
+		横封面预览（4:3）
+		*[4086]<svg /> <!-- SVG content collapsed -->

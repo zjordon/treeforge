@@ -1,0 +1,40 @@
+*[431671]<a />
+*[431680]<a />
+	Dashboard
+*[431589]<a />
+	Sales
+*[431590]<a />
+	Catalog
+*[431591]<a />
+	Customers
+*[431592]<a />
+	Marketing
+*[431593]<a />
+	Content
+*[431594]<a />
+	Reports
+*[431595]<a />
+	Stores
+*[431596]<a />
+	System
+*[432282]<a />
+	Find Partners & Extensions
+Invoices
+*[432344]<a title=My Account />
+	admin
+*[432382]<a title=Notifications />
+*[432387]<div />
+	*[431579]<form id=form-search />
+		*[432390]<div />
+			*[431580]<input type=text id=search-global name=query />
+*[432418]<div />
+*[432441]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[432451]<a id=footer_privacy />
+	Privacy Policy
+*[432454]<a id=footer_account_activity />
+	Account Activity
+*[432457]<a id=footer_bug_tracking />
+	Report an Issue

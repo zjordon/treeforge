@@ -1,0 +1,190 @@
+[465727]<a />
+[465735]<li id=menu-magento-backend-dashboard role=menu-item />
+	[465736]<a />
+		Dashboard
+[465741]<li id=menu-magento-sales-sales role=menu-item />
+	[465631]<a />
+		Sales
+[465784]<li id=menu-magento-catalog-catalog role=menu-item />
+	[465632]<a />
+		Catalog
+[465807]<li id=menu-magento-customer-customer role=menu-item />
+	[465633]<a />
+		Customers
+[465832]<li id=menu-magento-backend-marketing role=menu-item />
+	[465634]<a />
+		Marketing
+[465917]<li id=menu-magento-backend-content role=menu-item />
+	[465635]<a />
+		Content
+[465976]<li id=menu-magento-reports-report role=menu-item />
+	[465636]<a />
+		Reports
+[466136]<li id=menu-magento-backend-stores role=menu-item />
+	[465637]<a />
+		Stores
+[466232]<li id=menu-magento-backend-system role=menu-item />
+	[465638]<a />
+		System
+[466337]<li id=menu-magento-marketplace-partners role=menu-item />
+	[466338]<a />
+		Find Partners & Extensions
+#000000001
+[466400]<a title=My Account />
+	admin
+[466438]<a title=Notifications />
+[466443]<div />
+	[465616]<form id=form-search />
+		[466446]<div />
+			[465617]<input type=text id=search-global autocomplete=off />
+[465639]<button title=Back id=back />
+	Back
+[465640]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+[465641]<button title=Send Email id=send_notification />
+	Send Email
+[465642]<button title=Print id=print />
+	Print
+Order & Account Information
+[466526]<a />
+	Order # 000000001
+(The order confirmation email is not sent)
+[466539]<tr />
+	Order Date
+	[465652]<td />
+		Mar 29, 2022, 9:36:37 PM
+[466547]<tr />
+	Order Status
+	[466552]<td />
+		Canceled
+[466557]<tr />
+	Purchased From
+	[466562]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+Account Information
+[466582]<a />
+	Edit Customer
+[466592]<tr />
+	Customer Name
+	[466597]<td />
+		[466599]<a />
+			Veronica Costello
+[466607]<tr />
+	Email
+	[466612]<td />
+		[466613]<a />
+			roni_cost@example.com
+[466617]<tr />
+	Customer Group
+	[466622]<td />
+		General
+Address Information
+Billing Address
+[466652]<div />
+	[466653]<a />
+		Edit
+Veronica Costello
+6146 Honey Bluff Parkway
+Calder,  Michigan, 49628-7978
+United States
+T: (555) 229-3326
+Shipping Address
+[466675]<div />
+	[466676]<a />
+		Edit
+Veronica Costello
+6146 Honey Bluff Parkway
+Calder,  Michigan, 49628-7978
+United States
+T: (555) 229-3326
+Payment & Shipping Method
+Payment Information
+Check / Money order
+The order was placed using USD.
+Shipping Information
+Flat Rate - Fixed
+Total Shipping Charges:
+[466743]<span />
+	$5.00
+Items Invoiced
+[466773]<tr />
+	Product
+	Price
+	Qty
+	Subtotal
+	Tax Amount
+	Discount Amount
+	Row Total
+[466807]<tr />
+	[466809]<td />
+		Iris Workout Top
+		SKU:
+		WS03-XS-Red
+		Size:
+		XS
+		Color:
+		Red
+	[466838]<td />
+		[466842]<span />
+			$29.00
+	[466847]<td />
+	[466850]<td />
+		[466854]<span />
+			$29.00
+	[466859]<td />
+		[466860]<span />
+			$2.39
+	[466863]<td />
+		[466864]<span />
+			$0.00
+	[466867]<td />
+		[466869]<span />
+			$31.39
+Order Total
+Invoice History
+Comment Text
+[465618]<textarea id=history_comment name=comment[comment] />
+[465619]<input type=checkbox checked=false id=history_notify name=comment[is_customer_notified] value=1 />
+Notify Customer by Email
+[465620]<input type=checkbox checked=false id=history_visible name=comment[is_visible_on_front] value=1 />
+Visible on Storefront
+[466940]<button title=Submit Comment id=submit_comment_button />
+	Submit Comment
+Invoice Totals
+[466970]<tr />
+	[466972]<td />
+		Grand Total
+	[466978]<td />
+		[466981]<span />
+			$36.39
+[466989]<tr />
+	[466991]<td />
+		Subtotal
+	[466994]<td />
+		[466997]<span />
+			$29.00
+[467002]<tr />
+	[467004]<td />
+		Shipping & Handling
+	[467007]<td />
+		[467010]<span />
+			$5.00
+[467015]<tr />
+	[467017]<td />
+		[467019]<div />
+			Tax
+	[467023]<td />
+		[467025]<span />
+			$2.39
+[467052]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[467062]<a id=footer_privacy />
+	Privacy Policy
+[467065]<a id=footer_account_activity />
+	Account Activity
+[467068]<a id=footer_bug_tracking />
+	Report an Issue

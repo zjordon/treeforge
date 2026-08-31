@@ -1,0 +1,127 @@
+[2272]<a />
+[2280]<li id=menu-magento-backend-dashboard role=menu-item />
+	[2281]<a />
+		Dashboard
+[2286]<li id=menu-magento-sales-sales role=menu-item />
+	[2168]<a />
+		Sales
+[2329]<li id=menu-magento-catalog-catalog role=menu-item />
+	[2169]<a />
+		Catalog
+[2352]<li id=menu-magento-customer-customer role=menu-item />
+	[2170]<a />
+		Customers
+[2377]<li id=menu-magento-backend-marketing role=menu-item />
+	[2171]<a />
+		Marketing
+[2462]<li id=menu-magento-backend-content role=menu-item />
+	[2172]<a />
+		Content
+[2521]<li id=menu-magento-reports-report role=menu-item />
+	[2173]<a />
+		Reports
+[2682]<li id=menu-magento-backend-stores role=menu-item />
+	[2174]<a />
+		Stores
+[2778]<li id=menu-magento-backend-system role=menu-item />
+	[2175]<a />
+		System
+[2882]<li id=menu-magento-marketplace-partners role=menu-item />
+	[2883]<a />
+		Find Partners & Extensions
+Products
+[2945]<a title=My Account />
+	admin
+[2983]<a title=Notifications />
+[2988]<div />
+	[2159]<form id=form-search />
+		[2991]<div />
+			[2160]<input type=text id=search-global autocomplete=off />
+[3017]<div title=Add Product id=add_new_product />
+	[3021]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[3027]<button title=Add Product aria-label=Add product of type />
+[3537]<button />
+	Default View
+[3703]<button />
+	Columns
+[3584]<button />
+	Filters
+Active filters:
+Quantity:
+10
+10
+*[54915]<button />
+*[4589]<button />
+	Clear all
+[3640]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[3641]<button aria-label=Search />
+[3648]<button title=Select Items />
+	Actions
+records found
+[5051]<div />
+	[5053]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+[5054]<button />
+	Select
+per page
+[3948]<button title=Previous Page disabled=true />
+*[3953]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[3955]<button title=Next Page disabled=true />
+[3442]<tr />
+	[4241]<div />
+		[4242]<input type=checkbox checked=false id=77 disabled=true />
+		[4244]<button disabled=true />
+			Options
+	[4265]<th />
+		[4264]<span />
+			ID
+	[4268]<th />
+		Thumbnail
+	[4271]<th />
+		[4270]<span />
+			Name
+	[4274]<th />
+		[4273]<span />
+			Type
+	[4277]<th />
+		[4276]<span />
+			Attribute Set
+	[4280]<th />
+		[4279]<span />
+			SKU
+	[4283]<th />
+		[4282]<span />
+			Price
+	[4286]<th />
+		[4285]<span />
+			Quantity
+	[4289]<th />
+		Salable Quantity
+	[4292]<th />
+		[4291]<span />
+			Visibility
+	[4295]<th />
+		[4294]<span />
+			Status
+	[4298]<th />
+		[4297]<span />
+			Websites
+	[4301]<th />
+		[4300]<span />
+			Last Updated At
+	[4304]<th />
+		Action
+*[54938]<tr />
+	*[54937]<td />
+		We couldn't find any records.
+*[3120]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[3130]<a id=footer_privacy />
+	Privacy Policy
+*[3133]<a id=footer_account_activity />
+	Account Activity
+*[3136]<a id=footer_bug_tracking />
+	Report an Issue

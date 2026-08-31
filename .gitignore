@@ -13,9 +13,8 @@ venv/
 # uv
 uv.lock
 
-# Runtime data (local distill output, registry, buckets, checkpoints)
-data/
-!data/.gitkeep
+# data/ 已按用户要求纳入版本跟踪（2026-08-31）：skills 蒸馏产物 + captures 录制 + registry 卡片。
+# 注意：captures 的 trace 含本机绝对路径与真实录制内容，提交前自行评估。
 
 # Secrets
 .env

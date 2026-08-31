@@ -1,0 +1,66 @@
+*[137280]<a />
+*[137289]<a />
+	Dashboard
+*[137167]<a />
+	Sales
+*[137168]<a />
+	Catalog
+*[137169]<a />
+	Customers
+*[137170]<a />
+	Marketing
+*[137171]<a />
+	Content
+*[137172]<a />
+	Reports
+*[137173]<a />
+	Stores
+*[137174]<a />
+	System
+*[137891]<a />
+	Find Partners & Extensions
+#000000136
+*[137953]<a title=My Account />
+	admin
+*[137991]<a title=Notifications />
+*[137996]<div />
+	*[137147]<form id=form-search />
+		*[137999]<div />
+			*[137148]<input type=text id=search-global name=query />
+*[137175]<button title=Back id=back />
+	Back
+*[137176]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+*[137177]<button title=Reorder id=order_reorder />
+	Reorder
+Order View
+*[138085]<li id=sales_order_view_tabs_order_info selected=true expanded=true />
+	*[138087]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info />
+		Information
+		*[138092]<span />
+*[139077]<li id=sales_order_view_tabs_order_invoices selected=false expanded=false />
+	*[139079]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices />
+		Invoices
+		*[139084]<span />
+*[139154]<li id=sales_order_view_tabs_order_creditmemos selected=false expanded=false />
+	*[139156]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos />
+		Credit Memos
+		*[139161]<span />
+*[139231]<li id=sales_order_view_tabs_order_shipments selected=false expanded=false />
+	*[139233]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments />
+		Shipments
+		*[139238]<span />
+*[139308]<li id=sales_order_view_tabs_order_history selected=false expanded=false />
+	*[139310]<a title=Order History id=sales_order_view_tabs_order_history name=order_history />
+		Comments History
+		*[139315]<span />
+*[139380]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[139388]<a id=footer_privacy />
+	Privacy Policy
+*[139391]<a id=footer_account_activity />
+	Account Activity
+*[139394]<a id=footer_bug_tracking />
+	Report an Issue
