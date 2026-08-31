@@ -84,6 +84,9 @@
       <label class="muted"><input type="checkbox" id="no-llm" /> 模板模式</label>
       <button id="distill-btn">开始蒸馏</button>
     </div>
+    <div class="row" style="margin-top:.5rem">
+      <input type="text" id="task-desc" placeholder="任务描述（可选，如「上传并发布抖音视频」——存进任务级 skill 供检索）" style="flex:1" />
+    </div>
   </div>
 
   <h2>蒸馏任务</h2>
@@ -212,7 +215,7 @@
         $('skills-dir-hint').textContent = '（' + (s.skills_dir || '-') + '）';
         const hosts = s.hosts || [];
         $('skills-card').innerHTML = hosts.length
-          ? hosts.map(h => `<div class="tree-item"><span class="clickable" onclick="toggleHost('${escapeHtml(h.name)}')">▸ ${escapeHtml(h.name)}</span> <span class="muted">(${h.md_count} md)</span><div class="tree-children" id="host-${escapeHtml(h.name)}" style="display:none"></div></div>`).join('')
+          ? hosts.map(h => `<div class="tree-item"><span class="clickable" onclick="toggleHost('${escapeHtml(h.name)}')">▸ ${escapeHtml(h.name)}</span> <span class="muted">(${h.md_count} md)</span> <button class="ghost" style="font-size:.75rem;padding:.15rem .5rem" onclick="distillHost('${escapeHtml(h.name)}')">累积再蒸馏</button><div class="tree-children" id="host-${escapeHtml(h.name)}" style="display:none"></div></div>`).join('')
           : '<span class="muted">暂无蒸馏产物</span>';
       } catch (e) { $('skills-card').textContent = '失败：' + e; }
     }
@@ -295,11 +298,12 @@
     $('distill-btn').addEventListener('click', async () => {
       const trace = $('trace-path').value.trim();
       const noLlm = $('no-llm').checked;
+      const taskDesc = $('task-desc').value.trim();
       if (!trace) { showToast('请填 trace 路径或从下拉选择', 'error'); return; }
       try {
         const r = await api('/api/distill', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ trace_path: trace, no_llm: noLlm })
+          body: JSON.stringify({ trace_path: trace, no_llm: noLlm, task_description: taskDesc || null })
         });
         if (!r.ok) { showToast('触发失败：' + (r.error || ''), 'error'); return; }
         showToast('已提交蒸馏 job=' + r.job_id, 'success');
@@ -307,6 +311,22 @@
         startJobPoll(r.job_id);
       } catch (e) { showToast('错误：' + e, 'error'); }
     });
+
+    // host 模式累积蒸馏：扫 captures 收集该 host 全部 trace → 多任务累积（P4）
+    window.distillHost = async function (host) {
+      const taskDesc = $('task-desc').value.trim();
+      const noLlm = $('no-llm').checked;
+      try {
+        const r = await api('/api/distill', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ host: host, no_llm: noLlm, task_description: taskDesc || null })
+        });
+        if (!r.ok) { showToast('触发失败：' + (r.error || ''), 'error'); return; }
+        showToast(`已提交 ${host} 累积蒸馏（${r.traces} 份 trace）job=` + r.job_id, 'success');
+        await refreshJobs();
+        startJobPoll(r.job_id);
+      } catch (e) { showToast('错误：' + e, 'error'); }
+    };
 
     function startJobPoll(jobId) {
       if (activeJobPoll) clearInterval(activeJobPoll);

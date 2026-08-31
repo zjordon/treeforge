@@ -439,10 +439,10 @@ sop 动作动词落到真实 tool 名，quirks 只写 agent 真推断不出来�
 
 ---
 
-## P4 —— 站点级 skill（多任务累积蒸馏，⏳ 计划中）
+## P4 —— 站点级 skill（多任务累积蒸馏，已完成 ✅ 代码；S3 形态 2026-08-30 按 Browser-BC 修订）
 
 **目标**：把「一个任务录一遍 → 蒸馏任务 SOP」升级为「同一站点多任务累积蒸馏 → 站点级知识
-（布局 / 菜单 / 功能地图 / 典型操作序列）」，消 TreeWalker agent 的导航不确定性（「路盲」）。
+（布局 / 菜单 / 功能地图 / 站点通用知识，有界摘要）」，消 TreeWalker agent 的导航不确定性（「路盲」）。
 一次蒸馏同时产出**站点级累积卡**与**任务级独立卡**（双产物，用户操作一次）；蒸馏前可选
 输入任务描述——作 TreeWalker 侧未来语义检索的锚点，同时反哺蒸馏意图（2026-08-28 融入）。
 
@@ -491,22 +491,23 @@ Browser-BC 的五阶段管线（atomize → classify 到 capacity → bucket 归
 
 ### 计划项（细化落 docs/p4/）
 
-- [ ] **S1 SkillCard 持久化**：按 host 落盘蒸馏产物（重建 `harness/registry.py` 为
+- [x] **S1 SkillCard 持久化**：按 host 落盘蒸馏产物（重建 `harness/registry.py` 为
   host → 卡片索引，旧卡可读回；原子写对齐 install.py）
-- [ ] **S2 host 级增量蒸馏**：新 trace 与旧卡合并（`_INCREMENTAL_ADDENDUM` 真接 prev_sop，
+- [x] **S2 host 级增量蒸馏**：新 trace 与旧卡合并（`_INCREMENTAL_ADDENDUM` 真接 prev_sop，
   8000 字符截断塞 prompt）；冲突以新证据为准、仍有效的旧知识保真保留
-- [ ] **S3 站点地图产物形态**：三件套演进——`_sop.md` 必写开头段「站点功能地图」+
-  按 capacity 分组的典型操作序列（**不新增文件**：TreeWalker loader 固定读三件名）
-- [ ] **S4 任务级双产物**：管线蒸馏段拆两跳（host 增量 + task 独立），任务卡落
+- [x] **S3 站点级产物形态**（2026-08-30 按 Browser-BC 修订）：`_sop.md` = 有界站点摘要
+  ——「站点功能地图」+「站点通用操作知识」（≤8000，压缩措辞不丢主题）；逐任务序列归
+  任务卡；capacities 降级为信息性清单并与旧卡并集（**不新增文件**：loader 固定三件名）
+- [x] **S4 任务级双产物**：管线蒸馏段拆两跳（host 增量 + task 独立），任务卡落
   `domain-skills/<host>/tasks/<slug>/`（三件套 + `_task.json`：任务描述 / 关键词 /
   来源 trace）；**slug 稳定化**——prompt 注入现有任务卡清单，同任务重录（不同时段/
   描述措辞不同）复用 slug **覆盖旧卡**，确为新任务才新建；任务描述入口 = SPA 文本框 +
   CLI `--task`（可选，双用途：检索锚点 + 反哺蒸馏）
-- [ ] **S5 多任务工作流**：`treeforge distill` 支持多 trace 输入 + `--fresh`；serve 侧
+- [x] **S5 多任务工作流**：`treeforge distill` 支持多 trace 输入 + `--fresh`；serve 侧
   控制面板加「按 host 再蒸馏（累积）」入口
-- [ ] **S6 评测对接**：配合 TreeWalker "with site knowledge" 变体口径（分列报告，
+- [x] **S6 评测对接**：配合 TreeWalker "with site knowledge" 变体口径（分列报告，
   不进主口径——评测红线）；任务卡目录约定即 TreeWalker 未来检索的读取契约
-- [ ] **测试**：mock LLM 验证增量合并 / 多 trace 归并 / 任务卡双产物 / 老卡兼容
+- [x] **测试**：mock LLM 验证增量合并 / 多 trace 归并 / 任务卡双产物 / 解析失败重试+保旧卡（268 测试）
   （不破坏现有单任务行为）
 
 ### 明确不做（边界）
@@ -521,7 +522,8 @@ Browser-BC 的五阶段管线（atomize → classify 到 capacity → bucket 归
 ### 验收
 
 - 同一 host 录 ≥3 个不同任务（分次录制）→ 蒸馏产物含站点级信息（菜单结构 / 功能入口 /
-  多任务典型序列），而非最后一次录制的单任务 SOP 覆盖
+  站点通用知识），且增量更新以旧卡为基线——**旧主题不被丢弃**（localhost 15 任务实测教训：
+  原形态 16 轮后 15 任务只剩 2 序列，已按 Browser-BC 修订）
 - 双产物：一次蒸馏（带任务描述）同时产出 host 累积卡 + 任务卡
   （`tasks/<slug>/_task.json` 含描述与关键词）；TreeWalker 现有注入不受 `tasks/`
   子目录影响

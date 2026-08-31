@@ -18,6 +18,7 @@ aiohttp 的 ``web.Application`` 非 ASGI，不能挂 FastAPI 下，所以 4 端�
 
 from __future__ import annotations
 
+import json
 import logging
 import os
 from pathlib import Path
@@ -81,9 +82,15 @@ class SignalRequest(BaseModel):
 
 
 class DistillRequest(BaseModel):
-    """POST /api/distill body（触发蒸馏）。"""
+    """POST /api/distill body（触发蒸馏，P4 支持 host 模式 + 任务描述）。
 
-    trace_path: str
+    trace_path / host 二选一：trace_path 单份蒸馏；host 模式扫 captures 收集该 host
+    全部 trace 做多任务累积蒸馏。
+    """
+
+    trace_path: str | None = None
+    host: str | None = None
+    task_description: str | None = None
     output_dir: str | None = None
     adapter: str = "treewalker"
     no_llm: bool = False
@@ -259,23 +266,68 @@ def _safe_result(result: Any) -> Any:
 # ---------------------------------------------------------------------------
 
 
+def _collect_host_traces(captures_dir: Path | str, host: str) -> list[Path]:
+    """扫 captures 收集指定 host 的全部 trace.json（host 模式累积蒸馏用）。
+
+    损坏/无 host 字段的 trace 跳过（容错）。按目录名排序（确定性）。
+    """
+    root = Path(captures_dir)
+    out: list[Path] = []
+    if not root.is_dir():
+        return out
+    for child in sorted(root.iterdir()):
+        tp = child / "trace.json"
+        if not tp.is_file():
+            continue
+        try:
+            data = json.loads(tp.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if isinstance(data, dict) and data.get("host") == host:
+            out.append(tp)
+    return out
+
+
 def _register_distill_router(app: FastAPI) -> None:
     @app.post("/api/distill")
     async def distill_start(req: DistillRequest) -> JSONResponse:
-        trace_path = Path(req.trace_path)
-        if not trace_path.is_file():
+        # trace_path / host 二选一
+        if bool(req.trace_path) == bool(req.host):
             return JSONResponse(
-                {"ok": False, "error": f"trace 文件不存在：{req.trace_path}"}, status_code=400
+                {"ok": False, "error": "trace_path 与 host 必须二选一（恰好提供一个）"},
+                status_code=400,
             )
+
+        if req.trace_path:
+            trace_paths = [Path(req.trace_path)]
+            missing = [p for p in trace_paths if not p.is_file()]
+            if missing:
+                return JSONResponse(
+                    {"ok": False, "error": f"trace 文件不存在：{missing[0]}"}, status_code=400
+                )
+        else:
+            # host 模式：扫 captures 收集该 host 全部 trace（多任务累积蒸馏）
+            trace_paths = _collect_host_traces(app.state.captures_dir, req.host or "")
+            if not trace_paths:
+                return JSONResponse(
+                    {
+                        "ok": False,
+                        "error": f"captures 里没有 host={req.host} 的 trace，先录制该站点",
+                    },
+                    status_code=400,
+                )
+            logger.info("host-mode distill: host=%s traces=%d", req.host, len(trace_paths))
+
         output_dir = Path(req.output_dir) if req.output_dir else config.OUTPUT_DIR
         try:
             job_id = await distill_api.start_distill_job(
-                trace_path=trace_path,
+                trace_paths=trace_paths,
                 output_dir=output_dir,
                 adapter_name=req.adapter,
                 no_llm=req.no_llm,
+                task_description=req.task_description,
             )
-            return JSONResponse({"ok": True, "job_id": job_id})
+            return JSONResponse({"ok": True, "job_id": job_id, "traces": len(trace_paths)})
         except Exception as e:  # noqa: BLE001
             logger.exception("distill start failed")
             return JSONResponse({"ok": False, "error": str(e)}, status_code=500)
