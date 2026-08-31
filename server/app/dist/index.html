@@ -272,12 +272,16 @@
       const pctTxt = (!finished && j.total > 0) ? Math.round(j.current / j.total * 100) + '%' : '';
       const err = j.error ? ` <span class="muted" title="${escapeHtml(j.error)}">⚠ ${escapeHtml(j.error.slice(0, 60))}</span>` : '';
       // done 时展开列出产出的文件（对齐旧版行为，不只是「N 文件」摘要）
+      // 双产物口径：written = 站点级三件套（INSTALL）；task_dir/task_slug = 任务级卡（跳 B）
       let result = '';
       if (j.status === 'done' && j.result) {
         const written = j.result.written || [];
-        const fileList = written.length
-          ? `<div class="tree-children"><span class="muted">产出 ${written.length} 文件 → ${escapeHtml(j.result.host_dir || '')}：</span><br>${written.map(p => `<code class="muted" style="font-size:.8rem">  ${escapeHtml(p)}</code>`).join('<br>')}</div>`
+        let fileList = written.length
+          ? `<div class="tree-children"><span class="muted">站点级 ${written.length} 文件 → ${escapeHtml(j.result.host_dir || '')}：</span><br>${written.map(p => `<code class="muted" style="font-size:.8rem">  ${escapeHtml(p)}</code>`).join('<br>')}</div>`
           : '';
+        if (j.result.task_dir) {
+          fileList += `<div class="tree-children"><span class="muted">任务级 skill（slug=${escapeHtml(j.result.task_slug || '')}）→ ${escapeHtml(j.result.task_dir)}</span></div>`;
+        }
         result = fileList;
       }
       return `<div class="job-row ${j.status}" data-job="${escapeHtml(j.job_id)}">
@@ -337,7 +341,10 @@
           if (r.ok && (r.job.status === 'done' || r.job.status === 'failed')) {
             clearInterval(activeJobPoll); activeJobPoll = null;
             if (r.job.status === 'done') {
-              showToast('蒸馏完成：' + ((r.job.result || {}).written || []).length + ' 文件', 'success');
+              const res = r.job.result || {};
+              const siteN = (res.written || []).length;
+              const taskMsg = res.task_dir ? ` + 任务卡「${res.task_slug}」` : '';
+              showToast(`蒸馏完成：站点级 ${siteN} 文件${taskMsg}`, 'success');
             } else {
               showToast('蒸馏失败：' + (r.job.error || ''), 'error');
             }
