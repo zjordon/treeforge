@@ -1,0 +1,270 @@
+*[33169]<a />
+*[33275]<a />
+	Dashboard
+*[33154]<a />
+	Sales
+*[33155]<a />
+	Catalog
+*[33156]<a />
+	Customers
+*[33157]<a />
+	Marketing
+*[33158]<a />
+	Content
+*[33159]<a />
+	Reports
+*[33160]<a />
+	Stores
+*[33161]<a />
+	System
+*[33877]<a />
+	Find Partners & Extensions
+Orders Report
+*[33939]<a title=My Account />
+	admin
+*[33977]<a title=Notifications />
+*[33982]<div />
+	*[33142]<form id=form-search />
+		*[33985]<div />
+			*[33143]<input type=text id=search-global name=query />
+*[34011]<span />
+	Scope:
+*[34030]<button id=store-change-button />
+	All Websites
+*[33165]<a title=What is this? />
+	*[34063]<span />
+		What is this?
+*[33166]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+*[34091]<a />
+	statistics
+, click
+*[34094]<a />
+	here
+Filter
+Date Used
+*[33144]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />
+The Order Updated report is created in real time and does not require a refresh.
+Period
+*[33145]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+From
+*[33146]<input title=From type=text id=sales_report_from name=from value=5/1/22 />
+To
+*[33147]<input title=To type=text id=sales_report_to name=to value=12/31/22 />
+Order Status
+*[33148]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />
+Applies to Any of the Specified Order Statuses except canceled orders
+*[33149]<select id=sales_report_order_statuses name=order_statuses[] multiple=multiple multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Canceled|Closed|Complete|Suspected Fraud) />
+	*[34228]<option id=optId4dAS5tO6 value=canceled selected=false />
+	*[34231]<option id=optId8FN1weSw value=closed selected=false />
+	*[34234]<option id=optIdKsco8ERl value=complete selected=true />
+	*[34237]<option id=optIdXAq7WUix value=fraud selected=false />
+	*[34240]<option id=optIdkOI5z4sP value=holded selected=false />
+	*[34243]<option id=optIdGZGNG7W6 value=payment_review selected=false />
+	*[34246]<option id=optIdv3ODEaQt value=paypal_canceled_reversal selected=false />
+	*[34249]<option id=optIdCmROa63G value=paypal_reversed selected=false />
+	*[34252]<option id=optIdmOhUcnX6 value=processing selected=false />
+Empty Rows
+*[33150]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Show Actual Values
+*[33151]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[33152]<select id=id_vvYbygihw1qZjNfKH3VDnwvWDb3SioUz_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+*[33167]<button title=Export id=id_SCEk9MBjzmWgTO9ESH0NhifnhuqmqPzx />
+	Export
+records found
+*[34361]<tr />
+	Interval
+	Orders
+	Sales Items
+	Sales Total
+	Invoiced
+	Refunded
+	Sales Tax
+	Sales Shipping
+	Sales Discount
+	Canceled
+*[34407]<tr />
+	Total
+	67
+	199
+	$8,786.53
+	$0.00
+	$0.00
+	$0.00
+	$995.00
+	$275.37
+	$0.00
+*[34443]<tr title=# />
+	*[34445]<td />
+		*[34447]<span />
+			5/2022
+	*[34451]<td />
+	*[34454]<td />
+		25
+	*[34457]<td />
+		$1,193.60
+	*[34460]<td />
+		$0.00
+	*[34463]<td />
+		$0.00
+	*[34466]<td />
+		$0.00
+	*[34469]<td />
+		$125.00
+	*[34472]<td />
+		$0.00
+	*[34475]<td />
+		$0.00
+*[34479]<tr title=# />
+	*[34481]<td />
+		*[34483]<span />
+			6/2022
+	*[34487]<td />
+		13
+	*[34490]<td />
+		34
+	*[34493]<td />
+		$1,390.74
+	*[34496]<td />
+		$0.00
+	*[34499]<td />
+		$0.00
+	*[34502]<td />
+		$0.00
+	*[34505]<td />
+		$170.00
+	*[34508]<td />
+		$20.96
+	*[34511]<td />
+		$0.00
+*[34515]<tr title=# />
+	*[34517]<td />
+		*[34519]<span />
+			7/2022
+	*[34523]<td />
+	*[34526]<td />
+		28
+	*[34529]<td />
+		$1,278.14
+	*[34532]<td />
+		$0.00
+	*[34535]<td />
+		$0.00
+	*[34538]<td />
+		$0.00
+	*[34541]<td />
+		$140.00
+	*[34544]<td />
+		$89.96
+	*[34547]<td />
+		$0.00
+*[34551]<tr title=# />
+	*[34553]<td />
+		*[34555]<span />
+			8/2022
+	*[34559]<td />
+	*[34562]<td />
+		18
+	*[34565]<td />
+		$954.45
+	*[34568]<td />
+		$0.00
+	*[34571]<td />
+		$0.00
+	*[34574]<td />
+		$0.00
+	*[34577]<td />
+		$90.00
+	*[34580]<td />
+		$0.00
+	*[34583]<td />
+		$0.00
+*[34587]<tr title=# />
+	*[34589]<td />
+		*[34591]<span />
+			9/2022
+	*[34595]<td />
+		10
+	*[34598]<td />
+		31
+	*[34601]<td />
+		$1,361.70
+	*[34604]<td />
+		$0.00
+	*[34607]<td />
+		$0.00
+	*[34610]<td />
+		$0.00
+	*[34613]<td />
+		$155.00
+	*[34616]<td />
+		$0.00
+	*[34619]<td />
+		$0.00
+*[34623]<tr title=# />
+	*[34625]<td />
+		*[34627]<span />
+			10/2022
+	*[34631]<td />
+	*[34634]<td />
+		11
+	*[34637]<td />
+		$444.80
+	*[34640]<td />
+		$0.00
+	*[34643]<td />
+		$0.00
+	*[34646]<td />
+		$0.00
+	*[34649]<td />
+		$55.00
+	*[34652]<td />
+		$0.00
+	*[34655]<td />
+		$0.00
+*[34659]<tr title=# />
+	*[34661]<td />
+		*[34663]<span />
+			11/2022
+	*[34667]<td />
+	*[34670]<td />
+		15
+	*[34673]<td />
+		$550.74
+	*[34676]<td />
+		$0.00
+	*[34679]<td />
+		$0.00
+	*[34682]<td />
+		$0.00
+	*[34685]<td />
+		$75.00
+	*[34688]<td />
+		$43.41
+	*[34691]<td />
+		$0.00
+*[34695]<tr title=# />
+	*[34697]<td />
+		*[34699]<span />
+			12/2022
+	*[34703]<td />
+		10
+	*[34706]<td />
+		37
+	*[34709]<td />
+		$1,612.36
+	*[34712]<td />
+		$0.00
+	*[34715]<td />
+		$0.00
+	*[34718]<td />
+		$0.00
+	*[34721]<td />
+		$185.00
+	*[34724]<td />
+		$121.04
+	*[34727]<td />
+		$0.00

@@ -1,0 +1,240 @@
+[144116]<a />
+[144120]<li id=menu-magento-backend-dashboard role=menu-item />
+	[144121]<a />
+		Dashboard
+[144123]<li id=menu-magento-sales-sales role=menu-item />
+	[144124]<a />
+		Sales
+[144144]<li id=menu-magento-catalog-catalog role=menu-item />
+	[144145]<a />
+		Catalog
+[144155]<li id=menu-magento-customer-customer role=menu-item />
+	[144156]<a />
+		Customers
+[144168]<li id=menu-magento-backend-marketing role=menu-item />
+	[144169]<a />
+		Marketing
+[144209]<li id=menu-magento-backend-content role=menu-item />
+	[144210]<a />
+		Content
+[144236]<li id=menu-magento-reports-report role=menu-item />
+	[144237]<a />
+		Reports
+[144313]<li id=menu-magento-backend-stores role=menu-item />
+	[144314]<a />
+		Stores
+[144359]<li id=menu-magento-backend-system role=menu-item />
+	[144360]<a />
+		System
+[144408]<li id=menu-magento-marketplace-partners role=menu-item />
+	[144409]<a />
+		Find Partners & Extensions
+Pages
+[144415]<a title=My Account />
+	admin
+[144417]<a title=Notifications />
+[144593]<div />
+	[143956]<form id=form-search />
+		[145489]<div />
+			[143957]<input type=text id=search-global autocomplete=off />
+[144424]<button title=Add New Page id=add />
+	Add New Page
+[144428]<button />
+	Default View
+[144430]<button />
+	Columns
+[144001]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[144434]<button aria-label=Search />
+[144435]<button />
+	Filters
+[144653]<div />
+	[144439]<button />
+		Actions
+records found
+[144658]<div />
+	[143974]<input type=text id=cms_page_listing.cms_page_listing.listing_top.listing_paging_sizes />
+[144445]<button />
+	Select
+per page
+[144449]<button title=Previous Page disabled=true />
+*[143967]<input type=number id=17 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[144453]<button title=Next Page disabled=true />
+[144457]<tr />
+	[144044]<div />
+		[144032]<input type=checkbox checked=false id=35 />
+		[144045]<button />
+			Options
+	[144047]<th />
+		[148082]<span />
+			ID
+	[144049]<th />
+		[148089]<span />
+			Title
+	[144050]<th />
+		[148096]<span />
+			URL Key
+	[144051]<th />
+		[148103]<span />
+			Layout
+	[144056]<th />
+		Store View
+	[144052]<th />
+		[148117]<span />
+			Status
+	[144053]<th />
+		[148124]<span />
+			Created
+	[144054]<th />
+		[148131]<span />
+			Modified
+	[144055]<th />
+		Action
+[144472]<tr />
+	[144473]<td />
+		[148378]<label />
+			[144474]<input type=checkbox checked=false id=idscheck1 value=1 />
+	[144475]<td />
+		[148387]<div />
+	[144057]<td />
+		404 Not Found
+	[144058]<td />
+		no-route
+	[144059]<td />
+		2 columns with right bar
+	[144060]<td />
+		All Store Views
+	[144061]<td />
+		Enabled
+	[144062]<td />
+		Apr 19, 2023 11:41:33 AM
+	[144063]<td />
+		Apr 19, 2023 11:41:33 AM
+	[144064]<td />
+		[144484]<button />
+			Select
+[144065]<tr />
+	[144486]<td />
+		[148447]<label />
+			[144487]<input type=checkbox checked=false id=idscheck2 value=2 />
+	[144066]<td />
+		[148456]<div />
+	[144067]<td />
+		Home Page
+	[144068]<td />
+		home
+	[144069]<td />
+		1 column
+	[144070]<td />
+		All Store Views
+	[144071]<td />
+		Enabled
+	[144072]<td />
+		Apr 19, 2023 11:41:33 AM
+	[144073]<td />
+		Apr 19, 2023 12:15:40 PM
+	[144074]<td />
+		[144496]<button />
+			Select
+[144075]<tr />
+	[144498]<td />
+		[148516]<label />
+			[144499]<input type=checkbox checked=false id=idscheck3 value=3 />
+	[144076]<td />
+		[148525]<div />
+	[144077]<td />
+		Enable Cookies
+	[144078]<td />
+		enable-cookies
+	[144079]<td />
+		1 column
+	[144080]<td />
+		All Store Views
+	[144081]<td />
+		Enabled
+	[144082]<td />
+		Apr 19, 2023 11:41:33 AM
+	[144083]<td />
+		Apr 19, 2023 11:41:33 AM
+	[144084]<td />
+		[144508]<button />
+			Select
+[144085]<tr />
+	[144510]<td />
+		[148585]<label />
+			[144511]<input type=checkbox checked=false id=idscheck4 value=4 />
+	[144086]<td />
+		[148594]<div />
+	[144087]<td />
+		Privacy Policy
+	[144088]<td />
+		privacy-policy-cookie-restriction-mode
+	[144089]<td />
+		1 column
+	[144090]<td />
+		All Store Views
+	[144091]<td />
+		Enabled
+	[144092]<td />
+		Apr 19, 2023 11:41:33 AM
+	[144093]<td />
+		Apr 19, 2023 12:15:40 PM
+	[144094]<td />
+		[144520]<button />
+			Select
+[144095]<tr />
+	[144522]<td />
+		[148654]<label />
+			[144523]<input type=checkbox checked=false id=idscheck5 value=5 />
+	[144096]<td />
+		[148663]<div />
+	[144097]<td />
+		About us
+	[144098]<td />
+		about-us
+	[144099]<td />
+		1 column
+	[144100]<td />
+		All Store Views
+	[144101]<td />
+		Enabled
+	[144102]<td />
+		Apr 19, 2023 12:15:40 PM
+	[144103]<td />
+		Apr 19, 2023 12:15:40 PM
+	[144104]<td />
+		[144532]<button />
+			Select
+[144105]<tr />
+	[144534]<td />
+		[148723]<label />
+			[144535]<input type=checkbox checked=false id=idscheck6 value=6 />
+	[144106]<td />
+		[148732]<div />
+	[144107]<td />
+		Customer Service
+	[144108]<td />
+		customer-service
+	[144109]<td />
+		1 column
+	[144110]<td />
+		All Store Views
+	[144111]<td />
+		Enabled
+	[144112]<td />
+		Apr 19, 2023 12:15:40 PM
+	[144113]<td />
+		Apr 19, 2023 12:15:40 PM
+	[144114]<td />
+		[144544]<button />
+			Select
+[144547]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[144552]<a id=footer_privacy />
+	Privacy Policy
+[144555]<a id=footer_account_activity />
+	Account Activity
+[144558]<a id=footer_bug_tracking />
+	Report an Issue

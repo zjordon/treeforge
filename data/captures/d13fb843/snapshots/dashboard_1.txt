@@ -1,0 +1,77 @@
+*[4113]<a />
+*[4122]<a />
+	Dashboard
+*[3999]<a />
+	Sales
+*[4000]<a />
+	Catalog
+*[4001]<a />
+	Customers
+*[4002]<a />
+	Marketing
+*[4003]<a />
+	Content
+*[4004]<a />
+	Reports
+*[4005]<a />
+	Stores
+*[4006]<a />
+	System
+*[4725]<a />
+	Find Partners & Extensions
+Bestsellers Report
+*[4787]<a title=My Account />
+	admin
+*[4825]<a title=Notifications />
+*[4830]<div />
+	*[3975]<form id=form-search />
+		*[4833]<div />
+			*[3976]<input type=text id=search-global name=query />
+*[4858]<span />
+	Scope:
+*[4877]<button id=store-change-button />
+	All Websites
+*[4010]<a title=What is this? />
+	*[4910]<span />
+		What is this?
+*[4011]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Sep 1, 2026, 9:11:38 AM. To refresh last day's
+*[4938]<a />
+	statistics
+, click
+*[4941]<a />
+	here
+Filter
+Period
+*[3977]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+From
+*[3978]<input title=From type=text id=sales_report_from name=from />
+To
+*[3979]<input title=To type=text id=sales_report_to name=to />
+Empty Rows
+*[3980]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[3981]<select id=id_iAfcvfFkNSvR9vFX3JdM9iAEEBaxYCfx_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+*[4012]<button title=Export id=id_80ZkExLozhDBbc59wYSgdJzEqnYNdgMR />
+	Export
+records found
+*[5099]<tr />
+	Interval
+	Product
+	Price
+	Order Quantity
+*[5121]<tr />
+	*[5123]<td />
+		We couldn't find any records.
+*[5141]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[5151]<a id=footer_privacy />
+	Privacy Policy
+*[5154]<a id=footer_account_activity />
+	Account Activity
+*[5157]<a id=footer_bug_tracking />
+	Report an Issue

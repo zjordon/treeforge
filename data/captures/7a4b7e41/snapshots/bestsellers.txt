@@ -1,0 +1,227 @@
+*[114772]<a />
+*[114781]<a />
+	Dashboard
+*[114646]<a />
+	Sales
+*[114647]<a />
+	Catalog
+*[114648]<a />
+	Customers
+*[114649]<a />
+	Marketing
+*[114650]<a />
+	Content
+*[114651]<a />
+	Reports
+*[114652]<a />
+	Stores
+*[114653]<a />
+	System
+*[115382]<a />
+	Find Partners & Extensions
+Bestsellers Report
+*[115444]<a title=My Account />
+	admin
+*[115482]<a title=Notifications />
+*[115487]<div />
+	*[114635]<form id=form-search />
+		*[115490]<div />
+			*[114636]<input type=text id=search-global name=query />
+*[115515]<span />
+	Scope:
+*[115534]<button id=store-change-button />
+	All Websites
+*[114657]<a title=What is this? />
+	*[115567]<span />
+		What is this?
+*[114658]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Sep 1, 2026, 9:11:38 AM. To refresh last day's
+*[115595]<a />
+	statistics
+, click
+*[115598]<a />
+	here
+Filter
+Period
+*[114637]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+From
+*[114638]<input title=From type=text id=sales_report_from name=from value=5/1/22 required=true />
+To
+*[114639]<input title=To type=text id=sales_report_to name=to value=5/31/23 required=true />
+Empty Rows
+*[114640]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[114641]<select id=id_O5OVP84eJo9qaeiPjqDbjaKJ8OHmZHvf_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+*[114659]<button title=Export id=id_uGklpP9xwsA30FR9t2wUMwfcqXpRHAJI />
+	Export
+94
+records found
+Interval
+Product
+Price
+Order Quantity
+*[115796]<tr title=# />
+	*[115798]<td />
+		May 2, 2022
+	*[115804]<td />
+		Frankie  Sweatshirt-L-Yellow
+	*[115807]<td />
+		$60.00
+	*[115810]<td />
+*[115814]<tr />
+	*[115816]<td />
+		Nona Fitness Tank-S-Blue
+	*[115819]<td />
+		$39.00
+	*[115822]<td />
+*[115826]<tr />
+	*[115828]<td />
+		Ajax Full-Zip Sweatshirt -XS-Blue
+	*[115831]<td />
+		$69.00
+	*[115834]<td />
+*[115838]<tr />
+	*[115840]<td />
+		Mona Pullover Hoodlie-XL-Purple
+	*[115843]<td />
+		$57.00
+	*[115846]<td />
+*[115850]<tr />
+	*[115852]<td />
+		Iris Workout Top-M-Red
+	*[115855]<td />
+		$29.00
+	*[115858]<td />
+*[115862]<tr title=# />
+	*[115864]<td />
+		May 12, 2022
+	*[115870]<td />
+		Argus All-Weather Tank-L-Gray
+	*[115873]<td />
+		$22.00
+	*[115876]<td />
+*[115880]<tr />
+	*[115882]<td />
+		Joust Duffle Bag
+	*[115885]<td />
+		$34.00
+	*[115888]<td />
+*[115892]<tr />
+	*[115894]<td />
+		Orion Two-Tone Fitted Jacket-S-Black
+	*[115897]<td />
+		$72.00
+	*[115900]<td />
+*[115904]<tr />
+	*[115906]<td />
+		Gobi HeatTec® Tee-XS-Orange
+	*[115909]<td />
+		$29.00
+	*[115912]<td />
+*[115916]<tr title=# />
+	*[115918]<td />
+		May 15, 2022
+	*[115924]<td />
+		Tristan Endurance Tank-S-Red
+	*[115927]<td />
+		$29.00
+	*[115930]<td />
+*[115934]<tr />
+	*[115936]<td />
+		Vulcan Weightlifting Tank-XS-Black
+	*[115939]<td />
+		$28.00
+	*[115942]<td />
+*[115946]<tr title=# />
+	*[115948]<td />
+		May 16, 2022
+	*[115954]<td />
+		Arcadio Gym Short-34-Red
+	*[115957]<td />
+		$20.00
+	*[115960]<td />
+*[115964]<tr />
+	*[115966]<td />
+		Stellar Solar Jacket-S-Red
+	*[115969]<td />
+		$75.00
+	*[115972]<td />
+*[115976]<tr />
+	*[115978]<td />
+		Maxima Drawstring Short-29-Gray
+	*[115981]<td />
+		$28.00
+	*[115984]<td />
+*[115988]<tr />
+	*[115990]<td />
+		Wayfarer Messenger Bag
+	*[115993]<td />
+		$45.00
+	*[115996]<td />
+*[116000]<tr title=# />
+	*[116002]<td />
+		May 20, 2022
+	*[116008]<td />
+		Prima Compete Bra Top-M-Yellow
+	*[116011]<td />
+		$24.00
+	*[116014]<td />
+*[116018]<tr />
+	*[116020]<td />
+		Lando Gym Jacket-XS-Green
+	*[116023]<td />
+		$99.00
+	*[116026]<td />
+*[116030]<tr title=# />
+	*[116032]<td />
+		May 29, 2022
+	*[116038]<td />
+		Karmen Yoga Pant-28-Black
+	*[116041]<td />
+		$31.20
+	*[116044]<td />
+*[116048]<tr />
+	*[116050]<td />
+		Thorpe Track Pant-34-Purple
+	*[116053]<td />
+		$54.40
+	*[116056]<td />
+*[116060]<tr />
+	*[116062]<td />
+		Mimi All-Purpose Short-28-Green
+	*[116065]<td />
+		$44.00
+	*[116068]<td />
+*[116072]<tr />
+	*[116074]<td />
+		Riona Full Zip Jacket-M-Brown
+	*[116077]<td />
+		$60.00
+	*[116080]<td />
+*[116084]<tr />
+	*[116086]<td />
+		Celeste Sports Bra-M-Red
+	*[116089]<td />
+		$39.00
+	*[116092]<td />
+*[116096]<tr title=# />
+	*[116098]<td />
+		Jun 1, 2022
+	*[116104]<td />
+		Cruise Dual Analog Watch
+	*[116107]<td />
+		$55.00
+	*[116110]<td />
+*[116114]<tr title=# />
+	*[116116]<td />
+	*[116122]<td />
+		Sprite Stasis Ball 65 cm
+	*[116125]<td />
+		$27.00
+	*[116128]<td />
+*[116132]<tr />
+	*[116134]<td />
+	*[116137]<td />
+	*[116140]<td />

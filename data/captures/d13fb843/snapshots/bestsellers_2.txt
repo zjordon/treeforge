@@ -1,0 +1,86 @@
+[4113]<a />
+[4121]<li id=menu-magento-backend-dashboard role=menu-item />
+	[4122]<a />
+		Dashboard
+[4127]<li id=menu-magento-sales-sales role=menu-item />
+	[3999]<a />
+		Sales
+[4170]<li id=menu-magento-catalog-catalog role=menu-item />
+	[4000]<a />
+		Catalog
+[4193]<li id=menu-magento-customer-customer role=menu-item />
+	[4001]<a />
+		Customers
+[4218]<li id=menu-magento-backend-marketing role=menu-item />
+	[4002]<a />
+		Marketing
+[4303]<li id=menu-magento-backend-content role=menu-item />
+	[4003]<a />
+		Content
+[4362]<li id=menu-magento-reports-report role=menu-item />
+	[4004]<a />
+		Reports
+[4523]<li id=menu-magento-backend-stores role=menu-item />
+	[4005]<a />
+		Stores
+[4619]<li id=menu-magento-backend-system role=menu-item />
+	[4006]<a />
+		System
+[4724]<li id=menu-magento-marketplace-partners role=menu-item />
+	[4725]<a />
+		Find Partners & Extensions
+Bestsellers Report
+[4787]<a title=My Account />
+	admin
+[4825]<a title=Notifications />
+[4830]<div />
+	[3975]<form id=form-search />
+		[4833]<div />
+			[3976]<input type=text id=search-global autocomplete=off />
+[4011]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Sep 1, 2026, 9:11:38 AM. To refresh last day's
+[4938]<a />
+	statistics
+, click
+[4941]<a />
+	here
+[3982]<form id=filter_form />
+	Filter
+	Period
+	*[3977]<select title=Period id=sales_report_period_type name=period_type expanded=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+	From
+	[3978]<input title=From type=text id=sales_report_from name=from placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[5301]<button />
+		[5304]<span />
+			undefined
+	To
+	[3979]<input title=To type=text id=sales_report_to name=to placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[8830]<button />
+		[8833]<span />
+			undefined
+	Empty Rows
+	*[3980]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[3981]<select id=id_iAfcvfFkNSvR9vFX3JdM9iAEEBaxYCfx_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+[4012]<button title=Export id=id_80ZkExLozhDBbc59wYSgdJzEqnYNdgMR />
+	Export
+records found
+Interval
+Product
+Price
+Order Quantity
+[5121]<tr />
+	[5123]<td />
+		We couldn't find any records.
+[5141]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[5151]<a id=footer_privacy />
+	Privacy Policy
+[5154]<a id=footer_account_activity />
+	Account Activity
+[5157]<a id=footer_bug_tracking />
+	Report an Issue

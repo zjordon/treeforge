@@ -1,0 +1,501 @@
+[102653]<a />
+[102661]<li id=menu-magento-backend-dashboard role=menu-item />
+	[102662]<a />
+		Dashboard
+[102667]<li id=menu-magento-sales-sales role=menu-item />
+	[102543]<a />
+		Sales
+[102710]<li id=menu-magento-catalog-catalog role=menu-item />
+	[102544]<a />
+		Catalog
+[102733]<li id=menu-magento-customer-customer role=menu-item />
+	[102545]<a />
+		Customers
+[102758]<li id=menu-magento-backend-marketing role=menu-item />
+	[102546]<a />
+		Marketing
+[102842]<li id=menu-magento-backend-content role=menu-item />
+	[102547]<a />
+		Content
+[102901]<li id=menu-magento-reports-report role=menu-item />
+	[102548]<a />
+		Reports
+	Reports
+	[102907]<a />
+	Marketing
+	[102919]<a />
+		Products in Cart
+	[102922]<li role=menu-item />
+		[102923]<a />
+			Search Terms
+	[102927]<a />
+		Abandoned Carts
+	[102931]<a />
+		Newsletter Problem Reports
+	Reviews
+	[102941]<a />
+		By Customers
+	[102945]<a />
+		By Products
+	Sales
+	[102957]<a />
+		Orders
+	[102961]<a />
+		Tax
+	[102965]<a />
+		Invoiced
+	[102969]<a />
+		Shipping
+	[102973]<a />
+		Refunds
+	[102977]<a />
+		Coupons
+	[102981]<a />
+		PayPal Settlement
+	[102985]<a />
+		Braintree Settlement
+	Customers
+	[102997]<a />
+		Order Total
+	[103001]<a />
+		Order Count
+	[103005]<a />
+		New
+	Products
+	[103015]<a />
+		Views
+	[103019]<a />
+		Bestsellers
+	[103023]<a />
+		Low Stock
+	[103027]<a />
+		Ordered
+	[103031]<a />
+		Downloads
+	Statistics
+	[103041]<a />
+		Refresh Statistics
+	Business Intelligence
+	[103053]<a />
+		Advanced Reporting
+	[103058]<a />
+		BI Essentials
+[103062]<li id=menu-magento-backend-stores role=menu-item />
+	[102549]<a />
+		Stores
+[103158]<li id=menu-magento-backend-system role=menu-item />
+	[102550]<a />
+		System
+[103263]<li id=menu-magento-marketplace-partners role=menu-item />
+	[103264]<a />
+		Find Partners & Extensions
+Orders Report
+[103326]<a title=My Account />
+	admin
+[103364]<a title=Notifications />
+[103369]<div />
+	[102531]<form id=form-search />
+		[103372]<div />
+			[102532]<input type=text id=search-global autocomplete=off />
+Scope:
+[103417]<button id=store-change-button />
+	All Websites
+[102554]<a title=What is this? />
+	What is this?
+[102555]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+statistics
+, click
+here
+[102542]<form id=filter_form />
+	Filter
+	Date Used
+	The Order Updated report is created in real time and does not require a refresh.
+	Period
+	From
+	[105305]<button />
+		undefined
+	To
+	[105311]<button />
+		undefined
+	Order Status
+	Applies to Any of the Specified Order Statuses except canceled orders
+	Empty Rows
+	*[102539]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+	Show Actual Values
+	*[102540]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[102541]<select id=id_BhOQDTve2byUonFiLrsHlb6YwE2R6FY7_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+[102556]<button title=Export id=id_3zpeSEbQbaJuCQDehvqCK7svUMM9la2p />
+	Export
+33
+records found
+[103748]<tr />
+	Interval
+	Orders
+	Sales Items
+	Sales Total
+	Invoiced
+	Refunded
+	Sales Tax
+	Sales Shipping
+	Sales Discount
+	Canceled
+[103830]<tr title=# />
+	[103832]<td />
+		[103834]<span />
+			Jan 8, 2022
+	[103838]<td />
+	[103841]<td />
+	[103844]<td />
+		$219.00
+	[103847]<td />
+		$0.00
+	[103850]<td />
+		$0.00
+	[103853]<td />
+		$0.00
+	[103856]<td />
+		$20.00
+	[103859]<td />
+		$0.00
+	[103862]<td />
+		$0.00
+[103866]<tr title=# />
+	[103868]<td />
+		[103870]<span />
+			Jan 9, 2022
+	[103874]<td />
+	[103877]<td />
+	[103880]<td />
+		$77.40
+	[103883]<td />
+		$0.00
+	[103886]<td />
+		$0.00
+	[103889]<td />
+		$0.00
+	[103892]<td />
+		$10.00
+	[103895]<td />
+		$0.00
+	[103898]<td />
+		$0.00
+[103902]<tr title=# />
+	[103904]<td />
+		[103906]<span />
+			Jan 12, 2022
+	[103910]<td />
+	[103913]<td />
+	[103916]<td />
+		$136.99
+	[103919]<td />
+		$0.00
+	[103922]<td />
+		$0.00
+	[103925]<td />
+		$0.00
+	[103928]<td />
+		$10.00
+	[103931]<td />
+		$0.00
+	[103934]<td />
+		$0.00
+[103938]<tr title=# />
+	[103940]<td />
+		[103942]<span />
+			Jan 14, 2022
+	[103946]<td />
+	[103949]<td />
+	[103952]<td />
+		$60.00
+	[103955]<td />
+		$0.00
+	[103958]<td />
+		$0.00
+	[103961]<td />
+		$0.00
+	[103964]<td />
+		$5.00
+	[103967]<td />
+		$0.00
+	[103970]<td />
+		$0.00
+[103974]<tr title=# />
+	[103976]<td />
+		[103978]<span />
+			Jan 15, 2022
+	[103982]<td />
+	[103985]<td />
+	[103988]<td />
+		$156.00
+	[103991]<td />
+		$0.00
+	[103994]<td />
+		$0.00
+	[103997]<td />
+		$0.00
+	[104000]<td />
+		$20.00
+	[104003]<td />
+		$0.00
+	[104006]<td />
+		$0.00
+[104010]<tr title=# />
+	[104012]<td />
+		[104014]<span />
+			Jan 17, 2022
+	[104018]<td />
+	[104021]<td />
+	[104024]<td />
+		$171.90
+	[104027]<td />
+		$0.00
+	[104030]<td />
+		$0.00
+	[104033]<td />
+		$0.00
+	[104036]<td />
+		$20.00
+	[104039]<td />
+		$0.00
+	[104042]<td />
+		$0.00
+[104046]<tr title=# />
+	[104048]<td />
+		[104050]<span />
+			Jan 20, 2022
+	[104054]<td />
+	[104057]<td />
+	[104060]<td />
+		$301.60
+	[104063]<td />
+		$0.00
+	[104066]<td />
+		$0.00
+	[104069]<td />
+		$0.00
+	[104072]<td />
+		$40.00
+	[104075]<td />
+		$0.00
+	[104078]<td />
+		$0.00
+[104082]<tr title=# />
+	[104084]<td />
+		[104086]<span />
+			Jan 28, 2022
+	[104090]<td />
+	[104093]<td />
+	[104096]<td />
+		$292.40
+	[104099]<td />
+		$0.00
+	[104102]<td />
+		$0.00
+	[104105]<td />
+		$0.00
+	[104108]<td />
+		$25.00
+	[104111]<td />
+		$43.85
+	[104114]<td />
+		$0.00
+[104118]<tr title=# />
+	[104120]<td />
+		[104122]<span />
+			Jan 31, 2022
+	[104126]<td />
+	[104129]<td />
+	[104132]<td />
+		$176.60
+	[104135]<td />
+		$0.00
+	[104138]<td />
+		$0.00
+	[104141]<td />
+		$0.00
+	[104144]<td />
+		$20.00
+	[104147]<td />
+		$0.00
+	[104150]<td />
+		$0.00
+[104154]<tr title=# />
+	[104156]<td />
+		[104158]<span />
+			Feb 3, 2022
+	[104162]<td />
+	[104165]<td />
+	[104168]<td />
+		$333.24
+	[104171]<td />
+		$0.00
+	[104174]<td />
+		$0.00
+	[104177]<td />
+		$0.00
+	[104180]<td />
+		$35.00
+	[104183]<td />
+		$33.56
+	[104186]<td />
+		$0.00
+[104190]<tr title=# />
+	[104192]<td />
+		[104194]<span />
+			Feb 4, 2022
+	[104198]<td />
+	[104201]<td />
+	[104204]<td />
+		$120.20
+	[104207]<td />
+		$0.00
+	[104210]<td />
+		$0.00
+	[104213]<td />
+		$0.00
+	[104216]<td />
+		$15.00
+	[104219]<td />
+		$0.00
+	[104222]<td />
+		$0.00
+[104226]<tr title=# />
+	[104228]<td />
+		[104230]<span />
+			Feb 6, 2022
+	[104234]<td />
+	[104237]<td />
+	[104240]<td />
+		$298.60
+	[104243]<td />
+		$0.00
+	[104246]<td />
+		$0.00
+	[104249]<td />
+		$0.00
+	[104252]<td />
+		$40.00
+	[104255]<td />
+		$0.00
+	[104258]<td />
+		$0.00
+[104262]<tr title=# />
+	[104264]<td />
+		[104266]<span />
+			Feb 7, 2022
+	[104270]<td />
+	[104273]<td />
+	[104276]<td />
+		$132.00
+	[104279]<td />
+		$0.00
+	[104282]<td />
+		$0.00
+	[104285]<td />
+		$0.00
+	[104288]<td />
+		$10.00
+	[104291]<td />
+		$0.00
+	[104294]<td />
+		$0.00
+[104298]<tr title=# />
+	[104300]<td />
+		Feb 8, 2022
+	[104306]<td />
+	[104309]<td />
+	[104312]<td />
+		$389.44
+	[104315]<td />
+		$0.00
+	[104318]<td />
+		$0.00
+	[104321]<td />
+		$0.00
+	[104324]<td />
+		$40.00
+	[104327]<td />
+		$30.56
+	[104330]<td />
+		$0.00
+[104334]<tr title=# />
+	[104336]<td />
+		Feb 10, 2022
+	[104342]<td />
+	[104345]<td />
+	[104348]<td />
+		$34.00
+	[104351]<td />
+		$0.00
+	[104354]<td />
+		$0.00
+	[104357]<td />
+		$0.00
+	[104360]<td />
+		$5.00
+	[104363]<td />
+		$0.00
+	[104366]<td />
+		$0.00
+[104370]<tr title=# />
+	[104372]<td />
+		Feb 14, 2022
+	[104378]<td />
+	[104381]<td />
+	[104384]<td />
+		$240.00
+	[104387]<td />
+		$0.00
+	[104390]<td />
+		$0.00
+	[104393]<td />
+		$0.00
+	[104396]<td />
+		$20.00
+	[104399]<td />
+		$0.00
+	[104402]<td />
+		$0.00
+[104406]<tr title=# />
+	[104408]<td />
+		Feb 19, 2022
+	[104414]<td />
+	[104417]<td />
+	[104420]<td />
+		$183.20
+	[104423]<td />
+		$0.00
+	[104426]<td />
+		$0.00
+	[104429]<td />
+		$0.00
+	[104432]<td />
+		$25.00
+	[104435]<td />
+		$0.00
+	[104438]<td />
+		$0.00
+[104442]<tr title=# />
+	[104444]<td />
+		Feb 20, 2022
+	[104450]<td />
+	[104453]<td />
+	[104456]<td />
+		$28.00
+	[104459]<td />
+		$0.00
+	[104462]<td />
+		$0.00
+	[104465]<td />
+		$0.00
+	[104468]<td />
+		$5.00
+	[104471]<td />
+		$0.00
+	[104474]<td />
+		$0.00
+[105279]<div />

@@ -1,0 +1,688 @@
+[102653]<a />
+[102661]<li id=menu-magento-backend-dashboard role=menu-item />
+	[102662]<a />
+		Dashboard
+[102667]<li id=menu-magento-sales-sales role=menu-item />
+	[102543]<a />
+		Sales
+[102710]<li id=menu-magento-catalog-catalog role=menu-item />
+	[102544]<a />
+		Catalog
+[102733]<li id=menu-magento-customer-customer role=menu-item />
+	[102545]<a />
+		Customers
+[102758]<li id=menu-magento-backend-marketing role=menu-item />
+	[102546]<a />
+		Marketing
+[102842]<li id=menu-magento-backend-content role=menu-item />
+	[102547]<a />
+		Content
+[102901]<li id=menu-magento-reports-report role=menu-item />
+	[102548]<a />
+		Reports
+[103062]<li id=menu-magento-backend-stores role=menu-item />
+	[102549]<a />
+		Stores
+[103158]<li id=menu-magento-backend-system role=menu-item />
+	[102550]<a />
+		System
+[103263]<li id=menu-magento-marketplace-partners role=menu-item />
+	[103264]<a />
+		Find Partners & Extensions
+Orders Report
+[103326]<a title=My Account />
+	admin
+[103364]<a title=Notifications />
+[103369]<div />
+	[102531]<form id=form-search />
+		[103372]<div />
+			[102532]<input type=text id=search-global autocomplete=off />
+[102555]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+*[103478]<a />
+	statistics
+, click
+*[103481]<a />
+	here
+[102542]<form id=filter_form />
+	Filter
+	Date Used
+	*[102533]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />
+	The Order Updated report is created in real time and does not require a refresh.
+	Period
+	From
+	[102535]<input title=From type=text id=sales_report_from name=from value=5/1/21 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[105305]<button />
+		[105308]<span />
+			undefined
+	To
+	[102536]<input title=To type=text id=sales_report_to name=to value=3/31/22 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[105311]<button />
+		[105314]<span />
+			undefined
+	Order Status
+	*[102537]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />
+	Applies to Any of the Specified Order Statuses except canceled orders
+	Empty Rows
+	*[102539]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+	Show Actual Values
+	*[102540]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[102541]<select id=id_BhOQDTve2byUonFiLrsHlb6YwE2R6FY7_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+[102556]<button title=Export id=id_3zpeSEbQbaJuCQDehvqCK7svUMM9la2p />
+	Export
+33
+records found
+[103748]<tr />
+	Interval
+	Orders
+	Sales Items
+	Sales Total
+	Invoiced
+	Refunded
+	Sales Tax
+	Sales Shipping
+	Sales Discount
+	Canceled
+[103830]<tr title=# />
+	[103832]<td />
+		Jan 8, 2022
+	[103838]<td />
+	[103841]<td />
+	[103844]<td />
+		$219.00
+	[103847]<td />
+		$0.00
+	[103850]<td />
+		$0.00
+	[103853]<td />
+		$0.00
+	[103856]<td />
+		$20.00
+	[103859]<td />
+		$0.00
+	[103862]<td />
+		$0.00
+[103866]<tr title=# />
+	[103868]<td />
+		Jan 9, 2022
+	[103874]<td />
+	[103877]<td />
+	[103880]<td />
+		$77.40
+	[103883]<td />
+		$0.00
+	[103886]<td />
+		$0.00
+	[103889]<td />
+		$0.00
+	[103892]<td />
+		$10.00
+	[103895]<td />
+		$0.00
+	[103898]<td />
+		$0.00
+[103902]<tr title=# />
+	[103904]<td />
+		Jan 12, 2022
+	[103910]<td />
+	[103913]<td />
+	[103916]<td />
+		$136.99
+	[103919]<td />
+		$0.00
+	[103922]<td />
+		$0.00
+	[103925]<td />
+		$0.00
+	[103928]<td />
+		$10.00
+	[103931]<td />
+		$0.00
+	[103934]<td />
+		$0.00
+[103938]<tr title=# />
+	[103940]<td />
+		Jan 14, 2022
+	[103946]<td />
+	[103949]<td />
+	[103952]<td />
+		$60.00
+	[103955]<td />
+		$0.00
+	[103958]<td />
+		$0.00
+	[103961]<td />
+		$0.00
+	[103964]<td />
+		$5.00
+	[103967]<td />
+		$0.00
+	[103970]<td />
+		$0.00
+[103974]<tr title=# />
+	[103976]<td />
+		Jan 15, 2022
+	[103982]<td />
+	[103985]<td />
+	[103988]<td />
+		$156.00
+	[103991]<td />
+		$0.00
+	[103994]<td />
+		$0.00
+	[103997]<td />
+		$0.00
+	[104000]<td />
+		$20.00
+	[104003]<td />
+		$0.00
+	[104006]<td />
+		$0.00
+[104010]<tr title=# />
+	[104012]<td />
+		Jan 17, 2022
+	[104018]<td />
+	[104021]<td />
+	[104024]<td />
+		$171.90
+	[104027]<td />
+		$0.00
+	[104030]<td />
+		$0.00
+	[104033]<td />
+		$0.00
+	[104036]<td />
+		$20.00
+	[104039]<td />
+		$0.00
+	[104042]<td />
+		$0.00
+[104046]<tr title=# />
+	[104048]<td />
+		Jan 20, 2022
+	[104054]<td />
+	[104057]<td />
+	[104060]<td />
+		$301.60
+	[104063]<td />
+		$0.00
+	[104066]<td />
+		$0.00
+	[104069]<td />
+		$0.00
+	[104072]<td />
+		$40.00
+	[104075]<td />
+		$0.00
+	[104078]<td />
+		$0.00
+[104082]<tr title=# />
+	[104084]<td />
+		Jan 28, 2022
+	[104090]<td />
+	[104093]<td />
+	[104096]<td />
+		$292.40
+	[104099]<td />
+		$0.00
+	[104102]<td />
+		$0.00
+	[104105]<td />
+		$0.00
+	[104108]<td />
+		$25.00
+	[104111]<td />
+		$43.85
+	[104114]<td />
+		$0.00
+[104118]<tr title=# />
+	[104120]<td />
+		Jan 31, 2022
+	[104126]<td />
+	[104129]<td />
+	[104132]<td />
+		$176.60
+	[104135]<td />
+		$0.00
+	[104138]<td />
+		$0.00
+	[104141]<td />
+		$0.00
+	[104144]<td />
+		$20.00
+	[104147]<td />
+		$0.00
+	[104150]<td />
+		$0.00
+[104154]<tr title=# />
+	[104156]<td />
+		Feb 3, 2022
+	[104162]<td />
+	[104165]<td />
+	[104168]<td />
+		$333.24
+	[104171]<td />
+		$0.00
+	[104174]<td />
+		$0.00
+	[104177]<td />
+		$0.00
+	[104180]<td />
+		$35.00
+	[104183]<td />
+		$33.56
+	[104186]<td />
+		$0.00
+[104190]<tr title=# />
+	[104192]<td />
+		Feb 4, 2022
+	[104198]<td />
+	[104201]<td />
+	[104204]<td />
+		$120.20
+	[104207]<td />
+		$0.00
+	[104210]<td />
+		$0.00
+	[104213]<td />
+		$0.00
+	[104216]<td />
+		$15.00
+	[104219]<td />
+		$0.00
+	[104222]<td />
+		$0.00
+[104226]<tr title=# />
+	[104228]<td />
+		Feb 6, 2022
+	[104234]<td />
+	[104237]<td />
+	[104240]<td />
+		$298.60
+	[104243]<td />
+		$0.00
+	[104246]<td />
+		$0.00
+	[104249]<td />
+		$0.00
+	[104252]<td />
+		$40.00
+	[104255]<td />
+		$0.00
+	[104258]<td />
+		$0.00
+[104262]<tr title=# />
+	[104264]<td />
+		Feb 7, 2022
+	[104270]<td />
+	[104273]<td />
+	[104276]<td />
+		$132.00
+	[104279]<td />
+		$0.00
+	[104282]<td />
+		$0.00
+	[104285]<td />
+		$0.00
+	[104288]<td />
+		$10.00
+	[104291]<td />
+		$0.00
+	[104294]<td />
+		$0.00
+[104298]<tr title=# />
+	[104300]<td />
+		Feb 8, 2022
+	[104306]<td />
+	[104309]<td />
+	[104312]<td />
+		$389.44
+	[104315]<td />
+		$0.00
+	[104318]<td />
+		$0.00
+	[104321]<td />
+		$0.00
+	[104324]<td />
+		$40.00
+	[104327]<td />
+		$30.56
+	[104330]<td />
+		$0.00
+[104334]<tr title=# />
+	[104336]<td />
+		Feb 10, 2022
+	[104342]<td />
+	[104345]<td />
+	[104348]<td />
+		$34.00
+	[104351]<td />
+		$0.00
+	[104354]<td />
+		$0.00
+	[104357]<td />
+		$0.00
+	[104360]<td />
+		$5.00
+	[104363]<td />
+		$0.00
+	[104366]<td />
+		$0.00
+[104370]<tr title=# />
+	[104372]<td />
+		Feb 14, 2022
+	[104378]<td />
+	[104381]<td />
+	[104384]<td />
+		$240.00
+	[104387]<td />
+		$0.00
+	[104390]<td />
+		$0.00
+	[104393]<td />
+		$0.00
+	[104396]<td />
+		$20.00
+	[104399]<td />
+		$0.00
+	[104402]<td />
+		$0.00
+[104406]<tr title=# />
+	[104408]<td />
+		Feb 19, 2022
+	[104414]<td />
+	[104417]<td />
+	[104420]<td />
+		$183.20
+	[104423]<td />
+		$0.00
+	[104426]<td />
+		$0.00
+	[104429]<td />
+		$0.00
+	[104432]<td />
+		$25.00
+	[104435]<td />
+		$0.00
+	[104438]<td />
+		$0.00
+[104442]<tr title=# />
+	[104444]<td />
+		Feb 20, 2022
+	[104450]<td />
+	[104453]<td />
+	[104456]<td />
+		$28.00
+	[104459]<td />
+		$0.00
+	[104462]<td />
+		$0.00
+	[104465]<td />
+		$0.00
+	[104468]<td />
+		$5.00
+	[104471]<td />
+		$0.00
+	[104474]<td />
+		$0.00
+[104478]<tr title=# />
+	[104480]<td />
+		Feb 23, 2022
+	[104486]<td />
+	[104489]<td />
+	[104492]<td />
+		$132.00
+	[104495]<td />
+		$0.00
+	[104498]<td />
+		$0.00
+	[104501]<td />
+		$0.00
+	[104504]<td />
+		$15.00
+	[104507]<td />
+		$0.00
+	[104510]<td />
+		$0.00
+[104514]<tr title=# />
+	[104516]<td />
+		Feb 25, 2022
+	[104522]<td />
+	[104525]<td />
+	[104528]<td />
+		$127.00
+	[104531]<td />
+		$0.00
+	[104534]<td />
+		$0.00
+	[104537]<td />
+		$0.00
+	[104540]<td />
+		$10.00
+	[104543]<td />
+		$0.00
+	[104546]<td />
+		$0.00
+[104550]<tr title=# />
+	[104552]<td />
+		Feb 27, 2022
+	[104558]<td />
+	[104561]<td />
+	[104564]<td />
+		$108.00
+	[104567]<td />
+		$0.00
+	[104570]<td />
+		$0.00
+	[104573]<td />
+		$0.00
+	[104576]<td />
+		$15.00
+	[104579]<td />
+		$0.00
+	[104582]<td />
+		$0.00
+[104586]<tr title=# />
+	[104588]<td />
+		Mar 2, 2022
+	[104594]<td />
+	[104597]<td />
+	[104600]<td />
+		$215.00
+	[104603]<td />
+		$0.00
+	[104606]<td />
+		$0.00
+	[104609]<td />
+		$0.00
+	[104612]<td />
+		$25.00
+	[104615]<td />
+		$0.00
+	[104618]<td />
+		$0.00
+[104622]<tr title=# />
+	[104624]<td />
+		Mar 3, 2022
+	[104630]<td />
+	[104633]<td />
+	[104636]<td />
+		$116.00
+	[104639]<td />
+		$0.00
+	[104642]<td />
+		$0.00
+	[104645]<td />
+		$0.00
+	[104648]<td />
+		$10.00
+	[104651]<td />
+		$0.00
+	[104654]<td />
+		$0.00
+[104658]<tr title=# />
+	[104660]<td />
+		Mar 8, 2022
+	[104666]<td />
+	[104669]<td />
+	[104672]<td />
+		$108.00
+	[104675]<td />
+		$0.00
+	[104678]<td />
+		$0.00
+	[104681]<td />
+		$0.00
+	[104684]<td />
+		$10.00
+	[104687]<td />
+		$0.00
+	[104690]<td />
+		$0.00
+[104694]<tr title=# />
+	[104696]<td />
+		Mar 9, 2022
+	[104702]<td />
+	[104705]<td />
+	[104708]<td />
+		$143.80
+	[104711]<td />
+		$0.00
+	[104714]<td />
+		$0.00
+	[104717]<td />
+		$0.00
+	[104720]<td />
+		$15.00
+	[104723]<td />
+		$0.00
+	[104726]<td />
+		$0.00
+[104730]<tr title=# />
+	[104732]<td />
+		Mar 12, 2022
+	[104738]<td />
+	[104741]<td />
+	[104744]<td />
+		$162.00
+	[104747]<td />
+		$0.00
+	[104750]<td />
+		$0.00
+	[104753]<td />
+		$0.00
+	[104756]<td />
+		$25.00
+	[104759]<td />
+		$0.00
+	[104762]<td />
+		$0.00
+*[104766]<tr title=# />
+	*[104768]<td />
+		Mar 13, 2022
+	*[104774]<td />
+	*[104777]<td />
+	*[104780]<td />
+		$192.76
+	*[104783]<td />
+		$0.00
+	*[104786]<td />
+		$0.00
+	*[104789]<td />
+		$0.00
+	*[104792]<td />
+		$25.00
+	*[104795]<td />
+		$41.94
+	*[104798]<td />
+		$0.00
+*[104802]<tr title=# />
+	*[104804]<td />
+		Mar 15, 2022
+	*[104810]<td />
+	*[104813]<td />
+	*[104816]<td />
+		$156.00
+	*[104819]<td />
+		$0.00
+	*[104822]<td />
+		$0.00
+	*[104825]<td />
+		$0.00
+	*[104828]<td />
+		$15.00
+	*[104831]<td />
+		$0.00
+	*[104834]<td />
+		$0.00
+*[104838]<tr title=# />
+	*[104840]<td />
+		Mar 17, 2022
+	*[104846]<td />
+	*[104849]<td />
+	*[104852]<td />
+		$310.40
+	*[104855]<td />
+		$0.00
+	*[104858]<td />
+		$0.00
+	*[104861]<td />
+		$0.00
+	*[104864]<td />
+		$40.00
+	*[104867]<td />
+		$0.00
+	*[104870]<td />
+		$0.00
+*[104874]<tr title=# />
+	*[104876]<td />
+		Mar 22, 2022
+	*[104882]<td />
+	*[104885]<td />
+	*[104888]<td />
+		$229.80
+	*[104891]<td />
+		$0.00
+	*[104894]<td />
+		$0.00
+	*[104897]<td />
+		$0.00
+	*[104900]<td />
+		$25.00
+	*[104903]<td />
+		$26.20
+	*[104906]<td />
+		$0.00
+*[104910]<tr title=# />
+	*[104912]<td />
+		Mar 28, 2022
+	*[104918]<td />
+	*[104921]<td />
+	*[104924]<td />
+		$56.00
+	*[104927]<td />
+		$0.00
+	*[104930]<td />
+		$0.00
+	*[104933]<td />
+		$0.00
+	*[104936]<td />
+		$10.00
+	*[104939]<td />
+		$0.00
+	*[104942]<td />
+		$0.00
+*[104946]<tr title=# />
+	*[104948]<td />
+	*[104954]<td />
+	*[104957]<td />
+	*[104960]<td />
+	*[104963]<td />
+	*[104966]<td />
+	*[104969]<td />
+	*[104972]<td />
+	*[104975]<td />
+	*[104978]<td />

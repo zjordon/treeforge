@@ -1,0 +1,91 @@
+*[93341]<a />
+*[93350]<a />
+	Dashboard
+*[93223]<a />
+	Sales
+*[93224]<a />
+	Catalog
+*[93225]<a />
+	Customers
+*[93226]<a />
+	Marketing
+*[93227]<a />
+	Content
+*[93228]<a />
+	Reports
+*[93229]<a />
+	Stores
+*[93230]<a />
+	System
+*[93953]<a />
+	Find Partners & Extensions
+Orders Report
+*[94015]<a title=My Account />
+	admin
+*[94053]<a title=Notifications />
+*[94058]<div />
+	*[93194]<form id=form-search />
+		*[94061]<div />
+			*[93195]<input type=text id=search-global name=query />
+*[94086]<span />
+	Scope:
+*[94105]<button id=store-change-button />
+	All Websites
+*[93234]<a title=What is this? />
+	*[94138]<span />
+		What is this?
+*[93235]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+*[94166]<a />
+	statistics
+, click
+*[94169]<a />
+	here
+Filter
+Date Used
+*[93196]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />
+The Order Updated report is created in real time and does not require a refresh.
+Period
+*[93197]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+From
+*[93198]<input title=From type=text id=sales_report_from name=from />
+To
+*[93199]<input title=To type=text id=sales_report_to name=to />
+Order Status
+*[93200]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />
+Applies to Any of the Specified Order Statuses except canceled orders
+Empty Rows
+*[93202]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Show Actual Values
+*[93203]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[93204]<select id=id_fIPx6IhmhSqJXPsMs4xeXihefqLI8UUO_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+*[93236]<button title=Export id=id_tj1uA0SFVbjQTaJdhNEMibL7cv0VUL4J />
+	Export
+records found
+*[94433]<tr />
+	Interval
+	Orders
+	Sales Items
+	Sales Total
+	Invoiced
+	Refunded
+	Sales Tax
+	Sales Shipping
+	Sales Discount
+	Canceled
+*[94479]<tr />
+	*[94481]<td />
+		We couldn't find any records.
+*[94499]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[94509]<a id=footer_privacy />
+	Privacy Policy
+*[94512]<a id=footer_account_activity />
+	Account Activity
+*[94515]<a id=footer_bug_tracking />
+	Report an Issue

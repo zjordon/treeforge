@@ -1,0 +1,161 @@
+{
+  "host": "localhost",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1788305521728,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Scope: function eventListenergdpbvsLFXX () { switchScope(thi",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "Scope: function eventListenergdpbvsLFXX () { switchScope(this);; } var listenedElementgdpbvsLFXXArray = document.querySelectorAll(\"#store_switcher\"); if(listenedElementgdpbvsLFXXArray.length !== 'undefined'){ listenedElementgdpbvsLFXXArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenergdpbvsLFXX.apply(targetElement); }; } }); } function eventListener9EDTyTn8V1 () { switchScope(this);; } var listenedElement9EDTyTn8V1Array = document.querySelectorAll(\"#store_group_switcher\"); if(listenedElement9EDTyTn8V1Array.length !== 'undefined'){ listenedElement9EDTyTn8V1Array.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListener9EDTyTn8V1.apply(targetElement); }; } }); } function eventListenerLWJHWfmuHT () { switchScope(this);; } var listenedElementLWJHWfmuHTArray = document.querySelectorAll(\"#website_switcher\"); if(listenedElementLWJHWfmuHTArray.length !== 'undefined'){ listenedElementLWJHWfmuHTArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerLWJHWfmuHT.apply(targetElement); }; } }); } All Store Views All Store Views Main Website Main Website Store Default Store View What is this? Reload Data"
+      }
+    },
+    {
+      "timestamp": 1788305523319,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Reports",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "Reports"
+      }
+    },
+    {
+      "timestamp": 1788305524911,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard_1",
+      "target": "Refunds",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "Refunds"
+      }
+    },
+    {
+      "timestamp": 1788305526511,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/",
+      "stage": "refunded",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788305527621,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/",
+      "stage": "refunded_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_from",
+        "name": "from",
+        "type": "text",
+        "aria-label": "From"
+      }
+    },
+    {
+      "timestamp": 1788305528974,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/",
+      "stage": "refunded_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_from",
+        "name": "from",
+        "type": "text",
+        "aria-label": "From"
+      },
+      "value": "1/1/23"
+    },
+    {
+      "timestamp": 1788305528981,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/",
+      "stage": "refunded_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      }
+    },
+    {
+      "timestamp": 1788305530646,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/",
+      "stage": "refunded_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "3/31/22"
+    },
+    {
+      "timestamp": 1788305532124,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/",
+      "stage": "refunded_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "3/31/23"
+    },
+    {
+      "timestamp": 1788305532428,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/",
+      "stage": "refunded_2",
+      "target": "Filter Date Used Order Created Last Credit Memo Created Date",
+      "element_attrs": {
+        "tag": "form",
+        "id": "filter_form",
+        "data-tw-jsclick": "1",
+        "visible_text": "Filter Date Used Order Created Last Credit Memo Created Date Period Day Month Year From undefined To undefined Order Status Any Specified Applies to Any of the Specified Order Statuses except canceled orders Canceled Closed Complete Suspected Fraud On Hold Payment Review PayPal Canceled Reversal PayPal Reversed Processing Empty Rows Yes No"
+      }
+    },
+    {
+      "timestamp": 1788305533539,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/",
+      "stage": "refunded",
+      "target": "Show Report",
+      "element_attrs": {
+        "tag": "button",
+        "id": "filter_form_submit",
+        "type": "button",
+        "aria-label": "Show Report",
+        "visible_text": "Show Report"
+      }
+    },
+    {
+      "timestamp": 1788305535079,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/refunded/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1kYXkmZnJvbT0xJTJGMSUyRjIzJnRvPTMlMkYzMSUyRjIzJnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MA==/",
+      "stage": "cmvwb3j0x3r5cgu9y3jlyxrlzf9hdf9vcmrlcizwzxjpb2rfdhlwzt1kyxkmznjvbt0xjtjgmsuyrjizjnrvptmlmkyzmsuyrjizjnnob3dfb3jkzxjfc3rhdhvzzxm9mczzag93x2vtchr5x3jvd3m9ma==",
+      "value": "7"
+    }
+  ],
+  "page_context": {
+    "dashboard": "[51523]<a />\n[51527]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[51528]<a />\n\t\tDashboard\n[51530]<li id=menu-magento-sales-sales role=menu-item />\n\t[51531]<a />\n\t\tSales\n[51551]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[51552]<a />\n\t\tCatalog\n[51562]<li id=menu-magento-customer-customer role=menu-item />\n\t[51563]<a />\n\t\tCustomers\n[51575]<li id=menu-magento-backend-marketing role=menu-item />\n\t[51576]<a />\n\t\tMarketing\n[51615]<li id=menu-magento-backend-content role=menu-item />\n\t[51616]<a />\n\t\tContent\n[51642]<li id=menu-magento-reports-report role=menu-item />\n\t[51643]<a />\n\t\tReports\n[51719]<li id=menu-magento-backend-stores role=menu-item />\n\t[51720]<a />\n\t\tStores\n[51765]<li id=menu-magento-backend-system role=menu-item />\n\t[51766]<a />\n\t\tSystem\n[51814]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[51815]<a />\n\t\tFind Partners & Extensions\nDashboard\n[51821]<a title=My Account />\n\tadmin\n[51823]<a title=Notifications />\n[52088]<div />\n\t[51514]<form id=form-search />\n\t\t[52776]<div />\n\t\t\t[51515]<input type=text id=search-global autocomplete=off />\n[52800]<span />\n\tScope:\n[51832]<button id=store-change-button />\n\tAll Store Views\n[51835]<a title=What is this? />\n\t[51836]<span />\n\t\tWhat is this?\n[51838]<button title=Reload Data type=submit />\n\tReload Data\nAdvanced Reporting\nGain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\n[51845]<a title=Go to Advanced Reporting />\n\tGo to Advanced Reporting\nChart is disabled. To enable the chart, click\n[51848]<a />\n\there\nRevenue\n$0.00\nTax\n$0.00\nShipping\n$0.00\nQuantity\n[52932]<strong />\n[51869]<li role=tab selected=true expanded=true />\n\t[51870]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />\n\t\t[52948]<span title=The information in this tab has been changed. />\n\t\t[52950]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[52952]<span title=Loading... />\n\t\tBestsellers\n[51872]<li role=tab selected=false expanded=false />\n\t[51873]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />\n\t\t[52964]<span title=The information in this tab has been changed. />\n\t\t[52966]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[52968]<span title=Loading... />\n\t\tMost Viewed Products\n[51875]<li role=tab selected=false expanded=false />\n\t[51876]<a title=New Customers id=grid_tab_new_customers role=presentation />\n\t\t[52982]<span title=The information in this tab has been changed. />\n\t\t[52984]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[52986]<span title=Loading... />\n\t\tNew Customers\n[51878]<li role=tab selected=false expanded=false />\n\t[51879]<a title=Customers id=grid_tab_customers role=presentation />\n\t\t[53000]<span title=The information in this tab has been changed. />\n\t\t[53002]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[53004]<span title=Loading... />\n\t\tCustomers\n[51884]<tr />\n\tProduct\n\tPrice\n\tQuantity\n[51891]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />\n\t[51892]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[51894]<td />\n\t\t$27.00\n\t[51896]<td />\n[51898]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />\n\t[51899]<td />\n\t\tQuest Lumaflex™ Band\n\t[51901]<td />\n\t\t$19.00\n\t[51903]<td />\n[51905]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />\n\t[51906]<td />\n\t\tSprite Yoga Strap 6 foot\n\t[51908]<td />\n\t\t$14.00\n\t[51910]<td />\n[51912]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />\n\t[51913]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[51915]<td />\n\t\t$23.00\n\t[51917]<td />\n[51919]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />\n\t[51920]<td />\n\t\tOvernight Duffle\n\t[51922]<td />\n\t\t$45.00\n\t[51924]<td />\nLifetime Sales\n$0.00\nAverage Order\n$0.00\nLast Orders\n[51932]<tr />\n\tCustomer\n\tItems\n\tTotal\n[51939]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />\n\t[51940]<td />\n\t\tSarah Miller\n\t[51942]<td />\n\t[51944]<td />\n\t\t$194.40\n[51946]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />\n\t[51947]<td />\n\t\tGrace Nguyen\n\t[51949]<td />\n\t[51951]<td />\n\t\t$190.00\n[51953]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />\n\t[51954]<td />\n\t\tMatt Baker\n\t[51956]<td />\n\t[51958]<td />\n\t\t$151.40\n[51960]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />\n\t[51961]<td />\n\t\tLily Potter\n\t[51963]<td />\n\t[51965]<td />\n\t\t$188.20\n[51967]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />\n\t[51968]<td />\n\t\tAva Brown\n\t[51970]<td />\n\t[51972]<td />\n\t\t$83.40\nLast Search Terms\n[51975]<table id=lastSearchGrid_table />\n\t[51976]<tr />\n\t\t[51977]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[51983]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[51984]<td />\n\t\t\tAntonia\n\t\t[51986]<td />\n\t\t[51988]<td />\n\t[51990]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[51991]<td />\n\t\t\ttanks\n\t\t[51993]<td />\n\t\t\t23\n\t\t[51995]<td />\n\t[51997]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />\n\t\t[51998]<td />\n\t\t\tnike\n\t\t[52000]<td />\n\t\t[52002]<td />\n\t[52004]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[52005]<td />\n\t\t\tJoust Bag\n\t\t[52007]<td />\n\t\t\t10\n\t\t[52009]<td />\n\t[52011]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[52012]<td />\n\t\t\thollister\n\t\t[52014]<td />\n\t\t[52016]<td />\n\t\t\t19\nTop Search Terms\n[52019]<table id=topSearchGrid_table />\n\t[52020]<tr />\n\t\t[52021]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[52027]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[52028]<td />\n\t\t\thollister\n\t\t[52030]<td />\n\t\t[52032]<td />\n\t\t\t19\n\t[52034]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[52035]<td />\n\t\t\tJoust Bag\n\t\t[52037]<td />\n\t\t\t10\n\t\t[52039]<td />\n\t[52041]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />\n\t\t[52042]<td />\n\t\t\tAntonia Racer Tank\n\t\t[52044]<td />\n\t\t\t23\n\t\t[52046]<td />\n\t[52048]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[52049]<td />\n\t\t\tAntonia\n\t\t[52051]<td />\n\t\t[52053]<td />\n\t[52055]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[52056]<td />\n\t\t\ttanks\n\t\t[52058]<td />\n\t\t\t23\n\t\t[52060]<td />\n[52066]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[52071]<a id=footer_privacy />\n\tPrivacy Policy\n[52074]<a id=footer_account_activity />\n\tAccount Activity\n[52077]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "dashboard_1": "*[53454]<a />\n*[53463]<a />\n\tDashboard\n*[53323]<a />\n\tSales\n*[53324]<a />\n\tCatalog\n*[53325]<a />\n\tCustomers\n*[53326]<a />\n\tMarketing\n*[53327]<a />\n\tContent\n*[53328]<a />\n\tReports\n*[53329]<a />\n\tStores\n*[53330]<a />\n\tSystem\n*[54066]<a />\n\tFind Partners & Extensions\nRefunds Report\n*[54128]<a title=My Account />\n\tadmin\n*[54166]<a title=Notifications />\n*[54171]<div />\n\t*[53295]<form id=form-search />\n\t\t*[54174]<div />\n\t\t\t*[53296]<input type=text id=search-global name=query />\n*[54199]<span />\n\tScope:\n*[54218]<button id=store-change-button />\n\tAll Websites\n*[53334]<a title=What is this? />\n\t*[54251]<span />\n\t\tWhat is this?\n*[53335]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n*[54279]<a />\n\tstatistics\n, click\n*[54282]<a />\n\there\nFilter\nDate Used\n*[53297]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Last Credit Memo Created Date) />\nPeriod\n*[53298]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\nFrom\n*[53299]<input title=From type=text id=sales_report_from name=from required=true />\nTo\n*[53300]<input title=To type=text id=sales_report_to name=to required=true />\nOrder Status\n*[53301]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\nApplies to Any of the Specified Order Statuses except canceled orders\nEmpty Rows\n*[53303]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[53304]<select id=id_zLdxDAXi0C1lddTatOMXIslE7Q5eFJFg_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n*[53336]<button title=Export id=id_zHPxml8kX8lc9u92opQPeKGkalgLXvc4 />\n\tExport\nrecords found\nInterval\nRefunded Orders\nTotal Refunded\nOnline Refunds\nOffline Refunds\n*[54549]<tr />\n\t*[54551]<td />\n\t\tWe couldn't find any records.\n*[54569]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[54579]<a id=footer_privacy />\n\tPrivacy Policy\n*[54582]<a id=footer_account_activity />\n\tAccount Activity\n*[54585]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "refunded": "*[62736]<a />\n*[62745]<a />\n\tDashboard\n*[62623]<a />\n\tSales\n*[62624]<a />\n\tCatalog\n*[62625]<a />\n\tCustomers\n*[62626]<a />\n\tMarketing\n*[62627]<a />\n\tContent\n*[62628]<a />\n\tReports\n*[62629]<a />\n\tStores\n*[62630]<a />\n\tSystem\n*[63346]<a />\n\tFind Partners & Extensions\nRefunds Report\n*[63408]<a title=My Account />\n\tadmin\n*[63446]<a title=Notifications />\n*[63451]<div />\n\t*[62612]<form id=form-search />\n\t\t*[63454]<div />\n\t\t\t*[62613]<input type=text id=search-global name=query />\n*[63480]<span />\n\tScope:\n*[63499]<button id=store-change-button />\n\tAll Websites\n*[62634]<a title=What is this? />\n\t*[63532]<span />\n\t\tWhat is this?\n*[62635]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n*[63560]<a />\n\tstatistics\n, click\n*[63563]<a />\n\there\nFilter\nDate Used\n*[62614]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Last Credit Memo Created Date) />\nPeriod\n*[62615]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\nFrom\n*[62616]<input title=From type=text id=sales_report_from name=from value=1/1/23 />\nTo\n*[62617]<input title=To type=text id=sales_report_to name=to value=3/31/23 />\nOrder Status\n*[62618]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\nApplies to Any of the Specified Order Statuses except canceled orders\n*[62619]<select id=sales_report_order_statuses name=order_statuses[] multiple=multiple />\n\t*[63694]<option id=optIdtyoc0E4o value=canceled />\n\t*[63697]<option id=optIdVSYAs4OI value=closed />\n\t*[63700]<option id=optIdEPSaZrZE value=complete />\n\t*[63703]<option id=optIdsSl0ZC0J value=fraud />\n\t*[63706]<option id=optIdbwEZcx2l value=holded />\n\t*[63709]<option id=optIdOmJy7qxg value=payment_review />\n\t*[63712]<option id=optIdcymclaQo value=paypal_canceled_reversal />\n\t*[63715]<option id=optIdVQan5LiC value=paypal_reversed />\n\t*[63718]<option id=optId4S21P2lu value=processing />\nEmpty Rows\n*[62620]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[62621]<select id=id_fVXS83Jn0qwLk7uhbCWs1IlIrYi3Ga43_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n*[62636]<button title=Export id=id_J0ldInWCPnkjVfNwoEBdA2XIzFJSMTft />\n\tExport\nrecords found\nInterval\nRefunded Orders\nTotal Refunded\nOnline Refunds\nOffline Refunds\n*[63833]<tr />\n\t*[63835]<td />\n\t\tWe couldn't find any records.\n*[63853]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[63863]<a id=footer_privacy />\n\tPrivacy Policy\n*[63866]<a id=footer_account_activity />\n\tAccount Activity\n*[63869]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "refunded_2": "[53454]<a />\n[53462]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[53463]<a />\n\t\tDashboard\n[53468]<li id=menu-magento-sales-sales role=menu-item />\n\t[53323]<a />\n\t\tSales\n[53511]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[53324]<a />\n\t\tCatalog\n[53534]<li id=menu-magento-customer-customer role=menu-item />\n\t[53325]<a />\n\t\tCustomers\n[53559]<li id=menu-magento-backend-marketing role=menu-item />\n\t[53326]<a />\n\t\tMarketing\n[53644]<li id=menu-magento-backend-content role=menu-item />\n\t[53327]<a />\n\t\tContent\n[53703]<li id=menu-magento-reports-report role=menu-item />\n\t[53328]<a />\n\t\tReports\n[53864]<li id=menu-magento-backend-stores role=menu-item />\n\t[53329]<a />\n\t\tStores\n[53960]<li id=menu-magento-backend-system role=menu-item />\n\t[53330]<a />\n\t\tSystem\n[54065]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[54066]<a />\n\t\tFind Partners & Extensions\nRefunds Report\n[54128]<a title=My Account />\n\tadmin\n[54166]<a title=Notifications />\n[54171]<div />\n\t[53295]<form id=form-search />\n\t\t[54174]<div />\n\t\t\t[53296]<input type=text id=search-global autocomplete=off />\n[53335]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n[54279]<a />\n\tstatistics\n, click\n[54282]<a />\n\there\n[53305]<form id=filter_form />\n\tFilter\n\tDate Used\n\t*[53297]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Last Credit Memo Created Date) />\n\tPeriod\n\t*[53298]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\n\tFrom\n\t[53299]<input title=From type=text id=sales_report_from name=from placeholder=mm/dd/yyyy autocomplete=list format=mm/dd/yyyy required=true />\n\t[54783]<button />\n\t\t[54786]<span />\n\t\t\tundefined\n\tTo\n\t[53300]<input title=To type=text id=sales_report_to name=to placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[58312]<button />\n\t\t[58315]<span />\n\t\t\tundefined\n\tOrder Status\n\t*[53301]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\n\tApplies to Any of the Specified Order Statuses except canceled orders\n\tEmpty Rows\n\t*[53303]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[53304]<select id=id_zLdxDAXi0C1lddTatOMXIslE7Q5eFJFg_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n[53336]<button title=Export id=id_zHPxml8kX8lc9u92opQPeKGkalgLXvc4 />\n\tExport\nrecords found\nInterval\nRefunded Orders\nTotal Refunded\nOnline Refunds\nOffline Refunds\n[54549]<tr />\n\t[54551]<td />\n\t\tWe couldn't find any records.\n[54569]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[54579]<a id=footer_privacy />\n\tPrivacy Policy\n[54582]<a id=footer_account_activity />\n\tAccount Activity\n[54585]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "cmvwb3j0x3r5cgu9y3jlyxrlzf9hdf9vcmrlcizwzxjpb2rfdhlwzt1kyxkmznjvbt0xjtjgmsuyrjizjnrvptmlmkyzmsuyrjizjnnob3dfb3jkzxjfc3rhdhvzzxm9mczzag93x2vtchr5x3jvd3m9ma==": "[62736]<a />\n*[62744]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[62745]<a />\n\t\tDashboard\n*[62750]<li id=menu-magento-sales-sales role=menu-item />\n\t[62623]<a />\n\t\tSales\n*[62793]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[62624]<a />\n\t\tCatalog\n*[62816]<li id=menu-magento-customer-customer role=menu-item />\n\t[62625]<a />\n\t\tCustomers\n*[62841]<li id=menu-magento-backend-marketing role=menu-item />\n\t[62626]<a />\n\t\tMarketing\n*[62925]<li id=menu-magento-backend-content role=menu-item />\n\t[62627]<a />\n\t\tContent\n*[62984]<li id=menu-magento-reports-report role=menu-item />\n\t[62628]<a />\n\t\tReports\n*[63144]<li id=menu-magento-backend-stores role=menu-item />\n\t[62629]<a />\n\t\tStores\n*[63240]<li id=menu-magento-backend-system role=menu-item />\n\t[62630]<a />\n\t\tSystem\n*[63345]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[63346]<a />\n\t\tFind Partners & Extensions\nRefunds Report\n[63408]<a title=My Account />\n\tadmin\n[63446]<a title=Notifications />\n[63451]<div />\n\t[62612]<form id=form-search />\n\t\t[63454]<div />\n\t\t\t[62613]<input type=text id=search-global autocomplete=off />\n[62635]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n[63560]<a />\n\tstatistics\n, click\n[63563]<a />\n\there\n*[62622]<form id=filter_form />\n\tFilter\n\tDate Used\n\t*[62614]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Last Credit Memo Created Date) />\n\tPeriod\n\t*[62615]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\n\tFrom\n\t*[64106]<button />\n\t\tundefined\n\tTo\n\t[62617]<input title=To type=text id=sales_report_to name=to value=3/31/23 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t*[64112]<button />\n\t\t*[64115]<span />\n\t\t\tundefined\n\tOrder Status\n\t*[62618]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\n\tApplies to Any of the Specified Order Statuses except canceled orders\n\tEmpty Rows\n\t*[62620]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[62621]<select id=id_fVXS83Jn0qwLk7uhbCWs1IlIrYi3Ga43_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n[62636]<button title=Export id=id_J0ldInWCPnkjVfNwoEBdA2XIzFJSMTft />\n\tExport\nrecords found\nInterval\nRefunded Orders\nTotal Refunded\nOnline Refunds\nOffline Refunds\n[63833]<tr />\n\t[63835]<td />\n\t\tWe couldn't find any records.\n[63853]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[63863]<a id=footer_privacy />\n\tPrivacy Policy\n[63866]<a id=footer_account_activity />\n\tAccount Activity\n[63869]<a id=footer_bug_tracking />\n\tReport an Issue"
+  }
+}
