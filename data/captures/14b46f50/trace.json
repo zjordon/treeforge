@@ -1,0 +1,224 @@
+{
+  "host": "localhost",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1788220949146,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Scope: function eventListenerJW3ATZpdrR () { switchScope(thi",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "Scope: function eventListenerJW3ATZpdrR () { switchScope(this);; } var listenedElementJW3ATZpdrRArray = document.querySelectorAll(\"#store_switcher\"); if(listenedElementJW3ATZpdrRArray.length !== 'undefined'){ listenedElementJW3ATZpdrRArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerJW3ATZpdrR.apply(targetElement); }; } }); } function eventListener5aJpEqnpui () { switchScope(this);; } var listenedElement5aJpEqnpuiArray = document.querySelectorAll(\"#store_group_switcher\"); if(listenedElement5aJpEqnpuiArray.length !== 'undefined'){ listenedElement5aJpEqnpuiArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListener5aJpEqnpui.apply(targetElement); }; } }); } function eventListenerwXfsHglPN0 () { switchScope(this);; } var listenedElementwXfsHglPN0Array = document.querySelectorAll(\"#website_switcher\"); if(listenedElementwXfsHglPN0Array.length !== 'undefined'){ listenedElementwXfsHglPN0Array.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerwXfsHglPN0.apply(targetElement); }; } }); } All Store Views All Store Views Main Website Main Website Store Default Store View What is this? Reload Data"
+      }
+    },
+    {
+      "timestamp": 1788220952380,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Reports",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "Reports"
+      }
+    },
+    {
+      "timestamp": 1788220953508,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard_1",
+      "target": "Bestsellers",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "Bestsellers"
+      }
+    },
+    {
+      "timestamp": 1788220955140,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers",
+      "target": "Day Month Year",
+      "element_attrs": {
+        "tag": "select",
+        "id": "sales_report_period_type",
+        "name": "period_type",
+        "aria-label": "Period",
+        "visible_text": "Day Month Year"
+      }
+    },
+    {
+      "timestamp": 1788220956139,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers_2",
+      "target": "Day Month Year",
+      "element_attrs": {
+        "tag": "select",
+        "id": "sales_report_period_type",
+        "name": "period_type",
+        "aria-label": "Period",
+        "visible_text": "Day Month Year"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788220956139,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers_2",
+      "target": "Day Month Year",
+      "element_attrs": {
+        "tag": "select",
+        "id": "sales_report_period_type",
+        "name": "period_type",
+        "aria-label": "Period",
+        "visible_text": "Day Month Year"
+      },
+      "value": "year"
+    },
+    {
+      "timestamp": 1788220956140,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers_2",
+      "target": "Day Month Year",
+      "element_attrs": {
+        "tag": "select",
+        "id": "sales_report_period_type",
+        "name": "period_type",
+        "aria-label": "Period",
+        "visible_text": "Day Month Year"
+      }
+    },
+    {
+      "timestamp": 1788220957179,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_from",
+        "name": "from",
+        "type": "text",
+        "aria-label": "From"
+      }
+    },
+    {
+      "timestamp": 1788220959139,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_from",
+        "name": "from",
+        "type": "text",
+        "aria-label": "From"
+      },
+      "value": "1/1/22"
+    },
+    {
+      "timestamp": 1788220959562,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      }
+    },
+    {
+      "timestamp": 1788220962426,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "12/31/22"
+    },
+    {
+      "timestamp": 1788220963168,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers_2",
+      "target": "Filter Period Day Month Year From undefined To undefined Emp",
+      "element_attrs": {
+        "tag": "form",
+        "id": "filter_form",
+        "data-tw-jsclick": "1",
+        "visible_text": "Filter Period Day Month Year From undefined To undefined Empty Rows Yes No"
+      }
+    },
+    {
+      "timestamp": 1788220965287,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/",
+      "stage": "bestsellers",
+      "target": "Show Report",
+      "element_attrs": {
+        "tag": "button",
+        "id": "filter_form_submit",
+        "type": "button",
+        "aria-label": "Show Report",
+        "visible_text": "Show Report"
+      }
+    },
+    {
+      "timestamp": 1788220966875,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/filter/cGVyaW9kX3R5cGU9eWVhciZmcm9tPTElMkYxJTJGMjImdG89MTIlMkYzMSUyRjIyJnNob3dfZW1wdHlfcm93cz0w/",
+      "stage": "cgvyaw9kx3r5cgu9ewvhcizmcm9tptelmkyxjtjgmjimdg89mtilmkyzmsuyrjiyjnnob3dfzw1wdhlfcm93cz0w",
+      "value": "5"
+    },
+    {
+      "timestamp": 1788220969032,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/filter/cGVyaW9kX3R5cGU9eWVhciZmcm9tPTElMkYxJTJGMjImdG89MTIlMkYzMSUyRjIyJnNob3dfZW1wdHlfcm93cz0w/",
+      "stage": "cgvyaw9kx3r5cgu9ewvhcizmcm9tptelmkyxjtjgmjimdg89mtilmkyzmsuyrjiyjnnob3dfzw1wdhlfcm93cz0w_3",
+      "target": "2022 Quest Lumaflex™ Band $19.00 5",
+      "element_attrs": {
+        "tag": "tr",
+        "data-tw-jsclick": "1",
+        "aria-label": "#",
+        "visible_text": "2022 Quest Lumaflex™ Band $19.00 5"
+      }
+    },
+    {
+      "timestamp": 1788220969046,
+      "type": "navigate",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/filter/cGVyaW9kX3R5cGU9eWVhciZmcm9tPTElMkYxJTJGMjImdG89MTIlMkYzMSUyRjIyJnNob3dfZW1wdHlfcm93cz0w/#",
+      "stage": "cgvyaw9kx3r5cgu9ewvhcizmcm9tptelmkyxjtjgmjimdg89mtilmkyzmsuyrjiyjnnob3dfzw1wdhlfcm93cz0w"
+    },
+    {
+      "timestamp": 1788220970662,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/bestsellers/filter/cGVyaW9kX3R5cGU9eWVhciZmcm9tPTElMkYxJTJGMjImdG89MTIlMkYzMSUyRjIyJnNob3dfZW1wdHlfcm93cz0w/#",
+      "stage": "cgvyaw9kx3r5cgu9ewvhcizmcm9tptelmkyxjtjgmjimdg89mtilmkyzmsuyrjiyjnnob3dfzw1wdhlfcm93cz0w",
+      "value": "5"
+    }
+  ],
+  "page_context": {
+    "dashboard": "[848]<a />\n[583]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[584]<a />\n\t\tDashboard\n[585]<li id=menu-magento-sales-sales role=menu-item />\n\t[586]<a />\n\t\tSales\n[588]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[589]<a />\n\t\tCatalog\n[590]<li id=menu-magento-customer-customer role=menu-item />\n\t[591]<a />\n\t\tCustomers\n[593]<li id=menu-magento-backend-marketing role=menu-item />\n\t[594]<a />\n\t\tMarketing\n[596]<li id=menu-magento-backend-content role=menu-item />\n\t[597]<a />\n\t\tContent\n[599]<li id=menu-magento-reports-report role=menu-item />\n\t[600]<a />\n\t\tReports\n[602]<li id=menu-magento-backend-stores role=menu-item />\n\t[603]<a />\n\t\tStores\n[605]<li id=menu-magento-backend-system role=menu-item />\n\t[606]<a />\n\t\tSystem\n[608]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[609]<a />\n\t\tFind Partners & Extensions\nDashboard\n[612]<a title=My Account />\n\tadmin\n[1604]<a title=Notifications />\n[613]<div />\n\t[572]<form id=form-search />\n\t\t[1611]<div />\n\t\t\t[573]<input type=text id=search-global autocomplete=off />\n[1640]<span />\n\tScope:\n[618]<button id=store-change-button />\n\tAll Store Views\n[620]<a title=What is this? />\n\t[1689]<span />\n\t\tWhat is this?\n[1703]<button title=Reload Data type=submit />\n\tReload Data\nAdvanced Reporting\nGain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\n[1726]<a title=Go to Advanced Reporting />\n\tGo to Advanced Reporting\nChart is disabled. To enable the chart, click\n[1746]<a />\n\there\nRevenue\n$0.00\nTax\n$0.00\nShipping\n$0.00\nQuantity\n[1805]<strong />\n[623]<li role=tab selected=true expanded=true />\n\t[624]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />\n\t\t[1827]<span title=The information in this tab has been changed. />\n\t\t[1829]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[1831]<span title=Loading... />\n\t\tBestsellers\n[625]<li role=tab selected=false expanded=false />\n\t[626]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />\n\t\t[1844]<span title=The information in this tab has been changed. />\n\t\t[1846]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[1848]<span title=Loading... />\n\t\tMost Viewed Products\n[627]<li role=tab selected=false expanded=false />\n\t[628]<a title=New Customers id=grid_tab_new_customers role=presentation />\n\t\t[1863]<span title=The information in this tab has been changed. />\n\t\t[1865]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[1867]<span title=Loading... />\n\t\tNew Customers\n[629]<li role=tab selected=false expanded=false />\n\t[630]<a title=Customers id=grid_tab_customers role=presentation />\n\t\t[1882]<span title=The information in this tab has been changed. />\n\t\t[1884]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[1886]<span title=Loading... />\n\t\tCustomers\n[1910]<tr />\n\tProduct\n\tPrice\n\tQuantity\n[632]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />\n\t[1928]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[1931]<td />\n\t\t$27.00\n\t[1934]<td />\n[633]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />\n\t[1939]<td />\n\t\tQuest Lumaflex™ Band\n\t[1942]<td />\n\t\t$19.00\n\t[1945]<td />\n[634]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />\n\t[1950]<td />\n\t\tSprite Yoga Strap 6 foot\n\t[1953]<td />\n\t\t$14.00\n\t[1956]<td />\n[635]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />\n\t[1961]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[1964]<td />\n\t\t$23.00\n\t[1967]<td />\n[636]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />\n\t[1972]<td />\n\t\tOvernight Duffle\n\t[1975]<td />\n\t\t$45.00\n\t[1978]<td />\nLifetime Sales\n$0.00\nAverage Order\n$0.00\nLast Orders\n[2036]<tr />\n\tCustomer\n\tItems\n\tTotal\n[640]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />\n\t[2055]<td />\n\t\tSarah Miller\n\t[2058]<td />\n\t[2061]<td />\n\t\t$194.40\n[641]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />\n\t[2066]<td />\n\t\tGrace Nguyen\n\t[2069]<td />\n\t[2072]<td />\n\t\t$190.00\n[642]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />\n\t[2077]<td />\n\t\tMatt Baker\n\t[2080]<td />\n\t[2083]<td />\n\t\t$151.40\n[643]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />\n\t[2088]<td />\n\t\tLily Potter\n\t[2091]<td />\n\t[2094]<td />\n\t\t$188.20\n[644]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />\n\t[2099]<td />\n\t\tAva Brown\n\t[2102]<td />\n\t[2105]<td />\n\t\t$83.40\nLast Search Terms\n[2123]<table id=lastSearchGrid_table />\n\t[2127]<tr />\n\t\t[2129]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[645]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[2146]<td />\n\t\t\tAntonia\n\t\t[2149]<td />\n\t\t[2152]<td />\n\t[646]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[2157]<td />\n\t\t\ttanks\n\t\t[2160]<td />\n\t\t\t23\n\t\t[2163]<td />\n\t[647]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />\n\t\t[2168]<td />\n\t\t\tnike\n\t\t[2171]<td />\n\t\t[2174]<td />\n\t[648]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[2179]<td />\n\t\t\tJoust Bag\n\t\t[2182]<td />\n\t\t\t10\n\t\t[2185]<td />\n\t[649]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[2190]<td />\n\t\t\thollister\n\t\t[2193]<td />\n\t\t[2196]<td />\n\t\t\t19\nTop Search Terms\n[2214]<table id=topSearchGrid_table />\n\t[2218]<tr />\n\t\t[2220]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[650]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[2237]<td />\n\t\t\thollister\n\t\t[2240]<td />\n\t\t[2243]<td />\n\t\t\t19\n\t[651]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[2248]<td />\n\t\t\tJoust Bag\n\t\t[2251]<td />\n\t\t\t10\n\t\t[2254]<td />\n\t[652]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />\n\t\t[2259]<td />\n\t\t\tAntonia Racer Tank\n\t\t[2262]<td />\n\t\t\t23\n\t\t[2265]<td />\n\t[653]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[2270]<td />\n\t\t\tAntonia\n\t\t[2273]<td />\n\t\t[2276]<td />\n\t[654]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[2281]<td />\n\t\t\ttanks\n\t\t[2284]<td />\n\t\t\t23\n\t\t[2287]<td />\n[2305]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[2315]<a id=footer_privacy />\n\tPrivacy Policy\n[655]<a id=footer_account_activity />\n\tAccount Activity\n[2320]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "dashboard_1": "*[2478]<a />\n*[2487]<a />\n\tDashboard\n*[2372]<a />\n\tSales\n*[2373]<a />\n\tCatalog\n*[2374]<a />\n\tCustomers\n*[2375]<a />\n\tMarketing\n*[2376]<a />\n\tContent\n*[2377]<a />\n\tReports\n*[2378]<a />\n\tStores\n*[2379]<a />\n\tSystem\n*[3089]<a />\n\tFind Partners & Extensions\nBestsellers Report\n*[3151]<a title=My Account />\n\tadmin\n*[3189]<a title=Notifications />\n*[3194]<div />\n\t*[2352]<form id=form-search />\n\t\t*[3197]<div />\n\t\t\t*[2353]<input type=text id=search-global name=query />\n*[3223]<span />\n\tScope:\n*[3242]<button id=store-change-button />\n\tAll Websites\n*[2383]<a title=What is this? />\n\t*[3275]<span />\n\t\tWhat is this?\n*[2384]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n*[3303]<a />\n\tstatistics\n, click\n*[3306]<a />\n\there\nFilter\nPeriod\n*[2354]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\nFrom\n*[2355]<input title=From type=text id=sales_report_from name=from />\nTo\n*[2356]<input title=To type=text id=sales_report_to name=to />\nEmpty Rows\n*[2357]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[2358]<select id=id_Pt8I6ki3VIm5a7gHiroCnjcJS5Z57Fy8_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n*[2385]<button title=Export id=id_CK5dww0fStaPoJIHZQuD17OwVs826k8N />\n\tExport\nrecords found\n*[3465]<tr />\n\tInterval\n\tProduct\n\tPrice\n\tOrder Quantity\n*[3487]<tr />\n\t*[3489]<td />\n\t\tWe couldn't find any records.\n*[2362]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[3516]<a id=footer_privacy />\n\tPrivacy Policy\n*[3519]<a id=footer_account_activity />\n\tAccount Activity\n*[3522]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "bestsellers": "*[11951]<a />\n*[11960]<a />\n\tDashboard\n*[11846]<a />\n\tSales\n*[11847]<a />\n\tCatalog\n*[11848]<a />\n\tCustomers\n*[11849]<a />\n\tMarketing\n*[11850]<a />\n\tContent\n*[11851]<a />\n\tReports\n*[11852]<a />\n\tStores\n*[11853]<a />\n\tSystem\n*[12562]<a />\n\tFind Partners & Extensions\nBestsellers Report\n*[12624]<a title=My Account />\n\tadmin\n*[12662]<a title=Notifications />\n*[12667]<div />\n\t*[11838]<form id=form-search />\n\t\t*[12670]<div />\n\t\t\t*[11839]<input type=text id=search-global name=query />\n*[12696]<span />\n\tScope:\n*[12715]<button id=store-change-button />\n\tAll Websites\n*[11857]<a title=What is this? />\n\t*[12748]<span />\n\t\tWhat is this?\n*[11858]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n*[12776]<a />\n\tstatistics\n, click\n*[12779]<a />\n\there\nFilter\nPeriod\n*[11840]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\nFrom\n*[11841]<input title=From type=text id=sales_report_from name=from value=1/1/22 required=true />\nTo\n*[11842]<input title=To type=text id=sales_report_to name=to value=12/31/22 required=true />\nEmpty Rows\n*[11843]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[11844]<select id=id_a9YKYe1SUr8ftIY6zfaH4d4RKZpZqKOV_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n*[11859]<button title=Export id=id_dWsYvgg0WXZfqpdyWXjNDcwvYPrYxQOI />\n\tExport\nrecords found\nInterval\nProduct\nPrice\nOrder Quantity\n*[12960]<tr />\n\tTotal\n\t20\n*[12978]<tr title=# />\n\t*[12980]<td />\n\t\t*[12982]<span />\n\t\t\t2022\n\t*[12986]<td />\n\t\tQuest Lumaflex™ Band\n\t*[12989]<td />\n\t\t$19.00\n\t*[12992]<td />\n*[12996]<tr />\n\t*[12998]<td />\n\t\tCruise Dual Analog Watch\n\t*[13001]<td />\n\t\t$55.00\n\t*[13004]<td />\n*[13008]<tr />\n\t*[13010]<td />\n\t\tSprite Stasis Ball 55 cm\n\t*[13013]<td />\n\t\t$23.00\n\t*[13016]<td />\n*[13020]<tr />\n\t*[13022]<td />\n\t\tSprite Stasis Ball 65 cm\n\t*[13025]<td />\n\t\t$27.00\n\t*[13028]<td />\n*[13032]<tr />\n\t*[13034]<td />\n\t\tAffirm Water Bottle\n\t*[13037]<td />\n\t\t$7.00\n\t*[13040]<td />\n*[13058]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[13068]<a id=footer_privacy />\n\tPrivacy Policy\n*[13071]<a id=footer_account_activity />\n\tAccount Activity\n*[13074]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "bestsellers_2": "[2478]<a />\n[2486]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[2487]<a />\n\t\tDashboard\n[2492]<li id=menu-magento-sales-sales role=menu-item />\n\t[2372]<a />\n\t\tSales\n[2535]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[2373]<a />\n\t\tCatalog\n[2558]<li id=menu-magento-customer-customer role=menu-item />\n\t[2374]<a />\n\t\tCustomers\n[2583]<li id=menu-magento-backend-marketing role=menu-item />\n\t[2375]<a />\n\t\tMarketing\n[2668]<li id=menu-magento-backend-content role=menu-item />\n\t[2376]<a />\n\t\tContent\n[2727]<li id=menu-magento-reports-report role=menu-item />\n\t[2377]<a />\n\t\tReports\n[2887]<li id=menu-magento-backend-stores role=menu-item />\n\t[2378]<a />\n\t\tStores\n[2983]<li id=menu-magento-backend-system role=menu-item />\n\t[2379]<a />\n\t\tSystem\n[3088]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[3089]<a />\n\t\tFind Partners & Extensions\nBestsellers Report\n[3151]<a title=My Account />\n\tadmin\n[3189]<a title=Notifications />\n[3194]<div />\n\t[2352]<form id=form-search />\n\t\t[3197]<div />\n\t\t\t[2353]<input type=text id=search-global autocomplete=off />\n[3223]<span />\n\tScope:\n[3242]<button id=store-change-button />\n\tAll Websites\n[2383]<a title=What is this? />\n\t[3275]<span />\n\t\tWhat is this?\n[2384]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n[3303]<a />\n\tstatistics\n, click\n[3306]<a />\n\there\n[2359]<form id=filter_form />\n\tFilter\n\tPeriod\n\t*[2354]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\n\tFrom\n\t[2355]<input title=From type=text id=sales_report_from name=from placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[3668]<button />\n\t\t[3671]<span />\n\t\t\tundefined\n\tTo\n\t[2356]<input title=To type=text id=sales_report_to name=to placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[7212]<button />\n\t\t[7215]<span />\n\t\t\tundefined\n\tEmpty Rows\n\t*[2357]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[2358]<select id=id_Pt8I6ki3VIm5a7gHiroCnjcJS5Z57Fy8_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n[2385]<button title=Export id=id_CK5dww0fStaPoJIHZQuD17OwVs826k8N />\n\tExport\nrecords found\nInterval\nProduct\nPrice\nOrder Quantity\n[3487]<tr />\n\t[3489]<td />\n\t\tWe couldn't find any records.\n[2362]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[3516]<a id=footer_privacy />\n\tPrivacy Policy\n[3519]<a id=footer_account_activity />\n\tAccount Activity\n[3522]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "cgvyaw9kx3r5cgu9ewvhcizmcm9tptelmkyxjtjgmjimdg89mtilmkyzmsuyrjiyjnnob3dfzw1wdhlfcm93cz0w": "[11951]<a />\n[11959]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[11960]<a />\n\t\tDashboard\n[11965]<li id=menu-magento-sales-sales role=menu-item />\n\t[11846]<a />\n\t\tSales\n[12007]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[11847]<a />\n\t\tCatalog\n[12030]<li id=menu-magento-customer-customer role=menu-item />\n\t[11848]<a />\n\t\tCustomers\n[12055]<li id=menu-magento-backend-marketing role=menu-item />\n\t[11849]<a />\n\t\tMarketing\n[12140]<li id=menu-magento-backend-content role=menu-item />\n\t[11850]<a />\n\t\tContent\n[12199]<li id=menu-magento-reports-report role=menu-item />\n\t[11851]<a />\n\t\tReports\n[12360]<li id=menu-magento-backend-stores role=menu-item />\n\t[11852]<a />\n\t\tStores\n[12456]<li id=menu-magento-backend-system role=menu-item />\n\t[11853]<a />\n\t\tSystem\n[12561]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[12562]<a />\n\t\tFind Partners & Extensions\nBestsellers Report\n[12624]<a title=My Account />\n\tadmin\n[12662]<a title=Notifications />\n[12667]<div />\n\t[11838]<form id=form-search />\n\t\t[12670]<div />\n\t\t\t[11839]<input type=text id=search-global autocomplete=off />\n*[12696]<span />\n\tScope:\n*[12715]<button id=store-change-button />\n\tAll Websites\n*[11857]<a title=What is this? />\n\t*[12748]<span />\n\t\tWhat is this?\n[11858]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n[12776]<a />\n\tstatistics\n, click\n[12779]<a />\n\there\n[11845]<form id=filter_form />\n\tFilter\n\tPeriod\n\t*[11840]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\n\tFrom\n\t[11841]<input title=From type=text id=sales_report_from name=from value=1/1/22 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[13234]<button />\n\t\t[13237]<span />\n\t\t\tundefined\n\tTo\n\t[11842]<input title=To type=text id=sales_report_to name=to value=12/31/22 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[13240]<button />\n\t\t*[13243]<span />\n\t\t\tundefined\n\tEmpty Rows\n\t*[11843]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[11844]<select id=id_a9YKYe1SUr8ftIY6zfaH4d4RKZpZqKOV_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n[11859]<button title=Export id=id_dWsYvgg0WXZfqpdyWXjNDcwvYPrYxQOI />\n\tExport\nrecords found\nInterval\nProduct\nPrice\nOrder Quantity\n[12960]<tr />\n\tTotal\n\t20\n[12978]<tr title=# />\n\t[12980]<td />\n\t\t[12982]<span />\n\t\t\t2022\n\t[12986]<td />\n\t\tQuest Lumaflex™ Band\n\t[12989]<td />\n\t\t$19.00\n\t[12992]<td />\n[12996]<tr />\n\t[12998]<td />\n\t\tCruise Dual Analog Watch\n\t[13001]<td />\n\t\t$55.00\n\t[13004]<td />\n[13008]<tr />\n\t[13010]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[13013]<td />\n\t\t$23.00\n\t[13016]<td />\n[13020]<tr />\n\t[13022]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[13025]<td />\n\t\t$27.00\n\t[13028]<td />\n[13032]<tr />\n\t[13034]<td />\n\t\tAffirm Water Bottle\n\t[13037]<td />\n\t\t$7.00\n\t[13040]<td />\n[13058]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[13068]<a id=footer_privacy />\n\tPrivacy Policy\n[13071]<a id=footer_account_activity />\n\tAccount Activity\n[13074]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "cgvyaw9kx3r5cgu9ewvhcizmcm9tptelmkyxjtjgmjimdg89mtilmkyzmsuyrjiyjnnob3dfzw1wdhlfcm93cz0w_3": "[11951]<a />\n[11959]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[11960]<a />\n\t\tDashboard\n[11965]<li id=menu-magento-sales-sales role=menu-item />\n\t[11846]<a />\n\t\tSales\n[12007]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[11847]<a />\n\t\tCatalog\n[12030]<li id=menu-magento-customer-customer role=menu-item />\n\t[11848]<a />\n\t\tCustomers\n[12055]<li id=menu-magento-backend-marketing role=menu-item />\n\t[11849]<a />\n\t\tMarketing\n[12140]<li id=menu-magento-backend-content role=menu-item />\n\t[11850]<a />\n\t\tContent\n[12199]<li id=menu-magento-reports-report role=menu-item />\n\t[11851]<a />\n\t\tReports\n[12360]<li id=menu-magento-backend-stores role=menu-item />\n\t[11852]<a />\n\t\tStores\n[12456]<li id=menu-magento-backend-system role=menu-item />\n\t[11853]<a />\n\t\tSystem\n[12561]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[12562]<a />\n\t\tFind Partners & Extensions\nBestsellers Report\n[12624]<a title=My Account />\n\tadmin\n[12662]<a title=Notifications />\n[12667]<div />\n\t[11838]<form id=form-search />\n\t\t[12670]<div />\n\t\t\t[11839]<input type=text id=search-global autocomplete=off />\n*[12696]<span />\n\tScope:\n*[12715]<button id=store-change-button />\n\tAll Websites\n*[11857]<a title=What is this? />\n\t*[12748]<span />\n\t\tWhat is this?\n[11858]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n[12776]<a />\n\tstatistics\n, click\n[12779]<a />\n\there\n[11845]<form id=filter_form />\n\tFilter\n\tPeriod\n\t*[11840]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\n\tFrom\n\t[11841]<input title=From type=text id=sales_report_from name=from value=1/1/22 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[13234]<button />\n\t\t[13237]<span />\n\t\t\tundefined\n\tTo\n\t[11842]<input title=To type=text id=sales_report_to name=to value=12/31/22 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[13240]<button />\n\t\t*[13243]<span />\n\t\t\tundefined\n\tEmpty Rows\n\t*[11843]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[11844]<select id=id_a9YKYe1SUr8ftIY6zfaH4d4RKZpZqKOV_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n[11859]<button title=Export id=id_dWsYvgg0WXZfqpdyWXjNDcwvYPrYxQOI />\n\tExport\nrecords found\nInterval\nProduct\nPrice\nOrder Quantity\n[12960]<tr />\n\tTotal\n\t20\n[12978]<tr title=# />\n\t[12980]<td />\n\t\t[12982]<span />\n\t\t\t2022\n\t[12986]<td />\n\t\tQuest Lumaflex™ Band\n\t[12989]<td />\n\t\t$19.00\n\t[12992]<td />\n[12996]<tr />\n\t[12998]<td />\n\t\tCruise Dual Analog Watch\n\t[13001]<td />\n\t\t$55.00\n\t[13004]<td />\n[13008]<tr />\n\t[13010]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[13013]<td />\n\t\t$23.00\n\t[13016]<td />\n[13020]<tr />\n\t[13022]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[13025]<td />\n\t\t$27.00\n\t[13028]<td />\n[13032]<tr />\n\t[13034]<td />\n\t\tAffirm Water Bottle\n\t[13037]<td />\n\t\t$7.00\n\t[13040]<td />\n[13058]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[13068]<a id=footer_privacy />\n\tPrivacy Policy\n[13071]<a id=footer_account_activity />\n\tAccount Activity\n[13074]<a id=footer_bug_tracking />\n\tReport an Issue"
+  }
+}

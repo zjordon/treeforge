@@ -1,0 +1,214 @@
+[42751]<a />
+*[42759]<li id=menu-magento-backend-dashboard role=menu-item />
+	[42760]<a />
+		Dashboard
+*[42765]<li id=menu-magento-sales-sales role=menu-item />
+	[42628]<a />
+		Sales
+*[42808]<li id=menu-magento-catalog-catalog role=menu-item />
+	[42629]<a />
+		Catalog
+*[42831]<li id=menu-magento-customer-customer role=menu-item />
+	[42630]<a />
+		Customers
+*[42856]<li id=menu-magento-backend-marketing role=menu-item />
+	[42631]<a />
+		Marketing
+*[42941]<li id=menu-magento-backend-content role=menu-item />
+	[42632]<a />
+		Content
+*[43000]<li id=menu-magento-reports-report role=menu-item />
+	[42633]<a />
+		Reports
+*[43161]<li id=menu-magento-backend-stores role=menu-item />
+	[42634]<a />
+		Stores
+*[43257]<li id=menu-magento-backend-system role=menu-item />
+	[42635]<a />
+		System
+*[43361]<li id=menu-magento-marketplace-partners role=menu-item />
+	[43362]<a />
+		Find Partners & Extensions
+Reviews
+[43424]<a title=My Account />
+	admin
+[43462]<a title=Notifications />
+[43467]<div />
+	[42589]<form id=form-search />
+		[43470]<div />
+			[42590]<input type=text id=search-global autocomplete=off />
+[42636]<button title=New Review id=add />
+	New Review
+[42637]<button title=Search id=id_ln7wfgDnSnPYqupcvptHB2A2Feoyqco1 />
+	Search
+[42638]<button title=Reset Filter id=id_jt6pCT6DOtHJJagdQZinm8eBDUQl4nWG />
+	Reset Filter
+*[42598]<form id=reviewGrid_massaction-form />
+[43603]<div />
+	*[42592]<select id=reviewGrid_massaction-mass-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Select All|Unselect All|Select Visible|Unselect Visible) />
+records found
+per page
+of
+[43710]<th />
+	[43712]<span />
+		ID
+[43715]<th />
+	[43716]<span />
+		Created
+[43719]<th />
+	[43720]<span />
+		Status
+[43723]<th />
+	[43724]<span />
+		Title
+[43727]<th />
+	[42648]<span />
+		Nickname
+[43730]<th />
+	[43731]<span />
+		Review
+Visibility
+[43738]<th />
+	[43739]<span />
+		Type
+[43742]<th />
+	[43743]<span />
+		Product
+[43746]<th />
+	[43747]<span />
+		SKU
+Action
+[43755]<tr />
+	[43757]<td />
+		*[42600]<select id=reviewGrid_filter_massaction name=massaction expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Any|Yes|No) />
+	[43768]<td />
+		[42601]<input type=text id=reviewGrid_filter_review_id name=review_id />
+	[43772]<td />
+		[42602]<input type=text id=reviewGrid_filter_created_at7gbJX7db8Gnfr5uvHyxfNPAmtXhKeyV3_from name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		[43776]<button />
+			[43778]<span />
+				undefined
+		[42603]<input type=text id=reviewGrid_filter_created_at7gbJX7db8Gnfr5uvHyxfNPAmtXhKeyV3_to name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		[43781]<button />
+			[43783]<span />
+				undefined
+	[43790]<td />
+		*[42604]<select id=reviewGrid_filter_status name=status expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	[43801]<td />
+		[42605]<input type=text id=reviewGrid_filter_title name=title />
+	[43805]<td />
+		[42606]<input type=text id=reviewGrid_filter_nickname name=nickname />
+	[43809]<td />
+		[42607]<input type=text id=reviewGrid_filter_detail name=detail />
+	[43813]<td />
+		*[42608]<select name=visible_in expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Default Store View) />
+	[43822]<td />
+		*[42609]<select id=reviewGrid_filter_type name=type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Administrator|Customer|Guest,format=numeric) />
+	[43833]<td />
+		[42610]<input type=text id=reviewGrid_filter_name name=name value=Antonia Racer Tank />
+	[43837]<td />
+		[42611]<input type=text id=reviewGrid_filter_sku name=sku />
+	[43841]<td />
+[43848]<tr title=http://localhost:7780/admin/review/product/edit/id/339/ />
+	[43850]<td />
+		[42595]<input type=checkbox checked=false id=id_472 name=reviews value=339 />
+	[43857]<td />
+		339
+	[43860]<td />
+		Apr 19, 2023, 12:15:20 PM
+	[43863]<td />
+		Approved
+	[43866]<td />
+		A regular or me
+	[43869]<td />
+		Pearl
+	[43872]<td />
+		This is in regular rotation at the gym. Its col...
+	[43875]<td />
+		Main Website
+		*[43877]<br />
+		Main Website Store
+		*[43879]<br />
+		Default Store View
+		*[43881]<br />
+	[43884]<td />
+		Guest
+	[43887]<td />
+		Antonia Racer Tank
+	[43890]<td />
+		WT08
+	[43893]<td />
+		[43895]<a id=idt8TcYm0LZ4 />
+			Edit
+[43900]<tr title=http://localhost:7780/admin/review/product/edit/id/338/ />
+	[43902]<td />
+		[42596]<input type=checkbox checked=false id=id_744 name=reviews value=338 />
+	[43909]<td />
+		338
+	[43912]<td />
+		Apr 19, 2023, 12:15:20 PM
+	[43915]<td />
+		Approved
+	[43918]<td />
+		Not for high impact
+	[42649]<td />
+		Merrie
+	[43923]<td />
+		Definitely not good for anything high-impact, b...
+	[43926]<td />
+		Main Website
+		*[43928]<br />
+		Main Website Store
+		*[43930]<br />
+		Default Store View
+		*[43932]<br />
+	[43935]<td />
+		Guest
+	[43938]<td />
+		Antonia Racer Tank
+	[43941]<td />
+		WT08
+	[43944]<td />
+		[43946]<a id=idMXPkjruuJI />
+			Edit
+[43951]<tr title=http://localhost:7780/admin/review/product/edit/id/337/ />
+	[43953]<td />
+		[42597]<input type=checkbox checked=false id=id_456 name=reviews value=337 />
+	[43960]<td />
+		337
+	[43963]<td />
+		Apr 19, 2023, 12:15:20 PM
+	[43966]<td />
+		Approved
+	[43969]<td />
+		Zero support/modesty
+	[43972]<td />
+		Shaunte
+	[43975]<td />
+		I would never wear this bra to anything but a l...
+	[43978]<td />
+		Main Website
+		*[43980]<br />
+		Main Website Store
+		*[43982]<br />
+		Default Store View
+		*[43984]<br />
+	[43987]<td />
+		Guest
+	[43990]<td />
+		Antonia Racer Tank
+	[43993]<td />
+		WT08
+	[43996]<td />
+		[43998]<a id=idwOLEXEtEP0 />
+			Edit
+[44014]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[44024]<a id=footer_privacy />
+	Privacy Policy
+[44027]<a id=footer_account_activity />
+	Account Activity
+[44030]<a id=footer_bug_tracking />
+	Report an Issue

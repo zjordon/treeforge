@@ -21,4 +21,8 @@
 | UI 网格全文搜索框 | 列表页控制条右侧 | `id=fulltext`, `placeholder=Search by keyword` | 各 UI 网格通用 |
 | 详情页返回按钮 | 订单/发票/评论详情页顶部 | `id=back`, 可见文本"Back" | |
 | 评论编辑页字段 | Edit Review 页 | `id=nickname` / `id=title` / `id=detail` / `id=status_id` | 均 required，提交用 `id=save_button` |
-| Dashboard Scope 切换 | Dashboard 页头 "Scope:" 旁 | `id=store-change-button`, 可见文本"All Store Views" | 旁有 "What is this?" 与 Reload Data |
+| 报表 Period/From/To/Empty Rows | Bestsellers 报表 filter_form 内 | `id=sales_report_period_type` / `id=sales_report_from` / `id=sales_report_to` / `id=sales_report_show_empty_rows` | id 稳定；From/To required |
+| 报表 Show Report / Export 按钮 | 报表页右上、Export 下拉旁 | `id=filter_form_submit`, `title=Show Report` / 可见文本"Export" | Export 按钮 id 随机长串，靠可见文本 |
+| 报表 Export 下拉 | Export to: 旁 | `role=listbox`, 可见选项 CSV / Excel XML | id 为随机长串，靠选项内容识别 |
+| Dashboard Scope 切换 | Dashboard/报表页头 "Scope:" 旁 | `id=store-change-button`, 可见文本"All Store Views"或"All Websites" | 旁有 "What is this?" 与 Reload Data |
+| 页面主操作按钮（新建类） | 各列表页右上 | `id=add`, title/可见文本区分 | 订单页"Create New Order"、评论页"New Review"、客户页"Add New Customer"——同 id 不同含义 |
