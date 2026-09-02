@@ -1,25 +1,27 @@
 # Quirks — localhost
 
-- **三类提交行为不同**：UI-Component 网格筛选（含商品 Filters/Apply Filters、fulltext 搜索）为同页 AJAX，URL 不变但行 index 全换；评论旧版网格 Search/Reset 与报表 Show Report 均整页跳转 base64 filter URL——跳转后必须重读 DOM，勿从 URL 解码筛选条件。
-- **商品保存为整页跳转（非 AJAX）**：点 `id=save-button` 后 URL 变为 `.../edit/id/N/.../back/edit/`，DOM 重建、index 更换；保存过程会出现 "Please wait..." 过渡态，需等待；成功以 "You saved the product." 文本确认，勿依赖 toast。保存后 Back(`id=back`) 回列表，筛选仍保留。
-- **商品编辑页表单元素 id 全随机且每次加载变化**（如 Stock Status select 依次 ENCP833/QVH54E8/CCMRUNX，status checkbox 依次 BQG6PKS）——只能靠 `name=product[...]` 识别；`id=save-button`/`id=back`/`id=addAttribute` 稳定。
-- **Enable Product 是 checkbox 而非下拉**：`name=product[status]`，`type=checkbox`，value=2，位于 "Enable Product" label 旁——启用/禁用商品用 `click(index)` 直接勾选/取消该 checkbox（或点其 label），不要用 select_dropdown。
-- **Save 按钮有两个**：`id=save-button`（主 Save）与 `aria-label=Save options`（下拉触发器）相邻——点主 Save。
-- **商品网格行点击即进编辑页**：点商品名 td 或行本身（rowClickCallback 已启用）与点 `aria-label=Edit <name>` 效果相同，都会导航到 edit 页——选行时小心误触导航；仅勾选 checkbox 不会跳转。
-- **同款多变体批量编辑的循环模式**：keyword 搜同款名 → 逐个点 `aria-label=Edit <完整变体名>`（变体仅尺码-颜色后缀不同）→ 改字段（qty 用 `input_text`，Stock Status 用 `select_dropdown`，status 用 `click`）→ Save → Back → 重读 DOM 再下一个；每轮 index 全变。Configurable Product 父商品本身 Quantity 为 0，改的是各 Simple Product 变体。
-- **换搜索关键词前需 Clear all**：fulltext 输入新词前若已有 "Active filters: Keyword: ..."，旧 chip 会与新关键词叠加过滤——先点可见文本 "Clear all"。
-- **商品编辑页首屏只到部分属性**：qty/price/status 等在首屏附近，但多选属性（activity/material 等）在下方 1~5 屏处，需 `scroll` 后才出现在快照（快照有 "X pages below" 提示）。
-- **报表多选状态下拉可能不在初始 DOM**：先 `select_dropdown(show_order_statuses, Specified)` 再重读 DOM。
-- **报表/UI 网格下拉传 value 而非显示文本**：show_order_statuses 等为数字；order_statuses[] 传 value（如 `complete`）；商品编辑 Stock Status 等 select 标注 format=numeric。
-- **Date Used 选项随报表类型不同**：同 id 先 `dropdown_options` 读实际选项；Bestsellers 无该字段。
-- **功能性 id 稳定 vs 随机 id 混存**：`sales_report_*`、`filter_form_submit`、`save-button`、`fulltext`、`search-global`、`back`、`add_new_product-button` 稳定；Filters 面板输入、商品表单字段、Search/Reset/Export 按钮 id 均随机——按钮靠 title/aria-label/可见文本，输入靠 name。
-- **提交后 DOM 整体重建/局部重渲染**：确认生效看 "N records found"、"You saved the product."、列表 Last Updated At 时间与 Price/Quantity 列更新；无结果显示 "We couldn't find any records."。报表结果行 tr title=#（无详情链接），Bestsellers 行按日期分组需向上追溯最近带日期行。
-- **日期选择器弹层按钮内容为 "undefined"**：直接 `input_text` 手输 `mm/dd/yyyy`；Set Product as New From/To 旁按钮 span 同为 undefined，勿点击。
-- **filter_form 区域点击易误触提交**：只点目标 input/select 本身，最后用 `id=filter_form_submit` 提交。
-- **菜单展开为渐进式 DOM 更新**：点一级菜单后二级项才出现；导航态可能渲染为折叠扁平 `<a>` 列表（无 li id），按可见文本识别。每步点击后必须重读 DOM。
-- **每次页面切换（筛选、排序、翻页、进出详情、保存商品、Back）index 全变**，操作前重读 DOM。
-- **网格行 checkbox 与 tr title 含实体线索**：`idscheckN` value 即实体 id；Dashboard/列表行 tr title 即详情 URL 可直接 navigate。
-- **Dashboard 各 tab 前装饰性 span**（title "The information in this tab has been changed." / "Loading..."）：非真实状态，忽略。
+- **后台改动前台不生效 → 需刷缓存**：`System → Cache Management` 点 `id=flush_magento` 后再刷新前台。
+- **商品 Description/Short Description 是 TinyMCE 富文本**（iframe contenteditable）：全屏模式必须 `Close Full Screen` 再 `id=save-button`。
+- **标签未保存/无效数据警告**：标签上 "Changes have been made..."/"This tab contains invalid data" span；含无效数据时 Save 被拦截。
+- **商品/评论保存与删除均为整页跳转（非 AJAX）**：Save/Delete 后 URL 变化需等待；成功以 "You saved the product."/"You saved the review."/"The review has been deleted." 确认。
+- **删除评论有确认对话框**（stage 353_5）：点 `id=delete` 后出现 `role=dialog` 遮罩，必须再点可见文本 "OK" 才真正删除；Cancel 放弃。删除后整页回评论列表且原筛选条件保留——若该筛选下无剩余记录会显示 "We couldn't find any records."，这是删除成功而非失败。
+- **商品编辑页/矩阵表单元素 id 每次加载随机**——只能靠 `name=product[...]` / `name=configurable-matrix[N][...]`；`save-button`/`back`/`addAttribute` 稳定。
+- **新建商品必须先选 Attribute Set 再填属性**：切换后 DOM 重新渲染、所有 index 失效，必须重读 DOM 再定位字段。
+- **Categories 下拉面板**：勾选后必须点可见文本 "Done"（type=button）关闭，否则选择不生效/遮挡。
+- **多选属性 select 选项 value 为数字 id**：`select_dropdown` 传 value 而非显示文本；先用 `dropdown_options` 读选项。
+- **可配置变体向导**：URL 不变——靠 DOM 内容判阶段；每步先 `scroll` 使控件进快照；最后 "Generate Products" 后回编辑页必须重读 DOM。
+- **矩阵行 name 属性行号即变体索引**：同列跨行输入框外观相同，只能靠 name 的 N 区分。
+- **Save 按钮有两个**（商品编辑页）：点主 `id=save-button`，勿点 `aria-label=Save options`。
+- **布尔属性是 checkbox 不是下拉**——用 `click(index)`。
+- **商品编辑页属性区分屏**：qty/price/status 在首屏，多选属性在下方 1~6 屏，变体矩阵更靠下。
+- **三类提交行为不同**：UI 网格筛选同页 AJAX；评论旧网格 Search/Reset 与报表 Show Report 整页跳转 base64 filter URL（形如 `/admin/review/product/index/filter/<base64>/form_key/.../`）——跳转后重读 DOM。
+- **评论网格筛选保留性**：Back/删除后筛选仍在；换条件前 `Reset Filter`（或先回列表再重筛）。
+- **评论编辑页 Save Review 直接生效并跳回列表**：点 `id=save_button` 即保存，不要先点 Back；`id=back` 放弃修改返回。`save_and_next`/`save_and_previous` 可保存并直接切相邻评论，批量审核更高效。
+- **日期选择器弹层按钮内容为 "undefined"**：直接 `input_text` 手输 `mm/dd/yyyy`。
+- **filter_form 区域点击易误触提交**：只点目标控件，最后 `id=filter_form_submit`。
+- **菜单展开渐进式**：点一级后二级才出现；导航态可能渲染为折叠扁平 `<a>`，按可见文本识别。
+- **每次页面切换（筛选/排序/翻页/进出详情/保存/删除/Generate/Back/切属性集/开关面板）index 全变**，操作前重读 DOM；无运行时模糊匹配。
+- **网格行 tr title 含详情 URL** 可直接 navigate；`idscheckN` value 即实体 id。
 - **`id=add` 跨页复用**：订单=Create New Order、评论=New Review、客户=Add New Customer、CMS=Add New Page。
-- **Scope 区可见文本跨页变化**：Dashboard/商品编辑 "All Store Views"，报表页 "All Websites"——同一 `id=store-change-button`。
-- **CMS Pages 筛选面板 label 显示异常**（"Created from undefined to undefined"）：靠 name/placeholder 定位输入框而非 label。
+- **Scope 区可见文本跨页变化**，同一 `id=store-change-button`；Dashboard Scope 区文本被内联 JS 污染，忽略。
+- **前台商品页 body 点击可能弹出登录侧栏**（`id=customer-email`/`id=pass`）——误触大区域时注意。

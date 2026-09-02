@@ -1,0 +1,92 @@
+[134025]<a />
+*[134033]<li id=menu-magento-backend-dashboard role=menu-item />
+	[134034]<a />
+		Dashboard
+*[134039]<li id=menu-magento-sales-sales role=menu-item />
+	[133918]<a />
+		Sales
+*[134082]<li id=menu-magento-catalog-catalog role=menu-item />
+	[133919]<a />
+		Catalog
+*[134105]<li id=menu-magento-customer-customer role=menu-item />
+	[133920]<a />
+		Customers
+*[134130]<li id=menu-magento-backend-marketing role=menu-item />
+	[133921]<a />
+		Marketing
+*[134215]<li id=menu-magento-backend-content role=menu-item />
+	[133922]<a />
+		Content
+*[134274]<li id=menu-magento-reports-report role=menu-item />
+	[133923]<a />
+		Reports
+*[134435]<li id=menu-magento-backend-stores role=menu-item />
+	[133924]<a />
+		Stores
+*[134531]<li id=menu-magento-backend-system role=menu-item />
+	[133925]<a />
+		System
+*[134636]<li id=menu-magento-marketplace-partners role=menu-item />
+	[134637]<a />
+		Find Partners & Extensions
+Edit Review
+[134699]<a title=My Account />
+	admin
+[134737]<a title=Notifications />
+[134742]<div />
+	[133895]<form id=form-search />
+		[134745]<div />
+			[133896]<input type=text id=search-global autocomplete=off />
+[133926]<button title=Back id=back />
+	Back
+[133927]<button title=Reset id=reset />
+	Reset
+[133928]<button title=Delete Review id=delete />
+	Delete Review
+[134792]<button title=Save Review id=save_button />
+	Save Review
+[133929]<button title=Previous id=previous />
+	Previous
+[134805]<button title=Save and Previous id=save_and_previous />
+	Save and Previous
+[134811]<button title=Save and Next id=save_and_next />
+	Save and Next
+[133930]<button title=Next id=next />
+	Next
+*[133906]<form id=edit_form />
+	Review Details
+	Product
+	[133931]<a />
+		Olivia 1/4 Zip Light Jacket
+	Author
+	[133932]<a />
+		Emma Lopez
+	[134875]<a />
+		(emma.lopez@gmail.com)
+	Summary Rating
+	[134893]<div />
+	Detailed Rating
+	Rating
+	*[134923]<label />
+	*[134927]<label />
+	*[134931]<label />
+	*[134935]<label />
+	*[134939]<label />
+	Status
+	*[133902]<select id=status_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	Nickname
+	[133903]<input type=text id=nickname value=Emma required=true />
+	Summary of Review
+	[133904]<input type=text id=title name=title value=won't recommand required=true />
+	Review
+	[133905]<textarea id=detail required=true />
+[135033]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[135043]<a id=footer_privacy />
+	Privacy Policy
+[135046]<a id=footer_account_activity />
+	Account Activity
+[135049]<a id=footer_bug_tracking />
+	Report an Issue

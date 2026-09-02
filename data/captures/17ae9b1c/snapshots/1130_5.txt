@@ -1,0 +1,756 @@
+*[1586211]<a />
+[1586219]<li id=menu-magento-backend-dashboard role=menu-item />
+	[1586220]<a />
+		Dashboard
+[1586225]<li id=menu-magento-sales-sales role=menu-item />
+	[1586226]<a />
+		Sales
+[1586270]<li id=menu-magento-catalog-catalog role=menu-item />
+	[1586271]<a />
+		Catalog
+[1586295]<li id=menu-magento-customer-customer role=menu-item />
+	[1586296]<a />
+		Customers
+[1586322]<li id=menu-magento-backend-marketing role=menu-item />
+	[1586323]<a />
+		Marketing
+[1586409]<li id=menu-magento-backend-content role=menu-item />
+	[1586410]<a />
+		Content
+[1586470]<li id=menu-magento-reports-report role=menu-item />
+	[1586471]<a />
+		Reports
+[1586633]<li id=menu-magento-backend-stores role=menu-item />
+	[1586634]<a />
+		Stores
+[1586730]<li id=menu-magento-backend-system role=menu-item />
+	[1586731]<a />
+		System
+[1586837]<li id=menu-magento-marketplace-partners role=menu-item />
+	[1586838]<a />
+		Find Partners & Extensions
+[1587044]<div title=Save />
+	[1587048]<button title=Save id=save-button />
+		Save
+	[1587054]<button title=Save aria-label=Save options />
+[1587088]<button title=Back id=back />
+	Back
+[1587097]<button title=Add Attribute id=addAttribute />
+	Add Attribute
+*|scroll element[1602817]<select id=XHU6P18 name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)
+|scroll element|<select id=XPY0PG2 name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 35%, 2.2 pages below, 1.2 pages above, total: 4.3 pages)
+|scroll element|<select id=HAT0G4H name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)
+	[1603103]<option value=38 selected=true />
+	[1603106]<option value=39 selected=false />
+	[1603109]<option value=150 selected=false />
+	*[1603112]<option value=151 selected=false />
+	*[1603115]<option value=40 selected=false />
+	*[1603118]<option value=152 selected=false />
+	[1603121]<option value=41 selected=false />
+	*[1603124]<option value=42 selected=false />
+	[1603127]<option value=153 selected=false />
+	*[1603130]<option value=43 selected=false />
+	*[1603133]<option value=154 selected=false />
+	[1603136]<option value=155 selected=false />
+	*[1603139]<option value=44 selected=false />
+	*[1603142]<option value=156 selected=false />
+	*[1603145]<option value=45 selected=false />
+	*[1603148]<option value=157 selected=false />
+	[1603151]<option value=46 selected=false />
+	[1603154]<option value=47 selected=false />
+	[1603157]<option value=158 selected=false />
+	[1603160]<option value=48 selected=false />
+	[1603163]<option value=159 selected=false />
+[1595163]<span />
+	Size
+[1595212]<span />
+	Collar
+*|scroll element[1603242]<select id=HNJAALM name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)
+	[1603246]<option value=180 selected=false />
+	*[1603249]<option value=181 selected=false />
+	*[1603252]<option value=182 selected=false />
+	*[1603255]<option value=183 selected=false />
+	[1603258]<option value=184 selected=false />
+	*[1603261]<option value=185 selected=false />
+	[1603264]<option value=186 selected=false />
+	*[1603267]<option value=187 selected=false />
+*[1595261]<span />
+	Pattern
+*|scroll element[1603300]<select id=KTTJ5F3 name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)
+	*[1603304]<option value=192 selected=false />
+	*[1603307]<option value=193 selected=false />
+	[1603310]<option value=194 selected=false />
+	*[1603313]<option value=195 selected=false />
+	*[1603316]<option value=196 selected=true />
+	*[1603319]<option value=197 selected=false />
+	*[1603322]<option value=198 selected=false />
+	*[1603325]<option value=199 selected=false />
+[1595310]<span />
+	Climate
+*|scroll element[1603346]<select id=G3YETA7 name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)
+	[1603350]<option value=201 selected=false />
+	[1603353]<option value=202 selected=false />
+	[1603356]<option value=203 selected=true />
+	[1603359]<option value=204 selected=true />
+	[1603362]<option value=205 selected=true />
+	[1603365]<option value=206 selected=false />
+	*[1603368]<option value=207 selected=false />
+	*[1603371]<option value=208 selected=false />
+	*[1603374]<option value=209 selected=false />
+	[1603377]<option value=210 selected=false />
+	*[1603380]<option value=211 selected=false />
+*[1595359]<span />
+	Color
+*[1595408]<span />
+	Eco Collection
+*[1601851]<input type=checkbox checked=false id=AM7CF5K name=product[eco_collection] value=0 />
+*[1601853]<span />
+*[1595457]<span />
+	Performance Fabric
+*[1601855]<input type=checkbox checked=false id=YBTF1QO name=product[performance_fabric] value=0 />
+*[1601857]<span />
+*[1595506]<span />
+	Erin Recommends
+*[1601859]<input type=checkbox checked=true id=URBEG3M name=product[erin_recommends] value=1 />
+*[1601861]<span />
+[1595555]<span />
+	New
+*[1601863]<input type=checkbox checked=true id=AQMT88R name=product[new] value=1 />
+[1601865]<span />
+*[1595604]<span />
+	Sale
+*[1601867]<input type=checkbox checked=false id=NOW5R05 name=product[sale] value=0 />
+*[1601869]<span />
+[1588545]<div />
+	*[1588546]<strong />
+		Content
+[1588824]<div />
+	*[1588825]<strong />
+		*[1588826]<span />
+			Configurations
+		*[1588827]<span />
+			*[1588828]<span />
+				*[1588829]<span role=tooltip />
+[1604284]<button />
+	Add Products Manually
+[1604305]<button />
+	Edit Configurations
+Configurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).
+Current Variations
+*[1589306]<select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=7,options=5|20|30|50,format=numeric) />
+per page
+[1589330]<button title=Previous Page disabled=true />
+*[1589335]<input type=number id=2 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[1589337]<button title=Next Page disabled=true />
+Image
+Name
+SKU
+Price
+Quantity
+Weight
+Status
+Attributes
+Actions
+*[1589415]<tr />
+	*[1589420]<td />
+		*[1642139]<div />
+		*[1651024]<div />
+			*[1651029]<input type=file id=RHV1K2Q name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651031]<span />
+				Upload Image
+	*[1589421]<td />
+		*[1641847]<div />
+		*[1641865]<input type=text id=J6CJC17 name=configurable-matrix[0][name] maxlength=255 />
+	*[1589422]<td />
+		*[1641907]<div />
+		*[1641925]<input type=text id=IS6V9O2 name=configurable-matrix[0][sku] maxlength=255 />
+	*[1589423]<td />
+		*[1641967]<div />
+		*[1641991]<input type=text id=GXPQDPD name=configurable-matrix[0][price] maxlength=255 />
+	*[1589424]<td />
+		*[1642019]<div />
+		*[1642037]<input type=text id=V8GXOOM name=configurable-matrix[0][qty] maxlength=255 />
+	*[1589425]<td />
+		*[1642079]<div />
+		*[1642097]<input type=text id=DOA5BFS name=configurable-matrix[0][weight] maxlength=255 />
+	*[1589426]<td />
+		*[1601440]<div />
+			Enabled
+	*[1589427]<td />
+		Size: XS, Color: Gray
+	*[1589428]<td />
+		[1601469]<button />
+			Select
+*[1589431]<tr />
+	*[1589436]<td />
+		*[1642526]<div />
+		*[1651060]<div />
+			*[1651065]<input type=file id=LSL6S7H name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651067]<span />
+				Upload Image
+	*[1589437]<td />
+		*[1642234]<div />
+		*[1642252]<input type=text id=SDWN4QV name=configurable-matrix[1][name] maxlength=255 />
+	*[1589438]<td />
+		*[1642294]<div />
+		*[1642312]<input type=text id=USAFQLK name=configurable-matrix[1][sku] maxlength=255 />
+	*[1589439]<td />
+		*[1642354]<div />
+		*[1642378]<input type=text id=FS0VJ4L name=configurable-matrix[1][price] maxlength=255 />
+	*[1589440]<td />
+		*[1642406]<div />
+		*[1642424]<input type=text id=TWBGUFP name=configurable-matrix[1][qty] maxlength=255 />
+	*[1589441]<td />
+		*[1642466]<div />
+		*[1642484]<input type=text id=H5D1IXS name=configurable-matrix[1][weight] maxlength=255 />
+	*[1589442]<td />
+		*[1601442]<div />
+			Enabled
+	*[1589443]<td />
+		Size: XS, Color: Purple
+	*[1589444]<td />
+		[1601480]<button />
+			Select
+*[1589447]<tr />
+	*[1589452]<td />
+		*[1642878]<div />
+		*[1651096]<div />
+			*[1651101]<input type=file id=FCE6YFV name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651103]<span />
+				Upload Image
+	*[1589453]<td />
+		*[1642586]<div />
+		*[1642604]<input type=text id=BGIMW5E name=configurable-matrix[2][name] maxlength=255 />
+	*[1589454]<td />
+		*[1642646]<div />
+		*[1642664]<input type=text id=JL3AY32 name=configurable-matrix[2][sku] maxlength=255 />
+	*[1589455]<td />
+		*[1642706]<div />
+		*[1642730]<input type=text id=BPENOTG name=configurable-matrix[2][price] maxlength=255 />
+	*[1589456]<td />
+		*[1642758]<div />
+		*[1642776]<input type=text id=KXBRXQW name=configurable-matrix[2][qty] maxlength=255 />
+	*[1589457]<td />
+		*[1642818]<div />
+		*[1642836]<input type=text id=BEJ7SNB name=configurable-matrix[2][weight] maxlength=255 />
+	*[1589458]<td />
+		*[1601444]<div />
+			Enabled
+	*[1589459]<td />
+		Size: XS, Color: White
+	*[1589460]<td />
+		[1601491]<button />
+			Select
+*[1589463]<tr />
+	*[1589468]<td />
+		*[1643230]<div />
+		*[1651132]<div />
+			*[1651137]<input type=file id=TUWN8BP name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651139]<span />
+				Upload Image
+	*[1589469]<td />
+		*[1642938]<div />
+		*[1642956]<input type=text id=S4KO1XO name=configurable-matrix[3][name] maxlength=255 />
+	*[1589470]<td />
+		*[1642998]<div />
+		*[1643016]<input type=text id=HLPM156 name=configurable-matrix[3][sku] maxlength=255 />
+	*[1589471]<td />
+		*[1643058]<div />
+		*[1643082]<input type=text id=OW84SJL name=configurable-matrix[3][price] maxlength=255 />
+	*[1589472]<td />
+		*[1643110]<div />
+		*[1643128]<input type=text id=CO13GG9 name=configurable-matrix[3][qty] maxlength=255 />
+	*[1589473]<td />
+		*[1643170]<div />
+		*[1643188]<input type=text id=CUPKA7I name=configurable-matrix[3][weight] maxlength=255 />
+	*[1589474]<td />
+		*[1601446]<div />
+			Enabled
+	*[1589475]<td />
+		Size: XS, Color: Brown
+	*[1589476]<td />
+		[1601502]<button />
+			Select
+[1589479]<tr />
+	[1589484]<td />
+		*[1643582]<div />
+		*[1651168]<div />
+			*[1651173]<input type=file id=H2NA4Q3 name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651175]<span />
+				Upload Image
+	*[1589485]<td />
+		*[1643290]<div />
+		*[1643308]<input type=text id=M4QORDO name=configurable-matrix[4][name] maxlength=255 />
+	*[1589486]<td />
+		*[1643350]<div />
+		*[1643368]<input type=text id=OL60TM1 name=configurable-matrix[4][sku] maxlength=255 />
+	*[1589487]<td />
+		*[1643410]<div />
+		*[1643434]<input type=text id=T8EG76S name=configurable-matrix[4][price] maxlength=255 />
+	[1589488]<td />
+		*[1643462]<div />
+		*[1643480]<input type=text id=JANPBLT name=configurable-matrix[4][qty] maxlength=255 />
+	*[1589489]<td />
+		*[1643522]<div />
+		*[1643540]<input type=text id=DJPP1KL name=configurable-matrix[4][weight] maxlength=255 />
+	*[1589490]<td />
+		*[1601448]<div />
+			Enabled
+	*[1589491]<td />
+		Size: S, Color: Gray
+	[1589492]<td />
+		[1601513]<button />
+			Select
+[1589495]<tr />
+	[1589500]<td />
+		*[1643934]<div />
+		*[1651204]<div />
+			*[1651209]<input type=file id=NX6BNPW name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651211]<span />
+				Upload Image
+	[1589501]<td />
+		*[1643642]<div />
+		*[1643660]<input type=text id=YW89BO8 name=configurable-matrix[5][name] maxlength=255 />
+	[1589502]<td />
+		*[1643702]<div />
+		*[1643720]<input type=text id=WGWQ0TQ name=configurable-matrix[5][sku] maxlength=255 />
+	[1589503]<td />
+		*[1643762]<div />
+		*[1643786]<input type=text id=TOVACOO name=configurable-matrix[5][price] maxlength=255 />
+	[1589504]<td />
+		*[1643814]<div />
+		*[1643832]<input type=text id=CU15P5F name=configurable-matrix[5][qty] maxlength=255 />
+	[1589505]<td />
+		*[1643874]<div />
+		*[1643892]<input type=text id=TYCIUH4 name=configurable-matrix[5][weight] maxlength=255 />
+	[1589506]<td />
+		*[1601450]<div />
+			Enabled
+	[1589507]<td />
+		Size: S, Color: Purple
+	[1589508]<td />
+		[1601524]<button />
+			Select
+[1589511]<tr />
+	[1589516]<td />
+		*[1644286]<div />
+		*[1651240]<div />
+			*[1651245]<input type=file id=GHWYWH8 name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651247]<span />
+				Upload Image
+	[1589517]<td />
+		*[1643994]<div />
+		*[1644012]<input type=text id=NBKLHSF name=configurable-matrix[6][name] maxlength=255 />
+	[1589518]<td />
+		*[1644054]<div />
+		*[1644072]<input type=text id=VD87QOL name=configurable-matrix[6][sku] maxlength=255 />
+	[1589519]<td />
+		*[1644114]<div />
+		*[1644138]<input type=text id=P0G79O6 name=configurable-matrix[6][price] maxlength=255 />
+	[1589520]<td />
+		*[1644166]<div />
+		*[1644184]<input type=text id=V860M6P name=configurable-matrix[6][qty] maxlength=255 />
+	[1589521]<td />
+		*[1644226]<div />
+		*[1644244]<input type=text id=M2DA032 name=configurable-matrix[6][weight] maxlength=255 />
+	[1589522]<td />
+		*[1601452]<div />
+			Enabled
+	[1589523]<td />
+		Size: S, Color: White
+	[1589524]<td />
+		[1601535]<button />
+			Select
+[1589527]<tr />
+	[1589532]<td />
+		*[1644638]<div />
+		*[1651276]<div />
+			*[1651281]<input type=file id=TKV53LX name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651283]<span />
+				Upload Image
+	[1589533]<td />
+		*[1644346]<div />
+		*[1644364]<input type=text id=DCD9L1D name=configurable-matrix[7][name] maxlength=255 />
+	[1589534]<td />
+		*[1644406]<div />
+		*[1644424]<input type=text id=D91L5EQ name=configurable-matrix[7][sku] maxlength=255 />
+	[1589535]<td />
+		*[1644466]<div />
+		*[1644490]<input type=text id=HTLRRPP name=configurable-matrix[7][price] maxlength=255 />
+	[1589536]<td />
+		*[1644518]<div />
+		*[1644536]<input type=text id=YD28HMW name=configurable-matrix[7][qty] maxlength=255 />
+	[1589537]<td />
+		*[1644578]<div />
+		*[1644596]<input type=text id=YOYI1NO name=configurable-matrix[7][weight] maxlength=255 />
+	[1589538]<td />
+		*[1601454]<div />
+			Enabled
+	[1589539]<td />
+		Size: S, Color: Brown
+	[1589540]<td />
+		[1601546]<button />
+			Select
+[1589543]<tr />
+	[1589548]<td />
+		*[1644990]<div />
+		*[1651312]<div />
+			*[1651317]<input type=file id=LPQ29SO name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651319]<span />
+				Upload Image
+	[1589549]<td />
+		*[1644698]<div />
+		*[1644716]<input type=text id=GCOK5WH name=configurable-matrix[8][name] maxlength=255 />
+	[1589550]<td />
+		*[1644758]<div />
+		*[1644776]<input type=text id=BUU57BL name=configurable-matrix[8][sku] maxlength=255 />
+	[1589551]<td />
+		*[1644818]<div />
+		*[1644842]<input type=text id=M2WE8L2 name=configurable-matrix[8][price] maxlength=255 />
+	[1589552]<td />
+		*[1644870]<div />
+		*[1644888]<input type=text id=LKPUDEE name=configurable-matrix[8][qty] maxlength=255 />
+	[1589553]<td />
+		*[1644930]<div />
+		*[1644948]<input type=text id=TMLV2WG name=configurable-matrix[8][weight] maxlength=255 />
+	[1589554]<td />
+		*[1601456]<div />
+			Enabled
+	[1589555]<td />
+		Size: M, Color: Gray
+	[1589556]<td />
+		[1601557]<button />
+			Select
+[1589559]<tr />
+	[1589564]<td />
+		*[1645342]<div />
+		*[1651348]<div />
+			*[1651353]<input type=file id=ICD4TL7 name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651355]<span />
+				Upload Image
+	[1589565]<td />
+		*[1645050]<div />
+		*[1645068]<input type=text id=PCHKVL7 name=configurable-matrix[9][name] maxlength=255 />
+	[1589566]<td />
+		*[1645110]<div />
+		*[1645128]<input type=text id=I07SPO1 name=configurable-matrix[9][sku] maxlength=255 />
+	[1589567]<td />
+		*[1645170]<div />
+		*[1645194]<input type=text id=A48IR2N name=configurable-matrix[9][price] maxlength=255 />
+	[1589568]<td />
+		*[1645222]<div />
+		*[1645240]<input type=text id=MIN4MC1 name=configurable-matrix[9][qty] maxlength=255 />
+	[1589569]<td />
+		*[1645282]<div />
+		*[1645300]<input type=text id=BRPKJP1 name=configurable-matrix[9][weight] maxlength=255 />
+	[1589570]<td />
+		*[1601458]<div />
+			Enabled
+	[1589571]<td />
+		Size: M, Color: Purple
+	[1589572]<td />
+		[1601568]<button />
+			Select
+[1589575]<tr />
+	[1589580]<td />
+		*[1645694]<div />
+		*[1651384]<div />
+			*[1651389]<input type=file id=KXAVHLH name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651391]<span />
+				Upload Image
+	[1589581]<td />
+		*[1645402]<div />
+		*[1645420]<input type=text id=U2S6BVG name=configurable-matrix[10][name] maxlength=255 />
+	[1589582]<td />
+		*[1645462]<div />
+		*[1645480]<input type=text id=FS1YWB8 name=configurable-matrix[10][sku] maxlength=255 />
+	[1589583]<td />
+		*[1645522]<div />
+		*[1645546]<input type=text id=X3E31OU name=configurable-matrix[10][price] maxlength=255 />
+	[1589584]<td />
+		*[1645574]<div />
+		*[1645592]<input type=text id=TOU8KOS name=configurable-matrix[10][qty] maxlength=255 />
+	[1589585]<td />
+		*[1645634]<div />
+		*[1645652]<input type=text id=CKFLKVC name=configurable-matrix[10][weight] maxlength=255 />
+	[1589586]<td />
+		*[1601460]<div />
+			Enabled
+	[1589587]<td />
+		Size: M, Color: White
+	[1589588]<td />
+		[1601579]<button />
+			Select
+[1589591]<tr />
+	[1589596]<td />
+		*[1646046]<div />
+		*[1651420]<div />
+			*[1651425]<input type=file id=RHAQMGG name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651427]<span />
+				Upload Image
+	[1589597]<td />
+		*[1645754]<div />
+		*[1645772]<input type=text id=ISYG093 name=configurable-matrix[11][name] maxlength=255 />
+	[1589598]<td />
+		*[1645814]<div />
+		*[1645832]<input type=text id=MRM97L3 name=configurable-matrix[11][sku] maxlength=255 />
+	[1589599]<td />
+		*[1645874]<div />
+		*[1645898]<input type=text id=M22Y0BE name=configurable-matrix[11][price] maxlength=255 />
+	[1589600]<td />
+		*[1645926]<div />
+		*[1645944]<input type=text id=M6MN6IO name=configurable-matrix[11][qty] maxlength=255 />
+	[1589601]<td />
+		*[1645986]<div />
+		*[1646004]<input type=text id=CQBKR5V name=configurable-matrix[11][weight] maxlength=255 />
+	[1589602]<td />
+		*[1601462]<div />
+			Enabled
+	[1589603]<td />
+		Size: M, Color: Brown
+	[1589604]<td />
+		[1601590]<button />
+			Select
+[1589607]<tr />
+	[1589612]<td />
+		*[1646398]<div />
+		*[1651456]<div />
+			*[1651461]<input type=file id=BRHWKSK name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651463]<span />
+				Upload Image
+	[1589613]<td />
+		*[1646106]<div />
+		*[1646124]<input type=text id=L2CDX27 name=configurable-matrix[12][name] maxlength=255 />
+	[1589614]<td />
+		*[1646166]<div />
+		*[1646184]<input type=text id=PC8VO6O name=configurable-matrix[12][sku] maxlength=255 />
+	[1589615]<td />
+		*[1646226]<div />
+		*[1646250]<input type=text id=NJL64GL name=configurable-matrix[12][price] maxlength=255 />
+	[1589616]<td />
+		*[1646278]<div />
+		*[1646296]<input type=text id=UHEKLQE name=configurable-matrix[12][qty] maxlength=255 />
+	[1589617]<td />
+		*[1646338]<div />
+		*[1646356]<input type=text id=G9BPAR8 name=configurable-matrix[12][weight] maxlength=255 />
+	[1589618]<td />
+		*[1601464]<div />
+			Enabled
+	[1589619]<td />
+		Size: L, Color: Gray
+	[1589620]<td />
+		[1601601]<button />
+			Select
+[1589623]<tr />
+	[1589628]<td />
+		*[1646750]<div />
+		*[1651492]<div />
+			*[1651497]<input type=file id=LU8630X name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651499]<span />
+				Upload Image
+	[1589629]<td />
+		*[1646458]<div />
+		*[1646476]<input type=text id=JDR8P94 name=configurable-matrix[13][name] maxlength=255 />
+	[1589630]<td />
+		*[1646518]<div />
+		*[1646536]<input type=text id=P6I3S5O name=configurable-matrix[13][sku] maxlength=255 />
+	[1589631]<td />
+		*[1646578]<div />
+		*[1646602]<input type=text id=U4JFXWK name=configurable-matrix[13][price] maxlength=255 />
+	[1589632]<td />
+		*[1646630]<div />
+		*[1646648]<input type=text id=IOS8MTE name=configurable-matrix[13][qty] maxlength=255 />
+	[1589633]<td />
+		*[1646690]<div />
+		*[1646708]<input type=text id=R47WL94 name=configurable-matrix[13][weight] maxlength=255 />
+	[1589634]<td />
+		*[1601466]<div />
+			Enabled
+	[1589635]<td />
+		Size: L, Color: Purple
+	[1589636]<td />
+		[1601612]<button />
+			Select
+[1589639]<tr />
+	[1589644]<td />
+		*[1647102]<div />
+		*[1651528]<div />
+			*[1651533]<input type=file id=GX4FXXM name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651535]<span />
+				Upload Image
+	[1589645]<td />
+		*[1646810]<div />
+		*[1646828]<input type=text id=JXRNFRI name=configurable-matrix[14][name] maxlength=255 />
+	[1589646]<td />
+		*[1646870]<div />
+		*[1646888]<input type=text id=JFFLSG2 name=configurable-matrix[14][sku] maxlength=255 />
+	[1589647]<td />
+		*[1646930]<div />
+		*[1646954]<input type=text id=OODNIV1 name=configurable-matrix[14][price] maxlength=255 />
+	[1589648]<td />
+		*[1646982]<div />
+		*[1647000]<input type=text id=MPTNGU9 name=configurable-matrix[14][qty] maxlength=255 />
+	[1589649]<td />
+		*[1647042]<div />
+		*[1647060]<input type=text id=O3CTL0J name=configurable-matrix[14][weight] maxlength=255 />
+	[1589650]<td />
+		*[1601468]<div />
+			Enabled
+	[1589651]<td />
+		Size: L, Color: White
+	[1589652]<td />
+		[1601623]<button />
+			Select
+*[1647380]<tr />
+	*[1647385]<td />
+		*[1647425]<div />
+		*[1651564]<div />
+			*[1651569]<input type=file id=PE6GII1 name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651571]<span />
+				Upload Image
+	*[1647488]<td />
+		*[1647528]<div />
+		*[1647546]<input type=text id=W2TMRLL name=configurable-matrix[15][name] maxlength=255 />
+	*[1647593]<td />
+		*[1647633]<div />
+		*[1647651]<input type=text id=JJE1IL2 name=configurable-matrix[15][sku] maxlength=255 />
+	*[1647698]<td />
+		*[1647738]<div />
+		*[1647762]<input type=text id=HC85VJA name=configurable-matrix[15][price] maxlength=255 />
+	*[1647795]<td />
+		*[1647835]<div />
+		*[1647853]<input type=text id=AFTV0PA name=configurable-matrix[15][qty] maxlength=255 />
+	*[1647900]<td />
+		*[1647940]<div />
+		*[1647958]<input type=text id=XXDLPSE name=configurable-matrix[15][weight] maxlength=255 />
+	*[1648005]<td />
+		*[1648007]<div />
+			Enabled
+	*[1648008]<td />
+		Size: L, Color: Brown
+	*[1648060]<td />
+		*[1648061]<button />
+			Select
+*[1648074]<tr />
+	*[1648079]<td />
+		*[1648119]<div />
+		*[1651600]<div />
+			*[1651605]<input type=file id=PE442ND name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651607]<span />
+				Upload Image
+	*[1648182]<td />
+		*[1648222]<div />
+		*[1648240]<input type=text id=QW4GBFM name=configurable-matrix[16][name] maxlength=255 />
+	*[1648287]<td />
+		*[1648327]<div />
+		*[1648345]<input type=text id=TL1DUHB name=configurable-matrix[16][sku] maxlength=255 />
+	*[1648392]<td />
+		*[1648432]<div />
+		*[1648456]<input type=text id=QEV1FO7 name=configurable-matrix[16][price] maxlength=255 />
+	*[1648489]<td />
+		*[1648529]<div />
+		*[1648547]<input type=text id=YQYOD6E name=configurable-matrix[16][qty] maxlength=255 />
+	*[1648594]<td />
+		*[1648634]<div />
+		*[1648652]<input type=text id=WUKI2V3 name=configurable-matrix[16][weight] maxlength=255 />
+	*[1648699]<td />
+		*[1648701]<div />
+			Enabled
+	*[1648702]<td />
+		Size: XL, Color: Gray
+	*[1648754]<td />
+		*[1648755]<button />
+			Select
+*[1648768]<tr />
+	*[1648773]<td />
+		*[1648813]<div />
+		*[1651636]<div />
+			*[1651641]<input type=file id=XGFSLOU name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651643]<span />
+				Upload Image
+	*[1648876]<td />
+		*[1648916]<div />
+		*[1648934]<input type=text id=AO1EM64 name=configurable-matrix[17][name] maxlength=255 />
+	*[1648981]<td />
+		*[1649021]<div />
+		*[1649039]<input type=text id=A7C0MWF name=configurable-matrix[17][sku] maxlength=255 />
+	*[1649086]<td />
+		*[1649126]<div />
+		*[1649150]<input type=text id=LR0M8DK name=configurable-matrix[17][price] maxlength=255 />
+	*[1649183]<td />
+		*[1649223]<div />
+		*[1649241]<input type=text id=Q560FC5 name=configurable-matrix[17][qty] maxlength=255 />
+	*[1649288]<td />
+		*[1649328]<div />
+		*[1649346]<input type=text id=MA55LO1 name=configurable-matrix[17][weight] maxlength=255 />
+	*[1649393]<td />
+		*[1649395]<div />
+			Enabled
+	*[1649396]<td />
+		Size: XL, Color: Purple
+	*[1649448]<td />
+		*[1649449]<button />
+			Select
+*[1649462]<tr />
+	*[1649467]<td />
+		*[1649507]<div />
+		*[1651672]<div />
+			*[1651677]<input type=file id=XSEPT0W name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651679]<span />
+				Upload Image
+	*[1649570]<td />
+		*[1649610]<div />
+		*[1649628]<input type=text id=W32W5I5 name=configurable-matrix[18][name] maxlength=255 />
+	*[1649675]<td />
+		*[1649715]<div />
+		*[1649733]<input type=text id=R7QMQFK name=configurable-matrix[18][sku] maxlength=255 />
+	*[1649780]<td />
+		*[1649820]<div />
+		*[1649844]<input type=text id=AUD2CXR name=configurable-matrix[18][price] maxlength=255 />
+	*[1649877]<td />
+		*[1649917]<div />
+		*[1649935]<input type=text id=MQLGNF2 name=configurable-matrix[18][qty] maxlength=255 />
+	*[1649982]<td />
+		*[1650022]<div />
+		*[1650040]<input type=text id=USQYDUM name=configurable-matrix[18][weight] maxlength=255 />
+	*[1650087]<td />
+		*[1650089]<div />
+			Enabled
+	*[1650090]<td />
+		Size: XL, Color: White
+	*[1650142]<td />
+		*[1650143]<button />
+			Select
+*[1650162]<tr />
+	*[1650167]<td />
+		*[1650207]<div />
+		*[1651708]<div />
+			*[1651713]<input type=file id=MCK4HNW name=image class=file-uploader-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[1651715]<span />
+				Upload Image
+	*[1650270]<td />
+		*[1650310]<div />
+		*[1650328]<input type=text id=KRDYFFJ name=configurable-matrix[19][name] maxlength=255 />
+	*[1650375]<td />
+		*[1650415]<div />
+		*[1650433]<input type=text id=GATB4FL name=configurable-matrix[19][sku] maxlength=255 />
+	*[1650480]<td />
+		*[1650520]<div />
+		*[1650544]<input type=text id=KBMPA4T name=configurable-matrix[19][price] maxlength=255 />
+	*[1650577]<td />
+		*[1650617]<div />
+		*[1650635]<input type=text id=JNM1I36 name=configurable-matrix[19][qty] maxlength=255 />
+	*[1650682]<td />
+		*[1650722]<div />
+		*[1650740]<input type=text id=BSG395Y name=configurable-matrix[19][weight] maxlength=255 />
+	*[1650787]<td />
+		*[1650789]<div />
+			Enabled
+	*[1650790]<td />
+		Size: XL, Color: Brown
+	*[1650842]<td />
+		*[1650843]<button />
+			Select
+|scroll element|<div /> (scroll: 0%, 1.9 pages below, total: 2.9 pages)
+	*[1633452]<input type=file name=image multiple=multiple class=admin__control-file compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />

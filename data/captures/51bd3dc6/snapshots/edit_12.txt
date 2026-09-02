@@ -1,0 +1,217 @@
+*[1526571]<a />
+*[1526580]<a />
+	Dashboard
+*[1526462]<a />
+	Sales
+*[1526463]<a />
+	Catalog
+*[1526464]<a />
+	Customers
+*[1526465]<a />
+	Marketing
+*[1526466]<a />
+	Content
+*[1526467]<a />
+	Reports
+*[1526468]<a />
+	Stores
+*[1526469]<a />
+	System
+*[1527182]<a />
+	Find Partners & Extensions
+Cache Management
+*[1527243]<a title=My Account />
+	admin
+*[1527281]<a title=Notifications />
+*[1527286]<div />
+	*[1526443]<form id=form-search />
+		*[1527289]<div />
+			*[1526444]<input type=text id=search-global name=query />
+*[1526470]<button title=Flush Magento Cache id=flush_magento />
+	Flush Magento Cache
+*[1526471]<button title=Flush Cache Storage id=flush_system />
+	Flush Cache Storage
+*[1526461]<select id=cache_grid_massaction-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Actions|Enable|Disable|Refresh) />
+*[1527393]<div />
+	*[1526445]<select id=cache_grid_massaction-mass-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Select All|Unselect All|Select Visible|Unselect Visible) />
+14
+records found
+*[1527446]<tr />
+	Cache Type
+	Description
+	Tags
+	Status
+*[1527471]<tr title=# />
+	*[1527473]<td />
+		*[1526446]<input type=checkbox checked=false id=id_743 name=types value=config />
+	*[1527480]<td />
+		Configuration
+	*[1527483]<td />
+		Various XML configurations that were collected across modules and merged
+	*[1527486]<td />
+		CONFIG
+	*[1527489]<td />
+		Enabled
+*[1527497]<tr title=# />
+	*[1527499]<td />
+		*[1526447]<input type=checkbox checked=false id=id_762 name=types value=layout />
+	*[1527506]<td />
+		Layouts
+	*[1527509]<td />
+		Layout building instructions
+	*[1527512]<td />
+		LAYOUT_GENERAL_CACHE_TAG
+	*[1527515]<td />
+		Enabled
+*[1527523]<tr title=# />
+	*[1527525]<td />
+		*[1526448]<input type=checkbox checked=false id=id_710 name=types value=block_html />
+	*[1527532]<td />
+		Blocks HTML output
+	*[1527535]<td />
+		Page blocks HTML
+	*[1527538]<td />
+		BLOCK_HTML
+	*[1527541]<td />
+		Enabled
+*[1527549]<tr title=# />
+	*[1527551]<td />
+		*[1526449]<input type=checkbox checked=false id=id_460 name=types value=collections />
+	*[1527558]<td />
+		Collections Data
+	*[1527561]<td />
+		Collection data files
+	*[1527564]<td />
+		COLLECTION_DATA
+	*[1527567]<td />
+		Enabled
+*[1527575]<tr title=# />
+	*[1527577]<td />
+		*[1526450]<input type=checkbox checked=false id=id_29 name=types value=reflection />
+	*[1527584]<td />
+		Reflection Data
+	*[1527587]<td />
+		API interfaces reflection data
+	*[1527590]<td />
+		REFLECTION
+	*[1527593]<td />
+		Enabled
+*[1527601]<tr title=# />
+	*[1527603]<td />
+		*[1526451]<input type=checkbox checked=false id=id_487 name=types value=db_ddl />
+	*[1527610]<td />
+		Database DDL operations
+	*[1527613]<td />
+		Results of DDL queries, such as describing tables or indexes
+	*[1527616]<td />
+		DB_DDL
+	*[1527619]<td />
+		Enabled
+*[1527627]<tr title=# />
+	*[1527629]<td />
+		*[1526452]<input type=checkbox checked=false id=id_274 name=types value=compiled_config />
+	*[1527636]<td />
+		Compiled Config
+	*[1527639]<td />
+		Compilation configuration
+	*[1527642]<td />
+		COMPILED_CONFIG
+	*[1527645]<td />
+		Enabled
+*[1527653]<tr title=# />
+	*[1527655]<td />
+		*[1526453]<input type=checkbox checked=false id=id_918 name=types value=eav />
+	*[1527662]<td />
+		EAV types and attributes
+	*[1527665]<td />
+		Entity types declaration cache
+	*[1527668]<td />
+		EAV
+	*[1527671]<td />
+		Enabled
+*[1527679]<tr title=# />
+	*[1527681]<td />
+		*[1526454]<input type=checkbox checked=false id=id_905 name=types value=customer_notification />
+	*[1527688]<td />
+		Customer Notification
+	*[1527691]<td />
+		Customer Notification
+	*[1527694]<td />
+		CUSTOMER_NOTIFICATION
+	*[1527697]<td />
+		Enabled
+*[1527705]<tr title=# />
+	*[1527707]<td />
+		*[1526455]<input type=checkbox checked=false id=id_882 name=types value=config_integration />
+	*[1527714]<td />
+		Integrations Configuration
+	*[1527717]<td />
+		Integration configuration file
+	*[1527720]<td />
+		INTEGRATION
+	*[1527723]<td />
+		Enabled
+*[1527731]<tr title=# />
+	*[1527733]<td />
+		*[1526456]<input type=checkbox checked=false id=id_988 name=types value=config_integration_api />
+	*[1527740]<td />
+		Integrations API Configuration
+	*[1527743]<td />
+		Integrations API configuration file
+	*[1527746]<td />
+		INTEGRATION_API_CONFIG
+	*[1527749]<td />
+		Enabled
+*[1527757]<tr title=# />
+	*[1527759]<td />
+		*[1526457]<input type=checkbox checked=false id=id_182 name=types value=full_page />
+	*[1527766]<td />
+		Page Cache
+	*[1527769]<td />
+		Full page caching
+	*[1527772]<td />
+		FPC
+	*[1527775]<td />
+		Enabled
+*[1527783]<tr title=# />
+	*[1527785]<td />
+		*[1526458]<input type=checkbox checked=false id=id_414 name=types value=config_webservice />
+	*[1527792]<td />
+		Web Services Configuration
+	*[1527795]<td />
+		REST and SOAP configurations, generated WSDL file
+	*[1527798]<td />
+		WEBSERVICE
+	*[1527801]<td />
+		Enabled
+*[1527809]<tr title=# />
+	*[1527811]<td />
+		*[1526459]<input type=checkbox checked=false id=id_650 name=types value=translate />
+	*[1527818]<td />
+		Translations
+	*[1527821]<td />
+		Translation files
+	*[1527824]<td />
+		TRANSLATE
+	*[1527827]<td />
+		Enabled
+Additional Cache Management
+*[1526473]<button id=flushCatalogImages />
+	Flush Catalog Images Cache
+Pregenerated product images files
+*[1526474]<button id=flushJsCss />
+	Flush JavaScript/CSS Cache
+Themes JavaScript and CSS files combined to one file
+*[1526475]<button id=flushStaticFiles />
+	Flush Static Files Cache
+Preprocessed view files and static files
+*[1527889]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[1527899]<a id=footer_privacy />
+	Privacy Policy
+*[1527902]<a id=footer_account_activity />
+	Account Activity
+*[1527905]<a id=footer_bug_tracking />
+	Report an Issue

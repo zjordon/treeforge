@@ -1,0 +1,72 @@
+Dashboard
+*[1433902]<a />
+	Sales
+*[1433947]<a />
+	Catalog
+*[1433972]<a />
+	Customers
+*[1433999]<a />
+	Marketing
+*[1434085]<a />
+	Content
+*[1434146]<a />
+	Reports
+*[1434309]<a />
+	Stores
+*[1434407]<a />
+	System
+Find Partners & Extensions
+Antonia Racer Tank
+admin
+Scope:
+All Store Views
+*[1434711]<a title=What is this? />
+	What is this?
+Save
+*[1434766]<button title=Back id=back />
+	Back
+Add Attribute
+*[1434790]<div />
+Content
+Configurations
+Product Reviews
+Images And Videos
+Search Engine Optimization
+*[1436199]<div />
+	*[1436200]<strong />
+		Related Products, Up-Sells, and Cross-Sells
+*[1436168]<div />
+	*[1436169]<strong />
+		*[1436170]<span />
+			Customizable Options
+		*[1436171]<span />
+*[1436137]<div />
+	*[1436138]<strong />
+		*[1436139]<span />
+			Product in Websites
+		*[1436140]<span />
+*[1436013]<div />
+	*[1436014]<strong />
+		*[1436015]<span />
+			Design
+		*[1436016]<span />
+*[1436044]<div />
+	*[1436045]<strong />
+		*[1436046]<span />
+			Schedule Design Update
+		*[1436047]<span />
+*[1436075]<div />
+	*[1436076]<strong />
+		*[1436077]<span />
+			Gift Options
+		*[1436078]<span />
+*[1434929]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[1433822]<a id=footer_privacy />
+	Privacy Policy
+*[1434941]<a id=footer_account_activity />
+	Account Activity
+*[1434944]<a id=footer_bug_tracking />
+	Report an Issue

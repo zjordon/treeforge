@@ -1,0 +1,86 @@
+[189247]<li id=menu-magento-backend-dashboard role=menu-item />
+	[189248]<a />
+		Dashboard
+[189253]<li id=menu-magento-sales-sales role=menu-item />
+	[189135]<a />
+		Sales
+[189296]<li id=menu-magento-catalog-catalog role=menu-item />
+	[189136]<a />
+		Catalog
+[189319]<li id=menu-magento-customer-customer role=menu-item />
+	[189137]<a />
+		Customers
+[189344]<li id=menu-magento-backend-marketing role=menu-item />
+	[189138]<a />
+		Marketing
+[189429]<li id=menu-magento-backend-content role=menu-item />
+	[189139]<a />
+		Content
+[189488]<li id=menu-magento-reports-report role=menu-item />
+	[189140]<a />
+		Reports
+[189649]<li id=menu-magento-backend-stores role=menu-item />
+	[189141]<a />
+		Stores
+[189745]<li id=menu-magento-backend-system role=menu-item />
+	[189142]<a />
+		System
+[189850]<li id=menu-magento-marketplace-partners role=menu-item />
+	[189851]<a />
+		Find Partners & Extensions
+Edit Review
+[189913]<a title=My Account />
+	admin
+[189951]<a title=Notifications />
+[189956]<div />
+	[189112]<form id=form-search />
+		[189959]<div />
+			[189113]<input type=text id=search-global autocomplete=off />
+[189143]<button title=Back id=back />
+	Back
+[189144]<button title=Reset id=reset />
+	Reset
+[189145]<button title=Delete Review id=delete />
+	Delete Review
+[190006]<button title=Save Review id=save_button />
+	Save Review
+[189123]<form id=edit_form />
+	Review Details
+	Product
+	[189146]<a />
+		Circe Hooded Ice Fleece
+	Author
+	Guest
+	Summary Rating
+	Detailed Rating
+	Rating
+	[190107]<label />
+	[190111]<label />
+	[190115]<label />
+	[190119]<label />
+	[190123]<label />
+	Status
+	Nickname
+	Summary of Review
+	Review
+	[189122]<textarea id=detail required=true />
+[190217]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[190227]<a id=footer_privacy />
+	Privacy Policy
+[190230]<a id=footer_account_activity />
+	Account Activity
+[190233]<a id=footer_bug_tracking />
+	Report an Issue
+*[190546]<aside role=dialog />
+	*[190547]<div />
+	*[190550]<button />
+	Are you sure you want to do this?
+	*[190554]<button />
+		Cancel
+	*[190556]<button />
+		OK
+	*[190558]<div />
+*[190566]<div />

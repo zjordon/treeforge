@@ -1,0 +1,467 @@
+[1244405]<a />
+[1244413]<li id=menu-magento-backend-dashboard role=menu-item />
+	[1244414]<a />
+		Dashboard
+[1244419]<li id=menu-magento-sales-sales role=menu-item />
+	[1244262]<a />
+		Sales
+[1244462]<li id=menu-magento-catalog-catalog role=menu-item />
+	[1244263]<a />
+		Catalog
+[1244485]<li id=menu-magento-customer-customer role=menu-item />
+	[1244264]<a />
+		Customers
+[1244510]<li id=menu-magento-backend-marketing role=menu-item />
+	[1244265]<a />
+		Marketing
+[1244595]<li id=menu-magento-backend-content role=menu-item />
+	[1244266]<a />
+		Content
+[1244654]<li id=menu-magento-reports-report role=menu-item />
+	[1244267]<a />
+		Reports
+[1244815]<li id=menu-magento-backend-stores role=menu-item />
+	[1244268]<a />
+		Stores
+[1244911]<li id=menu-magento-backend-system role=menu-item />
+	[1244269]<a />
+		System
+[1245016]<li id=menu-magento-marketplace-partners role=menu-item />
+	[1245017]<a />
+		Find Partners & Extensions
+[1245218]<div title=Save />
+	[1245222]<button title=Save id=save-button />
+		Save
+	[1245228]<button title=Save aria-label=Save options />
+[1244274]<button title=Back id=back />
+	Back
+[1245269]<button title=Add Attribute id=addAttribute />
+	Add Attribute
+*|scroll element[1250418]<select id=TNY2N42 name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)
+*|scroll element[1250541]<select id=IHRS891 name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 0%, 3.3 pages below, total: 4.3 pages)
+	*[1250605]<option value=136 selected=false />
+	*[1250608]<option value=137 selected=false />
+	*[1250611]<option value=138 selected=false />
+	*[1250614]<option value=139 selected=false />
+	*[1250617]<option value=140 selected=false />
+*|scroll element[1250655]<select id=TKJMT7I name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 27%, 3.7 pages below, 1.3 pages above, total: 6.0 pages)
+	*[1250710]<option value=150 selected=false />
+	*[1250713]<option value=151 selected=false />
+	*[1250716]<option value=40 selected=false />
+	*[1250719]<option value=152 selected=false />
+	*[1250722]<option value=41 selected=false />
+	*[1250725]<option value=42 selected=false />
+	*[1250728]<option value=153 selected=false />
+	*[1250731]<option value=43 selected=false />
+	*[1250734]<option value=154 selected=false />
+	*[1250737]<option value=155 selected=false />
+	[1250740]<option value=44 selected=false />
+	[1250743]<option value=156 selected=false />
+	[1250746]<option value=45 selected=false />
+	[1250749]<option value=157 selected=false />
+	[1250752]<option value=46 selected=false />
+	[1250755]<option value=47 selected=false />
+	[1250758]<option value=158 selected=true />
+	[1250761]<option value=48 selected=false />
+	[1250764]<option value=159 selected=false />
+*[1250809]<select id=ENG30K6 name=product[sleeve] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Sleeve|Long-Sleeve|Short-Sleeve|Sleeveless,format=numeric) />
+	*[1250819]<option value=162 selected=false />
+	*[1250822]<option value=163 selected=false />
+	*[1250825]<option value=164 selected=false />
+	*[1250828]<option value=165 selected=false />
+*[1248125]<span />
+	Size
+*[1248174]<span />
+	Collar
+*|scroll element[1250843]<select id=JUJR3P2 name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)
+	*[1250847]<option value=180 selected=false />
+	*[1250850]<option value=181 selected=false />
+	*[1250853]<option value=182 selected=false />
+	[1250856]<option value=183 selected=false />
+	[1250859]<option value=184 selected=false />
+	[1250862]<option value=185 selected=false />
+	[1250865]<option value=186 selected=false />
+	[1250868]<option value=187 selected=false />
+[1248223]<span />
+	Pattern
+*|scroll element[1250901]<select id=T5DHQW8 name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)
+	[1250905]<option value=192 selected=false />
+	[1250908]<option value=193 selected=false />
+	[1250911]<option value=194 selected=true />
+	[1250914]<option value=195 selected=false />
+	[1250917]<option value=196 selected=false />
+	[1250920]<option value=197 selected=false />
+	[1250923]<option value=198 selected=false />
+	[1250926]<option value=199 selected=false />
+[1248272]<span />
+	Climate
+*|scroll element[1250947]<select id=GOAC4U4 name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)
+	[1250951]<option value=201 selected=false />
+	[1250954]<option value=202 selected=false />
+	[1250957]<option value=203 selected=true />
+	[1250960]<option value=204 selected=false />
+	[1250963]<option value=205 selected=false />
+	[1250966]<option value=206 selected=false />
+	[1250969]<option value=207 selected=false />
+	[1250972]<option value=208 selected=false />
+	[1250975]<option value=209 selected=false />
+	[1250978]<option value=210 selected=false />
+	[1250981]<option value=211 selected=false />
+[1248321]<span />
+	Color
+[1248370]<span />
+	Eco Collection
+[1249382]<input type=checkbox checked=false id=QT3XD03 name=product[eco_collection] value=0 />
+[1249384]<span />
+[1248419]<span />
+	Performance Fabric
+[1249386]<input type=checkbox checked=false id=U2TKFXN name=product[performance_fabric] value=0 />
+[1249388]<span />
+Erin Recommends
+[1248517]<span />
+	New
+[1249394]<input type=checkbox checked=false id=H5CT8YW name=product[new] value=0 />
+[1249396]<span />
+[1248566]<span />
+	Sale
+[1249398]<input type=checkbox checked=false id=R3C3EHW name=product[sale] value=0 />
+[1249400]<span />
+[1246646]<div />
+	[1246647]<strong />
+		[1246648]<span />
+			Content
+		[1246649]<span />
+[1246925]<div />
+	[1246926]<strong />
+		[1246927]<span />
+			Configurations
+		[1246928]<span />
+			[1246929]<span />
+				[1246930]<span role=tooltip />
+[1276539]<button />
+	Add Products Manually
+[1276560]<button />
+	Edit Configurations
+Configurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).
+Current Variations
+*[1247418]<select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=7,options=5|20|30|50,format=numeric) />
+per page
+[1247442]<button title=Previous Page disabled=true />
+*[1247447]<input type=number id=2 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[1247449]<button title=Next Page disabled=true />
+[1247456]<tr />
+	Image
+	Name
+	SKU
+	Price
+	Quantity
+	Weight
+	Status
+	Attributes
+	Actions
+[1251462]<tr />
+	[1251467]<td />
+	[1251570]<td />
+		[1277082]<a />
+			Hollister Backyard Sweatshirt-XS-Green
+	[1251673]<td />
+		MH05-XS-Green
+	[1251776]<td />
+		$47.00
+	[1251879]<td />
+		100
+	[1251982]<td />
+		1.000000
+	[1252085]<td />
+		Enabled
+	[1252086]<td />
+		Size: XS, Color: Green
+	[1252136]<td />
+		[1277364]<button />
+			Select
+[1252139]<tr />
+	[1252144]<td />
+	[1252247]<td />
+		[1277095]<a />
+			Hollister Backyard Sweatshirt-XS-Red
+	[1252350]<td />
+		MH05-XS-Red
+	[1252453]<td />
+		$52.00
+	[1252556]<td />
+		100
+	[1252659]<td />
+		1.000000
+	[1252762]<td />
+		Enabled
+	[1252763]<td />
+		Size: XS, Color: Red
+	[1252813]<td />
+		[1277375]<button />
+			Select
+[1252816]<tr />
+	[1252821]<td />
+	[1252924]<td />
+		[1277108]<a />
+			Hollister Backyard Sweatshirt-XS-White
+	[1253027]<td />
+		MH05-XS-White
+	[1253130]<td />
+		$52.00
+	[1253233]<td />
+		100
+	[1253336]<td />
+		1.000000
+	[1253439]<td />
+		Enabled
+	[1253440]<td />
+		Size: XS, Color: White
+	[1253490]<td />
+		[1277386]<button />
+			Select
+[1253493]<tr />
+	[1253498]<td />
+	[1253601]<td />
+		[1277121]<a />
+			Hollister Backyard Sweatshirt-S-Green
+	[1253704]<td />
+		MH05-S-Green
+	[1253807]<td />
+		$47.00
+	[1253910]<td />
+		100
+	[1254013]<td />
+		1.000000
+	[1254116]<td />
+		Enabled
+	[1254117]<td />
+		Size: S, Color: Green
+	[1254167]<td />
+		[1277397]<button />
+			Select
+[1254170]<tr />
+	[1254175]<td />
+	[1254278]<td />
+		[1277134]<a />
+			Hollister Backyard Sweatshirt-S-Red
+	[1254381]<td />
+		MH05-S-Red
+	[1254484]<td />
+		$52.00
+	[1254587]<td />
+		100
+	[1254690]<td />
+		1.000000
+	[1254793]<td />
+		Enabled
+	[1254794]<td />
+		Size: S, Color: Red
+	[1254844]<td />
+		[1277408]<button />
+			Select
+[1254847]<tr />
+	[1254852]<td />
+	[1254955]<td />
+		[1277147]<a />
+			Hollister Backyard Sweatshirt-S-White
+	[1255058]<td />
+		MH05-S-White
+	[1255161]<td />
+		$52.00
+	[1255264]<td />
+		100
+	[1255367]<td />
+		1.000000
+	[1255470]<td />
+		Enabled
+	[1255471]<td />
+		Size: S, Color: White
+	[1255521]<td />
+		[1277419]<button />
+			Select
+[1255524]<tr />
+	[1255529]<td />
+	[1255632]<td />
+		[1277160]<a />
+			Hollister Backyard Sweatshirt-M-Green
+	[1255735]<td />
+		MH05-M-Green
+	[1255838]<td />
+		$47.00
+	[1255941]<td />
+		100
+	[1256044]<td />
+		1.000000
+	[1256147]<td />
+		Enabled
+	[1256148]<td />
+		Size: M, Color: Green
+	[1256198]<td />
+		[1277430]<button />
+			Select
+[1256201]<tr />
+	[1256206]<td />
+	[1256309]<td />
+		[1277173]<a />
+			Hollister Backyard Sweatshirt-M-Red
+	[1256412]<td />
+		MH05-M-Red
+	[1256515]<td />
+		$52.00
+	[1256618]<td />
+		100
+	[1256721]<td />
+		1.000000
+	[1256824]<td />
+		Enabled
+	[1256825]<td />
+		Size: M, Color: Red
+	[1256875]<td />
+		[1277441]<button />
+			Select
+[1256878]<tr />
+	[1256883]<td />
+	[1256986]<td />
+		[1277186]<a />
+			Hollister Backyard Sweatshirt-M-White
+	[1257089]<td />
+		MH05-M-White
+	[1257192]<td />
+		$52.00
+	[1257295]<td />
+		100
+	[1257398]<td />
+		1.000000
+	[1257501]<td />
+		Enabled
+	[1257502]<td />
+		Size: M, Color: White
+	[1257552]<td />
+		[1277452]<button />
+			Select
+[1257555]<tr />
+	[1257560]<td />
+	[1257663]<td />
+		[1277199]<a />
+			Hollister Backyard Sweatshirt-L-Green
+	[1257766]<td />
+		MH05-L-Green
+	[1257869]<td />
+		$47.00
+	[1257972]<td />
+		100
+	[1258075]<td />
+		1.000000
+	[1258178]<td />
+		Enabled
+	[1258179]<td />
+		Size: L, Color: Green
+	[1258229]<td />
+		[1277463]<button />
+			Select
+[1258232]<tr />
+	[1258237]<td />
+	[1258340]<td />
+		[1277212]<a />
+			Hollister Backyard Sweatshirt-L-Red
+	[1258443]<td />
+		MH05-L-Red
+	[1258546]<td />
+		$52.00
+	[1258649]<td />
+		100
+	[1258752]<td />
+		1.000000
+	[1258855]<td />
+		Enabled
+	[1258856]<td />
+		Size: L, Color: Red
+	[1258906]<td />
+		[1277474]<button />
+			Select
+[1258909]<tr />
+	[1258914]<td />
+	[1259017]<td />
+		[1277225]<a />
+			Hollister Backyard Sweatshirt-L-White
+	[1259120]<td />
+		MH05-L-White
+	[1259223]<td />
+		$52.00
+	[1259326]<td />
+		100
+	[1259429]<td />
+		1.000000
+	[1259532]<td />
+		Enabled
+	[1259533]<td />
+		Size: L, Color: White
+	[1259583]<td />
+		[1277485]<button />
+			Select
+[1259586]<tr />
+	[1259591]<td />
+	[1259694]<td />
+		[1277238]<a />
+			Hollister Backyard Sweatshirt-XL-Green
+	[1259797]<td />
+		MH05-XL-Green
+	[1259900]<td />
+		$47.00
+	[1260003]<td />
+		100
+	[1260106]<td />
+		1.000000
+	[1260209]<td />
+		Enabled
+	[1260210]<td />
+		Size: XL, Color: Green
+	[1260260]<td />
+		[1277496]<button />
+			Select
+[1260263]<tr />
+	[1260268]<td />
+	[1260371]<td />
+		[1277251]<a />
+			Hollister Backyard Sweatshirt-XL-Red
+	[1260474]<td />
+		MH05-XL-Red
+	[1260577]<td />
+		$52.00
+	[1260680]<td />
+		100
+	[1260783]<td />
+		1.000000
+	[1260886]<td />
+		Enabled
+	[1260887]<td />
+		Size: XL, Color: Red
+	[1260937]<td />
+		[1277507]<button />
+			Select
+[1260946]<tr />
+	[1260951]<td />
+	[1261054]<td />
+		[1277264]<a />
+			Hollister Backyard Sweatshirt-XL-White
+	[1261157]<td />
+		MH05-XL-White
+	[1261260]<td />
+		$52.00
+	[1261363]<td />
+		100
+	[1261466]<td />
+		1.000000
+	[1261569]<td />
+		Enabled
+	[1261570]<td />
+		Size: XL, Color: White
+	[1261620]<td />
+		[1277518]<button />
+			Select
+[1246801]<div />
+	[1246802]<strong />
+		[1246803]<span />
+			Product Reviews
+		[1246804]<span />

@@ -1,0 +1,158 @@
+[179641]<a />
+[179645]<li id=menu-magento-backend-dashboard role=menu-item />
+	[179646]<a />
+		Dashboard
+[179648]<li id=menu-magento-sales-sales role=menu-item />
+	[179649]<a />
+		Sales
+[179681]<li id=menu-magento-catalog-catalog role=menu-item />
+	[179682]<a />
+		Catalog
+[179699]<li id=menu-magento-customer-customer role=menu-item />
+	[179700]<a />
+		Customers
+[179718]<li id=menu-magento-backend-marketing role=menu-item />
+	[179719]<a />
+		Marketing
+[179785]<li id=menu-magento-backend-content role=menu-item />
+	[179786]<a />
+		Content
+[179831]<li id=menu-magento-reports-report role=menu-item />
+	[179832]<a />
+		Reports
+[179956]<li id=menu-magento-backend-stores role=menu-item />
+	[179957]<a />
+		Stores
+[180032]<li id=menu-magento-backend-system role=menu-item />
+	[180033]<a />
+		System
+[180115]<li id=menu-magento-marketplace-partners role=menu-item />
+	[180116]<a />
+		Find Partners & Extensions
+Reviews
+[180142]<a title=My Account />
+	admin
+[180154]<a title=Notifications />
+[180155]<div />
+	[180156]<form id=form-search />
+		[180157]<div />
+			[180159]<input type=text id=search-global autocomplete=off />
+[180167]<button title=New Review id=add />
+	New Review
+[180177]<button title=Search id=id_m9V8TOGtam9R16gx1DKYTws940xXKU24 />
+	Search
+[180180]<button title=Reset Filter id=id_M9fgIlN7Y28WlJhhbfOIgCeJf5d3h1Cb />
+	Reset Filter
+[180185]<form id=reviewGrid_massaction-form />
+	*[180195]<select id=reviewGrid_massaction-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Actions|Delete|Update Status) />
+[180236]<div />
+	*[180243]<select id=reviewGrid_massaction-mass-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Select All|Unselect All|Select Visible|Unselect Visible) />
+records found
+*[180276]<select id=reviewGrid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />
+per page
+[180294]<button />
+[180296]<input type=text id=reviewGrid_page-current name=page value=1 />
+of
+[180300]<button />
+[180305]<tr />
+	[180307]<th />
+		[180308]<span />
+			ID
+	[180309]<th />
+		[180310]<span />
+			Created
+	[180311]<th />
+		[180312]<span />
+			Status
+	[180313]<th />
+		[180314]<span />
+			Title
+	[180315]<th />
+		[180316]<span />
+			Nickname
+	[180317]<th />
+		[180318]<span />
+			Review
+	Visibility
+	[180321]<th />
+		[180322]<span />
+			Type
+	[180323]<th />
+		[180324]<span />
+			Product
+	[180325]<th />
+		[180326]<span />
+			SKU
+	Action
+[180329]<tr />
+	[180330]<td />
+		*[180338]<select id=reviewGrid_filter_massaction name=massaction expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Any|Yes|No) />
+	[180348]<td />
+		[180349]<input type=text id=reviewGrid_filter_review_id name=review_id />
+	[180350]<td />
+		[180353]<input type=text id=reviewGrid_filter_created_atZZQEh7HrSCVoz7WqtshC89O20w2SV6Os_from name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		[180860]<button />
+			[180863]<span />
+				undefined
+		[180355]<input type=text id=reviewGrid_filter_created_atZZQEh7HrSCVoz7WqtshC89O20w2SV6Os_to name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		[184391]<button />
+			[184394]<span />
+				undefined
+	[180358]<td />
+		*[180365]<select id=reviewGrid_filter_status name=status expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	[180378]<td />
+		[180379]<input type=text id=reviewGrid_filter_title name=title />
+	[180380]<td />
+		[180381]<input type=text id=reviewGrid_filter_nickname name=nickname />
+	[180382]<td />
+		[180383]<input type=text id=reviewGrid_filter_detail name=detail />
+	[180384]<td />
+		*[180391]<select name=visible_in expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Default Store View) />
+	[180404]<td />
+		*[180411]<select id=reviewGrid_filter_type name=type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Administrator|Customer|Guest,format=numeric) />
+	[180424]<td />
+		[180425]<input type=text id=reviewGrid_filter_name name=name value=Circe />
+	[180426]<td />
+		[180427]<input type=text id=reviewGrid_filter_sku name=sku />
+	[180428]<td />
+[180430]<tr title=http://localhost:7780/admin/review/product/edit/id/353/ />
+	[180431]<td />
+		[180433]<input type=checkbox checked=false id=id_420 name=reviews value=353 />
+	[180435]<td />
+		353
+	[180436]<td />
+		Apr 24, 2023, 2:55:10 PM
+	[180437]<td />
+		Pending
+	[180438]<td />
+		Bad!
+	[180439]<td />
+		Hannah Lim
+	[180440]<td />
+		I was really disappointed with the Circe Hooded...
+	[180441]<td />
+		Main Website
+		*[180442]<br />
+		Main Website Store
+		*[180443]<br />
+		Default Store View
+		*[180444]<br />
+	[180445]<td />
+		Guest
+	[180446]<td />
+		Circe Hooded Ice Fleece
+	[180447]<td />
+		WH12
+	[180448]<td />
+		[180449]<a id=idUPAfLNBJcL />
+			Edit
+[180455]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[180459]<a id=footer_privacy />
+	Privacy Policy
+[180460]<a id=footer_account_activity />
+	Account Activity
+[180461]<a id=footer_bug_tracking />
+	Report an Issue

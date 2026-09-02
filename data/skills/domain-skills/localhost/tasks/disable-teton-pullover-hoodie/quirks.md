@@ -1,7 +1,7 @@
 # Quirks — localhost
 
-- 只需禁用父商品（Configurable Product，ID 78）：禁用父商品即整品下架，无需逐个禁用 15 个 simple 变体（stage product 中可见变体均为 "Not Visible Individually"）。
-- Enable Product 的 checkbox 元素 id 每次页面加载都不同（录制中为 BQG6PKS），只能靠 `name=product[status]` 识别——agents 按 index 操作时要在当前 DOM 快照中找 name 为 `product[status]` 的 checkbox。
-- 点击 label 与点击 checkbox 本身均生效（录制中两次点击均触发同一开关）；一次取消勾选即可，不要重复点击导致状态翻转。
-- 点击 Save 后页面短暂显示 "Please wait..." 遮罩（stage 78），需等待保存完成后再操作（可 `wait(1~2)`），随后页面回到编辑页而非列表页；需手动点 Back 返回网格验证。
-- 搜索前若存在遗留过滤条件，结果可能不全（录制中先点了 Clear all）；产品网格默认只显示第 1 页/20 条，确保 keyword 过滤生效后再找 Edit 链接。
+1. **status 复选框语义反直觉**（stage 78_4）："Enable Product" 复选框 checked=false 且 value=2 才代表 Disabled。禁用 = 取消勾选，不是勾选。判断成功看产品列表 Status 列文字 "Disabled"，不要靠 checked 属性直觉。
+2. **只需改父产品**：Teton Pullover Hoodie 是 Configurable Product（MH02），含 15 个尺码/颜色变体（Simple Product，均 Enabled）。禁用父产品即可整体下架，不要逐个禁用变体。
+3. **搜索前先清过滤器**（stage product_2）：若上次会话留有 Active filters，fulltext 搜索可能不生效或结果集是全量 2040 条；先点 "Clear all" 再输入关键词。
+4. **编辑页元素 id 不稳定**：表单控件 id（如 BQG6PKS、GT0AOJ9）每次进入页面都会重新生成，必须靠 name 属性定位，勿记忆 index/id。
+5. **保存是同步跳转**：点 Save 后页面显示 "Please wait..." 并重载，随后停在编辑页；需再点 Back 才回产品列表验证。

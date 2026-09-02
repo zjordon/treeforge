@@ -1,0 +1,951 @@
+[1325258]<a />
+*[1325266]<li id=menu-magento-backend-dashboard role=menu-item />
+	[1325267]<a />
+		Dashboard
+*[1325272]<li id=menu-magento-sales-sales role=menu-item />
+	[1325153]<a />
+		Sales
+*[1325315]<li id=menu-magento-catalog-catalog role=menu-item />
+	[1325154]<a />
+		Catalog
+*[1325338]<li id=menu-magento-customer-customer role=menu-item />
+	[1325155]<a />
+		Customers
+*[1325363]<li id=menu-magento-backend-marketing role=menu-item />
+	[1325156]<a />
+		Marketing
+*[1325448]<li id=menu-magento-backend-content role=menu-item />
+	[1325157]<a />
+		Content
+*[1325507]<li id=menu-magento-reports-report role=menu-item />
+	[1325158]<a />
+		Reports
+*[1325668]<li id=menu-magento-backend-stores role=menu-item />
+	[1325159]<a />
+		Stores
+*[1325764]<li id=menu-magento-backend-system role=menu-item />
+	[1325160]<a />
+		System
+*[1325869]<li id=menu-magento-marketplace-partners role=menu-item />
+	[1325870]<a />
+		Find Partners & Extensions
+Products
+[1325932]<a title=My Account />
+	admin
+[1325970]<a title=Notifications />
+[1325975]<div />
+	[1325145]<form id=form-search />
+		[1325978]<div />
+			[1325146]<input type=text id=search-global autocomplete=off />
+*[1326004]<div title=Add Product id=add_new_product />
+	[1326008]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[1326014]<button title=Add Product aria-label=Add product of type />
+*[1326463]<button />
+	Default View
+*[1326663]<button />
+	Columns
+*[1326583]<button />
+	Filters
+Active filters:
+Keyword:
+Hollister
+*[1327716]<button />
+*[1327663]<button />
+	Clear all
+*[1326610]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+*[1326611]<button aria-label=Search />
+*[1326618]<button title=Select Items />
+	Actions
+16
+records found
+*[1328003]<div />
+	*[1328005]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+*[1328006]<button />
+	Select
+per page
+*[1326844]<button title=Previous Page disabled=true />
+*[1326849]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[1326851]<button title=Next Page disabled=true />
+*[1326427]<tr />
+	*[1327137]<div />
+		*[1327138]<input type=checkbox checked=false id=77 />
+		*[1327140]<button />
+			Options
+	*[1327160]<th />
+		*[1327159]<span />
+			ID
+	*[1327163]<th />
+		Thumbnail
+	*[1327166]<th />
+		*[1327165]<span />
+			Name
+	*[1327169]<th />
+		*[1327168]<span />
+			Type
+	*[1327172]<th />
+		*[1327171]<span />
+			Attribute Set
+	*[1327175]<th />
+		*[1327174]<span />
+			SKU
+	*[1327178]<th />
+		*[1327177]<span />
+			Price
+	*[1327181]<th />
+		*[1327180]<span />
+			Quantity
+	*[1327184]<th />
+		Salable Quantity
+	*[1327187]<th />
+		*[1327186]<span />
+			Visibility
+	*[1327190]<th />
+		*[1327189]<span />
+			Status
+	*[1327193]<th />
+		*[1327192]<span />
+			Websites
+	*[1327196]<th />
+		*[1327195]<span />
+			Last Updated At
+	*[1327199]<th />
+		*[1327198]<span />
+			Action
+*[1344639]<tr />
+	*[1344688]<td />
+		*[1344936]<label />
+			*[1344934]<input type=checkbox checked=false id=idscheck126 value=126 />
+	*[1344689]<td />
+		*[1344982]<div />
+			126
+	*[1344690]<td />
+		*[1345324]<span />
+			*[1345322]<span />
+				*[1345323]<img alt=Hollister Backyard Sweatshirt />
+	*[1344691]<td />
+		*[1345370]<div />
+			Hollister Backyard Sweatshirt
+	*[1344692]<td />
+		*[1344983]<div />
+			Configurable Product
+	*[1344693]<td />
+		*[1344984]<div />
+			Top
+	*[1344694]<td />
+		*[1345371]<div />
+			MH05
+	*[1344695]<td />
+		*[1344985]<div />
+	*[1344696]<td />
+		*[1344986]<div />
+			0.0000
+	*[1344697]<td />
+		*[1345408]<div />
+			*[1345402]<ul />
+	*[1344698]<td />
+		*[1344987]<div />
+			Catalog, Search
+	*[1344699]<td />
+		*[1344988]<div />
+			Enabled
+	*[1344700]<td />
+		*[1344989]<div />
+			Main Website
+	*[1344701]<td />
+		*[1344990]<div />
+			Sep 2, 2026 8:23:11 AM
+	*[1344702]<td />
+		*[1345959]<a aria-label=Edit Hollister Backyard Sweatshirt />
+			Edit
+*[1344642]<tr />
+	*[1344703]<td />
+		*[1344939]<label />
+			*[1344937]<input type=checkbox checked=false id=idscheck111 value=111 />
+	*[1344704]<td />
+		*[1344991]<div />
+			111
+	*[1344705]<td />
+		*[1345327]<span />
+			*[1345325]<span />
+				*[1345326]<img alt=Hollister Backyard Sweatshirt-XS-Green />
+	*[1344706]<td />
+		*[1345372]<div />
+			Hollister Backyard Sweatshirt-XS-Green
+	*[1344707]<td />
+		*[1344992]<div />
+			Simple Product
+	*[1344708]<td />
+		*[1344993]<div />
+			Top
+	*[1344709]<td />
+		*[1345373]<div />
+			MH05-XS-Green
+	*[1344710]<td />
+		*[1344994]<div />
+			$47.00
+	*[1344711]<td />
+		*[1344995]<div />
+			100.0000
+	*[1344712]<td />
+		*[1345434]<div />
+			*[1345428]<ul />
+				*[1345454]<li level=1 />
+					*[1345457]<strong />
+						Default Stock
+					*[1345458]<span />
+						100
+	*[1344713]<td />
+		*[1344996]<div />
+			Not Visible Individually
+	*[1344714]<td />
+		*[1344997]<div />
+			Enabled
+	*[1344715]<td />
+		*[1344998]<div />
+			Main Website
+	*[1344716]<td />
+		*[1344999]<div />
+			Sep 2, 2026 7:34:41 AM
+	*[1344717]<td />
+		*[1345979]<a aria-label=Edit Hollister Backyard Sweatshirt-XS-Green />
+			Edit
+*[1344645]<tr />
+	*[1344718]<td />
+		*[1344942]<label />
+			*[1344940]<input type=checkbox checked=false id=idscheck115 value=115 />
+	*[1344719]<td />
+		*[1345000]<div />
+			115
+	*[1344720]<td />
+		*[1345330]<span />
+			*[1345328]<span />
+				*[1345329]<img alt=Hollister Backyard Sweatshirt-S-Red />
+	*[1344721]<td />
+		*[1345374]<div />
+			Hollister Backyard Sweatshirt-S-Red
+	*[1344722]<td />
+		*[1345001]<div />
+			Simple Product
+	*[1344723]<td />
+		*[1345002]<div />
+			Top
+	*[1344724]<td />
+		*[1345375]<div />
+			MH05-S-Red
+	*[1344725]<td />
+		*[1345003]<div />
+			$52.00
+	*[1344726]<td />
+		*[1345004]<div />
+			100.0000
+	*[1344727]<td />
+		*[1345469]<div />
+			*[1345463]<ul />
+				*[1345489]<li level=1 />
+					*[1345492]<strong />
+						Default Stock
+					*[1345493]<span />
+						100
+	*[1344728]<td />
+		*[1345005]<div />
+			Not Visible Individually
+	*[1344729]<td />
+		*[1345006]<div />
+			Enabled
+	*[1344730]<td />
+		*[1345007]<div />
+			Main Website
+	*[1344731]<td />
+		*[1345008]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344732]<td />
+		*[1345999]<a aria-label=Edit Hollister Backyard Sweatshirt-S-Red />
+			Edit
+*[1344648]<tr />
+	*[1344733]<td />
+		*[1344945]<label />
+			*[1344943]<input type=checkbox checked=false id=idscheck119 value=119 />
+	*[1344734]<td />
+		*[1345009]<div />
+			119
+	*[1344735]<td />
+		*[1345333]<span />
+			*[1345331]<span />
+				*[1345332]<img alt=Hollister Backyard Sweatshirt-M-White />
+	*[1344736]<td />
+		*[1345376]<div />
+			Hollister Backyard Sweatshirt-M-White
+	*[1344737]<td />
+		*[1345010]<div />
+			Simple Product
+	*[1344738]<td />
+		*[1345011]<div />
+			Top
+	*[1344739]<td />
+		*[1345377]<div />
+			MH05-M-White
+	*[1344740]<td />
+		*[1345012]<div />
+			$52.00
+	*[1344741]<td />
+		*[1345013]<div />
+			100.0000
+	*[1344742]<td />
+		*[1345504]<div />
+			*[1345498]<ul />
+				*[1345524]<li level=1 />
+					*[1345527]<strong />
+						Default Stock
+					*[1345528]<span />
+						100
+	*[1344743]<td />
+		*[1345014]<div />
+			Not Visible Individually
+	*[1344744]<td />
+		*[1345015]<div />
+			Enabled
+	*[1344745]<td />
+		*[1345016]<div />
+			Main Website
+	*[1344746]<td />
+		*[1345017]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344747]<td />
+		*[1346019]<a aria-label=Edit Hollister Backyard Sweatshirt-M-White />
+			Edit
+*[1344651]<tr />
+	*[1344748]<td />
+		*[1344948]<label />
+			*[1344946]<input type=checkbox checked=false id=idscheck123 value=123 />
+	*[1344749]<td />
+		*[1345018]<div />
+			123
+	*[1344750]<td />
+		*[1345336]<span />
+			*[1345334]<span />
+				*[1345335]<img alt=Hollister Backyard Sweatshirt-XL-Green />
+	*[1344751]<td />
+		*[1345378]<div />
+			Hollister Backyard Sweatshirt-XL-Green
+	*[1344752]<td />
+		*[1345019]<div />
+			Simple Product
+	*[1344753]<td />
+		*[1345020]<div />
+			Top
+	*[1344754]<td />
+		*[1345379]<div />
+			MH05-XL-Green
+	*[1344755]<td />
+		*[1345021]<div />
+			$47.00
+	*[1344756]<td />
+		*[1345022]<div />
+			100.0000
+	*[1344757]<td />
+		*[1345539]<div />
+			*[1345533]<ul />
+				*[1345559]<li level=1 />
+					*[1345562]<strong />
+						Default Stock
+					*[1345563]<span />
+						99
+	*[1344758]<td />
+		*[1345023]<div />
+			Not Visible Individually
+	*[1344759]<td />
+		*[1345024]<div />
+			Enabled
+	*[1344760]<td />
+		*[1345025]<div />
+			Main Website
+	*[1344761]<td />
+		*[1345026]<div />
+			Sep 2, 2026 7:35:09 AM
+	*[1344762]<td />
+		*[1346039]<a aria-label=Edit Hollister Backyard Sweatshirt-XL-Green />
+			Edit
+*[1344654]<tr />
+	*[1344763]<td />
+		*[1344951]<label />
+			*[1344949]<input type=checkbox checked=false id=idscheck112 value=112 />
+	*[1344764]<td />
+		*[1345027]<div />
+			112
+	*[1344765]<td />
+		*[1345339]<span />
+			*[1345337]<span />
+				*[1345338]<img alt=Hollister Backyard Sweatshirt-XS-Red />
+	*[1344766]<td />
+		*[1345380]<div />
+			Hollister Backyard Sweatshirt-XS-Red
+	*[1344767]<td />
+		*[1345028]<div />
+			Simple Product
+	*[1344768]<td />
+		*[1345029]<div />
+			Top
+	*[1344769]<td />
+		*[1345381]<div />
+			MH05-XS-Red
+	*[1344770]<td />
+		*[1345030]<div />
+			$52.00
+	*[1344771]<td />
+		*[1345031]<div />
+			100.0000
+	*[1344772]<td />
+		*[1345574]<div />
+			*[1345568]<ul />
+				*[1345594]<li level=1 />
+					*[1345597]<strong />
+						Default Stock
+					*[1345598]<span />
+						99
+	*[1344773]<td />
+		*[1345032]<div />
+			Not Visible Individually
+	*[1344774]<td />
+		*[1345033]<div />
+			Enabled
+	*[1344775]<td />
+		*[1345034]<div />
+			Main Website
+	*[1344776]<td />
+		*[1345035]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344777]<td />
+		*[1346059]<a aria-label=Edit Hollister Backyard Sweatshirt-XS-Red />
+			Edit
+*[1344657]<tr />
+	*[1344778]<td />
+		*[1344954]<label />
+			*[1344952]<input type=checkbox checked=false id=idscheck116 value=116 />
+	*[1344779]<td />
+		*[1345036]<div />
+			116
+	*[1344780]<td />
+		*[1345342]<span />
+			*[1345340]<span />
+				*[1345341]<img alt=Hollister Backyard Sweatshirt-S-White />
+	*[1344781]<td />
+		*[1345382]<div />
+			Hollister Backyard Sweatshirt-S-White
+	*[1344782]<td />
+		*[1345037]<div />
+			Simple Product
+	*[1344783]<td />
+		*[1345038]<div />
+			Top
+	*[1344784]<td />
+		*[1345383]<div />
+			MH05-S-White
+	*[1344785]<td />
+		*[1345039]<div />
+			$52.00
+	*[1344786]<td />
+		*[1345040]<div />
+			100.0000
+	*[1344787]<td />
+		*[1345609]<div />
+			*[1345603]<ul />
+				*[1345629]<li level=1 />
+					*[1345632]<strong />
+						Default Stock
+					*[1345633]<span />
+						100
+	*[1344788]<td />
+		*[1345041]<div />
+			Not Visible Individually
+	*[1344789]<td />
+		*[1345042]<div />
+			Enabled
+	*[1344790]<td />
+		*[1345043]<div />
+			Main Website
+	*[1344791]<td />
+		*[1345044]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344792]<td />
+		*[1346079]<a aria-label=Edit Hollister Backyard Sweatshirt-S-White />
+			Edit
+*[1344660]<tr />
+	*[1344793]<td />
+		*[1344957]<label />
+			*[1344955]<input type=checkbox checked=false id=idscheck120 value=120 />
+	*[1344794]<td />
+		*[1345045]<div />
+			120
+	*[1344795]<td />
+		*[1345345]<span />
+			*[1345343]<span />
+				*[1345344]<img alt=Hollister Backyard Sweatshirt-L-Green />
+	*[1344796]<td />
+		*[1345384]<div />
+			Hollister Backyard Sweatshirt-L-Green
+	*[1344797]<td />
+		*[1345046]<div />
+			Simple Product
+	*[1344798]<td />
+		*[1345047]<div />
+			Top
+	*[1344799]<td />
+		*[1345385]<div />
+			MH05-L-Green
+	*[1344800]<td />
+		*[1345048]<div />
+			$47.00
+	*[1344801]<td />
+		*[1345049]<div />
+			100.0000
+	*[1344802]<td />
+		*[1345644]<div />
+			*[1345638]<ul />
+				*[1345664]<li level=1 />
+					*[1345667]<strong />
+						Default Stock
+					*[1345668]<span />
+						99
+	*[1344803]<td />
+		*[1345050]<div />
+			Not Visible Individually
+	*[1344804]<td />
+		*[1345051]<div />
+			Enabled
+	*[1344805]<td />
+		*[1345052]<div />
+			Main Website
+	*[1344806]<td />
+		*[1345053]<div />
+			Sep 2, 2026 7:35:22 AM
+	*[1344807]<td />
+		*[1346099]<a aria-label=Edit Hollister Backyard Sweatshirt-L-Green />
+			Edit
+*[1344663]<tr />
+	*[1344808]<td />
+		*[1344960]<label />
+			*[1344958]<input type=checkbox checked=false id=idscheck124 value=124 />
+	*[1344809]<td />
+		*[1345054]<div />
+			124
+	*[1344810]<td />
+		*[1345348]<span />
+			*[1345346]<span />
+				*[1345347]<img alt=Hollister Backyard Sweatshirt-XL-Red />
+	*[1344811]<td />
+		*[1345386]<div />
+			Hollister Backyard Sweatshirt-XL-Red
+	*[1344812]<td />
+		*[1345055]<div />
+			Simple Product
+	*[1344813]<td />
+		*[1345056]<div />
+			Top
+	*[1344814]<td />
+		*[1345387]<div />
+			MH05-XL-Red
+	*[1344815]<td />
+		*[1345057]<div />
+			$52.00
+	*[1344816]<td />
+		*[1345058]<div />
+			100.0000
+	*[1344817]<td />
+		*[1345679]<div />
+			*[1345673]<ul />
+				*[1345699]<li level=1 />
+					*[1345702]<strong />
+						Default Stock
+					*[1345703]<span />
+						100
+	*[1344818]<td />
+		*[1345059]<div />
+			Not Visible Individually
+	*[1344819]<td />
+		*[1345060]<div />
+			Enabled
+	*[1344820]<td />
+		*[1345061]<div />
+			Main Website
+	*[1344821]<td />
+		*[1345062]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344822]<td />
+		*[1346119]<a aria-label=Edit Hollister Backyard Sweatshirt-XL-Red />
+			Edit
+*[1344666]<tr />
+	*[1344823]<td />
+		*[1344963]<label />
+			*[1344961]<input type=checkbox checked=false id=idscheck113 value=113 />
+	*[1344824]<td />
+		*[1345063]<div />
+			113
+	*[1344825]<td />
+		*[1345351]<span />
+			*[1345349]<span />
+				*[1345350]<img alt=Hollister Backyard Sweatshirt-XS-White />
+	*[1344826]<td />
+		*[1345388]<div />
+			Hollister Backyard Sweatshirt-XS-White
+	*[1344827]<td />
+		*[1345064]<div />
+			Simple Product
+	*[1344828]<td />
+		*[1345065]<div />
+			Top
+	*[1344829]<td />
+		*[1345389]<div />
+			MH05-XS-White
+	*[1344830]<td />
+		*[1345066]<div />
+			$52.00
+	*[1344831]<td />
+		*[1345067]<div />
+			100.0000
+	*[1344832]<td />
+		*[1345714]<div />
+			*[1345708]<ul />
+				*[1345734]<li level=1 />
+					*[1345737]<strong />
+						Default Stock
+					*[1345738]<span />
+						100
+	*[1344833]<td />
+		*[1345068]<div />
+			Not Visible Individually
+	*[1344834]<td />
+		*[1345069]<div />
+			Enabled
+	*[1344835]<td />
+		*[1345070]<div />
+			Main Website
+	*[1344836]<td />
+		*[1345071]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344837]<td />
+		*[1346139]<a aria-label=Edit Hollister Backyard Sweatshirt-XS-White />
+			Edit
+*[1344669]<tr />
+	*[1344838]<td />
+		*[1344966]<label />
+			*[1344964]<input type=checkbox checked=false id=idscheck117 value=117 />
+	*[1344839]<td />
+		*[1345072]<div />
+			117
+	*[1344840]<td />
+		*[1345354]<span />
+			*[1345352]<span />
+				*[1345353]<img alt=Hollister Backyard Sweatshirt-M-Green />
+	*[1344841]<td />
+		*[1345390]<div />
+			Hollister Backyard Sweatshirt-M-Green
+	*[1344842]<td />
+		*[1345073]<div />
+			Simple Product
+	*[1344843]<td />
+		*[1345074]<div />
+			Top
+	*[1344844]<td />
+		*[1345391]<div />
+			MH05-M-Green
+	*[1344845]<td />
+		*[1345075]<div />
+			$47.00
+	*[1344846]<td />
+		*[1345076]<div />
+			100.0000
+	*[1344847]<td />
+		*[1345749]<div />
+			*[1345743]<ul />
+				*[1345769]<li level=1 />
+					*[1345772]<strong />
+						Default Stock
+					*[1345773]<span />
+						100
+	*[1344848]<td />
+		*[1345077]<div />
+			Not Visible Individually
+	*[1344849]<td />
+		*[1345078]<div />
+			Enabled
+	*[1344850]<td />
+		*[1345079]<div />
+			Main Website
+	*[1344851]<td />
+		*[1345080]<div />
+			Sep 2, 2026 7:34:55 AM
+	*[1344852]<td />
+		*[1346159]<a aria-label=Edit Hollister Backyard Sweatshirt-M-Green />
+			Edit
+*[1344672]<tr />
+	*[1344853]<td />
+		*[1344969]<label />
+			*[1344967]<input type=checkbox checked=false id=idscheck121 value=121 />
+	*[1344854]<td />
+		*[1345081]<div />
+			121
+	*[1344855]<td />
+		*[1345357]<span />
+			*[1345355]<span />
+				*[1345356]<img alt=Hollister Backyard Sweatshirt-L-Red />
+	*[1344856]<td />
+		*[1345392]<div />
+			Hollister Backyard Sweatshirt-L-Red
+	*[1344857]<td />
+		*[1345082]<div />
+			Simple Product
+	*[1344858]<td />
+		*[1345083]<div />
+			Top
+	*[1344859]<td />
+		*[1345393]<div />
+			MH05-L-Red
+	*[1344860]<td />
+		*[1345084]<div />
+			$52.00
+	*[1344861]<td />
+		*[1345085]<div />
+			100.0000
+	*[1344862]<td />
+		*[1345784]<div />
+			*[1345778]<ul />
+				*[1345804]<li level=1 />
+					*[1345807]<strong />
+						Default Stock
+					*[1345808]<span />
+						100
+	*[1344863]<td />
+		*[1345086]<div />
+			Not Visible Individually
+	*[1344864]<td />
+		*[1345087]<div />
+			Enabled
+	*[1344865]<td />
+		*[1345088]<div />
+			Main Website
+	*[1344866]<td />
+		*[1345089]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344867]<td />
+		*[1346179]<a aria-label=Edit Hollister Backyard Sweatshirt-L-Red />
+			Edit
+*[1344675]<tr />
+	*[1344868]<td />
+		*[1344972]<label />
+			*[1344970]<input type=checkbox checked=false id=idscheck125 value=125 />
+	*[1344869]<td />
+		*[1345090]<div />
+			125
+	*[1344870]<td />
+		*[1345360]<span />
+			*[1345358]<span />
+				*[1345359]<img alt=Hollister Backyard Sweatshirt-XL-White />
+	*[1344871]<td />
+		*[1345394]<div />
+			Hollister Backyard Sweatshirt-XL-White
+	*[1344872]<td />
+		*[1345091]<div />
+			Simple Product
+	*[1344873]<td />
+		*[1345092]<div />
+			Top
+	*[1344874]<td />
+		*[1345395]<div />
+			MH05-XL-White
+	*[1344875]<td />
+		*[1345093]<div />
+			$52.00
+	*[1344876]<td />
+		*[1345094]<div />
+			100.0000
+	*[1344877]<td />
+		*[1345819]<div />
+			*[1345813]<ul />
+				*[1345839]<li level=1 />
+					*[1345842]<strong />
+						Default Stock
+					*[1345843]<span />
+						100
+	*[1344878]<td />
+		*[1345095]<div />
+			Not Visible Individually
+	*[1344879]<td />
+		*[1345096]<div />
+			Enabled
+	*[1344880]<td />
+		*[1345097]<div />
+			Main Website
+	*[1344881]<td />
+		*[1345098]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344882]<td />
+		*[1346199]<a aria-label=Edit Hollister Backyard Sweatshirt-XL-White />
+			Edit
+*[1344678]<tr />
+	*[1344883]<td />
+		*[1344975]<label />
+			*[1344973]<input type=checkbox checked=false id=idscheck114 value=114 />
+	*[1344884]<td />
+		*[1345099]<div />
+			114
+	*[1344885]<td />
+		*[1345363]<span />
+			*[1345361]<span />
+				*[1345362]<img alt=Hollister Backyard Sweatshirt-S-Green />
+	*[1344886]<td />
+		*[1345396]<div />
+			Hollister Backyard Sweatshirt-S-Green
+	*[1344887]<td />
+		*[1345100]<div />
+			Simple Product
+	*[1344888]<td />
+		*[1345101]<div />
+			Top
+	*[1344889]<td />
+		*[1345397]<div />
+			MH05-S-Green
+	*[1344890]<td />
+		*[1345102]<div />
+			$47.00
+	*[1344891]<td />
+		*[1345103]<div />
+			100.0000
+	*[1344892]<td />
+		*[1345854]<div />
+			*[1345848]<ul />
+				*[1345874]<li level=1 />
+					*[1345877]<strong />
+						Default Stock
+					*[1345878]<span />
+						100
+	*[1344893]<td />
+		*[1345104]<div />
+			Not Visible Individually
+	*[1344894]<td />
+		*[1345105]<div />
+			Enabled
+	*[1344895]<td />
+		*[1345106]<div />
+			Main Website
+	*[1344896]<td />
+		*[1345107]<div />
+			Sep 2, 2026 7:34:26 AM
+	*[1344897]<td />
+		*[1346219]<a aria-label=Edit Hollister Backyard Sweatshirt-S-Green />
+			Edit
+*[1344681]<tr />
+	*[1344898]<td />
+		*[1344978]<label />
+			*[1344976]<input type=checkbox checked=false id=idscheck118 value=118 />
+	*[1344899]<td />
+		*[1345108]<div />
+			118
+	*[1344900]<td />
+		*[1345366]<span />
+			*[1345364]<span />
+				*[1345365]<img alt=Hollister Backyard Sweatshirt-M-Red />
+	*[1344901]<td />
+		*[1345398]<div />
+			Hollister Backyard Sweatshirt-M-Red
+	*[1344902]<td />
+		*[1345109]<div />
+			Simple Product
+	*[1344903]<td />
+		*[1345110]<div />
+			Top
+	*[1344904]<td />
+		*[1345399]<div />
+			MH05-M-Red
+	*[1344905]<td />
+		*[1345111]<div />
+			$52.00
+	*[1344906]<td />
+		*[1345112]<div />
+			100.0000
+	*[1344907]<td />
+		*[1345889]<div />
+			*[1345883]<ul />
+				*[1345909]<li level=1 />
+					*[1345912]<strong />
+						Default Stock
+					*[1345913]<span />
+						100
+	*[1344908]<td />
+		*[1345113]<div />
+			Not Visible Individually
+	*[1344909]<td />
+		*[1345114]<div />
+			Enabled
+	*[1344910]<td />
+		*[1345115]<div />
+			Main Website
+	*[1344911]<td />
+		*[1345116]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344912]<td />
+		*[1346239]<a aria-label=Edit Hollister Backyard Sweatshirt-M-Red />
+			Edit
+*[1344684]<tr />
+	*[1344913]<td />
+		*[1344981]<label />
+			*[1344979]<input type=checkbox checked=false id=idscheck122 value=122 />
+	*[1344914]<td />
+		*[1345117]<div />
+			122
+	*[1344915]<td />
+		*[1345369]<span />
+			*[1345367]<span />
+				*[1345368]<img alt=Hollister Backyard Sweatshirt-L-White />
+	*[1344916]<td />
+		*[1345400]<div />
+			Hollister Backyard Sweatshirt-L-White
+	*[1344917]<td />
+		*[1345118]<div />
+			Simple Product
+	*[1344918]<td />
+		*[1345119]<div />
+			Top
+	*[1344919]<td />
+		*[1345401]<div />
+			MH05-L-White
+	*[1344920]<td />
+		*[1345120]<div />
+			$52.00
+	*[1344921]<td />
+		*[1345121]<div />
+			100.0000
+	*[1344922]<td />
+		*[1345924]<div />
+			*[1345918]<ul />
+				*[1345944]<li level=1 />
+					*[1345947]<strong />
+						Default Stock
+					*[1345948]<span />
+						100
+	*[1344923]<td />
+		*[1345122]<div />
+			Not Visible Individually
+	*[1344924]<td />
+		*[1345123]<div />
+			Enabled
+	*[1344925]<td />
+		*[1345124]<div />
+			Main Website
+	*[1344926]<td />
+		*[1345125]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1344927]<td />
+		*[1346259]<a aria-label=Edit Hollister Backyard Sweatshirt-L-White />
+			Edit
+[1326106]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[1326116]<a id=footer_privacy />
+	Privacy Policy
+[1326119]<a id=footer_account_activity />
+	Account Activity
+[1326122]<a id=footer_bug_tracking />
+	Report an Issue

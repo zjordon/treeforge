@@ -1,0 +1,31 @@
+Dashboard
+*[45957]<a />
+	Sales
+*[45958]<a />
+	Catalog
+*[45959]<a />
+	Customers
+*[45960]<a />
+	Marketing
+*[45961]<a />
+	Content
+*[45962]<a />
+	Reports
+*[45963]<a />
+	Stores
+*[45964]<a />
+	System
+Find Partners & Extensions
+New Product
+admin
+Save
+*[45965]<button title=Back id=back />
+	Back
+Add Attribute
+*[45975]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

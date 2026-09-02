@@ -1,0 +1,69 @@
+*[155176]<a />
+*[155185]<a />
+	Dashboard
+*[155069]<a />
+	Sales
+*[155070]<a />
+	Catalog
+*[155071]<a />
+	Customers
+*[155072]<a />
+	Marketing
+*[155073]<a />
+	Content
+*[155074]<a />
+	Reports
+*[155075]<a />
+	Stores
+*[155076]<a />
+	System
+*[155788]<a />
+	Find Partners & Extensions
+Edit Review
+*[155850]<a title=My Account />
+	admin
+*[155888]<a title=Notifications />
+*[155893]<div />
+	*[155046]<form id=form-search />
+		*[155896]<div />
+			*[155047]<input type=text id=search-global name=query />
+*[155077]<button title=Back id=back />
+	Back
+*[155078]<button title=Reset id=reset />
+	Reset
+*[155079]<button title=Delete Review id=delete />
+	Delete Review
+*[155943]<button title=Save Review id=save_button />
+	Save Review
+*[155080]<button title=Previous id=previous />
+	Previous
+*[155956]<button title=Save and Previous id=save_and_previous />
+	Save and Previous
+Review Details
+Product
+*[155081]<a />
+	Olivia 1/4 Zip Light Jacket
+Author
+*[156007]<div id=customer />
+	Guest
+Summary Rating
+Detailed Rating
+Rating
+Status
+*[155053]<select id=status_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+Nickname
+*[155054]<input type=text id=nickname value=Jane Smith required=true />
+Summary of Review
+*[155055]<input type=text id=title name=title value=Quite good required=true />
+Review
+*[155056]<textarea id=detail required=true />
+*[156165]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[156175]<a id=footer_privacy />
+	Privacy Policy
+*[156178]<a id=footer_account_activity />
+	Account Activity
+*[156181]<a id=footer_bug_tracking />
+	Report an Issue

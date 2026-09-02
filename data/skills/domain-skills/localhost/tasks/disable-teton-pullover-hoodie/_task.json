@@ -2,14 +2,14 @@
   "slug": "disable-teton-pullover-hoodie",
   "task_description": "Disable Teton pullover hoodie from the site, they are facing some quality issues.",
   "task_keywords": [
-    "disable",
-    "product",
-    "Teton Pullover Hoodie",
-    "status",
-    "catalog"
+    "Teton",
+    "下架",
+    "禁用",
+    "商品",
+    "Enable Product"
   ],
   "source_traces": [
     "data\\captures\\f8276fc7\\trace.json"
   ],
-  "distilled_at": "2026-09-02T12:16:21.738679+00:00"
+  "distilled_at": "2026-09-02T12:19:50.996998+00:00"
 }

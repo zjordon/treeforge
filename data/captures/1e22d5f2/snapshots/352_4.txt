@@ -1,0 +1,89 @@
+[128664]<a />
+[128672]<li id=menu-magento-backend-dashboard role=menu-item />
+	[128673]<a />
+		Dashboard
+[128678]<li id=menu-magento-sales-sales role=menu-item />
+	[128563]<a />
+		Sales
+[128721]<li id=menu-magento-catalog-catalog role=menu-item />
+	[128564]<a />
+		Catalog
+[128744]<li id=menu-magento-customer-customer role=menu-item />
+	[128565]<a />
+		Customers
+[128769]<li id=menu-magento-backend-marketing role=menu-item />
+	[128566]<a />
+		Marketing
+[128854]<li id=menu-magento-backend-content role=menu-item />
+	[128567]<a />
+		Content
+[128913]<li id=menu-magento-reports-report role=menu-item />
+	[128568]<a />
+		Reports
+[129074]<li id=menu-magento-backend-stores role=menu-item />
+	[128569]<a />
+		Stores
+[129170]<li id=menu-magento-backend-system role=menu-item />
+	[128570]<a />
+		System
+[129275]<li id=menu-magento-marketplace-partners role=menu-item />
+	[129276]<a />
+		Find Partners & Extensions
+Edit Review
+[129338]<a title=My Account />
+	admin
+[129376]<a title=Notifications />
+[129381]<div />
+	[128533]<form id=form-search />
+		[129384]<div />
+			[128534]<input type=text id=search-global autocomplete=off />
+[128571]<button title=Back id=back />
+	Back
+[128572]<button title=Reset id=reset />
+	Reset
+[128573]<button title=Delete Review id=delete />
+	Delete Review
+[129431]<button title=Save Review id=save_button />
+	Save Review
+[128574]<button title=Previous id=previous />
+	Previous
+[129444]<button title=Save and Previous id=save_and_previous />
+	Save and Previous
+[129450]<button title=Save and Next id=save_and_next />
+	Save and Next
+[128575]<button title=Next id=next />
+	Next
+[128544]<form id=edit_form />
+	Review Details
+	Product
+	[128576]<a />
+		Circe Hooded Ice Fleece
+	Author
+	[129509]<div id=customer />
+		Guest
+	Summary Rating
+	Detailed Rating
+	Rating
+	[129557]<label />
+	[129561]<label />
+	[129565]<label />
+	[129569]<label />
+	[129573]<label />
+	Status
+	*[128540]<select id=status_id expanded=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	Nickname
+	[128541]<input type=text id=nickname value=customer required=true />
+	Summary of Review
+	[128542]<input type=text id=title name=title value=Good but not perfect required=true />
+	Review
+	[128543]<textarea id=detail required=true />
+[129667]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[129677]<a id=footer_privacy />
+	Privacy Policy
+[129680]<a id=footer_account_activity />
+	Account Activity
+[129683]<a id=footer_bug_tracking />
+	Report an Issue

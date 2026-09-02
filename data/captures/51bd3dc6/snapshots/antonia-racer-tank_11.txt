@@ -1,0 +1,194 @@
+[1503955]<a />
+	[1504591]<span />
+		Skip to Content
+Default welcome msg!
+[1503960]<a />
+	Sign In
+[1503963]<a id=idv3o0Q3nX />
+	Create an Account
+[1503967]<a aria-label=store logo />
+[1504175]<div />
+	[1503970]<a />
+		[1503971]<span />
+			My Cart
+[1504707]<div />
+	[1503974]<label />
+		Search
+	[1503896]<input type=text id=search name=q role=combobox placeholder=Search entire store here... maxlength=128 autocomplete=both aria-autocomplete=both expanded=false />
+	[1503937]<button title=Search type=submit aria-label=Search disabled=true />
+		Search
+[1503984]<ul id=ui-id-1 role=menu />
+	[1503986]<a id=ui-id-2 role=menuitem />
+		What's New
+	[1503989]<a id=ui-id-3 role=menuitem />
+		Women
+	[1503992]<a id=ui-id-12 role=menuitem />
+		Men
+	[1503995]<a id=ui-id-21 role=menuitem />
+		Gear
+	[1503998]<a id=ui-id-25 role=menuitem />
+		Training
+	[1504001]<a id=ui-id-27 role=menuitem />
+		Sale
+[1504005]<a title=Go to Home Page />
+	Home
+Antonia Racer Tank
+[1504009]<a id=contentarea />
+Antonia Racer Tank
+Rating:
+60
+% of
+100
+[1504022]<a />
+	Reviews
+[1504026]<a />
+	Add Your Review
+As low as
+$34.00
+In stock
+[1504952]<strong />
+	SKU
+[1504955]<div />
+	WT08
+[1503908]<form id=product_addtocart_form />
+	[1504969]<div />
+		[1504239]<div />
+			[1504972]<span id=option-label-size-144 />
+				Size
+			[1504973]<span />
+			[1504974]<div role=listbox multiselectable=false required=true />
+				[1504240]<div checked=false id=option-label-size-144-item-166 role=option aria-label=XS aria-checked=false />
+					XS
+				[1504241]<div checked=false id=option-label-size-144-item-167 role=option aria-label=S aria-checked=false />
+				[1504242]<div checked=false id=option-label-size-144-item-168 role=option aria-label=M aria-checked=false />
+				[1504243]<div checked=false id=option-label-size-144-item-169 role=option aria-label=L aria-checked=false />
+				[1504244]<div checked=false id=option-label-size-144-item-170 role=option aria-label=XL aria-checked=false />
+					XL
+			[1504977]<span id=option-label-color-93 />
+				Color
+			[1504978]<span />
+			[1504979]<div role=listbox multiselectable=false required=true />
+				[1504245]<div checked=false id=option-label-color-93-item-49 role=option aria-label=Black aria-checked=false />
+				[1504246]<div checked=false id=option-label-color-93-item-57 role=option aria-label=Purple aria-checked=false />
+				[1504247]<div checked=false id=option-label-color-93-item-60 role=option aria-label=Yellow aria-checked=false />
+	Qty
+	*[1503897]<input title=Qty type=number id=qty name=qty value=1 min=0 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox,min=0.0) />
+	[1503925]<button title=Add to Cart type=submit id=product-addtocart-button />
+		Add to Cart
+[1503926]<a />
+	Add to Wish List
+[1503927]<a />
+	Add to Compare
+This is in regular rotation at the gym
+Its colorful and looks kinda cute under my exercise tanks.
+it's very stylish for yoga or something else low impact.
+[1504053]<a id=gallery-prev-area />
+[1504054]<a />
+	[1505048]<span />
+		Skip to the end of the images gallery
+[1503913]<div />
+	[1505059]<div />
+	[1504250]<div />
+		[1504253]<div />
+	[1505102]<div />
+[1504057]<a />
+	[1505112]<span />
+		Skip to the beginning of the images gallery
+[1504059]<a id=gallery-next-area />
+[1504259]<div id=tab-label-description role=tab selected=false expanded=true />
+	[1504061]<a id=tab-label-description-title />
+		Details
+You won't know what you like best about the Antonia Racer Tank: soft, stretchy, lightweight fabric? Super-cute colorblocked details? Whatever it is, this piece is sure to quickly move to the top of your workout rotation.
+• Machine wash.
+• Line dry.
+[1504260]<div id=tab-label-additional role=tab selected=false expanded=false />
+	[1504070]<a id=tab-label-additional-title />
+		More Information
+[1504261]<div id=tab-label-reviews role=tab selected=false expanded=false />
+	[1504072]<a id=tab-label-reviews-title />
+		Reviews
+Related Products
+[1504079]<a />
+	[1505379]<span />
+		[1505381]<span />
+			[1503916]<img alt=Angel Light Running Short />
+[1504080]<a title=Angel Light Running Short />
+	Angel Light Running Short
+As low as
+[1505403]<span id=product-price-1990 />
+	[1505404]<span />
+		$42.00
+[1504084]<a title=Add to Wish List role=button aria-label=Add to Wish List />
+	[1504085]<span />
+		Add to Wish List
+[1504087]<a title=Add to Compare role=button aria-label=Add to Compare />
+	[1504088]<span />
+		Add to Compare
+[1504091]<a />
+	[1505435]<span />
+		[1505437]<span />
+			[1503915]<img alt=Radiant Tee />
+[1504092]<a title=Radiant Tee />
+	Radiant Tee
+As low as
+[1505459]<span id=product-price-1556 />
+	[1505460]<span />
+		$22.00
+[1504096]<a title=Add to Wish List role=button aria-label=Add to Wish List />
+	[1504097]<span />
+		Add to Wish List
+[1504099]<a title=Add to Compare role=button aria-label=Add to Compare />
+	[1504100]<span />
+		Add to Compare
+[1504103]<a />
+	[1505491]<span />
+		[1505493]<span />
+			[1503917]<img alt=Ina Compression Short />
+[1504104]<a title=Ina Compression Short />
+	Ina Compression Short
+As low as
+[1505515]<span id=product-price-2024 />
+	[1505516]<span />
+		$49.00
+[1504108]<a title=Add to Wish List role=button aria-label=Add to Wish List />
+	[1504109]<span />
+		Add to Wish List
+[1504111]<a title=Add to Compare role=button aria-label=Add to Compare />
+	[1504112]<span />
+		Add to Compare
+[1504115]<a />
+	[1505547]<span />
+		[1505549]<span />
+			[1503918]<img alt=Karissa V-Neck Tee />
+[1504116]<a title=Karissa V-Neck Tee />
+	Karissa V-Neck Tee
+As low as
+[1505571]<span id=product-price-1524 />
+	[1505572]<span />
+		$32.00
+[1504120]<a title=Add to Wish List role=button aria-label=Add to Wish List />
+	[1504121]<span />
+		Add to Wish List
+[1504123]<a title=Add to Compare role=button aria-label=Add to Compare />
+	[1504124]<span />
+		Add to Compare
+[1503907]<form id=newsletter-validate-detail />
+	Sign Up for Our Newsletter:
+	[1503906]<input type=email id=newsletter name=email placeholder=Enter your email address />
+	[1503938]<button title=Subscribe type=submit aria-label=Subscribe />
+		Subscribe
+[1504134]<a />
+	About us
+[1504137]<a />
+	Customer Service
+[1504141]<a />
+	Privacy and Cookie Policy
+[1504144]<a />
+	Search Terms
+[1504147]<a />
+	Advanced Search
+[1504150]<a />
+	Orders and Returns
+[1504153]<a />
+	Contact Us
+Copyright © 2013-present Magento, Inc. All rights reserved.

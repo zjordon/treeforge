@@ -1,0 +1,932 @@
+[1537930]<a />
+[1537938]<li id=menu-magento-backend-dashboard role=menu-item />
+	[1537939]<a />
+		Dashboard
+[1537944]<li id=menu-magento-sales-sales role=menu-item />
+	[1537833]<a />
+		Sales
+[1537987]<li id=menu-magento-catalog-catalog role=menu-item />
+	[1537834]<a />
+		Catalog
+[1538010]<li id=menu-magento-customer-customer role=menu-item />
+	[1537835]<a />
+		Customers
+[1538034]<li id=menu-magento-backend-marketing role=menu-item />
+	[1537836]<a />
+		Marketing
+[1538119]<li id=menu-magento-backend-content role=menu-item />
+	[1537837]<a />
+		Content
+[1538178]<li id=menu-magento-reports-report role=menu-item />
+	[1537838]<a />
+		Reports
+[1538339]<li id=menu-magento-backend-stores role=menu-item />
+	[1537839]<a />
+		Stores
+[1538433]<li id=menu-magento-backend-system role=menu-item />
+	[1537840]<a />
+		System
+[1538538]<li id=menu-magento-marketplace-partners role=menu-item />
+	[1538539]<a />
+		Find Partners & Extensions
+Products
+[1538601]<a title=My Account />
+	admin
+[1538639]<a title=Notifications />
+[1538644]<div />
+	[1537815]<form id=form-search />
+		[1538647]<div />
+			[1537816]<input type=text id=search-global autocomplete=off />
+[1538673]<div title=Add Product id=add_new_product />
+	[1538677]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[1538683]<button title=Add Product aria-label=Add product of type />
+[1539133]<button />
+	Default View
+[1539334]<button />
+	Columns
+[1539505]<button />
+	Filters
+*[1539248]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[1539249]<button aria-label=Search />
+[1539256]<button title=Select Items />
+	Actions
+2040
+records found
+[1540739]<div />
+	*[1540741]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+[1540742]<button />
+	Select
+per page
+[1539553]<button title=Previous Page disabled=true />
+*[1539558]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 11
+[1539560]<button title=Next Page />
+*[1539098]<tr />
+	*[1539846]<div />
+		[1539847]<input type=checkbox checked=false id=77 />
+		[1539849]<button />
+			Options
+	[1539869]<th />
+		*[1539868]<span />
+			ID
+	[1539872]<th />
+		Thumbnail
+	[1539875]<th />
+		*[1539874]<span />
+			Name
+	[1539878]<th />
+		*[1539877]<span />
+			Type
+	[1539881]<th />
+		*[1539880]<span />
+			Attribute Set
+	[1539884]<th />
+		*[1539883]<span />
+			SKU
+	[1539887]<th />
+		*[1539886]<span />
+			Price
+	[1539890]<th />
+		*[1539889]<span />
+			Quantity
+	[1539893]<th />
+		Salable Quantity
+	[1539896]<th />
+		*[1539895]<span />
+			Visibility
+	[1539899]<th />
+		*[1539898]<span />
+			Status
+	[1539902]<th />
+		*[1539901]<span />
+			Websites
+	[1539905]<th />
+		*[1539904]<span />
+			Last Updated At
+	[1539908]<th />
+		*[1539907]<span />
+			Action
+*[1557305]<tr />
+	[1557354]<td />
+		*[1557623]<label />
+			[1557621]<input type=checkbox checked=false id=idscheck1896 value=1896 />
+	[1557355]<td />
+		*[1557669]<div />
+			1896
+	[1557356]<td />
+		*[1557815]<span />
+			*[1557813]<span />
+				*[1557814]<img alt=Deirdre Relaxed-Fit Capri />
+	[1557357]<td />
+		*[1557861]<div />
+			Deirdre Relaxed-Fit Capri
+	[1557358]<td />
+		*[1557670]<div />
+			Configurable Product
+	[1557359]<td />
+		*[1557671]<div />
+			Bottom
+	[1557360]<td />
+		*[1557862]<div />
+			WP12
+	[1557361]<td />
+		*[1557672]<div />
+			$63.00
+	[1557362]<td />
+		*[1557673]<div />
+			0.0000
+	[1557363]<td />
+		*[1557899]<div />
+			*[1557893]<ul />
+	[1557364]<td />
+		*[1557674]<div />
+			Catalog, Search
+	[1557365]<td />
+		*[1557675]<div />
+			Enabled
+	[1557366]<td />
+		*[1557676]<div />
+			Main Website
+	[1557367]<td />
+		*[1557677]<div />
+			Apr 19, 2023 12:13:54 PM
+	[1557368]<td />
+		[1558450]<a aria-label=Edit Deirdre Relaxed-Fit Capri />
+			Edit
+*[1557308]<tr />
+	[1557369]<td />
+		*[1557626]<label />
+			[1557624]<input type=checkbox checked=false id=idscheck1700 value=1700 />
+	[1557370]<td />
+		*[1557678]<div />
+			1700
+	[1557371]<td />
+		*[1557818]<span />
+			*[1557816]<span />
+				*[1557817]<img alt=Zoe Tank />
+	[1557372]<td />
+		*[1557863]<div />
+			Zoe Tank
+	[1557373]<td />
+		*[1557679]<div />
+			Configurable Product
+	[1557374]<td />
+		*[1557680]<div />
+			Top
+	[1557375]<td />
+		*[1557864]<div />
+			WT02
+	[1557376]<td />
+		*[1557681]<div />
+			$29.00
+	[1557377]<td />
+		*[1557682]<div />
+			0.0000
+	[1557378]<td />
+		*[1557925]<div />
+			*[1557919]<ul />
+	[1557379]<td />
+		*[1557683]<div />
+			Catalog, Search
+	[1557380]<td />
+		*[1557684]<div />
+			Enabled
+	[1557381]<td />
+		*[1557685]<div />
+			Main Website
+	[1557382]<td />
+		*[1557686]<div />
+			Apr 19, 2023 12:13:51 PM
+	[1557383]<td />
+		[1558470]<a aria-label=Edit Zoe Tank />
+			Edit
+*[1557311]<tr />
+	[1557384]<td />
+		*[1557629]<label />
+			[1557627]<input type=checkbox checked=false id=idscheck1716 value=1716 />
+	[1557385]<td />
+		*[1557687]<div />
+			1716
+	[1557386]<td />
+		*[1557821]<span />
+			*[1557819]<span />
+				*[1557820]<img alt=Nora Practice Tank />
+	[1557387]<td />
+		*[1557865]<div />
+			Nora Practice Tank
+	[1557388]<td />
+		*[1557688]<div />
+			Configurable Product
+	[1557389]<td />
+		*[1557689]<div />
+			Top
+	[1557390]<td />
+		*[1557866]<div />
+			WT03
+	[1557391]<td />
+		*[1557690]<div />
+			$39.00
+	[1557392]<td />
+		*[1557691]<div />
+			0.0000
+	[1557393]<td />
+		*[1557960]<div />
+			*[1557954]<ul />
+	[1557394]<td />
+		*[1557692]<div />
+			Catalog, Search
+	[1557395]<td />
+		*[1557693]<div />
+			Enabled
+	[1557396]<td />
+		*[1557694]<div />
+			Main Website
+	[1557397]<td />
+		*[1557695]<div />
+			Apr 19, 2023 12:13:51 PM
+	[1557398]<td />
+		[1558490]<a aria-label=Edit Nora Practice Tank />
+			Edit
+*[1557314]<tr />
+	[1557399]<td />
+		*[1557632]<label />
+			[1557630]<input type=checkbox checked=false id=idscheck1732 value=1732 />
+	[1557400]<td />
+		*[1557696]<div />
+			1732
+	[1557401]<td />
+		*[1557824]<span />
+			*[1557822]<span />
+				*[1557823]<img alt=Nona Fitness Tank />
+	[1557402]<td />
+		*[1557867]<div />
+			Nona Fitness Tank
+	[1557403]<td />
+		*[1557697]<div />
+			Configurable Product
+	[1557404]<td />
+		*[1557698]<div />
+			Top
+	[1557405]<td />
+		*[1557868]<div />
+			WT04
+	[1557406]<td />
+		*[1557699]<div />
+			$39.00
+	[1557407]<td />
+		*[1557700]<div />
+			0.0000
+	[1557408]<td />
+		*[1557995]<div />
+			*[1557989]<ul />
+	[1557409]<td />
+		*[1557701]<div />
+			Catalog, Search
+	[1557410]<td />
+		*[1557702]<div />
+			Enabled
+	[1557411]<td />
+		*[1557703]<div />
+			Main Website
+	[1557412]<td />
+		*[1557704]<div />
+			Apr 19, 2023 12:13:51 PM
+	[1557413]<td />
+		[1558510]<a aria-label=Edit Nona Fitness Tank />
+			Edit
+*[1557317]<tr />
+	[1557414]<td />
+		*[1557635]<label />
+			[1557633]<input type=checkbox checked=false id=idscheck1748 value=1748 />
+	[1557415]<td />
+		*[1557705]<div />
+			1748
+	[1557416]<td />
+		*[1557827]<span />
+			*[1557825]<span />
+				*[1557826]<img alt=Leah Yoga Top />
+	[1557417]<td />
+		*[1557869]<div />
+			Leah Yoga Top
+	[1557418]<td />
+		*[1557706]<div />
+			Configurable Product
+	[1557419]<td />
+		*[1557707]<div />
+			Top
+	[1557420]<td />
+		*[1557870]<div />
+			WT05
+	[1557421]<td />
+		*[1557708]<div />
+			$39.00
+	[1557422]<td />
+		*[1557709]<div />
+			0.0000
+	[1557423]<td />
+		*[1558030]<div />
+			*[1558024]<ul />
+	[1557424]<td />
+		*[1557710]<div />
+			Catalog, Search
+	[1557425]<td />
+		*[1557711]<div />
+			Enabled
+	[1557426]<td />
+		*[1557712]<div />
+			Main Website
+	[1557427]<td />
+		*[1557713]<div />
+			Apr 19, 2023 12:13:52 PM
+	[1557428]<td />
+		[1558530]<a aria-label=Edit Leah Yoga Top />
+			Edit
+*[1557320]<tr />
+	[1557429]<td />
+		*[1557638]<label />
+			[1557636]<input type=checkbox checked=false id=idscheck1764 value=1764 />
+	[1557430]<td />
+		*[1557714]<div />
+			1764
+	[1557431]<td />
+		*[1557830]<span />
+			*[1557828]<span />
+				*[1557829]<img alt=Chloe Compete Tank />
+	[1557432]<td />
+		*[1557871]<div />
+			Chloe Compete Tank
+	[1557433]<td />
+		*[1557715]<div />
+			Configurable Product
+	[1557434]<td />
+		*[1557716]<div />
+			Top
+	[1557435]<td />
+		*[1557872]<div />
+			WT06
+	[1557436]<td />
+		*[1557717]<div />
+			$39.00
+	[1557437]<td />
+		*[1557718]<div />
+			0.0000
+	[1557438]<td />
+		*[1558065]<div />
+			*[1558059]<ul />
+	[1557439]<td />
+		*[1557719]<div />
+			Catalog, Search
+	[1557440]<td />
+		*[1557720]<div />
+			Enabled
+	[1557441]<td />
+		*[1557721]<div />
+			Main Website
+	[1557442]<td />
+		*[1557722]<div />
+			Apr 19, 2023 12:13:52 PM
+	[1557443]<td />
+		[1558550]<a aria-label=Edit Chloe Compete Tank />
+			Edit
+*[1557323]<tr />
+	[1557444]<td />
+		*[1557641]<label />
+			[1557639]<input type=checkbox checked=false id=idscheck1780 value=1780 />
+	[1557445]<td />
+		*[1557723]<div />
+			1780
+	[1557446]<td />
+		*[1557833]<span />
+			*[1557831]<span />
+				*[1557832]<img alt=Maya Tunic />
+	[1557447]<td />
+		*[1557873]<div />
+			Maya Tunic
+	[1557448]<td />
+		*[1557724]<div />
+			Configurable Product
+	[1557449]<td />
+		*[1557725]<div />
+			Top
+	[1557450]<td />
+		*[1557874]<div />
+			WT07
+	[1557451]<td />
+		*[1557726]<div />
+			$29.00
+	[1557452]<td />
+		*[1557727]<div />
+			0.0000
+	[1557453]<td />
+		*[1558100]<div />
+			*[1558094]<ul />
+	[1557454]<td />
+		*[1557728]<div />
+			Catalog, Search
+	[1557455]<td />
+		*[1557729]<div />
+			Enabled
+	[1557456]<td />
+		*[1557730]<div />
+			Main Website
+	[1557457]<td />
+		*[1557731]<div />
+			Apr 19, 2023 12:13:52 PM
+	[1557458]<td />
+		[1558570]<a aria-label=Edit Maya Tunic />
+			Edit
+*[1557326]<tr />
+	[1557459]<td />
+		*[1557644]<label />
+			[1557642]<input type=checkbox checked=false id=idscheck1796 value=1796 />
+	[1557460]<td />
+		*[1557732]<div />
+			1796
+	[1557461]<td />
+		*[1557836]<span />
+			*[1557834]<span />
+				*[1557835]<img alt=Antonia Racer Tank />
+	[1557462]<td />
+		*[1557875]<div />
+			Antonia Racer Tank
+	[1557463]<td />
+		*[1557733]<div />
+			Configurable Product
+	[1557464]<td />
+		*[1557734]<div />
+			Top
+	[1557465]<td />
+		*[1557876]<div />
+			WT08
+	[1557466]<td />
+		*[1557735]<div />
+	[1557467]<td />
+		*[1557736]<div />
+			0.0000
+	[1557468]<td />
+		*[1558135]<div />
+			*[1558129]<ul />
+	[1557469]<td />
+		*[1557737]<div />
+			Catalog, Search
+	[1557470]<td />
+		*[1557738]<div />
+			Enabled
+	[1557471]<td />
+		*[1557739]<div />
+			Main Website
+	[1557472]<td />
+		*[1557740]<div />
+			Sep 2, 2026 8:56:41 AM
+	[1557473]<td />
+		[1558590]<a aria-label=Edit Antonia Racer Tank />
+			Edit
+*[1557329]<tr />
+	[1557474]<td />
+		*[1557647]<label />
+			[1557645]<input type=checkbox checked=false id=idscheck1604 value=1604 />
+	[1557475]<td />
+		*[1557741]<div />
+			1604
+	[1557476]<td />
+		*[1557839]<span />
+			*[1557837]<span />
+				*[1557838]<img alt=Electra Bra Top />
+	[1557477]<td />
+		*[1557877]<div />
+			Electra Bra Top
+	[1557478]<td />
+		*[1557742]<div />
+			Configurable Product
+	[1557479]<td />
+		*[1557743]<div />
+			Top
+	[1557480]<td />
+		*[1557878]<div />
+			WB01
+	[1557481]<td />
+		*[1557744]<div />
+			$39.00
+	[1557482]<td />
+		*[1557745]<div />
+			0.0000
+	[1557483]<td />
+		*[1558170]<div />
+			*[1558164]<ul />
+	[1557484]<td />
+		*[1557746]<div />
+			Catalog, Search
+	[1557485]<td />
+		*[1557747]<div />
+			Enabled
+	[1557486]<td />
+		*[1557748]<div />
+			Main Website
+	[1557487]<td />
+		*[1557749]<div />
+			Apr 19, 2023 12:13:49 PM
+	[1557488]<td />
+		[1558610]<a aria-label=Edit Electra Bra Top />
+			Edit
+*[1557332]<tr />
+	[1557489]<td />
+		*[1557650]<label />
+			[1557648]<input type=checkbox checked=false id=idscheck1812 value=1812 />
+	[1557490]<td />
+		*[1557750]<div />
+			1812
+	[1557491]<td />
+		*[1557842]<span />
+			*[1557840]<span />
+				*[1557841]<img alt=Breathe-Easy Tank />
+	[1557492]<td />
+		*[1557879]<div />
+			Breathe-Easy Tank
+	[1557493]<td />
+		*[1557751]<div />
+			Configurable Product
+	[1557494]<td />
+		*[1557752]<div />
+			Top
+	[1557495]<td />
+		*[1557880]<div />
+			WT09
+	[1557496]<td />
+		*[1557753]<div />
+			$34.00
+	[1557497]<td />
+		*[1557754]<div />
+			0.0000
+	[1557498]<td />
+		*[1558205]<div />
+			*[1558199]<ul />
+	[1557499]<td />
+		*[1557755]<div />
+			Catalog, Search
+	[1557500]<td />
+		*[1557756]<div />
+			Enabled
+	[1557501]<td />
+		*[1557757]<div />
+			Main Website
+	[1557502]<td />
+		*[1557758]<div />
+			Apr 19, 2023 12:13:53 PM
+	[1557503]<td />
+		[1558630]<a aria-label=Edit Breathe-Easy Tank />
+			Edit
+*[1557335]<tr />
+	[1557504]<td />
+		*[1557653]<label />
+			[1557651]<input type=checkbox checked=false id=idscheck1620 value=1620 />
+	[1557505]<td />
+		*[1557759]<div />
+			1620
+	[1557506]<td />
+		*[1557845]<span />
+			*[1557843]<span />
+				*[1557844]<img alt=Erica Evercool Sports Bra />
+	[1557507]<td />
+		*[1557881]<div />
+			Erica Evercool Sports Bra
+	[1557508]<td />
+		*[1557760]<div />
+			Configurable Product
+	[1557509]<td />
+		*[1557761]<div />
+			Top
+	[1557510]<td />
+		*[1557882]<div />
+			WB02
+	[1557511]<td />
+		*[1557762]<div />
+			$39.00
+	[1557512]<td />
+		*[1557763]<div />
+			0.0000
+	[1557513]<td />
+		*[1558240]<div />
+			*[1558234]<ul />
+	[1557514]<td />
+		*[1557764]<div />
+			Catalog, Search
+	[1557515]<td />
+		*[1557765]<div />
+			Enabled
+	[1557516]<td />
+		*[1557766]<div />
+			Main Website
+	[1557517]<td />
+		*[1557767]<div />
+			Apr 19, 2023 12:13:49 PM
+	[1557518]<td />
+		[1558650]<a aria-label=Edit Erica Evercool Sports Bra />
+			Edit
+*[1557338]<tr />
+	[1557519]<td />
+		*[1557656]<label />
+			[1557654]<input type=checkbox checked=false id=idscheck45 value=45 />
+	[1557520]<td />
+		*[1557768]<div />
+			45
+	[1557521]<td />
+		*[1557848]<span />
+			*[1557846]<span />
+				*[1557847]<img alt=Sprite Yoga Companion Kit />
+	[1557522]<td />
+		*[1557883]<div />
+			Sprite Yoga Companion Kit
+	[1557523]<td />
+		*[1557769]<div />
+			Bundle Product
+	[1557524]<td />
+		*[1557770]<div />
+			Gear
+	[1557525]<td />
+		*[1557884]<div />
+			24-WG080
+	[1557526]<td />
+		*[1557771]<div />
+	[1557527]<td />
+		*[1557772]<div />
+			0.0000
+	[1557528]<td />
+		*[1558275]<div />
+			*[1558269]<ul />
+	[1557529]<td />
+		*[1557773]<div />
+			Catalog, Search
+	[1557530]<td />
+		*[1557774]<div />
+			Enabled
+	[1557531]<td />
+		*[1557775]<div />
+			Main Website
+	[1557532]<td />
+		*[1557776]<div />
+			Apr 19, 2023 12:13:11 PM
+	[1557533]<td />
+		[1558670]<a aria-label=Edit Sprite Yoga Companion Kit />
+			Edit
+*[1557341]<tr />
+	[1557534]<td />
+		*[1557659]<label />
+			[1557657]<input type=checkbox checked=false id=idscheck1840 value=1840 />
+	[1557535]<td />
+		*[1557777]<div />
+			1840
+	[1557536]<td />
+		*[1557851]<span />
+			*[1557849]<span />
+				*[1557850]<img alt=Cora Parachute Pant />
+	[1557537]<td />
+		*[1557885]<div />
+			Cora Parachute Pant
+	[1557538]<td />
+		*[1557778]<div />
+			Configurable Product
+	[1557539]<td />
+		*[1557779]<div />
+			Bottom
+	[1557540]<td />
+		*[1557886]<div />
+			WP04
+	[1557541]<td />
+		*[1557780]<div />
+			$75.00
+	[1557542]<td />
+		*[1557781]<div />
+			0.0000
+	[1557543]<td />
+		*[1558310]<div />
+			*[1558304]<ul />
+	[1557544]<td />
+		*[1557782]<div />
+			Catalog, Search
+	[1557545]<td />
+		*[1557783]<div />
+			Enabled
+	[1557546]<td />
+		*[1557784]<div />
+			Main Website
+	[1557547]<td />
+		*[1557785]<div />
+			Apr 19, 2023 12:13:53 PM
+	[1557548]<td />
+		[1558690]<a aria-label=Edit Cora Parachute Pant />
+			Edit
+*[1557344]<tr />
+	[1557549]<td />
+		*[1557662]<label />
+			[1557660]<input type=checkbox checked=false id=idscheck1636 value=1636 />
+	[1557550]<td />
+		*[1557786]<div />
+			1636
+	[1557551]<td />
+		*[1557854]<span />
+			*[1557852]<span />
+				*[1557853]<img alt=Celeste Sports Bra />
+	[1557552]<td />
+		*[1557887]<div />
+			Celeste Sports Bra
+	[1557553]<td />
+		*[1557787]<div />
+			Configurable Product
+	[1557554]<td />
+		*[1557788]<div />
+			Top
+	[1557555]<td />
+		*[1557888]<div />
+			WB03
+	[1557556]<td />
+		*[1557789]<div />
+			$39.00
+	[1557557]<td />
+		*[1557790]<div />
+			0.0000
+	[1557558]<td />
+		*[1558345]<div />
+			*[1558339]<ul />
+	[1557559]<td />
+		*[1557791]<div />
+			Catalog, Search
+	[1557560]<td />
+		*[1557792]<div />
+			Enabled
+	[1557561]<td />
+		*[1557793]<div />
+			Main Website
+	[1557562]<td />
+		*[1557794]<div />
+			Apr 19, 2023 12:13:50 PM
+	[1557563]<td />
+		[1558710]<a aria-label=Edit Celeste Sports Bra />
+			Edit
+*[1557347]<tr />
+	[1557564]<td />
+		*[1557665]<label />
+			[1557663]<input type=checkbox checked=false id=idscheck1652 value=1652 />
+	[1557565]<td />
+		*[1557795]<div />
+			1652
+	[1557566]<td />
+		*[1557857]<span />
+			*[1557855]<span />
+				*[1557856]<img alt=Prima Compete Bra Top />
+	[1557567]<td />
+		*[1557889]<div />
+			Prima Compete Bra Top
+	[1557568]<td />
+		*[1557796]<div />
+			Configurable Product
+	[1557569]<td />
+		*[1557797]<div />
+			Top
+	[1557570]<td />
+		*[1557890]<div />
+			WB04
+	[1557571]<td />
+		*[1557798]<div />
+			$24.00
+	[1557572]<td />
+		*[1557799]<div />
+			0.0000
+	[1557573]<td />
+		*[1558380]<div />
+			*[1558374]<ul />
+	[1557574]<td />
+		*[1557800]<div />
+			Catalog, Search
+	[1557575]<td />
+		*[1557801]<div />
+			Enabled
+	[1557576]<td />
+		*[1557802]<div />
+			Main Website
+	[1557577]<td />
+		*[1557803]<div />
+			Apr 19, 2023 12:13:50 PM
+	[1557578]<td />
+		[1558730]<a aria-label=Edit Prima Compete Bra Top />
+			Edit
+*[1557350]<tr />
+	[1557579]<td />
+		*[1557668]<label />
+			[1557666]<input type=checkbox checked=false id=idscheck1868 value=1868 />
+	[1557580]<td />
+		*[1557804]<div />
+			1868
+	[1557581]<td />
+		*[1557860]<span />
+			*[1557858]<span />
+				*[1557859]<img alt=Bardot Capri />
+	[1557582]<td />
+		*[1557891]<div />
+			Bardot Capri
+	[1557583]<td />
+		*[1557805]<div />
+			Configurable Product
+	[1557584]<td />
+		*[1557806]<div />
+			Bottom
+	[1557585]<td />
+		*[1557892]<div />
+			WP08
+	[1557586]<td />
+		*[1557807]<div />
+			$48.00
+	[1557587]<td />
+		*[1557808]<div />
+			0.0000
+	[1557588]<td />
+		*[1558415]<div />
+			*[1558409]<ul />
+	[1557589]<td />
+		*[1557809]<div />
+			Catalog, Search
+	[1557590]<td />
+		*[1557810]<div />
+			Enabled
+	[1557591]<td />
+		*[1557811]<div />
+			Main Website
+	[1557592]<td />
+		*[1557812]<div />
+			Apr 19, 2023 12:13:54 PM
+	[1557593]<td />
+		[1558750]<a aria-label=Edit Bardot Capri />
+			Edit
+*[1562847]<tr />
+	*[1563398]<td />
+		*[1563401]<label />
+			*[1563399]<input type=checkbox checked=false id=idscheck1668 value=1668 />
+	*[1563402]<td />
+		*[1563403]<div />
+			1668
+	*[1563404]<td />
+		*[1563407]<span />
+			*[1563405]<span />
+				*[1563406]<img alt=Lucia Cross-Fit Bra />
+	*[1563408]<td />
+		*[1563409]<div />
+			Lucia Cross-Fit Bra
+	*[1563410]<td />
+		*[1563411]<div />
+			Configurable Product
+	*[1563412]<td />
+		*[1563413]<div />
+			Top
+	*[1563414]<td />
+		*[1563415]<div />
+			WB05
+	*[1563416]<td />
+		*[1563417]<div />
+			$39.00
+	*[1563418]<td />
+		*[1563419]<div />
+			0.0000
+	*[1563420]<td />
+		*[1563427]<div />
+			*[1563421]<ul />
+	*[1563428]<td />
+		*[1563429]<div />
+			Catalog, Search
+	*[1563430]<td />
+		*[1563431]<div />
+			Enabled
+	*[1563432]<td />
+		*[1563433]<div />
+			Main Website
+	*[1563434]<td />
+		*[1563435]<div />
+			Apr 19, 2023 12:13:50 PM
+	*[1563436]<td />
+		*[1563443]<a aria-label=Edit Lucia Cross-Fit Bra />
+			Edit
+*[1562850]<tr />
+	*[1563448]<td />
+		*[1563451]<label />
+	*[1563452]<td />
+	*[1563454]<td />
+		*[1563456]<img alt=Bella Tank />
+	*[1563458]<td />
+	*[1563460]<td />
+		*[1563461]<div />
+			Configurable Product
+	*[1563462]<td />
+	*[1563464]<td />
+	*[1563466]<td />
+	*[1563468]<td />
+	*[1563470]<td />
+	*[1563478]<td />
+		*[1563479]<div />
+			Catalog, Search
+	*[1563480]<td />
+	*[1563482]<td />
+		*[1563483]<div />
+			Main Website
+	*[1563484]<td />
+		*[1563485]<div />
+			Apr 19, 2023 12:13:51 PM
+	*[1563486]<td />

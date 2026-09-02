@@ -1,0 +1,69 @@
+*[1375936]<a />
+*[1375945]<a />
+	Dashboard
+*[1375831]<a />
+	Sales
+*[1375832]<a />
+	Catalog
+*[1375833]<a />
+	Customers
+*[1375834]<a />
+	Marketing
+*[1375835]<a />
+	Content
+*[1375836]<a />
+	Reports
+*[1375837]<a />
+	Stores
+*[1375838]<a />
+	System
+*[1376547]<a />
+	Find Partners & Extensions
+Edit Review
+*[1376609]<a title=My Account />
+	admin
+*[1376647]<a title=Notifications />
+*[1376652]<div />
+	*[1375807]<form id=form-search />
+		*[1376655]<div />
+			*[1375808]<input type=text id=search-global name=query />
+*[1375839]<button title=Back id=back />
+	Back
+*[1375840]<button title=Reset id=reset />
+	Reset
+*[1375841]<button title=Delete Review id=delete />
+	Delete Review
+*[1376702]<button title=Save Review id=save_button />
+	Save Review
+*[1376708]<button title=Save and Next id=save_and_next />
+	Save and Next
+*[1375842]<button title=Next id=next />
+	Next
+Review Details
+Product
+*[1375843]<a />
+	Antonia Racer Tank
+Author
+*[1376769]<div id=customer />
+	Guest
+Summary Rating
+Detailed Rating
+Rating
+Status
+*[1375814]<select id=status_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+Nickname
+*[1375815]<input type=text id=nickname value=Pearl />
+Summary of Review
+*[1375816]<input type=text id=title name=title value=A regular or me />
+Review
+*[1375817]<textarea id=detail />
+*[1376927]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[1376937]<a id=footer_privacy />
+	Privacy Policy
+*[1376940]<a id=footer_account_activity />
+	Account Activity
+*[1376943]<a id=footer_bug_tracking />
+	Report an Issue
