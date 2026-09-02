@@ -1,0 +1,35 @@
+Dashboard
+*[192774]<a />
+	Sales
+*[192775]<a />
+	Catalog
+*[192776]<a />
+	Customers
+*[192777]<a />
+	Marketing
+*[192778]<a />
+	Content
+*[192779]<a />
+	Reports
+*[192780]<a />
+	Stores
+*[192781]<a />
+	System
+Find Partners & Extensions
+Hollister Backyard Sweatshirt-M-Green
+admin
+Scope:
+All Store Views
+*[192785]<a title=What is this? />
+	What is this?
+Save
+*[192786]<button title=Back id=back />
+	Back
+Add Attribute
+*[192797]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

@@ -1,0 +1,951 @@
+[991682]<a />
+*[991690]<li id=menu-magento-backend-dashboard role=menu-item />
+	[991691]<a />
+		Dashboard
+*[991696]<li id=menu-magento-sales-sales role=menu-item />
+	[991578]<a />
+		Sales
+*[991739]<li id=menu-magento-catalog-catalog role=menu-item />
+	[991579]<a />
+		Catalog
+*[991762]<li id=menu-magento-customer-customer role=menu-item />
+	[991580]<a />
+		Customers
+*[991787]<li id=menu-magento-backend-marketing role=menu-item />
+	[991581]<a />
+		Marketing
+*[991872]<li id=menu-magento-backend-content role=menu-item />
+	[991582]<a />
+		Content
+*[991931]<li id=menu-magento-reports-report role=menu-item />
+	[991583]<a />
+		Reports
+*[992092]<li id=menu-magento-backend-stores role=menu-item />
+	[991584]<a />
+		Stores
+*[992188]<li id=menu-magento-backend-system role=menu-item />
+	[991585]<a />
+		System
+*[992293]<li id=menu-magento-marketplace-partners role=menu-item />
+	[992294]<a />
+		Find Partners & Extensions
+Products
+[992356]<a title=My Account />
+	admin
+[992394]<a title=Notifications />
+[992399]<div />
+	[991570]<form id=form-search />
+		[992402]<div />
+			[991571]<input type=text id=search-global autocomplete=off />
+*[992428]<div title=Add Product id=add_new_product />
+	[992432]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[992438]<button title=Add Product aria-label=Add product of type />
+*[992940]<button />
+	Default View
+*[993000]<button />
+	Columns
+*[993171]<button />
+	Filters
+Active filters:
+Keyword:
+Taurus Elements Shell
+*[994539]<button />
+*[994486]<button />
+	Clear all
+*[993198]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+*[993199]<button aria-label=Search />
+*[993206]<button title=Select Items />
+	Actions
+16
+records found
+*[994038]<div />
+	*[994040]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+*[994041]<button />
+	Select
+per page
+*[993262]<button title=Previous Page disabled=true />
+*[993267]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[993269]<button title=Next Page disabled=true />
+*[992852]<tr />
+	*[993555]<div />
+		*[993556]<input type=checkbox checked=false id=77 />
+		*[993558]<button />
+			Options
+	*[993578]<th />
+		*[993577]<span />
+			ID
+	*[993581]<th />
+		Thumbnail
+	*[993584]<th />
+		*[993583]<span />
+			Name
+	*[993587]<th />
+		*[993586]<span />
+			Type
+	*[993590]<th />
+		*[993589]<span />
+			Attribute Set
+	*[993593]<th />
+		*[993592]<span />
+			SKU
+	*[993596]<th />
+		*[993595]<span />
+			Price
+	*[993599]<th />
+		*[993598]<span />
+			Quantity
+	*[993602]<th />
+		Salable Quantity
+	*[993605]<th />
+		*[993604]<span />
+			Visibility
+	*[993608]<th />
+		*[993607]<span />
+			Status
+	*[993611]<th />
+		*[993610]<span />
+			Websites
+	*[993614]<th />
+		*[993613]<span />
+			Last Updated At
+	*[993617]<th />
+		*[993616]<span />
+			Action
+*[1011059]<tr />
+	*[1011108]<td />
+		*[1011377]<label />
+			*[1011375]<input type=checkbox checked=false id=idscheck350 value=350 />
+	*[1011109]<td />
+		*[1011423]<div />
+			350
+	*[1011110]<td />
+		*[1011569]<span />
+			*[1011567]<span />
+				*[1011568]<img alt=Taurus Elements Shell />
+	*[1011111]<td />
+		*[1011615]<div />
+			Taurus Elements Shell
+	*[1011112]<td />
+		*[1011424]<div />
+			Configurable Product
+	*[1011113]<td />
+		*[1011425]<div />
+			Top
+	*[1011114]<td />
+		*[1011616]<div />
+			MJ09
+	*[1011115]<td />
+		*[1011426]<div />
+	*[1011116]<td />
+		*[1011427]<div />
+			0.0000
+	*[1011117]<td />
+		*[1011653]<div />
+			*[1011647]<ul />
+	*[1011118]<td />
+		*[1011428]<div />
+			Catalog, Search
+	*[1011119]<td />
+		*[1011429]<div />
+			Enabled
+	*[1011120]<td />
+		*[1011430]<div />
+			Main Website
+	*[1011121]<td />
+		*[1011431]<div />
+			Sep 2, 2026 8:06:34 AM
+	*[1011122]<td />
+		*[1012204]<a aria-label=Edit Taurus Elements Shell />
+			Edit
+*[1011062]<tr />
+	*[1011123]<td />
+		*[1011380]<label />
+			*[1011378]<input type=checkbox checked=false id=idscheck337 value=337 />
+	*[1011124]<td />
+		*[1011432]<div />
+			337
+	*[1011125]<td />
+		*[1011572]<span />
+			*[1011570]<span />
+				*[1011571]<img alt=Taurus Elements Shell-XS-Yellow />
+	*[1011126]<td />
+		*[1011617]<div />
+			Taurus Elements Shell-XS-Yellow
+	*[1011127]<td />
+		*[1011433]<div />
+			Simple Product
+	*[1011128]<td />
+		*[1011434]<div />
+			Top
+	*[1011129]<td />
+		*[1011618]<div />
+			MJ09-XS-Yellow
+	*[1011130]<td />
+		*[1011435]<div />
+			$65.00
+	*[1011131]<td />
+		*[1011436]<div />
+			100.0000
+	*[1011132]<td />
+		*[1011679]<div />
+			*[1011673]<ul />
+				*[1011699]<li level=1 />
+					*[1011702]<strong />
+						Default Stock
+					*[1011703]<span />
+						100
+	*[1011133]<td />
+		*[1011437]<div />
+			Not Visible Individually
+	*[1011134]<td />
+		*[1011438]<div />
+			Enabled
+	*[1011135]<td />
+		*[1011439]<div />
+			Main Website
+	*[1011136]<td />
+		*[1011440]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011137]<td />
+		*[1012224]<a aria-label=Edit Taurus Elements Shell-XS-Yellow />
+			Edit
+*[1011065]<tr />
+	*[1011138]<td />
+		*[1011383]<label />
+			*[1011381]<input type=checkbox checked=false id=idscheck341 value=341 />
+	*[1011139]<td />
+		*[1011441]<div />
+			341
+	*[1011140]<td />
+		*[1011575]<span />
+			*[1011573]<span />
+				*[1011574]<img alt=Taurus Elements Shell-M-Blue />
+	*[1011141]<td />
+		*[1011619]<div />
+			Taurus Elements Shell-M-Blue
+	*[1011142]<td />
+		*[1011442]<div />
+			Simple Product
+	*[1011143]<td />
+		*[1011443]<div />
+			Top
+	*[1011144]<td />
+		*[1011620]<div />
+			MJ09-M-Blue
+	*[1011145]<td />
+		*[1011444]<div />
+			$65.00
+	*[1011146]<td />
+		*[1011445]<div />
+			100.0000
+	*[1011147]<td />
+		*[1011714]<div />
+			*[1011708]<ul />
+				*[1011734]<li level=1 />
+					*[1011737]<strong />
+						Default Stock
+					*[1011738]<span />
+						100
+	*[1011148]<td />
+		*[1011446]<div />
+			Not Visible Individually
+	*[1011149]<td />
+		*[1011447]<div />
+			Enabled
+	*[1011150]<td />
+		*[1011448]<div />
+			Main Website
+	*[1011151]<td />
+		*[1011449]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011152]<td />
+		*[1012244]<a aria-label=Edit Taurus Elements Shell-M-Blue />
+			Edit
+*[1011068]<tr />
+	*[1011153]<td />
+		*[1011386]<label />
+			*[1011384]<input type=checkbox checked=false id=idscheck345 value=345 />
+	*[1011154]<td />
+		*[1011450]<div />
+			345
+	*[1011155]<td />
+		*[1011578]<span />
+			*[1011576]<span />
+				*[1011577]<img alt=Taurus Elements Shell-L-White />
+	*[1011156]<td />
+		*[1011621]<div />
+			Taurus Elements Shell-L-White
+	*[1011157]<td />
+		*[1011451]<div />
+			Simple Product
+	*[1011158]<td />
+		*[1011452]<div />
+			Top
+	*[1011159]<td />
+		*[1011622]<div />
+			MJ09-L-White
+	*[1011160]<td />
+		*[1011453]<div />
+			$65.00
+	*[1011161]<td />
+		*[1011454]<div />
+			100.0000
+	*[1011162]<td />
+		*[1011749]<div />
+			*[1011743]<ul />
+				*[1011769]<li level=1 />
+					*[1011772]<strong />
+						Default Stock
+					*[1011773]<span />
+						100
+	*[1011163]<td />
+		*[1011455]<div />
+			Not Visible Individually
+	*[1011164]<td />
+		*[1011456]<div />
+			Enabled
+	*[1011165]<td />
+		*[1011457]<div />
+			Main Website
+	*[1011166]<td />
+		*[1011458]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011167]<td />
+		*[1012264]<a aria-label=Edit Taurus Elements Shell-L-White />
+			Edit
+*[1011071]<tr />
+	*[1011168]<td />
+		*[1011389]<label />
+			*[1011387]<input type=checkbox checked=false id=idscheck349 value=349 />
+	*[1011169]<td />
+		*[1011459]<div />
+			349
+	*[1011170]<td />
+		*[1011581]<span />
+			*[1011579]<span />
+				*[1011580]<img alt=Taurus Elements Shell-XL-Yellow />
+	*[1011171]<td />
+		*[1011623]<div />
+			Taurus Elements Shell-XL-Yellow
+	*[1011172]<td />
+		*[1011460]<div />
+			Simple Product
+	*[1011173]<td />
+		*[1011461]<div />
+			Top
+	*[1011174]<td />
+		*[1011624]<div />
+			MJ09-XL-Yellow
+	*[1011175]<td />
+		*[1011462]<div />
+			$65.00
+	*[1011176]<td />
+		*[1011463]<div />
+			100.0000
+	*[1011177]<td />
+		*[1011784]<div />
+			*[1011778]<ul />
+				*[1011804]<li level=1 />
+					*[1011807]<strong />
+						Default Stock
+					*[1011808]<span />
+						100
+	*[1011178]<td />
+		*[1011464]<div />
+			Not Visible Individually
+	*[1011179]<td />
+		*[1011465]<div />
+			Enabled
+	*[1011180]<td />
+		*[1011466]<div />
+			Main Website
+	*[1011181]<td />
+		*[1011467]<div />
+			Apr 19, 2023 12:13:29 PM
+	*[1011182]<td />
+		*[1012284]<a aria-label=Edit Taurus Elements Shell-XL-Yellow />
+			Edit
+*[1011074]<tr />
+	*[1011183]<td />
+		*[1011392]<label />
+			*[1011390]<input type=checkbox checked=false id=idscheck338 value=338 />
+	*[1011184]<td />
+		*[1011468]<div />
+			338
+	*[1011185]<td />
+		*[1011584]<span />
+			*[1011582]<span />
+				*[1011583]<img alt=Taurus Elements Shell-S-Blue />
+	*[1011186]<td />
+		*[1011625]<div />
+			Taurus Elements Shell-S-Blue
+	*[1011187]<td />
+		*[1011469]<div />
+			Simple Product
+	*[1011188]<td />
+		*[1011470]<div />
+			Top
+	*[1011189]<td />
+		*[1011626]<div />
+			MJ09-S-Blue
+	*[1011190]<td />
+		*[1011471]<div />
+			$65.00
+	*[1011191]<td />
+		*[1011472]<div />
+			100.0000
+	*[1011192]<td />
+		*[1011819]<div />
+			*[1011813]<ul />
+				*[1011839]<li level=1 />
+					*[1011842]<strong />
+						Default Stock
+					*[1011843]<span />
+						99
+	*[1011193]<td />
+		*[1011473]<div />
+			Not Visible Individually
+	*[1011194]<td />
+		*[1011474]<div />
+			Enabled
+	*[1011195]<td />
+		*[1011475]<div />
+			Main Website
+	*[1011196]<td />
+		*[1011476]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011197]<td />
+		*[1012304]<a aria-label=Edit Taurus Elements Shell-S-Blue />
+			Edit
+*[1011077]<tr />
+	*[1011198]<td />
+		*[1011395]<label />
+			*[1011393]<input type=checkbox checked=false id=idscheck342 value=342 />
+	*[1011199]<td />
+		*[1011477]<div />
+			342
+	*[1011200]<td />
+		*[1011587]<span />
+			*[1011585]<span />
+				*[1011586]<img alt=Taurus Elements Shell-M-White />
+	*[1011201]<td />
+		*[1011627]<div />
+			Taurus Elements Shell-M-White
+	*[1011202]<td />
+		*[1011478]<div />
+			Simple Product
+	*[1011203]<td />
+		*[1011479]<div />
+			Top
+	*[1011204]<td />
+		*[1011628]<div />
+			MJ09-M-White
+	*[1011205]<td />
+		*[1011480]<div />
+			$65.00
+	*[1011206]<td />
+		*[1011481]<div />
+			100.0000
+	*[1011207]<td />
+		*[1011854]<div />
+			*[1011848]<ul />
+				*[1011874]<li level=1 />
+					*[1011877]<strong />
+						Default Stock
+					*[1011878]<span />
+						100
+	*[1011208]<td />
+		*[1011482]<div />
+			Not Visible Individually
+	*[1011209]<td />
+		*[1011483]<div />
+			Enabled
+	*[1011210]<td />
+		*[1011484]<div />
+			Main Website
+	*[1011211]<td />
+		*[1011485]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011212]<td />
+		*[1012324]<a aria-label=Edit Taurus Elements Shell-M-White />
+			Edit
+*[1011080]<tr />
+	*[1011213]<td />
+		*[1011398]<label />
+			*[1011396]<input type=checkbox checked=false id=idscheck346 value=346 />
+	*[1011214]<td />
+		*[1011486]<div />
+			346
+	*[1011215]<td />
+		*[1011590]<span />
+			*[1011588]<span />
+				*[1011589]<img alt=Taurus Elements Shell-L-Yellow />
+	*[1011216]<td />
+		*[1011629]<div />
+			Taurus Elements Shell-L-Yellow
+	*[1011217]<td />
+		*[1011487]<div />
+			Simple Product
+	*[1011218]<td />
+		*[1011488]<div />
+			Top
+	*[1011219]<td />
+		*[1011630]<div />
+			MJ09-L-Yellow
+	*[1011220]<td />
+		*[1011489]<div />
+			$65.00
+	*[1011221]<td />
+		*[1011490]<div />
+			100.0000
+	*[1011222]<td />
+		*[1011889]<div />
+			*[1011883]<ul />
+				*[1011909]<li level=1 />
+					*[1011912]<strong />
+						Default Stock
+					*[1011913]<span />
+						100
+	*[1011223]<td />
+		*[1011491]<div />
+			Not Visible Individually
+	*[1011224]<td />
+		*[1011492]<div />
+			Enabled
+	*[1011225]<td />
+		*[1011493]<div />
+			Main Website
+	*[1011226]<td />
+		*[1011494]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011227]<td />
+		*[1012344]<a aria-label=Edit Taurus Elements Shell-L-Yellow />
+			Edit
+*[1011083]<tr />
+	*[1011228]<td />
+		*[1011401]<label />
+			*[1011399]<input type=checkbox checked=false id=idscheck335 value=335 />
+	*[1011229]<td />
+		*[1011495]<div />
+			335
+	*[1011230]<td />
+		*[1011593]<span />
+			*[1011591]<span />
+				*[1011592]<img alt=Taurus Elements Shell-XS-Blue />
+	*[1011231]<td />
+		*[1011631]<div />
+			Taurus Elements Shell-XS-Blue
+	*[1011232]<td />
+		*[1011496]<div />
+			Simple Product
+	*[1011233]<td />
+		*[1011497]<div />
+			Top
+	*[1011234]<td />
+		*[1011632]<div />
+			MJ09-XS-Blue
+	*[1011235]<td />
+		*[1011498]<div />
+			$65.00
+	*[1011236]<td />
+		*[1011499]<div />
+			100.0000
+	*[1011237]<td />
+		*[1011924]<div />
+			*[1011918]<ul />
+				*[1011944]<li level=1 />
+					*[1011947]<strong />
+						Default Stock
+					*[1011948]<span />
+						100
+	*[1011238]<td />
+		*[1011500]<div />
+			Not Visible Individually
+	*[1011239]<td />
+		*[1011501]<div />
+			Enabled
+	*[1011240]<td />
+		*[1011502]<div />
+			Main Website
+	*[1011241]<td />
+		*[1011503]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011242]<td />
+		*[1012364]<a aria-label=Edit Taurus Elements Shell-XS-Blue />
+			Edit
+*[1011086]<tr />
+	*[1011243]<td />
+		*[1011404]<label />
+			*[1011402]<input type=checkbox checked=false id=idscheck339 value=339 />
+	*[1011244]<td />
+		*[1011504]<div />
+			339
+	*[1011245]<td />
+		*[1011596]<span />
+			*[1011594]<span />
+				*[1011595]<img alt=Taurus Elements Shell-S-White />
+	*[1011246]<td />
+		*[1011633]<div />
+			Taurus Elements Shell-S-White
+	*[1011247]<td />
+		*[1011505]<div />
+			Simple Product
+	*[1011248]<td />
+		*[1011506]<div />
+			Top
+	*[1011249]<td />
+		*[1011634]<div />
+			MJ09-S-White
+	*[1011250]<td />
+		*[1011507]<div />
+			$65.00
+	*[1011251]<td />
+		*[1011508]<div />
+			100.0000
+	*[1011252]<td />
+		*[1011959]<div />
+			*[1011953]<ul />
+				*[1011979]<li level=1 />
+					*[1011982]<strong />
+						Default Stock
+					*[1011983]<span />
+						100
+	*[1011253]<td />
+		*[1011509]<div />
+			Not Visible Individually
+	*[1011254]<td />
+		*[1011510]<div />
+			Enabled
+	*[1011255]<td />
+		*[1011511]<div />
+			Main Website
+	*[1011256]<td />
+		*[1011512]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011257]<td />
+		*[1012384]<a aria-label=Edit Taurus Elements Shell-S-White />
+			Edit
+*[1011089]<tr />
+	*[1011258]<td />
+		*[1011407]<label />
+			*[1011405]<input type=checkbox checked=false id=idscheck343 value=343 />
+	*[1011259]<td />
+		*[1011513]<div />
+			343
+	*[1011260]<td />
+		*[1011599]<span />
+			*[1011597]<span />
+				*[1011598]<img alt=Taurus Elements Shell-M-Yellow />
+	*[1011261]<td />
+		*[1011635]<div />
+			Taurus Elements Shell-M-Yellow
+	*[1011262]<td />
+		*[1011514]<div />
+			Simple Product
+	*[1011263]<td />
+		*[1011515]<div />
+			Top
+	*[1011264]<td />
+		*[1011636]<div />
+			MJ09-M-Yellow
+	*[1011265]<td />
+		*[1011516]<div />
+			$65.00
+	*[1011266]<td />
+		*[1011517]<div />
+			100.0000
+	*[1011267]<td />
+		*[1011994]<div />
+			*[1011988]<ul />
+				*[1012014]<li level=1 />
+					*[1012017]<strong />
+						Default Stock
+					*[1012018]<span />
+						100
+	*[1011268]<td />
+		*[1011518]<div />
+			Not Visible Individually
+	*[1011269]<td />
+		*[1011519]<div />
+			Enabled
+	*[1011270]<td />
+		*[1011520]<div />
+			Main Website
+	*[1011271]<td />
+		*[1011521]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011272]<td />
+		*[1012404]<a aria-label=Edit Taurus Elements Shell-M-Yellow />
+			Edit
+*[1011092]<tr />
+	*[1011273]<td />
+		*[1011410]<label />
+			*[1011408]<input type=checkbox checked=false id=idscheck347 value=347 />
+	*[1011274]<td />
+		*[1011522]<div />
+			347
+	*[1011275]<td />
+		*[1011602]<span />
+			*[1011600]<span />
+				*[1011601]<img alt=Taurus Elements Shell-XL-Blue />
+	*[1011276]<td />
+		*[1011637]<div />
+			Taurus Elements Shell-XL-Blue
+	*[1011277]<td />
+		*[1011523]<div />
+			Simple Product
+	*[1011278]<td />
+		*[1011524]<div />
+			Top
+	*[1011279]<td />
+		*[1011638]<div />
+			MJ09-XL-Blue
+	*[1011280]<td />
+		*[1011525]<div />
+			$65.00
+	*[1011281]<td />
+		*[1011526]<div />
+			100.0000
+	*[1011282]<td />
+		*[1012029]<div />
+			*[1012023]<ul />
+				*[1012049]<li level=1 />
+					*[1012052]<strong />
+						Default Stock
+					*[1012053]<span />
+						100
+	*[1011283]<td />
+		*[1011527]<div />
+			Not Visible Individually
+	*[1011284]<td />
+		*[1011528]<div />
+			Enabled
+	*[1011285]<td />
+		*[1011529]<div />
+			Main Website
+	*[1011286]<td />
+		*[1011530]<div />
+			Apr 19, 2023 12:13:29 PM
+	*[1011287]<td />
+		*[1012424]<a aria-label=Edit Taurus Elements Shell-XL-Blue />
+			Edit
+*[1011095]<tr />
+	*[1011288]<td />
+		*[1011413]<label />
+			*[1011411]<input type=checkbox checked=false id=idscheck336 value=336 />
+	*[1011289]<td />
+		*[1011531]<div />
+			336
+	*[1011290]<td />
+		*[1011605]<span />
+			*[1011603]<span />
+				*[1011604]<img alt=Taurus Elements Shell-XS-White />
+	*[1011291]<td />
+		*[1011639]<div />
+			Taurus Elements Shell-XS-White
+	*[1011292]<td />
+		*[1011532]<div />
+			Simple Product
+	*[1011293]<td />
+		*[1011533]<div />
+			Top
+	*[1011294]<td />
+		*[1011640]<div />
+			MJ09-XS-White
+	*[1011295]<td />
+		*[1011534]<div />
+			$65.00
+	*[1011296]<td />
+		*[1011535]<div />
+			100.0000
+	*[1011297]<td />
+		*[1012064]<div />
+			*[1012058]<ul />
+				*[1012084]<li level=1 />
+					*[1012087]<strong />
+						Default Stock
+					*[1012088]<span />
+						99
+	*[1011298]<td />
+		*[1011536]<div />
+			Not Visible Individually
+	*[1011299]<td />
+		*[1011537]<div />
+			Enabled
+	*[1011300]<td />
+		*[1011538]<div />
+			Main Website
+	*[1011301]<td />
+		*[1011539]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011302]<td />
+		*[1012444]<a aria-label=Edit Taurus Elements Shell-XS-White />
+			Edit
+*[1011098]<tr />
+	*[1011303]<td />
+		*[1011416]<label />
+			*[1011414]<input type=checkbox checked=false id=idscheck340 value=340 />
+	*[1011304]<td />
+		*[1011540]<div />
+			340
+	*[1011305]<td />
+		*[1011608]<span />
+			*[1011606]<span />
+				*[1011607]<img alt=Taurus Elements Shell-S-Yellow />
+	*[1011306]<td />
+		*[1011641]<div />
+			Taurus Elements Shell-S-Yellow
+	*[1011307]<td />
+		*[1011541]<div />
+			Simple Product
+	*[1011308]<td />
+		*[1011542]<div />
+			Top
+	*[1011309]<td />
+		*[1011642]<div />
+			MJ09-S-Yellow
+	*[1011310]<td />
+		*[1011543]<div />
+			$65.00
+	*[1011311]<td />
+		*[1011544]<div />
+			100.0000
+	*[1011312]<td />
+		*[1012099]<div />
+			*[1012093]<ul />
+				*[1012119]<li level=1 />
+					*[1012122]<strong />
+						Default Stock
+					*[1012123]<span />
+						100
+	*[1011313]<td />
+		*[1011545]<div />
+			Not Visible Individually
+	*[1011314]<td />
+		*[1011546]<div />
+			Enabled
+	*[1011315]<td />
+		*[1011547]<div />
+			Main Website
+	*[1011316]<td />
+		*[1011548]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011317]<td />
+		*[1012464]<a aria-label=Edit Taurus Elements Shell-S-Yellow />
+			Edit
+*[1011101]<tr />
+	*[1011318]<td />
+		*[1011419]<label />
+			*[1011417]<input type=checkbox checked=false id=idscheck344 value=344 />
+	*[1011319]<td />
+		*[1011549]<div />
+			344
+	*[1011320]<td />
+		*[1011611]<span />
+			*[1011609]<span />
+				*[1011610]<img alt=Taurus Elements Shell-L-Blue />
+	*[1011321]<td />
+		*[1011643]<div />
+			Taurus Elements Shell-L-Blue
+	*[1011322]<td />
+		*[1011550]<div />
+			Simple Product
+	*[1011323]<td />
+		*[1011551]<div />
+			Top
+	*[1011324]<td />
+		*[1011644]<div />
+			MJ09-L-Blue
+	*[1011325]<td />
+		*[1011552]<div />
+			$65.00
+	*[1011326]<td />
+		*[1011553]<div />
+			100.0000
+	*[1011327]<td />
+		*[1012134]<div />
+			*[1012128]<ul />
+				*[1012154]<li level=1 />
+					*[1012157]<strong />
+						Default Stock
+					*[1012158]<span />
+						100
+	*[1011328]<td />
+		*[1011554]<div />
+			Not Visible Individually
+	*[1011329]<td />
+		*[1011555]<div />
+			Enabled
+	*[1011330]<td />
+		*[1011556]<div />
+			Main Website
+	*[1011331]<td />
+		*[1011557]<div />
+			Apr 19, 2023 12:13:28 PM
+	*[1011332]<td />
+		*[1012484]<a aria-label=Edit Taurus Elements Shell-L-Blue />
+			Edit
+*[1011104]<tr />
+	*[1011333]<td />
+		*[1011422]<label />
+			*[1011420]<input type=checkbox checked=false id=idscheck348 value=348 />
+	*[1011334]<td />
+		*[1011558]<div />
+			348
+	*[1011335]<td />
+		*[1011614]<span />
+			*[1011612]<span />
+				*[1011613]<img alt=Taurus Elements Shell-XL-White />
+	*[1011336]<td />
+		*[1011645]<div />
+			Taurus Elements Shell-XL-White
+	*[1011337]<td />
+		*[1011559]<div />
+			Simple Product
+	*[1011338]<td />
+		*[1011560]<div />
+			Top
+	*[1011339]<td />
+		*[1011646]<div />
+			MJ09-XL-White
+	*[1011340]<td />
+		*[1011561]<div />
+			$65.00
+	*[1011341]<td />
+		*[1011562]<div />
+			100.0000
+	*[1011342]<td />
+		*[1012169]<div />
+			*[1012163]<ul />
+				*[1012189]<li level=1 />
+					*[1012192]<strong />
+						Default Stock
+					*[1012193]<span />
+						100
+	*[1011343]<td />
+		*[1011563]<div />
+			Not Visible Individually
+	*[1011344]<td />
+		*[1011564]<div />
+			Enabled
+	*[1011345]<td />
+		*[1011565]<div />
+			Main Website
+	*[1011346]<td />
+		*[1011566]<div />
+			Apr 19, 2023 12:13:29 PM
+	*[1011347]<td />
+		*[1012504]<a aria-label=Edit Taurus Elements Shell-XL-White />
+			Edit
+[992531]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[992541]<a id=footer_privacy />
+	Privacy Policy
+[992544]<a id=footer_account_activity />
+	Account Activity
+[992547]<a id=footer_bug_tracking />
+	Report an Issue

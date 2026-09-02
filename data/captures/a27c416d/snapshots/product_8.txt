@@ -1,0 +1,35 @@
+Dashboard
+*[682298]<a />
+	Sales
+*[682299]<a />
+	Catalog
+*[682300]<a />
+	Customers
+*[682301]<a />
+	Marketing
+*[682281]<a />
+	Content
+*[682302]<a />
+	Reports
+*[682303]<a />
+	Stores
+*[682304]<a />
+	System
+Find Partners & Extensions
+Aero Daily Fitness Tee-XL-Brown
+admin
+Scope:
+All Store Views
+*[682308]<a title=What is this? />
+	What is this?
+Save
+*[682309]<button title=Back id=back />
+	Back
+Add Attribute
+*[682320]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

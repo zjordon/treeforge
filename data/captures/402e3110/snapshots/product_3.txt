@@ -1,0 +1,178 @@
+[374179]<a />
+[374187]<li id=menu-magento-backend-dashboard role=menu-item />
+	[374188]<a />
+		Dashboard
+[374193]<li id=menu-magento-sales-sales role=menu-item />
+	[374082]<a />
+		Sales
+[374236]<li id=menu-magento-catalog-catalog role=menu-item />
+	[374083]<a />
+		Catalog
+[374259]<li id=menu-magento-customer-customer role=menu-item />
+	[374084]<a />
+		Customers
+[374284]<li id=menu-magento-backend-marketing role=menu-item />
+	[374085]<a />
+		Marketing
+[374369]<li id=menu-magento-backend-content role=menu-item />
+	[374086]<a />
+		Content
+[374428]<li id=menu-magento-reports-report role=menu-item />
+	[374087]<a />
+		Reports
+[374589]<li id=menu-magento-backend-stores role=menu-item />
+	[374088]<a />
+		Stores
+[374685]<li id=menu-magento-backend-system role=menu-item />
+	[374089]<a />
+		System
+[374790]<li id=menu-magento-marketplace-partners role=menu-item />
+	[374791]<a />
+		Find Partners & Extensions
+Products
+[374853]<a title=My Account />
+	admin
+[374891]<a title=Notifications />
+[374896]<div />
+	[374067]<form id=form-search />
+		[374899]<div />
+			[374068]<input type=text id=search-global autocomplete=off />
+[374925]<div title=Add Product id=add_new_product />
+	[374929]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[374935]<button title=Add Product aria-label=Add product of type />
+[375413]<button />
+	Default View
+[375467]<button />
+	Columns
+[375657]<button />
+	Filters
+Active filters:
+Name:
+Cronus
+*[421996]<button />
+SKU:
+MP12-33-Blue
+*[422010]<button />
+*[376486]<button />
+	Clear all
+[375684]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[375685]<button aria-label=Search />
+[375692]<button title=Select Items />
+	Actions
+records found
+[376939]<div />
+	[376941]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+[376942]<button />
+	Select
+per page
+[375748]<button title=Previous Page disabled=true />
+*[375753]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[375755]<button title=Next Page disabled=true />
+[375338]<tr />
+	[376202]<div />
+		[376203]<input type=checkbox checked=false id=77 />
+		[376205]<button />
+			Options
+	[376225]<th />
+		[376224]<span />
+			ID
+	[376228]<th />
+		Thumbnail
+	[376231]<th />
+		[376230]<span />
+			Name
+	[376234]<th />
+		[376233]<span />
+			Type
+	[376237]<th />
+		[376236]<span />
+			Attribute Set
+	[376240]<th />
+		[376239]<span />
+			SKU
+	[376243]<th />
+		[376242]<span />
+			Price
+	[376246]<th />
+		[376245]<span />
+			Quantity
+	[376249]<th />
+		Salable Quantity
+	[376252]<th />
+		[376251]<span />
+			Visibility
+	[376255]<th />
+		[376254]<span />
+			Status
+	[376258]<th />
+		[376257]<span />
+			Websites
+	[376261]<th />
+		[376260]<span />
+			Last Updated At
+	[376264]<th />
+		[376263]<span />
+			Action
+[394487]<tr />
+	[394491]<td />
+		[394528]<label />
+			[394526]<input type=checkbox checked=false id=idscheck872 value=872 />
+	[394492]<td />
+		[394536]<div />
+			872
+	[394493]<td />
+		[394547]<span />
+			[394545]<span />
+				[394546]<img alt=Cronus Yoga Pant -33-Blue />
+	[394494]<td />
+		[394548]<div />
+			Cronus Yoga Pant -33-Blue
+	[394495]<td />
+		[394537]<div />
+			Simple Product
+	[394496]<td />
+		[394538]<div />
+			Bottom
+	[394497]<td />
+		[394549]<div />
+			MP12-33-Blue
+	[394498]<td />
+		[394539]<div />
+			$48.00
+	[394499]<td />
+		[394540]<div />
+			0.0000
+	[394500]<td />
+		[394556]<div />
+			[394550]<ul />
+				*[422066]<li level=1 />
+					*[422069]<strong />
+						Default Stock
+					*[422070]<span />
+	[394501]<td />
+		[394541]<div />
+			Not Visible Individually
+	[394502]<td />
+		[394542]<div />
+			Enabled
+	[394503]<td />
+		[394543]<div />
+			Main Website
+	[394504]<td />
+		[394544]<div />
+			Apr 23, 2023 6:33:47 PM
+	[394505]<td />
+		[394591]<a aria-label=Edit Cronus Yoga Pant -33-Blue />
+			Edit
+*[375028]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[375038]<a id=footer_privacy />
+	Privacy Policy
+*[375041]<a id=footer_account_activity />
+	Account Activity
+*[375044]<a id=footer_bug_tracking />
+	Report an Issue

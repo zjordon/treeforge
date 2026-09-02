@@ -1,0 +1,387 @@
+[836234]<a />
+*[836242]<li id=menu-magento-backend-dashboard role=menu-item />
+	[836243]<a />
+		Dashboard
+*[836248]<li id=menu-magento-sales-sales role=menu-item />
+	[836130]<a />
+		Sales
+*[836291]<li id=menu-magento-catalog-catalog role=menu-item />
+	[836131]<a />
+		Catalog
+*[836314]<li id=menu-magento-customer-customer role=menu-item />
+	[836132]<a />
+		Customers
+*[836339]<li id=menu-magento-backend-marketing role=menu-item />
+	[836133]<a />
+		Marketing
+*[836423]<li id=menu-magento-backend-content role=menu-item />
+	[836134]<a />
+		Content
+*[836482]<li id=menu-magento-reports-report role=menu-item />
+	[836135]<a />
+		Reports
+*[836642]<li id=menu-magento-backend-stores role=menu-item />
+	[836136]<a />
+		Stores
+*[836738]<li id=menu-magento-backend-system role=menu-item />
+	[836137]<a />
+		System
+*[836843]<li id=menu-magento-marketplace-partners role=menu-item />
+	[836844]<a />
+		Find Partners & Extensions
+Products
+[836906]<a title=My Account />
+	admin
+[836944]<a title=Notifications />
+[836949]<div />
+	[836120]<form id=form-search />
+		[836952]<div />
+			[836121]<input type=text id=search-global autocomplete=off />
+*[836978]<div title=Add Product id=add_new_product />
+	[836982]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[836988]<button title=Add Product aria-label=Add product of type />
+*[837531]<button />
+	Default View
+*[837550]<button />
+	Columns
+*[837721]<button />
+	Filters
+Active filters:
+Keyword:
+Aero Daily Fitness Tee
+*[838608]<button />
+Name:
+brown
+*[841082]<button />
+*[838555]<button />
+	Clear all
+*[837748]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+*[837749]<button aria-label=Search />
+*[837756]<button title=Select Items />
+	Actions
+records found
+*[839004]<div />
+	*[839006]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+*[839007]<button />
+	Select
+per page
+*[837812]<button title=Previous Page disabled=true />
+*[837817]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[837819]<button title=Next Page disabled=true />
+*[837397]<tr />
+	*[838105]<div />
+		*[838106]<input type=checkbox checked=false id=77 />
+		*[838108]<button />
+			Options
+	*[838128]<th />
+		*[838127]<span />
+			ID
+	*[838131]<th />
+		Thumbnail
+	*[838134]<th />
+		*[838133]<span />
+			Name
+	*[838137]<th />
+		*[838136]<span />
+			Type
+	*[838140]<th />
+		*[838139]<span />
+			Attribute Set
+	*[838143]<th />
+		*[838142]<span />
+			SKU
+	*[838146]<th />
+		*[838145]<span />
+			Price
+	*[838149]<th />
+		*[838148]<span />
+			Quantity
+	*[838152]<th />
+		Salable Quantity
+	*[838155]<th />
+		*[838154]<span />
+			Visibility
+	*[838158]<th />
+		*[838157]<span />
+			Status
+	*[838161]<th />
+		*[838160]<span />
+			Websites
+	*[838164]<th />
+		*[838163]<span />
+			Last Updated At
+	*[838167]<th />
+		*[838166]<span />
+			Action
+*[856100]<tr />
+	*[856116]<td />
+		*[856220]<label />
+			*[856218]<input type=checkbox checked=false id=idscheck547 value=547 />
+	*[856117]<td />
+		*[856233]<div />
+			547
+	*[856118]<td />
+		*[856280]<span />
+			*[856278]<span />
+				*[856279]<img alt=Aero Daily Fitness Tee-S-Brown />
+	*[856119]<td />
+		*[856293]<div />
+			Aero Daily Fitness Tee-S-Brown
+	*[856120]<td />
+		*[856234]<div />
+			Simple Product
+	*[856121]<td />
+		*[856235]<div />
+			Top
+	*[856122]<td />
+		*[856294]<div />
+			MS01-S-Brown
+	*[856123]<td />
+		*[856236]<div />
+			$24.00
+	*[856124]<td />
+		*[856237]<div />
+			478.0000
+	*[856125]<td />
+		*[856309]<div />
+			*[856303]<ul />
+				*[856329]<li level=1 />
+					*[856332]<strong />
+						Default Stock
+					*[856333]<span />
+						478
+	*[856126]<td />
+		*[856238]<div />
+			Not Visible Individually
+	*[856127]<td />
+		*[856239]<div />
+			Enabled
+	*[856128]<td />
+		*[856240]<div />
+			Main Website
+	*[856129]<td />
+		*[856241]<div />
+			Sep 2, 2026 7:57:50 AM
+	*[856130]<td />
+		*[856484]<a aria-label=Edit Aero Daily Fitness Tee-S-Brown />
+			Edit
+*[856103]<tr />
+	*[856131]<td />
+		*[856223]<label />
+			*[856221]<input type=checkbox checked=false id=idscheck550 value=550 />
+	*[856132]<td />
+		*[856242]<div />
+			550
+	*[856133]<td />
+		*[856283]<span />
+			*[856281]<span />
+				*[856282]<img alt=Aero Daily Fitness Tee-M-Brown />
+	*[856134]<td />
+		*[856295]<div />
+			Aero Daily Fitness Tee-M-Brown
+	*[856135]<td />
+		*[856243]<div />
+			Simple Product
+	*[856136]<td />
+		*[856244]<div />
+			Top
+	*[856137]<td />
+		*[856296]<div />
+			MS01-M-Brown
+	*[856138]<td />
+		*[856245]<div />
+			$24.00
+	*[856139]<td />
+		*[856246]<div />
+			478.0000
+	*[856140]<td />
+		*[856344]<div />
+			*[856338]<ul />
+				*[856364]<li level=1 />
+					*[856367]<strong />
+						Default Stock
+					*[856368]<span />
+						477
+	*[856141]<td />
+		*[856247]<div />
+			Not Visible Individually
+	*[856142]<td />
+		*[856248]<div />
+			Enabled
+	*[856143]<td />
+		*[856249]<div />
+			Main Website
+	*[856144]<td />
+		*[856250]<div />
+			Sep 2, 2026 7:57:03 AM
+	*[856145]<td />
+		*[856504]<a aria-label=Edit Aero Daily Fitness Tee-M-Brown />
+			Edit
+*[856106]<tr />
+	*[856146]<td />
+		*[856226]<label />
+			*[856224]<input type=checkbox checked=false id=idscheck553 value=553 />
+	*[856147]<td />
+		*[856251]<div />
+			553
+	*[856148]<td />
+		*[856286]<span />
+			*[856284]<span />
+				*[856285]<img alt=Aero Daily Fitness Tee-L-Brown />
+	*[856149]<td />
+		*[856297]<div />
+			Aero Daily Fitness Tee-L-Brown
+	*[856150]<td />
+		*[856252]<div />
+			Simple Product
+	*[856151]<td />
+		*[856253]<div />
+			Top
+	*[856152]<td />
+		*[856298]<div />
+			MS01-L-Brown
+	*[856153]<td />
+		*[856254]<div />
+			$24.00
+	*[856154]<td />
+		*[856255]<div />
+			478.0000
+	*[856155]<td />
+		*[856379]<div />
+			*[856373]<ul />
+				*[856399]<li level=1 />
+					*[856402]<strong />
+						Default Stock
+					*[856403]<span />
+						478
+	*[856156]<td />
+		*[856256]<div />
+			Not Visible Individually
+	*[856157]<td />
+		*[856257]<div />
+			Enabled
+	*[856158]<td />
+		*[856258]<div />
+			Main Website
+	*[856159]<td />
+		*[856259]<div />
+			Sep 2, 2026 7:58:03 AM
+	*[856160]<td />
+		*[856524]<a aria-label=Edit Aero Daily Fitness Tee-L-Brown />
+			Edit
+*[856109]<tr />
+	*[856161]<td />
+		*[856229]<label />
+			*[856227]<input type=checkbox checked=false id=idscheck544 value=544 />
+	*[856162]<td />
+		*[856260]<div />
+			544
+	*[856163]<td />
+		*[856289]<span />
+			*[856287]<span />
+				*[856288]<img alt=Aero Daily Fitness Tee-XS-Brown />
+	*[856164]<td />
+		*[856299]<div />
+			Aero Daily Fitness Tee-XS-Brown
+	*[856165]<td />
+		*[856261]<div />
+			Simple Product
+	*[856166]<td />
+		*[856262]<div />
+			Top
+	*[856167]<td />
+		*[856300]<div />
+			MS01-XS-Brown
+	*[856168]<td />
+		*[856263]<div />
+			$24.00
+	*[856169]<td />
+		*[856264]<div />
+			478.0000
+	*[856170]<td />
+		*[856414]<div />
+			*[856408]<ul />
+				*[856434]<li level=1 />
+					*[856437]<strong />
+						Default Stock
+					*[856438]<span />
+						476
+	*[856171]<td />
+		*[856265]<div />
+			Not Visible Individually
+	*[856172]<td />
+		*[856266]<div />
+			Enabled
+	*[856173]<td />
+		*[856267]<div />
+			Main Website
+	*[856174]<td />
+		*[856268]<div />
+			Sep 2, 2026 7:57:20 AM
+	*[856175]<td />
+		*[856544]<a aria-label=Edit Aero Daily Fitness Tee-XS-Brown />
+			Edit
+*[856112]<tr />
+	*[856176]<td />
+		*[856232]<label />
+			*[856230]<input type=checkbox checked=false id=idscheck556 value=556 />
+	*[856177]<td />
+		*[856269]<div />
+			556
+	*[856178]<td />
+		*[856292]<span />
+			*[856290]<span />
+				*[856291]<img alt=Aero Daily Fitness Tee-XL-Brown />
+	*[856179]<td />
+		*[856301]<div />
+			Aero Daily Fitness Tee-XL-Brown
+	*[856180]<td />
+		*[856270]<div />
+			Simple Product
+	*[856181]<td />
+		*[856271]<div />
+			Top
+	*[856182]<td />
+		*[856302]<div />
+			MS01-XL-Brown
+	*[856183]<td />
+		*[856272]<div />
+			$24.00
+	*[856184]<td />
+		*[856273]<div />
+			478.0000
+	*[856185]<td />
+		*[856449]<div />
+			*[856443]<ul />
+				*[856469]<li level=1 />
+					*[856472]<strong />
+						Default Stock
+					*[856473]<span />
+						477
+	*[856186]<td />
+		*[856274]<div />
+			Not Visible Individually
+	*[856187]<td />
+		*[856275]<div />
+			Enabled
+	*[856188]<td />
+		*[856276]<div />
+			Main Website
+	*[856189]<td />
+		*[856277]<div />
+			Sep 2, 2026 7:57:33 AM
+	*[856190]<td />
+		*[856564]<a aria-label=Edit Aero Daily Fitness Tee-XL-Brown />
+			Edit
+[837081]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[837091]<a id=footer_privacy />
+	Privacy Policy
+[837094]<a id=footer_account_activity />
+	Account Activity
+[837097]<a id=footer_bug_tracking />
+	Report an Issue

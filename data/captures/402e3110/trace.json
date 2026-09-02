@@ -1,0 +1,402 @@
+{
+  "host": "localhost",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1788349604594,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Scope: function eventListenerLg2WpLnUAa () { switchScope(thi",
+      "element_attrs": {
+        "tag": "main",
+        "id": "anchor-content",
+        "visible_text": "Scope: function eventListenerLg2WpLnUAa () { switchScope(this);; } var listenedElementLg2WpLnUAaArray = document.querySelectorAll(\"#store_switcher\"); if(listenedElementLg2WpLnUAaArray.length !== 'undefined'){ listenedElementLg2WpLnUAaArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerLg2WpLnUAa.apply(targetElement); }; } }); } function eventListener4cIHRbgE6k () { switchScope(this);; } var listenedElement4cIHRbgE6kArray = document.querySelectorAll(\"#store_group_switcher\"); if(listenedElement4cIHRbgE6kArray.length !== 'undefined'){ listenedElement4cIHRbgE6kArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListener4cIHRbgE6k.apply(targetElement); }; } }); } function eventListener9ewTJ33yW7 () { switchScope(this);; } var listenedElement9ewTJ33yW7Array = document.querySelectorAll(\"#website_switcher\"); if(listenedElement9ewTJ33yW7Array.length !== 'undefined'){ listenedElement9ewTJ33yW7Array.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListener9ewTJ33yW7.apply(targetElement); }; } }); } All Store Views All Store Views Main Website Main Website Store Default Store View What is this? Reload Data Advanced Reporting Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data. Go to Advanced Reporting define('analyticsPopupConfig', function () { return { analyticsVisible: 0, releaseVisible: 0, } }); Chart is disabled. To enable the chart, click here. Revenue $0.00 Tax $0.00 Shipping $0.00 Quantity 0 Bestsellers var elemcBBMDMgRArray = document.querySelectorAll('#grid_tab_ordered_products_content'); if(elemcBBMDMgRArray.length !== 'undefined'){ elemcBBMDMgRArray.forEach(function(element) { if (element) { element.style.display = 'none'; } }); } Most Viewed Products var elemlWZonEuwArray = document.querySelectorAll('#grid_tab_reviewed_products_content'); if(elemlWZonEuwArray.length !== 'undefined'){ elemlWZonEuwArray.forEach(function(element) { if (element) { element.style.display = 'none'; } }); } New Customers var elemeR1ESF5PArray = document.querySelectorAll('#grid_tab_new_customers_content'); if(elemeR1ESF5PArray.length !== 'undefined'){ elemeR1ESF5PArray.forEach(function(element) { if (element) { element.style.display = 'none'; } }); } Customers var elem2hDpXYV9Array = document.querySelectorAll('#grid_tab_customers_content'); if(elem2hDpXYV9Array.length !== 'undefined'){ elem2hDpXYV9Array.forEach(function(element) { if (element) { element.style.display = 'none'; } }); } require([\"jquery\",\"mage/backend/tabs\"], function($){ $(function() { $('#grid_tab').tabs({ active: 'grid_tab_ordered_products', destination: '#grid_tab_content', shadowTabs: [] }); $('#grid_tab').removeClass('hidden'); }); }); Product Price Quantity Sprite Stasis Ball 65 cm $27.00 6 Quest Lumaflex™ Band $19.00 6 Sprite Yoga Strap 6 foot $14.00 6 Sprite Stasis Ball 55 cm $23.00 5 Overnight Duffle $45.00 5 Lifetime Sales $0.00 Average Order $0.00 Last Orders Customer Items Total Sarah Miller 5 $194.40 Grace Nguyen 4 $190.00 Matt Baker 3 $151.40 Lily Potter 4 $188.20 Ava Brown 2 $83.40 var deps = []; deps.push('mage/adminhtml/grid'); require(deps, function(){ //TODO: getJsObjectName and getRowClickCallback has unexpected behavior. Should be removed lastOrdersGridJsObject = new varienGrid('lastOrdersGrid', 'http\\u003A\\u002F\\u002Flocalhost\\u003A7780\\u002Fadmin\\u002Fadmin\\u002Fdashboard\\u002Findex\\u002F', 'page', 'sort', 'dir', 'filter'); lastOrdersGridJsObject.useAjax = ''; lastOrdersGridJsObject.rowClickCallback = openGridRow; }); Last Search Terms Search Term Results Uses Antonia 1 1 tanks 23 1 nike 0 3 Joust Bag 10 4 hollister 1 19 var deps = []; deps.push('mage/adminhtml/grid'); require(deps, function(){ //TODO: getJsObjectName and getRowClickCallback has unexpected behavior. Should be removed lastSearchGridJsObject = new varienGrid('lastSearchGrid', 'http\\u003A\\u002F\\u002Flocalhost\\u003A7780\\u002Fadmin\\u002Fadmin\\u002Fdashboard\\u002Findex\\u002F', 'page', 'sort', 'dir', 'filter'); lastSearchGridJsObject.useAjax = ''; lastSearchGridJsObject.rowClickCallback = openGridRow; }); Top Search Terms Search Term Results Uses hollister 1 19 Joust Bag 10 4 Antonia Racer Tank 23 2 Antonia 1 1 tanks 23 1 var deps = []; deps.push('mage/adminhtml/grid'); require(deps, function(){ //TODO: getJsObjectName and getRowClickCallback has unexpected behavior. Should be removed topSearchGridJsObject = new varienGrid('topSearchGrid', 'http\\u003A\\u002F\\u002Flocalhost\\u003A7780\\u002Fadmin\\u002Fadmin\\u002Fdashboard\\u002Findex\\u002F', 'page', 'sort', 'dir', 'filter'); topSearchGridJsObject.useAjax = ''; topSearchGridJsObject.rowClickCallback = openGridRow; });"
+      }
+    },
+    {
+      "timestamp": 1788349605551,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Catalog",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "Catalog"
+      }
+    },
+    {
+      "timestamp": 1788349606623,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard_1",
+      "target": "Products",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "Products"
+      }
+    },
+    {
+      "timestamp": 1788349608461,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "target": "Clear all",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Clear all"
+      }
+    },
+    {
+      "timestamp": 1788349610647,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product_2",
+      "target": "Filters",
+      "element_attrs": {
+        "tag": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Filters"
+      }
+    },
+    {
+      "timestamp": 1788349612378,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "F73CA0P",
+        "name": "name",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788349618400,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "F73CA0P",
+        "name": "name",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788349618800,
+      "type": "send_keys",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "element_attrs": {
+        "tag": "input",
+        "id": "F73CA0P",
+        "name": "name",
+        "type": "text"
+      },
+      "key": "Control+v"
+    },
+    {
+      "timestamp": 1788349619240,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "F73CA0P",
+        "name": "name",
+        "type": "text"
+      },
+      "value": "Cronus"
+    },
+    {
+      "timestamp": 1788349626772,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "EYDK8PX",
+        "name": "sku",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788349627195,
+      "type": "send_keys",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product_3",
+      "element_attrs": {
+        "tag": "input",
+        "id": "EYDK8PX",
+        "name": "sku",
+        "type": "text"
+      },
+      "key": "Control+v"
+    },
+    {
+      "timestamp": 1788349627638,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product_3",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "EYDK8PX",
+        "name": "sku",
+        "type": "text"
+      },
+      "value": "MP12-33-Blue"
+    },
+    {
+      "timestamp": 1788349628388,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product_3",
+      "target": "Apply Filters",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Apply Filters"
+      }
+    },
+    {
+      "timestamp": 1788349629717,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product_3",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788349630802,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "target": "Edit",
+      "element_attrs": {
+        "tag": "a",
+        "aria-label": "Edit Cronus Yoga Pant -33-Blue",
+        "data-tw-jsclick": "1",
+        "visible_text": "Edit"
+      }
+    },
+    {
+      "timestamp": 1788349633139,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788349633730,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788349634467,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "CDQR96Q",
+        "name": "product[quantity_and_stock_status][qty]",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788349634640,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "CDQR96Q",
+        "name": "product[quantity_and_stock_status][qty]",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788349635830,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "CDQR96Q",
+        "name": "product[quantity_and_stock_status][qty]",
+        "type": "text"
+      },
+      "value": "5"
+    },
+    {
+      "timestamp": 1788349636717,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788349638121,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "In StockOut of Stock",
+      "element_attrs": {
+        "tag": "select",
+        "id": "M5VI3D0",
+        "name": "product[quantity_and_stock_status][is_in_stock]",
+        "aria-label": "notice-M5VI3D0",
+        "visible_text": "In StockOut of Stock"
+      }
+    },
+    {
+      "timestamp": 1788349638706,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "In StockOut of Stock",
+      "element_attrs": {
+        "tag": "select",
+        "id": "M5VI3D0",
+        "name": "product[quantity_and_stock_status][is_in_stock]",
+        "aria-label": "notice-M5VI3D0",
+        "visible_text": "In StockOut of Stock"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788349638706,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "In StockOut of Stock",
+      "element_attrs": {
+        "tag": "select",
+        "id": "M5VI3D0",
+        "name": "product[quantity_and_stock_status][is_in_stock]",
+        "aria-label": "notice-M5VI3D0",
+        "visible_text": "In StockOut of Stock"
+      },
+      "value": "1"
+    },
+    {
+      "timestamp": 1788349638707,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "In StockOut of Stock",
+      "element_attrs": {
+        "tag": "select",
+        "id": "M5VI3D0",
+        "name": "product[quantity_and_stock_status][is_in_stock]",
+        "aria-label": "notice-M5VI3D0",
+        "visible_text": "In StockOut of Stock"
+      }
+    },
+    {
+      "timestamp": 1788349639208,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "Enable Product Attribute Set Bottom Bag Bottom Default Downl",
+      "element_attrs": {
+        "tag": "fieldset",
+        "visible_text": "Enable Product Attribute Set Bottom Bag Bottom Default Downloadable Gear Sprite Stasis Ball Sprite Yoga Strap Top Product Name SKU Price $ Advanced Pricing Tax Class NoneTaxable Goods Quantity Advanced Inventory Stock Status In StockOut of Stock Weight lbs This item has weightThis item has no weight Categories Select... Default Category Close Pants Close Pants Close Default Category Gear Collections Training Men Women Promotions Sale What's New Done New Category Visibility Not Visible IndividuallyCatalogSearchCatalog, Search Set Product as New From undefined To undefined Country of Manufacture AfghanistanAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntarcticaAntigua & BarbudaArgentinaArmeniaArubaAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBosnia & HerzegovinaBotswanaBouvet IslandBrazilBritish Indian Ocean TerritoryBritish Virgin IslandsBruneiBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCaribbean NetherlandsCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongo - BrazzavilleCongo - KinshasaCook IslandsCosta RicaCroatiaCubaCuraçaoCyprusCzechiaCôte d’IvoireDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEswatiniEthiopiaFalkland IslandsFaroe IslandsFijiFinlandFranceFrench GuianaFrench PolynesiaFrench Southern TerritoriesGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHeard & McDonald IslandsHondurasHong Kong SAR ChinaHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacao SAR ChinaMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMicronesiaMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmar (Burma)NamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinian TerritoriesPanamaPapua New GuineaParaguayPeruPhilippinesPitcairn IslandsPolandPortugalQatarRomaniaRussiaRwandaRéunionSamoaSan MarinoSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint MaartenSlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth Georgia & South Sandwich IslandsSouth KoreaSpainSri LankaSt. BarthélemySt. HelenaSt. Kitts & NevisSt. LuciaSt. MartinSt. Pierre & MiquelonSt. Vincent & GrenadinesSudanSurinameSvalbard & Jan MayenSwedenSwitzerlandSyriaSão Tomé & PríncipeTaiwan, Province of ChinaTajikistanTanzaniaThailandTimor-LesteTogoTokelauTongaTrinidad & TobagoTunisiaTurkeyTurkmenistanTurks & Caicos IslandsTuvaluU.S. Outlying IslandsU.S. Virgin IslandsUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVanuatuVatican CityVenezuelaVietnamWallis & FutunaWestern SaharaYemenZambiaZimbabweÅland Islands Style Bottom Base LayerBasicCapriCompressionLeggingsParachuteSkortSnugSweatpantsTightsTrack PantsWorkout Pants Activity HikeOutdoorRunningWarmupYogaRecreationLoungeGymClimbingCrosstrainingPost-workoutCyclingAthleticSportsHikingOvernightSchoolTrailTravelUrban Material BurlapCocona&reg; performance fabricCanvasWoolCottonFleeceFaux LeatherHempJerseyLeatherLumaTech&trade;MeshLycra&reg;NylonMicrofiberPolyesterRayonSpandexHeatTec&reg;RipstopEverCool&trade;SuedeFoamOrganic CottonMetalTENCELCoolTech&trade;PlasticKhakiRubberLinenSyntheticStainless SteelWoolSiliconeTerry Size 55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638 Pattern Color-BlockedCheckedColor-BlockedGraphic PrintSolidSolid-HighlightStripedCamoGeometric Climate All-WeatherColdCoolIndoorMildRainySpringWarmWindyWintryHot Color BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYellow Eco Collection Performance Fabric Erin Recommends New Sale"
+      }
+    },
+    {
+      "timestamp": 1788349640399,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_4",
+      "target": "Save",
+      "element_attrs": {
+        "tag": "button",
+        "id": "save-button",
+        "data-tw-jsclick": "1",
+        "aria-label": "Save",
+        "visible_text": "Save"
+      }
+    },
+    {
+      "timestamp": 1788349645005,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/set/10/type/simple/store/0/back/edit/",
+      "stage": "edit",
+      "target": "Back",
+      "element_attrs": {
+        "tag": "button",
+        "id": "back",
+        "type": "button",
+        "aria-label": "Back",
+        "visible_text": "Back"
+      }
+    },
+    {
+      "timestamp": 1788349646884,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788349648155,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product_5",
+      "target": "Cronus Yoga Pant -33-Blue",
+      "element_attrs": {
+        "tag": "td",
+        "data-tw-jsclick": "1",
+        "visible_text": "Cronus Yoga Pant -33-Blue"
+      }
+    },
+    {
+      "timestamp": 1788349651269,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872",
+      "value": "3"
+    },
+    {
+      "timestamp": 1788349653153,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/872/",
+      "stage": "872_6",
+      "target": "Back",
+      "element_attrs": {
+        "tag": "button",
+        "id": "back",
+        "type": "button",
+        "aria-label": "Back",
+        "visible_text": "Back"
+      }
+    }
+  ],
+  "page_context": {
+    "dashboard": "[372296]<a />\n[372300]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[372301]<a />\n\t\tDashboard\n[372303]<li id=menu-magento-sales-sales role=menu-item />\n\t[372304]<a />\n\t\tSales\n[372324]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[372325]<a />\n\t\tCatalog\n[372335]<li id=menu-magento-customer-customer role=menu-item />\n\t[372336]<a />\n\t\tCustomers\n[372348]<li id=menu-magento-backend-marketing role=menu-item />\n\t[372349]<a />\n\t\tMarketing\n[372389]<li id=menu-magento-backend-content role=menu-item />\n\t[372390]<a />\n\t\tContent\n[372416]<li id=menu-magento-reports-report role=menu-item />\n\t[372417]<a />\n\t\tReports\n[372493]<li id=menu-magento-backend-stores role=menu-item />\n\t[372494]<a />\n\t\tStores\n[372538]<li id=menu-magento-backend-system role=menu-item />\n\t[372539]<a />\n\t\tSystem\n[372587]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[372588]<a />\n\t\tFind Partners & Extensions\nDashboard\n[372594]<a title=My Account />\n\tadmin\n[372596]<a title=Notifications />\n[372860]<div />\n\t[372286]<form id=form-search />\n\t\t[373548]<div />\n\t\t\t[372287]<input type=text id=search-global autocomplete=off />\n[373572]<span />\n\tScope:\n[372605]<button id=store-change-button />\n\tAll Store Views\n[372608]<a title=What is this? />\n\t[372609]<span />\n\t\tWhat is this?\n[372611]<button title=Reload Data type=submit />\n\tReload Data\nAdvanced Reporting\nGain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\n[372618]<a title=Go to Advanced Reporting />\n\tGo to Advanced Reporting\nChart is disabled. To enable the chart, click\n[372621]<a />\n\there\nRevenue\n$0.00\nTax\n$0.00\nShipping\n$0.00\nQuantity\n[373704]<strong />\n[372642]<li role=tab selected=true expanded=true />\n\t[372643]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />\n\t\t[373720]<span title=The information in this tab has been changed. />\n\t\t[373722]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[373724]<span title=Loading... />\n\t\tBestsellers\n[372645]<li role=tab selected=false expanded=false />\n\t[372646]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />\n\t\t[373736]<span title=The information in this tab has been changed. />\n\t\t[373738]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[373740]<span title=Loading... />\n\t\tMost Viewed Products\n[372648]<li role=tab selected=false expanded=false />\n\t[372649]<a title=New Customers id=grid_tab_new_customers role=presentation />\n\t\t[373754]<span title=The information in this tab has been changed. />\n\t\t[373756]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[373758]<span title=Loading... />\n\t\tNew Customers\n[372651]<li role=tab selected=false expanded=false />\n\t[372652]<a title=Customers id=grid_tab_customers role=presentation />\n\t\t[373772]<span title=The information in this tab has been changed. />\n\t\t[373774]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[373776]<span title=Loading... />\n\t\tCustomers\n[372657]<tr />\n\tProduct\n\tPrice\n\tQuantity\n[372663]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />\n\t[372664]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[372666]<td />\n\t\t$27.00\n\t[372668]<td />\n[372670]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />\n\t[372671]<td />\n\t\tQuest Lumaflex™ Band\n\t[372673]<td />\n\t\t$19.00\n\t[372675]<td />\n[372677]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />\n\t[372678]<td />\n\t\tSprite Yoga Strap 6 foot\n\t[372680]<td />\n\t\t$14.00\n\t[372682]<td />\n[372684]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />\n\t[372685]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[372687]<td />\n\t\t$23.00\n\t[372689]<td />\n[372691]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />\n\t[372692]<td />\n\t\tOvernight Duffle\n\t[372694]<td />\n\t\t$45.00\n\t[372696]<td />\nLifetime Sales\n$0.00\nAverage Order\n$0.00\nLast Orders\n[372704]<tr />\n\tCustomer\n\tItems\n\tTotal\n[372711]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />\n\t[372712]<td />\n\t\tSarah Miller\n\t[372714]<td />\n\t[372716]<td />\n\t\t$194.40\n[372718]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />\n\t[372719]<td />\n\t\tGrace Nguyen\n\t[372721]<td />\n\t[372723]<td />\n\t\t$190.00\n[372725]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />\n\t[372726]<td />\n\t\tMatt Baker\n\t[372728]<td />\n\t[372730]<td />\n\t\t$151.40\n[372732]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />\n\t[372733]<td />\n\t\tLily Potter\n\t[372735]<td />\n\t[372737]<td />\n\t\t$188.20\n[372739]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />\n\t[372740]<td />\n\t\tAva Brown\n\t[372742]<td />\n\t[372744]<td />\n\t\t$83.40\nLast Search Terms\n[372747]<table id=lastSearchGrid_table />\n\t[372748]<tr />\n\t\t[372749]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[372755]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[372756]<td />\n\t\t\tAntonia\n\t\t[372758]<td />\n\t\t[372760]<td />\n\t[372762]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[372763]<td />\n\t\t\ttanks\n\t\t[372765]<td />\n\t\t\t23\n\t\t[372767]<td />\n\t[372769]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />\n\t\t[372770]<td />\n\t\t\tnike\n\t\t[372772]<td />\n\t\t[372774]<td />\n\t[372776]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[372777]<td />\n\t\t\tJoust Bag\n\t\t[372779]<td />\n\t\t\t10\n\t\t[372781]<td />\n\t[372783]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[372784]<td />\n\t\t\thollister\n\t\t[372786]<td />\n\t\t[372788]<td />\n\t\t\t19\nTop Search Terms\n[372791]<table id=topSearchGrid_table />\n\t[372792]<tr />\n\t\t[372793]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[372799]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[372800]<td />\n\t\t\thollister\n\t\t[372802]<td />\n\t\t[372804]<td />\n\t\t\t19\n\t[372806]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[372807]<td />\n\t\t\tJoust Bag\n\t\t[372809]<td />\n\t\t\t10\n\t\t[372811]<td />\n\t[372813]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />\n\t\t[372814]<td />\n\t\t\tAntonia Racer Tank\n\t\t[372816]<td />\n\t\t\t23\n\t\t[372818]<td />\n\t[372820]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[372821]<td />\n\t\t\tAntonia\n\t\t[372823]<td />\n\t\t[372825]<td />\n\t[372827]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[372828]<td />\n\t\t\ttanks\n\t\t[372830]<td />\n\t\t\t23\n\t\t[372832]<td />\n[372838]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[372843]<a id=footer_privacy />\n\tPrivacy Policy\n[372846]<a id=footer_account_activity />\n\tAccount Activity\n[372849]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "dashboard_1": "*[374179]<a />\n*[374188]<a />\n\tDashboard\n*[374082]<a />\n\tSales\n*[374083]<a />\n\tCatalog\n*[374084]<a />\n\tCustomers\n*[374085]<a />\n\tMarketing\n*[374086]<a />\n\tContent\n*[374087]<a />\n\tReports\n*[374088]<a />\n\tStores\n*[374089]<a />\n\tSystem\n*[374791]<a />\n\tFind Partners & Extensions\nProducts\n*[374853]<a title=My Account />\n\tadmin\n*[374891]<a title=Notifications />\n*[374896]<div />\n\t*[374067]<form id=form-search />\n\t\t*[374899]<div />\n\t\t\t*[374068]<input type=text id=search-global name=query />\n*[374929]<button title=Add Product id=add_new_product-button />\n\tAdd Product\n*[374935]<button title=Add Product aria-label=Add product of type />\n*[375001]<div />\n*[375028]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[375038]<a id=footer_privacy />\n\tPrivacy Policy\n*[375041]<a id=footer_account_activity />\n\tAccount Activity\n*[375044]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "product": "[450457]<a />\n*[450465]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[450466]<a />\n\t\tDashboard\n*[450471]<li id=menu-magento-sales-sales role=menu-item />\n\t[450360]<a />\n\t\tSales\n*[450514]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[450361]<a />\n\t\tCatalog\n*[450537]<li id=menu-magento-customer-customer role=menu-item />\n\t[450362]<a />\n\t\tCustomers\n*[450562]<li id=menu-magento-backend-marketing role=menu-item />\n\t[450363]<a />\n\t\tMarketing\n*[450647]<li id=menu-magento-backend-content role=menu-item />\n\t[450364]<a />\n\t\tContent\n*[450705]<li id=menu-magento-reports-report role=menu-item />\n\t[450365]<a />\n\t\tReports\n*[450866]<li id=menu-magento-backend-stores role=menu-item />\n\t[450366]<a />\n\t\tStores\n*[450962]<li id=menu-magento-backend-system role=menu-item />\n\t[450367]<a />\n\t\tSystem\n*[451067]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[451068]<a />\n\t\tFind Partners & Extensions\nProducts\n[450347]<a title=My Account />\n\tadmin\n[451167]<a title=Notifications />\n[451172]<div />\n\t[450343]<form id=form-search />\n\t\t[451175]<div />\n\t\t\t[450344]<input type=text id=search-global autocomplete=off />\n*[451201]<div title=Add Product id=add_new_product />\n\t[451205]<button title=Add Product id=add_new_product-button />\n\t\tAdd Product\n\t[451211]<button title=Add Product aria-label=Add product of type />\n*[451700]<button />\n\tDefault View\n*[451773]<button />\n\tColumns\n*[451944]<button />\n\tFilters\nActive filters:\nName:\nCronus\n*[455704]<button />\nSKU:\nMP12-33-Blue\n*[455718]<button />\n*[452732]<button />\n\tClear all\n*[451971]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />\n*[451972]<button aria-label=Search />\n*[451979]<button title=Select Items />\n\tActions\nrecords found\n*[453274]<div />\n\t*[453276]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />\n*[453277]<button />\n\tSelect\nper page\n*[452035]<button title=Previous Page disabled=true />\n*[452040]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />\nof 1\n*[452042]<button title=Next Page disabled=true />\n*[451620]<tr />\n\t*[452409]<div />\n\t\t*[452410]<input type=checkbox checked=false id=77 />\n\t\t*[452412]<button />\n\t\t\tOptions\n\t*[452432]<th />\n\t\t*[452431]<span />\n\t\t\tID\n\t*[452435]<th />\n\t\tThumbnail\n\t*[452438]<th />\n\t\t*[452437]<span />\n\t\t\tName\n\t*[452441]<th />\n\t\t*[452440]<span />\n\t\t\tType\n\t*[452444]<th />\n\t\t*[452443]<span />\n\t\t\tAttribute Set\n\t*[452447]<th />\n\t\t*[452446]<span />\n\t\t\tSKU\n\t*[452450]<th />\n\t\t*[452449]<span />\n\t\t\tPrice\n\t*[452453]<th />\n\t\t*[452452]<span />\n\t\t\tQuantity\n\t*[452456]<th />\n\t\tSalable Quantity\n\t*[452459]<th />\n\t\t*[452458]<span />\n\t\t\tVisibility\n\t*[452462]<th />\n\t\t*[452461]<span />\n\t\t\tStatus\n\t*[452465]<th />\n\t\t*[452464]<span />\n\t\t\tWebsites\n\t*[452468]<th />\n\t\t*[452467]<span />\n\t\t\tLast Updated At\n\t*[452471]<th />\n\t\t*[452470]<span />\n\t\t\tAction\n*[470771]<tr />\n\t*[470775]<td />\n\t\t*[470796]<label />\n\t\t\t*[470794]<input type=checkbox checked=false id=idscheck872 value=872 />\n\t*[470776]<td />\n\t\t*[470820]<div />\n\t\t\t872\n\t*[470777]<td />\n\t\t*[470831]<span />\n\t\t\t*[470829]<span />\n\t\t\t\t*[470830]<img alt=Cronus Yoga Pant -33-Blue />\n\t*[470778]<td />\n\t\t*[470832]<div />\n\t\t\tCronus Yoga Pant -33-Blue\n\t*[470779]<td />\n\t\t*[470821]<div />\n\t\t\tSimple Product\n\t*[470780]<td />\n\t\t*[470822]<div />\n\t\t\tBottom\n\t*[470781]<td />\n\t\t*[470833]<div />\n\t\t\tMP12-33-Blue\n\t*[470782]<td />\n\t\t*[470823]<div />\n\t\t\t$48.00\n\t*[470783]<td />\n\t\t*[470824]<div />\n\t\t\t5.0000\n\t*[470784]<td />\n\t\t*[470840]<div />\n\t\t\t*[470834]<ul />\n\t\t\t\t*[470860]<li level=1 />\n\t\t\t\t\t*[470863]<strong />\n\t\t\t\t\t\tDefault Stock\n\t\t\t\t\t*[470864]<span />\n\t*[470785]<td />\n\t\t*[470825]<div />\n\t\t\tNot Visible Individually\n\t*[470786]<td />\n\t\t*[470826]<div />\n\t\t\tEnabled\n\t*[470787]<td />\n\t\t*[470827]<div />\n\t\t\tMain Website\n\t*[470788]<td />\n\t\t*[470828]<div />\n\t\t\tSep 2, 2026 7:47:20 AM\n\t*[470789]<td />\n\t\t*[470875]<a aria-label=Edit Cronus Yoga Pant -33-Blue />\n\t\t\tEdit\n[451304]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[451314]<a id=footer_privacy />\n\tPrivacy Policy\n[451317]<a id=footer_account_activity />\n\tAccount Activity\n[451320]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "product_2": "[374179]<a />\n[374187]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[374188]<a />\n\t\tDashboard\n[374193]<li id=menu-magento-sales-sales role=menu-item />\n\t[374082]<a />\n\t\tSales\n[374236]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[374083]<a />\n\t\tCatalog\n[374259]<li id=menu-magento-customer-customer role=menu-item />\n\t[374084]<a />\n\t\tCustomers\n[374284]<li id=menu-magento-backend-marketing role=menu-item />\n\t[374085]<a />\n\t\tMarketing\n[374369]<li id=menu-magento-backend-content role=menu-item />\n\t[374086]<a />\n\t\tContent\n[374428]<li id=menu-magento-reports-report role=menu-item />\n\t[374087]<a />\n\t\tReports\n[374589]<li id=menu-magento-backend-stores role=menu-item />\n\t[374088]<a />\n\t\tStores\n[374685]<li id=menu-magento-backend-system role=menu-item />\n\t[374089]<a />\n\t\tSystem\n[374790]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[374791]<a />\n\t\tFind Partners & Extensions\nProducts\n[374853]<a title=My Account />\n\tadmin\n[374891]<a title=Notifications />\n[374896]<div />\n\t[374067]<form id=form-search />\n\t\t[374899]<div />\n\t\t\t[374068]<input type=text id=search-global autocomplete=off />\n[374925]<div title=Add Product id=add_new_product />\n\t[374929]<button title=Add Product id=add_new_product-button />\n\t\tAdd Product\n\t[374935]<button title=Add Product aria-label=Add product of type />\n[375413]<button />\n\tDefault View\n[375467]<button />\n\tColumns\n[375657]<button />\n\tFilters\n*[377543]<legend />\n\tID\nfrom\n*[378671]<input type=text id=IA4CT1Y name=entity_id[from] maxlength=255 />\nto\n*[378790]<input type=text id=FJKELBU name=entity_id[to] maxlength=255 />\n*[377549]<legend />\n\tPrice\nfrom\n*[378909]<input type=text id=PVXATWP name=price[from] maxlength=255 />\nto\n*[379028]<input type=text id=I0GYJWS name=price[to] maxlength=255 />\nQuantity\nfrom\n*[379147]<input type=text id=B0WOJS5 name=qty[from] maxlength=255 />\nto\n*[379266]<input type=text id=LHICKVC name=qty[to] maxlength=255 />\nLast Updated At\nfrom\n*[379563]<input type=text id=LK32TGM name=updated_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[379570]<button />\n\t*[379573]<span />\n\t\tundefined\nto\n*[379565]<input type=text id=PEK76GD name=updated_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[386863]<button />\n\t*[386866]<span />\n\t\tundefined\nStore View\n*[377588]<select id=BXSW9P3 name=store_id aria-label=notice-BXSW9P3 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />\nAsset\n*[376789]<div />\n\t*[376790]<div />\n\t\tSelect...\nName\n*[378546]<input type=text id=F73CA0P name=name maxlength=255 />\nType\n*[377609]<select id=OPQH1L0 name=type_id aria-label=notice-OPQH1L0 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Simple Product|Virtual Product|Bundle Product|Downloadable Product) />\nAttribute Set\n*[377637]<select id=NACXVBR name=attribute_set_id aria-label=notice-NACXVBR expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=8,options=Default|Top|Bottom|Gear,format=numeric) />\nSKU\n*[378548]<input type=text id=EYDK8PX name=sku maxlength=255 />\nVisibility\n*[377671]<select id=Q2E5JJA name=visibility aria-label=notice-Q2E5JJA expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />\nStatus\n*[377693]<select id=J57T402 name=status aria-label=notice-J57T402 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Enabled|Disabled,format=numeric) />\n*[375665]<button />\n\tCancel\n*[375667]<button />\n\tApply Filters\n*[375684]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />\n[375685]<button aria-label=Search />\n[375692]<button title=Select Items />\n\tActions\n2040\nrecords found\n[376939]<div />\n\t*[376941]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />\n[376942]<button />\n\tSelect\nper page\n[375748]<button title=Previous Page disabled=true />\n*[375753]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />\nof 11\n[375755]<button title=Next Page />\n*[375338]<tr />\n\t*[376202]<div />\n\t\t[376203]<input type=checkbox checked=false id=77 />\n\t\t[376205]<button />\n\t\t\tOptions\n\t[376225]<th />\n\t\t*[376224]<span />\n\t\t\tID\n\t[376228]<th />\n\t\tThumbnail\n\t[376231]<th />\n\t\t*[376230]<span />\n\t\t\tName\n\t[376234]<th />\n\t\t*[376233]<span />\n\t\t\tType\n\t[376237]<th />\n\t\t*[376236]<span />\n\t\t\tAttribute Set\n\t[376240]<th />\n\t\t*[376239]<span />\n\t\t\tSKU\n\t[376243]<th />\n\t\t*[376242]<span />\n\t\t\tPrice\n\t[376246]<th />\n\t\t*[376245]<span />\n\t\t\tQuantity\n\t[376249]<th />\n\t\tSalable Quantity\n\t[376252]<th />\n\t\t*[376251]<span />\n\t\t\tVisibility\n\t[376255]<th />\n\t\t*[376254]<span />\n\t\t\tStatus\n\t[376258]<th />\n\t\t*[376257]<span />\n\t\t\tWebsites\n\t[376261]<th />\n\t\t*[376260]<span />\n\t\t\tLast Updated At\n\t[376264]<th />\n\t\t*[376263]<span />\n\t\t\tAction\n*[394487]<tr />\n\t[394491]<td />\n\t\t*[394528]<label />\n\t\t\t[394526]<input type=checkbox checked=false id=idscheck1826 value=1826 />\n\t[394492]<td />\n\t\t*[394536]<div />\n\t\t\t1826\n\t[394493]<td />\n\t\t*[394547]<span />\n\t\t\t*[394545]<span />\n\t\t\t\t*[394546]<img alt=Emma Leggings />\n\t[394494]<td />\n\t\t*[394548]<div />\n\t\t\tEmma Leggings\n\t[394495]<td />\n\t\t*[394537]<div />\n\t\t\tConfigurable Product\n\t[394496]<td />\n\t\t*[394538]<div />\n\t\t\tBottom\n\t[394497]<td />\n\t\t*[394549]<div />\n\t\t\tWP02\n\t[394498]<td />\n\t\t*[394539]<div />\n\t\t\t$42.00\n\t[394499]<td />\n\t\t*[394540]<div />\n\t\t\t0.0000\n\t[394500]<td />\n\t\t*[394556]<div />\n\t\t\t*[394550]<ul />\n\t[394501]<td />\n\t\t*[394541]<div />\n\t\t\tCatalog, Search\n\t[394502]<td />\n\t\t*[394542]<div />\n\t\t\tEnabled\n\t[394503]<td />\n\t\t*[394543]<div />\n\t\t\tMain Website\n\t[394504]<td />\n\t\t*[394544]<div />\n\t\t\tApr 19, 2023 12:13:53 PM\n\t[394505]<td />\n\t\t[394591]<a aria-label=Edit Emma Leggings />\n\t\t\tEdit\n*[397463]<tr />\n\t*[398059]<td />\n\t\t*[398062]<label />\n\t\t\t*[398060]<input type=checkbox checked=false id=idscheck1854 value=1854 />\n\t*[398063]<td />\n\t\t*[398064]<div />\n\t\t\t1854\n\t*[398065]<td />\n\t\t*[398068]<span />\n\t\t\t*[398066]<span />\n\t\t\t\t*[398067]<img alt=Diana Tights />\n\t*[398069]<td />\n\t\t*[398070]<div />\n\t\t\tDiana Tights\n\t*[398071]<td />\n\t\t*[398072]<div />\n\t\t\tConfigurable Product\n\t*[398073]<td />\n\t\t*[398074]<div />\n\t\t\tBottom\n\t*[398075]<td />\n\t\t*[398076]<div />\n\t\t\tWP06\n\t*[398077]<td />\n\t\t*[398078]<div />\n\t\t\t$59.00\n\t*[398079]<td />\n\t\t*[398080]<div />\n\t\t\t0.0000\n\t*[398081]<td />\n\t\t*[398088]<div />\n\t\t\t*[398082]<ul />\n\t*[398089]<td />\n\t\t*[398090]<div />\n\t\t\tCatalog, Search\n\t*[398091]<td />\n\t\t*[398092]<div />\n\t\t\tEnabled\n\t*[398093]<td />\n\t\t*[398094]<div />\n\t\t\tMain Website\n\t*[398095]<td />\n\t\t*[398096]<div />\n\t\t\tApr 19, 2023 12:13:53 PM\n\t*[398097]<td />\n\t\t*[398104]<a aria-label=Edit Diana Tights />\n\t\t\tEdit\n*[397466]<tr />\n\t*[398109]<td />\n\t\t*[398112]<label />\n\t\t\t*[398110]<input type=checkbox checked=false id=idscheck1882 value=1882 />\n\t*[398113]<td />\n\t\t*[398114]<div />\n\t\t\t1882\n\t*[398115]<td />\n\t\t*[398118]<span />\n\t\t\t*[398116]<span />\n\t\t\t\t*[398117]<img alt=Daria Bikram Pant />\n\t*[398119]<td />\n\t\t*[398120]<div />\n\t\t\tDaria Bikram Pant\n\t*[398121]<td />\n\t\t*[398122]<div />\n\t\t\tConfigurable Product\n\t*[398123]<td />\n\t\t*[398124]<div />\n\t\t\tBottom\n\t*[398125]<td />\n\t\t*[398126]<div />\n\t\t\tWP10\n\t*[398127]<td />\n\t\t*[398128]<div />\n\t\t\t$51.00\n\t*[398129]<td />\n\t\t*[398130]<div />\n\t\t\t0.0000\n\t*[398131]<td />\n\t\t*[398138]<div />\n\t\t\t*[398132]<ul />\n\t*[398139]<td />\n\t\t*[398140]<div />\n\t\t\tCatalog, Search\n\t*[398141]<td />\n\t\t*[398142]<div />\n\t\t\tEnabled\n\t*[398143]<td />\n\t\t*[398144]<div />\n\t\t\tMain Website\n\t*[398145]<td />\n\t\t*[398146]<div />\n\t\t\tApr 19, 2023 12:13:54 PM\n\t*[398147]<td />\n\t\t*[398154]<a aria-label=Edit Daria Bikram Pant />\n\t\t\tEdit\n*[397469]<tr />\n\t*[398159]<td />\n\t\t*[398162]<label />\n\t\t\t*[398160]<input type=checkbox checked=false id=idscheck776 value=776 />\n\t*[398163]<td />\n\t\t*[398164]<div />\n\t\t\t776\n\t*[398165]<td />\n\t\t*[398168]<span />\n\t\t\t*[398166]<span />\n\t\t\t\t*[398167]<img alt=Supernova Sport Pant />\n\t*[398169]<td />\n\t\t*[398170]<div />\n\t\t\tSupernova Sport Pant\n\t*[398171]<td />\n\t\t*[398172]<div />\n\t\t\tConfigurable Product\n\t*[398173]<td />\n\t\t*[398174]<div />\n\t\t\tBottom\n\t*[398175]<td />\n\t\t*[398176]<div />\n\t\t\tMP04\n\t*[398177]<td />\n\t\t*[398178]<div />\n\t\t\t$45.00\n\t*[398179]<td />\n\t\t*[398180]<div />\n\t\t\t0.0000\n\t*[398181]<td />\n\t\t*[398188]<div />\n\t\t\t*[398182]<ul />\n\t*[398189]<td />\n\t\t*[398190]<div />\n\t\t\tCatalog, Search\n\t*[398191]<td />\n\t\t*[398192]<div />\n\t\t\tEnabled\n\t*[398193]<td />\n\t\t*[398194]<div />\n\t\t\tMain Website\n\t*[398195]<td />\n\t\t*[398196]<div />\n\t\t\tApr 19, 2023 12:13:35 PM\n\t*[398197]<td />\n\t\t*[398204]<a aria-label=Edit Supernova Sport Pant />\n\t\t\tEdit\n*[397472]<tr />\n\t*[398209]<td />\n\t\t*[398212]<label />\n\t\t\t*[398210]<input type=checkbox checked=false id=idscheck2003 value=2003 />\n\t*[398213]<td />\n\t\t*[398214]<div />\n\t\t\t2003\n\t*[398215]<td />\n\t\t*[398218]<span />\n\t\t\t*[398216]<span />\n\t\t\t\t*[398217]<img alt=Sybil Running Short />\n\t*[398219]<td />\n\t\t*[398220]<div />\n\t\t\tSybil Running Short\n\t*[398221]<td />\n\t\t*[398222]<div />\n\t\t\tConfigurable Product\n\t*[398223]<td />\n\t\t*[398224]<div />\n\t\t\tBottom\n\t*[398225]<td />\n\t\t*[398226]<div />\n\t\t\tWSH08\n\t*[398227]<td />\n\t\t*[398228]<div />\n\t\t\t$44.00\n\t*[398229]<td />\n\t\t*[398230]<div />\n\t\t\t0.0000\n\t*[398231]<td />\n\t\t*[398238]<div />\n\t\t\t*[398232]<ul />\n\t*[398239]<td />\n\t\t*[398240]<div />\n\t\t\tCatalog, Search\n\t*[398241]<td />\n\t\t*[398242]<div />\n\t\t\tEnabled\n\t*[398243]<td />\n\t\t*[398244]<div />\n\t\t\tMain Website\n\t*[398245]<td />\n\t\t*[398246]<div />\n\t\t\tApr 19, 2023 12:13:56 PM\n\t*[398247]<td />\n\t\t*[398254]<a aria-label=Edit Sybil Running Short />\n\t\t\tEdit\n*[397475]<tr />\n\t*[398259]<td />\n\t\t*[398262]<label />\n\t\t\t*[398260]<input type=checkbox checked=false id=idscheck676 value=676 />\n\t*[398263]<td />\n\t\t*[398264]<div />\n\t\t\t676\n\t*[398265]<td />\n\t\t*[398268]<span />\n\t\t\t*[398266]<span />\n\t\t\t\t*[398267]<img alt=Helios Endurance Tank />\n\t*[398269]<td />\n\t\t*[398270]<div />\n\t\t\tHelios Endurance Tank\n\t*[398271]<td />\n\t\t*[398272]<div />\n\t\t\tConfigurable Product\n\t*[398273]<td />\n\t\t*[398274]<div />\n\t\t\tTop\n\t*[398275]<td />\n\t\t*[398276]<div />\n\t\t\tMT04\n\t*[398277]<td />\n\t\t*[398278]<div />\n\t\t\t$32.00\n\t*[398279]<td />\n\t\t*[398280]<div />\n\t\t\t0.0000\n\t*[398281]<td />\n\t\t*[398288]<div />\n\t\t\t*[398282]<ul />\n\t*[398289]<td />\n\t\t*[398290]<div />\n\t\t\tCatalog, Search\n\t*[398291]<td />\n\t\t*[398292]<div />\n\t\t\tEnabled\n\t*[398293]<td />\n\t\t*[398294]<div />\n\t\t\tMain Website\n\t*[398295]<td />\n\t\t*[398296]<div />\n\t\t\tApr 19, 2023 12:13:34 PM\n\t*[398297]<td />\n\t\t*[398304]<a aria-label=Edit Helios Endurance Tank />\n\t\t\tEdit\n*[397478]<tr />\n\t*[398309]<td />\n\t\t*[398312]<label />\n\t\t\t*[398310]<input type=checkbox checked=false id=idscheck688 value=688 />\n\t*[398313]<td />\n\t\t*[398314]<div />\n\t\t\t688\n\t*[398315]<td />\n\t\t*[398318]<span />\n\t\t\t*[398316]<span />\n\t\t\t\t*[398317]<img alt=Vulcan Weightlifting Tank />\n\t*[398319]<td />\n\t\t*[398320]<div />\n\t\t\tVulcan Weightlifting Tank\n\t*[398321]<td />\n\t\t*[398322]<div />\n\t\t\tConfigurable Product\n\t*[398323]<td />\n\t\t*[398324]<div />\n\t\t\tTop\n\t*[398325]<td />\n\t\t*[398326]<div />\n\t\t\tMT06\n\t*[398327]<td />\n\t\t*[398328]<div />\n\t\t\t$28.00\n\t*[398329]<td />\n\t\t*[398330]<div />\n\t\t\t0.0000\n\t*[398331]<td />\n\t\t*[398338]<div />\n\t\t\t*[398332]<ul />\n\t*[398339]<td />\n\t\t*[398340]<div />\n\t\t\tCatalog, Search\n\t*[398341]<td />\n\t\t*[398342]<div />\n\t\t\tEnabled\n\t*[398343]<td />\n\t\t*[398344]<div />\n\t\t\tMain Website\n\t*[398345]<td />\n\t\t*[398346]<div />\n\t\t\tApr 19, 2023 12:13:34 PM\n\t*[398347]<td />\n\t\t*[398354]<a aria-label=Edit Vulcan Weightlifting Tank />\n\t\t\tEdit\n*[397481]<tr />\n\t*[398359]<td />\n\t\t*[398362]<label />\n\t\t\t*[398360]<input type=checkbox checked=false id=idscheck700 value=700 />\n\t*[398363]<td />\n\t\t*[398364]<div />\n\t\t\t700\n\t*[398365]<td />\n\t\t*[398368]<span />\n\t\t\t*[398366]<span />\n\t\t\t\t*[398367]<img alt=Sparta Gym Tank />\n\t*[398369]<td />\n\t\t*[398370]<div />\n\t\t\tSparta Gym Tank\n\t*[398371]<td />\n\t\t*[398372]<div />\n\t\t\tConfigurable Product\n\t*[398373]<td />\n\t\t*[398374]<div />\n\t\t\tTop\n\t*[398375]<td />\n\t\t*[398376]<div />\n\t\t\tMT08\n\t*[398377]<td />\n\t\t*[398378]<div />\n\t\t\t$29.00\n\t*[398379]<td />\n\t\t*[398380]<div />\n\t\t\t0.0000\n\t*[398381]<td />\n\t\t*[398388]<div />\n\t\t\t*[398382]<ul />\n\t*[398389]<td />\n\t\t*[398390]<div />\n\t\t\tCatalog, Search\n\t*[398391]<td />\n\t\t*[398392]<div />\n\t\t\tEnabled\n\t*[398393]<td />\n\t\t*[398394]<div />\n\t\t\tMain Website\n\t*[398395]<td />\n\t\t*[398396]<div />\n\t\t\tApr 19, 2023 12:13:34 PM\n\t*[398397]<td />\n\t\t*[398404]<a aria-label=Edit Sparta Gym Tank />\n\t\t\tEdit\n*[397484]<tr />\n\t*[398409]<td />\n\t\t*[398412]<label />\n\t\t\t*[398410]<input type=checkbox checked=false id=idscheck712 value=712 />\n\t*[398413]<td />\n\t\t*[398414]<div />\n\t\t\t712\n\t*[398415]<td />\n\t\t*[398418]<span />\n\t\t\t*[398416]<span />\n\t\t\t\t*[398417]<img alt=Tiberius Gym Tank />\n\t*[398419]<td />\n\t\t*[398420]<div />\n\t\t\tTiberius Gym Tank\n\t*[398421]<td />\n\t\t*[398422]<div />\n\t\t\tConfigurable Product\n\t*[398423]<td />\n\t\t*[398424]<div />\n\t\t\tTop\n\t*[398425]<td />\n\t\t*[398426]<div />\n\t\t\tMT10\n\t*[398427]<td />\n\t\t*[398428]<div />\n\t\t\t$18.00\n\t*[398429]<td />\n\t\t*[398430]<div />\n\t\t\t0.0000\n\t*[398431]<td />\n\t\t*[398438]<div />\n\t\t\t*[398432]<ul />\n\t*[398439]<td />\n\t\t*[398440]<div />\n\t\t\tCatalog, Search\n\t*[398441]<td />\n\t\t*[398442]<div />\n\t\t\tEnabled\n\t*[398443]<td />\n\t\t*[398444]<div />\n\t\t\tMain Website\n\t*[398445]<td />\n\t\t*[398446]<div />\n\t\t\tApr 19, 2023 12:13:34 PM\n\t*[398447]<td />\n\t\t*[398454]<a aria-label=Edit Tiberius Gym Tank />\n\t\t\tEdit\n*[397487]<tr />\n\t*[398459]<td />\n\t\t*[398462]<label />\n\t\t\t*[398460]<input type=checkbox checked=false id=idscheck724 value=724 />\n\t*[398463]<td />\n\t\t*[398464]<div />\n\t\t\t724\n\t*[398465]<td />\n\t\t*[398468]<span />\n\t\t\t*[398466]<span />\n\t\t\t\t*[398467]<img alt=Cassius Sparring Tank />\n\t*[398469]<td />\n\t\t*[398470]<div />\n\t\t\tCassius Sparring Tank\n\t*[398471]<td />\n\t\t*[398472]<div />\n\t\t\tConfigurable Product\n\t*[398473]<td />\n\t\t*[398474]<div />\n\t\t\tTop\n\t*[398475]<td />\n\t\t*[398476]<div />\n\t\t\tMT12\n\t*[398477]<td />\n\t\t*[398478]<div />\n\t\t\t$18.00\n\t*[398479]<td />\n\t\t*[398480]<div />\n\t\t\t0.0000\n\t*[398481]<td />\n\t\t*[398488]<div />\n\t\t\t*[398482]<ul />\n\t*[398489]<td />\n\t\t*[398490]<div />\n\t\t\tCatalog, Search\n\t*[398491]<td />\n\t\t*[398492]<div />\n\t\t\tEnabled\n\t*[398493]<td />\n\t\t*[398494]<div />\n\t\t\tMain Website\n\t*[398495]<td />\n\t\t*[398496]<div />\n\t\t\tApr 19, 2023 12:13:34 PM\n\t*[398497]<td />\n\t\t*[398504]<a aria-label=Edit Cassius Sparring Tank />\n\t\t\tEdit\n*[397490]<tr />\n\t*[398509]<td />\n\t\t*[398512]<label />\n\t\t\t*[398510]<input type=checkbox checked=false id=idscheck937 value=937 />\n\t*[398513]<td />\n\t\t*[398514]<div />\n\t\t\t937\n\t*[398515]<td />\n\t\t*[398518]<span />\n\t\t\t*[398516]<span />\n\t\t\t\t*[398517]<img alt=Hawkeye Yoga Short />\n\t*[398519]<td />\n\t\t*[398520]<div />\n\t\t\tHawkeye Yoga Short\n\t*[398521]<td />\n\t\t*[398522]<div />\n\t\t\tConfigurable Product\n\t*[398523]<td />\n\t\t*[398524]<div />\n\t\t\tBottom\n\t*[398525]<td />\n\t\t*[398526]<div />\n\t\t\tMSH05\n\t*[398527]<td />\n\t\t*[398528]<div />\n\t\t\t$29.00\n\t*[398529]<td />\n\t\t*[398530]<div />\n\t\t\t0.0000\n\t*[398531]<td />\n\t\t*[398538]<div />\n\t\t\t*[398532]<ul />\n\t*[398539]<td />\n\t\t*[398540]<div />\n\t\t\tCatalog, Search\n\t*[398541]<td />\n\t\t*[398542]<div />\n\t\t\tEnabled\n\t*[398543]<td />\n\t\t*[398544]<div />\n\t\t\tMain Website\n\t*[398545]<td />\n\t\t*[398546]<div />\n\t\t\tApr 19, 2023 12:13:38 PM\n\t*[398547]<td />\n\t\t*[398554]<a aria-label=Edit Hawkeye Yoga Short />\n\t\t\tEdit\n*[397493]<tr />\n\t*[398559]<td />\n\t\t*[398562]<label />\n\t\t\t*[398560]<input type=checkbox checked=false id=idscheck989 value=989 />\n\t*[398563]<td />\n\t\t*[398564]<div />\n\t\t\t989\n\t*[398565]<td />\n\t\t*[398568]<span />\n\t\t\t*[398566]<span />\n\t\t\t\t*[398567]<img alt=Troy Yoga Short />\n\t*[398569]<td />\n\t\t*[398570]<div />\n\t\t\tTroy Yoga Short\n\t*[398571]<td />\n\t\t*[398572]<div />\n\t\t\tConfigurable Product\n\t*[398573]<td />\n\t\t*[398574]<div />\n\t\t\tBottom\n\t*[398575]<td />\n\t\t*[398576]<div />\n\t\t\tMSH09\n\t*[398577]<td />\n\t\t*[398578]<div />\n\t\t\t$24.00\n\t*[398579]<td />\n\t\t*[398580]<div />\n\t\t\t0.0000\n\t*[398581]<td />\n\t\t*[398588]<div />\n\t\t\t*[398582]<ul />\n\t*[398589]<td />\n\t\t*[398590]<div />\n\t\t\tCatalog, Search\n\t*[398591]<td />\n\t\t*[398592]<div />\n\t\t\tEnabled\n\t*[398593]<td />\n\t\t*[398594]<div />\n\t\t\tMain Website\n\t*[398595]<td />\n\t\t*[398596]<div />\n\t\t\tApr 19, 2023 12:13:39 PM\n\t*[398597]<td />\n\t\t*[398604]<a aria-label=Edit Troy Yoga Short />\n\t\t\tEdit\n*[397496]<tr />\n\t*[398609]<td />\n\t*[398613]<td />\n\t*[398615]<td />\n\t*[398619]<td />\n\t*[398621]<td />\n\t*[398623]<td />\n\t*[398625]<td />\n\t*[398627]<td />\n\t*[398629]<td />\n\t*[398631]<td />\n\t*[398639]<td />\n\t*[398641]<td />\n\t*[398643]<td />\n\t*[398645]<td />\n\t*[398647]<td />",
+    "product_3": "[374179]<a />\n[374187]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[374188]<a />\n\t\tDashboard\n[374193]<li id=menu-magento-sales-sales role=menu-item />\n\t[374082]<a />\n\t\tSales\n[374236]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[374083]<a />\n\t\tCatalog\n[374259]<li id=menu-magento-customer-customer role=menu-item />\n\t[374084]<a />\n\t\tCustomers\n[374284]<li id=menu-magento-backend-marketing role=menu-item />\n\t[374085]<a />\n\t\tMarketing\n[374369]<li id=menu-magento-backend-content role=menu-item />\n\t[374086]<a />\n\t\tContent\n[374428]<li id=menu-magento-reports-report role=menu-item />\n\t[374087]<a />\n\t\tReports\n[374589]<li id=menu-magento-backend-stores role=menu-item />\n\t[374088]<a />\n\t\tStores\n[374685]<li id=menu-magento-backend-system role=menu-item />\n\t[374089]<a />\n\t\tSystem\n[374790]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[374791]<a />\n\t\tFind Partners & Extensions\nProducts\n[374853]<a title=My Account />\n\tadmin\n[374891]<a title=Notifications />\n[374896]<div />\n\t[374067]<form id=form-search />\n\t\t[374899]<div />\n\t\t\t[374068]<input type=text id=search-global autocomplete=off />\n[374925]<div title=Add Product id=add_new_product />\n\t[374929]<button title=Add Product id=add_new_product-button />\n\t\tAdd Product\n\t[374935]<button title=Add Product aria-label=Add product of type />\n[375413]<button />\n\tDefault View\n[375467]<button />\n\tColumns\n[375657]<button />\n\tFilters\nActive filters:\nName:\nCronus\n*[421996]<button />\nSKU:\nMP12-33-Blue\n*[422010]<button />\n*[376486]<button />\n\tClear all\n[375684]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />\n[375685]<button aria-label=Search />\n[375692]<button title=Select Items />\n\tActions\nrecords found\n[376939]<div />\n\t[376941]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />\n[376942]<button />\n\tSelect\nper page\n[375748]<button title=Previous Page disabled=true />\n*[375753]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />\nof 1\n[375755]<button title=Next Page disabled=true />\n[375338]<tr />\n\t[376202]<div />\n\t\t[376203]<input type=checkbox checked=false id=77 />\n\t\t[376205]<button />\n\t\t\tOptions\n\t[376225]<th />\n\t\t[376224]<span />\n\t\t\tID\n\t[376228]<th />\n\t\tThumbnail\n\t[376231]<th />\n\t\t[376230]<span />\n\t\t\tName\n\t[376234]<th />\n\t\t[376233]<span />\n\t\t\tType\n\t[376237]<th />\n\t\t[376236]<span />\n\t\t\tAttribute Set\n\t[376240]<th />\n\t\t[376239]<span />\n\t\t\tSKU\n\t[376243]<th />\n\t\t[376242]<span />\n\t\t\tPrice\n\t[376246]<th />\n\t\t[376245]<span />\n\t\t\tQuantity\n\t[376249]<th />\n\t\tSalable Quantity\n\t[376252]<th />\n\t\t[376251]<span />\n\t\t\tVisibility\n\t[376255]<th />\n\t\t[376254]<span />\n\t\t\tStatus\n\t[376258]<th />\n\t\t[376257]<span />\n\t\t\tWebsites\n\t[376261]<th />\n\t\t[376260]<span />\n\t\t\tLast Updated At\n\t[376264]<th />\n\t\t[376263]<span />\n\t\t\tAction\n[394487]<tr />\n\t[394491]<td />\n\t\t[394528]<label />\n\t\t\t[394526]<input type=checkbox checked=false id=idscheck872 value=872 />\n\t[394492]<td />\n\t\t[394536]<div />\n\t\t\t872\n\t[394493]<td />\n\t\t[394547]<span />\n\t\t\t[394545]<span />\n\t\t\t\t[394546]<img alt=Cronus Yoga Pant -33-Blue />\n\t[394494]<td />\n\t\t[394548]<div />\n\t\t\tCronus Yoga Pant -33-Blue\n\t[394495]<td />\n\t\t[394537]<div />\n\t\t\tSimple Product\n\t[394496]<td />\n\t\t[394538]<div />\n\t\t\tBottom\n\t[394497]<td />\n\t\t[394549]<div />\n\t\t\tMP12-33-Blue\n\t[394498]<td />\n\t\t[394539]<div />\n\t\t\t$48.00\n\t[394499]<td />\n\t\t[394540]<div />\n\t\t\t0.0000\n\t[394500]<td />\n\t\t[394556]<div />\n\t\t\t[394550]<ul />\n\t\t\t\t*[422066]<li level=1 />\n\t\t\t\t\t*[422069]<strong />\n\t\t\t\t\t\tDefault Stock\n\t\t\t\t\t*[422070]<span />\n\t[394501]<td />\n\t\t[394541]<div />\n\t\t\tNot Visible Individually\n\t[394502]<td />\n\t\t[394542]<div />\n\t\t\tEnabled\n\t[394503]<td />\n\t\t[394543]<div />\n\t\t\tMain Website\n\t[394504]<td />\n\t\t[394544]<div />\n\t\t\tApr 23, 2023 6:33:47 PM\n\t[394505]<td />\n\t\t[394591]<a aria-label=Edit Cronus Yoga Pant -33-Blue />\n\t\t\tEdit\n*[375028]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[375038]<a id=footer_privacy />\n\tPrivacy Policy\n*[375041]<a id=footer_account_activity />\n\tAccount Activity\n*[375044]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "872": "*[473976]<a />\n*[473984]<li id=menu-magento-backend-dashboard role=menu-item />\n\t*[473985]<a />\n\t\tDashboard\n*[473990]<li id=menu-magento-sales-sales role=menu-item />\n\t[473841]<a />\n\t\tSales\n*[474033]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[473842]<a />\n\t\tCatalog\n*[474056]<li id=menu-magento-customer-customer role=menu-item />\n\t[473843]<a />\n\t\tCustomers\n*[474081]<li id=menu-magento-backend-marketing role=menu-item />\n\t[473844]<a />\n\t\tMarketing\n*[474166]<li id=menu-magento-backend-content role=menu-item />\n\t[473845]<a />\n\t\tContent\n*[474225]<li id=menu-magento-reports-report role=menu-item />\n\t[473846]<a />\n\t\tReports\n*[474385]<li id=menu-magento-backend-stores role=menu-item />\n\t[473847]<a />\n\t\tStores\n*[474481]<li id=menu-magento-backend-system role=menu-item />\n\t[473848]<a />\n\t\tSystem\n*[474586]<li id=menu-magento-marketplace-partners role=menu-item />\n\t*[474587]<a />\n\t\tFind Partners & Extensions\nCronus Yoga Pant -33-Blue\n*[474655]<a title=My Account />\n\tadmin\n*[474693]<a title=Notifications />\n*[474698]<div />\n\t*[473816]<form id=form-search />\n\t\t*[474701]<div />\n\t\t\t*[473817]<input type=text id=search-global autocomplete=off />\n*[474788]<div title=Save />\n\t*[474792]<button title=Save id=save-button />\n\t\tSave\n\t*[474798]<button title=Save aria-label=Save options />\n[473853]<button title=Back id=back />\n\tBack\n*[474839]<button title=Add Attribute id=addAttribute />\n\tAdd Attribute\n*[477092]<span />\n\tEnable Product\n*[478847]<input type=checkbox checked=true id=JIMV36G name=product[status] value=1 />\n*[478849]<span />\nAttribute Set\n*[478901]<div />\n\tBottom\n*[477190]<span />\n\tProduct Name\n*[479378]<input type=text id=INE0IUP name=product[name] maxlength=255 />\n*[477239]<span />\n\tSKU\n*[479380]<input type=text id=O0HD052 name=product[sku] maxlength=255 />\n*[478093]<div />\n\t*[478095]<span />\n\t\tPrice\n*[479382]<input type=text id=G27FMCO name=product[price] maxlength=255 />\n*[480845]<button />\n\tAdvanced Pricing\n*[477288]<span />\n\tTax Class\n*[479394]<select id=XQK2DRP name=product[tax_class_id] aria-label=notice-XQK2DRP expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=None|Taxable Goods,format=numeric) />\n*[478186]<div />\n\t*[478188]<span />\n\t\tQuantity\n*[479384]<input type=text id=C45U471 name=product[quantity_and_stock_status][qty] maxlength=255 />\n*[480866]<button />\n\tAdvanced Inventory\n*[477337]<span />\n\tStock Status\n*[479407]<select id=H44ND57 name=product[quantity_and_stock_status][is_in_stock] aria-label=notice-H44ND57 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=In Stock|Out of Stock,format=numeric) />\n*[478287]<div />\n\t*[478289]<span />\n\t\tWeight\n*[479386]<input type=text id=BYY0JCE name=product[weight] maxlength=255 />\nlbs\n*[480309]<select id=HHSPTFH name=product[product_has_weight] aria-label=notice-HHSPTFH expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=This item has weight|This item has no weight,format=numeric) />\n*[478432]<div />\n\t*[478434]<span />\n\t\tCategories\n*[479181]<div />\n\t*[479258]<span />\n\t\t*[479259]<span />\n\t\t\tDefault Category\n\t\t*[479260]<button />\n\t*[479263]<span />\n\t\t*[479264]<span />\n\t\t\tPants\n\t\t*[479265]<button />\n\t*[479268]<span />\n\t\t*[479269]<span />\n\t\t\tPants\n\t\t*[479270]<button />\n*[480887]<button />\n\tNew Category\n*[477386]<span />\n\tVisibility\n*[479420]<select id=X80WOFM name=product[visibility] aria-label=notice-X80WOFM expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />\n*[478520]<div />\n\t*[478522]<span />\n\t\tSet Product as New From\n*[480760]<input type=text id=G6WSMGS name=product[news_from_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[480912]<button />\n\t*[480915]<span />\n\t\tundefined\n*[478571]<div />\n\t*[478573]<span />\n\t\tTo\n*[480762]<input type=text id=CBTKK3U name=product[news_to_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[488206]<button />\n\t*[488209]<span />\n\t\tundefined\n*[477435]<span />\n\tCountry of Manufacture\n*[479439]<select id=VBLTGNU name=product[country_of_manufacture] aria-label=notice-VBLTGNU expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />\n*[477484]<span />\n\tStyle Bottom\n*|scroll element[480324]<select id=Y1I2HWS name=product[style_bottom] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Base Layer|Basic|Capri|Compression,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)\n\t*[480328]<option value=104 selected=false />\n\t*[480331]<option value=105 selected=false />\n\t*[480334]<option value=106 selected=false />\n\t*[480337]<option value=107 selected=false />\n\t*[480340]<option value=108 selected=false />\n\t*[480343]<option value=109 selected=false />\n\t*[480346]<option value=110 selected=false />\n\t*[480349]<option value=111 selected=false />\n*[477533]<span />\n\tActivity\n*|scroll element[480402]<select id=N45E746 name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)\n\t*[480406]<option value=4 selected=false />\n\t*[480409]<option value=5 selected=false />\n\t*[480412]<option value=6 selected=false />\n\t*[480415]<option value=7 selected=false />\n\t*[480418]<option value=8 selected=false />\n\t*[480421]<option value=9 selected=false />\n\t*[480424]<option value=10 selected=false />\n\t*[480427]<option value=11 selected=false />\n\t*[480445]<option value=17 selected=false />\n\t*[480448]<option value=18 selected=false />\n\t*[480451]<option value=19 selected=false />\n\t*[480454]<option value=20 selected=false />\n*[477582]<span />\n\tMaterial\n*|scroll element[480492]<select id=Y1SIN6T name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)\n\t*[480496]<option value=31 selected=false />\n\t*[480499]<option value=142 selected=false />\n\t*[480502]<option value=32 selected=false />\n\t*[480505]<option value=143 selected=false />\n\t*[480508]<option value=33 selected=false />\n\t*[480511]<option value=144 selected=false />\n\t*[480514]<option value=34 selected=false />\n\t*[480517]<option value=145 selected=false />\n\t*[480520]<option value=146 selected=false />\n\t*[480523]<option value=35 selected=false />\n\t*[480526]<option value=147 selected=false />\n\t*[480529]<option value=36 selected=false />\n\t*[480532]<option value=148 selected=false />\n\t*[480535]<option value=37 selected=false />\n\t*[480538]<option value=149 selected=false />\n\t*[480541]<option value=38 selected=false />\n\t*[480544]<option value=39 selected=false />\n*[477631]<span />\n\tSize\n*[480193]<select id=SG8E3DF name=product[size] aria-label=notice-SG8E3DF expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=55 cm|XS|65 cm|S,format=numeric) />\n*[477680]<span />\n\tPattern\n*|scroll element[480646]<select id=C7WFKA5 name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)\n\t*[480650]<option value=192 selected=false />\n\t*[480653]<option value=193 selected=false />\n\t*[480656]<option value=194 selected=false />\n\t*[480659]<option value=195 selected=false />\n\t*[480662]<option value=196 selected=false />\n\t*[480665]<option value=197 selected=false />\n\t*[480668]<option value=198 selected=false />\n*|scroll element[480692]<select id=I4FLC8E name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)",
+    "872_4": "[422391]<a />\n[422399]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[422400]<a />\n\t\tDashboard\n[422405]<li id=menu-magento-sales-sales role=menu-item />\n\t[422257]<a />\n\t\tSales\n[422448]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[422258]<a />\n\t\tCatalog\n[422471]<li id=menu-magento-customer-customer role=menu-item />\n\t[422259]<a />\n\t\tCustomers\n[422496]<li id=menu-magento-backend-marketing role=menu-item />\n\t[422260]<a />\n\t\tMarketing\n[422580]<li id=menu-magento-backend-content role=menu-item />\n\t[422261]<a />\n\t\tContent\n[422639]<li id=menu-magento-reports-report role=menu-item />\n\t[422240]<a />\n\t\tReports\n[422798]<li id=menu-magento-backend-stores role=menu-item />\n\t[422262]<a />\n\t\tStores\n[422894]<li id=menu-magento-backend-system role=menu-item />\n\t[422263]<a />\n\t\tSystem\n[422999]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[423000]<a />\n\t\tFind Partners & Extensions\nCronus Yoga Pant -33-Blue\n[423068]<a title=My Account />\n\tadmin\n[423106]<a title=Notifications />\n[423111]<div />\n\t[422229]<form id=form-search />\n\t\t[423114]<div />\n\t\t\t[422230]<input type=text id=search-global autocomplete=off />\n[423201]<div title=Save />\n\t[423205]<button title=Save id=save-button />\n\t\tSave\n\t[423211]<button title=Save aria-label=Save options />\n[422268]<button title=Back id=back />\n\tBack\n[423252]<button title=Add Attribute id=addAttribute />\n\tAdd Attribute\n[425505]<span />\n\tEnable Product\n[427721]<input type=checkbox checked=true id=D1DTBCY name=product[status] value=1 />\n[427723]<span />\n[425554]<span />\n\tAttribute Set\n[427288]<div />\n\t[427289]<div />\n\t\tBottom\n[425603]<span />\n\tProduct Name\n[427746]<input type=text id=XKGFN23 name=product[name] maxlength=255 />\n[425652]<span />\n\tSKU\n[427748]<input type=text id=MQ7KBYK name=product[sku] maxlength=255 />\n[426506]<div />\n\t[426508]<span />\n\t\tPrice\n[427750]<input type=text id=KR6VAN5 name=product[price] maxlength=255 />\n[444474]<button />\n\tAdvanced Pricing\n[425701]<span />\n\tTax Class\n*[427761]<select id=ML36RUN name=product[tax_class_id] aria-label=notice-ML36RUN expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=None|Taxable Goods,format=numeric) />\n[426599]<div />\n\t[426601]<span />\n\t\tQuantity\n[427752]<input type=text id=CDQR96Q name=product[quantity_and_stock_status][qty] maxlength=255 />\n[444495]<button />\n\tAdvanced Inventory\n[425750]<span />\n\tStock Status\n*[427774]<select id=M5VI3D0 name=product[quantity_and_stock_status][is_in_stock] aria-label=notice-M5VI3D0 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=In Stock|Out of Stock,format=numeric) />\n[426700]<div />\n\t[426702]<span />\n\t\tWeight\n[427754]<input type=text id=DQQTC8T name=product[weight] maxlength=255 />\nlbs\n*[428676]<select id=QQWIJOI name=product[product_has_weight] aria-label=notice-QQWIJOI expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=This item has weight|This item has no weight,format=numeric) />\n[426845]<div />\n\t[426847]<span />\n\t\tCategories\n[427568]<div />\n\t[427645]<span />\n\t\t[427646]<span />\n\t\t\tDefault Category\n\t\t[427647]<button />\n\t[427650]<span />\n\t\t[427651]<span />\n\t\t\tPants\n\t\t[427652]<button />\n\t[427655]<span />\n\t\t[427656]<span />\n\t\t\tPants\n\t\t[427657]<button />\n[444516]<button />\n\tNew Category\n[425799]<span />\n\tVisibility\n*[427787]<select id=OK1JNS1 name=product[visibility] aria-label=notice-OK1JNS1 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />\n[426933]<div />\n\t[426935]<span />\n\t\tSet Product as New From\n[429158]<input type=text id=YX9DKXC name=product[news_from_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[429197]<button />\n\t[429200]<span />\n\t\tundefined\n[426984]<div />\n\t[426986]<span />\n\t\tTo\n[429160]<input type=text id=K7XSPBQ name=product[news_to_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[436491]<button />\n\t[436494]<span />\n\t\tundefined\n[425848]<span />\n\tCountry of Manufacture\n*[427806]<select id=Y0X44WU name=product[country_of_manufacture] aria-label=notice-Y0X44WU expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />\n[425897]<span />\n\tStyle Bottom\n*|scroll element[428691]<select id=ASILAAU name=product[style_bottom] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Base Layer|Basic|Capri|Compression,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)\n\t[428695]<option value=104 selected=false />\n\t[428698]<option value=105 selected=false />\n\t[428701]<option value=106 selected=false />\n\t[428704]<option value=107 selected=false />\n\t[428707]<option value=108 selected=false />\n\t[428710]<option value=109 selected=false />\n\t[428713]<option value=110 selected=false />\n\t[428716]<option value=111 selected=false />\n[425946]<span />\n\tActivity\n*|scroll element[428800]<select id=GI8TYEO name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)\n\t[428804]<option value=4 selected=false />\n\t[428807]<option value=5 selected=false />\n\t[428810]<option value=6 selected=false />\n\t[428813]<option value=7 selected=false />\n\t[428816]<option value=8 selected=false />\n\t[428819]<option value=9 selected=false />\n\t[428822]<option value=10 selected=false />\n\t[428825]<option value=11 selected=false />\n\t[428843]<option value=17 selected=false />\n\t[428846]<option value=18 selected=false />\n\t[428849]<option value=19 selected=false />\n\t[428852]<option value=20 selected=false />\n[425995]<span />\n\tMaterial\n*|scroll element[428890]<select id=P0D5GX9 name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)\n\t[428894]<option value=31 selected=false />\n\t[428897]<option value=142 selected=false />\n\t[428900]<option value=32 selected=false />\n\t[428903]<option value=143 selected=false />\n\t[428906]<option value=33 selected=false />\n\t[428909]<option value=144 selected=false />\n\t[428912]<option value=34 selected=false />\n\t[428915]<option value=145 selected=false />\n\t[428918]<option value=146 selected=false />\n\t[428921]<option value=35 selected=false />\n\t*[428924]<option value=147 selected=false />\n\t*[428927]<option value=36 selected=false />\n\t*[428930]<option value=148 selected=false />\n[426044]<span />\n\tSize\n*[428560]<select id=V2XQW9P name=product[size] aria-label=notice-V2XQW9P expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=55 cm|XS|65 cm|S,format=numeric) />\n*[426093]<span />\n\tPattern\n*|scroll element[429044]<select id=WGFRAKM name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)\n\t*[429048]<option value=192 selected=false />\n\t*[429051]<option value=193 selected=false />\n\t*[429054]<option value=194 selected=false />\n\t*[429057]<option value=195 selected=false />\n*|scroll element[429090]<select id=EADSB54 name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)",
+    "edit": "*[450457]<a />\n*[450466]<a />\n\tDashboard\n*[450360]<a />\n\tSales\n*[450361]<a />\n\tCatalog\n*[450362]<a />\n\tCustomers\n*[450363]<a />\n\tMarketing\n*[450364]<a />\n\tContent\n*[450365]<a />\n\tReports\n*[450366]<a />\n\tStores\n*[450367]<a />\n\tSystem\n*[451068]<a />\n\tFind Partners & Extensions\nProducts\n*[450347]<a title=My Account />\n\tadmin\n*[451167]<a title=Notifications />\n*[451172]<div />\n\t*[450343]<form id=form-search />\n\t\t*[451175]<div />\n\t\t\t*[450344]<input type=text id=search-global name=query />\n*[451205]<button title=Add Product id=add_new_product-button />\n\tAdd Product\n*[451211]<button title=Add Product aria-label=Add product of type />\n*[451277]<div />\n*[451304]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[451314]<a id=footer_privacy />\n\tPrivacy Policy\n*[451317]<a id=footer_account_activity />\n\tAccount Activity\n*[451320]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "product_5": "Dashboard\n*[473841]<a />\n\tSales\n*[473842]<a />\n\tCatalog\n*[473843]<a />\n\tCustomers\n*[473844]<a />\n\tMarketing\n*[473845]<a />\n\tContent\n*[473846]<a />\n\tReports\n*[473847]<a />\n\tStores\n*[473848]<a />\n\tSystem\nFind Partners & Extensions\nCronus Yoga Pant -33-Blue\nadmin\nScope:\nAll Store Views\n*[473852]<a title=What is this? />\n\tWhat is this?\nSave\n*[473853]<button title=Back id=back />\n\tBack\nAdd Attribute\n*[473864]<div />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\nPrivacy Policy\nAccount Activity\nReport an Issue",
+    "872_6": "*[500866]<a />\n*[500875]<a />\n\tDashboard\n*[500762]<a />\n\tSales\n*[500763]<a />\n\tCatalog\n*[500764]<a />\n\tCustomers\n*[500765]<a />\n\tMarketing\n*[500766]<a />\n\tContent\n*[500767]<a />\n\tReports\n*[500768]<a />\n\tStores\n*[500769]<a />\n\tSystem\n*[501478]<a />\n\tFind Partners & Extensions\nProducts\n*[501540]<a title=My Account />\n\tadmin\n*[501578]<a title=Notifications />\n*[501583]<div />\n\t*[500754]<form id=form-search />\n\t\t*[501586]<div />\n\t\t\t*[500755]<input type=text id=search-global name=query />\n*[501616]<button title=Add Product id=add_new_product-button />\n\tAdd Product\n*[501622]<button title=Add Product aria-label=Add product of type />\n*[501688]<div />\n*[501715]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[501725]<a id=footer_privacy />\n\tPrivacy Policy\n*[501728]<a id=footer_account_activity />\n\tAccount Activity\n*[501731]<a id=footer_bug_tracking />\n\tReport an Issue"
+  }
+}

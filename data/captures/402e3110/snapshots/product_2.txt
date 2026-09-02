@@ -1,0 +1,739 @@
+[374179]<a />
+[374187]<li id=menu-magento-backend-dashboard role=menu-item />
+	[374188]<a />
+		Dashboard
+[374193]<li id=menu-magento-sales-sales role=menu-item />
+	[374082]<a />
+		Sales
+[374236]<li id=menu-magento-catalog-catalog role=menu-item />
+	[374083]<a />
+		Catalog
+[374259]<li id=menu-magento-customer-customer role=menu-item />
+	[374084]<a />
+		Customers
+[374284]<li id=menu-magento-backend-marketing role=menu-item />
+	[374085]<a />
+		Marketing
+[374369]<li id=menu-magento-backend-content role=menu-item />
+	[374086]<a />
+		Content
+[374428]<li id=menu-magento-reports-report role=menu-item />
+	[374087]<a />
+		Reports
+[374589]<li id=menu-magento-backend-stores role=menu-item />
+	[374088]<a />
+		Stores
+[374685]<li id=menu-magento-backend-system role=menu-item />
+	[374089]<a />
+		System
+[374790]<li id=menu-magento-marketplace-partners role=menu-item />
+	[374791]<a />
+		Find Partners & Extensions
+Products
+[374853]<a title=My Account />
+	admin
+[374891]<a title=Notifications />
+[374896]<div />
+	[374067]<form id=form-search />
+		[374899]<div />
+			[374068]<input type=text id=search-global autocomplete=off />
+[374925]<div title=Add Product id=add_new_product />
+	[374929]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[374935]<button title=Add Product aria-label=Add product of type />
+[375413]<button />
+	Default View
+[375467]<button />
+	Columns
+[375657]<button />
+	Filters
+*[377543]<legend />
+	ID
+from
+*[378671]<input type=text id=IA4CT1Y name=entity_id[from] maxlength=255 />
+to
+*[378790]<input type=text id=FJKELBU name=entity_id[to] maxlength=255 />
+*[377549]<legend />
+	Price
+from
+*[378909]<input type=text id=PVXATWP name=price[from] maxlength=255 />
+to
+*[379028]<input type=text id=I0GYJWS name=price[to] maxlength=255 />
+Quantity
+from
+*[379147]<input type=text id=B0WOJS5 name=qty[from] maxlength=255 />
+to
+*[379266]<input type=text id=LHICKVC name=qty[to] maxlength=255 />
+Last Updated At
+from
+*[379563]<input type=text id=LK32TGM name=updated_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[379570]<button />
+	*[379573]<span />
+		undefined
+to
+*[379565]<input type=text id=PEK76GD name=updated_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[386863]<button />
+	*[386866]<span />
+		undefined
+Store View
+*[377588]<select id=BXSW9P3 name=store_id aria-label=notice-BXSW9P3 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />
+Asset
+*[376789]<div />
+	*[376790]<div />
+		Select...
+Name
+*[378546]<input type=text id=F73CA0P name=name maxlength=255 />
+Type
+*[377609]<select id=OPQH1L0 name=type_id aria-label=notice-OPQH1L0 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Simple Product|Virtual Product|Bundle Product|Downloadable Product) />
+Attribute Set
+*[377637]<select id=NACXVBR name=attribute_set_id aria-label=notice-NACXVBR expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=8,options=Default|Top|Bottom|Gear,format=numeric) />
+SKU
+*[378548]<input type=text id=EYDK8PX name=sku maxlength=255 />
+Visibility
+*[377671]<select id=Q2E5JJA name=visibility aria-label=notice-Q2E5JJA expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />
+Status
+*[377693]<select id=J57T402 name=status aria-label=notice-J57T402 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Enabled|Disabled,format=numeric) />
+*[375665]<button />
+	Cancel
+*[375667]<button />
+	Apply Filters
+*[375684]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[375685]<button aria-label=Search />
+[375692]<button title=Select Items />
+	Actions
+2040
+records found
+[376939]<div />
+	*[376941]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+[376942]<button />
+	Select
+per page
+[375748]<button title=Previous Page disabled=true />
+*[375753]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 11
+[375755]<button title=Next Page />
+*[375338]<tr />
+	*[376202]<div />
+		[376203]<input type=checkbox checked=false id=77 />
+		[376205]<button />
+			Options
+	[376225]<th />
+		*[376224]<span />
+			ID
+	[376228]<th />
+		Thumbnail
+	[376231]<th />
+		*[376230]<span />
+			Name
+	[376234]<th />
+		*[376233]<span />
+			Type
+	[376237]<th />
+		*[376236]<span />
+			Attribute Set
+	[376240]<th />
+		*[376239]<span />
+			SKU
+	[376243]<th />
+		*[376242]<span />
+			Price
+	[376246]<th />
+		*[376245]<span />
+			Quantity
+	[376249]<th />
+		Salable Quantity
+	[376252]<th />
+		*[376251]<span />
+			Visibility
+	[376255]<th />
+		*[376254]<span />
+			Status
+	[376258]<th />
+		*[376257]<span />
+			Websites
+	[376261]<th />
+		*[376260]<span />
+			Last Updated At
+	[376264]<th />
+		*[376263]<span />
+			Action
+*[394487]<tr />
+	[394491]<td />
+		*[394528]<label />
+			[394526]<input type=checkbox checked=false id=idscheck1826 value=1826 />
+	[394492]<td />
+		*[394536]<div />
+			1826
+	[394493]<td />
+		*[394547]<span />
+			*[394545]<span />
+				*[394546]<img alt=Emma Leggings />
+	[394494]<td />
+		*[394548]<div />
+			Emma Leggings
+	[394495]<td />
+		*[394537]<div />
+			Configurable Product
+	[394496]<td />
+		*[394538]<div />
+			Bottom
+	[394497]<td />
+		*[394549]<div />
+			WP02
+	[394498]<td />
+		*[394539]<div />
+			$42.00
+	[394499]<td />
+		*[394540]<div />
+			0.0000
+	[394500]<td />
+		*[394556]<div />
+			*[394550]<ul />
+	[394501]<td />
+		*[394541]<div />
+			Catalog, Search
+	[394502]<td />
+		*[394542]<div />
+			Enabled
+	[394503]<td />
+		*[394543]<div />
+			Main Website
+	[394504]<td />
+		*[394544]<div />
+			Apr 19, 2023 12:13:53 PM
+	[394505]<td />
+		[394591]<a aria-label=Edit Emma Leggings />
+			Edit
+*[397463]<tr />
+	*[398059]<td />
+		*[398062]<label />
+			*[398060]<input type=checkbox checked=false id=idscheck1854 value=1854 />
+	*[398063]<td />
+		*[398064]<div />
+			1854
+	*[398065]<td />
+		*[398068]<span />
+			*[398066]<span />
+				*[398067]<img alt=Diana Tights />
+	*[398069]<td />
+		*[398070]<div />
+			Diana Tights
+	*[398071]<td />
+		*[398072]<div />
+			Configurable Product
+	*[398073]<td />
+		*[398074]<div />
+			Bottom
+	*[398075]<td />
+		*[398076]<div />
+			WP06
+	*[398077]<td />
+		*[398078]<div />
+			$59.00
+	*[398079]<td />
+		*[398080]<div />
+			0.0000
+	*[398081]<td />
+		*[398088]<div />
+			*[398082]<ul />
+	*[398089]<td />
+		*[398090]<div />
+			Catalog, Search
+	*[398091]<td />
+		*[398092]<div />
+			Enabled
+	*[398093]<td />
+		*[398094]<div />
+			Main Website
+	*[398095]<td />
+		*[398096]<div />
+			Apr 19, 2023 12:13:53 PM
+	*[398097]<td />
+		*[398104]<a aria-label=Edit Diana Tights />
+			Edit
+*[397466]<tr />
+	*[398109]<td />
+		*[398112]<label />
+			*[398110]<input type=checkbox checked=false id=idscheck1882 value=1882 />
+	*[398113]<td />
+		*[398114]<div />
+			1882
+	*[398115]<td />
+		*[398118]<span />
+			*[398116]<span />
+				*[398117]<img alt=Daria Bikram Pant />
+	*[398119]<td />
+		*[398120]<div />
+			Daria Bikram Pant
+	*[398121]<td />
+		*[398122]<div />
+			Configurable Product
+	*[398123]<td />
+		*[398124]<div />
+			Bottom
+	*[398125]<td />
+		*[398126]<div />
+			WP10
+	*[398127]<td />
+		*[398128]<div />
+			$51.00
+	*[398129]<td />
+		*[398130]<div />
+			0.0000
+	*[398131]<td />
+		*[398138]<div />
+			*[398132]<ul />
+	*[398139]<td />
+		*[398140]<div />
+			Catalog, Search
+	*[398141]<td />
+		*[398142]<div />
+			Enabled
+	*[398143]<td />
+		*[398144]<div />
+			Main Website
+	*[398145]<td />
+		*[398146]<div />
+			Apr 19, 2023 12:13:54 PM
+	*[398147]<td />
+		*[398154]<a aria-label=Edit Daria Bikram Pant />
+			Edit
+*[397469]<tr />
+	*[398159]<td />
+		*[398162]<label />
+			*[398160]<input type=checkbox checked=false id=idscheck776 value=776 />
+	*[398163]<td />
+		*[398164]<div />
+			776
+	*[398165]<td />
+		*[398168]<span />
+			*[398166]<span />
+				*[398167]<img alt=Supernova Sport Pant />
+	*[398169]<td />
+		*[398170]<div />
+			Supernova Sport Pant
+	*[398171]<td />
+		*[398172]<div />
+			Configurable Product
+	*[398173]<td />
+		*[398174]<div />
+			Bottom
+	*[398175]<td />
+		*[398176]<div />
+			MP04
+	*[398177]<td />
+		*[398178]<div />
+			$45.00
+	*[398179]<td />
+		*[398180]<div />
+			0.0000
+	*[398181]<td />
+		*[398188]<div />
+			*[398182]<ul />
+	*[398189]<td />
+		*[398190]<div />
+			Catalog, Search
+	*[398191]<td />
+		*[398192]<div />
+			Enabled
+	*[398193]<td />
+		*[398194]<div />
+			Main Website
+	*[398195]<td />
+		*[398196]<div />
+			Apr 19, 2023 12:13:35 PM
+	*[398197]<td />
+		*[398204]<a aria-label=Edit Supernova Sport Pant />
+			Edit
+*[397472]<tr />
+	*[398209]<td />
+		*[398212]<label />
+			*[398210]<input type=checkbox checked=false id=idscheck2003 value=2003 />
+	*[398213]<td />
+		*[398214]<div />
+			2003
+	*[398215]<td />
+		*[398218]<span />
+			*[398216]<span />
+				*[398217]<img alt=Sybil Running Short />
+	*[398219]<td />
+		*[398220]<div />
+			Sybil Running Short
+	*[398221]<td />
+		*[398222]<div />
+			Configurable Product
+	*[398223]<td />
+		*[398224]<div />
+			Bottom
+	*[398225]<td />
+		*[398226]<div />
+			WSH08
+	*[398227]<td />
+		*[398228]<div />
+			$44.00
+	*[398229]<td />
+		*[398230]<div />
+			0.0000
+	*[398231]<td />
+		*[398238]<div />
+			*[398232]<ul />
+	*[398239]<td />
+		*[398240]<div />
+			Catalog, Search
+	*[398241]<td />
+		*[398242]<div />
+			Enabled
+	*[398243]<td />
+		*[398244]<div />
+			Main Website
+	*[398245]<td />
+		*[398246]<div />
+			Apr 19, 2023 12:13:56 PM
+	*[398247]<td />
+		*[398254]<a aria-label=Edit Sybil Running Short />
+			Edit
+*[397475]<tr />
+	*[398259]<td />
+		*[398262]<label />
+			*[398260]<input type=checkbox checked=false id=idscheck676 value=676 />
+	*[398263]<td />
+		*[398264]<div />
+			676
+	*[398265]<td />
+		*[398268]<span />
+			*[398266]<span />
+				*[398267]<img alt=Helios Endurance Tank />
+	*[398269]<td />
+		*[398270]<div />
+			Helios Endurance Tank
+	*[398271]<td />
+		*[398272]<div />
+			Configurable Product
+	*[398273]<td />
+		*[398274]<div />
+			Top
+	*[398275]<td />
+		*[398276]<div />
+			MT04
+	*[398277]<td />
+		*[398278]<div />
+			$32.00
+	*[398279]<td />
+		*[398280]<div />
+			0.0000
+	*[398281]<td />
+		*[398288]<div />
+			*[398282]<ul />
+	*[398289]<td />
+		*[398290]<div />
+			Catalog, Search
+	*[398291]<td />
+		*[398292]<div />
+			Enabled
+	*[398293]<td />
+		*[398294]<div />
+			Main Website
+	*[398295]<td />
+		*[398296]<div />
+			Apr 19, 2023 12:13:34 PM
+	*[398297]<td />
+		*[398304]<a aria-label=Edit Helios Endurance Tank />
+			Edit
+*[397478]<tr />
+	*[398309]<td />
+		*[398312]<label />
+			*[398310]<input type=checkbox checked=false id=idscheck688 value=688 />
+	*[398313]<td />
+		*[398314]<div />
+			688
+	*[398315]<td />
+		*[398318]<span />
+			*[398316]<span />
+				*[398317]<img alt=Vulcan Weightlifting Tank />
+	*[398319]<td />
+		*[398320]<div />
+			Vulcan Weightlifting Tank
+	*[398321]<td />
+		*[398322]<div />
+			Configurable Product
+	*[398323]<td />
+		*[398324]<div />
+			Top
+	*[398325]<td />
+		*[398326]<div />
+			MT06
+	*[398327]<td />
+		*[398328]<div />
+			$28.00
+	*[398329]<td />
+		*[398330]<div />
+			0.0000
+	*[398331]<td />
+		*[398338]<div />
+			*[398332]<ul />
+	*[398339]<td />
+		*[398340]<div />
+			Catalog, Search
+	*[398341]<td />
+		*[398342]<div />
+			Enabled
+	*[398343]<td />
+		*[398344]<div />
+			Main Website
+	*[398345]<td />
+		*[398346]<div />
+			Apr 19, 2023 12:13:34 PM
+	*[398347]<td />
+		*[398354]<a aria-label=Edit Vulcan Weightlifting Tank />
+			Edit
+*[397481]<tr />
+	*[398359]<td />
+		*[398362]<label />
+			*[398360]<input type=checkbox checked=false id=idscheck700 value=700 />
+	*[398363]<td />
+		*[398364]<div />
+			700
+	*[398365]<td />
+		*[398368]<span />
+			*[398366]<span />
+				*[398367]<img alt=Sparta Gym Tank />
+	*[398369]<td />
+		*[398370]<div />
+			Sparta Gym Tank
+	*[398371]<td />
+		*[398372]<div />
+			Configurable Product
+	*[398373]<td />
+		*[398374]<div />
+			Top
+	*[398375]<td />
+		*[398376]<div />
+			MT08
+	*[398377]<td />
+		*[398378]<div />
+			$29.00
+	*[398379]<td />
+		*[398380]<div />
+			0.0000
+	*[398381]<td />
+		*[398388]<div />
+			*[398382]<ul />
+	*[398389]<td />
+		*[398390]<div />
+			Catalog, Search
+	*[398391]<td />
+		*[398392]<div />
+			Enabled
+	*[398393]<td />
+		*[398394]<div />
+			Main Website
+	*[398395]<td />
+		*[398396]<div />
+			Apr 19, 2023 12:13:34 PM
+	*[398397]<td />
+		*[398404]<a aria-label=Edit Sparta Gym Tank />
+			Edit
+*[397484]<tr />
+	*[398409]<td />
+		*[398412]<label />
+			*[398410]<input type=checkbox checked=false id=idscheck712 value=712 />
+	*[398413]<td />
+		*[398414]<div />
+			712
+	*[398415]<td />
+		*[398418]<span />
+			*[398416]<span />
+				*[398417]<img alt=Tiberius Gym Tank />
+	*[398419]<td />
+		*[398420]<div />
+			Tiberius Gym Tank
+	*[398421]<td />
+		*[398422]<div />
+			Configurable Product
+	*[398423]<td />
+		*[398424]<div />
+			Top
+	*[398425]<td />
+		*[398426]<div />
+			MT10
+	*[398427]<td />
+		*[398428]<div />
+			$18.00
+	*[398429]<td />
+		*[398430]<div />
+			0.0000
+	*[398431]<td />
+		*[398438]<div />
+			*[398432]<ul />
+	*[398439]<td />
+		*[398440]<div />
+			Catalog, Search
+	*[398441]<td />
+		*[398442]<div />
+			Enabled
+	*[398443]<td />
+		*[398444]<div />
+			Main Website
+	*[398445]<td />
+		*[398446]<div />
+			Apr 19, 2023 12:13:34 PM
+	*[398447]<td />
+		*[398454]<a aria-label=Edit Tiberius Gym Tank />
+			Edit
+*[397487]<tr />
+	*[398459]<td />
+		*[398462]<label />
+			*[398460]<input type=checkbox checked=false id=idscheck724 value=724 />
+	*[398463]<td />
+		*[398464]<div />
+			724
+	*[398465]<td />
+		*[398468]<span />
+			*[398466]<span />
+				*[398467]<img alt=Cassius Sparring Tank />
+	*[398469]<td />
+		*[398470]<div />
+			Cassius Sparring Tank
+	*[398471]<td />
+		*[398472]<div />
+			Configurable Product
+	*[398473]<td />
+		*[398474]<div />
+			Top
+	*[398475]<td />
+		*[398476]<div />
+			MT12
+	*[398477]<td />
+		*[398478]<div />
+			$18.00
+	*[398479]<td />
+		*[398480]<div />
+			0.0000
+	*[398481]<td />
+		*[398488]<div />
+			*[398482]<ul />
+	*[398489]<td />
+		*[398490]<div />
+			Catalog, Search
+	*[398491]<td />
+		*[398492]<div />
+			Enabled
+	*[398493]<td />
+		*[398494]<div />
+			Main Website
+	*[398495]<td />
+		*[398496]<div />
+			Apr 19, 2023 12:13:34 PM
+	*[398497]<td />
+		*[398504]<a aria-label=Edit Cassius Sparring Tank />
+			Edit
+*[397490]<tr />
+	*[398509]<td />
+		*[398512]<label />
+			*[398510]<input type=checkbox checked=false id=idscheck937 value=937 />
+	*[398513]<td />
+		*[398514]<div />
+			937
+	*[398515]<td />
+		*[398518]<span />
+			*[398516]<span />
+				*[398517]<img alt=Hawkeye Yoga Short />
+	*[398519]<td />
+		*[398520]<div />
+			Hawkeye Yoga Short
+	*[398521]<td />
+		*[398522]<div />
+			Configurable Product
+	*[398523]<td />
+		*[398524]<div />
+			Bottom
+	*[398525]<td />
+		*[398526]<div />
+			MSH05
+	*[398527]<td />
+		*[398528]<div />
+			$29.00
+	*[398529]<td />
+		*[398530]<div />
+			0.0000
+	*[398531]<td />
+		*[398538]<div />
+			*[398532]<ul />
+	*[398539]<td />
+		*[398540]<div />
+			Catalog, Search
+	*[398541]<td />
+		*[398542]<div />
+			Enabled
+	*[398543]<td />
+		*[398544]<div />
+			Main Website
+	*[398545]<td />
+		*[398546]<div />
+			Apr 19, 2023 12:13:38 PM
+	*[398547]<td />
+		*[398554]<a aria-label=Edit Hawkeye Yoga Short />
+			Edit
+*[397493]<tr />
+	*[398559]<td />
+		*[398562]<label />
+			*[398560]<input type=checkbox checked=false id=idscheck989 value=989 />
+	*[398563]<td />
+		*[398564]<div />
+			989
+	*[398565]<td />
+		*[398568]<span />
+			*[398566]<span />
+				*[398567]<img alt=Troy Yoga Short />
+	*[398569]<td />
+		*[398570]<div />
+			Troy Yoga Short
+	*[398571]<td />
+		*[398572]<div />
+			Configurable Product
+	*[398573]<td />
+		*[398574]<div />
+			Bottom
+	*[398575]<td />
+		*[398576]<div />
+			MSH09
+	*[398577]<td />
+		*[398578]<div />
+			$24.00
+	*[398579]<td />
+		*[398580]<div />
+			0.0000
+	*[398581]<td />
+		*[398588]<div />
+			*[398582]<ul />
+	*[398589]<td />
+		*[398590]<div />
+			Catalog, Search
+	*[398591]<td />
+		*[398592]<div />
+			Enabled
+	*[398593]<td />
+		*[398594]<div />
+			Main Website
+	*[398595]<td />
+		*[398596]<div />
+			Apr 19, 2023 12:13:39 PM
+	*[398597]<td />
+		*[398604]<a aria-label=Edit Troy Yoga Short />
+			Edit
+*[397496]<tr />
+	*[398609]<td />
+	*[398613]<td />
+	*[398615]<td />
+	*[398619]<td />
+	*[398621]<td />
+	*[398623]<td />
+	*[398625]<td />
+	*[398627]<td />
+	*[398629]<td />
+	*[398631]<td />
+	*[398639]<td />
+	*[398641]<td />
+	*[398643]<td />
+	*[398645]<td />
+	*[398647]<td />

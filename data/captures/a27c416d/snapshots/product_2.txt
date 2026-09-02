@@ -1,0 +1,590 @@
+[524455]<a />
+*[524463]<li id=menu-magento-backend-dashboard role=menu-item />
+	[524464]<a />
+		Dashboard
+*[524469]<li id=menu-magento-sales-sales role=menu-item />
+	[524351]<a />
+		Sales
+*[524512]<li id=menu-magento-catalog-catalog role=menu-item />
+	[524352]<a />
+		Catalog
+*[524535]<li id=menu-magento-customer-customer role=menu-item />
+	[524353]<a />
+		Customers
+*[524560]<li id=menu-magento-backend-marketing role=menu-item />
+	[524354]<a />
+		Marketing
+*[524645]<li id=menu-magento-backend-content role=menu-item />
+	[524355]<a />
+		Content
+*[524704]<li id=menu-magento-reports-report role=menu-item />
+	[524356]<a />
+		Reports
+*[524864]<li id=menu-magento-backend-stores role=menu-item />
+	[524357]<a />
+		Stores
+*[524960]<li id=menu-magento-backend-system role=menu-item />
+	[524358]<a />
+		System
+*[525065]<li id=menu-magento-marketplace-partners role=menu-item />
+	[525066]<a />
+		Find Partners & Extensions
+Products
+[525128]<a title=My Account />
+	admin
+[525166]<a title=Notifications />
+[525171]<div />
+	[524342]<form id=form-search />
+		[525174]<div />
+			[524343]<input type=text id=search-global autocomplete=off />
+*[525200]<div title=Add Product id=add_new_product />
+	[525204]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[525210]<button title=Add Product aria-label=Add product of type />
+*[525675]<button />
+	Default View
+*[525694]<button />
+	Columns
+*[525997]<button />
+	Filters
+Active filters:
+Keyword:
+Aero Daily Fitness Tee
+*[526780]<button />
+	Clear all
+*[526048]<button aria-label=Search />
+*[526055]<button title=Select Items />
+	Actions
+2040
+records found
+*[527226]<div />
+*[527229]<button />
+	Select
+per page
+*[526111]<button title=Previous Page disabled=true />
+of 11
+*[526118]<button title=Next Page disabled=true />
+*[526405]<input type=checkbox checked=false id=77 />
+*[526407]<button />
+	Options
+*[526427]<th />
+	ID
+*[526430]<th />
+	Thumbnail
+*[526433]<th />
+	Name
+*[526436]<th />
+	Type
+*[526439]<th />
+	Attribute Set
+*[526442]<th />
+	SKU
+*[526445]<th />
+	Price
+*[526448]<th />
+	Quantity
+*[526451]<th />
+	Salable Quantity
+*[526454]<th />
+	Visibility
+*[526457]<th />
+	Status
+*[526460]<th />
+	Websites
+*[526463]<th />
+	Last Updated At
+*[526466]<th />
+	Action
+*[544398]<td />
+	*[547425]<input type=checkbox checked=false id=idscheck1572 value=1572 />
+*[544399]<td />
+	1572
+*[544400]<td />
+*[544401]<td />
+	Gwyn Endurance Tee
+*[544402]<td />
+	Configurable Product
+*[544403]<td />
+	Top
+*[544404]<td />
+	WS01
+*[544405]<td />
+	$24.00
+*[544406]<td />
+	0.0000
+*[544407]<td />
+*[544408]<td />
+	Catalog, Search
+*[544409]<td />
+	Enabled
+*[544410]<td />
+	Main Website
+*[544411]<td />
+	Apr 19, 2023 12:13:49 PM
+*[544412]<td />
+	*[558687]<a aria-label=Edit Gwyn Endurance Tee />
+		Edit
+*[544413]<td />
+	*[547428]<input type=checkbox checked=false id=idscheck1380 value=1380 />
+*[544414]<td />
+	1380
+*[544415]<td />
+*[544416]<td />
+	Juno Jacket
+*[544417]<td />
+	Configurable Product
+*[544418]<td />
+	Top
+*[544419]<td />
+	WJ06
+*[544420]<td />
+	$77.00
+*[544421]<td />
+	0.0000
+*[544422]<td />
+*[544423]<td />
+	Catalog, Search
+*[544424]<td />
+	Enabled
+*[544425]<td />
+	Main Website
+*[544426]<td />
+	Apr 19, 2023 12:15:26 PM
+*[544427]<td />
+	*[558707]<a aria-label=Edit Juno Jacket />
+		Edit
+*[544428]<td />
+	*[547431]<input type=checkbox checked=false id=idscheck1588 value=1588 />
+*[544429]<td />
+	1588
+*[544430]<td />
+*[544431]<td />
+	Desiree Fitness Tee
+*[544432]<td />
+	Configurable Product
+*[544433]<td />
+	Top
+*[544434]<td />
+	WS05
+*[544435]<td />
+	$24.00
+*[544436]<td />
+	0.0000
+*[544437]<td />
+*[544438]<td />
+	Catalog, Search
+*[544439]<td />
+	Enabled
+*[544440]<td />
+	Main Website
+*[544441]<td />
+	Apr 19, 2023 12:13:49 PM
+*[544442]<td />
+	*[558727]<a aria-label=Edit Desiree Fitness Tee />
+		Edit
+*[544443]<td />
+	*[547434]<input type=checkbox checked=false id=idscheck1396 value=1396 />
+*[544444]<td />
+	1396
+*[544445]<td />
+*[544446]<td />
+	Olivia 1/4 Zip Light Jacket
+*[544447]<td />
+	Configurable Product
+*[544448]<td />
+	Top
+*[544449]<td />
+	WJ12
+*[544450]<td />
+	$77.00
+*[544451]<td />
+	0.0000
+*[544452]<td />
+*[544453]<td />
+	Catalog, Search
+*[544454]<td />
+	Enabled
+*[544455]<td />
+	Main Website
+*[544456]<td />
+	Apr 19, 2023 12:15:28 PM
+*[544457]<td />
+	*[558747]<a aria-label=Edit Olivia 1/4 Zip Light Jacket />
+		Edit
+*[544458]<td />
+	*[547437]<input type=checkbox checked=false id=idscheck1412 value=1412 />
+*[544459]<td />
+	1412
+*[544460]<td />
+*[544461]<td />
+	Gabrielle Micro Sleeve Top
+*[544462]<td />
+	Configurable Product
+*[544463]<td />
+	Top
+*[544464]<td />
+	WS02
+*[544465]<td />
+	$28.00
+*[544466]<td />
+	0.0000
+*[544467]<td />
+*[544468]<td />
+	Catalog, Search
+*[544469]<td />
+	Enabled
+*[544470]<td />
+	Main Website
+*[544471]<td />
+	Apr 19, 2023 12:13:46 PM
+*[544472]<td />
+	*[558767]<a aria-label=Edit Gabrielle Micro Sleeve Top />
+		Edit
+*[544473]<td />
+	*[547440]<input type=checkbox checked=false id=idscheck1220 value=1220 />
+*[544474]<td />
+	1220
+*[544475]<td />
+*[544476]<td />
+	Stellar Solar Jacket
+*[544477]<td />
+	Configurable Product
+*[544478]<td />
+	Top
+*[544479]<td />
+	WJ01
+*[544480]<td />
+	$75.00
+*[544481]<td />
+	0.0000
+*[544482]<td />
+*[544483]<td />
+	Catalog, Search
+*[544484]<td />
+	Enabled
+*[544485]<td />
+	Main Website
+*[544486]<td />
+	Apr 19, 2023 12:15:24 PM
+*[544487]<td />
+	*[558787]<a aria-label=Edit Stellar Solar Jacket />
+		Edit
+*[544488]<td />
+	*[547443]<input type=checkbox checked=false id=idscheck1428 value=1428 />
+*[544489]<td />
+	1428
+*[544490]<td />
+*[544491]<td />
+	Iris Workout Top
+*[544492]<td />
+	Configurable Product
+*[544493]<td />
+	Top
+*[544494]<td />
+	WS03
+*[544495]<td />
+	$29.00
+*[544496]<td />
+	0.0000
+*[544497]<td />
+*[544498]<td />
+	Catalog, Search
+*[544499]<td />
+	Enabled
+*[544500]<td />
+	Main Website
+*[544501]<td />
+	Apr 19, 2023 12:13:46 PM
+*[544502]<td />
+	*[558807]<a aria-label=Edit Iris Workout Top />
+		Edit
+*[544503]<td />
+	*[547446]<input type=checkbox checked=false id=idscheck1236 value=1236 />
+*[544504]<td />
+	1236
+*[544505]<td />
+*[544506]<td />
+	Josie Yoga Jacket
+*[544507]<td />
+	Configurable Product
+*[544508]<td />
+	Top
+*[544509]<td />
+	WJ02
+*[544510]<td />
+	$56.25
+*[544511]<td />
+	0.0000
+*[544512]<td />
+*[544513]<td />
+	Catalog, Search
+*[544514]<td />
+	Enabled
+*[544515]<td />
+	Main Website
+*[544516]<td />
+	Apr 19, 2023 12:15:25 PM
+*[544517]<td />
+	*[558827]<a aria-label=Edit Josie Yoga Jacket />
+		Edit
+*[544518]<td />
+	*[547449]<input type=checkbox checked=false id=idscheck1444 value=1444 />
+*[544519]<td />
+	1444
+*[544520]<td />
+*[544521]<td />
+	Layla Tee
+*[544522]<td />
+	Configurable Product
+*[544523]<td />
+	Top
+*[544524]<td />
+	WS04
+*[544525]<td />
+	$29.00
+*[544526]<td />
+	0.0000
+*[544527]<td />
+*[544528]<td />
+	Catalog, Search
+*[544529]<td />
+	Enabled
+*[544530]<td />
+	Main Website
+*[544531]<td />
+	Apr 19, 2023 12:13:47 PM
+*[544532]<td />
+	*[558847]<a aria-label=Edit Layla Tee />
+		Edit
+*[544533]<td />
+	*[547452]<input type=checkbox checked=false id=idscheck1252 value=1252 />
+*[544534]<td />
+	1252
+*[544535]<td />
+*[544536]<td />
+	Augusta Pullover Jacket
+*[544537]<td />
+	Configurable Product
+*[544538]<td />
+	Top
+*[544539]<td />
+	WJ03
+*[544540]<td />
+	$57.00
+*[544541]<td />
+	0.0000
+*[544542]<td />
+*[544543]<td />
+	Catalog, Search
+*[544544]<td />
+	Enabled
+*[544545]<td />
+	Main Website
+*[544546]<td />
+	Apr 19, 2023 12:15:25 PM
+*[544547]<td />
+	*[558867]<a aria-label=Edit Augusta Pullover Jacket />
+		Edit
+*[544548]<td />
+	*[547455]<input type=checkbox checked=false id=idscheck1460 value=1460 />
+*[544549]<td />
+	1460
+*[544550]<td />
+*[544551]<td />
+	Elisa EverCool™ Tee
+*[544552]<td />
+	Configurable Product
+*[544553]<td />
+	Top
+*[544554]<td />
+	WS06
+*[544555]<td />
+	$29.00
+*[544556]<td />
+	0.0000
+*[544557]<td />
+*[544558]<td />
+	Catalog, Search
+*[544559]<td />
+	Enabled
+*[544560]<td />
+	Main Website
+*[544561]<td />
+	Apr 19, 2023 12:13:47 PM
+*[544562]<td />
+	*[558887]<a aria-label=Edit Elisa EverCool&trade; Tee />
+		Edit
+*[544563]<td />
+	*[547458]<input type=checkbox checked=false id=idscheck1268 value=1268 />
+*[544564]<td />
+	1268
+*[544565]<td />
+*[544566]<td />
+	Ingrid Running Jacket
+*[544567]<td />
+	Configurable Product
+*[544568]<td />
+	Top
+*[544569]<td />
+	WJ04
+*[544570]<td />
+	$84.00
+*[544571]<td />
+	0.0000
+*[544572]<td />
+*[544573]<td />
+	Catalog, Search
+*[544574]<td />
+	Enabled
+*[544575]<td />
+	Main Website
+*[544576]<td />
+	Apr 19, 2023 12:15:26 PM
+*[544577]<td />
+	*[558907]<a aria-label=Edit Ingrid Running Jacket />
+		Edit
+*[544578]<td />
+	*[547461]<input type=checkbox checked=false id=idscheck1476 value=1476 />
+*[544579]<td />
+	1476
+*[544580]<td />
+*[544581]<td />
+	Juliana Short-Sleeve Tee
+*[544582]<td />
+	Configurable Product
+*[544583]<td />
+	Top
+*[544584]<td />
+	WS07
+*[544585]<td />
+	$42.00
+*[544586]<td />
+	0.0000
+*[544587]<td />
+*[544588]<td />
+	Catalog, Search
+*[544589]<td />
+	Enabled
+*[544590]<td />
+	Main Website
+*[544591]<td />
+	Apr 19, 2023 12:13:47 PM
+*[544592]<td />
+	*[558927]<a aria-label=Edit Juliana Short-Sleeve Tee />
+		Edit
+*[544593]<td />
+	*[547464]<input type=checkbox checked=false id=idscheck1284 value=1284 />
+*[544594]<td />
+	1284
+*[544595]<td />
+*[544596]<td />
+	Riona Full Zip Jacket
+*[544597]<td />
+	Configurable Product
+*[544598]<td />
+	Top
+*[544599]<td />
+	WJ05
+*[544600]<td />
+	$60.00
+*[544601]<td />
+	0.0000
+*[544602]<td />
+*[544603]<td />
+	Catalog, Search
+*[544604]<td />
+	Enabled
+*[544605]<td />
+	Main Website
+*[544606]<td />
+	Apr 19, 2023 12:15:26 PM
+*[544607]<td />
+	*[558947]<a aria-label=Edit Riona Full Zip Jacket />
+		Edit
+*[544608]<td />
+	*[547467]<input type=checkbox checked=false id=idscheck1492 value=1492 />
+*[544609]<td />
+	1492
+*[544610]<td />
+*[544611]<td />
+	Minerva LumaTech™ V-Tee
+*[544612]<td />
+	Configurable Product
+*[544613]<td />
+	Top
+*[544614]<td />
+	WS08
+*[544615]<td />
+	$32.00
+*[544616]<td />
+	0.0000
+*[544617]<td />
+*[544618]<td />
+	Catalog, Search
+*[544619]<td />
+	Enabled
+*[544620]<td />
+	Main Website
+*[544621]<td />
+	Apr 19, 2023 12:13:47 PM
+*[544622]<td />
+	*[558967]<a aria-label=Edit Minerva LumaTech&trade; V-Tee />
+		Edit
+*[544623]<td />
+	*[547470]<input type=checkbox checked=false id=idscheck1300 value=1300 />
+*[544624]<td />
+	1300
+*[544625]<td />
+*[544626]<td />
+	Inez Full Zip Jacket
+*[544627]<td />
+	Configurable Product
+*[544628]<td />
+	Top
+*[544629]<td />
+	WJ07
+*[544630]<td />
+	$59.00
+*[544631]<td />
+	0.0000
+*[544632]<td />
+*[544633]<td />
+	Catalog, Search
+*[544634]<td />
+	Enabled
+*[544635]<td />
+	Main Website
+*[544636]<td />
+	Apr 19, 2023 12:15:26 PM
+*[544637]<td />
+	*[558987]<a aria-label=Edit Inez Full Zip Jacket />
+		Edit
+*[544638]<td />
+	*[547473]<input type=checkbox id=idscheck1508 value=1508 />
+*[544639]<td />
+	1508
+*[544640]<td />
+*[544641]<td />
+	Tiffany Fitness Tee
+*[544642]<td />
+	Configurable Product
+*[544643]<td />
+	Top
+*[544644]<td />
+	WS09
+*[544645]<td />
+	$28.00
+*[544646]<td />
+	0.0000
+*[544647]<td />
+*[544648]<td />
+	Catalog, Search
+*[544649]<td />
+	Enabled
+*[544650]<td />
+	Main Website
+*[544651]<td />
+	Apr 19, 2023 12:13:48 PM
+*[544652]<td />
+	*[559007]<a aria-label=Edit Tiffany Fitness Tee />
+		Edit

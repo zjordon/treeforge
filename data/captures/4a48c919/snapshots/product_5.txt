@@ -1,0 +1,35 @@
+Dashboard
+*[1016661]<a />
+	Sales
+*[1016662]<a />
+	Catalog
+*[1016663]<a />
+	Customers
+*[1016664]<a />
+	Marketing
+*[1016665]<a />
+	Content
+*[1016666]<a />
+	Reports
+*[1016667]<a />
+	Stores
+*[1016668]<a />
+	System
+Find Partners & Extensions
+Taurus Elements Shell
+admin
+Scope:
+All Store Views
+*[1016672]<a title=What is this? />
+	What is this?
+Save
+*[1016673]<button title=Back id=back />
+	Back
+Add Attribute
+*[1016684]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

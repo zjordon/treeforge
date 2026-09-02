@@ -1,0 +1,160 @@
+[140916]<a />
+[140924]<li id=menu-magento-backend-dashboard role=menu-item />
+	[140925]<a />
+		Dashboard
+[140930]<li id=menu-magento-sales-sales role=menu-item />
+	[140781]<a />
+		Sales
+[140973]<li id=menu-magento-catalog-catalog role=menu-item />
+	[140782]<a />
+		Catalog
+[140996]<li id=menu-magento-customer-customer role=menu-item />
+	[140783]<a />
+		Customers
+[141021]<li id=menu-magento-backend-marketing role=menu-item />
+	[140784]<a />
+		Marketing
+[141106]<li id=menu-magento-backend-content role=menu-item />
+	[140785]<a />
+		Content
+[141165]<li id=menu-magento-reports-report role=menu-item />
+	[140786]<a />
+		Reports
+[141326]<li id=menu-magento-backend-stores role=menu-item />
+	[140787]<a />
+		Stores
+[141422]<li id=menu-magento-backend-system role=menu-item />
+	[140788]<a />
+		System
+[141527]<li id=menu-magento-marketplace-partners role=menu-item />
+	[141528]<a />
+		Find Partners & Extensions
+Hollister Backyard Sweatshirt-XS-Green
+[141596]<a title=My Account />
+	admin
+[141634]<a title=Notifications />
+[141639]<div />
+	[140757]<form id=form-search />
+		[141642]<div />
+			[140758]<input type=text id=search-global autocomplete=off />
+[141668]<span />
+	Scope:
+[141687]<button id=store-change-button />
+	All Store Views
+[140792]<a title=What is this? />
+	[141720]<span />
+		What is this?
+[141729]<div title=Save />
+	[141733]<button title=Save id=save-button />
+		Save
+	[141739]<button title=Save aria-label=Save options />
+[140793]<button title=Back id=back />
+	Back
+[141780]<button title=Add Attribute id=addAttribute />
+	Add Attribute
+[144045]<span />
+	Enable Product
+[145937]<input type=checkbox checked=true id=CAPQJ1D name=product[status] value=1 />
+[145939]<span />
+[144094]<span />
+	Attribute Set
+[145962]<div />
+	[145963]<div />
+		Top
+[144143]<span />
+	Product Name
+[146384]<input type=text id=I205Q11 name=product[name] maxlength=255 />
+[144192]<span />
+	SKU
+[146386]<input type=text id=QFA3FRL name=product[sku] maxlength=255 />
+[145144]<div />
+	[145146]<span />
+		Price
+[146388]<input type=text id=HDP4NAC name=product[price] maxlength=255 />
+[162877]<button />
+	Advanced Pricing
+[144241]<span />
+	Tax Class
+*[146399]<select id=W5KCJFD name=product[tax_class_id] aria-label=notice-W5KCJFD expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=None|Taxable Goods,format=numeric) />
+[145237]<div />
+	[145239]<span />
+		Quantity
+[146390]<input type=text id=V0II1V4 name=product[quantity_and_stock_status][qty] maxlength=255 />
+[162898]<button />
+	Advanced Inventory
+[144290]<span />
+	Stock Status
+*[146412]<select id=GB9MK0I name=product[quantity_and_stock_status][is_in_stock] aria-label=notice-GB9MK0I expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=In Stock|Out of Stock,format=numeric) />
+[145338]<div />
+	[145340]<span />
+		Weight
+[146392]<input type=text id=FD4F63A name=product[weight] maxlength=255 />
+lbs
+*[147314]<select id=XBYYIH9 name=product[product_has_weight] aria-label=notice-XBYYIH9 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=This item has weight|This item has no weight,format=numeric) />
+[145483]<div />
+	[145485]<span />
+		Categories
+[146242]<div />
+	[146319]<span />
+		[146320]<span />
+			Hoodies & Sweatshirts
+		[146321]<button />
+[162919]<button />
+	New Category
+[144339]<span />
+	Visibility
+*[146425]<select id=KV9793K name=product[visibility] aria-label=notice-KV9793K expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />
+[145571]<div />
+	[145573]<span />
+		Set Product as New From
+[147938]<input type=text id=B7B1NJL name=product[news_from_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+[147970]<button />
+	[147973]<span />
+		undefined
+[145622]<div />
+	[145624]<span />
+		To
+[147940]<input type=text id=LN7JG6R name=product[news_to_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+[155264]<button />
+	[155267]<span />
+		undefined
+[144388]<span />
+	Country of Manufacture
+*[146444]<select id=SONAXA0 name=product[country_of_manufacture] aria-label=notice-SONAXA0 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />
+[144437]<span />
+	Activity
+*|scroll element[147329]<select id=CTAXSIW name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)
+	[147333]<option value=4 selected=false />
+	[147336]<option value=5 selected=false />
+	[147339]<option value=6 selected=false />
+	[147342]<option value=7 selected=false />
+	[147345]<option value=8 selected=false />
+	[147348]<option value=9 selected=false />
+	[147351]<option value=10 selected=false />
+	[147354]<option value=11 selected=false />
+	[147372]<option value=17 selected=false />
+	[147375]<option value=18 selected=false />
+[144486]<span />
+	Style General
+*|scroll element[147464]<select id=NK9G0T8 name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 0%, 3.3 pages below, total: 4.3 pages)
+	[147468]<option value=116 selected=false />
+	[147471]<option value=117 selected=false />
+	[147474]<option value=118 selected=false />
+	[147477]<option value=119 selected=false />
+	[147480]<option value=120 selected=false />
+	[147483]<option value=121 selected=false />
+	[147486]<option value=122 selected=false />
+	[147489]<option value=123 selected=false />
+	[147507]<option value=129 selected=false />
+[144535]<span />
+	Material
+*|scroll element[147578]<select id=F2OKUF3 name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)
+	[147582]<option value=31 selected=false />
+	[147585]<option value=142 selected=false />
+	[147588]<option value=32 selected=false />
+	[147591]<option value=143 selected=false />
+	[147594]<option value=33 selected=false />
+	[147597]<option value=144 selected=false />
+*|scroll element[147766]<select id=W3LWHUS name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)
+*|scroll element[147824]<select id=MCIDUSW name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)
+*|scroll element[147870]<select id=JMFTKFE name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)

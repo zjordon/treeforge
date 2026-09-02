@@ -1,0 +1,35 @@
+Dashboard
+*[1117778]<a />
+	Sales
+*[1117779]<a />
+	Catalog
+*[1117780]<a />
+	Customers
+*[1117781]<a />
+	Marketing
+*[1117782]<a />
+	Content
+*[1117783]<a />
+	Reports
+*[1117784]<a />
+	Stores
+*[1117785]<a />
+	System
+Find Partners & Extensions
+Teton Pullover Hoodie
+admin
+Scope:
+All Store Views
+*[1117789]<a title=What is this? />
+	What is this?
+Save
+*[1117790]<button title=Back id=back />
+	Back
+Add Attribute
+*[1117801]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

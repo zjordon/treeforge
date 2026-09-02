@@ -1,0 +1,43 @@
+*[862214]<a />
+*[862223]<a />
+	Dashboard
+*[862117]<a />
+	Sales
+*[862118]<a />
+	Catalog
+*[862119]<a />
+	Customers
+*[862120]<a />
+	Marketing
+*[862121]<a />
+	Content
+*[862122]<a />
+	Reports
+*[862123]<a />
+	Stores
+*[862124]<a />
+	System
+*[862825]<a />
+	Find Partners & Extensions
+Products
+*[862887]<a title=My Account />
+	admin
+*[862925]<a title=Notifications />
+*[862930]<div />
+	*[862101]<form id=form-search />
+		*[862933]<div />
+			*[862102]<input type=text id=search-global name=query />
+*[862963]<button title=Add Product id=add_new_product-button />
+	Add Product
+*[862969]<button title=Add Product aria-label=Add product of type />
+*[863035]<div />
+*[863062]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[863072]<a id=footer_privacy />
+	Privacy Policy
+*[863075]<a id=footer_account_activity />
+	Account Activity
+*[863078]<a id=footer_bug_tracking />
+	Report an Issue
