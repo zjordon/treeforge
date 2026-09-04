@@ -1,0 +1,492 @@
+{
+  "host": "localhost",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1788436206076,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Scope: function eventListenerBkw70d0zna () { switchScope(thi",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "Scope: function eventListenerBkw70d0zna () { switchScope(this);; } var listenedElementBkw70d0znaArray = document.querySelectorAll(\"#store_switcher\"); if(listenedElementBkw70d0znaArray.length !== 'undefined'){ listenedElementBkw70d0znaArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerBkw70d0zna.apply(targetElement); }; } }); } function eventListenerAXADUm7UeR () { switchScope(this);; } var listenedElementAXADUm7UeRArray = document.querySelectorAll(\"#store_group_switcher\"); if(listenedElementAXADUm7UeRArray.length !== 'undefined'){ listenedElementAXADUm7UeRArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerAXADUm7UeR.apply(targetElement); }; } }); } function eventListener2Ofqk0gVg9 () { switchScope(this);; } var listenedElement2Ofqk0gVg9Array = document.querySelectorAll(\"#website_switcher\"); if(listenedElement2Ofqk0gVg9Array.length !== 'undefined'){ listenedElement2Ofqk0gVg9Array.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListener2Ofqk0gVg9.apply(targetElement); }; } }); } All Store Views All Store Views Main Website Main Website Store Default Store View What is this? Reload Data"
+      }
+    },
+    {
+      "timestamp": 1788436208522,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Marketing",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "Marketing"
+      }
+    },
+    {
+      "timestamp": 1788436209682,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard_1",
+      "target": "Cart Price Rules",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "Cart Price Rules"
+      }
+    },
+    {
+      "timestamp": 1788436212976,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/",
+      "stage": "promo_quote",
+      "target": "Add New Rule",
+      "element_attrs": {
+        "tag": "button",
+        "id": "add",
+        "type": "button",
+        "aria-label": "Add New Rule",
+        "visible_text": "Add New Rule"
+      }
+    },
+    {
+      "timestamp": 1788436214829,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "XWK6F5T",
+        "name": "name",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788436229352,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "XWK6F5T",
+        "name": "name",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788436229596,
+      "type": "send_keys",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "element_attrs": {
+        "tag": "input",
+        "id": "XWK6F5T",
+        "name": "name",
+        "type": "text"
+      },
+      "key": "Control+v"
+    },
+    {
+      "timestamp": 1788436230093,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "XWK6F5T",
+        "name": "name",
+        "type": "text"
+      },
+      "value": "spring sale"
+    },
+    {
+      "timestamp": 1788436230552,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788436231367,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "Main Website",
+      "element_attrs": {
+        "tag": "select",
+        "id": "UB0EPE5",
+        "name": "website_ids",
+        "visible_text": "Main Website"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788436231368,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "Main Website",
+      "element_attrs": {
+        "tag": "select",
+        "id": "UB0EPE5",
+        "name": "website_ids",
+        "visible_text": "Main Website"
+      },
+      "value": "1"
+    },
+    {
+      "timestamp": 1788436231369,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "Main Website",
+      "element_attrs": {
+        "tag": "select",
+        "id": "UB0EPE5",
+        "name": "website_ids",
+        "visible_text": "Main Website"
+      }
+    },
+    {
+      "timestamp": 1788436232423,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "value": "4"
+    },
+    {
+      "timestamp": 1788436233142,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788436233142,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      },
+      "value": "1"
+    },
+    {
+      "timestamp": 1788436233143,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      }
+    },
+    {
+      "timestamp": 1788436233758,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788436233758,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      },
+      "value": "1"
+    },
+    {
+      "timestamp": 1788436233758,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      }
+    },
+    {
+      "timestamp": 1788436234229,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788436234229,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      },
+      "value": "1"
+    },
+    {
+      "timestamp": 1788436234230,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      }
+    },
+    {
+      "timestamp": 1788436234796,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "NOT LOGGED INGeneralWholesaleRetailer",
+      "element_attrs": {
+        "tag": "select",
+        "id": "Y0ORYO9",
+        "name": "customer_group_ids",
+        "visible_text": "NOT LOGGED INGeneralWholesaleRetailer"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788436235890,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "value": "4"
+    },
+    {
+      "timestamp": 1788436236487,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788436236998,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "Actions Changes have been made to this section that have not",
+      "element_attrs": {
+        "tag": "div",
+        "data-tw-jsclick": "1",
+        "visible_text": "Actions Changes have been made to this section that have not been saved. This tab contains invalid data. Please resolve this before saving."
+      }
+    },
+    {
+      "timestamp": 1788436237949,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788436238213,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "Percent of product price discountFixed amount discountFixed ",
+      "element_attrs": {
+        "tag": "select",
+        "id": "WTHC877",
+        "name": "simple_action",
+        "aria-label": "notice-WTHC877",
+        "visible_text": "Percent of product price discountFixed amount discountFixed amount discount for whole cartBuy X get Y free (discount amount is Y)"
+      }
+    },
+    {
+      "timestamp": 1788436239068,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "Percent of product price discountFixed amount discountFixed ",
+      "element_attrs": {
+        "tag": "select",
+        "id": "WTHC877",
+        "name": "simple_action",
+        "aria-label": "notice-WTHC877",
+        "visible_text": "Percent of product price discountFixed amount discountFixed amount discount for whole cartBuy X get Y free (discount amount is Y)"
+      }
+    },
+    {
+      "timestamp": 1788436239675,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "OOJ55OQ",
+        "name": "discount_amount",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788436239883,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "OOJ55OQ",
+        "name": "discount_amount",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788436241540,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "OOJ55OQ",
+        "name": "discount_amount",
+        "type": "text"
+      },
+      "value": "20"
+    },
+    {
+      "timestamp": 1788436250640,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/new/",
+      "stage": "new",
+      "target": "Save",
+      "element_attrs": {
+        "tag": "button",
+        "id": "save",
+        "type": "button",
+        "data-tw-jsclick": "1",
+        "aria-label": "Save",
+        "visible_text": "Save"
+      }
+    },
+    {
+      "timestamp": 1788436253306,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/",
+      "stage": "promo_quote",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788436267697,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/",
+      "stage": "promo_quote_3",
+      "target": "5 spring sale Sep 3, 2026 -- Active Main Website 0",
+      "element_attrs": {
+        "tag": "tr",
+        "data-tw-jsclick": "1",
+        "aria-label": "http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/",
+        "visible_text": "5 spring sale Sep 3, 2026 -- Active Main Website 0"
+      }
+    },
+    {
+      "timestamp": 1788436269819,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/",
+      "stage": "5",
+      "value": "6"
+    },
+    {
+      "timestamp": 1788436270997,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/",
+      "stage": "5_4",
+      "value": "3"
+    },
+    {
+      "timestamp": 1788436271654,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/",
+      "stage": "5_4",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788436272243,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/",
+      "stage": "5_4",
+      "value": "3"
+    },
+    {
+      "timestamp": 1788436273564,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/",
+      "stage": "5_4",
+      "target": "Actions Changes have been made to this section that have not",
+      "element_attrs": {
+        "tag": "div",
+        "data-tw-jsclick": "1",
+        "visible_text": "Actions Changes have been made to this section that have not been saved. This tab contains invalid data. Please resolve this before saving."
+      }
+    },
+    {
+      "timestamp": 1788436274542,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/",
+      "stage": "5_4",
+      "value": "2"
+    }
+  ],
+  "page_context": {
+    "dashboard": "[99108]<a />\n[99112]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[99113]<a />\n\t\tDashboard\n[99115]<li id=menu-magento-sales-sales role=menu-item />\n\t[99116]<a />\n\t\tSales\n[99136]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[99137]<a />\n\t\tCatalog\n[99147]<li id=menu-magento-customer-customer role=menu-item />\n\t[99148]<a />\n\t\tCustomers\n[99160]<li id=menu-magento-backend-marketing role=menu-item />\n\t[99161]<a />\n\t\tMarketing\n[99200]<li id=menu-magento-backend-content role=menu-item />\n\t[99201]<a />\n\t\tContent\n[99227]<li id=menu-magento-reports-report role=menu-item />\n\t[99228]<a />\n\t\tReports\n[99304]<li id=menu-magento-backend-stores role=menu-item />\n\t[99305]<a />\n\t\tStores\n[99350]<li id=menu-magento-backend-system role=menu-item />\n\t[99351]<a />\n\t\tSystem\n[99398]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[99399]<a />\n\t\tFind Partners & Extensions\n[99402]<button />\n\tSystem Messages\n[99407]<a />\n\tView Details\nTask \"Trigger recollect totals for quotes by rule ID 3\": 1 item(s) have been successfully updated.\nDashboard\n[99415]<a title=My Account />\n\tadmin\n[99417]<a title=Notifications />\n[99683]<div />\n\t[99097]<form id=form-search />\n\t\t[100445]<div />\n\t\t\t[99098]<input type=text id=search-global autocomplete=off />\n[100469]<span />\n\tScope:\n[99426]<button id=store-change-button />\n\tAll Store Views\n[99429]<a title=What is this? />\n\t[99430]<span />\n\t\tWhat is this?\n[99432]<button title=Reload Data type=submit />\n\tReload Data\nAdvanced Reporting\nGain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\n[99439]<a title=Go to Advanced Reporting />\n\tGo to Advanced Reporting\nChart is disabled. To enable the chart, click\n[99442]<a />\n\there\nRevenue\n$0.00\nTax\n$0.00\nShipping\n$0.00\nQuantity\n[100601]<strong />\n[99463]<li role=tab selected=true expanded=true />\n\t[99464]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />\n\t\t[100617]<span title=The information in this tab has been changed. />\n\t\t[100619]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[100621]<span title=Loading... />\n\t\tBestsellers\n[99466]<li role=tab selected=false expanded=false />\n\t[99467]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />\n\t\t[100633]<span title=The information in this tab has been changed. />\n\t\t[100635]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[100637]<span title=Loading... />\n\t\tMost Viewed Products\n[99469]<li role=tab selected=false expanded=false />\n\t[99470]<a title=New Customers id=grid_tab_new_customers role=presentation />\n\t\t[100651]<span title=The information in this tab has been changed. />\n\t\t[100653]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[100655]<span title=Loading... />\n\t\tNew Customers\n[99472]<li role=tab selected=false expanded=false />\n\t[99473]<a title=Customers id=grid_tab_customers role=presentation />\n\t\t[100669]<span title=The information in this tab has been changed. />\n\t\t[100671]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[100673]<span title=Loading... />\n\t\tCustomers\n[99478]<tr />\n\tProduct\n\tPrice\n\tQuantity\n[99484]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />\n\t[99485]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[99487]<td />\n\t\t$27.00\n\t[99489]<td />\n[99491]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />\n\t[99492]<td />\n\t\tQuest Lumaflex™ Band\n\t[99494]<td />\n\t\t$19.00\n\t[99496]<td />\n[99498]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />\n\t[99499]<td />\n\t\tSprite Yoga Strap 6 foot\n\t[99501]<td />\n\t\t$14.00\n\t[99503]<td />\n[99505]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />\n\t[99506]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[99508]<td />\n\t\t$23.00\n\t[99510]<td />\n[99512]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />\n\t[99513]<td />\n\t\tOvernight Duffle\n\t[99515]<td />\n\t\t$45.00\n\t[99517]<td />\nLifetime Sales\n$0.00\nAverage Order\n$0.00\nLast Orders\n[99525]<tr />\n\tCustomer\n\tItems\n\tTotal\n[99532]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />\n\t[99533]<td />\n\t\tSarah Miller\n\t[99535]<td />\n\t[99537]<td />\n\t\t$194.40\n[99539]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />\n\t[99540]<td />\n\t\tGrace Nguyen\n\t[99542]<td />\n\t[99544]<td />\n\t\t$190.00\n[99546]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />\n\t[99547]<td />\n\t\tMatt Baker\n\t[99549]<td />\n\t[99551]<td />\n\t\t$151.40\n[99553]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />\n\t[99554]<td />\n\t\tLily Potter\n\t[99556]<td />\n\t[99558]<td />\n\t\t$188.20\n[99560]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />\n\t[99561]<td />\n\t\tAva Brown\n\t[99563]<td />\n\t[99565]<td />\n\t\t$83.40\nLast Search Terms\n[99568]<table id=lastSearchGrid_table />\n\t[99569]<tr />\n\t\t[99570]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[99576]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[99577]<td />\n\t\t\tAntonia\n\t\t[99579]<td />\n\t\t[99581]<td />\n\t[99583]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[99584]<td />\n\t\t\ttanks\n\t\t[99586]<td />\n\t\t\t23\n\t\t[99588]<td />\n\t[99590]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />\n\t\t[99591]<td />\n\t\t\tnike\n\t\t[99593]<td />\n\t\t[99595]<td />\n\t[99597]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[99598]<td />\n\t\t\tJoust Bag\n\t\t[99600]<td />\n\t\t\t10\n\t\t[99602]<td />\n\t[99604]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[99605]<td />\n\t\t\thollister\n\t\t[99607]<td />\n\t\t[99609]<td />\n\t\t\t19\nTop Search Terms\n[99612]<table id=topSearchGrid_table />\n\t[99613]<tr />\n\t\t[99614]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[99620]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[99621]<td />\n\t\t\thollister\n\t\t[99623]<td />\n\t\t[99625]<td />\n\t\t\t19\n\t[99627]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[99628]<td />\n\t\t\tJoust Bag\n\t\t[99630]<td />\n\t\t\t10\n\t\t[99632]<td />\n\t[99634]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />\n\t\t[99635]<td />\n\t\t\tAntonia Racer Tank\n\t\t[99637]<td />\n\t\t\t23\n\t\t[99639]<td />\n\t[99641]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[99642]<td />\n\t\t\tAntonia\n\t\t[99644]<td />\n\t\t[99646]<td />\n\t[99648]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[99649]<td />\n\t\t\ttanks\n\t\t[99651]<td />\n\t\t\t23\n\t\t[99653]<td />\n[99659]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[99664]<a id=footer_privacy />\n\tPrivacy Policy\n[99667]<a id=footer_account_activity />\n\tAccount Activity\n[99670]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "dashboard_1": "*[101098]<a />\n*[101107]<a />\n\tDashboard\n*[100995]<a />\n\tSales\n*[100996]<a />\n\tCatalog\n*[100997]<a />\n\tCustomers\n*[100998]<a />\n\tMarketing\n*[100999]<a />\n\tContent\n*[101000]<a />\n\tReports\n*[101001]<a />\n\tStores\n*[101002]<a />\n\tSystem\n*[101708]<a />\n\tFind Partners & Extensions\nCart Price Rules\n*[101770]<a title=My Account />\n\tadmin\n*[101808]<a title=Notifications />\n*[101813]<div />\n\t*[100964]<form id=form-search />\n\t\t*[101816]<div />\n\t\t\t*[100965]<input type=text id=search-global name=query />\n*[101003]<button title=Add New Rule id=add />\n\tAdd New Rule\n*[101004]<button title=Search id=id_lwrQSJSRUYbgcMAMkgIPYIwU46lQTiVO />\n\tSearch\n*[101005]<button title=Reset Filter id=id_5PaGOZFVSwsNOqZUHpJpucNTNcSwCiv1 />\n\tReset Filter\nrecords found\n*[100966]<select id=promo_quote_grid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />\nper page\n*[101922]<button />\n*[100967]<input type=text id=promo_quote_grid_page-current name=page value=1 />\nof\n*[101939]<button />\n*[101958]<tr />\n\t*[101960]<th />\n\t\t*[101961]<span />\n\t\t\tID\n\t*[101964]<th />\n\t\t*[101965]<span />\n\t\t\tRule\n\t*[101968]<th />\n\t\t*[101969]<span />\n\t\t\tCoupon Code\n\t*[101972]<th />\n\t\t*[101973]<span />\n\t\t\tStart\n\t*[101976]<th />\n\t\t*[101977]<span />\n\t\t\tEnd\n\t*[101980]<th />\n\t\t*[101981]<span />\n\t\t\tStatus\n\tWeb Site\n\t*[101988]<th />\n\t\t*[101990]<span />\n\t\t\tPriority\n*[101994]<tr />\n\t*[101996]<td />\n\t\t*[100968]<input type=text id=promo_quote_grid_filter_rule_id name=rule_id />\n\t*[102000]<td />\n\t\t*[100969]<input type=text id=promo_quote_grid_filter_name name=name />\n\t*[102004]<td />\n\t\t*[100970]<input type=text id=promo_quote_grid_filter_coupon_code name=coupon_code />\n\t*[102008]<td />\n\t\t*[100971]<input type=text id=promo_quote_grid_filter_from_date3vdjpPCQQOmjcC8BTA8ywWY2RSiVgso9_from name=from_date[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n\t\t*[102012]<button />\n\t\t\t*[102014]<span />\n\t\t\t\tundefined\n\t\t*[100972]<input type=text id=promo_quote_grid_filter_from_date3vdjpPCQQOmjcC8BTA8ywWY2RSiVgso9_to name=from_date[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n\t\t*[102017]<button />\n\t\t\t*[102019]<span />\n\t\t\t\tundefined\n\t*[102026]<td />\n\t\t*[100973]<input type=text id=promo_quote_grid_filter_to_dateJXhb9wlyEBdDS6pX9mJLTGxCOR02gGpg_from name=to_date[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n\t\t*[102030]<button />\n\t\t\t*[102032]<span />\n\t\t\t\tundefined\n\t\t*[100974]<input type=text id=promo_quote_grid_filter_to_dateJXhb9wlyEBdDS6pX9mJLTGxCOR02gGpg_to name=to_date[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n\t\t*[102035]<button />\n\t\t\t*[102037]<span />\n\t\t\t\tundefined\n\t*[102044]<td />\n\t\t*[100975]<select id=promo_quote_grid_filter_is_active name=is_active expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Active|Inactive,format=numeric) />\n\t*[102053]<td />\n\t\t*[100976]<select id=promo_quote_grid_filter_rule_website name=rule_website expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Main Website) />\n\t*[102060]<td />\n\t\t*[100977]<input type=text id=promo_quote_grid_filter_sort_order name=sort_order />\n*[102068]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/1/ />\n\t*[102070]<td />\n\t*[102073]<td />\n\t\tBuy 3 tee shirts and get the 4th free\n\t*[102076]<td />\n\t*[102079]<td />\n\t*[102082]<td />\n\t\t--\n\t*[102085]<td />\n\t\tActive\n\t*[102088]<td />\n\t\tMain Website\n\t*[102091]<td />\n*[102095]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/2/ />\n\t*[102097]<td />\n\t*[102100]<td />\n\t\tSpend $50 or more - shipping is free!\n\t*[102103]<td />\n\t*[102106]<td />\n\t*[102109]<td />\n\t\t--\n\t*[102112]<td />\n\t\tActive\n\t*[102115]<td />\n\t\tMain Website\n\t*[102118]<td />\n*[102122]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/4/ />\n\t*[102124]<td />\n\t*[102127]<td />\n\t\t$4 Luma water bottle (save 70%)\n\t*[102130]<td />\n\t\tH20\n\t*[102133]<td />\n\t*[102136]<td />\n\t\t--\n\t*[102139]<td />\n\t\tActive\n\t*[102142]<td />\n\t\tMain Website\n\t*[102145]<td />\n*[102149]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/ />\n\t*[102151]<td />\n\t*[102154]<td />\n\t\tspring sale\n\t*[102157]<td />\n\t*[102160]<td />\n\t\tSep 3, 2026\n\t*[102163]<td />\n\t\t--\n\t*[102166]<td />\n\t\tActive\n\t*[102169]<td />\n\t\tMain Website\n\t*[102172]<td />\n*[102187]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[102197]<a id=footer_privacy />\n\tPrivacy Policy\n*[102200]<a id=footer_account_activity />\n\tAccount Activity\n*[102203]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "promo_quote": "[124782]<a />\n*[124790]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[124791]<a />\n\t\tDashboard\n*[124796]<li id=menu-magento-sales-sales role=menu-item />\n\t[124797]<a />\n\t\tSales\n*[124841]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[124842]<a />\n\t\tCatalog\n*[124866]<li id=menu-magento-customer-customer role=menu-item />\n\t[124867]<a />\n\t\tCustomers\n*[124893]<li id=menu-magento-backend-marketing role=menu-item />\n\t[124894]<a />\n\t\tMarketing\n*[124980]<li id=menu-magento-backend-content role=menu-item />\n\t[124981]<a />\n\t\tContent\n*[125041]<li id=menu-magento-reports-report role=menu-item />\n\t[125042]<a />\n\t\tReports\n*[125204]<li id=menu-magento-backend-stores role=menu-item />\n\t[125205]<a />\n\t\tStores\n*[125302]<li id=menu-magento-backend-system role=menu-item />\n\t[125303]<a />\n\t\tSystem\n*[125409]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[125410]<a />\n\t\tFind Partners & Extensions\n*[127016]<button />\n\tSystem Messages\n*[127119]<a />\n\tView Details\nTask \"Trigger recollect totals for quotes by rule ID 3\": 1 item(s) have been successfully updated.\nCart Price Rules\n[125472]<a title=My Account />\n\tadmin\n[125510]<a title=Notifications />\n[125515]<div />\n\t[124686]<form id=form-search />\n\t\t[125518]<div />\n\t\t\t[124687]<input type=text id=search-global autocomplete=off />\n[125544]<button title=Add New Rule id=add />\n\tAdd New Rule\nYou saved the rule.\n[125578]<button title=Search id=id_gBt66wJBPGhPA4IzntLfpqsFjKipCMCl />\n\tSearch\n[125586]<button title=Reset Filter id=id_6ax7T8pCIQNffI2y9WAs50DtHSXrGY2Y />\n\tReset Filter\nrecords found\n*[124688]<select id=promo_quote_grid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />\nper page\n[125633]<button />\n[124689]<input type=text id=promo_quote_grid_page-current name=page value=1 />\nof\n[125650]<button />\n[125671]<th />\n\t[125672]<span />\n\t\tID\n[125675]<th />\n\t[125676]<span />\n\t\tRule\n[125679]<th />\n\t[125680]<span />\n\t\tCoupon Code\n[125683]<th />\n\t[125684]<span />\n\t\tStart\n[125687]<th />\n\t[125688]<span />\n\t\tEnd\n[125691]<th />\n\t[125692]<span />\n\t\tStatus\nWeb Site\n[125699]<th />\n\t[125701]<span />\n\t\tPriority\n[125705]<tr />\n\t[125707]<td />\n\t\t[124690]<input type=text id=promo_quote_grid_filter_rule_id name=rule_id />\n\t[125711]<td />\n\t\t[124691]<input type=text id=promo_quote_grid_filter_name name=name />\n\t[125715]<td />\n\t\t[124692]<input type=text id=promo_quote_grid_filter_coupon_code name=coupon_code />\n\t[125719]<td />\n\t\t[124693]<input type=text id=promo_quote_grid_filter_from_dateQS45SuAhWaE1gmvnVt9TFZ1Gd0mNcrHP_from name=from_date[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n\t\t*[126023]<button />\n\t\t\t*[126025]<span />\n\t\t\t\tundefined\n\t\t[124694]<input type=text id=promo_quote_grid_filter_from_dateQS45SuAhWaE1gmvnVt9TFZ1Gd0mNcrHP_to name=from_date[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n\t\t*[126030]<button />\n\t\t\t*[126032]<span />\n\t\t\t\tundefined\n\t[125729]<td />\n\t\t[124695]<input type=text id=promo_quote_grid_filter_to_dateODWsjNQmlXbQLT9XRD7CAnujit4Yxfkl_from name=to_date[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n\t\t*[126036]<button />\n\t\t\t*[126038]<span />\n\t\t\t\tundefined\n\t\t[124696]<input type=text id=promo_quote_grid_filter_to_dateODWsjNQmlXbQLT9XRD7CAnujit4Yxfkl_to name=to_date[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n\t\t*[126042]<button />\n\t\t\t*[126044]<span />\n\t\t\t\tundefined\n\t[125739]<td />\n\t\t*[124697]<select id=promo_quote_grid_filter_is_active name=is_active expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Active|Inactive,format=numeric) />\n\t[125748]<td />\n\t\t*[124698]<select id=promo_quote_grid_filter_rule_website name=rule_website expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Main Website) />\n\t[125755]<td />\n\t\t[124699]<input type=text id=promo_quote_grid_filter_sort_order name=sort_order />\n[125763]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/1/ />\n\t[125765]<td />\n\t[125768]<td />\n\t\tBuy 3 tee shirts and get the 4th free\n\t[125771]<td />\n\t[125774]<td />\n\t[125777]<td />\n\t\t--\n\t[125780]<td />\n\t\tActive\n\t[125783]<td />\n\t\tMain Website\n\t[125786]<td />\n[125790]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/2/ />\n\t[125792]<td />\n\t[125795]<td />\n\t\tSpend $50 or more - shipping is free!\n\t[125798]<td />\n\t[125801]<td />\n\t[125804]<td />\n\t\t--\n\t[125807]<td />\n\t\tActive\n\t[125810]<td />\n\t\tMain Website\n\t[125813]<td />\n[125817]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/4/ />\n\t[125819]<td />\n\t[125822]<td />\n\t\t$4 Luma water bottle (save 70%)\n\t[125825]<td />\n\t\tH20\n\t[125828]<td />\n\t[125831]<td />\n\t\t--\n\t[125834]<td />\n\t\tActive\n\t[125837]<td />\n\t\tMain Website\n\t[125840]<td />\n[125844]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/ />\n\t[125846]<td />\n\t[125849]<td />\n\t\tspring sale\n\t[125852]<td />\n\t[125855]<td />\n\t\tSep 3, 2026\n\t[125858]<td />\n\t\t--\n\t[125861]<td />\n\t\tActive\n\t[125864]<td />\n\t\tMain Website\n\t[125867]<td />\n[125871]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/6/ />\n\t[125873]<td />\n\t[125876]<td />\n\t\tspring sale\n\t[125879]<td />\n\t[125882]<td />\n\t\tSep 3, 2026\n\t[125885]<td />\n\t\t--\n\t[125888]<td />\n\t\tActive\n\t[125891]<td />\n\t\tMain Website\n\t[125894]<td />\n[125910]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[125920]<a id=footer_privacy />\n\tPrivacy Policy\n[125923]<a id=footer_account_activity />\n\tAccount Activity\n[125926]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "new": "*[124782]<a />\n*[124791]<a />\n\tDashboard\n*[124797]<a />\n\tSales\n*[124842]<a />\n\tCatalog\n*[124867]<a />\n\tCustomers\n*[124894]<a />\n\tMarketing\n*[124981]<a />\n\tContent\n*[125042]<a />\n\tReports\n*[125205]<a />\n\tStores\n*[125303]<a />\n\tSystem\n*[125410]<a />\n\tFind Partners & Extensions\nCart Price Rules\n*[125472]<a title=My Account />\n\tadmin\n*[125510]<a title=Notifications />\n*[125515]<div />\n\t*[124686]<form id=form-search />\n\t\t*[125518]<div />\n\t\t\t*[124687]<input type=text id=search-global name=query />\n*[125544]<button title=Add New Rule id=add />\n\tAdd New Rule\nYou saved the rule.\n*[125578]<button title=Search id=id_gBt66wJBPGhPA4IzntLfpqsFjKipCMCl />\n\tSearch\n*[125586]<button title=Reset Filter id=id_6ax7T8pCIQNffI2y9WAs50DtHSXrGY2Y />\n\tReset Filter\nrecords found\n*[124688]<select id=promo_quote_grid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />\nper page\n*[125633]<button />\n*[124689]<input type=text id=promo_quote_grid_page-current name=page value=1 />\nof\n*[125650]<button />\n*[125669]<tr />\n\t*[125671]<th />\n\t\t*[125672]<span />\n\t\t\tID\n\t*[125675]<th />\n\t\t*[125676]<span />\n\t\t\tRule\n\t*[125679]<th />\n\t\t*[125680]<span />\n\t\t\tCoupon Code\n\t*[125683]<th />\n\t\t*[125684]<span />\n\t\t\tStart\n\t*[125687]<th />\n\t\t*[125688]<span />\n\t\t\tEnd\n\t*[125691]<th />\n\t\t*[125692]<span />\n\t\t\tStatus\n\tWeb Site\n\t*[125699]<th />\n\t\t*[125701]<span />\n\t\t\tPriority\n*[125705]<tr />\n\t*[125707]<td />\n\t\t*[124690]<input type=text id=promo_quote_grid_filter_rule_id name=rule_id />\n\t*[125711]<td />\n\t\t*[124691]<input type=text id=promo_quote_grid_filter_name name=name />\n\t*[125715]<td />\n\t\t*[124692]<input type=text id=promo_quote_grid_filter_coupon_code name=coupon_code />\n\t*[125719]<td />\n\t\t*[124693]<input type=text id=promo_quote_grid_filter_from_dateQS45SuAhWaE1gmvnVt9TFZ1Gd0mNcrHP_from name=from_date[from] placeholder=From />\n\t\t*[124694]<input type=text id=promo_quote_grid_filter_from_dateQS45SuAhWaE1gmvnVt9TFZ1Gd0mNcrHP_to name=from_date[to] placeholder=To />\n\t*[125729]<td />\n\t\t*[124695]<input type=text id=promo_quote_grid_filter_to_dateODWsjNQmlXbQLT9XRD7CAnujit4Yxfkl_from name=to_date[from] placeholder=From />\n\t\t*[124696]<input type=text id=promo_quote_grid_filter_to_dateODWsjNQmlXbQLT9XRD7CAnujit4Yxfkl_to name=to_date[to] placeholder=To />\n\t*[125739]<td />\n\t\t*[124697]<select id=promo_quote_grid_filter_is_active name=is_active expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Active|Inactive,format=numeric) />\n\t*[125748]<td />\n\t\t*[124698]<select id=promo_quote_grid_filter_rule_website name=rule_website expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Main Website) />\n\t*[125755]<td />\n\t\t*[124699]<input type=text id=promo_quote_grid_filter_sort_order name=sort_order />\n*[125763]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/1/ />\n\t*[125765]<td />\n\t*[125768]<td />\n\t\tBuy 3 tee shirts and get the 4th free\n\t*[125771]<td />\n\t*[125774]<td />\n\t*[125777]<td />\n\t\t--\n\t*[125780]<td />\n\t\tActive\n\t*[125783]<td />\n\t\tMain Website\n\t*[125786]<td />\n*[125790]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/2/ />\n\t*[125792]<td />\n\t*[125795]<td />\n\t\tSpend $50 or more - shipping is free!\n\t*[125798]<td />\n\t*[125801]<td />\n\t*[125804]<td />\n\t\t--\n\t*[125807]<td />\n\t\tActive\n\t*[125810]<td />\n\t\tMain Website\n\t*[125813]<td />\n*[125817]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/4/ />\n\t*[125819]<td />\n\t*[125822]<td />\n\t\t$4 Luma water bottle (save 70%)\n\t*[125825]<td />\n\t\tH20\n\t*[125828]<td />\n\t*[125831]<td />\n\t\t--\n\t*[125834]<td />\n\t\tActive\n\t*[125837]<td />\n\t\tMain Website\n\t*[125840]<td />\n*[125844]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/ />\n\t*[125846]<td />\n\t*[125849]<td />\n\t\tspring sale\n\t*[125852]<td />\n\t*[125855]<td />\n\t\tSep 3, 2026\n\t*[125858]<td />\n\t\t--\n\t*[125861]<td />\n\t\tActive\n\t*[125864]<td />\n\t\tMain Website\n\t*[125867]<td />\n*[125871]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/6/ />\n\t*[125873]<td />\n\t*[125876]<td />\n\t\tspring sale\n\t*[125879]<td />\n\t*[125882]<td />\n\t\tSep 3, 2026\n\t*[125885]<td />\n\t\t--\n\t*[125888]<td />\n\t\tActive\n\t*[125891]<td />\n\t\tMain Website\n\t*[125894]<td />\n*[125910]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[125920]<a id=footer_privacy />\n\tPrivacy Policy\n*[125923]<a id=footer_account_activity />\n\tAccount Activity\n*[125926]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "new_2": "[104176]<a />\n[104184]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[104185]<a />\n\t\tDashboard\n[104190]<li id=menu-magento-sales-sales role=menu-item />\n\t[104067]<a />\n\t\tSales\n[104233]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[104068]<a />\n\t\tCatalog\n[104256]<li id=menu-magento-customer-customer role=menu-item />\n\t[104069]<a />\n\t\tCustomers\n[104281]<li id=menu-magento-backend-marketing role=menu-item />\n\t[104070]<a />\n\t\tMarketing\n[104366]<li id=menu-magento-backend-content role=menu-item />\n\t[104071]<a />\n\t\tContent\n[104425]<li id=menu-magento-reports-report role=menu-item />\n\t[104072]<a />\n\t\tReports\n[104585]<li id=menu-magento-backend-stores role=menu-item />\n\t[104073]<a />\n\t\tStores\n[104680]<li id=menu-magento-backend-system role=menu-item />\n\t[104074]<a />\n\t\tSystem\n[104785]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[104786]<a />\n\t\tFind Partners & Extensions\n[105224]<button />\n\tSystem Messages\n[121300]<a />\n\tView Details\nTask \"Trigger recollect totals for quotes by rule ID 3\": 1 item(s) have been successfully updated.\nNew Cart Price Rule\n[104851]<a title=My Account />\n\tadmin\n[104889]<a title=Notifications />\n[104894]<div />\n\t[104058]<form id=form-search />\n\t\t[104897]<div />\n\t\t\t[104059]<input type=text id=search-global autocomplete=off />\n[104923]<button title=Save id=save />\n\tSave\n[104075]<button title=Back id=back />\n\tBack\n[104076]<button title=Reset id=reset />\n\tReset\n[104943]<button title=Save and Continue Edit id=save_and_continue />\n\tSave and Continue Edit\n[105274]<div />\n\t[105275]<strong />\n\t\t[105276]<span />\n\t\t\tRule Information\n\t\t[105277]<span />\n[105492]<span />\n\tRule Name\n[106239]<input type=text id=XWK6F5T name=name maxlength=255 autocomplete=list />\n[105541]<span />\n\tDescription\n[106261]<textarea id=MX4V99D name=description />\n[105590]<span />\n\tActive\n[106283]<input type=checkbox checked=true id=Q21WKVH name=is_active value=1 />\n[106285]<span />\n[105639]<span />\n\tWebsites\n*[106305]<select id=UB0EPE5 name=website_ids multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Main Website) />\n\t[106309]<option value=1 selected=false />\n[106340]<div />\n\t[106337]<a />\n\t\t[106338]<span />\n\t\t\tWhat is this?\n[105686]<span />\n\tCustomer Groups\n*[106319]<select id=Y0ORYO9 name=customer_group_ids multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=NOT LOGGED IN|General|Wholesale|Retailer,format=numeric) />\n\t[106323]<option value=0 selected=false />\n\t[106326]<option value=1 selected=false />\n\t[106329]<option value=2 selected=false />\n\t[106332]<option value=3 selected=false />\n[105735]<span />\n\tCoupon\n*[106348]<select id=TUMH7C9 name=coupon_type aria-label=notice-TUMH7C9 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=No Coupon|Specific Coupon,format=numeric) />\n[105930]<span />\n\tUses per Customer\n[106245]<input type=text id=NBP4UWL name=uses_per_customer maxlength=255 />\nUsage limit enforced for logged in customers only.\n[105978]<span />\n\tFrom\n[106359]<input type=text id=ICDRBWP name=from_date placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[106373]<button />\n\t[106376]<span />\n\t\tundefined\n[106027]<span />\n\tTo\n[106361]<input type=text id=FRYMATY name=to_date placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[113667]<button />\n\t[113670]<span />\n\t\tundefined\n[106076]<span />\n\tPriority\n[106247]<input type=text id=SFHI7Y3 name=sort_order maxlength=255 />\n[106125]<span />\n\tPublic In RSS Feed\n[106287]<input type=checkbox checked=true id=XP4RYUJ name=is_rss value=1 />\n[106289]<span />\n[105305]<div />\n\t[105306]<strong />\n\t\t[105307]<span />\n\t\t\tConditions\n\t\t[105308]<span />\n[105336]<div />\n\t[105337]<strong />\n\t\t[105338]<span />\n\t\t\tActions\n\t\t[105339]<span />\n[105367]<div />\n\t[105368]<strong />\n\t\t[105369]<span />\n\t\t\tLabels\n\t\t[105370]<span />\n[105398]<div />\n\t[105399]<strong />\n\t\t[105400]<span />\n\t\t\tManage Coupon Codes\n\t\t[105401]<span />\n[104983]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[104993]<a id=footer_privacy />\n\tPrivacy Policy\n[104996]<a id=footer_account_activity />\n\tAccount Activity\n[104999]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "promo_quote_3": "Dashboard\n*[127955]<a />\n\tSales\n*[127956]<a />\n\tCatalog\n*[127957]<a />\n\tCustomers\n*[127958]<a />\n\tMarketing\n*[127959]<a />\n\tContent\n*[127960]<a />\n\tReports\n*[127961]<a />\n\tStores\n*[127962]<a />\n\tSystem\nFind Partners & Extensions\nspring sale\nadmin\nSave\n*[127963]<button title=Back id=back />\n\tBack\n*[127964]<button title=Delete id=delete />\n\tDelete\n*[127965]<button title=Reset id=reset />\n\tReset\nSave and Continue Edit\n*[128842]<div />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\nPrivacy Policy\nAccount Activity\nReport an Issue",
+    "5": "*[128052]<a />\n*[128060]<li id=menu-magento-backend-dashboard role=menu-item />\n\t*[128061]<a />\n\t\tDashboard\n*[128066]<li id=menu-magento-sales-sales role=menu-item />\n\t[127955]<a />\n\t\tSales\n*[128109]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[127956]<a />\n\t\tCatalog\n*[128131]<li id=menu-magento-customer-customer role=menu-item />\n\t[127957]<a />\n\t\tCustomers\n*[128156]<li id=menu-magento-backend-marketing role=menu-item />\n\t[127958]<a />\n\t\tMarketing\n*[128241]<li id=menu-magento-backend-content role=menu-item />\n\t[127959]<a />\n\t\tContent\n*[128300]<li id=menu-magento-reports-report role=menu-item />\n\t[127960]<a />\n\t\tReports\n*[128461]<li id=menu-magento-backend-stores role=menu-item />\n\t[127961]<a />\n\t\tStores\n*[128557]<li id=menu-magento-backend-system role=menu-item />\n\t[127962]<a />\n\t\tSystem\n*[128662]<li id=menu-magento-marketplace-partners role=menu-item />\n\t*[128663]<a />\n\t\tFind Partners & Extensions\n*[129118]<button />\n\tSystem Messages\n*[141419]<a />\n\tView Details\nTask \"Trigger recollect totals for quotes by rule ID 3\": 1 item(s) have been successfully updated.\nspring sale\n*[128728]<a title=My Account />\n\tadmin\n*[128766]<a title=Notifications />\n*[128771]<div />\n\t*[127936]<form id=form-search />\n\t\t*[128774]<div />\n\t\t\t*[127937]<input type=text id=search-global autocomplete=off />\n*[128800]<button title=Save id=save />\n\tSave\n[127963]<button title=Back id=back />\n\tBack\n[127964]<button title=Delete id=delete />\n\tDelete\n[127965]<button title=Reset id=reset />\n\tReset\n*[128827]<button title=Save and Continue Edit id=save_and_continue />\n\tSave and Continue Edit\n*[129168]<div />\n\t*[129169]<strong />\n\t\t*[129170]<span />\n\t\t\tRule Information\n\t\t*[129171]<span />\n*[129386]<span />\n\tRule Name\n*[130165]<input type=text id=MMIVG59 name=name maxlength=255 />\n*[129435]<span />\n\tDescription\n*[130176]<textarea id=DHDGI55 name=description />\n*[129484]<span />\n\tActive\n*[130177]<input type=checkbox checked=true id=XF5A6FY name=is_active value=1 />\n*[130179]<span />\n*[129533]<span />\n\tWebsites\n*[130193]<select id=H0ER8Q8 name=website_ids multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Main Website) />\n\t*[130197]<option value=1 selected=true />\n*[130237]<div />\n\t*[130234]<a />\n\t\t*[130235]<span />\n\t\t\tWhat is this?\n*[129580]<span />\n\tCustomer Groups\n*[130216]<select id=VBIQDDQ name=customer_group_ids multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=NOT LOGGED IN|General|Wholesale|Retailer,format=numeric) />\n\t*[130220]<option value=0 selected=false />\n\t*[130223]<option value=1 selected=true />\n\t*[130226]<option value=2 selected=true />\n\t*[130229]<option value=3 selected=true />\n*[129629]<span />\n\tCoupon\n*[130250]<select id=Q4IO42T name=coupon_type aria-label=notice-Q4IO42T expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=No Coupon|Specific Coupon,format=numeric) />\n*[129824]<span />\n\tUses per Customer\n*[130171]<input type=text id=QNKSYSS name=uses_per_customer maxlength=255 />\nUsage limit enforced for logged in customers only.\n*[129872]<span />\n\tFrom\n*[130261]<input type=text id=XQT26UP name=from_date value=9/03/2026 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[130272]<button />\n\t*[130275]<span />\n\t\tundefined\n*[129921]<span />\n\tTo\n*[130263]<input type=text id=TFY4H03 name=to_date placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[133785]<button />\n\t*[133788]<span />\n\t\tundefined\n*[129970]<span />\n\tPriority\n*[130173]<input type=text id=AYOBWDV name=sort_order maxlength=255 />\n*[130019]<span />\n\tPublic In RSS Feed\n*[130181]<input type=checkbox checked=true id=MDAM6YY name=is_rss value=1 />\n*[130183]<span />\n*[129199]<div />\n\t*[129200]<strong />\n\t\t*[129201]<span />\n\t\t\tConditions\n\t\t*[129202]<span />\n*[129230]<div />\n\t*[129231]<strong />\n\t\t*[129232]<span />\n\t\t\tActions\n\t\t*[129233]<span />\n*[129261]<div />\n\t*[129262]<strong />\n\t\t*[129263]<span />\n\t\t\tLabels\n\t\t*[129264]<span />\n*[129292]<div />\n\t*[129293]<strong />\n\t\t*[129294]<span />\n\t\t\tManage Coupon Codes\n\t\t*[129295]<span />\n*[128869]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[128879]<a id=footer_privacy />\n\tPrivacy Policy\n*[128882]<a id=footer_account_activity />\n\tAccount Activity\n*[128885]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "5_4": "[128052]<a />\n[128060]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[128061]<a />\n\t\tDashboard\n[128066]<li id=menu-magento-sales-sales role=menu-item />\n\t[127955]<a />\n\t\tSales\n[128109]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[127956]<a />\n\t\tCatalog\n[128131]<li id=menu-magento-customer-customer role=menu-item />\n\t[127957]<a />\n\t\tCustomers\n[128156]<li id=menu-magento-backend-marketing role=menu-item />\n\t[127958]<a />\n\t\tMarketing\n[128241]<li id=menu-magento-backend-content role=menu-item />\n\t[127959]<a />\n\t\tContent\n[128300]<li id=menu-magento-reports-report role=menu-item />\n\t[127960]<a />\n\t\tReports\n[128461]<li id=menu-magento-backend-stores role=menu-item />\n\t[127961]<a />\n\t\tStores\n[128557]<li id=menu-magento-backend-system role=menu-item />\n\t[127962]<a />\n\t\tSystem\n[128662]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[128663]<a />\n\t\tFind Partners & Extensions\n[129118]<button />\n\tSystem Messages\n[141419]<a />\n\tView Details\nTask \"Trigger recollect totals for quotes by rule ID 3\": 1 item(s) have been successfully updated.\nspring sale\n[128728]<a title=My Account />\n\tadmin\n[128766]<a title=Notifications />\n[128771]<div />\n\t[127936]<form id=form-search />\n\t\t[128774]<div />\n\t\t\t[127937]<input type=text id=search-global autocomplete=off />\n[128800]<button title=Save id=save />\n\tSave\n[127963]<button title=Back id=back />\n\tBack\n[127964]<button title=Delete id=delete />\n\tDelete\n[127965]<button title=Reset id=reset />\n\tReset\n[128827]<button title=Save and Continue Edit id=save_and_continue />\n\tSave and Continue Edit\n[129168]<div />\n\t[129169]<strong />\n\t\t[129170]<span />\n\t\t\tRule Information\n\t\t[129171]<span />\n[129386]<span />\n\tRule Name\n[130165]<input type=text id=MMIVG59 name=name maxlength=255 />\n[129435]<span />\n\tDescription\n[130176]<textarea id=DHDGI55 name=description />\n[129484]<span />\n\tActive\n[130177]<input type=checkbox checked=true id=XF5A6FY name=is_active value=1 />\n[130179]<span />\n[129533]<span />\n\tWebsites\n*[130193]<select id=H0ER8Q8 name=website_ids multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Main Website) />\n\t[130197]<option value=1 selected=true />\n[130237]<div />\n\t[130234]<a />\n\t\t[130235]<span />\n\t\t\tWhat is this?\n[129580]<span />\n\tCustomer Groups\n*[130216]<select id=VBIQDDQ name=customer_group_ids multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=NOT LOGGED IN|General|Wholesale|Retailer,format=numeric) />\n\t[130220]<option value=0 selected=false />\n\t[130223]<option value=1 selected=true />\n\t[130226]<option value=2 selected=true />\n\t[130229]<option value=3 selected=true />\n[129629]<span />\n\tCoupon\n*[130250]<select id=Q4IO42T name=coupon_type aria-label=notice-Q4IO42T expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=No Coupon|Specific Coupon,format=numeric) />\n[129824]<span />\n\tUses per Customer\n[130171]<input type=text id=QNKSYSS name=uses_per_customer maxlength=255 />\nUsage limit enforced for logged in customers only.\n[129872]<span />\n\tFrom\n[130261]<input type=text id=XQT26UP name=from_date value=9/03/2026 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[130272]<button />\n\t[130275]<span />\n\t\tundefined\n[129921]<span />\n\tTo\n[130263]<input type=text id=TFY4H03 name=to_date placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[133785]<button />\n\t[133788]<span />\n\t\tundefined\n[129970]<span />\n\tPriority\n[130173]<input type=text id=AYOBWDV name=sort_order maxlength=255 />\n[130019]<span />\n\tPublic In RSS Feed\n[130181]<input type=checkbox checked=true id=MDAM6YY name=is_rss value=1 />\n[130183]<span />\n[129199]<div />\n\t[129200]<strong />\n\t\t[129201]<span />\n\t\t\tConditions\n\t\t[129202]<span />\n[129230]<div />\n\t[129231]<strong />\n\t\t[129232]<span />\n\t\t\tActions\n\t\t[129233]<span />\n[129261]<div />\n\t[129262]<strong />\n\t\t[129263]<span />\n\t\t\tLabels\n\t\t[129264]<span />\n[129292]<div />\n\t[129293]<strong />\n\t\t[129294]<span />\n\t\t\tManage Coupon Codes\n\t\t[129295]<span />\n[128869]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[128879]<a id=footer_privacy />\n\tPrivacy Policy\n[128882]<a id=footer_account_activity />\n\tAccount Activity\n[128885]<a id=footer_bug_tracking />\n\tReport an Issue"
+  }
+}

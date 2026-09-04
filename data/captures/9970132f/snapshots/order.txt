@@ -1,0 +1,73 @@
+*[434711]<a />
+*[434720]<a />
+	Dashboard
+*[434633]<a />
+	Sales
+*[434634]<a />
+	Catalog
+*[434635]<a />
+	Customers
+*[434636]<a />
+	Marketing
+*[434637]<a />
+	Content
+*[434638]<a />
+	Reports
+*[434639]<a />
+	Stores
+*[434640]<a />
+	System
+*[435331]<a />
+	Find Partners & Extensions
+#000000302
+*[435393]<a title=My Account />
+	admin
+*[435431]<a title=Notifications />
+*[435436]<div />
+	*[434610]<form id=form-search />
+		*[435439]<div />
+			*[434611]<input type=text id=search-global name=query />
+*[434641]<button title=Back id=back />
+	Back
+*[434642]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+*[434643]<button title=Edit id=order_edit />
+	Edit
+*[435487]<button title=Cancel id=order-view-cancel-button />
+	Cancel
+*[434644]<button title=Send Email id=send_notification />
+	Send Email
+*[435500]<button title=Hold id=order-view-hold-button />
+	Hold
+*[434645]<button title=Invoice id=order_invoice />
+	Invoice
+*[434646]<button title=Ship id=order_ship />
+	Ship
+*[434647]<button title=Reorder id=order_reorder />
+	Reorder
+Order View
+*[435568]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info />
+	Information
+	*[435573]<span />
+*[436645]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices />
+	Invoices
+	*[436650]<span />
+*[436722]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos />
+	Credit Memos
+	*[436727]<span />
+*[436799]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments />
+	Shipments
+	*[436804]<span />
+*[436876]<a title=Order History id=sales_order_view_tabs_order_history name=order_history />
+	Comments History
+	*[436881]<span />
+*[436946]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[436954]<a id=footer_privacy />
+	Privacy Policy
+*[436957]<a id=footer_account_activity />
+	Account Activity
+*[436960]<a id=footer_bug_tracking />
+	Report an Issue

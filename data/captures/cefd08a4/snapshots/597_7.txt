@@ -1,0 +1,86 @@
+[259899]<a />
+[259907]<li id=menu-magento-backend-dashboard role=menu-item />
+	[259908]<a />
+		Dashboard
+[259913]<li id=menu-magento-sales-sales role=menu-item />
+	[259792]<a />
+		Sales
+[259956]<li id=menu-magento-catalog-catalog role=menu-item />
+	[259793]<a />
+		Catalog
+[259979]<li id=menu-magento-customer-customer role=menu-item />
+	[259794]<a />
+		Customers
+[260004]<li id=menu-magento-backend-marketing role=menu-item />
+	[259795]<a />
+		Marketing
+[260089]<li id=menu-magento-backend-content role=menu-item />
+	[259796]<a />
+		Content
+[260148]<li id=menu-magento-reports-report role=menu-item />
+	[259797]<a />
+		Reports
+[260309]<li id=menu-magento-backend-stores role=menu-item />
+	[259798]<a />
+		Stores
+[260404]<li id=menu-magento-backend-system role=menu-item />
+	[259799]<a />
+		System
+[260509]<li id=menu-magento-marketplace-partners role=menu-item />
+	[260510]<a />
+		Find Partners & Extensions
+Magento Admin
+[260572]<a title=My Account />
+	admin
+[260610]<a title=Notifications />
+[260615]<div />
+	[259765]<form id=form-search />
+		[260618]<div />
+			[259766]<input type=text id=search-global autocomplete=off />
+[259800]<button title=Back id=back />
+	Back
+[259801]<button title=Reset id=reset />
+	Reset
+[260658]<button title=Save Order Address id=save />
+	Save Order Address
+Changing address information will not recalculate shipping, tax or other order amount.
+Order Address Information
+[259780]<form id=edit_form />
+	Name Prefix
+	[259767]<input type=text id=prefix />
+	First Name
+	Middle Name/Initial
+	[259769]<input type=text id=middlename />
+	Last Name
+	[259770]<input type=text id=lastname value=Miller required=true />
+	Name Suffix
+	[259771]<input type=text id=suffix />
+	Company
+	[259772]<input type=text id=company />
+	Street Address
+	[259781]<input type=text id=street0 name=street[0] value=321 Maple Avenue required=true />
+	[259782]<input type=text id=street1 name=street[1] required=true />
+	Country
+	*[259773]<select id=country_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />
+	State/Province
+	*[259783]<select id=region_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=66,options=Please select|Alabama|Alaska|American Samoa) />
+	City
+	[259775]<input type=text id=city name=city value=Oakland required=true />
+	Zip/Postal Code
+	[259776]<input type=text id=postcode value=94602 />
+	Phone Number
+	[259777]<input type=text id=telephone value=5107819902 required=true />
+	Fax
+	[259778]<input type=text id=fax name=fax />
+	VAT Number
+	[259779]<input type=text id=vat_id />
+[261779]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[261789]<a id=footer_privacy />
+	Privacy Policy
+[261792]<a id=footer_account_activity />
+	Account Activity
+[261795]<a id=footer_bug_tracking />
+	Report an Issue

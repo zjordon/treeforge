@@ -1,0 +1,160 @@
+*[101098]<a />
+*[101107]<a />
+	Dashboard
+*[100995]<a />
+	Sales
+*[100996]<a />
+	Catalog
+*[100997]<a />
+	Customers
+*[100998]<a />
+	Marketing
+*[100999]<a />
+	Content
+*[101000]<a />
+	Reports
+*[101001]<a />
+	Stores
+*[101002]<a />
+	System
+*[101708]<a />
+	Find Partners & Extensions
+Cart Price Rules
+*[101770]<a title=My Account />
+	admin
+*[101808]<a title=Notifications />
+*[101813]<div />
+	*[100964]<form id=form-search />
+		*[101816]<div />
+			*[100965]<input type=text id=search-global name=query />
+*[101003]<button title=Add New Rule id=add />
+	Add New Rule
+*[101004]<button title=Search id=id_lwrQSJSRUYbgcMAMkgIPYIwU46lQTiVO />
+	Search
+*[101005]<button title=Reset Filter id=id_5PaGOZFVSwsNOqZUHpJpucNTNcSwCiv1 />
+	Reset Filter
+records found
+*[100966]<select id=promo_quote_grid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />
+per page
+*[101922]<button />
+*[100967]<input type=text id=promo_quote_grid_page-current name=page value=1 />
+of
+*[101939]<button />
+*[101958]<tr />
+	*[101960]<th />
+		*[101961]<span />
+			ID
+	*[101964]<th />
+		*[101965]<span />
+			Rule
+	*[101968]<th />
+		*[101969]<span />
+			Coupon Code
+	*[101972]<th />
+		*[101973]<span />
+			Start
+	*[101976]<th />
+		*[101977]<span />
+			End
+	*[101980]<th />
+		*[101981]<span />
+			Status
+	Web Site
+	*[101988]<th />
+		*[101990]<span />
+			Priority
+*[101994]<tr />
+	*[101996]<td />
+		*[100968]<input type=text id=promo_quote_grid_filter_rule_id name=rule_id />
+	*[102000]<td />
+		*[100969]<input type=text id=promo_quote_grid_filter_name name=name />
+	*[102004]<td />
+		*[100970]<input type=text id=promo_quote_grid_filter_coupon_code name=coupon_code />
+	*[102008]<td />
+		*[100971]<input type=text id=promo_quote_grid_filter_from_date3vdjpPCQQOmjcC8BTA8ywWY2RSiVgso9_from name=from_date[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[102012]<button />
+			*[102014]<span />
+				undefined
+		*[100972]<input type=text id=promo_quote_grid_filter_from_date3vdjpPCQQOmjcC8BTA8ywWY2RSiVgso9_to name=from_date[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[102017]<button />
+			*[102019]<span />
+				undefined
+	*[102026]<td />
+		*[100973]<input type=text id=promo_quote_grid_filter_to_dateJXhb9wlyEBdDS6pX9mJLTGxCOR02gGpg_from name=to_date[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[102030]<button />
+			*[102032]<span />
+				undefined
+		*[100974]<input type=text id=promo_quote_grid_filter_to_dateJXhb9wlyEBdDS6pX9mJLTGxCOR02gGpg_to name=to_date[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[102035]<button />
+			*[102037]<span />
+				undefined
+	*[102044]<td />
+		*[100975]<select id=promo_quote_grid_filter_is_active name=is_active expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Active|Inactive,format=numeric) />
+	*[102053]<td />
+		*[100976]<select id=promo_quote_grid_filter_rule_website name=rule_website expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Main Website) />
+	*[102060]<td />
+		*[100977]<input type=text id=promo_quote_grid_filter_sort_order name=sort_order />
+*[102068]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/1/ />
+	*[102070]<td />
+	*[102073]<td />
+		Buy 3 tee shirts and get the 4th free
+	*[102076]<td />
+	*[102079]<td />
+	*[102082]<td />
+		--
+	*[102085]<td />
+		Active
+	*[102088]<td />
+		Main Website
+	*[102091]<td />
+*[102095]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/2/ />
+	*[102097]<td />
+	*[102100]<td />
+		Spend $50 or more - shipping is free!
+	*[102103]<td />
+	*[102106]<td />
+	*[102109]<td />
+		--
+	*[102112]<td />
+		Active
+	*[102115]<td />
+		Main Website
+	*[102118]<td />
+*[102122]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/4/ />
+	*[102124]<td />
+	*[102127]<td />
+		$4 Luma water bottle (save 70%)
+	*[102130]<td />
+		H20
+	*[102133]<td />
+	*[102136]<td />
+		--
+	*[102139]<td />
+		Active
+	*[102142]<td />
+		Main Website
+	*[102145]<td />
+*[102149]<tr title=http://localhost:7780/admin/sales_rule/promo_quote/edit/id/5/ />
+	*[102151]<td />
+	*[102154]<td />
+		spring sale
+	*[102157]<td />
+	*[102160]<td />
+		Sep 3, 2026
+	*[102163]<td />
+		--
+	*[102166]<td />
+		Active
+	*[102169]<td />
+		Main Website
+	*[102172]<td />
+*[102187]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[102197]<a id=footer_privacy />
+	Privacy Policy
+*[102200]<a id=footer_account_activity />
+	Account Activity
+*[102203]<a id=footer_bug_tracking />
+	Report an Issue

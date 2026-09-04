@@ -1,0 +1,32 @@
+Dashboard
+*[217639]<a />
+	Sales
+*[217640]<a />
+	Catalog
+*[217624]<a />
+	Customers
+*[217641]<a />
+	Marketing
+*[217642]<a />
+	Content
+*[217643]<a />
+	Reports
+*[217644]<a />
+	Stores
+*[217645]<a />
+	System
+Find Partners & Extensions
+404 Not Found
+admin
+*[217646]<button title=Back id=back />
+	Back
+*[217647]<button title=Delete Page id=delete />
+	Delete Page
+Save
+*[217657]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

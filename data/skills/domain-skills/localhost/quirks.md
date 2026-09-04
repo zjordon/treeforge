@@ -1,27 +1,31 @@
 # Quirks — localhost
 
-- **后台改动前台不生效 → 需刷缓存**：`System → Cache Management` 点 `id=flush_magento` 后再刷新前台。
+- **后台改动前台不生效 → 需刷缓存**：`System → Cache Management` 点 `id=flush_magento`。
 - **商品 Description/Short Description 是 TinyMCE 富文本**（iframe contenteditable）：全屏模式必须 `Close Full Screen` 再 `id=save-button`。
-- **标签未保存/无效数据警告**：标签上 "Changes have been made..."/"This tab contains invalid data" span；含无效数据时 Save 被拦截。
-- **商品/评论保存与删除均为整页跳转（非 AJAX）**：Save/Delete 后 URL 变化需等待；成功以 "You saved the product."/"You saved the review."/"The review has been deleted." 确认。
-- **删除评论有确认对话框**（stage 353_5）：点 `id=delete` 后出现 `role=dialog` 遮罩，必须再点可见文本 "OK" 才真正删除；Cancel 放弃。删除后整页回评论列表且原筛选条件保留——若该筛选下无剩余记录会显示 "We couldn't find any records."，这是删除成功而非失败。
-- **商品编辑页/矩阵表单元素 id 每次加载随机**——只能靠 `name=product[...]` / `name=configurable-matrix[N][...]`；`save-button`/`back`/`addAttribute` 稳定。
-- **新建商品必须先选 Attribute Set 再填属性**：切换后 DOM 重新渲染、所有 index 失效，必须重读 DOM 再定位字段。
-- **Categories 下拉面板**：勾选后必须点可见文本 "Done"（type=button）关闭，否则选择不生效/遮挡。
-- **多选属性 select 选项 value 为数字 id**：`select_dropdown` 传 value 而非显示文本；先用 `dropdown_options` 读选项。
-- **可配置变体向导**：URL 不变——靠 DOM 内容判阶段；每步先 `scroll` 使控件进快照；最后 "Generate Products" 后回编辑页必须重读 DOM。
-- **矩阵行 name 属性行号即变体索引**：同列跨行输入框外观相同，只能靠 name 的 N 区分。
-- **Save 按钮有两个**（商品编辑页）：点主 `id=save-button`，勿点 `aria-label=Save options`。
-- **布尔属性是 checkbox 不是下拉**——用 `click(index)`。
-- **商品编辑页属性区分屏**：qty/price/status 在首屏，多选属性在下方 1~6 屏，变体矩阵更靠下。
-- **三类提交行为不同**：UI 网格筛选同页 AJAX；评论旧网格 Search/Reset 与报表 Show Report 整页跳转 base64 filter URL（形如 `/admin/review/product/index/filter/<base64>/form_key/.../`）——跳转后重读 DOM。
-- **评论网格筛选保留性**：Back/删除后筛选仍在；换条件前 `Reset Filter`（或先回列表再重筛）。
-- **评论编辑页 Save Review 直接生效并跳回列表**：点 `id=save_button` 即保存，不要先点 Back；`id=back` 放弃修改返回。`save_and_next`/`save_and_previous` 可保存并直接切相邻评论，批量审核更高效。
+- **保存/删除/取消订单/提交发货/保存规则/保存 CMS 页面多为整页跳转（非 AJAX）**：操作后整页刷新需等待；成功以 "You saved the product./rule./page." 等消息确认（保存规则跳回 promo_quote 网格；CMS 页面保存后页面刷新，URL 不变）。
+- **规则表单与 CMS 页面表单元素 id 每次加载随机**（CMS 编辑页观察值：title=`id=YA7B21G`、is_active=`id=BE9SXTU`；规则页观察值 new_2: `id=XWK6F5T` 等，编辑页又换一套）——只能靠 `name=title`/`name=is_active`/`name=name` 等 name 定位。
+- **CMS 页面编辑页 Page Title 在 stage 1（点 "Page Title" 标签后）才出现输入框**：进入编辑页（stage page_2）首屏快照可能只有 Back/Delete Page/Save 骨架，无表单字段——点击 "Page Title" 区域或等待/重读 DOM 后字段才进入快照。主题详情页（system_design_theme 阶段）同理：首屏快照可能只有 Back/General 标签骨架，详细内容需 scroll/重读 DOM。
+- **website_ids/customer_group_ids 是原生多选 select**：`select_dropdown(index, value)` 传选项数字 value（如 Main Website=1、NOT LOGGED IN=0、General=1、Wholesale=2、Retailer=3），非显示文本；需多选时对同一 index 重复调用。先用 `dropdown_options` 读选项确认 value。
+- **新建规则页 Actions/Conditions/Labels 等是折叠分区**：首屏只有 Rule Information 字段，需 `scroll` 多次后才会进入快照。CMS 编辑页同理：Content/SEO/Design 等分区在下方，且为折叠区块需点击展开。
+- **规则表单校验提示**：出现 "Changes have been made... contains invalid data" 时 `id=save` 可能不生效——先补齐字段（Name 与 discount_amount 为常见缺失项）。
+- **追踪号行是点 "Add Tracking Number" 动态插入的**：点击前 DOM 无 tracking 元素，索引递增；Carrier 选非 custom 值会 onchange 自动覆盖 Title——自定义 Title 请在选 Carrier 之后填。
+- **取消订单有确认对话框**：点 `id=order-view-cancel-button` 后必须再点 "OK"。"Cancel" 一词两义（订单操作 vs Filters 面板关闭），按位置区分。
+- **increment_id 筛选无需补零**：输入 `299` 匹配 `000000299`。
+- **订单地址编辑页 region 字段随国家切换变化**：无预设州时 `id=region_id` 隐藏改填文本 `id=region`；先选国家再选州。
+- **billing 与 shipping 地址是两个不同 address_id 页面**：DOM 相同，靠点击块或 URL 区分。
+- **商品编辑页/订单筛选输入 id 随机**——靠 `name=product[...]`/`name=increment_id` 等；订单地址表单 id 稳定。
+- **新建商品必须先选 Attribute Set 再填属性**：切换后 DOM 重渲染、index 全失效。
+- **Categories 下拉面板**：勾选后必须点 "Done" 关闭。
+- **可配置变体向导**：URL 不变——靠 DOM 内容判阶段；"Generate Products" 后重读 DOM。
+- **Save 按钮有两个**（商品/CMS 编辑页）：点主 `id=save-button`（CMS 页另有 `aria-label=Save options` 下拉箭头勿点）。规则页则 `id=save`=保存并回网格，`id=save_and_continue`=保存留在编辑页。
+- **三类提交行为不同**：UI 网格筛选同页 AJAX；评论/促销旧网格 Search/Reset 与报表 Show Report 整页跳转——跳转后重读 DOM。
 - **日期选择器弹层按钮内容为 "undefined"**：直接 `input_text` 手输 `mm/dd/yyyy`。
-- **filter_form 区域点击易误触提交**：只点目标控件，最后 `id=filter_form_submit`。
-- **菜单展开渐进式**：点一级后二级才出现；导航态可能渲染为折叠扁平 `<a>`，按可见文本识别。
-- **每次页面切换（筛选/排序/翻页/进出详情/保存/删除/Generate/Back/切属性集/开关面板）index 全变**，操作前重读 DOM；无运行时模糊匹配。
-- **网格行 tr title 含详情 URL** 可直接 navigate；`idscheckN` value 即实体 id。
-- **`id=add` 跨页复用**：订单=Create New Order、评论=New Review、客户=Add New Customer、CMS=Add New Page。
-- **Scope 区可见文本跨页变化**，同一 `id=store-change-button`；Dashboard Scope 区文本被内联 JS 污染，忽略。
-- **前台商品页 body 点击可能弹出登录侧栏**（`id=customer-email`/`id=pass`）——误触大区域时注意。
+- **filter_form 区域点击易误触提交**：只点目标控件，最后 `id=filter_form_submit`；UI 网格 Filters 用 "Apply Filters"。
+- **每次页面切换（筛选/排序/翻页/进出详情/保存/删除/Generate/Back/提交发货/保存规则/保存 CMS/主题页跳转）index 全变**，操作前重读 DOM；无运行时模糊匹配。
+- **`id=add` 跨页复用**：订单=Create New Order、评论=New Review、客户=Add New Customer、CMS=Add New Page、促销规则=Add New Rule。
+- **前台商品页 body 点击可能弹出登录侧栏**（`id=customer-email`/`id=pass`）。
+- **长表单页（订单详情/新建 Shipment/规则表单/CMS 编辑页/主题详情页）区块需多次 `scroll`** 才进快照，勿因首屏未见而判定不存在。
+- **旧网格行点击可触发编辑**（点击 tr 或 navigate 其 tr title URL 均可），但行内不含可见链接时优先 navigate URL 更可靠。新 UI 网格（如 CMS Pages）Action 列用 "Select" 按钮展开 Edit/Delete/View，或直接 navigate `tr title`。
+- **顶部 System Messages 区的 "Task ... successfully updated" 是历史通知**，非当前操作结果，勿据此判断任务成败。
+- **页头 Scope 切换区的可见文本包含大段注入脚本**（switchScope eventListener 源码混入可见文本）——勿把该 div 文本当作内容读取，操作 Store 切换用 `id=store_switcher`/`store_group_switcher`/`website_switcher` 相关控件。
+- **侧边菜单一级点击不换 URL（dashboard → Content → Themes 观察为 AJAX 展开二级）**：dashboard_1 阶段点一级菜单（如 Content）只展开二级菜单、URL 仍为 dashboard——需再点二级项（如 Themes）才跳转；每步后重读 DOM 找新出现的二级链接。

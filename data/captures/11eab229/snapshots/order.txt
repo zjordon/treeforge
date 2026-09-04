@@ -1,0 +1,143 @@
+[641321]<a />
+[641329]<li id=menu-magento-backend-dashboard role=menu-item />
+	[641330]<a />
+		Dashboard
+[641335]<li id=menu-magento-sales-sales role=menu-item />
+	[641222]<a />
+		Sales
+[641378]<li id=menu-magento-catalog-catalog role=menu-item />
+	[641223]<a />
+		Catalog
+[641401]<li id=menu-magento-customer-customer role=menu-item />
+	[641224]<a />
+		Customers
+[641426]<li id=menu-magento-backend-marketing role=menu-item />
+	[641225]<a />
+		Marketing
+[641510]<li id=menu-magento-backend-content role=menu-item />
+	[641226]<a />
+		Content
+[641569]<li id=menu-magento-reports-report role=menu-item />
+	[641227]<a />
+		Reports
+[641729]<li id=menu-magento-backend-stores role=menu-item />
+	[641228]<a />
+		Stores
+[641825]<li id=menu-magento-backend-system role=menu-item />
+	[641229]<a />
+		System
+[641930]<li id=menu-magento-marketplace-partners role=menu-item />
+	[641931]<a />
+		Find Partners & Extensions
+Orders
+[641993]<a title=My Account />
+	admin
+[642031]<a title=Notifications />
+[642036]<div />
+	[641212]<form id=form-search />
+		[642039]<div />
+			[641213]<input type=text id=search-global autocomplete=off />
+[641230]<button title=Create New Order id=add />
+	Create New Order
+[642562]<button />
+	Default View
+[642581]<button />
+	Columns
+[642691]<button />
+	Export
+[642716]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[642717]<button aria-label=Search />
+[642725]<button />
+	Filters
+Active filters:
+ID:
+299
+*[684890]<button />
+*[643413]<button />
+	Clear all
+[642767]<button title=Select Items />
+	Actions
+records found
+[643838]<div />
+	[643840]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />
+[643841]<button />
+	Select
+per page
+[642906]<button title=Previous Page disabled=true />
+*[642911]<input type=number id=25 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[642913]<button title=Next Page disabled=true />
+[642416]<tr />
+	[643173]<div />
+		[643174]<input type=checkbox checked=false id=51 />
+		[643176]<button />
+			Options
+	[643196]<th />
+		[643195]<span />
+			ID
+	[643199]<th />
+		Purchase Point
+	[643202]<th />
+		[643201]<span />
+			Purchase Date
+	[643205]<th />
+		[643204]<span />
+			Bill-to Name
+	[643208]<th />
+		[643207]<span />
+			Ship-to Name
+	[643211]<th />
+		[643210]<span />
+			Grand Total (Base)
+	[643214]<th />
+		[643213]<span />
+			Grand Total (Purchased)
+	[643217]<th />
+		[643216]<span />
+			Status
+	[643220]<th />
+		[643219]<span />
+			Action
+	[643223]<th />
+		Allocated sources
+	[643226]<th />
+		[643225]<span />
+			Braintree Transaction Source
+[659563]<tr />
+	[659567]<td />
+		[659607]<label />
+			[659605]<input type=checkbox checked=false id=idscheck299 value=299 />
+	[659568]<td />
+		000000299
+	[659569]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[659570]<td />
+		May 31, 2023 2:55:09 AM
+	[659571]<td />
+		Sarah Miller
+	[659572]<td />
+		Sarah Miller
+	[659573]<td />
+		$219.40
+	[659574]<td />
+		$219.40
+	[659575]<td />
+		*[659614]<div />
+			Pending
+	[659576]<td />
+		[659626]<a />
+			View
+	[659577]<td />
+	[659578]<td />
+*[642106]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[642116]<a id=footer_privacy />
+	Privacy Policy
+*[642119]<a id=footer_account_activity />
+	Account Activity
+*[642122]<a id=footer_bug_tracking />
+	Report an Issue

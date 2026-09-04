@@ -1,0 +1,140 @@
+*[128052]<a />
+*[128060]<li id=menu-magento-backend-dashboard role=menu-item />
+	*[128061]<a />
+		Dashboard
+*[128066]<li id=menu-magento-sales-sales role=menu-item />
+	[127955]<a />
+		Sales
+*[128109]<li id=menu-magento-catalog-catalog role=menu-item />
+	[127956]<a />
+		Catalog
+*[128131]<li id=menu-magento-customer-customer role=menu-item />
+	[127957]<a />
+		Customers
+*[128156]<li id=menu-magento-backend-marketing role=menu-item />
+	[127958]<a />
+		Marketing
+*[128241]<li id=menu-magento-backend-content role=menu-item />
+	[127959]<a />
+		Content
+*[128300]<li id=menu-magento-reports-report role=menu-item />
+	[127960]<a />
+		Reports
+*[128461]<li id=menu-magento-backend-stores role=menu-item />
+	[127961]<a />
+		Stores
+*[128557]<li id=menu-magento-backend-system role=menu-item />
+	[127962]<a />
+		System
+*[128662]<li id=menu-magento-marketplace-partners role=menu-item />
+	*[128663]<a />
+		Find Partners & Extensions
+*[129118]<button />
+	System Messages
+*[141419]<a />
+	View Details
+Task "Trigger recollect totals for quotes by rule ID 3": 1 item(s) have been successfully updated.
+spring sale
+*[128728]<a title=My Account />
+	admin
+*[128766]<a title=Notifications />
+*[128771]<div />
+	*[127936]<form id=form-search />
+		*[128774]<div />
+			*[127937]<input type=text id=search-global autocomplete=off />
+*[128800]<button title=Save id=save />
+	Save
+[127963]<button title=Back id=back />
+	Back
+[127964]<button title=Delete id=delete />
+	Delete
+[127965]<button title=Reset id=reset />
+	Reset
+*[128827]<button title=Save and Continue Edit id=save_and_continue />
+	Save and Continue Edit
+*[129168]<div />
+	*[129169]<strong />
+		*[129170]<span />
+			Rule Information
+		*[129171]<span />
+*[129386]<span />
+	Rule Name
+*[130165]<input type=text id=MMIVG59 name=name maxlength=255 />
+*[129435]<span />
+	Description
+*[130176]<textarea id=DHDGI55 name=description />
+*[129484]<span />
+	Active
+*[130177]<input type=checkbox checked=true id=XF5A6FY name=is_active value=1 />
+*[130179]<span />
+*[129533]<span />
+	Websites
+*[130193]<select id=H0ER8Q8 name=website_ids multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Main Website) />
+	*[130197]<option value=1 selected=true />
+*[130237]<div />
+	*[130234]<a />
+		*[130235]<span />
+			What is this?
+*[129580]<span />
+	Customer Groups
+*[130216]<select id=VBIQDDQ name=customer_group_ids multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=NOT LOGGED IN|General|Wholesale|Retailer,format=numeric) />
+	*[130220]<option value=0 selected=false />
+	*[130223]<option value=1 selected=true />
+	*[130226]<option value=2 selected=true />
+	*[130229]<option value=3 selected=true />
+*[129629]<span />
+	Coupon
+*[130250]<select id=Q4IO42T name=coupon_type aria-label=notice-Q4IO42T expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=No Coupon|Specific Coupon,format=numeric) />
+*[129824]<span />
+	Uses per Customer
+*[130171]<input type=text id=QNKSYSS name=uses_per_customer maxlength=255 />
+Usage limit enforced for logged in customers only.
+*[129872]<span />
+	From
+*[130261]<input type=text id=XQT26UP name=from_date value=9/03/2026 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[130272]<button />
+	*[130275]<span />
+		undefined
+*[129921]<span />
+	To
+*[130263]<input type=text id=TFY4H03 name=to_date placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[133785]<button />
+	*[133788]<span />
+		undefined
+*[129970]<span />
+	Priority
+*[130173]<input type=text id=AYOBWDV name=sort_order maxlength=255 />
+*[130019]<span />
+	Public In RSS Feed
+*[130181]<input type=checkbox checked=true id=MDAM6YY name=is_rss value=1 />
+*[130183]<span />
+*[129199]<div />
+	*[129200]<strong />
+		*[129201]<span />
+			Conditions
+		*[129202]<span />
+*[129230]<div />
+	*[129231]<strong />
+		*[129232]<span />
+			Actions
+		*[129233]<span />
+*[129261]<div />
+	*[129262]<strong />
+		*[129263]<span />
+			Labels
+		*[129264]<span />
+*[129292]<div />
+	*[129293]<strong />
+		*[129294]<span />
+			Manage Coupon Codes
+		*[129295]<span />
+*[128869]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[128879]<a id=footer_privacy />
+	Privacy Policy
+*[128882]<a id=footer_account_activity />
+	Account Activity
+*[128885]<a id=footer_bug_tracking />
+	Report an Issue
