@@ -1,6 +1,6 @@
 [project]
 name = "treeforge"
-version = "0.2.0"
+version = "0.3.0"
 description = "TreeForge（树锻）—— 人走一遍，树锻一生。把人类在浏览器里的示教操作蒸馏成可复用的 site-specific skill 文件，最终供 TreeWalker 消费。"
 readme = "README.md"
 requires-python = ">=3.11"

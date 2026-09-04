@@ -5,6 +5,29 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-09-05
+
+P3.7（蒸馏注入消费端上下文）+ P4（站点级 + 任务级双产物，多任务累积蒸馏）。
+
+### Added
+- **P3.7 消费端上下文**：distill prompt 注入 TreeWalker agent 能力模型——动作词汇表（蒸馏相关 13 个，带真实签名与语义）+「Agent 已自动处理，别写进 skill」清单；quirks 决策启发式从一问（DOM 可见不写）扩为两问（+自动兜底不写）；动作词汇表镜像自 TreeWalker `ACTION_DEFINITIONS`，测试钉住关键动作名防漂移。
+- **P4 站点级 + 任务级双产物**：同 host 多任务累积蒸馏，一次蒸馏同时产出站点级累积卡（功能地图 + 通用操作知识，≤8000 有界）+ 任务级独立卡（`tasks/<slug>/` 三件套 + `_task.json`）；蒸馏前可选输入任务描述（检索锚点 + 反哺蒸馏意图）。
+- **P4 registry 重建**：`harness/registry.py` 重建为 SkillCard 按 host 持久化（原子写 + trace_sources 并集去重），版本真源挪 registry。
+- **P4 host 级增量蒸馏接通**：`distill_host` 加 prev_card，`_INCREMENTAL_ADDENDUM` 三文件块（sop 8000 / selectors 3000 / quirks 4000），BUCKET 后懒加载旧卡 / DISTILL 后落卡。
+- **P4 多任务工作流**：CLI distill 支持多 trace（`--fresh` / `--task`，stage 冲突重映射 stage@N）；serve 加 host 累积模式 + 任务描述输入 + host 节点「累积再蒸馏」按钮；任务卡 slug 稳定化（同任务重录复用 slug 覆盖）。
+- **P4 配套工具**：`scripts/redistill_site.py`——站点级产物形态升级 / 旧卡损坏后按任务卡逐个重蒸重建（slug 复用 + 逐轮增量累积，首个成功轮 fresh）。
+
+### Changed
+- data/ 运行时产物（skills / captures / registry）纳入版本跟踪；CDP 默认端口 9222→9223。
+
+### Fixed
+- **P3.7 附带（真机蒸馏反馈发现）**：atomizer 重复点击合并误杀（空 selector 恒等吞掉不同按钮，改按 element_attrs 稳定标识判等）；collector 副作用信号因果归属（附到触发 action 而非 events[-1]）；cdp `attach_tab` url 兜底（tabId=None 环境按 host+path 匹配 target）。
+- **P4 localhost 事故**：增量蒸馏 LLM 畸形 JSON → 静默模板兜底覆盖好卡——加 LLM+解析重试、重试耗尽保旧卡（版本不倒退）、registry 跳过模板兜底卡。
+- 控制面板蒸馏结果双产物展示：任务级卡原本界面上不可见（易误以为没产出），改为站点级 + 任务级双行显示。
+
+### Docs
+- ROADMAP 收尾 P3.6/P3.7、新增 P4 章节；新增 docs/p3.7、docs/p4 实施方案。
+
 ## [0.2.0] - 2026-08-02
 
 P3.5（控制面板体验闭环）+ P3.6（迁移 TreeWalker 扩展端事件词汇作 distill 采集补充）。
