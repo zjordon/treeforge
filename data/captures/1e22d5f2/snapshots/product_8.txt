@@ -1,0 +1,73 @@
+*[143740]<a />
+*[143749]<a />
+	Dashboard
+*[143634]<a />
+	Sales
+*[143635]<a />
+	Catalog
+*[143636]<a />
+	Customers
+*[143637]<a />
+	Marketing
+*[143638]<a />
+	Content
+*[143639]<a />
+	Reports
+*[143640]<a />
+	Stores
+*[143641]<a />
+	System
+*[144351]<a />
+	Find Partners & Extensions
+Edit Review
+*[144413]<a title=My Account />
+	admin
+*[144451]<a title=Notifications />
+*[144456]<div />
+	*[143610]<form id=form-search />
+		*[144459]<div />
+			*[143611]<input type=text id=search-global name=query />
+*[143642]<button title=Back id=back />
+	Back
+*[143643]<button title=Reset id=reset />
+	Reset
+*[143644]<button title=Delete Review id=delete />
+	Delete Review
+*[144506]<button title=Save Review id=save_button />
+	Save Review
+*[143645]<button title=Previous id=previous />
+	Previous
+*[144519]<button title=Save and Previous id=save_and_previous />
+	Save and Previous
+*[144525]<button title=Save and Next id=save_and_next />
+	Save and Next
+*[143646]<button title=Next id=next />
+	Next
+Review Details
+Product
+*[143647]<a />
+	Olivia 1/4 Zip Light Jacket
+Author
+*[144586]<div id=customer />
+	Guest
+Summary Rating
+Detailed Rating
+Rating
+Status
+*[143617]<select id=status_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+Nickname
+*[143618]<input type=text id=nickname value=seam miller />
+Summary of Review
+*[143619]<input type=text id=title name=title value=OKish />
+Review
+*[143620]<textarea id=detail />
+*[144744]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[144754]<a id=footer_privacy />
+	Privacy Policy
+*[144757]<a id=footer_account_activity />
+	Account Activity
+*[144760]<a id=footer_bug_tracking />
+	Report an Issue

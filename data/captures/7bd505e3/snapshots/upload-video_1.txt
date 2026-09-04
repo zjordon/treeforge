@@ -1,0 +1,190 @@
+[71]<i />
+[72]<a />
+	主站
+[12]<div />
+	[1152]<div />
+		[1153]<img />
+		[13]<img />
+	[1154]<span />
+		试试更多AI创作工具吧
+	[1156]<i />
+[14]<div />
+	[76]<div />
+		[77]<a />
+			[1161]<i />
+[78]<div />
+	成为UP主的第
+	[1169]<span />
+		62
+[1196]<span />
+	[86]<a />
+[89]<div />
+	[90]<div role=region aria-label=scrollable content />
+		[92]<a id=nav_upload_btn />
+			投稿
+		[1218]<div />
+			[93]<div />
+				[94]<span />
+					[1219]<i />
+					[1221]<span />
+						[1222]<span />
+							首页
+		[1233]<div id=upload-manager />
+			[95]<div />
+				[96]<span />
+					[1234]<i />
+					[1236]<span />
+						[1237]<span />
+							内容管理
+					[1242]<i />
+		[1516]<div id=data-up />
+			[163]<div />
+				[164]<span />
+					[1517]<i />
+					[1519]<span />
+						[1520]<span />
+							数据中心
+		[1554]<div id=fans />
+			[171]<div />
+				[172]<span />
+					[1555]<i />
+					[1557]<span />
+						[1558]<span />
+							粉丝管理
+		[1598]<div />
+			[181]<div />
+				[182]<span />
+					[1599]<i />
+					[1601]<span />
+						[1602]<span />
+							互动管理
+					[1607]<i />
+		[1675]<div />
+			[197]<div />
+				[198]<span />
+					[1676]<i />
+					[1678]<span />
+						[1679]<span />
+							收益管理
+					[1684]<i />
+		[225]<div />
+			[1852]<div />
+				[1853]<span />
+					[1854]<i />
+					[1855]<span />
+						[1856]<span />
+							花生
+		[226]<div />
+			[1860]<div />
+				[1861]<span />
+					[1862]<i />
+					[1863]<span />
+						[1864]<span />
+							updream
+		[1868]<div id=growing-up />
+			[227]<div />
+				[228]<span />
+					[1869]<i />
+					[1871]<span />
+						[1872]<span />
+							创作成长
+					[1877]<i />
+			[1879]<div />
+				[229]<div />
+					[1880]<div />
+						[230]<span />
+							[1882]<span />
+								[1884]<span />
+									任务中心
+				[231]<div />
+					[1888]<div />
+						[232]<span />
+							[1890]<span />
+								[1892]<span />
+									必火推广
+				[233]<div />
+					[1896]<div />
+						[234]<a />
+							[1897]<i />
+							创作学院
+		[15]<div />
+			[237]<div />
+				[16]<span />
+					[1913]<i />
+					[17]<span />
+						[1915]<span />
+							创作权益
+					[1920]<i />
+		[18]<div />
+			[248]<div />
+				[19]<span />
+					[1968]<i />
+					[20]<span />
+						[1970]<span />
+							社区公约
+		[21]<div />
+			[251]<div />
+				[22]<span />
+					[1988]<i />
+					[23]<span />
+						[1990]<span />
+							创作设置
+*[3551]<span />
+	视频投稿
+*[3552]<a />
+	短剧投稿
+*[3553]<a />
+	专栏投稿
+*[3554]<a />
+	UP动画
+*[3555]<a />
+	互动视频投稿
+*[3559]<div />
+	*[3558]<svg /> <!-- SVG content collapsed -->
+视频大小
+视频大小16G以内，时长10小时以内
+粉丝数 ≥ 1000，可自动解锁64G超大文件
+*[3571]<div />
+	*[3563]<svg /> <!-- SVG content collapsed -->
+*[3579]<div />
+	*[3578]<svg /> <!-- SVG content collapsed -->
+视频格式
+推荐上传 MP4/MOV/MKV 格式，转码更快、过审更顺利～
+*[3600]<div />
+	*[3583]<svg /> <!-- SVG content collapsed -->
+*[3608]<div />
+	*[3607]<svg /> <!-- SVG content collapsed -->
+视频分辨率
+推荐分辨率：1080P 、4K ，高分辨率更清晰流畅～
+*[3629]<div />
+	*[3612]<svg /> <!-- SVG content collapsed -->
+*[3644]<div />
+	*[3639]<div />
+		*[3636]<svg /> <!-- SVG content collapsed -->
+		*[3637]<div />
+			点击上传或将视频拖拽到此区域
+		*[3638]<div />
+			上传视频
+	*[3643]<input type=file accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=multiple compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+updream
+你的一站式AI视频创作平台
+*[3653]<a />
+	立即使用
+上传视频，即表示您已同意
+*[3657]<a />
+	哔哩哔哩使用协议
+*[3658]<a />
+	哔哩哔哩社区公约
+，请勿上传色情，反动等违法视频，
+*[3659]<a />
+	查看社区规则
+<svg /> <!-- SVG content collapsed -->
+*[2303]<input type=file name=buploader accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+*[2308]<input type=file name=buploader accept=.txt compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+<svg /> <!-- SVG content collapsed -->
+[379]<div id=reference-help />
+	[2142]<div />
+		[2143]<img />
+	[2144]<div />
+		遇到问题
+[380]<div id=topBtn />

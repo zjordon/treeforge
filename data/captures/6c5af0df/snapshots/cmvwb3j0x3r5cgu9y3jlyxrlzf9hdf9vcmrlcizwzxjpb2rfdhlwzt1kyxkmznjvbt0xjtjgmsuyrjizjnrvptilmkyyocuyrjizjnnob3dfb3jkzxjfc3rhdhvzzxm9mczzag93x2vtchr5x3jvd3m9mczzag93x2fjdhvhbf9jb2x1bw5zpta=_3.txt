@@ -1,0 +1,452 @@
+[48365]<a />
+[48373]<li id=menu-magento-backend-dashboard role=menu-item />
+	[48374]<a />
+		Dashboard
+[48379]<li id=menu-magento-sales-sales role=menu-item />
+	[48252]<a />
+		Sales
+[48422]<li id=menu-magento-catalog-catalog role=menu-item />
+	[48253]<a />
+		Catalog
+[48445]<li id=menu-magento-customer-customer role=menu-item />
+	[48254]<a />
+		Customers
+[48470]<li id=menu-magento-backend-marketing role=menu-item />
+	[48255]<a />
+		Marketing
+[48555]<li id=menu-magento-backend-content role=menu-item />
+	[48256]<a />
+		Content
+[48614]<li id=menu-magento-reports-report role=menu-item />
+	[48257]<a />
+		Reports
+[48775]<li id=menu-magento-backend-stores role=menu-item />
+	[48258]<a />
+		Stores
+[48871]<li id=menu-magento-backend-system role=menu-item />
+	[48259]<a />
+		System
+[48976]<li id=menu-magento-marketplace-partners role=menu-item />
+	[48977]<a />
+		Find Partners & Extensions
+Orders Report
+[49039]<a title=My Account />
+	admin
+[49077]<a title=Notifications />
+[49082]<div />
+	[48240]<form id=form-search />
+		[49085]<div />
+			[48241]<input type=text id=search-global autocomplete=off />
+[48264]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+*[49190]<a />
+	statistics
+, click
+*[49193]<a />
+	here
+[48251]<form id=filter_form />
+	Filter
+	Date Used
+	*[48242]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />
+	The Order Updated report is created in real time and does not require a refresh.
+	Period
+	*[48243]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+	From
+	[48244]<input title=From type=text id=sales_report_from name=from value=1/1/23 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[50472]<button />
+		[50475]<span />
+			undefined
+	To
+	[48245]<input title=To type=text id=sales_report_to name=to value=2/28/23 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[50478]<button />
+		[50481]<span />
+			undefined
+	Order Status
+	*[48246]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />
+	Applies to Any of the Specified Order Statuses except canceled orders
+	Empty Rows
+	*[48248]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+	Show Actual Values
+	*[48249]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[48250]<select id=id_4hXfBG2oPWWhvcN9DpH42vmc5rU8odFa_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+[48265]<button title=Export id=id_2G3zZPCh748blKWduLlIQZK3DZXMkDjc />
+	Export
+18
+records found
+Interval
+Orders
+Sales Items
+Sales Total
+Invoiced
+Refunded
+Sales Tax
+Sales Shipping
+Sales Discount
+Canceled
+[49505]<tr />
+	Total
+	19
+	63
+	$2,809.23
+	$0.00
+	$0.00
+	$0.00
+	$315.00
+	$217.61
+	$0.00
+[49541]<tr title=# />
+	[49543]<td />
+		Jan 2, 2023
+	[49549]<td />
+	[49552]<td />
+	[49555]<td />
+		$196.20
+	[49558]<td />
+		$0.00
+	[49561]<td />
+		$0.00
+	[49564]<td />
+		$0.00
+	[49567]<td />
+		$20.00
+	[49570]<td />
+		$0.00
+	[49573]<td />
+		$0.00
+[49577]<tr title=# />
+	[49579]<td />
+		Jan 3, 2023
+	[49585]<td />
+	[49588]<td />
+	[49591]<td />
+		$202.39
+	[49594]<td />
+		$0.00
+	[49597]<td />
+		$0.00
+	[49600]<td />
+		$0.00
+	[49603]<td />
+		$20.00
+	[49606]<td />
+		$45.60
+	[49609]<td />
+		$0.00
+[49613]<tr title=# />
+	[49615]<td />
+		Jan 6, 2023
+	[49621]<td />
+	[49624]<td />
+	[49627]<td />
+		$215.00
+	[49630]<td />
+		$0.00
+	[49633]<td />
+		$0.00
+	[49636]<td />
+		$0.00
+	[49639]<td />
+		$25.00
+	[49642]<td />
+		$0.00
+	[49645]<td />
+		$0.00
+[49649]<tr title=# />
+	[49651]<td />
+		Jan 9, 2023
+	[49657]<td />
+	[49660]<td />
+	[49663]<td />
+		$238.40
+	[49666]<td />
+		$0.00
+	[49669]<td />
+		$0.00
+	[49672]<td />
+		$0.00
+	[49675]<td />
+		$35.00
+	[49678]<td />
+		$0.00
+	[49681]<td />
+		$0.00
+[49685]<tr title=# />
+	[49687]<td />
+		Jan 12, 2023
+	[49693]<td />
+	[49696]<td />
+	[49699]<td />
+		$226.60
+	[49702]<td />
+		$0.00
+	[49705]<td />
+		$0.00
+	[49708]<td />
+		$0.00
+	[49711]<td />
+		$25.00
+	[49714]<td />
+		$50.40
+	[49717]<td />
+		$0.00
+[49721]<tr title=# />
+	[49723]<td />
+		Jan 13, 2023
+	[49729]<td />
+	[49732]<td />
+	[49735]<td />
+		$204.04
+	[49738]<td />
+		$0.00
+	[49741]<td />
+		$0.00
+	[49744]<td />
+		$0.00
+	[49747]<td />
+		$25.00
+	[49750]<td />
+		$44.76
+	[49753]<td />
+		$0.00
+[49757]<tr title=# />
+	[49759]<td />
+		Jan 16, 2023
+	[49765]<td />
+	[49768]<td />
+	[49771]<td />
+		$209.40
+	[49774]<td />
+		$0.00
+	[49777]<td />
+		$0.00
+	[49780]<td />
+		$0.00
+	[49783]<td />
+		$25.00
+	[49786]<td />
+		$34.85
+	[49789]<td />
+		$0.00
+[49793]<tr title=# />
+	[49795]<td />
+		*[49797]<span />
+			Jan 17, 2023
+	[49801]<td />
+	[49804]<td />
+	[49807]<td />
+		$188.00
+	[49810]<td />
+		$0.00
+	[49813]<td />
+		$0.00
+	[49816]<td />
+		$0.00
+	[49819]<td />
+		$20.00
+	[49822]<td />
+		$42.00
+	[49825]<td />
+		$0.00
+[49829]<tr title=# />
+	[49831]<td />
+		Jan 23, 2023
+	[49837]<td />
+	[49840]<td />
+	[49843]<td />
+		$121.00
+	[49846]<td />
+		$0.00
+	[49849]<td />
+		$0.00
+	[49852]<td />
+		$0.00
+	[49855]<td />
+		$15.00
+	[49858]<td />
+		$0.00
+	[49861]<td />
+		$0.00
+[49865]<tr title=# />
+	[49867]<td />
+		Jan 24, 2023
+	[49873]<td />
+	[49876]<td />
+	[49879]<td />
+		$43.40
+	[49882]<td />
+		$0.00
+	[49885]<td />
+		$0.00
+	[49888]<td />
+		$0.00
+	[49891]<td />
+		$5.00
+	[49894]<td />
+		$0.00
+	[49897]<td />
+		$0.00
+[49901]<tr title=# />
+	[49903]<td />
+		Jan 28, 2023
+	[49909]<td />
+	[49912]<td />
+	[49915]<td />
+		$215.80
+	[49918]<td />
+		$0.00
+	[49921]<td />
+		$0.00
+	[49924]<td />
+		$0.00
+	[49927]<td />
+		$20.00
+	[49930]<td />
+		$0.00
+	[49933]<td />
+		$0.00
+[49937]<tr title=# />
+	[49939]<td />
+		Feb 1, 2023
+	[49945]<td />
+	[49948]<td />
+	[49951]<td />
+		$29.00
+	[49954]<td />
+		$0.00
+	[49957]<td />
+		$0.00
+	[49960]<td />
+		$0.00
+	[49963]<td />
+		$5.00
+	[49966]<td />
+		$0.00
+	[49969]<td />
+		$0.00
+[49973]<tr title=# />
+	[49975]<td />
+		Feb 3, 2023
+	[49981]<td />
+	[49984]<td />
+	[49987]<td />
+		$106.00
+	[49990]<td />
+		$0.00
+	[49993]<td />
+		$0.00
+	[49996]<td />
+		$0.00
+	[49999]<td />
+		$15.00
+	[50002]<td />
+		$0.00
+	[50005]<td />
+		$0.00
+[50009]<tr title=# />
+	[50011]<td />
+		Feb 7, 2023
+	[50017]<td />
+	[50020]<td />
+	[50023]<td />
+		$29.00
+	[50026]<td />
+		$0.00
+	[50029]<td />
+		$0.00
+	[50032]<td />
+		$0.00
+	[50035]<td />
+		$5.00
+	[50038]<td />
+		$0.00
+	[50041]<td />
+		$0.00
+[50045]<tr title=# />
+	[50047]<td />
+		Feb 10, 2023
+	[50053]<td />
+	[50056]<td />
+	[50059]<td />
+		$107.00
+	[50062]<td />
+		$0.00
+	[50065]<td />
+		$0.00
+	[50068]<td />
+		$0.00
+	[50071]<td />
+		$10.00
+	[50074]<td />
+		$0.00
+	[50077]<td />
+		$0.00
+[50081]<tr title=# />
+	[50083]<td />
+		Feb 11, 2023
+	[50089]<td />
+	[50092]<td />
+	[50095]<td />
+		$179.00
+	[50098]<td />
+		$0.00
+	[50101]<td />
+		$0.00
+	[50104]<td />
+		$0.00
+	[50107]<td />
+		$15.00
+	[50110]<td />
+		$0.00
+	[50113]<td />
+		$0.00
+[50117]<tr title=# />
+	[50119]<td />
+		Feb 16, 2023
+	[50125]<td />
+	[50128]<td />
+	[50131]<td />
+		$181.00
+	[50134]<td />
+		$0.00
+	[50137]<td />
+		$0.00
+	[50140]<td />
+		$0.00
+	[50143]<td />
+		$15.00
+	[50146]<td />
+		$0.00
+	[50149]<td />
+		$0.00
+[50153]<tr title=# />
+	[50155]<td />
+		Feb 25, 2023
+	[50161]<td />
+	[50164]<td />
+	[50167]<td />
+		$118.00
+	[50170]<td />
+		$0.00
+	[50173]<td />
+		$0.00
+	[50176]<td />
+		$0.00
+	[50179]<td />
+		$15.00
+	[50182]<td />
+		$0.00
+	[50185]<td />
+		$0.00
+[50203]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[50213]<a id=footer_privacy />
+	Privacy Policy
+[50216]<a id=footer_account_activity />
+	Account Activity
+[50219]<a id=footer_bug_tracking />
+	Report an Issue

@@ -1,0 +1,120 @@
+*[190731]<a />
+*[190740]<a />
+	Dashboard
+*[190615]<a />
+	Sales
+*[190616]<a />
+	Catalog
+*[190617]<a />
+	Customers
+*[190618]<a />
+	Marketing
+*[190619]<a />
+	Content
+*[190620]<a />
+	Reports
+*[190621]<a />
+	Stores
+*[190622]<a />
+	System
+*[191341]<a />
+	Find Partners & Extensions
+Reviews
+*[191403]<a title=My Account />
+	admin
+*[191441]<a title=Notifications />
+*[191446]<div />
+	*[190592]<form id=form-search />
+		*[191449]<div />
+			*[190593]<input type=text id=search-global name=query />
+*[190623]<button title=New Review id=add />
+	New Review
+The review has been deleted.
+*[190624]<button title=Search id=id_ghArQWxmWHvYRPj1JChMy9imAFHGHhiG />
+	Search
+*[190625]<button title=Reset Filter id=id_AR7s6OQTVSu3JJhOawcC2nFBxnjckqA4 />
+	Reset Filter
+*[190599]<select id=reviewGrid_massaction-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Actions|Delete|Update Status) />
+*[191586]<div />
+	*[190595]<select id=reviewGrid_massaction-mass-select />
+records found
+*[190596]<select id=reviewGrid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />
+per page
+*[191654]<button />
+*[190597]<input type=text id=reviewGrid_page-current name=page value=1 />
+of
+*[191671]<button />
+*[191688]<tr />
+	*[191693]<th />
+		*[191695]<span />
+			ID
+	*[191698]<th />
+		*[191699]<span />
+			Created
+	*[191702]<th />
+		*[191703]<span />
+			Status
+	*[191706]<th />
+		*[191707]<span />
+			Title
+	*[191710]<th />
+		*[191711]<span />
+			Nickname
+	*[191714]<th />
+		*[191715]<span />
+			Review
+	Visibility
+	*[191722]<th />
+		*[191723]<span />
+			Type
+	*[191726]<th />
+		*[191727]<span />
+			Product
+	*[191730]<th />
+		*[191731]<span />
+			SKU
+	Action
+*[191739]<tr />
+	*[191741]<td />
+		*[190600]<select id=reviewGrid_filter_massaction name=massaction expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Any|Yes|No) />
+	*[191752]<td />
+		*[190601]<input type=text id=reviewGrid_filter_review_id name=review_id />
+	*[191756]<td />
+		*[190602]<input type=text id=reviewGrid_filter_created_atePcnB6e9rzjf9Q2zQG0EwOy5bEhhnONe_from name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[191760]<button />
+			*[191762]<span />
+				undefined
+		*[190603]<input type=text id=reviewGrid_filter_created_atePcnB6e9rzjf9Q2zQG0EwOy5bEhhnONe_to name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[191765]<button />
+			*[191767]<span />
+				undefined
+	*[191774]<td />
+		*[190604]<select id=reviewGrid_filter_status name=status expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	*[191785]<td />
+		*[190605]<input type=text id=reviewGrid_filter_title name=title />
+	*[191789]<td />
+		*[190606]<input type=text id=reviewGrid_filter_nickname name=nickname />
+	*[191793]<td />
+		*[190607]<input type=text id=reviewGrid_filter_detail name=detail />
+	*[191797]<td />
+		*[190608]<select name=visible_in expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Default Store View) />
+	*[191806]<td />
+		*[190609]<select id=reviewGrid_filter_type name=type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Administrator|Customer|Guest,format=numeric) />
+	*[191817]<td />
+		*[190610]<input type=text id=reviewGrid_filter_name name=name value=Circe />
+	*[191821]<td />
+		*[190611]<input type=text id=reviewGrid_filter_sku name=sku />
+	*[191825]<td />
+*[191832]<tr />
+	*[191834]<td />
+		We couldn't find any records.
+*[191849]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[191859]<a id=footer_privacy />
+	Privacy Policy
+*[191862]<a id=footer_account_activity />
+	Account Activity
+*[191865]<a id=footer_bug_tracking />
+	Report an Issue

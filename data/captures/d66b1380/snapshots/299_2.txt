@@ -1,0 +1,395 @@
+[37919]<a />
+[37927]<li id=menu-magento-backend-dashboard role=menu-item />
+	[37928]<a />
+		Dashboard
+[37933]<li id=menu-magento-sales-sales role=menu-item />
+	[37778]<a />
+		Sales
+[37976]<li id=menu-magento-catalog-catalog role=menu-item />
+	[37779]<a />
+		Catalog
+[37999]<li id=menu-magento-customer-customer role=menu-item />
+	[37780]<a />
+		Customers
+[38024]<li id=menu-magento-backend-marketing role=menu-item />
+	[37781]<a />
+		Marketing
+[38109]<li id=menu-magento-backend-content role=menu-item />
+	[37782]<a />
+		Content
+[38168]<li id=menu-magento-reports-report role=menu-item />
+	[37783]<a />
+		Reports
+[38329]<li id=menu-magento-backend-stores role=menu-item />
+	[37784]<a />
+		Stores
+[38424]<li id=menu-magento-backend-system role=menu-item />
+	[37785]<a />
+		System
+[38529]<li id=menu-magento-marketplace-partners role=menu-item />
+	[38530]<a />
+		Find Partners & Extensions
+#000000299
+[38592]<a title=My Account />
+	admin
+[38630]<a title=Notifications />
+[38635]<div />
+	[37772]<form id=form-search />
+		[38638]<div />
+			[37773]<input type=text id=search-global autocomplete=off />
+[37786]<button title=Back id=back />
+	Back
+[37787]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+[37788]<button title=Edit id=order_edit />
+	Edit
+[38685]<button title=Cancel id=order-view-cancel-button />
+	Cancel
+[37789]<button title=Send Email id=send_notification />
+	Send Email
+[38698]<button title=Hold id=order-view-hold-button />
+	Hold
+[37790]<button title=Invoice id=order_invoice />
+	Invoice
+[37791]<button title=Ship id=order_ship />
+	Ship
+[37792]<button title=Reorder id=order_reorder />
+	Reorder
+Order & Account Information
+Order # 000000299 (
+The order confirmation email was sent
+[38837]<tr />
+	Order Date
+	[38842]<td />
+		May 31, 2023, 2:55:09 AM
+[38846]<tr />
+	Order Status
+	[38851]<td />
+		Pending
+[38856]<tr />
+	Purchased From
+	[38861]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+[38869]<tr />
+	Placed from IP
+	[38874]<td />
+		128.2.205.52
+Account Information
+[38890]<a />
+	Edit Customer
+[38900]<tr />
+	Customer Name
+	[38905]<td />
+		[38907]<a />
+			Sarah Miller
+[38915]<tr />
+	Email
+	[38920]<td />
+		[38921]<a />
+			helloworld@yahoo.com
+[38925]<tr />
+	Customer Group
+	[38930]<td />
+		General
+Address Information
+Billing Address
+[38956]<div />
+	[38957]<a />
+		Edit
+Sarah Miller
+321 Maple Avenue
+Oakland,  California, 94602
+United States
+T: 5107819902
+Shipping Address
+[38980]<div />
+	[38981]<a />
+		Edit
+Sarah Miller
+321 Maple Avenue
+Oakland,  California, 94602
+United States
+T: 5107819902
+Payment & Shipping Method
+Payment Information
+Check / Money order
+The order was placed using USD.
+Shipping & Handling Information
+Flat Rate - Fixed
+[39045]<span />
+	$25.00
+Items Ordered
+[39066]<tr />
+	Product
+	Item Status
+	Original Price
+	Price
+	Qty
+	Subtotal
+	Tax Amount
+	Tax Percent
+	Discount Amount
+	Row Total
+[39112]<tr />
+	[39114]<td />
+		Argus All-Weather Tank
+		SKU:
+		MT07-M-Gray
+		Color:
+		Gray
+		Size:
+	[39144]<td />
+		Ordered
+	[39147]<td />
+		[39149]<span />
+			$22.00
+	[39153]<td />
+		[39155]<div />
+			[39157]<span />
+				$22.00
+	[39162]<td />
+		[39167]<tr />
+			Ordered
+			[39172]<td />
+	[39178]<td />
+		[39182]<span />
+			$22.00
+	[39187]<td />
+		[39189]<span />
+			$0.00
+	[39193]<td />
+		0%
+	[39196]<td />
+		[39198]<span />
+			$4.40
+	[39202]<td />
+		[39204]<span />
+			$17.60
+[39212]<tr />
+	[39214]<td />
+		Marco Lightweight Active Hoodie
+		SKU:
+		MH13-S-Green
+		Color:
+		Green
+		Size:
+	[39244]<td />
+		Ordered
+	[39247]<td />
+		[39249]<span />
+			$74.00
+	[39253]<td />
+		[39255]<div />
+			[39257]<span />
+				$74.00
+	[39262]<td />
+		[39267]<tr />
+			Ordered
+			[39272]<td />
+	[39278]<td />
+		[39282]<span />
+			$74.00
+	[39287]<td />
+		[39289]<span />
+			$0.00
+	[39293]<td />
+		0%
+	[39296]<td />
+		[39298]<span />
+			$14.80
+	[39302]<td />
+		[39304]<span />
+			$59.20
+[39312]<tr />
+	[39314]<td />
+		Tiffany Fitness Tee
+		SKU:
+		WS09-XL-Blue
+		Color:
+		Blue
+		Size:
+		XL
+	[39344]<td />
+		Ordered
+	[39347]<td />
+		[39349]<span />
+			$28.00
+	[39353]<td />
+		[39355]<div />
+			[39357]<span />
+				$28.00
+	[39362]<td />
+		[39367]<tr />
+			Ordered
+			[39372]<td />
+	[39378]<td />
+		[39382]<span />
+			$28.00
+	[39387]<td />
+		[39389]<span />
+			$0.00
+	[39393]<td />
+		0%
+	[39396]<td />
+		[39398]<span />
+			$5.60
+	[39402]<td />
+		[39404]<span />
+			$22.40
+[39412]<tr />
+	[39414]<td />
+		Nadia Elements Shell
+		SKU:
+		WJ10-XS-Yellow
+		Color:
+		Yellow
+		Size:
+		XS
+	[39444]<td />
+		Ordered
+	[39447]<td />
+		[39449]<span />
+			$69.00
+	[39453]<td />
+		[39455]<div />
+			[39457]<span />
+				$69.00
+	[39462]<td />
+		[39467]<tr />
+			Ordered
+			[39472]<td />
+	[39478]<td />
+		[39482]<span />
+			$69.00
+	[39487]<td />
+		[39489]<span />
+			$0.00
+	[39493]<td />
+		0%
+	[39496]<td />
+		[39498]<span />
+			$13.80
+	[39502]<td />
+		[39504]<span />
+			$55.20
+[39512]<tr />
+	[39514]<td />
+		Gwen Drawstring Bike Short
+		SKU:
+		WSH03-28-Orange
+		Color:
+		Orange
+		Size:
+		28
+	[39544]<td />
+		Ordered
+	[39547]<td />
+		[39549]<span />
+			$50.00
+	[39553]<td />
+		[39555]<div />
+			[39557]<span />
+				$50.00
+	[39562]<td />
+		[39567]<tr />
+			Ordered
+			[39572]<td />
+	[39578]<td />
+		[39582]<span />
+			$50.00
+	[39587]<td />
+		[39589]<span />
+			$0.00
+	[39593]<td />
+		0%
+	[39596]<td />
+		[39598]<span />
+			$10.00
+	[39602]<td />
+		[39604]<span />
+			$40.00
+Order Total
+Notes for this Order
+Status
+*[37774]<select id=history_status name=history[status] expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox) />
+Comment
+[37775]<textarea id=history_comment name=history[comment] />
+[37776]<input type=checkbox checked=false id=history_notify name=history[is_customer_notified] value=1 />
+Notify Customer by Email
+[37777]<input type=checkbox checked=false id=history_visible name=history[is_visible_on_front] value=1 />
+Visible on Storefront
+[37793]<button title=Submit Comment id=id_0qIbzYRbw6zZmPdDgHnjNJVw8Gv3IYoy />
+	Submit Comment
+Order Totals
+[39707]<tr />
+	[39709]<td />
+		Grand Total
+	[39715]<td />
+		$219.40
+[39723]<tr />
+	[39725]<td />
+		Total Paid
+	[39731]<td />
+		[39734]<span />
+			$0.00
+[39739]<tr />
+	[39741]<td />
+		Total Refunded
+	[39747]<td />
+		[39750]<span />
+			$0.00
+[39755]<tr />
+	[39757]<td />
+		Total Due
+	[39763]<td />
+		$219.40
+[39774]<tr />
+	[39776]<td />
+		Subtotal
+	[39779]<td />
+		$243.00
+[39787]<tr />
+	[39789]<td />
+		Discount
+	[39792]<td />
+		[39795]<span />
+			-$48.60
+[39800]<tr />
+	[39802]<td />
+		Shipping & Handling
+	[39805]<td />
+		[39808]<span />
+			$25.00
+Order View
+[38763]<li id=sales_order_view_tabs_order_info role=tab selected=true expanded=true />
+	[38765]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info role=presentation />
+		Information
+		[38770]<span />
+[39865]<li id=sales_order_view_tabs_order_invoices role=tab selected=false expanded=false />
+	[39867]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices role=presentation />
+		Invoices
+		[39872]<span />
+[39942]<li id=sales_order_view_tabs_order_creditmemos role=tab selected=false expanded=false />
+	[39944]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos role=presentation />
+		Credit Memos
+		[39949]<span />
+[40019]<li id=sales_order_view_tabs_order_shipments role=tab selected=false expanded=false />
+	[40021]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments role=presentation />
+		Shipments
+		[40026]<span />
+[40096]<li id=sales_order_view_tabs_order_history role=tab selected=false expanded=false />
+	[40098]<a title=Order History id=sales_order_view_tabs_order_history name=order_history role=presentation />
+		Comments History
+		[40103]<span />
+[40168]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[40176]<a id=footer_privacy />
+	Privacy Policy
+[40179]<a id=footer_account_activity />
+	Account Activity
+[40182]<a id=footer_bug_tracking />
+	Report an Issue

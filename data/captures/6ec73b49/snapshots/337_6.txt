@@ -1,0 +1,85 @@
+[40059]<a />
+[40067]<li id=menu-magento-backend-dashboard role=menu-item />
+	[40068]<a />
+		Dashboard
+[40073]<li id=menu-magento-sales-sales role=menu-item />
+	[39977]<a />
+		Sales
+[40115]<li id=menu-magento-catalog-catalog role=menu-item />
+	[39978]<a />
+		Catalog
+[40138]<li id=menu-magento-customer-customer role=menu-item />
+	[39979]<a />
+		Customers
+[40163]<li id=menu-magento-backend-marketing role=menu-item />
+	[39980]<a />
+		Marketing
+[40248]<li id=menu-magento-backend-content role=menu-item />
+	[39981]<a />
+		Content
+[40307]<li id=menu-magento-reports-report role=menu-item />
+	[39982]<a />
+		Reports
+[40467]<li id=menu-magento-backend-stores role=menu-item />
+	[39983]<a />
+		Stores
+[40563]<li id=menu-magento-backend-system role=menu-item />
+	[39984]<a />
+		System
+[40668]<li id=menu-magento-marketplace-partners role=menu-item />
+	[40669]<a />
+		Find Partners & Extensions
+Edit Review
+[40731]<a title=My Account />
+	admin
+[40769]<a title=Notifications />
+[40774]<div />
+	[39953]<form id=form-search />
+		[40777]<div />
+			[39954]<input type=text id=search-global autocomplete=off />
+[39985]<button title=Back id=back />
+	Back
+[39986]<button title=Reset id=reset />
+	Reset
+[39987]<button title=Delete Review id=delete />
+	Delete Review
+[40824]<button title=Save Review id=save_button />
+	Save Review
+[39988]<button title=Previous id=previous />
+	Previous
+[40837]<button title=Save and Previous id=save_and_previous />
+	Save and Previous
+[39964]<form id=edit_form />
+	Review Details
+	Product
+	[39989]<a />
+		Antonia Racer Tank
+	Author
+	[40890]<div id=customer />
+		Guest
+	Summary Rating
+	Detailed Rating
+	Rating
+	[40938]<label />
+	[40942]<label />
+	[40946]<label />
+	[40950]<label />
+	[40954]<label />
+	Status
+	*[39960]<select id=status_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	Nickname
+	[39961]<input type=text id=nickname value=Shaunte required=true />
+	Summary of Review
+	[39962]<input type=text id=title name=title value=Zero support/modesty required=true />
+	Review
+	[39963]<textarea id=detail required=true />
+[41048]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[41058]<a id=footer_privacy />
+	Privacy Policy
+[41061]<a id=footer_account_activity />
+	Account Activity
+[41064]<a id=footer_bug_tracking />
+	Report an Issue

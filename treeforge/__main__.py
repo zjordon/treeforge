@@ -38,8 +38,15 @@ from harness import config, progress
 # ---------------------------------------------------------------------------
 
 
-def _run_distill(trace_path: Path, output_dir: Path, adapter_name: str, no_llm: bool) -> int:
-    """跑完整蒸馏链路（CLI 薄包装）。
+def _run_distill(
+    trace_paths: list[Path],
+    output_dir: Path,
+    adapter_name: str,
+    no_llm: bool,
+    fresh: bool = False,
+    task_description: str = "",
+) -> int:
+    """跑完整蒸馏链路（CLI 薄包装，P4 支持多 trace 累积 + 双产物）。
 
     实际管线在 ``server.distill_api.run_distill_pipeline``（与 HTTP 后台任务共用），
     这里只负责 CLI 的 print + 退出码。
@@ -47,10 +54,12 @@ def _run_distill(trace_path: Path, output_dir: Path, adapter_name: str, no_llm: 
     from server.distill_api import run_distill_pipeline
 
     result = run_distill_pipeline(
-        trace_path=trace_path,
+        trace_paths=trace_paths,
         output_dir=output_dir,
         adapter_name=adapter_name,
         no_llm=no_llm,
+        fresh=fresh,
+        task_description=task_description or None,
     )
 
     if not result.ok:
@@ -65,6 +74,8 @@ def _run_distill(trace_path: Path, output_dir: Path, adapter_name: str, no_llm: 
         print()
         print(f"TreeWalker 注入目录：{result.host_dir}")
         print("包含文件：", sorted(p.name for p in result.host_dir.glob("*.md")))
+        if result.task_dir:
+            print(f"任务级 skill：{result.task_dir}（slug={result.task_slug}）")
     return 0
 
 
@@ -161,8 +172,15 @@ def _build_parser() -> argparse.ArgumentParser:
     sub = parser.add_subparsers(dest="command", required=True)
 
     # distill
-    p_distill = sub.add_parser("distill", help="蒸馏一份 trace → skill 文件")
-    p_distill.add_argument("trace", type=Path, help="trace JSON 文件路径")
+    p_distill = sub.add_parser(
+        "distill", help="蒸馏 trace → skill 文件（可多 trace 同 host 累积，产站点级+任务级）"
+    )
+    p_distill.add_argument(
+        "trace",
+        type=Path,
+        nargs="+",
+        help="trace JSON 文件路径（可多个：同 host 多任务累积蒸馏）",
+    )
     p_distill.add_argument(
         "--output",
         "-o",
@@ -181,6 +199,16 @@ def _build_parser() -> argparse.ArgumentParser:
         "--no-llm",
         action="store_true",
         help="强制用模板模式，不调 LLM（即使配了 key）",
+    )
+    p_distill.add_argument(
+        "--fresh",
+        action="store_true",
+        help="忽略 registry 旧卡从头蒸馏（默认增量：同 host 累积合并）",
+    )
+    p_distill.add_argument(
+        "--task",
+        default="",
+        help="任务描述（可选；进任务级 skill 元数据与 prompt，缺省用 trace 的 task_instruction）",
     )
 
     # info
@@ -271,15 +299,23 @@ def main(argv: Sequence[str] | None = None) -> int:
         return _run_serve(args)
 
     if args.command == "distill":
-        trace_path: Path = args.trace
-        if not trace_path.is_file():
-            print(f"错误：trace 文件不存在：{trace_path}", file=sys.stderr)
-            return 2
+        trace_paths: list[Path] = list(args.trace)
+        for tp in trace_paths:
+            if not tp.is_file():
+                print(f"错误：trace 文件不存在：{tp}", file=sys.stderr)
+                return 2
 
         output_dir = args.output or config.OUTPUT_DIR
         adapter_name = args.adapter or config.DEFAULT_ADAPTER
 
-        return _run_distill(trace_path, output_dir, adapter_name, args.no_llm)
+        return _run_distill(
+            trace_paths,
+            output_dir,
+            adapter_name,
+            args.no_llm,
+            fresh=args.fresh,
+            task_description=args.task,
+        )
 
     parser.print_help()
     return 2

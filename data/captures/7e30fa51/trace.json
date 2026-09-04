@@ -1,0 +1,630 @@
+{
+  "host": "localhost",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1788391257120,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Scope: function eventListenerGvwQ9cuhIN () { switchScope(thi",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "Scope: function eventListenerGvwQ9cuhIN () { switchScope(this);; } var listenedElementGvwQ9cuhINArray = document.querySelectorAll(\"#store_switcher\"); if(listenedElementGvwQ9cuhINArray.length !== 'undefined'){ listenedElementGvwQ9cuhINArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerGvwQ9cuhIN.apply(targetElement); }; } }); } function eventListenernoddgZv1GJ () { switchScope(this);; } var listenedElementnoddgZv1GJArray = document.querySelectorAll(\"#store_group_switcher\"); if(listenedElementnoddgZv1GJArray.length !== 'undefined'){ listenedElementnoddgZv1GJArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenernoddgZv1GJ.apply(targetElement); }; } }); } function eventListenerfopgvZb29v () { switchScope(this);; } var listenedElementfopgvZb29vArray = document.querySelectorAll(\"#website_switcher\"); if(listenedElementfopgvZb29vArray.length !== 'undefined'){ listenedElementfopgvZb29vArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerfopgvZb29v.apply(targetElement); }; } }); } All Store Views All Store Views Main Website Main Website Store Default Store View What is this? Reload Data"
+      }
+    },
+    {
+      "timestamp": 1788391258482,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Catalog",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "Catalog"
+      }
+    },
+    {
+      "timestamp": 1788391259771,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard_1",
+      "target": "Products",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "Products"
+      }
+    },
+    {
+      "timestamp": 1788391264609,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product",
+      "target": "Add Product",
+      "element_attrs": {
+        "tag": "button",
+        "id": "add_new_product-button",
+        "aria-label": "Add Product",
+        "visible_text": "Add Product"
+      }
+    },
+    {
+      "timestamp": 1788391264615,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/",
+      "stage": "product_2",
+      "target": "Add Product Select Simple Product Configurable Product Group",
+      "element_attrs": {
+        "tag": "div",
+        "id": "add_new_product",
+        "data-tw-jsclick": "1",
+        "aria-label": "Add Product",
+        "visible_text": "Add Product Select Simple Product Configurable Product Grouped Product Virtual Product Bundle Product Downloadable Product"
+      }
+    },
+    {
+      "timestamp": 1788391267855,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "Default",
+      "element_attrs": {
+        "tag": "div",
+        "data-tw-jsclick": "1",
+        "visible_text": "Default"
+      }
+    },
+    {
+      "timestamp": 1788391269328,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_3",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788391270606,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_3",
+      "target": "Top",
+      "element_attrs": {
+        "tag": "div",
+        "data-tw-jsclick": "1",
+        "visible_text": "Top"
+      }
+    },
+    {
+      "timestamp": 1788391272492,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "SG6TMNF",
+        "name": "product[name]",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788391273887,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "SG6TMNF",
+        "name": "product[name]",
+        "type": "text"
+      },
+      "value": "Phoebe Zipper Sweatshirt"
+    },
+    {
+      "timestamp": 1788391281241,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "Product Name",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "Product Name"
+      }
+    },
+    {
+      "timestamp": 1788391281516,
+      "type": "send_keys",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "element_attrs": {
+        "tag": "input",
+        "id": "SG6TMNF",
+        "name": "product[name]",
+        "type": "text"
+      },
+      "key": "Control+v"
+    },
+    {
+      "timestamp": 1788391282024,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "SG6TMNF",
+        "name": "product[name]",
+        "type": "text"
+      },
+      "value": "Energy-Bulk Women Shirt"
+    },
+    {
+      "timestamp": 1788391282752,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "WQFAMJT",
+        "name": "product[price]",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788391284352,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "WQFAMJT",
+        "name": "product[price]",
+        "type": "text"
+      },
+      "value": "60"
+    },
+    {
+      "timestamp": 1788391285270,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788391288307,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788391288982,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "K31QU3V",
+        "name": "product[quantity_and_stock_status][qty]",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788391290514,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "K31QU3V",
+        "name": "product[quantity_and_stock_status][qty]",
+        "type": "text"
+      },
+      "value": "50"
+    },
+    {
+      "timestamp": 1788391291615,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788391292476,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "Select...",
+      "element_attrs": {
+        "tag": "div",
+        "data-tw-jsclick": "1",
+        "visible_text": "Select..."
+      }
+    },
+    {
+      "timestamp": 1788391293196,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "UOAIX5H2",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788391294890,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "UOAIX5H2",
+        "type": "text"
+      },
+      "value": "tops"
+    },
+    {
+      "timestamp": 1788391296274,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "Tops Default Category / Men",
+      "element_attrs": {
+        "tag": "div",
+        "data-tw-jsclick": "1",
+        "visible_text": "Tops Default Category / Men"
+      }
+    },
+    {
+      "timestamp": 1788391296802,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "Tops Default Category / Women",
+      "element_attrs": {
+        "tag": "div",
+        "data-tw-jsclick": "1",
+        "visible_text": "Tops Default Category / Women"
+      }
+    },
+    {
+      "timestamp": 1788391297354,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "Done",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Done"
+      }
+    },
+    {
+      "timestamp": 1788391299005,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "value": "3"
+    },
+    {
+      "timestamp": 1788391300089,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "value": "3"
+    },
+    {
+      "timestamp": 1788391301929,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "value": "5"
+    },
+    {
+      "timestamp": 1788391302449,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638",
+      "element_attrs": {
+        "tag": "select",
+        "id": "DAJ2JC4",
+        "name": "product[size]",
+        "aria-label": "notice-DAJ2JC4",
+        "visible_text": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638"
+      }
+    },
+    {
+      "timestamp": 1788391304327,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638",
+      "element_attrs": {
+        "tag": "select",
+        "id": "DAJ2JC4",
+        "name": "product[size]",
+        "aria-label": "notice-DAJ2JC4",
+        "visible_text": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788391304328,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638",
+      "element_attrs": {
+        "tag": "select",
+        "id": "DAJ2JC4",
+        "name": "product[size]",
+        "aria-label": "notice-DAJ2JC4",
+        "visible_text": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638"
+      },
+      "value": "167"
+    },
+    {
+      "timestamp": 1788391304329,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_4",
+      "target": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638",
+      "element_attrs": {
+        "tag": "select",
+        "id": "DAJ2JC4",
+        "name": "product[size]",
+        "aria-label": "notice-DAJ2JC4",
+        "visible_text": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638"
+      }
+    },
+    {
+      "timestamp": 1788391306449,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "6"
+    },
+    {
+      "timestamp": 1788391307142,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYell",
+      "element_attrs": {
+        "tag": "select",
+        "id": "JMOCDVU",
+        "name": "product[color]",
+        "aria-label": "notice-JMOCDVU",
+        "visible_text": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYellow"
+      }
+    },
+    {
+      "timestamp": 1788391308910,
+      "type": "input",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYell",
+      "element_attrs": {
+        "tag": "select",
+        "id": "JMOCDVU",
+        "name": "product[color]",
+        "aria-label": "notice-JMOCDVU",
+        "visible_text": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYellow"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788391308910,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYell",
+      "element_attrs": {
+        "tag": "select",
+        "id": "JMOCDVU",
+        "name": "product[color]",
+        "aria-label": "notice-JMOCDVU",
+        "visible_text": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYellow"
+      },
+      "value": "50"
+    },
+    {
+      "timestamp": 1788391308911,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYell",
+      "element_attrs": {
+        "tag": "select",
+        "id": "JMOCDVU",
+        "name": "product[color]",
+        "aria-label": "notice-JMOCDVU",
+        "visible_text": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYellow"
+      }
+    },
+    {
+      "timestamp": 1788391349778,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYell",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "BlackBlueBrownGrayGreenLavenderMultiOrangePurpleRedWhiteYellow"
+      }
+    },
+    {
+      "timestamp": 1788391351223,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "7"
+    },
+    {
+      "timestamp": 1788391352139,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638",
+      "element_attrs": {
+        "tag": "select",
+        "id": "DAJ2JC4",
+        "name": "product[size]",
+        "aria-label": "notice-DAJ2JC4",
+        "visible_text": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638"
+      }
+    },
+    {
+      "timestamp": 1788391354768,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788391356433,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "4"
+    },
+    {
+      "timestamp": 1788391356461,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788391356962,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788391358278,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "7"
+    },
+    {
+      "timestamp": 1788391359375,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638",
+      "element_attrs": {
+        "tag": "select",
+        "id": "DAJ2JC4",
+        "name": "product[size]",
+        "aria-label": "notice-DAJ2JC4",
+        "visible_text": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638"
+      }
+    },
+    {
+      "timestamp": 1788391362908,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638",
+      "element_attrs": {
+        "tag": "select",
+        "id": "DAJ2JC4",
+        "name": "product[size]",
+        "aria-label": "notice-DAJ2JC4",
+        "visible_text": "55 cmXS65 cmS75 cmM6 footL8 footXL10 foot282930313233343638"
+      }
+    },
+    {
+      "timestamp": 1788391363332,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "N/A? zipBoat NeckCrewFull zipV-neckBalletScoopHigh CollarSta",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "N/A? zipBoat NeckCrewFull zipV-neckBalletScoopHigh CollarStand CollarRoll NeckSquare Neck"
+      }
+    },
+    {
+      "timestamp": 1788391365526,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "value": "9"
+    },
+    {
+      "timestamp": 1788391367861,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_5",
+      "value": "10"
+    },
+    {
+      "timestamp": 1788391369505,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple_5",
+      "value": "4"
+    },
+    {
+      "timestamp": 1788391371920,
+      "type": "click",
+      "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+      "stage": "simple",
+      "target": "Save",
+      "element_attrs": {
+        "tag": "button",
+        "id": "save-button",
+        "data-tw-jsclick": "1",
+        "aria-label": "Save",
+        "visible_text": "Save"
+      }
+    },
+    {
+      "timestamp": 1788391378080,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/2046/set/9/type/simple/store/0/back/edit/",
+      "stage": "edit",
+      "value": "5"
+    },
+    {
+      "timestamp": 1788391380515,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/2046/set/9/type/simple/store/0/back/edit/",
+      "stage": "edit_6",
+      "value": "10"
+    },
+    {
+      "timestamp": 1788391381442,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/catalog/product/edit/id/2046/set/9/type/simple/store/0/back/edit/",
+      "stage": "edit",
+      "value": "4"
+    }
+  ],
+  "page_context": {
+    "dashboard": "[5082]<a />\n[5086]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[5087]<a />\n\t\tDashboard\n[5089]<li id=menu-magento-sales-sales role=menu-item />\n\t[5090]<a />\n\t\tSales\n[5110]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[5111]<a />\n\t\tCatalog\n[5121]<li id=menu-magento-customer-customer role=menu-item />\n\t[5122]<a />\n\t\tCustomers\n[5134]<li id=menu-magento-backend-marketing role=menu-item />\n\t[5135]<a />\n\t\tMarketing\n[5175]<li id=menu-magento-backend-content role=menu-item />\n\t[5176]<a />\n\t\tContent\n[5202]<li id=menu-magento-reports-report role=menu-item />\n\t[5203]<a />\n\t\tReports\n[5279]<li id=menu-magento-backend-stores role=menu-item />\n\t[5280]<a />\n\t\tStores\n[5325]<li id=menu-magento-backend-system role=menu-item />\n\t[5326]<a />\n\t\tSystem\n[5374]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[5375]<a />\n\t\tFind Partners & Extensions\nDashboard\n[5381]<a title=My Account />\n\tadmin\n[5383]<a title=Notifications />\n[5647]<div />\n\t[5073]<form id=form-search />\n\t\t[6335]<div />\n\t\t\t[5074]<input type=text id=search-global autocomplete=off />\n[6359]<span />\n\tScope:\n[5392]<button id=store-change-button />\n\tAll Store Views\n[5395]<a title=What is this? />\n\t[5396]<span />\n\t\tWhat is this?\n[5398]<button title=Reload Data type=submit />\n\tReload Data\nAdvanced Reporting\nGain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\n[5405]<a title=Go to Advanced Reporting />\n\tGo to Advanced Reporting\nChart is disabled. To enable the chart, click\n[5408]<a />\n\there\nRevenue\n$0.00\nTax\n$0.00\nShipping\n$0.00\nQuantity\n[6491]<strong />\n[5429]<li role=tab selected=true expanded=true />\n\t[5430]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />\n\t\t[6507]<span title=The information in this tab has been changed. />\n\t\t[6509]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[6511]<span title=Loading... />\n\t\tBestsellers\n[5432]<li role=tab selected=false expanded=false />\n\t[5433]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />\n\t\t[6523]<span title=The information in this tab has been changed. />\n\t\t[6525]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[6527]<span title=Loading... />\n\t\tMost Viewed Products\n[5435]<li role=tab selected=false expanded=false />\n\t[5436]<a title=New Customers id=grid_tab_new_customers role=presentation />\n\t\t[6541]<span title=The information in this tab has been changed. />\n\t\t[6543]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[6545]<span title=Loading... />\n\t\tNew Customers\n[5438]<li role=tab selected=false expanded=false />\n\t[5439]<a title=Customers id=grid_tab_customers role=presentation />\n\t\t[6559]<span title=The information in this tab has been changed. />\n\t\t[6561]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[6563]<span title=Loading... />\n\t\tCustomers\n[5444]<tr />\n\tProduct\n\tPrice\n\tQuantity\n[5450]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />\n\t[5451]<td />\n\t\tQuest Lumaflex™ Band\n\t[5453]<td />\n\t\t$19.00\n\t[5455]<td />\n[5457]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />\n\t[5458]<td />\n\t\tSprite Yoga Strap 6 foot\n\t[5460]<td />\n\t\t$14.00\n\t[5462]<td />\n[5464]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />\n\t[5465]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[5467]<td />\n\t\t$27.00\n\t[5469]<td />\n[5471]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />\n\t[5472]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[5474]<td />\n\t\t$23.00\n\t[5476]<td />\n[5478]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />\n\t[5479]<td />\n\t\tOvernight Duffle\n\t[5481]<td />\n\t\t$45.00\n\t[5483]<td />\nLifetime Sales\n$0.00\nAverage Order\n$0.00\nLast Orders\n[5491]<tr />\n\tCustomer\n\tItems\n\tTotal\n[5498]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />\n\t[5499]<td />\n\t\tSarah Miller\n\t[5501]<td />\n\t[5503]<td />\n\t\t$194.40\n[5505]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />\n\t[5506]<td />\n\t\tGrace Nguyen\n\t[5508]<td />\n\t[5510]<td />\n\t\t$190.00\n[5512]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />\n\t[5513]<td />\n\t\tMatt Baker\n\t[5515]<td />\n\t[5517]<td />\n\t\t$151.40\n[5519]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />\n\t[5520]<td />\n\t\tLily Potter\n\t[5522]<td />\n\t[5524]<td />\n\t\t$188.20\n[5526]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />\n\t[5527]<td />\n\t\tAva Brown\n\t[5529]<td />\n\t[5531]<td />\n\t\t$83.40\nLast Search Terms\n[5534]<table id=lastSearchGrid_table />\n\t[5535]<tr />\n\t\t[5536]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[5542]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[5543]<td />\n\t\t\tAntonia\n\t\t[5545]<td />\n\t\t[5547]<td />\n\t[5549]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[5550]<td />\n\t\t\ttanks\n\t\t[5552]<td />\n\t\t\t23\n\t\t[5554]<td />\n\t[5556]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />\n\t\t[5557]<td />\n\t\t\tnike\n\t\t[5559]<td />\n\t\t[5561]<td />\n\t[5563]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[5564]<td />\n\t\t\tJoust Bag\n\t\t[5566]<td />\n\t\t\t10\n\t\t[5568]<td />\n\t[5570]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[5571]<td />\n\t\t\thollister\n\t\t[5573]<td />\n\t\t[5575]<td />\n\t\t\t19\nTop Search Terms\n[5578]<table id=topSearchGrid_table />\n\t[5579]<tr />\n\t\t[5580]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[5586]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[5587]<td />\n\t\t\thollister\n\t\t[5589]<td />\n\t\t[5591]<td />\n\t\t\t19\n\t[5593]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[5594]<td />\n\t\t\tJoust Bag\n\t\t[5596]<td />\n\t\t\t10\n\t\t[5598]<td />\n\t[5600]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />\n\t\t[5601]<td />\n\t\t\tAntonia Racer Tank\n\t\t[5603]<td />\n\t\t\t23\n\t\t[5605]<td />\n\t[5607]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[5608]<td />\n\t\t\tAntonia\n\t\t[5610]<td />\n\t\t[5612]<td />\n\t[5614]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[5615]<td />\n\t\t\ttanks\n\t\t[5617]<td />\n\t\t\t23\n\t\t[5619]<td />\n[5625]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[5630]<a id=footer_privacy />\n\tPrivacy Policy\n[5633]<a id=footer_account_activity />\n\tAccount Activity\n[5636]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "dashboard_1": "*[6969]<a />\n*[6978]<a />\n\tDashboard\n*[6869]<a />\n\tSales\n*[6870]<a />\n\tCatalog\n*[6871]<a />\n\tCustomers\n*[6872]<a />\n\tMarketing\n*[6873]<a />\n\tContent\n*[6874]<a />\n\tReports\n*[6875]<a />\n\tStores\n*[6876]<a />\n\tSystem\n*[7581]<a />\n\tFind Partners & Extensions\nProducts\n*[7643]<a title=My Account />\n\tadmin\n*[7681]<a title=Notifications />\n*[7686]<div />\n\t*[6854]<form id=form-search />\n\t\t*[7689]<div />\n\t\t\t*[6855]<input type=text id=search-global name=query />\n*[7719]<button title=Add Product id=add_new_product-button />\n\tAdd Product\n*[7725]<button title=Add Product aria-label=Add product of type />\n*[7791]<div />\n*[7818]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[7828]<a id=footer_privacy />\n\tPrivacy Policy\n*[7831]<a id=footer_account_activity />\n\tAccount Activity\n*[7834]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "product": "Dashboard\n*[45957]<a />\n\tSales\n*[45958]<a />\n\tCatalog\n*[45959]<a />\n\tCustomers\n*[45960]<a />\n\tMarketing\n*[45961]<a />\n\tContent\n*[45962]<a />\n\tReports\n*[45963]<a />\n\tStores\n*[45964]<a />\n\tSystem\nFind Partners & Extensions\nNew Product\nadmin\nSave\n*[45965]<button title=Back id=back />\n\tBack\nAdd Attribute\n*[45975]<div />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\nPrivacy Policy\nAccount Activity\nReport an Issue",
+    "product_2": "Dashboard\n*[45957]<a />\n\tSales\n*[45958]<a />\n\tCatalog\n*[45959]<a />\n\tCustomers\n*[45960]<a />\n\tMarketing\n*[45961]<a />\n\tContent\n*[45962]<a />\n\tReports\n*[45963]<a />\n\tStores\n*[45964]<a />\n\tSystem\nFind Partners & Extensions\nNew Product\nadmin\nSave\n*[45965]<button title=Back id=back />\n\tBack\nAdd Attribute\n*[45975]<div />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\nPrivacy Policy\nAccount Activity\nReport an Issue",
+    "simple": "Please wait...\n[46095]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[46096]<a />\n\t\tDashboard\n[46101]<li id=menu-magento-sales-sales role=menu-item />\n\t[45957]<a />\n\t\tSales\n[46144]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[45958]<a />\n\t\tCatalog\n[46167]<li id=menu-magento-customer-customer role=menu-item />\n\t[45959]<a />\n\t\tCustomers\n[46192]<li id=menu-magento-backend-marketing role=menu-item />\n\t[45960]<a />\n\t\tMarketing\n[46277]<li id=menu-magento-backend-content role=menu-item />\n\t[45961]<a />\n\t\tContent\n[46336]<li id=menu-magento-reports-report role=menu-item />\n\t[45962]<a />\n\t\tReports\n[46497]<li id=menu-magento-backend-stores role=menu-item />\n\t[45963]<a />\n\t\tStores\n[46593]<li id=menu-magento-backend-system role=menu-item />\n\t[45964]<a />\n\t\tSystem\n[46698]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[46699]<a />\n\t\tFind Partners & Extensions\nNew Product\n[46767]<a title=My Account />\n\tadmin\n[46805]<a title=Notifications />\n[46810]<div />\n\t[45933]<form id=form-search />\n\t\t[46813]<div />\n\t\t\t[45934]<input type=text id=search-global autocomplete=off />\n[46839]<div title=Save />\n\t[46843]<button title=Save id=save-button />\n\t\tSave\n\t[46849]<button title=Save aria-label=Save options />\n[45965]<button title=Back id=back />\n\tBack\n[46890]<button title=Add Attribute id=addAttribute />\n\tAdd Attribute\nEnable Product\nAttribute Set\n[50142]<div />\n\tTop\nProduct Name\nSKU\nPrice\n[66405]<button />\n\tAdvanced Pricing\nTax Class\nQuantity\n[66426]<button />\n\tAdvanced Inventory\nStock Status\n[49627]<div />\n\t[49629]<span />\n\t\tWeight\n[50568]<input type=text id=OHUT3CJ name=product[weight] maxlength=255 />\nlbs\n*[51375]<select id=X861W90 name=product[product_has_weight] aria-label=notice-X861W90 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=This item has weight|This item has no weight,format=numeric) />\n[49772]<div />\n\t[49774]<span />\n\t\tCategories\n[50422]<div />\n\t[73333]<span />\n\t\t[73334]<span />\n\t\t\tTops\n\t\t[73335]<button />\n\t[73348]<span />\n\t\t[73349]<span />\n\t\t\tTops\n\t\t[73350]<button />\n[66447]<button />\n\tNew Category\n[49314]<span />\n\tVisibility\n*[50602]<select id=R8D4Y0M name=product[visibility] aria-label=notice-R8D4Y0M expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />\n[49860]<div />\n\t[49862]<span />\n\t\tSet Product as New From\n[51404]<input type=text id=I02TLBV name=product[news_from_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[51457]<button />\n\t[51460]<span />\n\t\tundefined\n[49911]<div />\n\t[49913]<span />\n\t\tTo\n[51406]<input type=text id=X4GE8W8 name=product[news_to_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[58751]<button />\n\t[58754]<span />\n\t\tundefined\n[49363]<span />\n\tCountry of Manufacture\n*[50621]<select id=S4W9IIS name=product[country_of_manufacture] aria-label=notice-S4W9IIS expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />\n[70476]<span />\n\tActivity\n*|scroll element[71615]<select id=VJ6E574 name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)\n\t[71619]<option value=4 selected=false />\n\t[71622]<option value=5 selected=false />\n\t[71625]<option value=6 selected=false />\n\t[71628]<option value=7 selected=false />\n\t[71631]<option value=8 selected=false />\n\t[71634]<option value=9 selected=false />\n\t[71637]<option value=10 selected=false />\n\t[71640]<option value=11 selected=false />\n\t[71658]<option value=17 selected=false />\n\t[71661]<option value=18 selected=false />\n[70539]<span />\n\tStyle General\n*|scroll element[71705]<select id=FXDIQHN name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 0%, 3.3 pages below, total: 4.3 pages)\n\t[71709]<option value=116 selected=false />\n\t[71712]<option value=117 selected=false />\n\t[71715]<option value=118 selected=false />\n\t[71718]<option value=119 selected=false />\n\t[71721]<option value=120 selected=false />\n\t[71724]<option value=121 selected=false />\n\t[71727]<option value=122 selected=false />\n\t[71730]<option value=123 selected=false />\n\t[71748]<option value=129 selected=false />\n\t[71751]<option value=130 selected=false />\n[70602]<span />\n\tMaterial\n*|scroll element[71819]<select id=L51RX4K name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)\n\t[71823]<option value=31 selected=false />\n\t[71826]<option value=142 selected=false />\n\t[71829]<option value=32 selected=false />\n\t[71832]<option value=143 selected=false />\n\t[71835]<option value=33 selected=false />\n\t[71838]<option value=144 selected=false />\n\t[71841]<option value=34 selected=false />\n\t[71844]<option value=145 selected=false />\n\t[71847]<option value=146 selected=false />\n\t[71850]<option value=35 selected=false />\n[70665]<span />\n\tSleeve\n*[71973]<select id=OLAQ8OK name=product[sleeve] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Sleeve|Long-Sleeve|Short-Sleeve|Sleeveless,format=numeric) />\n\t[71977]<option value=160 selected=false />\n\t[71980]<option value=161 selected=false />\n\t[71983]<option value=162 selected=false />\n*|scroll element[72007]<select id=R2LKHBP name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)\n*|scroll element[72065]<select id=JSP3KQL name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)\n*|scroll element[72111]<select id=Y3OE0XN name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)",
+    "simple_3": "[46087]<a />\n[46095]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[46096]<a />\n\t\tDashboard\n[46101]<li id=menu-magento-sales-sales role=menu-item />\n\t[45957]<a />\n\t\tSales\n[46144]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[45958]<a />\n\t\tCatalog\n[46167]<li id=menu-magento-customer-customer role=menu-item />\n\t[45959]<a />\n\t\tCustomers\n[46192]<li id=menu-magento-backend-marketing role=menu-item />\n\t[45960]<a />\n\t\tMarketing\n[46277]<li id=menu-magento-backend-content role=menu-item />\n\t[45961]<a />\n\t\tContent\n[46336]<li id=menu-magento-reports-report role=menu-item />\n\t[45962]<a />\n\t\tReports\n[46497]<li id=menu-magento-backend-stores role=menu-item />\n\t[45963]<a />\n\t\tStores\n[46593]<li id=menu-magento-backend-system role=menu-item />\n\t[45964]<a />\n\t\tSystem\n[46698]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[46699]<a />\n\t\tFind Partners & Extensions\nNew Product\n[46767]<a title=My Account />\n\tadmin\n[46805]<a title=Notifications />\n[46810]<div />\n\t[45933]<form id=form-search />\n\t\t[46813]<div />\n\t\t\t[45934]<input type=text id=search-global autocomplete=off />\n[46839]<div title=Save />\n\t[46843]<button title=Save id=save-button />\n\t\tSave\n\t[46849]<button title=Save aria-label=Save options />\n[45965]<button title=Back id=back />\n\tBack\n[46890]<button title=Add Attribute id=addAttribute />\n\tAdd Attribute\n[49020]<span />\n\tEnable Product\n[50137]<input type=checkbox checked=true id=ION6MG8 name=product[status] value=1 />\n[50139]<span />\n[49069]<span />\n\tAttribute Set\n[50142]<div />\n\t[50143]<div />\n\t\tDefault\n[50159]<div />\n\t[50161]<input type=text id=K9WUVC52 />\n[50271]<div />\n\t[50274]<label />\n\t\t[50275]<span />\n\t\t\tBag\n[50288]<div />\n\t[50291]<label />\n\t\t[50292]<span />\n\t\t\tBottom\n[50305]<div />\n\t[50308]<label />\n\t\t[50309]<span />\n\t\t\tDefault\n[50322]<div />\n\t[50325]<label />\n\t\t[50326]<span />\n\t\t\tDownloadable\n[50339]<div />\n\t[50342]<label />\n\t\t[50343]<span />\n\t\t\tGear\n[50356]<div />\n\t[50359]<label />\n\t\t[50360]<span />\n\t\t\tSprite Stasis Ball\n[50373]<div />\n\t[50376]<label />\n\t\t[50377]<span />\n\t\t\tSprite Yoga Strap\n[50390]<div />\n\t[50393]<label />\n\t\t[50394]<span />\n\t\t\tTop\n[49118]<span />\n\tProduct Name\n[49167]<span />\n\tSKU\n[49433]<div />\n\t[49435]<span />\n\t\tPrice\n[66405]<button />\n\tAdvanced Pricing\n[49216]<span />\n\tTax Class\n[49526]<div />\n\t[49528]<span />\n\t\tQuantity\n[66426]<button />\n\tAdvanced Inventory\n[49265]<span />\n\tStock Status\n*[50589]<select id=Q42L7LN name=product[quantity_and_stock_status][is_in_stock] aria-label=notice-Q42L7LN expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=In Stock|Out of Stock,format=numeric) />\n[49627]<div />\n\t[49629]<span />\n\t\tWeight\n[50568]<input type=text id=OHUT3CJ name=product[weight] maxlength=255 />\nlbs\n*[51375]<select id=X861W90 name=product[product_has_weight] aria-label=notice-X861W90 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=This item has weight|This item has no weight,format=numeric) />\n[49772]<div />\n\t[49774]<span />\n\t\tCategories\n[50422]<div />\n\t[50423]<div />\n\t\tSelect...\n[66447]<button />\n\tNew Category\n[49314]<span />\n\tVisibility\n*[50602]<select id=R8D4Y0M name=product[visibility] aria-label=notice-R8D4Y0M expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />\n[49860]<div />\n\t[49862]<span />\n\t\tSet Product as New From\n[51404]<input type=text id=I02TLBV name=product[news_from_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[51457]<button />\n\t[51460]<span />\n\t\tundefined\n[49911]<div />\n\t[49913]<span />\n\t\tTo\n[51406]<input type=text id=X4GE8W8 name=product[news_to_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n[58751]<button />\n\t[58754]<span />\n\t\tundefined\n[49363]<span />\n\tCountry of Manufacture\n*[50621]<select id=S4W9IIS name=product[country_of_manufacture] aria-label=notice-S4W9IIS expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />\n[48172]<div />\n\t[48173]<strong />\n\t\t[48174]<span />\n\t\t\tContent\n\t\t[48175]<span />\n[48451]<div />\n\t[48452]<strong />\n\t\t[48453]<span />\n\t\t\tConfigurations\n\t\t[48454]<span />\n[66384]<button />\n\tCreate Configurations\nConfigurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).\n[47940]<div />\n\t[47941]<strong />\n\t\t[47942]<span />\n\t\t\tImages And Videos\n\t\t[47943]<span />\n[48218]<div />\n\t[48203]<div />\n\t\t[48204]<strong />\n\t\t\t[48205]<span />\n\t\t\t\tSearch Engine Optimization\n\t\t\t[48206]<span />\n[48420]<div />\n\t[48421]<strong />\n\t\t[48422]<span />\n\t\t\tRelated Products, Up-Sells, and Cross-Sells\n\t\t[48423]<span />\n[48389]<div />\n\t[48390]<strong />\n\t\t[48391]<span />\n\t\t\tCustomizable Options\n\t\t[48392]<span />\n[48358]<div />\n\t[48359]<strong />\n\t\t[48360]<span />\n\t\t\tProduct in Websites\n\t\t[48361]<span />\n[48234]<div />\n\t[48235]<strong />\n\t\t*[48236]<span />\n\t\t\tDesign\n\t\t*[48237]<span />\n*[48265]<div />\n\t*[48266]<strong />\n\t\t*[48267]<span />\n\t\t\tSchedule Design Update\n\t\t*[48268]<span />\n*[48296]<div />\n\t*[48297]<strong />\n\t\t*[48298]<span />\n\t\t\tGift Options\n\t\t*[48299]<span />\n*[48327]<div />\n\t*[48328]<strong />\n\t\t*[48329]<span />\n\t\t\tDownloadable Information",
+    "simple_4": "[46087]<a />\n[46095]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[46096]<a />\n\t\tDashboard\n[46101]<li id=menu-magento-sales-sales role=menu-item />\n\t[45957]<a />\n\t\tSales\n[46144]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[45958]<a />\n\t\tCatalog\n[46167]<li id=menu-magento-customer-customer role=menu-item />\n\t[45959]<a />\n\t\tCustomers\n[46192]<li id=menu-magento-backend-marketing role=menu-item />\n\t[45960]<a />\n\t\tMarketing\n[46277]<li id=menu-magento-backend-content role=menu-item />\n\t[45961]<a />\n\t\tContent\n[46336]<li id=menu-magento-reports-report role=menu-item />\n\t[45962]<a />\n\t\tReports\n[46497]<li id=menu-magento-backend-stores role=menu-item />\n\t[45963]<a />\n\t\tStores\n[46593]<li id=menu-magento-backend-system role=menu-item />\n\t[45964]<a />\n\t\tSystem\n[46698]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[46699]<a />\n\t\tFind Partners & Extensions\nNew Product\n[46767]<a title=My Account />\n\tadmin\n[46805]<a title=Notifications />\n[46810]<div />\n\t[45933]<form id=form-search />\n\t\t[46813]<div />\n\t\t\t[45934]<input type=text id=search-global autocomplete=off />\n[46839]<div title=Save />\n\t[46843]<button title=Save id=save-button />\n\t\tSave\n\t[46849]<button title=Save aria-label=Save options />\n[45965]<button title=Back id=back />\n\tBack\n[46890]<button title=Add Attribute id=addAttribute />\n\tAdd Attribute\n[49020]<span />\n\tEnable Product\n[50137]<input type=checkbox checked=true id=ION6MG8 name=product[status] value=1 />\n[50139]<span />\n[49069]<span />\n\tAttribute Set\n[50142]<div />\n\t[50143]<div />\n\t\tTop\n[49118]<span />\n\tProduct Name\n[50560]<input type=text id=SG6TMNF name=product[name] maxlength=255 />\n[49167]<span />\n\tSKU\n[50562]<input type=text id=EY5P8B5 name=product[sku] maxlength=255 />\n[49433]<div />\n\t[49435]<span />\n\t\tPrice\n[50564]<input type=text id=WQFAMJT name=product[price] maxlength=255 />\n[66405]<button />\n\tAdvanced Pricing\nTax Class\n[49526]<div />\n\t[49528]<span />\n\t\tQuantity\n[50566]<input type=text id=K31QU3V name=product[quantity_and_stock_status][qty] maxlength=255 />\n[66426]<button />\n\tAdvanced Inventory\n[49265]<span />\n\tStock Status\n*[50589]<select id=Q42L7LN name=product[quantity_and_stock_status][is_in_stock] aria-label=notice-Q42L7LN expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=In Stock|Out of Stock,format=numeric) />\n[49627]<div />\n\t[49629]<span />\n\t\tWeight\n[50568]<input type=text id=OHUT3CJ name=product[weight] maxlength=255 />\nlbs\n*[51375]<select id=X861W90 name=product[product_has_weight] aria-label=notice-X861W90 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=This item has weight|This item has no weight,format=numeric) />\n[49772]<div />\n\t[49774]<span />\n\t\tCategories\n[50422]<div />\n\t[50423]<div />\n\t\tSelect...\n*[50432]<div />\n\t*[50434]<input type=text id=UOAIX5H2 />\n*[50548]<div />\n\t*[50549]<div />\n\t*[50550]<input type=checkbox checked=false />\n\t*[50551]<label />\n\t\t*[50552]<span />\n\t\t\tDefault Category\n*[66499]<div />\n\t*[66500]<div />\n\t*[66501]<input type=checkbox checked=false />\n\t*[66502]<label />\n\t\tGear\n*[66544]<div />\n\t*[66545]<div />\n\t*[66546]<input type=checkbox checked=false />\n\t*[66547]<label />\n\t\tCollections\n*[66589]<div />\n\t*[66590]<div />\n\t*[66591]<input type=checkbox checked=false />\n\t*[66592]<label />\n\t\tTraining\n*[66634]<div />\n\t*[66635]<div />\n\t*[66636]<input type=checkbox checked=false />\n\t*[66637]<label />\n\t\tMen\n*[66679]<div />\n\t*[66680]<div />\n\t*[66681]<input type=checkbox checked=false />\n\t*[66682]<label />\n\t\tWomen\n*[66724]<div />\n\t*[66725]<div />\n\t*[66726]<input type=checkbox checked=false />\n\t*[66727]<label />\n\t\tPromotions\n*[66769]<div />\n\t*[66771]<input type=checkbox checked=false />\n\t*[66772]<label />\n\t\tSale\n*[66781]<div />\n\t*[66783]<input type=checkbox checked=false />\n\t*[66784]<label />\n\t\tWhat's New\n*[50448]<button />\n\tDone\n[66447]<button />\n\tNew Category\n[49314]<span />\n\tVisibility\n[49860]<div />\n\t[49862]<span />\n\t\tSet Product as New From\n[51457]<button />\n\tundefined\nTo\n[58751]<button />\n\tundefined\n[49363]<span />\n\tCountry of Manufacture\n[70476]<span />\n\tActivity\n|scroll element|<select id=VJ6E574 name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)\n\t[71658]<option value=17 selected=false />\n\t[71661]<option value=18 selected=false />\n[70539]<span />\n\tStyle General\n*|scroll element[71705]<select id=FXDIQHN name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 0%, 3.3 pages below, total: 4.3 pages)\n\t[71715]<option value=118 selected=false />\n\t[71718]<option value=119 selected=false />\n\t[71721]<option value=120 selected=false />\n\t[71724]<option value=121 selected=false />\n\t[71727]<option value=122 selected=false />\n\t[71730]<option value=123 selected=false />\n\t[71748]<option value=129 selected=false />\n\t[71751]<option value=130 selected=false />\n\t[71769]<option value=136 selected=false />\n\t[71772]<option value=137 selected=false />\n\t[71775]<option value=138 selected=false />\n\t[71778]<option value=139 selected=false />\n\t[71781]<option value=140 selected=false />\n[70602]<span />\n\tMaterial\n*|scroll element[71819]<select id=L51RX4K name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)\n\t[71823]<option value=31 selected=false />\n\t[71826]<option value=142 selected=false />\n\t[71829]<option value=32 selected=false />\n\t[71832]<option value=143 selected=false />\n\t[71835]<option value=33 selected=false />\n\t[71838]<option value=144 selected=false />\n\t[71841]<option value=34 selected=false />\n\t[71844]<option value=145 selected=false />\n\t[71847]<option value=146 selected=false />\n\t[71850]<option value=35 selected=false />\n\t[71853]<option value=147 selected=false />\n\t[71856]<option value=36 selected=false />\n\t[71859]<option value=148 selected=false />\n\t[71862]<option value=37 selected=false />\n\t[71865]<option value=149 selected=false />\n\t[71868]<option value=38 selected=false />\n\t[71871]<option value=39 selected=false />\n\t[71874]<option value=150 selected=false />\n\t[71877]<option value=151 selected=false />\n\t[71880]<option value=40 selected=false />\n\t[71883]<option value=152 selected=false />\n\t[71886]<option value=41 selected=false />\n\t[71889]<option value=42 selected=false />\n\t[71892]<option value=153 selected=false />\n\t[71895]<option value=43 selected=false />\n\t[71898]<option value=154 selected=false />\n\t[71901]<option value=155 selected=false />\n[70665]<span />\n\tSleeve\n*[71973]<select id=OLAQ8OK name=product[sleeve] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Sleeve|Long-Sleeve|Short-Sleeve|Sleeveless,format=numeric) />\n\t[71977]<option value=160 selected=false />\n\t[71980]<option value=161 selected=false />\n\t[71983]<option value=162 selected=false />\n\t[71986]<option value=163 selected=false />\n\t[71989]<option value=164 selected=false />\n\t[71992]<option value=165 selected=false />\n[70728]<span />\n\tSize\n*[70748]<select id=DAJ2JC4 name=product[size] aria-label=notice-DAJ2JC4 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=55 cm|XS|65 cm|S,format=numeric) />\n[70861]<span />\n\tCollar\n*|scroll element[72007]<select id=R2LKHBP name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)\n\t[72011]<option value=180 selected=false />\n\t[72014]<option value=181 selected=false />\n\t[72017]<option value=182 selected=false />\n\t[72020]<option value=183 selected=false />\n\t[72023]<option value=184 selected=false />\n\t[72026]<option value=185 selected=false />\n\t[72029]<option value=186 selected=false />\n\t[72032]<option value=187 selected=false />\n[70924]<span />\n\tPattern\n*|scroll element[72065]<select id=JSP3KQL name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)\n\t[72069]<option value=192 selected=false />\n\t[72072]<option value=193 selected=false />\n\t[72075]<option value=194 selected=false />\n*|scroll element[72111]<select id=Y3OE0XN name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)",
+    "simple_5": "[46087]<a />\n[46095]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[46096]<a />\n\t\tDashboard\n[46101]<li id=menu-magento-sales-sales role=menu-item />\n\t[45957]<a />\n\t\tSales\n[46144]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[45958]<a />\n\t\tCatalog\n[46167]<li id=menu-magento-customer-customer role=menu-item />\n\t[45959]<a />\n\t\tCustomers\n[46192]<li id=menu-magento-backend-marketing role=menu-item />\n\t[45960]<a />\n\t\tMarketing\n[46277]<li id=menu-magento-backend-content role=menu-item />\n\t[45961]<a />\n\t\tContent\n[46336]<li id=menu-magento-reports-report role=menu-item />\n\t[45962]<a />\n\t\tReports\n[46497]<li id=menu-magento-backend-stores role=menu-item />\n\t[45963]<a />\n\t\tStores\n[46593]<li id=menu-magento-backend-system role=menu-item />\n\t[45964]<a />\n\t\tSystem\n[46698]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[46699]<a />\n\t\tFind Partners & Extensions\nNew Product\n*[46767]<a title=My Account />\n\tadmin\n*[46805]<a title=Notifications />\n*[46810]<div />\n\t*[45933]<form id=form-search />\n\t\t*[46813]<div />\n\t\t\t*[45934]<input type=text id=search-global autocomplete=off />\n[46839]<div title=Save />\n\t[46843]<button title=Save id=save-button />\n\t\tSave\n\t[46849]<button title=Save aria-label=Save options />\n[45965]<button title=Back id=back />\n\tBack\n[46890]<button title=Add Attribute id=addAttribute />\n\tAdd Attribute\n*[49020]<span />\n\tEnable Product\n*[50137]<input type=checkbox checked=true id=ION6MG8 name=product[status] value=1 />\n*[50139]<span />\n*[49069]<span />\n\tAttribute Set\n*[50142]<div />\n\t*[50143]<div />\n\t\tTop\n*[49118]<span />\n\tProduct Name\n*[50560]<input type=text id=SG6TMNF name=product[name] maxlength=255 />\n*[49167]<span />\n\tSKU\n*[50562]<input type=text id=EY5P8B5 name=product[sku] maxlength=255 />\nPrice\n*[66405]<button />\n\tAdvanced Pricing\n*[49216]<span />\n\tTax Class\n*[50576]<select id=XISDE3T name=product[tax_class_id] aria-label=notice-XISDE3T expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=None|Taxable Goods,format=numeric) />\n*[49526]<div />\n\t*[49528]<span />\n\t\tQuantity\n*[50566]<input type=text id=K31QU3V name=product[quantity_and_stock_status][qty] maxlength=255 />\n*[66426]<button />\n\tAdvanced Inventory\n*[49265]<span />\n\tStock Status\n*[50589]<select id=Q42L7LN name=product[quantity_and_stock_status][is_in_stock] aria-label=notice-Q42L7LN expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=In Stock|Out of Stock,format=numeric) />\n*[49627]<div />\n\t*[49629]<span />\n\t\tWeight\n*[50568]<input type=text id=OHUT3CJ name=product[weight] maxlength=255 />\nlbs\n*[51375]<select id=X861W90 name=product[product_has_weight] aria-label=notice-X861W90 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=This item has weight|This item has no weight,format=numeric) />\n*[49772]<div />\n\t*[49774]<span />\n\t\tCategories\n*[50422]<div />\n\t*[73333]<span />\n\t\t*[73334]<span />\n\t\t\tTops\n\t\t*[73335]<button />\n\t*[73348]<span />\n\t\t*[73349]<span />\n\t\t\tTops\n\t\t*[73350]<button />\n*[66447]<button />\n\tNew Category\n*[49314]<span />\n\tVisibility\n*[50602]<select id=R8D4Y0M name=product[visibility] aria-label=notice-R8D4Y0M expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />\n*[49860]<div />\n\t*[49862]<span />\n\t\tSet Product as New From\n*[51404]<input type=text id=I02TLBV name=product[news_from_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[51457]<button />\n\t*[51460]<span />\n\t\tundefined\n*[49911]<div />\n\t*[49913]<span />\n\t\tTo\n*[51406]<input type=text id=X4GE8W8 name=product[news_to_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[58751]<button />\n\t*[58754]<span />\n\t\tundefined\n*[49363]<span />\n\tCountry of Manufacture\n*[50621]<select id=S4W9IIS name=product[country_of_manufacture] aria-label=notice-S4W9IIS expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />\n*[70476]<span />\n\tActivity\n*|scroll element[71615]<select id=VJ6E574 name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)\n\t*[71619]<option value=4 selected=false />\n\t*[71622]<option value=5 selected=false />\n\t*[71625]<option value=6 selected=false />\n\t*[71628]<option value=7 selected=false />\n\t*[71631]<option value=8 selected=false />\n\t*[71634]<option value=9 selected=false />\n\t*[71637]<option value=10 selected=false />\n\t*[71640]<option value=11 selected=false />\n\t*[71658]<option value=17 selected=false />\n\t*[71661]<option value=18 selected=false />\n*[70539]<span />\n\tStyle General\n*|scroll element[71705]<select id=FXDIQHN name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 0%, 3.3 pages below, total: 4.3 pages)\n\t*[71709]<option value=116 selected=false />\n\t*[71712]<option value=117 selected=false />\n\t*[71715]<option value=118 selected=false />\n\t*[71718]<option value=119 selected=false />\n\t*[71721]<option value=120 selected=false />\n\t*[71724]<option value=121 selected=false />\n\t*[71727]<option value=122 selected=false />\n\t*[71730]<option value=123 selected=false />\n\t[71748]<option value=129 selected=false />\n\t[71751]<option value=130 selected=false />\n\t[71769]<option value=136 selected=false />\n\t[71772]<option value=137 selected=false />\n\t[71775]<option value=138 selected=false />\n\t[71778]<option value=139 selected=false />\n\t[71781]<option value=140 selected=false />\n*[70602]<span />\n\tMaterial\n*|scroll element[71819]<select id=L51RX4K name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)\n\t*[71823]<option value=31 selected=false />\n\t[71826]<option value=142 selected=false />\n\t[71829]<option value=32 selected=false />\n\t[71832]<option value=143 selected=false />\n\t[71835]<option value=33 selected=false />\n\t[71838]<option value=144 selected=false />\n\t[71841]<option value=34 selected=false />\n\t[71844]<option value=145 selected=false />\n\t[71847]<option value=146 selected=false />\n\t[71850]<option value=35 selected=false />\n\t[71853]<option value=147 selected=false />\n\t[71856]<option value=36 selected=false />\n\t[71859]<option value=148 selected=false />\n\t[71862]<option value=37 selected=false />\n\t[71865]<option value=149 selected=false />\n\t[71868]<option value=38 selected=false />\n\t[71871]<option value=39 selected=false />\n\t[71874]<option value=150 selected=false />\n\t[71877]<option value=151 selected=false />\n\t[71880]<option value=40 selected=false />\n\t[71883]<option value=152 selected=false />\n\t[71886]<option value=41 selected=false />\n\t[71889]<option value=42 selected=false />\n\t[71892]<option value=153 selected=false />\n[70665]<span />\n\tSleeve\n*[71973]<select id=OLAQ8OK name=product[sleeve] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Sleeve|Long-Sleeve|Short-Sleeve|Sleeveless,format=numeric) />\n\t[71977]<option value=160 selected=false />\n\t[71980]<option value=161 selected=false />\n\t[71983]<option value=162 selected=false />\n\t[71986]<option value=163 selected=false />\n\t[71989]<option value=164 selected=false />\n\t[71992]<option value=165 selected=false />\n[70728]<span />\n\tSize\n*[70748]<select id=DAJ2JC4 name=product[size] aria-label=notice-DAJ2JC4 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=55 cm|XS|65 cm|S,format=numeric) />\n[70861]<span />\n\tCollar\n*|scroll element[72007]<select id=R2LKHBP name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)\n\t[72011]<option value=180 selected=false />\n\t[72014]<option value=181 selected=false />\n\t[72017]<option value=182 selected=false />\n\t[72020]<option value=183 selected=false />\n\t[72023]<option value=184 selected=false />\n\t[72026]<option value=185 selected=false />\n\t[72029]<option value=186 selected=false />\n*|scroll element[72065]<select id=JSP3KQL name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)\n*|scroll element[72111]<select id=Y3OE0XN name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)",
+    "edit": "[85056]<a />\n[85060]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[85061]<a />\n\t\tDashboard\n[85063]<li id=menu-magento-sales-sales role=menu-item />\n\t[85064]<a />\n\t\tSales\n[85084]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[85085]<a />\n\t\tCatalog\n[85095]<li id=menu-magento-customer-customer role=menu-item />\n\t[85096]<a />\n\t\tCustomers\n[85108]<li id=menu-magento-backend-marketing role=menu-item />\n\t[85109]<a />\n\t\tMarketing\n[85149]<li id=menu-magento-backend-content role=menu-item />\n\t[85150]<a />\n\t\tContent\n[85176]<li id=menu-magento-reports-report role=menu-item />\n\t[85177]<a />\n\t\tReports\n[85253]<li id=menu-magento-backend-stores role=menu-item />\n\t[85254]<a />\n\t\tStores\n[85299]<li id=menu-magento-backend-system role=menu-item />\n\t[85300]<a />\n\t\tSystem\n[85348]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[85349]<a />\n\t\tFind Partners & Extensions\n[85781]<div title=Save />\n\t[85373]<button title=Save id=save-button />\n\t\tSave\n\t[85375]<button title=Save aria-label=Save options />\n[85377]<button title=Back id=back />\n\tBack\n[85379]<button title=Add Attribute id=addAttribute />\n\tAdd Attribute\n*|scroll element[85007]<select id=UOLC2MN name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)\n*|scroll element[85008]<select id=L8SSXJA name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 0%, 3.3 pages below, total: 4.3 pages)\n\t[89306]<option value=129 selected=false />\n\t[89308]<option value=130 selected=false />\n\t[89320]<option value=136 selected=false />\n\t[89322]<option value=137 selected=false />\n\t[89324]<option value=138 selected=false />\n\t[89326]<option value=139 selected=false />\n\t[89328]<option value=140 selected=false />\n*|scroll element[85009]<select id=THG3QJX name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)\n\t[89395]<option value=32 selected=false />\n\t[89397]<option value=143 selected=false />\n\t[89399]<option value=33 selected=false />\n\t[89401]<option value=144 selected=false />\n\t[89403]<option value=34 selected=false />\n\t[89405]<option value=145 selected=false />\n\t[89407]<option value=146 selected=false />\n\t[89409]<option value=35 selected=false />\n\t[89411]<option value=147 selected=false />\n\t[89413]<option value=36 selected=false />\n\t[89415]<option value=148 selected=false />\n\t[89417]<option value=37 selected=false />\n\t[89419]<option value=149 selected=false />\n\t[89421]<option value=38 selected=false />\n\t[89423]<option value=39 selected=false />\n\t[89425]<option value=150 selected=false />\n\t[89427]<option value=151 selected=false />\n\t[89429]<option value=40 selected=false />\n\t[89431]<option value=152 selected=false />\n\t[89433]<option value=41 selected=false />\n\t[89435]<option value=42 selected=false />\n\t[89437]<option value=153 selected=false />\n\t*[89439]<option value=43 selected=false />\n\t[89441]<option value=154 selected=false />\n\t[89443]<option value=155 selected=false />\n\t[89445]<option value=44 selected=false />\n\t[89447]<option value=156 selected=false />\n\t[89449]<option value=45 selected=false />\n\t[89451]<option value=157 selected=false />\n\t[89453]<option value=46 selected=false />\n\t[89455]<option value=47 selected=false />\n\t[89457]<option value=158 selected=false />\n\t[89459]<option value=48 selected=false />\n\t[89461]<option value=159 selected=false />\n[89511]<span />\n\tSleeve\n*[85010]<select id=VSPP7UY name=product[sleeve] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Sleeve|Long-Sleeve|Short-Sleeve|Sleeveless,format=numeric) />\n\t[89522]<option value=160 selected=false />\n\t[89524]<option value=161 selected=false />\n\t[89526]<option value=162 selected=false />\n\t[89528]<option value=163 selected=false />\n\t[89530]<option value=164 selected=false />\n\t[89532]<option value=165 selected=false />\n[89582]<span />\n\tSize\n*[85011]<select id=TJFDHDJ name=product[size] aria-label=notice-TJFDHDJ expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=55 cm|XS|65 cm|S,format=numeric) />\n[89683]<span />\n\tCollar\n*|scroll element[85012]<select id=VDCO8NF name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)\n\t[89694]<option value=180 selected=false />\n\t[89696]<option value=181 selected=false />\n\t[89698]<option value=182 selected=false />\n\t[89700]<option value=183 selected=false />\n\t[89702]<option value=184 selected=false />\n\t[89704]<option value=185 selected=false />\n\t[89706]<option value=186 selected=false />\n\t*[89708]<option value=187 selected=false />\n*[89766]<span />\n\tPattern\n*|scroll element[85013]<select id=MYPQIJ8 name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)\n\t*[89777]<option value=192 selected=false />\n\t[89779]<option value=193 selected=false />\n\t[89781]<option value=194 selected=false />\n\t[89783]<option value=195 selected=false />\n\t[89785]<option value=196 selected=false />\n\t[89787]<option value=197 selected=false />\n\t[89789]<option value=198 selected=false />\n\t[89791]<option value=199 selected=false />\n[89843]<span />\n\tClimate\n*|scroll element[85014]<select id=PV9DJDU name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)\n\t[89854]<option value=201 selected=false />\n\t[89856]<option value=202 selected=false />\n\t[89858]<option value=203 selected=false />\n\t[89860]<option value=204 selected=false />\n\t[89862]<option value=205 selected=false />\n\t[89864]<option value=206 selected=false />\n\t[89866]<option value=207 selected=false />\n\t[89870]<option value=209 selected=false />\n\t[89872]<option value=210 selected=false />\n\t[89874]<option value=211 selected=false />\nColor\n[90009]<span />\n\tEco Collection\n[85016]<input type=checkbox checked=false id=HWJAIYS name=product[eco_collection] value=0 />\n[90027]<span />\n[90079]<span />\n\tPerformance Fabric\n[85017]<input type=checkbox checked=false id=QI4VW65 name=product[performance_fabric] value=0 />\n[90097]<span />\n[90149]<span />\n\tErin Recommends\n[85018]<input type=checkbox checked=false id=U108H0W name=product[erin_recommends] value=0 />\n[90167]<span />\n[90219]<span />\n\tNew\n[85019]<input type=checkbox checked=false id=P60JXSU name=product[new] value=0 />\n[90237]<span />\n[90289]<span />\n\tSale\n[85020]<input type=checkbox checked=false id=GO6KREI name=product[sale] value=0 />\n[90307]<span />\n[85821]<div />\n\t[84976]<strong />\n\t\t[90557]<span />\n\t\t\tContent\n\t\t[90560]<span />\n[85822]<div />\n\t[84979]<strong />\n\t\t[90620]<span />\n\t\t\tConfigurations\n\t\t[90623]<span />\n[85619]<button />\n\tCreate Configurations\nConfigurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).\n[85825]<div />\n\t[84982]<strong />\n\t\t[90809]<span />\n\t\t\tProduct Reviews\n\t\t[90812]<span />\n[85826]<div />\n\t[84985]<strong />\n\t\t[90872]<span />\n\t\t\tImages And Videos\n\t\t[90875]<span />\n[84987]<div />\n\t[85827]<div />\n\t\t[84988]<strong />\n\t\t\t[90943]<span />\n\t\t\t\tSearch Engine Optimization\n\t\t\t[90946]<span />\n[85828]<div />\n\t[91006]<strong />\n\t\t[91009]<span />\n\t\t\tRelated Products, Up-Sells, and Cross-Sells\n\t\t[91012]<span />\n[85829]<div />\n\t[91072]<strong />\n\t\t[91075]<span />\n\t\t\tCustomizable Options\n\t\t[91078]<span />\n[85830]<div />\n\t[91138]<strong />\n\t\t[91141]<span />\n\t\t\tProduct in Websites\n\t\t[91144]<span />\n[85831]<div />\n\t[91204]<strong />\n\t\t[91207]<span />\n\t\t\tProduct Salable Quantity\n\t\t[91209]<div />\n\t\t\t[85643]<a />\n\t\t[91218]<span />\n[85832]<div />\n\t[91276]<strong />\n\t\t[91279]<span />\n\t\t\tDesign\n\t\t[91282]<span />\n[85833]<div />\n\t[91342]<strong />\n\t\t[91345]<span />\n\t\t\tSchedule Design Update\n\t\t[91348]<span />\n[85834]<div />\n\t[91408]<strong />\n\t\t[91411]<span />\n\t\t\tGift Options\n\t\t[91414]<span />\n[85835]<div />\n\t[91474]<strong />\n\t\t[91477]<span />\n\t\t\tDownloadable Information\n\t\t[91480]<span />\n*[85659]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[85664]<a id=footer_privacy />\n\tPrivacy Policy\n*[85667]<a id=footer_account_activity />\n\tAccount Activity\n*[85670]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "edit_6": "[85056]<a />\n[85060]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[85061]<a />\n\t\tDashboard\n[85063]<li id=menu-magento-sales-sales role=menu-item />\n\t[85064]<a />\n\t\tSales\n[85084]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[85085]<a />\n\t\tCatalog\n[85095]<li id=menu-magento-customer-customer role=menu-item />\n\t[85096]<a />\n\t\tCustomers\n[85108]<li id=menu-magento-backend-marketing role=menu-item />\n\t[85109]<a />\n\t\tMarketing\n[85149]<li id=menu-magento-backend-content role=menu-item />\n\t[85150]<a />\n\t\tContent\n[85176]<li id=menu-magento-reports-report role=menu-item />\n\t[85177]<a />\n\t\tReports\n[85253]<li id=menu-magento-backend-stores role=menu-item />\n\t[85254]<a />\n\t\tStores\n[85299]<li id=menu-magento-backend-system role=menu-item />\n\t[85300]<a />\n\t\tSystem\n[85348]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[85349]<a />\n\t\tFind Partners & Extensions\n[85781]<div title=Save />\n\t[85373]<button title=Save id=save-button />\n\t\tSave\n\t[85375]<button title=Save aria-label=Save options />\n[85377]<button title=Back id=back />\n\tBack\n[85379]<button title=Add Attribute id=addAttribute />\n\tAdd Attribute\n*|scroll element[85007]<select id=UOLC2MN name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)\n\t[89185]<option value=6 selected=false />\n\t[89187]<option value=7 selected=false />\n\t[89189]<option value=8 selected=false />\n\t[89191]<option value=9 selected=false />\n\t[89193]<option value=10 selected=false />\n\t[89195]<option value=11 selected=false />\n\t[89207]<option value=17 selected=false />\n\t[89209]<option value=18 selected=false />\n[89269]<span />\n\tStyle General\n*|scroll element[85008]<select id=L8SSXJA name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 0%, 3.3 pages below, total: 4.3 pages)\n\t[89280]<option value=116 selected=false />\n\t[89282]<option value=117 selected=false />\n\t[89284]<option value=118 selected=false />\n\t[89286]<option value=119 selected=false />\n\t[89288]<option value=120 selected=false />\n\t[89290]<option value=121 selected=false />\n\t[89292]<option value=122 selected=false />\n\t[89294]<option value=123 selected=false />\n\t[89306]<option value=129 selected=false />\n\t[89308]<option value=130 selected=false />\n\t[89320]<option value=136 selected=false />\n\t[89322]<option value=137 selected=false />\n\t[89324]<option value=138 selected=false />\n\t[89326]<option value=139 selected=false />\n\t[89328]<option value=140 selected=false />\n[89380]<span />\n\tMaterial\n*|scroll element[85009]<select id=THG3QJX name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)\n\t[89391]<option value=31 selected=false />\n\t[89393]<option value=142 selected=false />\n\t[89395]<option value=32 selected=false />\n\t[89397]<option value=143 selected=false />\n\t[89399]<option value=33 selected=false />\n\t[89401]<option value=144 selected=false />\n\t[89403]<option value=34 selected=false />\n\t[89405]<option value=145 selected=false />\n\t[89407]<option value=146 selected=false />\n\t[89409]<option value=35 selected=false />\n\t[89411]<option value=147 selected=false />\n\t[89413]<option value=36 selected=false />\n\t[89415]<option value=148 selected=false />\n\t[89417]<option value=37 selected=false />\n\t[89419]<option value=149 selected=false />\n\t[89421]<option value=38 selected=false />\n\t[89423]<option value=39 selected=false />\n\t[89425]<option value=150 selected=false />\n\t[89427]<option value=151 selected=false />\n\t[89429]<option value=40 selected=false />\n\t[89431]<option value=152 selected=false />\n\t*[89433]<option value=41 selected=false />\n\t*[89435]<option value=42 selected=false />\n\t*[89437]<option value=153 selected=false />\n\t*[89441]<option value=154 selected=false />\n\t*[89443]<option value=155 selected=false />\n\t*[89445]<option value=44 selected=false />\n\t*[89447]<option value=156 selected=false />\n\t*[89449]<option value=45 selected=false />\n\t*[89451]<option value=157 selected=false />\n\t*[89453]<option value=46 selected=false />\n\t*[89455]<option value=47 selected=false />\n\t*[89457]<option value=158 selected=false />\n\t*[89459]<option value=48 selected=false />\n\t*[89461]<option value=159 selected=false />\n[89511]<span />\n\tSleeve\n*[85010]<select id=VSPP7UY name=product[sleeve] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Sleeve|Long-Sleeve|Short-Sleeve|Sleeveless,format=numeric) />\n\t[89522]<option value=160 selected=false />\n\t[89524]<option value=161 selected=false />\n\t[89526]<option value=162 selected=false />\n\t[89528]<option value=163 selected=false />\n\t[89530]<option value=164 selected=false />\n\t[89532]<option value=165 selected=false />\n[89582]<span />\n\tSize\n*[85011]<select id=TJFDHDJ name=product[size] aria-label=notice-TJFDHDJ expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=55 cm|XS|65 cm|S,format=numeric) />\n[89683]<span />\n\tCollar\n*|scroll element[85012]<select id=VDCO8NF name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)\n\t[89694]<option value=180 selected=false />\n\t[89696]<option value=181 selected=false />\n\t[89698]<option value=182 selected=false />\n\t[89700]<option value=183 selected=false />\n\t[89702]<option value=184 selected=false />\n\t*[89704]<option value=185 selected=false />\n\t*[89706]<option value=186 selected=false />\nPattern\n*|scroll element[85013]<select id=MYPQIJ8 name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)\n\t*[89779]<option value=193 selected=false />\n\t*[89781]<option value=194 selected=false />\n\t*[89783]<option value=195 selected=false />\n\t*[89785]<option value=196 selected=false />\n\t*[89787]<option value=197 selected=false />\n\t*[89789]<option value=198 selected=false />\n\t*[89791]<option value=199 selected=false />\n*[89843]<span />\n\tClimate\n*|scroll element[85014]<select id=PV9DJDU name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)\n\t*[89854]<option value=201 selected=false />\n\t*[89856]<option value=202 selected=false />\n\t*[89858]<option value=203 selected=false />\n\t*[89860]<option value=204 selected=false />\n\t*[89862]<option value=205 selected=false />\n\t*[89864]<option value=206 selected=false />\n\t*[89866]<option value=207 selected=false />\n\t*[89868]<option value=208 selected=false />\n\t*[89870]<option value=209 selected=false />\n\t*[89872]<option value=210 selected=false />\n\t*[89874]<option value=211 selected=false />\n*[89924]<span />\n\tColor\n*[85015]<select id=E93HLHQ name=product[color] aria-label=notice-E93HLHQ expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Black|Blue|Brown|Gray,format=numeric) />\n*[90009]<span />\n\tEco Collection\n*[85016]<input type=checkbox checked=false id=HWJAIYS name=product[eco_collection] value=0 />\n*[90027]<span />\n*[90079]<span />\n\tPerformance Fabric\n*[85017]<input type=checkbox checked=false id=QI4VW65 name=product[performance_fabric] value=0 />\n*[90097]<span />\n*[90149]<span />\n\tErin Recommends\n*[85018]<input type=checkbox checked=false id=U108H0W name=product[erin_recommends] value=0 />\n*[90167]<span />\n*[90219]<span />\n\tNew\n*[85019]<input type=checkbox checked=false id=P60JXSU name=product[new] value=0 />\n*[90237]<span />\n*[90289]<span />\n\tSale\n*[85020]<input type=checkbox checked=false id=GO6KREI name=product[sale] value=0 />\n*[90307]<span />\n*[85821]<div />\n\t*[84976]<strong />\n\t\t*[90557]<span />\n\t\t\tContent\n\t\t*[90560]<span />\n*[85822]<div />\n\t*[84979]<strong />\n\t\t*[90620]<span />\n\t\t\tConfigurations\n\t\t*[90623]<span />\n*[85619]<button />\n\tCreate Configurations\nConfigurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).\n*[85825]<div />\n\t*[84982]<strong />\n\t\t*[90809]<span />\n\t\t\tProduct Reviews\n\t\t*[90812]<span />\n*[85826]<div />\n\t*[84985]<strong />\n\t\t*[90872]<span />\n\t\t\tImages And Videos\n\t\t*[90875]<span />\n*[84987]<div />\n\t*[85827]<div />\n\t\t*[84988]<strong />\n\t\t\t*[90943]<span />\n\t\t\t\tSearch Engine Optimization\n\t\t\t*[90946]<span />\n*[85828]<div />\n\t*[91006]<strong />\n\t\t*[91009]<span />\n\t\t\tRelated Products, Up-Sells, and Cross-Sells\n\t\t*[91012]<span />\n*[85829]<div />\n\t*[91072]<strong />\n\t\t*[91075]<span />\n\t\t\tCustomizable Options\n\t\t*[91078]<span />\n*[85830]<div />\n\t*[91138]<strong />\n\t\t*[91141]<span />\n\t\t\tProduct in Websites\n\t\t*[91144]<span />\n*[85831]<div />\n\t*[91204]<strong />\n\t\t*[91207]<span />\n\t\t\tProduct Salable Quantity\n\t\t*[91209]<div />\n\t\t\t*[85643]<a />\n\t\t*[91218]<span />\n*[85832]<div />\n\t*[91276]<strong />\n\t\t*[91279]<span />\n\t\t\tDesign\n\t\t*[91282]<span />\n*[85833]<div />\n\t*[91342]<strong />\n\t\t*[91345]<span />\n\t\t\tSchedule Design Update\n\t\t*[91348]<span />\n*[85834]<div />\n\t*[91408]<strong />\n\t\t*[91411]<span />\n\t\t\tGift Options\n\t\t*[91414]<span />\n*[85835]<div />\n\t*[91474]<strong />\n\t\t*[91477]<span />\n\t\t\tDownloadable Information\n\t\t*[91480]<span />"
+  }
+}

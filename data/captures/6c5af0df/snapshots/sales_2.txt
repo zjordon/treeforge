@@ -1,0 +1,100 @@
+[39046]<a />
+[39054]<li id=menu-magento-backend-dashboard role=menu-item />
+	[39055]<a />
+		Dashboard
+[39060]<li id=menu-magento-sales-sales role=menu-item />
+	[38915]<a />
+		Sales
+[39103]<li id=menu-magento-catalog-catalog role=menu-item />
+	[38916]<a />
+		Catalog
+[39126]<li id=menu-magento-customer-customer role=menu-item />
+	[38917]<a />
+		Customers
+[39151]<li id=menu-magento-backend-marketing role=menu-item />
+	[38918]<a />
+		Marketing
+[39236]<li id=menu-magento-backend-content role=menu-item />
+	[38919]<a />
+		Content
+[39295]<li id=menu-magento-reports-report role=menu-item />
+	[38920]<a />
+		Reports
+[39456]<li id=menu-magento-backend-stores role=menu-item />
+	[38921]<a />
+		Stores
+[39552]<li id=menu-magento-backend-system role=menu-item />
+	[38922]<a />
+		System
+[39657]<li id=menu-magento-marketplace-partners role=menu-item />
+	[39658]<a />
+		Find Partners & Extensions
+Orders Report
+[39720]<a title=My Account />
+	admin
+[39758]<a title=Notifications />
+[39763]<div />
+	[38886]<form id=form-search />
+		[39766]<div />
+			[38887]<input type=text id=search-global autocomplete=off />
+[38927]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+[39871]<a />
+	statistics
+, click
+[39874]<a />
+	here
+[38897]<form id=filter_form />
+	Filter
+	Date Used
+	The Order Updated report is created in real time and does not require a refresh.
+	Period
+	*[38889]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+	From
+	[38890]<input title=From type=text id=sales_report_from name=from placeholder=mm/dd/yyyy autocomplete=list format=mm/dd/yyyy required=true />
+	[40438]<button />
+		[40441]<span />
+			undefined
+	To
+	[38891]<input title=To type=text id=sales_report_to name=to placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[43967]<button />
+		[43970]<span />
+			undefined
+	Order Status
+	*[38892]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />
+	Applies to Any of the Specified Order Statuses except canceled orders
+	Empty Rows
+	*[38894]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+	Show Actual Values
+	*[38895]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[38896]<select id=id_ZSG9IAmJeH7jDlJZzuzZKYgUkkkuOJZq_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+[38928]<button title=Export id=id_yMxtg9cgXPCv4obmryvsvb67GwF74gFn />
+	Export
+records found
+[40138]<tr />
+	Interval
+	Orders
+	Sales Items
+	Sales Total
+	Invoiced
+	Refunded
+	Sales Tax
+	Sales Shipping
+	Sales Discount
+	Canceled
+[40184]<tr />
+	[40186]<td />
+		We couldn't find any records.
+[40204]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[40214]<a id=footer_privacy />
+	Privacy Policy
+[40217]<a id=footer_account_activity />
+	Account Activity
+[40220]<a id=footer_bug_tracking />
+	Report an Issue

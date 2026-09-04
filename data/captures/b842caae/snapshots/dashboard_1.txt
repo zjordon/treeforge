@@ -1,0 +1,437 @@
+*[93441]<a />
+*[93450]<a />
+	Dashboard
+*[93351]<a />
+	Sales
+*[93352]<a />
+	Catalog
+*[93353]<a />
+	Customers
+*[93354]<a />
+	Marketing
+*[93355]<a />
+	Content
+*[93356]<a />
+	Reports
+*[93357]<a />
+	Stores
+*[93358]<a />
+	System
+*[94053]<a />
+	Find Partners & Extensions
+Reviews
+*[94115]<a title=My Account />
+	admin
+*[94153]<a title=Notifications />
+*[94158]<div />
+	*[93227]<form id=form-search />
+		*[94161]<div />
+			*[93228]<input type=text id=search-global name=query />
+*[93359]<button title=New Review id=add />
+	New Review
+*[93360]<button title=Search id=id_xLqZZR8Uw97CzoX6eQaLAOBCql6LJj14 />
+	Search
+*[93361]<button title=Reset Filter id=id_THzPbdvGt1Pv5Poq7Ab1FydxT9P6qc9c />
+	Reset Filter
+*[93330]<select id=reviewGrid_massaction-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Actions|Delete|Update Status) />
+*[94294]<div />
+	*[93230]<select id=reviewGrid_massaction-mass-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Select All|Unselect All|Select Visible|Unselect Visible) />
+351
+records found
+*[93231]<select id=reviewGrid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />
+per page
+*[94362]<button />
+*[93232]<input type=text id=reviewGrid_page-current name=page value=1 />
+of
+*[93363]<button title=Next page />
+*[94397]<tr />
+	*[94402]<th />
+		*[94404]<span />
+			ID
+	*[94407]<th />
+		*[94408]<span />
+			Created
+	*[94411]<th />
+		*[94412]<span />
+			Status
+	*[94415]<th />
+		*[94416]<span />
+			Title
+	*[94419]<th />
+		*[94420]<span />
+			Nickname
+	*[94423]<th />
+		*[94424]<span />
+			Review
+	Visibility
+	*[94431]<th />
+		*[94432]<span />
+			Type
+	*[94435]<th />
+		*[94436]<span />
+			Product
+	*[94439]<th />
+		*[94440]<span />
+			SKU
+	Action
+*[94448]<tr />
+	*[94450]<td />
+		*[93331]<select id=reviewGrid_filter_massaction name=massaction expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Any|Yes|No) />
+	*[94461]<td />
+		*[93332]<input type=text id=reviewGrid_filter_review_id name=review_id />
+	*[94465]<td />
+		*[93333]<input type=text id=reviewGrid_filter_created_at1vV9Fzo3QMLxH7KRtwf3UFcBJfXvvJeb_from name=created_at[from] placeholder=From />
+		*[93334]<input type=text id=reviewGrid_filter_created_at1vV9Fzo3QMLxH7KRtwf3UFcBJfXvvJeb_to name=created_at[to] placeholder=To />
+	*[94475]<td />
+		*[93335]<select id=reviewGrid_filter_status name=status expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	*[94486]<td />
+		*[93336]<input type=text id=reviewGrid_filter_title name=title />
+	*[94490]<td />
+		*[93337]<input type=text id=reviewGrid_filter_nickname name=nickname />
+	*[94494]<td />
+		*[93338]<input type=text id=reviewGrid_filter_detail name=detail />
+	*[94498]<td />
+		*[93339]<select name=visible_in expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Default Store View) />
+	*[94507]<td />
+		*[93340]<select id=reviewGrid_filter_type name=type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Administrator|Customer|Guest,format=numeric) />
+	*[94518]<td />
+		*[93341]<input type=text id=reviewGrid_filter_name name=name />
+	*[94522]<td />
+		*[93342]<input type=text id=reviewGrid_filter_sku name=sku />
+	*[94526]<td />
+*[94533]<tr title=http://localhost:7780/admin/review/product/edit/id/353/ />
+	*[94535]<td />
+		*[93233]<input type=checkbox checked=false id=id_574 name=reviews value=353 />
+	*[94542]<td />
+		353
+	*[94545]<td />
+		Apr 24, 2023, 2:55:10 PM
+	*[94548]<td />
+		Pending
+	*[94551]<td />
+		Bad!
+	*[94554]<td />
+		Hannah Lim
+	*[94557]<td />
+		I was really disappointed with the Circe Hooded...
+	*[94560]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94569]<td />
+		Guest
+	*[94572]<td />
+		Circe Hooded Ice Fleece
+	*[94575]<td />
+		WH12
+	*[94578]<td />
+		*[94580]<a id=idQs0jfvJOCw />
+			Edit
+*[94585]<tr title=http://localhost:7780/admin/review/product/edit/id/352/ />
+	*[94587]<td />
+		*[93234]<input type=checkbox checked=false id=id_589 name=reviews value=352 />
+	*[94594]<td />
+		352
+	*[94597]<td />
+		Apr 24, 2023, 2:53:49 PM
+	*[94600]<td />
+		Pending
+	*[94603]<td />
+		Good but not perfect
+	*[94606]<td />
+		customer
+	*[94609]<td />
+		I recently purchased the Circe Hooded Ice Fleec...
+	*[94612]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94621]<td />
+		Guest
+	*[94624]<td />
+		Circe Hooded Ice Fleece
+	*[94627]<td />
+		WH12
+	*[94630]<td />
+		*[94632]<a id=idWvQslb9g6S />
+			Edit
+*[94637]<tr title=http://localhost:7780/admin/review/product/edit/id/351/ />
+	*[94639]<td />
+		*[93235]<input type=checkbox checked=false id=id_898 name=reviews value=351 />
+	*[94646]<td />
+		351
+	*[94649]<td />
+		Apr 24, 2023, 2:49:50 PM
+	*[94652]<td />
+		Pending
+	*[94655]<td />
+		won't recommand
+	*[94658]<td />
+		Emma
+	*[94661]<td />
+		I was really disappointed with the Olivia 1/4 Z...
+	*[94664]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94673]<td />
+		Customer
+	*[94676]<td />
+		Olivia 1/4 Zip Light Jacket
+	*[94679]<td />
+		WJ12
+	*[94682]<td />
+		*[94684]<a id=idf40efyR1RG />
+			Edit
+*[94689]<tr title=http://localhost:7780/admin/review/product/edit/id/349/ />
+	*[94691]<td />
+		*[93236]<input type=checkbox checked=false id=id_611 name=reviews value=349 />
+	*[94698]<td />
+		349
+	*[94701]<td />
+		Apr 24, 2023, 2:44:16 PM
+	*[94704]<td />
+		Pending
+	*[94707]<td />
+		OKish
+	*[94710]<td />
+		seam miller
+	*[94713]<td />
+		I have to say, I'm not impressed with the Olivi...
+	*[94716]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94725]<td />
+		Guest
+	*[94728]<td />
+		Olivia 1/4 Zip Light Jacket
+	*[94731]<td />
+		WJ12
+	*[94734]<td />
+		*[94736]<a id=idoo2JiRWpCl />
+			Edit
+*[94741]<tr title=http://localhost:7780/admin/review/product/edit/id/347/ />
+	*[94743]<td />
+		*[93237]<input type=checkbox checked=false id=id_225 name=reviews value=347 />
+	*[94750]<td />
+		347
+	*[94753]<td />
+		Apr 24, 2023, 2:42:23 PM
+	*[94756]<td />
+		Pending
+	*[94759]<td />
+		Quite good
+	*[94762]<td />
+		Jane Smith
+	*[94765]<td />
+		I recently purchased the Olivia 1/4 Zip Light J...
+	*[94768]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94777]<td />
+		Guest
+	*[94780]<td />
+		Olivia 1/4 Zip Light Jacket
+	*[94783]<td />
+		WJ12
+	*[94786]<td />
+		*[94788]<a id=id8jpNpj9LPE />
+			Edit
+*[94793]<tr title=http://localhost:7780/admin/review/product/edit/id/346/ />
+	*[94795]<td />
+		*[93238]<input type=checkbox checked=false id=id_300 name=reviews value=346 />
+	*[94802]<td />
+		346
+	*[94805]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[94808]<td />
+		Approved
+	*[94811]<td />
+		Super cute!!!  I love it
+	*[94814]<td />
+		Mikkel
+	*[94817]<td />
+		Super cute!!!  I love it and want more colors. ...
+	*[94820]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94829]<td />
+		Guest
+	*[94832]<td />
+		Zoe Tank
+	*[94835]<td />
+		WT02
+	*[94838]<td />
+		*[94840]<a id=idDmjO1Mmlq2 />
+			Edit
+*[94845]<tr title=http://localhost:7780/admin/review/product/edit/id/345/ />
+	*[94847]<td />
+		*[93239]<input type=checkbox checked=false id=id_369 name=reviews value=345 />
+	*[94854]<td />
+		345
+	*[94857]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[94860]<td />
+		Approved
+	*[94863]<td />
+		Huge arm holes??
+	*[94866]<td />
+		Valorie
+	*[94869]<td />
+		I don't know why the arm holes are so big. It l...
+	*[94872]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94881]<td />
+		Guest
+	*[94884]<td />
+		Zoe Tank
+	*[94887]<td />
+		WT02
+	*[94890]<td />
+		*[94892]<a id=idRF9fYGZnyn />
+			Edit
+*[94897]<tr title=http://localhost:7780/admin/review/product/edit/id/344/ />
+	*[94899]<td />
+		*[94902]<input type=checkbox checked=false id=id_574 name=reviews value=344 />
+	*[94907]<td />
+		344
+	*[94910]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[94913]<td />
+		Approved
+	*[94916]<td />
+		I love the look
+	*[94919]<td />
+		Yan
+	*[94922]<td />
+		I love the look of this top, but I wasn't too c...
+	*[94925]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94934]<td />
+		Guest
+	*[94937]<td />
+		Zoe Tank
+	*[94940]<td />
+		WT02
+	*[94943]<td />
+		*[94945]<a id=id52Q22zqPEv />
+			Edit
+*[94950]<tr title=http://localhost:7780/admin/review/product/edit/id/343/ />
+	*[94952]<td />
+		*[93240]<input type=checkbox checked=false id=id_305 name=reviews value=343 />
+	*[94959]<td />
+		343
+	*[94962]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[94965]<td />
+		Approved
+	*[94968]<td />
+		Good choice for working out
+	*[94971]<td />
+		Elfriede
+	*[94974]<td />
+		Good choice for working out and stylin' enough ...
+	*[94977]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[94986]<td />
+		Guest
+	*[94989]<td />
+		Bella Tank
+	*[94992]<td />
+		WT01
+	*[94995]<td />
+		*[94997]<a id=idhdYqLTuHkl />
+			Edit
+*[95002]<tr title=http://localhost:7780/admin/review/product/edit/id/342/ />
+	*[95004]<td />
+		*[93241]<input type=checkbox checked=false id=id_33 name=reviews value=342 />
+	*[95011]<td />
+		342
+	*[95014]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[95017]<td />
+		Approved
+	*[95020]<td />
+		A sweet n sporty look for the gym
+	*[95023]<td />
+		Maryanna
+	*[95026]<td />
+		Always a sweet n sporty look for the gym! Keeps...
+	*[95029]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[95038]<td />
+		Guest
+	*[95041]<td />
+		Bella Tank
+	*[95044]<td />
+		WT01
+	*[95047]<td />
+		*[95049]<a id=idjsPDFteUlZ />
+			Edit
+*[95054]<tr title=http://localhost:7780/admin/review/product/edit/id/341/ />
+	*[95056]<td />
+		*[93242]<input type=checkbox checked=false id=id_914 name=reviews value=341 />
+	*[95063]<td />
+		341
+	*[95066]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[95069]<td />
+		Approved
+	*[95072]<td />
+		The seams bother me
+	*[95075]<td />
+		Carma
+	*[95078]<td />
+		Some of the seams bother me during certain work...
+	*[95081]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[95090]<td />
+		Guest
+	*[95093]<td />
+		Breathe-Easy Tank
+	*[95096]<td />
+		WT09
+	*[95099]<td />
+		*[95101]<a id=idruQbu9MZq3 />
+			Edit
+*[95106]<tr title=http://localhost:7780/admin/review/product/edit/id/340/ />
+	*[95108]<td />
+		*[93243]<input type=checkbox checked=false id=id_148 name=reviews value=340 />
+	*[95115]<td />
+		340
+	*[95118]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[95121]<td />
+		Approved
+	*[95124]<td />
+		Great fit - love the v-neck design!
+	*[95127]<td />
+		Thalia
+	*[95130]<td />
+		Great fit - love the v-neck design!
+	*[95133]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[95142]<td />
+		Guest
+	*[95145]<td />
+		Breathe-Easy Tank
+	*[95148]<td />
+		WT09
+	*[95151]<td />
+		*[95153]<a id=id3PDi116TK7 />
+			Edit

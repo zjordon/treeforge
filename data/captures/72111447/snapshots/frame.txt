@@ -1,0 +1,331 @@
+[9453]<i />
+[9454]<a />
+	主站
+[9388]<div />
+	*[10416]<div />
+		*[9360]<img />
+		*[9362]<img />
+	*[10417]<span />
+		试试更多AI创作工具吧
+	*[10419]<i />
+[9389]<div />
+	*[9458]<div />
+		*[10422]<div />
+		[9459]<a />
+			*[10425]<i />
+[9460]<div />
+	成为UP主的第
+	*[10433]<span />
+		53
+*[10460]<span />
+	[9468]<a />
+[9470]<div />
+	[9471]<div role=region aria-label=scrollable content />
+		[9473]<a id=nav_upload_btn />
+			投稿
+		*[10482]<div />
+			[9474]<div />
+				[9475]<span />
+					*[10483]<i />
+					*[10485]<span />
+						*[10486]<span />
+							首页
+		*[10497]<div id=upload-manager />
+			[9476]<div />
+				[9477]<span />
+					*[10498]<i />
+					*[10500]<span />
+						*[10501]<span />
+							内容管理
+					*[10506]<i />
+		*[10780]<div id=data-up />
+			[9544]<div />
+				[9545]<span />
+					*[10781]<i />
+					*[10783]<span />
+						*[10784]<span />
+							数据中心
+		*[10818]<div id=fans />
+			[9552]<div />
+				[9553]<span />
+					*[10819]<i />
+					*[10821]<span />
+						*[10822]<span />
+							粉丝管理
+		*[10862]<div />
+			[9562]<div />
+				[9563]<span />
+					*[10863]<i />
+					*[10865]<span />
+						*[10866]<span />
+							互动管理
+					*[10871]<i />
+		*[10939]<div />
+			[9578]<div />
+				[9579]<span />
+					*[10940]<i />
+					*[10942]<span />
+						*[10943]<span />
+							收益管理
+					*[10948]<i />
+		[9606]<div />
+			*[11116]<div />
+				*[11117]<span />
+					*[9358]<i />
+					*[11118]<span />
+						*[11119]<span />
+							花生
+		[9607]<div />
+			*[11123]<div />
+				*[11124]<span />
+					*[9359]<i />
+					*[11125]<span />
+						*[11126]<span />
+							updream
+		*[11130]<div id=growing-up />
+			[9608]<div />
+				[9609]<span />
+					*[11131]<i />
+					*[11133]<span />
+						*[11134]<span />
+							创作成长
+					*[11139]<i />
+			*[11141]<div />
+				[9610]<div />
+					*[11142]<div />
+						[9611]<span />
+							*[11144]<span />
+								*[11146]<span />
+									任务中心
+				[9612]<div />
+					*[11150]<div />
+						[9613]<span />
+							*[11152]<span />
+								*[11154]<span />
+									必火推广
+				[9614]<div />
+					*[11158]<div />
+						[9615]<a />
+							*[11159]<i />
+							创作学院
+		[9363]<div />
+			[9618]<div />
+				[9364]<span />
+					[11175]<i />
+					[9365]<span />
+						[11177]<span />
+							创作权益
+					[11182]<i />
+		[9366]<div />
+			[9629]<div />
+				[9367]<span />
+					[11230]<i />
+					[9368]<span />
+						[11232]<span />
+							社区公约
+		[9369]<div />
+			[9632]<div />
+				[9370]<span />
+					[11250]<i />
+					[9371]<span />
+						[11252]<span />
+							创作设置
+*[12268]<input type=file accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=multiple compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+发布视频
+[13162]<button />
+	批量操作
+*[13166]<div />
+[13670]<div title=2026-04-29-20-41-59 />
+	*[13667]<div />
+		*[13665]<span />
+		*[13666]<span />
+			2026-04-29-20-41-59
+	*[13669]<div />
+		[14434]<svg /> <!-- SVG content collapsed -->
+		*[13668]<span />
+			上传完成
+[13170]<div />
+	[13168]<svg /> <!-- SVG content collapsed -->
+	*[13169]<div />
+		添加视频
+[13176]<button />
+	添加分P
+[13178]<div />
+	*[13672]<div />
+	[13674]<div />
+		2026-04-29-20-41-59
+	[14436]<svg /> <!-- SVG content collapsed -->
+	*[13676]<span />
+		上传完成
+	[13684]<div />
+		[13683]<svg /> <!-- SVG content collapsed -->
+		*[14438]<span />
+			更换视频
+基本设置
+[13184]<span />
+	一键填写
+*[13187]<p />
+*[13188]<h3 level=3 />
+	封面
+[13193]<div />
+	*[15376]<span />
+		封面设置
+	*[13192]<div />
+		*[15379]<svg /> <!-- SVG content collapsed -->
+以下为系统推荐封面，使用AI生成可获取更优质封面
+*[13205]<div />
+	[13204]<svg /> <!-- SVG content collapsed -->
+[13211]<div />
+	*[13209]<span />
+		[13208]<svg /> <!-- SVG content collapsed -->
+	*[13210]<span />
+		AI生成
+[14453]<div />
+[14455]<div />
+[14457]<div />
+[14459]<div />
+[14461]<div />
+*[13227]<p />
+*[13228]<h3 level=3 />
+	标题
+*[13230]<input type=text placeholder=请输入稿件标题 maxlength=80 />
+*[13232]<p />
+	19/80
+[13239]<p />
+创作声明
+[13243]<i />
+	[13242]<svg /> <!-- SVG content collapsed -->
+[13289]<div />
+	[13248]<input type=text placeholder=请选择符合您视频内容的创作声明 />
+	[13249]<i />
+[13295]<p />
+[13296]<h3 level=3 />
+	分区
+[13301]<div />
+	[13298]<p />
+		科技数码
+	[13300]<svg /> <!-- SVG content collapsed -->
+[13322]<div id=tag-container />
+	[13307]<p />
+	[13308]<h3 level=3 />
+		标签
+	[13311]<i />
+		[13310]<svg /> <!-- SVG content collapsed -->
+	[14368]<div />
+		[14365]<p />
+			FPS
+		[14367]<svg /> <!-- SVG content collapsed -->
+	[14372]<div />
+		[14369]<p />
+			守望先锋
+		[14371]<svg /> <!-- SVG content collapsed -->
+	[14376]<div />
+		[14373]<p />
+			精彩集锦
+		[14375]<svg /> <!-- SVG content collapsed -->
+	[13317]<input type=text placeholder=按回车键Enter创建标签 maxlength=20 />
+	还可以添加7个标签
+推荐标签：
+[14379]<div />
+	[14378]<div />
+		[14377]<span />
+			编程
+[14382]<div />
+	[14381]<div />
+		[14380]<span />
+			编程开发
+[14385]<div />
+	[14384]<div />
+		[14383]<span />
+			教程
+[14388]<div />
+	[14387]<div />
+		[14386]<span />
+			资源
+参与话题：
+[15177]<div />
+	[15176]<div />
+		[15172]<svg /> <!-- SVG content collapsed -->
+		[15173]<span />
+			上B站看播客
+		[15175]<svg /> <!-- SVG content collapsed -->
+[15188]<div />
+	[15187]<div />
+		[15183]<svg /> <!-- SVG content collapsed -->
+		[15184]<span />
+			开麦聊体育
+		[15186]<svg /> <!-- SVG content collapsed -->
+[15199]<div />
+	[15198]<div />
+		[15194]<svg /> <!-- SVG content collapsed -->
+		[15195]<span />
+			高能量自律
+		[15197]<svg /> <!-- SVG content collapsed -->
+[15210]<div />
+	[15209]<div />
+		[15205]<svg /> <!-- SVG content collapsed -->
+		[15206]<span />
+			评论区摄影大赛
+		[15208]<svg /> <!-- SVG content collapsed -->
+[15221]<div />
+	[15220]<div />
+		[15216]<svg /> <!-- SVG content collapsed -->
+		[15217]<span />
+			上B站看视频播客
+		[15219]<svg /> <!-- SVG content collapsed -->
+[15232]<div />
+	[15231]<div />
+		[15227]<svg /> <!-- SVG content collapsed -->
+		[15228]<span />
+			时髦人一起聊
+		[15230]<svg /> <!-- SVG content collapsed -->
+[13970]<div />
+	搜索更多话题 >
+[13344]<div />
+	[13331]<h3 level=3 />
+		简介
+	[13333]<div />
+		[13545]<div contenteditable=true />
+			[13654]<p />
+				[13655]<br />
+	[13341]<div />
+		/2000
+定时发布
+[13350]<div />
+	[13349]<span />
+(可选择距离当前最早≥5分钟/最晚≤15天的时间，花火、预约、互动视频稿件不可修改/取消)
+加入合集
+合集功能可用于收集整理系列性稿件
+开通合集功能需满足权益中心等级达Lv2，您可前往创作中心-权益中心查看相关数据
+商业推广
+[13698]<i />
+	[13697]<svg /> <!-- SVG content collapsed -->
+[13375]<label />
+	[13373]<span />
+	[13374]<span />
+		增加商业推广信息
+[13385]<span />
+	更多设置
+	[13381]<span />
+		（含声明与权益、视频元素、互动管理等）
+	[13384]<span />
+		[13383]<svg /> <!-- SVG content collapsed -->
+[13481]<span />
+	存草稿
+[13482]<span />
+	立即投稿
+<svg /> <!-- SVG content collapsed -->
+*[11561]<input type=file name=buploader accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+*[11566]<input type=file name=buploader accept=.txt compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+<svg /> <!-- SVG content collapsed -->
+*[14466]<input type=file name=buploader accept=.zip multiple=true compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+*[15393]<div />
+	*[15392]<div />
+		*[15391]<div />
+			*[15390]<i />
+*[9645]<div id=reference-help />
+	*[11402]<div />
+		*[9408]<img />
+	*[11403]<div />
+		遇到问题
+[9646]<div id=topBtn />

@@ -1,0 +1,475 @@
+*[1586211]<a />
+*[1586219]<li id=menu-magento-backend-dashboard role=menu-item />
+	*[1586220]<a />
+		Dashboard
+*[1586225]<li id=menu-magento-sales-sales role=menu-item />
+	[1586226]<a />
+		Sales
+*[1586270]<li id=menu-magento-catalog-catalog role=menu-item />
+	[1586271]<a />
+		Catalog
+*[1586295]<li id=menu-magento-customer-customer role=menu-item />
+	[1586296]<a />
+		Customers
+*[1586322]<li id=menu-magento-backend-marketing role=menu-item />
+	[1586323]<a />
+		Marketing
+*[1586409]<li id=menu-magento-backend-content role=menu-item />
+	[1586410]<a />
+		Content
+*[1586470]<li id=menu-magento-reports-report role=menu-item />
+	[1586471]<a />
+		Reports
+*[1586633]<li id=menu-magento-backend-stores role=menu-item />
+	[1586634]<a />
+		Stores
+*[1586730]<li id=menu-magento-backend-system role=menu-item />
+	[1586731]<a />
+		System
+*[1586837]<li id=menu-magento-marketplace-partners role=menu-item />
+	*[1586838]<a />
+		Find Partners & Extensions
+*[1587044]<div title=Save />
+	*[1587048]<button title=Save id=save-button />
+		Save
+	*[1587054]<button title=Save aria-label=Save options />
+[1587088]<button title=Back id=back />
+	Back
+*[1587097]<button title=Add Attribute id=addAttribute />
+	Add Attribute
+*|scroll element[1602817]<select id=XHU6P18 name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)
+*|scroll element[1602940]<select id=XPY0PG2 name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 35%, 2.2 pages below, 1.2 pages above, total: 4.3 pages)
+*|scroll element[1603054]<select id=HAT0G4H name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 0%, 5.0 pages below, total: 6.0 pages)
+	*[1603103]<option value=38 selected=true />
+	*[1603106]<option value=39 selected=false />
+	*[1603109]<option value=150 selected=false />
+	*[1603112]<option value=151 selected=false />
+	*[1603115]<option value=40 selected=false />
+	*[1603118]<option value=152 selected=false />
+	*[1603121]<option value=41 selected=false />
+	*[1603124]<option value=42 selected=false />
+	*[1603127]<option value=153 selected=false />
+	*[1603130]<option value=43 selected=false />
+	*[1603133]<option value=154 selected=false />
+	*[1603136]<option value=155 selected=false />
+	*[1603139]<option value=44 selected=false />
+	*[1603142]<option value=156 selected=false />
+	*[1603145]<option value=45 selected=false />
+	*[1603148]<option value=157 selected=false />
+	*[1603151]<option value=46 selected=false />
+	*[1603154]<option value=47 selected=false />
+	*[1603157]<option value=158 selected=false />
+	*[1603160]<option value=48 selected=false />
+	*[1603163]<option value=159 selected=false />
+*[1595163]<span />
+	Size
+*[1595212]<span />
+	Collar
+*|scroll element[1603242]<select id=HNJAALM name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)
+	*[1603246]<option value=180 selected=false />
+	*[1603249]<option value=181 selected=false />
+	*[1603252]<option value=182 selected=false />
+	*[1603255]<option value=183 selected=false />
+	*[1603258]<option value=184 selected=false />
+	*[1603261]<option value=185 selected=false />
+	*[1603264]<option value=186 selected=false />
+	*[1603267]<option value=187 selected=false />
+*[1595261]<span />
+	Pattern
+*|scroll element[1603300]<select id=KTTJ5F3 name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)
+	*[1603304]<option value=192 selected=false />
+	*[1603307]<option value=193 selected=false />
+	*[1603310]<option value=194 selected=false />
+	*[1603313]<option value=195 selected=false />
+	*[1603316]<option value=196 selected=true />
+	*[1603319]<option value=197 selected=false />
+	*[1603322]<option value=198 selected=false />
+	*[1603325]<option value=199 selected=false />
+*[1595310]<span />
+	Climate
+*|scroll element[1603346]<select id=G3YETA7 name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)
+	*[1603350]<option value=201 selected=false />
+	*[1603353]<option value=202 selected=false />
+	*[1603356]<option value=203 selected=true />
+	*[1603359]<option value=204 selected=true />
+	*[1603362]<option value=205 selected=true />
+	*[1603365]<option value=206 selected=false />
+	*[1603368]<option value=207 selected=false />
+	*[1603371]<option value=208 selected=false />
+	*[1603374]<option value=209 selected=false />
+	*[1603377]<option value=210 selected=false />
+	*[1603380]<option value=211 selected=false />
+*[1595359]<span />
+	Color
+*[1595408]<span />
+	Eco Collection
+*[1601851]<input type=checkbox checked=false id=AM7CF5K name=product[eco_collection] value=0 />
+*[1601853]<span />
+*[1595457]<span />
+	Performance Fabric
+*[1601855]<input type=checkbox checked=false id=YBTF1QO name=product[performance_fabric] value=0 />
+*[1601857]<span />
+*[1595506]<span />
+	Erin Recommends
+*[1601859]<input type=checkbox checked=true id=URBEG3M name=product[erin_recommends] value=1 />
+*[1601861]<span />
+*[1595555]<span />
+	New
+*[1601863]<input type=checkbox checked=true id=AQMT88R name=product[new] value=1 />
+*[1601865]<span />
+*[1595604]<span />
+	Sale
+*[1601867]<input type=checkbox checked=false id=NOW5R05 name=product[sale] value=0 />
+*[1601869]<span />
+*[1588545]<div />
+	*[1588546]<strong />
+		Content
+*[1588824]<div />
+	*[1588825]<strong />
+		*[1588826]<span />
+			Configurations
+		*[1588827]<span />
+			*[1588828]<span />
+				*[1588829]<span role=tooltip />
+*[1604284]<button />
+	Add Products Manually
+*[1604305]<button />
+	Edit Configurations
+Configurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).
+Current Variations
+*[1589306]<select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=7,options=5|20|30|50,format=numeric) />
+per page
+*[1589330]<button title=Previous Page disabled=true />
+*[1589335]<input type=number id=2 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[1589337]<button title=Next Page disabled=true />
+Image
+Name
+SKU
+Price
+Quantity
+Weight
+Status
+Attributes
+Actions
+*[1589415]<tr />
+	*[1589420]<td />
+	*[1589421]<td />
+		*[1603881]<a />
+			Phoebe Zipper Sweatshirt-XS-Gray
+	*[1589422]<td />
+		WH07-XS-Gray
+	*[1589423]<td />
+		$59.00
+	*[1589424]<td />
+		100
+	*[1589425]<td />
+		1.000000
+	*[1589426]<td />
+		Enabled
+	*[1589427]<td />
+		Size: XS, Color: Gray
+	*[1589428]<td />
+		*[1601469]<button />
+			Select
+*[1589431]<tr />
+	*[1589436]<td />
+	*[1589437]<td />
+		*[1603894]<a />
+			Phoebe Zipper Sweatshirt-XS-Purple
+	*[1589438]<td />
+		WH07-XS-Purple
+	*[1589439]<td />
+		$59.00
+	*[1589440]<td />
+		100
+	*[1589441]<td />
+		1.000000
+	*[1589442]<td />
+		Enabled
+	*[1589443]<td />
+		Size: XS, Color: Purple
+	*[1589444]<td />
+		*[1601480]<button />
+			Select
+*[1589447]<tr />
+	*[1589452]<td />
+	*[1589453]<td />
+		*[1603907]<a />
+			Phoebe Zipper Sweatshirt-XS-White
+	*[1589454]<td />
+		WH07-XS-White
+	*[1589455]<td />
+		$59.00
+	*[1589456]<td />
+		100
+	*[1589457]<td />
+		1.000000
+	*[1589458]<td />
+		Enabled
+	*[1589459]<td />
+		Size: XS, Color: White
+	*[1589460]<td />
+		*[1601491]<button />
+			Select
+*[1589463]<tr />
+	*[1589468]<td />
+	*[1589469]<td />
+		*[1603920]<a />
+			Phoebe Zipper Sweatshirt-S-Gray
+	*[1589470]<td />
+		WH07-S-Gray
+	*[1589471]<td />
+		$59.00
+	*[1589472]<td />
+		100
+	*[1589473]<td />
+		1.000000
+	*[1589474]<td />
+		Enabled
+	*[1589475]<td />
+		Size: S, Color: Gray
+	*[1589476]<td />
+		*[1601502]<button />
+			Select
+*[1589479]<tr />
+	*[1589484]<td />
+	*[1589485]<td />
+		*[1603933]<a />
+			Phoebe Zipper Sweatshirt-S-Purple
+	*[1589486]<td />
+		WH07-S-Purple
+	*[1589487]<td />
+		$59.00
+	*[1589488]<td />
+		100
+	*[1589489]<td />
+		1.000000
+	*[1589490]<td />
+		Enabled
+	*[1589491]<td />
+		Size: S, Color: Purple
+	*[1589492]<td />
+		*[1601513]<button />
+			Select
+*[1589495]<tr />
+	*[1589500]<td />
+	*[1589501]<td />
+		*[1603946]<a />
+			Phoebe Zipper Sweatshirt-S-White
+	*[1589502]<td />
+		WH07-S-White
+	*[1589503]<td />
+		$59.00
+	*[1589504]<td />
+		100
+	*[1589505]<td />
+		1.000000
+	*[1589506]<td />
+		Enabled
+	*[1589507]<td />
+		Size: S, Color: White
+	*[1589508]<td />
+		*[1601524]<button />
+			Select
+*[1589511]<tr />
+	*[1589516]<td />
+	*[1589517]<td />
+		*[1603959]<a />
+			Phoebe Zipper Sweatshirt-M-Gray
+	*[1589518]<td />
+		WH07-M-Gray
+	*[1589519]<td />
+		$59.00
+	*[1589520]<td />
+		100
+	*[1589521]<td />
+		1.000000
+	*[1589522]<td />
+		Enabled
+	*[1589523]<td />
+		Size: M, Color: Gray
+	*[1589524]<td />
+		*[1601535]<button />
+			Select
+*[1589527]<tr />
+	*[1589532]<td />
+	*[1589533]<td />
+		*[1603972]<a />
+			Phoebe Zipper Sweatshirt-M-Purple
+	*[1589534]<td />
+		WH07-M-Purple
+	*[1589535]<td />
+		$59.00
+	*[1589536]<td />
+		100
+	*[1589537]<td />
+		1.000000
+	*[1589538]<td />
+		Enabled
+	*[1589539]<td />
+		Size: M, Color: Purple
+	*[1589540]<td />
+		*[1601546]<button />
+			Select
+*[1589543]<tr />
+	*[1589548]<td />
+	*[1589549]<td />
+		*[1603985]<a />
+			Phoebe Zipper Sweatshirt-M-White
+	*[1589550]<td />
+		WH07-M-White
+	*[1589551]<td />
+		$59.00
+	*[1589552]<td />
+		100
+	*[1589553]<td />
+		1.000000
+	*[1589554]<td />
+		Enabled
+	*[1589555]<td />
+		Size: M, Color: White
+	*[1589556]<td />
+		*[1601557]<button />
+			Select
+*[1589559]<tr />
+	*[1589564]<td />
+	*[1589565]<td />
+		*[1603998]<a />
+			Phoebe Zipper Sweatshirt-L-Gray
+	*[1589566]<td />
+		WH07-L-Gray
+	*[1589567]<td />
+		$59.00
+	*[1589568]<td />
+		100
+	*[1589569]<td />
+		1.000000
+	*[1589570]<td />
+		Enabled
+	*[1589571]<td />
+		Size: L, Color: Gray
+	*[1589572]<td />
+		*[1601568]<button />
+			Select
+*[1589575]<tr />
+	*[1589580]<td />
+	*[1589581]<td />
+		*[1604011]<a />
+			Phoebe Zipper Sweatshirt-L-Purple
+	*[1589582]<td />
+		WH07-L-Purple
+	*[1589583]<td />
+		$59.00
+	*[1589584]<td />
+		100
+	*[1589585]<td />
+		1.000000
+	*[1589586]<td />
+		Enabled
+	*[1589587]<td />
+		Size: L, Color: Purple
+	*[1589588]<td />
+		*[1601579]<button />
+			Select
+*[1589591]<tr />
+	*[1589596]<td />
+	*[1589597]<td />
+		*[1604024]<a />
+			Phoebe Zipper Sweatshirt-L-White
+	*[1589598]<td />
+		WH07-L-White
+	*[1589599]<td />
+		$59.00
+	*[1589600]<td />
+		100
+	*[1589601]<td />
+		1.000000
+	*[1589602]<td />
+		Enabled
+	*[1589603]<td />
+		Size: L, Color: White
+	*[1589604]<td />
+		*[1601590]<button />
+			Select
+*[1589607]<tr />
+	*[1589612]<td />
+	*[1589613]<td />
+		*[1604037]<a />
+			Phoebe Zipper Sweatshirt-XL-Gray
+	*[1589614]<td />
+		WH07-XL-Gray
+	*[1589615]<td />
+		$59.00
+	*[1589616]<td />
+		100
+	*[1589617]<td />
+		1.000000
+	*[1589618]<td />
+		Enabled
+	*[1589619]<td />
+		Size: XL, Color: Gray
+	*[1589620]<td />
+		*[1601601]<button />
+			Select
+*[1589623]<tr />
+	*[1589628]<td />
+	*[1589629]<td />
+		*[1604050]<a />
+			Phoebe Zipper Sweatshirt-XL-Purple
+	*[1589630]<td />
+		WH07-XL-Purple
+	*[1589631]<td />
+		$59.00
+	*[1589632]<td />
+		100
+	*[1589633]<td />
+		1.000000
+	*[1589634]<td />
+		Enabled
+	*[1589635]<td />
+		Size: XL, Color: Purple
+	*[1589636]<td />
+		*[1601612]<button />
+			Select
+*[1589639]<tr />
+	*[1589644]<td />
+	*[1589645]<td />
+		*[1604063]<a />
+			Phoebe Zipper Sweatshirt-XL-White
+	*[1589646]<td />
+		WH07-XL-White
+	*[1589647]<td />
+		$59.00
+	*[1589648]<td />
+		100
+	*[1589649]<td />
+		1.000000
+	*[1589650]<td />
+		Enabled
+	*[1589651]<td />
+		Size: XL, Color: White
+	*[1589652]<td />
+		*[1601623]<button />
+			Select
+*[1588700]<div />
+	*[1588701]<strong />
+		*[1588702]<span />
+			Product Reviews
+		*[1588703]<span />
+*[1588229]<div />
+	*[1588230]<strong />
+		*[1588231]<span />
+			Images And Videos
+		*[1588232]<span />
+*[1588591]<div />
+	*[1588576]<div />
+		*[1588577]<strong />
+			*[1588578]<span />
+				Search Engine Optimization
+			*[1588579]<span />
+*[1588793]<div />
+	*[1588794]<strong />
+		*[1588795]<span />
+			Related Products, Up-Sells, and Cross-Sells
+		*[1588796]<span />

@@ -1,0 +1,951 @@
+[1166456]<a />
+*[1166464]<li id=menu-magento-backend-dashboard role=menu-item />
+	[1166465]<a />
+		Dashboard
+*[1166470]<li id=menu-magento-sales-sales role=menu-item />
+	[1166359]<a />
+		Sales
+*[1166513]<li id=menu-magento-catalog-catalog role=menu-item />
+	[1166360]<a />
+		Catalog
+*[1166536]<li id=menu-magento-customer-customer role=menu-item />
+	[1166361]<a />
+		Customers
+*[1166561]<li id=menu-magento-backend-marketing role=menu-item />
+	[1166362]<a />
+		Marketing
+*[1166646]<li id=menu-magento-backend-content role=menu-item />
+	[1166363]<a />
+		Content
+*[1166705]<li id=menu-magento-reports-report role=menu-item />
+	[1166364]<a />
+		Reports
+*[1166865]<li id=menu-magento-backend-stores role=menu-item />
+	[1166365]<a />
+		Stores
+*[1166961]<li id=menu-magento-backend-system role=menu-item />
+	[1166366]<a />
+		System
+*[1167066]<li id=menu-magento-marketplace-partners role=menu-item />
+	[1167067]<a />
+		Find Partners & Extensions
+Products
+[1167129]<a title=My Account />
+	admin
+[1167167]<a title=Notifications />
+[1167172]<div />
+	[1166343]<form id=form-search />
+		[1167175]<div />
+			[1166344]<input type=text id=search-global autocomplete=off />
+*[1167201]<div title=Add Product id=add_new_product />
+	[1167205]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[1167211]<button title=Add Product aria-label=Add product of type />
+*[1167721]<button />
+	Default View
+*[1167773]<button />
+	Columns
+*[1167944]<button />
+	Filters
+Active filters:
+Keyword:
+Teton Pullover Hoodie
+*[1168789]<button />
+*[1168736]<button />
+	Clear all
+*[1167971]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+*[1167972]<button aria-label=Search />
+*[1167979]<button title=Select Items />
+	Actions
+16
+records found
+*[1169243]<div />
+	*[1169245]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+*[1169246]<button />
+	Select
+per page
+*[1168035]<button title=Previous Page disabled=true />
+*[1168040]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[1168042]<button title=Next Page disabled=true />
+*[1167631]<tr />
+	*[1168409]<div />
+		*[1168410]<input type=checkbox checked=false id=77 />
+		*[1168412]<button />
+			Options
+	*[1168455]<th />
+		*[1168454]<span />
+			ID
+	*[1168458]<th />
+		Thumbnail
+	*[1168461]<th />
+		*[1168460]<span />
+			Name
+	*[1168464]<th />
+		*[1168463]<span />
+			Type
+	*[1168467]<th />
+		*[1168466]<span />
+			Attribute Set
+	*[1168470]<th />
+		*[1168469]<span />
+			SKU
+	*[1168473]<th />
+		*[1168472]<span />
+			Price
+	*[1168476]<th />
+		*[1168475]<span />
+			Quantity
+	*[1168479]<th />
+		Salable Quantity
+	*[1168482]<th />
+		*[1168481]<span />
+			Visibility
+	*[1168485]<th />
+		*[1168484]<span />
+			Status
+	*[1168488]<th />
+		*[1168487]<span />
+			Websites
+	*[1168491]<th />
+		*[1168490]<span />
+			Last Updated At
+	*[1168494]<th />
+		*[1168493]<span />
+			Action
+*[1185837]<tr />
+	*[1185886]<td />
+		*[1186132]<label />
+			*[1186130]<input type=checkbox checked=false id=idscheck78 value=78 />
+	*[1185887]<td />
+		*[1186201]<div />
+			78
+	*[1185888]<td />
+		*[1186347]<span />
+			*[1186345]<span />
+				*[1186346]<img alt=Teton Pullover Hoodie />
+	*[1185889]<td />
+		*[1186393]<div />
+			Teton Pullover Hoodie
+	*[1185890]<td />
+		*[1186202]<div />
+			Configurable Product
+	*[1185891]<td />
+		*[1186203]<div />
+			Top
+	*[1185892]<td />
+		*[1186394]<div />
+			MH02
+	*[1185893]<td />
+		*[1186204]<div />
+	*[1185894]<td />
+		*[1186205]<div />
+			0.0000
+	*[1185895]<td />
+		*[1186431]<div />
+			*[1186425]<ul />
+	*[1185896]<td />
+		*[1186206]<div />
+			Catalog, Search
+	*[1185897]<td />
+		*[1186207]<div />
+			Disabled
+	*[1185898]<td />
+		*[1186208]<div />
+			Main Website
+	*[1185899]<td />
+		*[1186209]<div />
+			Sep 2, 2026 8:14:26 AM
+	*[1185900]<td />
+		*[1186982]<a aria-label=Edit Teton Pullover Hoodie />
+			Edit
+*[1185840]<tr />
+	*[1185901]<td />
+		*[1186135]<label />
+			*[1186133]<input type=checkbox checked=false id=idscheck65 value=65 />
+	*[1185902]<td />
+		*[1186210]<div />
+			65
+	*[1185903]<td />
+		*[1186350]<span />
+			*[1186348]<span />
+				*[1186349]<img alt=Teton Pullover Hoodie-XS-Red />
+	*[1185904]<td />
+		*[1186395]<div />
+			Teton Pullover Hoodie-XS-Red
+	*[1185905]<td />
+		*[1186211]<div />
+			Simple Product
+	*[1185906]<td />
+		*[1186212]<div />
+			Top
+	*[1185907]<td />
+		*[1186396]<div />
+			MH02-XS-Red
+	*[1185908]<td />
+		*[1186213]<div />
+			$70.00
+	*[1185909]<td />
+		*[1186214]<div />
+			100.0000
+	*[1185910]<td />
+		*[1186457]<div />
+			*[1186451]<ul />
+				*[1186477]<li level=1 />
+					*[1186480]<strong />
+						Default Stock
+					*[1186481]<span />
+						100
+	*[1185911]<td />
+		*[1186215]<div />
+			Not Visible Individually
+	*[1185912]<td />
+		*[1186216]<div />
+			Enabled
+	*[1185913]<td />
+		*[1186217]<div />
+			Main Website
+	*[1185914]<td />
+		*[1186218]<div />
+			Apr 19, 2023 12:13:23 PM
+	*[1185915]<td />
+		*[1187002]<a aria-label=Edit Teton Pullover Hoodie-XS-Red />
+			Edit
+*[1185843]<tr />
+	*[1185916]<td />
+		*[1186138]<label />
+			*[1186136]<input type=checkbox checked=false id=idscheck69 value=69 />
+	*[1185917]<td />
+		*[1186219]<div />
+			69
+	*[1185918]<td />
+		*[1186353]<span />
+			*[1186351]<span />
+				*[1186352]<img alt=Teton Pullover Hoodie-M-Black />
+	*[1185919]<td />
+		*[1186397]<div />
+			Teton Pullover Hoodie-M-Black
+	*[1185920]<td />
+		*[1186220]<div />
+			Simple Product
+	*[1185921]<td />
+		*[1186221]<div />
+			Top
+	*[1185922]<td />
+		*[1186398]<div />
+			MH02-M-Black
+	*[1185923]<td />
+		*[1186222]<div />
+			$70.00
+	*[1185924]<td />
+		*[1186223]<div />
+			100.0000
+	*[1185925]<td />
+		*[1186492]<div />
+			*[1186486]<ul />
+				*[1186512]<li level=1 />
+					*[1186515]<strong />
+						Default Stock
+					*[1186516]<span />
+						99
+	*[1185926]<td />
+		*[1186224]<div />
+			Not Visible Individually
+	*[1185927]<td />
+		*[1186225]<div />
+			Enabled
+	*[1185928]<td />
+		*[1186226]<div />
+			Main Website
+	*[1185929]<td />
+		*[1186227]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1185930]<td />
+		*[1187022]<a aria-label=Edit Teton Pullover Hoodie-M-Black />
+			Edit
+*[1185846]<tr />
+	*[1185931]<td />
+		*[1186141]<label />
+			*[1186139]<input type=checkbox checked=false id=idscheck73 value=73 />
+	*[1185932]<td />
+		*[1186228]<div />
+			73
+	*[1185933]<td />
+		*[1186356]<span />
+			*[1186354]<span />
+				*[1186355]<img alt=Teton Pullover Hoodie-L-Purple />
+	*[1185934]<td />
+		*[1186399]<div />
+			Teton Pullover Hoodie-L-Purple
+	*[1185935]<td />
+		*[1186229]<div />
+			Simple Product
+	*[1185936]<td />
+		*[1186230]<div />
+			Top
+	*[1185937]<td />
+		*[1186400]<div />
+			MH02-L-Purple
+	*[1185938]<td />
+		*[1186231]<div />
+			$70.00
+	*[1185939]<td />
+		*[1186232]<div />
+			100.0000
+	*[1185940]<td />
+		*[1186527]<div />
+			*[1186521]<ul />
+				*[1186547]<li level=1 />
+					*[1186550]<strong />
+						Default Stock
+					*[1186551]<span />
+						100
+	*[1185941]<td />
+		*[1186233]<div />
+			Not Visible Individually
+	*[1185942]<td />
+		*[1186234]<div />
+			Enabled
+	*[1185943]<td />
+		*[1186235]<div />
+			Main Website
+	*[1185944]<td />
+		*[1186236]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1185945]<td />
+		*[1187042]<a aria-label=Edit Teton Pullover Hoodie-L-Purple />
+			Edit
+*[1185849]<tr />
+	*[1185946]<td />
+		*[1186144]<label />
+			*[1186142]<input type=checkbox checked=false id=idscheck77 value=77 />
+	*[1185947]<td />
+		*[1186237]<div />
+			77
+	*[1185948]<td />
+		*[1186359]<span />
+			*[1186357]<span />
+				*[1186358]<img alt=Teton Pullover Hoodie-XL-Red />
+	*[1185949]<td />
+		*[1186401]<div />
+			Teton Pullover Hoodie-XL-Red
+	*[1185950]<td />
+		*[1186238]<div />
+			Simple Product
+	*[1185951]<td />
+		*[1186239]<div />
+			Top
+	*[1185952]<td />
+		*[1186402]<div />
+			MH02-XL-Red
+	*[1185953]<td />
+		*[1186240]<div />
+			$70.00
+	*[1185954]<td />
+		*[1186241]<div />
+			100.0000
+	*[1185955]<td />
+		*[1186562]<div />
+			*[1186556]<ul />
+				*[1186582]<li level=1 />
+					*[1186585]<strong />
+						Default Stock
+					*[1186586]<span />
+						100
+	*[1185956]<td />
+		*[1186242]<div />
+			Not Visible Individually
+	*[1185957]<td />
+		*[1186243]<div />
+			Enabled
+	*[1185958]<td />
+		*[1186244]<div />
+			Main Website
+	*[1185959]<td />
+		*[1186245]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1185960]<td />
+		*[1187062]<a aria-label=Edit Teton Pullover Hoodie-XL-Red />
+			Edit
+*[1185852]<tr />
+	*[1185961]<td />
+		*[1186147]<label />
+			*[1186145]<input type=checkbox checked=false id=idscheck66 value=66 />
+	*[1185962]<td />
+		*[1186246]<div />
+			66
+	*[1185963]<td />
+		*[1186362]<span />
+			*[1186360]<span />
+				*[1186361]<img alt=Teton Pullover Hoodie-S-Black />
+	*[1185964]<td />
+		*[1186403]<div />
+			Teton Pullover Hoodie-S-Black
+	*[1185965]<td />
+		*[1186247]<div />
+			Simple Product
+	*[1185966]<td />
+		*[1186248]<div />
+			Top
+	*[1185967]<td />
+		*[1186404]<div />
+			MH02-S-Black
+	*[1185968]<td />
+		*[1186249]<div />
+			$70.00
+	*[1185969]<td />
+		*[1186250]<div />
+			100.0000
+	*[1185970]<td />
+		*[1186597]<div />
+			*[1186591]<ul />
+				*[1186617]<li level=1 />
+					*[1186620]<strong />
+						Default Stock
+					*[1186621]<span />
+						100
+	*[1185971]<td />
+		*[1186251]<div />
+			Not Visible Individually
+	*[1185972]<td />
+		*[1186252]<div />
+			Enabled
+	*[1185973]<td />
+		*[1186253]<div />
+			Main Website
+	*[1185974]<td />
+		*[1186254]<div />
+			Apr 19, 2023 12:13:23 PM
+	*[1185975]<td />
+		*[1187082]<a aria-label=Edit Teton Pullover Hoodie-S-Black />
+			Edit
+*[1185855]<tr />
+	*[1185976]<td />
+		*[1186150]<label />
+			*[1186148]<input type=checkbox checked=false id=idscheck70 value=70 />
+	*[1185977]<td />
+		*[1186255]<div />
+			70
+	*[1185978]<td />
+		*[1186365]<span />
+			*[1186363]<span />
+				*[1186364]<img alt=Teton Pullover Hoodie-M-Purple />
+	*[1185979]<td />
+		*[1186405]<div />
+			Teton Pullover Hoodie-M-Purple
+	*[1185980]<td />
+		*[1186256]<div />
+			Simple Product
+	*[1185981]<td />
+		*[1186257]<div />
+			Top
+	*[1185982]<td />
+		*[1186406]<div />
+			MH02-M-Purple
+	*[1185983]<td />
+		*[1186258]<div />
+			$70.00
+	*[1185984]<td />
+		*[1186259]<div />
+			100.0000
+	*[1185985]<td />
+		*[1186632]<div />
+			*[1186626]<ul />
+				*[1186652]<li level=1 />
+					*[1186655]<strong />
+						Default Stock
+					*[1186656]<span />
+						100
+	*[1185986]<td />
+		*[1186260]<div />
+			Not Visible Individually
+	*[1185987]<td />
+		*[1186261]<div />
+			Enabled
+	*[1185988]<td />
+		*[1186262]<div />
+			Main Website
+	*[1185989]<td />
+		*[1186263]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1185990]<td />
+		*[1187102]<a aria-label=Edit Teton Pullover Hoodie-M-Purple />
+			Edit
+*[1185858]<tr />
+	*[1185991]<td />
+		*[1186153]<label />
+			*[1186151]<input type=checkbox checked=false id=idscheck74 value=74 />
+	*[1185992]<td />
+		*[1186264]<div />
+			74
+	*[1185993]<td />
+		*[1186368]<span />
+			*[1186366]<span />
+				*[1186367]<img alt=Teton Pullover Hoodie-L-Red />
+	*[1185994]<td />
+		*[1186407]<div />
+			Teton Pullover Hoodie-L-Red
+	*[1185995]<td />
+		*[1186265]<div />
+			Simple Product
+	*[1185996]<td />
+		*[1186266]<div />
+			Top
+	*[1185997]<td />
+		*[1186408]<div />
+			MH02-L-Red
+	*[1185998]<td />
+		*[1186267]<div />
+			$70.00
+	*[1185999]<td />
+		*[1186268]<div />
+			100.0000
+	*[1186000]<td />
+		*[1186667]<div />
+			*[1186661]<ul />
+				*[1186687]<li level=1 />
+					*[1186690]<strong />
+						Default Stock
+					*[1186691]<span />
+						100
+	*[1186001]<td />
+		*[1186269]<div />
+			Not Visible Individually
+	*[1186002]<td />
+		*[1186270]<div />
+			Enabled
+	*[1186003]<td />
+		*[1186271]<div />
+			Main Website
+	*[1186004]<td />
+		*[1186272]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1186005]<td />
+		*[1187122]<a aria-label=Edit Teton Pullover Hoodie-L-Red />
+			Edit
+*[1185861]<tr />
+	*[1186006]<td />
+		*[1186156]<label />
+			*[1186154]<input type=checkbox checked=false id=idscheck63 value=63 />
+	*[1186007]<td />
+		*[1186273]<div />
+			63
+	*[1186008]<td />
+		*[1186371]<span />
+			*[1186369]<span />
+				*[1186370]<img alt=Teton Pullover Hoodie-XS-Black />
+	*[1186009]<td />
+		*[1186409]<div />
+			Teton Pullover Hoodie-XS-Black
+	*[1186010]<td />
+		*[1186274]<div />
+			Simple Product
+	*[1186011]<td />
+		*[1186275]<div />
+			Top
+	*[1186012]<td />
+		*[1186410]<div />
+			MH02-XS-Black
+	*[1186013]<td />
+		*[1186276]<div />
+			$70.00
+	*[1186014]<td />
+		*[1186277]<div />
+			100.0000
+	*[1186015]<td />
+		*[1186702]<div />
+			*[1186696]<ul />
+				*[1186722]<li level=1 />
+					*[1186725]<strong />
+						Default Stock
+					*[1186726]<span />
+						100
+	*[1186016]<td />
+		*[1186278]<div />
+			Not Visible Individually
+	*[1186017]<td />
+		*[1186279]<div />
+			Enabled
+	*[1186018]<td />
+		*[1186280]<div />
+			Main Website
+	*[1186019]<td />
+		*[1186281]<div />
+			Apr 19, 2023 12:13:23 PM
+	*[1186020]<td />
+		*[1187142]<a aria-label=Edit Teton Pullover Hoodie-XS-Black />
+			Edit
+*[1185864]<tr />
+	*[1186021]<td />
+		*[1186159]<label />
+			*[1186157]<input type=checkbox checked=false id=idscheck67 value=67 />
+	*[1186022]<td />
+		*[1186282]<div />
+			67
+	*[1186023]<td />
+		*[1186374]<span />
+			*[1186372]<span />
+				*[1186373]<img alt=Teton Pullover Hoodie-S-Purple />
+	*[1186024]<td />
+		*[1186411]<div />
+			Teton Pullover Hoodie-S-Purple
+	*[1186025]<td />
+		*[1186283]<div />
+			Simple Product
+	*[1186026]<td />
+		*[1186284]<div />
+			Top
+	*[1186027]<td />
+		*[1186412]<div />
+			MH02-S-Purple
+	*[1186028]<td />
+		*[1186285]<div />
+			$70.00
+	*[1186029]<td />
+		*[1186286]<div />
+			100.0000
+	*[1186030]<td />
+		*[1186737]<div />
+			*[1186731]<ul />
+				*[1186757]<li level=1 />
+					*[1186760]<strong />
+						Default Stock
+					*[1186761]<span />
+						100
+	*[1186031]<td />
+		*[1186287]<div />
+			Not Visible Individually
+	*[1186032]<td />
+		*[1186288]<div />
+			Enabled
+	*[1186033]<td />
+		*[1186289]<div />
+			Main Website
+	*[1186034]<td />
+		*[1186290]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1186035]<td />
+		*[1187162]<a aria-label=Edit Teton Pullover Hoodie-S-Purple />
+			Edit
+*[1185867]<tr />
+	*[1186036]<td />
+		*[1186162]<label />
+			*[1186160]<input type=checkbox checked=false id=idscheck71 value=71 />
+	*[1186037]<td />
+		*[1186291]<div />
+			71
+	*[1186038]<td />
+		*[1186377]<span />
+			*[1186375]<span />
+				*[1186376]<img alt=Teton Pullover Hoodie-M-Red />
+	*[1186039]<td />
+		*[1186413]<div />
+			Teton Pullover Hoodie-M-Red
+	*[1186040]<td />
+		*[1186292]<div />
+			Simple Product
+	*[1186041]<td />
+		*[1186293]<div />
+			Top
+	*[1186042]<td />
+		*[1186414]<div />
+			MH02-M-Red
+	*[1186043]<td />
+		*[1186294]<div />
+			$70.00
+	*[1186044]<td />
+		*[1186295]<div />
+			100.0000
+	*[1186045]<td />
+		*[1186772]<div />
+			*[1186766]<ul />
+				*[1186792]<li level=1 />
+					*[1186795]<strong />
+						Default Stock
+					*[1186796]<span />
+						100
+	*[1186046]<td />
+		*[1186296]<div />
+			Not Visible Individually
+	*[1186047]<td />
+		*[1186297]<div />
+			Enabled
+	*[1186048]<td />
+		*[1186298]<div />
+			Main Website
+	*[1186049]<td />
+		*[1186299]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1186050]<td />
+		*[1187182]<a aria-label=Edit Teton Pullover Hoodie-M-Red />
+			Edit
+*[1185870]<tr />
+	*[1186051]<td />
+		*[1186165]<label />
+			*[1186163]<input type=checkbox checked=false id=idscheck75 value=75 />
+	*[1186052]<td />
+		*[1186300]<div />
+			75
+	*[1186053]<td />
+		*[1186380]<span />
+			*[1186378]<span />
+				*[1186379]<img alt=Teton Pullover Hoodie-XL-Black />
+	*[1186054]<td />
+		*[1186415]<div />
+			Teton Pullover Hoodie-XL-Black
+	*[1186055]<td />
+		*[1186301]<div />
+			Simple Product
+	*[1186056]<td />
+		*[1186302]<div />
+			Top
+	*[1186057]<td />
+		*[1186416]<div />
+			MH02-XL-Black
+	*[1186058]<td />
+		*[1186303]<div />
+			$70.00
+	*[1186059]<td />
+		*[1186304]<div />
+			100.0000
+	*[1186060]<td />
+		*[1186807]<div />
+			*[1186801]<ul />
+				*[1186827]<li level=1 />
+					*[1186830]<strong />
+						Default Stock
+					*[1186831]<span />
+						100
+	*[1186061]<td />
+		*[1186305]<div />
+			Not Visible Individually
+	*[1186062]<td />
+		*[1186306]<div />
+			Enabled
+	*[1186063]<td />
+		*[1186307]<div />
+			Main Website
+	*[1186064]<td />
+		*[1186308]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1186065]<td />
+		*[1187202]<a aria-label=Edit Teton Pullover Hoodie-XL-Black />
+			Edit
+*[1185873]<tr />
+	*[1186066]<td />
+		*[1186168]<label />
+			*[1186166]<input type=checkbox checked=false id=idscheck64 value=64 />
+	*[1186067]<td />
+		*[1186309]<div />
+			64
+	*[1186068]<td />
+		*[1186383]<span />
+			*[1186381]<span />
+				*[1186382]<img alt=Teton Pullover Hoodie-XS-Purple />
+	*[1186069]<td />
+		*[1186417]<div />
+			Teton Pullover Hoodie-XS-Purple
+	*[1186070]<td />
+		*[1186310]<div />
+			Simple Product
+	*[1186071]<td />
+		*[1186311]<div />
+			Top
+	*[1186072]<td />
+		*[1186418]<div />
+			MH02-XS-Purple
+	*[1186073]<td />
+		*[1186312]<div />
+			$70.00
+	*[1186074]<td />
+		*[1186313]<div />
+			100.0000
+	*[1186075]<td />
+		*[1186842]<div />
+			*[1186836]<ul />
+				*[1186862]<li level=1 />
+					*[1186865]<strong />
+						Default Stock
+					*[1186866]<span />
+						100
+	*[1186076]<td />
+		*[1186314]<div />
+			Not Visible Individually
+	*[1186077]<td />
+		*[1186315]<div />
+			Enabled
+	*[1186078]<td />
+		*[1186316]<div />
+			Main Website
+	*[1186079]<td />
+		*[1186317]<div />
+			Apr 19, 2023 12:13:23 PM
+	*[1186080]<td />
+		*[1187222]<a aria-label=Edit Teton Pullover Hoodie-XS-Purple />
+			Edit
+*[1185876]<tr />
+	*[1186081]<td />
+		*[1186171]<label />
+			*[1186169]<input type=checkbox checked=false id=idscheck68 value=68 />
+	*[1186082]<td />
+		*[1186318]<div />
+			68
+	*[1186083]<td />
+		*[1186386]<span />
+			*[1186384]<span />
+				*[1186385]<img alt=Teton Pullover Hoodie-S-Red />
+	*[1186084]<td />
+		*[1186419]<div />
+			Teton Pullover Hoodie-S-Red
+	*[1186085]<td />
+		*[1186319]<div />
+			Simple Product
+	*[1186086]<td />
+		*[1186320]<div />
+			Top
+	*[1186087]<td />
+		*[1186420]<div />
+			MH02-S-Red
+	*[1186088]<td />
+		*[1186321]<div />
+			$70.00
+	*[1186089]<td />
+		*[1186322]<div />
+			100.0000
+	*[1186090]<td />
+		*[1186877]<div />
+			*[1186871]<ul />
+				*[1186897]<li level=1 />
+					*[1186900]<strong />
+						Default Stock
+					*[1186901]<span />
+						99
+	*[1186091]<td />
+		*[1186323]<div />
+			Not Visible Individually
+	*[1186092]<td />
+		*[1186324]<div />
+			Enabled
+	*[1186093]<td />
+		*[1186325]<div />
+			Main Website
+	*[1186094]<td />
+		*[1186326]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1186095]<td />
+		*[1187242]<a aria-label=Edit Teton Pullover Hoodie-S-Red />
+			Edit
+*[1185879]<tr />
+	*[1186096]<td />
+		*[1186174]<label />
+			*[1186172]<input type=checkbox checked=false id=idscheck72 value=72 />
+	*[1186097]<td />
+		*[1186327]<div />
+			72
+	*[1186098]<td />
+		*[1186389]<span />
+			*[1186387]<span />
+				*[1186388]<img alt=Teton Pullover Hoodie-L-Black />
+	*[1186099]<td />
+		*[1186421]<div />
+			Teton Pullover Hoodie-L-Black
+	*[1186100]<td />
+		*[1186328]<div />
+			Simple Product
+	*[1186101]<td />
+		*[1186329]<div />
+			Top
+	*[1186102]<td />
+		*[1186422]<div />
+			MH02-L-Black
+	*[1186103]<td />
+		*[1186330]<div />
+			$70.00
+	*[1186104]<td />
+		*[1186331]<div />
+			100.0000
+	*[1186105]<td />
+		*[1186912]<div />
+			*[1186906]<ul />
+				*[1186932]<li level=1 />
+					*[1186935]<strong />
+						Default Stock
+					*[1186936]<span />
+						99
+	*[1186106]<td />
+		*[1186332]<div />
+			Not Visible Individually
+	*[1186107]<td />
+		*[1186333]<div />
+			Enabled
+	*[1186108]<td />
+		*[1186334]<div />
+			Main Website
+	*[1186109]<td />
+		*[1186335]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1186110]<td />
+		*[1187262]<a aria-label=Edit Teton Pullover Hoodie-L-Black />
+			Edit
+*[1185882]<tr />
+	*[1186111]<td />
+		*[1186177]<label />
+			*[1186175]<input type=checkbox checked=false id=idscheck76 value=76 />
+	*[1186112]<td />
+		*[1186336]<div />
+			76
+	*[1186113]<td />
+		*[1186392]<span />
+			*[1186390]<span />
+				*[1186391]<img alt=Teton Pullover Hoodie-XL-Purple />
+	*[1186114]<td />
+		*[1186423]<div />
+			Teton Pullover Hoodie-XL-Purple
+	*[1186115]<td />
+		*[1186337]<div />
+			Simple Product
+	*[1186116]<td />
+		*[1186338]<div />
+			Top
+	*[1186117]<td />
+		*[1186424]<div />
+			MH02-XL-Purple
+	*[1186118]<td />
+		*[1186339]<div />
+			$70.00
+	*[1186119]<td />
+		*[1186340]<div />
+			100.0000
+	*[1186120]<td />
+		*[1186947]<div />
+			*[1186941]<ul />
+				*[1186967]<li level=1 />
+					*[1186970]<strong />
+						Default Stock
+					*[1186971]<span />
+						100
+	*[1186121]<td />
+		*[1186341]<div />
+			Not Visible Individually
+	*[1186122]<td />
+		*[1186342]<div />
+			Enabled
+	*[1186123]<td />
+		*[1186343]<div />
+			Main Website
+	*[1186124]<td />
+		*[1186344]<div />
+			Apr 19, 2023 12:13:24 PM
+	*[1186125]<td />
+		*[1187282]<a aria-label=Edit Teton Pullover Hoodie-XL-Purple />
+			Edit
+[1167304]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[1167314]<a id=footer_privacy />
+	Privacy Policy
+[1167317]<a id=footer_account_activity />
+	Account Activity
+[1167320]<a id=footer_bug_tracking />
+	Report an Issue

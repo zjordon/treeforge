@@ -1,0 +1,232 @@
+[784699]<a />
+[784703]<li id=menu-magento-backend-dashboard role=menu-item />
+	[784704]<a />
+		Dashboard
+[784706]<li id=menu-magento-sales-sales role=menu-item />
+	[784707]<a />
+		Sales
+[784739]<li id=menu-magento-catalog-catalog role=menu-item />
+	[784740]<a />
+		Catalog
+[784757]<li id=menu-magento-customer-customer role=menu-item />
+	[784758]<a />
+		Customers
+[784776]<li id=menu-magento-backend-marketing role=menu-item />
+	[784777]<a />
+		Marketing
+[784843]<li id=menu-magento-backend-content role=menu-item />
+	[784844]<a />
+		Content
+[784889]<li id=menu-magento-reports-report role=menu-item />
+	[784890]<a />
+		Reports
+[785014]<li id=menu-magento-backend-stores role=menu-item />
+	[785015]<a />
+		Stores
+[785090]<li id=menu-magento-backend-system role=menu-item />
+	[785091]<a />
+		System
+[785173]<li id=menu-magento-marketplace-partners role=menu-item />
+	[785174]<a />
+		Find Partners & Extensions
+New Shipment
+[785200]<a title=My Account />
+	admin
+[785212]<a title=Notifications />
+[785213]<div />
+	[785214]<form id=form-search />
+		[785215]<div />
+			[785217]<input type=text id=search-global autocomplete=off />
+[785225]<button title=Back id=back />
+	Back
+[785228]<button title=Reset id=reset />
+	Reset
+[785234]<form id=edit_form />
+	Order & Account Information
+	[785244]<a />
+		Order # 000000299
+	(The order confirmation email was sent)
+	[785249]<tr />
+		Order Date
+		[785251]<td />
+			May 31, 2023, 2:55:09 AM
+	[785252]<tr />
+		Order Status
+		[785254]<td />
+			Pending
+	[785256]<tr />
+		Purchased From
+		[785258]<td />
+			Main Website
+			Main Website Store
+			Default Store View
+	[785261]<tr />
+		Placed from IP
+		[785263]<td />
+			128.2.205.52
+	Account Information
+	[785268]<a />
+		Edit Customer
+	[785272]<tr />
+		Customer Name
+		[785274]<td />
+			[785275]<a />
+				Sarah Miller
+	[785277]<tr />
+		Email
+		[785279]<td />
+			[785280]<a />
+				helloworld@yahoo.com
+	[785281]<tr />
+		Customer Group
+		[785283]<td />
+			General
+	Address Information
+	Billing Address
+	[785291]<div />
+		[785292]<a />
+			Edit
+	Sarah Miller
+	456 Oak Avenue
+	Apartment 5B
+	New York,  New York, 10001
+	United States
+	T: 5107819902
+	Shipping Address
+	[785302]<div />
+		[785303]<a />
+			Edit
+	Sarah Miller
+	456 Oak Avenue
+	Apartment 5B
+	New York,  New York, 10001
+	New Caledonia
+	T: 5107819902
+	Payment & Shipping Method
+	Payment Information
+	Check / Money order
+	The order was placed using USD.
+	Shipping Information
+	Flat Rate - Fixed
+	Total Shipping Charges:
+	[785326]<span />
+		$25.00
+	[785333]<tr />
+		Carrier
+		Title
+		Number
+		Action
+	[785339]<tr />
+		[785340]<td />
+			[785341]<button title=Add Tracking Number id=id_5Bmu2qJV6atutKoQmFrSh7fDXlkLNYGj />
+				Add Tracking Number
+	*[787001]<tr />
+		*[787002]<td />
+			*[787009]<select id=trackingC1 name=tracking[1][carrier_code] expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=Custom Value|DHL|Federal Express|United Parcel Service) />
+		*[787025]<td />
+			*[787026]<input type=text id=trackingT1 name=tracking[1][title] />
+		*[787027]<td />
+			*[787028]<input type=text id=trackingN1 name=tracking[1][number] />
+		*[787029]<td />
+			*[787030]<button />
+	Inventory
+	Source:        Default Source
+	Items to Ship
+	[785359]<tr />
+		Product
+		Qty
+		Qty to Ship
+	[785367]<tr />
+		[785368]<td />
+			Argus All-Weather Tank
+			SKU:
+			MT07-M-Gray
+			Color:
+			Gray
+			Size:
+		[785377]<td />
+			[785380]<tr />
+				Ordered
+				[785382]<td />
+		[785383]<td />
+			[785384]<input type=text name=shipment[items][1565] value=1 />
+	[785386]<tr />
+		[785387]<td />
+			Marco Lightweight Active Hoodie
+			SKU:
+			MH13-S-Green
+			Color:
+			Green
+			Size:
+		[785396]<td />
+			[785399]<tr />
+				Ordered
+				[785401]<td />
+		[785402]<td />
+			[785403]<input type=text name=shipment[items][1567] value=1 />
+	[785405]<tr />
+		[785406]<td />
+			Tiffany Fitness Tee
+			SKU:
+			WS09-XL-Blue
+			Color:
+			Blue
+			Size:
+			XL
+		[785415]<td />
+			[785418]<tr />
+				Ordered
+				[785420]<td />
+		[785421]<td />
+			[785422]<input type=text name=shipment[items][1569] value=1 />
+	[785424]<tr />
+		[785425]<td />
+			Nadia Elements Shell
+			SKU:
+			WJ10-XS-Yellow
+			Color:
+			Yellow
+			Size:
+			XS
+		[785434]<td />
+			[785437]<tr />
+				Ordered
+				[785439]<td />
+		[785440]<td />
+			[785441]<input type=text name=shipment[items][1571] value=1 />
+	[785443]<tr />
+		[785444]<td />
+			Gwen Drawstring Bike Short
+			SKU:
+			WSH03-28-Orange
+			Color:
+			Orange
+			Size:
+			28
+		[785453]<td />
+			[785456]<tr />
+				Ordered
+				[785458]<td />
+		[785459]<td />
+			[785460]<input type=text name=shipment[items][1573] value=1 />
+	Shipment Total
+	Shipment Comments
+	Comment Text
+	[785475]<textarea id=shipment_comment_text name=shipment[comment_text] />
+	Shipment Options
+	Append Comments
+	[785485]<input type=checkbox checked=false id=send_email name=shipment[send_email] value=1 />
+	[785487]<span />
+		Email Copy of Shipment
+	[785489]<button title=Submit Shipment id=id_so8G9JUXxL4rQ0yN1fasSDx5P0mQq8Ab />
+		Submit Shipment
+[785587]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[785591]<a id=footer_privacy />
+	Privacy Policy
+[785592]<a id=footer_account_activity />
+	Account Activity
+[785593]<a id=footer_bug_tracking />
+	Report an Issue

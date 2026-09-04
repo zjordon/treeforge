@@ -1,0 +1,464 @@
+*[1433887]<a />
+*[1433895]<li id=menu-magento-backend-dashboard role=menu-item />
+	*[1433896]<a />
+		Dashboard
+*[1433901]<li id=menu-magento-sales-sales role=menu-item />
+	[1433902]<a />
+		Sales
+*[1433946]<li id=menu-magento-catalog-catalog role=menu-item />
+	[1433947]<a />
+		Catalog
+*[1433971]<li id=menu-magento-customer-customer role=menu-item />
+	[1433972]<a />
+		Customers
+*[1433998]<li id=menu-magento-backend-marketing role=menu-item />
+	[1433999]<a />
+		Marketing
+*[1434084]<li id=menu-magento-backend-content role=menu-item />
+	[1434085]<a />
+		Content
+*[1434145]<li id=menu-magento-reports-report role=menu-item />
+	[1434146]<a />
+		Reports
+*[1434308]<li id=menu-magento-backend-stores role=menu-item />
+	[1434309]<a />
+		Stores
+*[1434406]<li id=menu-magento-backend-system role=menu-item />
+	[1434407]<a />
+		System
+*[1434513]<li id=menu-magento-marketplace-partners role=menu-item />
+	*[1434514]<a />
+		Find Partners & Extensions
+*[1434722]<div title=Save />
+	*[1434726]<button title=Save id=save-button />
+		Save
+	*[1434732]<button title=Save aria-label=Save options />
+[1434766]<button title=Back id=back />
+	Back
+*[1434775]<button title=Add Attribute id=addAttribute />
+	Add Attribute
+*|scroll element[1451530]<select id=HJQKLHF name=product[activity] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=20,options=Hike|Outdoor|Running|Warmup,format=numeric) /> (scroll: 0%, 2.3 pages below, total: 3.3 pages)
+*|scroll element[1451669]<select id=HGDNKKP name=product[style_general] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=26,options=Insulated|Jacket|Vest|Lightweight,format=numeric) /> (scroll: 65%, 1.2 pages below, 2.2 pages above, total: 4.3 pages)
+*|scroll element[1451783]<select id=JB4U86J name=product[material] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=36,options=Burlap|Cocona&reg; performance fabric|Canvas|Wool,format=numeric) /> (scroll: 27%, 3.7 pages below, 1.3 pages above, total: 6.0 pages)
+	*[1451835]<option value=39 selected=false />
+	*[1451838]<option value=150 selected=false />
+	*[1451841]<option value=151 selected=true />
+	*[1451844]<option value=40 selected=false />
+	*[1451847]<option value=152 selected=false />
+	*[1451850]<option value=41 selected=false />
+	*[1451853]<option value=42 selected=false />
+	*[1451856]<option value=153 selected=false />
+	*[1451859]<option value=43 selected=false />
+	*[1451862]<option value=154 selected=false />
+	*[1451865]<option value=155 selected=false />
+	*[1451868]<option value=44 selected=false />
+	*[1451871]<option value=156 selected=false />
+	*[1451874]<option value=45 selected=false />
+	*[1451877]<option value=157 selected=false />
+	*[1451880]<option value=46 selected=false />
+	*[1451883]<option value=47 selected=false />
+	*[1451886]<option value=158 selected=false />
+	*[1451889]<option value=48 selected=false />
+	*[1451892]<option value=159 selected=false />
+*[1451937]<select id=XG842HR name=product[sleeve] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Sleeve|Long-Sleeve|Short-Sleeve|Sleeveless,format=numeric) />
+	*[1451941]<option value=160 selected=false />
+	*[1451944]<option value=161 selected=false />
+	*[1451947]<option value=162 selected=false />
+	*[1451950]<option value=163 selected=false />
+	*[1451953]<option value=164 selected=false />
+	*[1451956]<option value=165 selected=false />
+*[1438693]<span />
+	Size
+*[1438742]<span />
+	Collar
+*|scroll element[1451971]<select id=KDXHU7F name=product[collar] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=N/A|? zip|Boat Neck|Crew,format=numeric) /> (scroll: 0%, 1.0 pages below, total: 2.0 pages)
+	*[1451975]<option value=180 selected=false />
+	*[1451978]<option value=181 selected=false />
+	*[1451981]<option value=182 selected=false />
+	*[1451984]<option value=183 selected=false />
+	*[1451987]<option value=184 selected=false />
+	*[1451990]<option value=185 selected=false />
+	*[1451993]<option value=186 selected=false />
+	*[1451996]<option value=187 selected=false />
+*[1438791]<span />
+	Pattern
+*|scroll element[1452029]<select id=P48JIPJ name=product[pattern] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=9,options=Color-Blocked|Checked|Color-Blocked|Graphic Print,format=numeric) /> (scroll: 0%, 0.5 pages below, total: 1.5 pages)
+	*[1452033]<option value=192 selected=false />
+	*[1452036]<option value=193 selected=false />
+	*[1452039]<option value=194 selected=false />
+	*[1452042]<option value=195 selected=false />
+	*[1452045]<option value=196 selected=true />
+	*[1452048]<option value=197 selected=false />
+	*[1452051]<option value=198 selected=false />
+	*[1452054]<option value=199 selected=false />
+*[1438840]<span />
+	Climate
+*|scroll element[1452075]<select id=OPFBDAF name=product[climate] multiselectable=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=11,options=All-Weather|Cold|Cool|Indoor,format=numeric) /> (scroll: 0%, 0.8 pages below, total: 1.8 pages)
+	*[1452079]<option value=201 selected=false />
+	*[1452082]<option value=202 selected=false />
+	*[1452085]<option value=203 selected=false />
+	*[1452088]<option value=204 selected=true />
+	*[1452091]<option value=205 selected=false />
+	*[1452094]<option value=206 selected=false />
+	*[1452097]<option value=207 selected=false />
+	*[1452100]<option value=208 selected=true />
+	*[1452103]<option value=209 selected=false />
+	*[1452106]<option value=210 selected=false />
+	*[1452109]<option value=211 selected=false />
+*[1438889]<span />
+	Color
+*[1438938]<span />
+	Eco Collection
+*[1450127]<input type=checkbox checked=false id=VY2WJ1F name=product[eco_collection] value=0 />
+*[1450129]<span />
+*[1438987]<span />
+	Performance Fabric
+*[1450131]<input type=checkbox checked=true id=FBHAKNL name=product[performance_fabric] value=1 />
+*[1450133]<span />
+Erin Recommends
+*[1439085]<span />
+	New
+*[1450139]<input type=checkbox checked=false id=C038MPX name=product[new] value=0 />
+*[1450141]<span />
+*[1439134]<span />
+	Sale
+*[1450143]<input type=checkbox checked=true id=B5PRD9T name=product[sale] value=1 />
+*[1450145]<span />
+*[1435951]<div />
+	*[1435952]<strong />
+		*[1435953]<span />
+			Content
+		*[1435954]<span />
+*[1436230]<div />
+	*[1436231]<strong />
+		*[1436232]<span />
+			Configurations
+		*[1436233]<span />
+			*[1436234]<span />
+				*[1436235]<span role=tooltip />
+*[1467731]<button />
+	Add Products Manually
+*[1467752]<button />
+	Edit Configurations
+Configurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).
+Current Variations
+*[1437986]<select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=7,options=5|20|30|50,format=numeric) />
+per page
+*[1438010]<button title=Previous Page disabled=true />
+*[1438015]<input type=number id=2 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[1438017]<button title=Next Page disabled=true />
+*[1438024]<tr />
+	Image
+	Name
+	SKU
+	Price
+	Quantity
+	Weight
+	Status
+	Attributes
+	Actions
+*[1440000]<tr />
+	*[1440005]<td />
+	*[1440097]<td />
+		*[1452179]<a />
+			Antonia Racer Tank-XS-Black
+	*[1440200]<td />
+		WT08-XS-Black
+	*[1440303]<td />
+		$34.00
+	*[1440406]<td />
+		100
+	*[1440509]<td />
+		1.000000
+	*[1440612]<td />
+		Enabled
+	*[1440613]<td />
+		Size: XS, Color: Black
+	*[1440663]<td />
+		*[1452469]<button />
+			Select
+*[1440666]<tr />
+	*[1440671]<td />
+	*[1440763]<td />
+		*[1452192]<a />
+			Antonia Racer Tank-XS-Purple
+	*[1440866]<td />
+		WT08-XS-Purple
+	*[1440969]<td />
+		$34.00
+	*[1441072]<td />
+		100
+	*[1441175]<td />
+		1.000000
+	*[1441278]<td />
+		Enabled
+	*[1441279]<td />
+		Size: XS, Color: Purple
+	*[1441329]<td />
+		*[1452480]<button />
+			Select
+*[1441332]<tr />
+	*[1441337]<td />
+	*[1441429]<td />
+		*[1452205]<a />
+			Antonia Racer Tank-XS-Yellow
+	*[1441532]<td />
+		WT08-XS-Yellow
+	*[1441635]<td />
+		$34.00
+	*[1441738]<td />
+		100
+	*[1441841]<td />
+		1.000000
+	*[1441944]<td />
+		Enabled
+	*[1441945]<td />
+		Size: XS, Color: Yellow
+	*[1441995]<td />
+		*[1452491]<button />
+			Select
+*[1441998]<tr />
+	*[1442003]<td />
+	*[1442095]<td />
+		*[1452218]<a />
+			Antonia Racer Tank-S-Black
+	*[1442198]<td />
+		WT08-S-Black
+	*[1442301]<td />
+		$34.00
+	*[1442404]<td />
+		100
+	*[1442507]<td />
+		1.000000
+	*[1442610]<td />
+		Enabled
+	*[1442611]<td />
+		Size: S, Color: Black
+	*[1442661]<td />
+		*[1452502]<button />
+			Select
+*[1442664]<tr />
+	*[1442669]<td />
+	*[1442761]<td />
+		*[1452231]<a />
+			Antonia Racer Tank-S-Purple
+	*[1442864]<td />
+		WT08-S-Purple
+	*[1442967]<td />
+		$34.00
+	*[1443070]<td />
+		100
+	*[1443173]<td />
+		1.000000
+	*[1443276]<td />
+		Enabled
+	*[1443277]<td />
+		Size: S, Color: Purple
+	*[1443327]<td />
+		*[1452513]<button />
+			Select
+*[1443330]<tr />
+	*[1443335]<td />
+	*[1443427]<td />
+		*[1452244]<a />
+			Antonia Racer Tank-S-Yellow
+	*[1443530]<td />
+		WT08-S-Yellow
+	*[1443633]<td />
+		$34.00
+	*[1443736]<td />
+		100
+	*[1443839]<td />
+		1.000000
+	*[1443942]<td />
+		Enabled
+	*[1443943]<td />
+		Size: S, Color: Yellow
+	*[1443993]<td />
+		*[1452524]<button />
+			Select
+*[1443996]<tr />
+	*[1444001]<td />
+	*[1444093]<td />
+		*[1452257]<a />
+			Antonia Racer Tank-M-Black
+	*[1444196]<td />
+		WT08-M-Black
+	*[1444299]<td />
+		$34.00
+	*[1444402]<td />
+		100
+	*[1444505]<td />
+		1.000000
+	*[1444608]<td />
+		Enabled
+	*[1444609]<td />
+		Size: M, Color: Black
+	*[1444659]<td />
+		*[1452535]<button />
+			Select
+*[1444662]<tr />
+	*[1444667]<td />
+	*[1444759]<td />
+		*[1452270]<a />
+			Antonia Racer Tank-M-Purple
+	*[1444862]<td />
+		WT08-M-Purple
+	*[1444965]<td />
+		$34.00
+	*[1445068]<td />
+		100
+	*[1445171]<td />
+		1.000000
+	*[1445274]<td />
+		Enabled
+	*[1445275]<td />
+		Size: M, Color: Purple
+	*[1445325]<td />
+		*[1452546]<button />
+			Select
+*[1445328]<tr />
+	*[1445333]<td />
+	*[1445425]<td />
+		*[1452283]<a />
+			Antonia Racer Tank-M-Yellow
+	*[1445528]<td />
+		WT08-M-Yellow
+	*[1445631]<td />
+		$34.00
+	*[1445734]<td />
+		100
+	*[1445837]<td />
+		1.000000
+	*[1445940]<td />
+		Enabled
+	*[1445941]<td />
+		Size: M, Color: Yellow
+	*[1445991]<td />
+		*[1452557]<button />
+			Select
+*[1445994]<tr />
+	*[1445999]<td />
+	*[1446091]<td />
+		*[1452296]<a />
+			Antonia Racer Tank-L-Black
+	*[1446194]<td />
+		WT08-L-Black
+	*[1446297]<td />
+		$34.00
+	*[1446400]<td />
+		100
+	*[1446503]<td />
+		1.000000
+	*[1446606]<td />
+		Enabled
+	*[1446607]<td />
+		Size: L, Color: Black
+	*[1446657]<td />
+		*[1452568]<button />
+			Select
+*[1446660]<tr />
+	*[1446665]<td />
+	*[1446757]<td />
+		*[1452309]<a />
+			Antonia Racer Tank-L-Purple
+	*[1446860]<td />
+		WT08-L-Purple
+	*[1446963]<td />
+		$34.00
+	*[1447066]<td />
+		100
+	*[1447169]<td />
+		1.000000
+	*[1447272]<td />
+		Enabled
+	*[1447273]<td />
+		Size: L, Color: Purple
+	*[1447323]<td />
+		*[1452579]<button />
+			Select
+*[1447326]<tr />
+	*[1447331]<td />
+	*[1447423]<td />
+		*[1452322]<a />
+			Antonia Racer Tank-L-Yellow
+	*[1447526]<td />
+		WT08-L-Yellow
+	*[1447629]<td />
+		$34.00
+	*[1447732]<td />
+		100
+	*[1447835]<td />
+		1.000000
+	*[1447938]<td />
+		Enabled
+	*[1447939]<td />
+		Size: L, Color: Yellow
+	*[1447989]<td />
+		*[1452590]<button />
+			Select
+*[1447992]<tr />
+	*[1447997]<td />
+	*[1448089]<td />
+		*[1452335]<a />
+			Antonia Racer Tank-XL-Black
+	*[1448192]<td />
+		WT08-XL-Black
+	*[1448295]<td />
+		$34.00
+	*[1448398]<td />
+		100
+	*[1448501]<td />
+		1.000000
+	*[1448604]<td />
+		Enabled
+	*[1448605]<td />
+		Size: XL, Color: Black
+	*[1448655]<td />
+		*[1452601]<button />
+			Select
+*[1448658]<tr />
+	*[1448663]<td />
+	*[1448755]<td />
+		*[1452348]<a />
+			Antonia Racer Tank-XL-Purple
+	*[1448858]<td />
+		WT08-XL-Purple
+	*[1448961]<td />
+		$34.00
+	*[1449064]<td />
+		100
+	*[1449167]<td />
+		1.000000
+	*[1449270]<td />
+		Enabled
+	*[1449271]<td />
+		Size: XL, Color: Purple
+	*[1449321]<td />
+		*[1452612]<button />
+			Select
+*[1449330]<tr />
+	*[1449335]<td />
+	*[1449427]<td />
+		*[1452361]<a />
+			Antonia Racer Tank-XL-Yellow
+	*[1449530]<td />
+		WT08-XL-Yellow
+	*[1449633]<td />
+		$34.00
+	*[1449736]<td />
+		100
+	*[1449839]<td />
+		1.000000
+	*[1449942]<td />
+		Enabled
+	*[1449943]<td />
+		Size: XL, Color: Yellow
+	*[1449993]<td />
+		*[1452623]<button />
+			Select
+*[1436106]<div />
+	*[1436107]<strong />
+		*[1436108]<span />
+			Product Reviews

@@ -1,0 +1,89 @@
+[41254]<a />
+[41262]<li id=menu-magento-backend-dashboard role=menu-item />
+	[41263]<a />
+		Dashboard
+[41268]<li id=menu-magento-sales-sales role=menu-item />
+	[41148]<a />
+		Sales
+[41311]<li id=menu-magento-catalog-catalog role=menu-item />
+	[41149]<a />
+		Catalog
+[41334]<li id=menu-magento-customer-customer role=menu-item />
+	[41150]<a />
+		Customers
+[41359]<li id=menu-magento-backend-marketing role=menu-item />
+	[41151]<a />
+		Marketing
+[41443]<li id=menu-magento-backend-content role=menu-item />
+	[41152]<a />
+		Content
+[41502]<li id=menu-magento-reports-report role=menu-item />
+	[41153]<a />
+		Reports
+[41663]<li id=menu-magento-backend-stores role=menu-item />
+	[41154]<a />
+		Stores
+[41759]<li id=menu-magento-backend-system role=menu-item />
+	[41155]<a />
+		System
+[41863]<li id=menu-magento-marketplace-partners role=menu-item />
+	[41864]<a />
+		Find Partners & Extensions
+Edit Review
+[41926]<a title=My Account />
+	admin
+[41964]<a title=Notifications />
+[41969]<div />
+	[41123]<form id=form-search />
+		[41972]<div />
+			[41124]<input type=text id=search-global autocomplete=off />
+[41156]<button title=Back id=back />
+	Back
+[41157]<button title=Reset id=reset />
+	Reset
+[41158]<button title=Delete Review id=delete />
+	Delete Review
+[42019]<button title=Save Review id=save_button />
+	Save Review
+[41159]<button title=Previous id=previous />
+	Previous
+[42032]<button title=Save and Previous id=save_and_previous />
+	Save and Previous
+[42038]<button title=Save and Next id=save_and_next />
+	Save and Next
+[41160]<button title=Next id=next />
+	Next
+[41134]<form id=edit_form />
+	Review Details
+	Product
+	[41161]<a />
+		Antonia Racer Tank
+	Author
+	[42099]<div id=customer />
+		Guest
+	Summary Rating
+	Detailed Rating
+	Rating
+	[42147]<label />
+	[42151]<label />
+	[42155]<label />
+	[42159]<label />
+	[42163]<label />
+	Status
+	*[41130]<select id=status_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	Nickname
+	[41131]<input type=text id=nickname value=Merrie required=true />
+	Summary of Review
+	[41132]<input type=text id=title name=title value=Not for high impact required=true />
+	Review
+	[41133]<textarea id=detail required=true />
+[42257]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[42267]<a id=footer_privacy />
+	Privacy Policy
+[42270]<a id=footer_account_activity />
+	Account Activity
+[42273]<a id=footer_bug_tracking />
+	Report an Issue

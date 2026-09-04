@@ -1,0 +1,95 @@
+[217760]<a />
+[217768]<li id=menu-magento-backend-dashboard role=menu-item />
+	[217769]<a />
+		Dashboard
+[217774]<li id=menu-magento-sales-sales role=menu-item />
+	[217639]<a />
+		Sales
+[217817]<li id=menu-magento-catalog-catalog role=menu-item />
+	[217640]<a />
+		Catalog
+[217840]<li id=menu-magento-customer-customer role=menu-item />
+	[217624]<a />
+		Customers
+[217865]<li id=menu-magento-backend-marketing role=menu-item />
+	[217641]<a />
+		Marketing
+[217950]<li id=menu-magento-backend-content role=menu-item />
+	[217642]<a />
+		Content
+[218009]<li id=menu-magento-reports-report role=menu-item />
+	[217643]<a />
+		Reports
+[218170]<li id=menu-magento-backend-stores role=menu-item />
+	[217644]<a />
+		Stores
+[218266]<li id=menu-magento-backend-system role=menu-item />
+	[217645]<a />
+		System
+[218371]<li id=menu-magento-marketplace-partners role=menu-item />
+	[218372]<a />
+		Find Partners & Extensions
+[218964]<button />
+	System Messages
+[219552]<a />
+	View Details
+Task "Trigger recollect totals for quotes by rule ID 3": 1 item(s) have been successfully updated.
+404 Not Found
+[218440]<a title=My Account />
+	admin
+[218478]<a title=Notifications />
+[218483]<div />
+	[217621]<form id=form-search />
+		[218486]<div />
+			[217622]<input type=text id=search-global autocomplete=off />
+[217646]<button title=Back id=back />
+	Back
+[217647]<button title=Delete Page id=delete />
+	Delete Page
+[218527]<div title=Save />
+	[218531]<button title=Save id=save-button />
+		Save
+	[218537]<button title=Save aria-label=Save options />
+[219370]<span />
+	Enable Page
+[219494]<input type=checkbox checked=true id=BE9SXTU name=is_active value=1 />
+[219496]<span />
+[219419]<span />
+	Page Title
+[219493]<input type=text id=YA7B21G name=title maxlength=255 />
+[219107]<div />
+	[219108]<strong />
+		[219109]<span />
+			Content
+		[219110]<span />
+[219153]<div />
+	[219138]<div />
+		[219139]<strong />
+			[219140]<span />
+				Search Engine Optimization
+			[219141]<span />
+[219169]<div />
+	[219170]<strong />
+		[219171]<span />
+			Page in Websites
+		[219172]<span />
+[219200]<div />
+	[219201]<strong />
+		[219202]<span />
+			Design
+		[219203]<span />
+[219231]<div />
+	[219232]<strong />
+		[219233]<span />
+			Custom Design Update
+		[219234]<span />
+[218599]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[218609]<a id=footer_privacy />
+	Privacy Policy
+[218612]<a id=footer_account_activity />
+	Account Activity
+[218615]<a id=footer_bug_tracking />
+	Report an Issue

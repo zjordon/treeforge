@@ -1,0 +1,108 @@
+[21384]<a />
+[21392]<li id=menu-magento-backend-dashboard role=menu-item />
+	[21393]<a />
+		Dashboard
+[21398]<li id=menu-magento-sales-sales role=menu-item />
+	[21255]<a />
+		Sales
+[21441]<li id=menu-magento-catalog-catalog role=menu-item />
+	[21256]<a />
+		Catalog
+[21464]<li id=menu-magento-customer-customer role=menu-item />
+	[21257]<a />
+		Customers
+[21489]<li id=menu-magento-backend-marketing role=menu-item />
+	[21258]<a />
+		Marketing
+[21574]<li id=menu-magento-backend-content role=menu-item />
+	[21259]<a />
+		Content
+[21633]<li id=menu-magento-reports-report role=menu-item />
+	[21260]<a />
+		Reports
+[21794]<li id=menu-magento-backend-stores role=menu-item />
+	[21261]<a />
+		Stores
+[21889]<li id=menu-magento-backend-system role=menu-item />
+	[21262]<a />
+		System
+[21994]<li id=menu-magento-marketplace-partners role=menu-item />
+	[21995]<a />
+		Find Partners & Extensions
+Orders Report
+[22057]<a title=My Account />
+	admin
+[22095]<a title=Notifications />
+[22100]<div />
+	[21225]<form id=form-search />
+		[22103]<div />
+			[21226]<input type=text id=search-global autocomplete=off />
+[22129]<span />
+	Scope:
+[22148]<button id=store-change-button />
+	All Websites
+[21266]<a title=What is this? />
+	[22181]<span />
+		What is this?
+[21267]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+[22209]<a />
+	statistics
+, click
+[22212]<a />
+	here
+[21236]<form id=filter_form />
+	Filter
+	Date Used
+	*[21227]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />
+	The Order Updated report is created in real time and does not require a refresh.
+	Period
+	*[21228]<select title=Period id=sales_report_period_type name=period_type expanded=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+	From
+	[21229]<input title=From type=text id=sales_report_from name=from placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[22777]<button />
+		[22780]<span />
+			undefined
+	To
+	[21230]<input title=To type=text id=sales_report_to name=to placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />
+	[26306]<button />
+		[26309]<span />
+			undefined
+	Order Status
+	*[21231]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />
+	Applies to Any of the Specified Order Statuses except canceled orders
+	Empty Rows
+	*[21233]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+	Show Actual Values
+	*[21234]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[21235]<select id=id_ikAZ2qGM1WdkZE3XiLNOPxrPn19QOrCg_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+[21268]<button title=Export id=id_6x5y6mGfuZlxsfSAVhz2RTBFrRjfQUCJ />
+	Export
+records found
+[22477]<tr />
+	Interval
+	Orders
+	Sales Items
+	Sales Total
+	Invoiced
+	Refunded
+	Sales Tax
+	Sales Shipping
+	Sales Discount
+	Canceled
+[22523]<tr />
+	[22525]<td />
+		We couldn't find any records.
+[22543]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[22553]<a id=footer_privacy />
+	Privacy Policy
+[22556]<a id=footer_account_activity />
+	Account Activity
+[22559]<a id=footer_bug_tracking />
+	Report an Issue

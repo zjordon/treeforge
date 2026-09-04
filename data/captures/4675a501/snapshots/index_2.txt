@@ -1,0 +1,622 @@
+[308739]<a />
+[308747]<li id=menu-magento-backend-dashboard role=menu-item />
+	[308748]<a />
+		Dashboard
+[308753]<li id=menu-magento-sales-sales role=menu-item />
+	[308658]<a />
+		Sales
+[308796]<li id=menu-magento-catalog-catalog role=menu-item />
+	[308659]<a />
+		Catalog
+[308819]<li id=menu-magento-customer-customer role=menu-item />
+	[308660]<a />
+		Customers
+[308844]<li id=menu-magento-backend-marketing role=menu-item />
+	[308661]<a />
+		Marketing
+[308929]<li id=menu-magento-backend-content role=menu-item />
+	[308662]<a />
+		Content
+[308988]<li id=menu-magento-reports-report role=menu-item />
+	[308663]<a />
+		Reports
+[309148]<li id=menu-magento-backend-stores role=menu-item />
+	[308664]<a />
+		Stores
+[309244]<li id=menu-magento-backend-system role=menu-item />
+	[308665]<a />
+		System
+[309349]<li id=menu-magento-marketplace-partners role=menu-item />
+	[309350]<a />
+		Find Partners & Extensions
+Customers
+[309412]<a title=My Account />
+	admin
+[309450]<a title=Notifications />
+[309455]<div />
+	[308648]<form id=form-search />
+		[309458]<div />
+			[308649]<input type=text id=search-global autocomplete=off />
+[308666]<button title=Add New Customer id=add />
+	Add New Customer
+[310023]<button />
+	Default View
+[310043]<button />
+	Columns
+[310169]<button />
+	Export
+*[310194]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[310195]<button aria-label=Search />
+[310203]<button />
+	Filters
+Customer Since
+from
+*[315542]<input type=text id=WCKHWXI name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[315553]<button />
+	*[315556]<span />
+		undefined
+to
+*[315544]<input type=text id=FWLCQSG name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[322905]<button />
+	*[322908]<span />
+		undefined
+Name
+*[314600]<input type=text id=JB8GEA1 name=name maxlength=255 />
+Email
+*[314606]<input type=text id=EOCJDME name=email maxlength=255 />
+Group
+*[314617]<select id=TQYLU6V name=group_id aria-label=notice-TQYLU6V expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=General|Retailer|Wholesale,format=numeric) />
+Phone
+*[314635]<input type=text id=ETDWRK7 name=billing_telephone maxlength=255 />
+ZIP
+*[314641]<input type=text id=FUDMVAU name=billing_postcode maxlength=255 />
+Country
+*[314652]<select id=ECNTPVG name=billing_country_id aria-label=notice-ECNTPVG expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />
+State/Province
+*[315405]<input type=text id=BYBPFVK name=billing_region maxlength=255 />
+*[310211]<button />
+	Cancel
+*[310213]<button />
+	Apply Filters
+[310225]<button title=Select Items />
+	Actions
+70
+records found
+[311856]<div />
+	*[311858]<input type=text id=customer_listing.customer_listing.listing_top.listing_paging_sizes />
+[311859]<button />
+	Select
+per page
+[310276]<button title=Previous Page disabled=true />
+*[310281]<input type=number id=29 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[310283]<button title=Next Page disabled=true />
+*[309852]<tr />
+	*[310542]<div />
+		[310543]<input type=checkbox checked=false id=59 />
+		[310545]<button />
+			Options
+	[310565]<th />
+		*[310564]<span />
+			Name
+	[310568]<th />
+		*[310567]<span />
+			Email
+	[310571]<th />
+		*[310570]<span />
+			Group
+	[310574]<th />
+		*[310573]<span />
+			Phone
+	[310577]<th />
+		*[310576]<span />
+			ZIP
+	[310580]<th />
+		*[310579]<span />
+			Country
+	[310583]<th />
+		*[310582]<span />
+			State/Province
+	[310586]<th />
+		*[310585]<span />
+			Customer Since
+*[345816]<tr />
+	[345829]<td />
+		*[345846]<label />
+			[345844]<input type=checkbox checked=false id=idscheck25 value=25 />
+	[345830]<td />
+		Adam Garcia
+	[345831]<td />
+		gamingpro456@gmail.com
+	[345832]<td />
+		General
+	[345833]<td />
+		2065555555
+	[345834]<td />
+		98122
+	[345835]<td />
+		United States
+	[345836]<td />
+		Washington
+	[345837]<td />
+		Apr 19, 2023 5:46:14 PM
+*[348713]<tr />
+	*[349816]<td />
+		*[349819]<label />
+			*[349817]<input type=checkbox checked=false id=idscheck33 value=33 />
+	*[349820]<td />
+		Adam Garcia
+	*[349822]<td />
+		adam.garcia@gmail.com
+	*[349824]<td />
+		General
+	*[349826]<td />
+		6025551212
+	*[349828]<td />
+		85004
+	*[349830]<td />
+		United States
+	*[349832]<td />
+		Arizona
+	*[349834]<td />
+		Apr 19, 2023 5:46:40 PM
+*[348716]<tr />
+	*[349836]<td />
+		*[349839]<label />
+			*[349837]<input type=checkbox checked=false id=idscheck23 value=23 />
+	*[349840]<td />
+		Alex Johnson
+	*[349842]<td />
+		fitnessjunkie22@yahoo.com
+	*[349844]<td />
+		General
+	*[349846]<td />
+		3105555555
+	*[349848]<td />
+		90212
+	*[349850]<td />
+		United States
+	*[349852]<td />
+		California
+	*[349854]<td />
+		Apr 19, 2023 5:46:07 PM
+*[348719]<tr />
+	*[349856]<td />
+		*[349859]<label />
+			*[349857]<input type=checkbox checked=false id=idscheck27 value=27 />
+	*[349860]<td />
+		Alex Martin
+	*[349862]<td />
+		alex.martin@gmail.com
+	*[349864]<td />
+		General
+	*[349866]<td />
+		2125551212
+	*[349868]<td />
+		10001
+	*[349870]<td />
+		United States
+	*[349872]<td />
+		New York
+	*[349874]<td />
+		Apr 19, 2023 5:46:20 PM
+*[348722]<tr />
+	*[349876]<td />
+		*[349879]<label />
+			*[349877]<input type=checkbox checked=false id=idscheck36 value=36 />
+	*[349880]<td />
+		Alexander Thomas
+	*[349882]<td />
+		alexander.thomas@hotmail.com
+	*[349884]<td />
+		General
+	*[349886]<td />
+		3235551212
+	*[349888]<td />
+		90028
+	*[349890]<td />
+		United States
+	*[349892]<td />
+		California
+	*[349894]<td />
+		Apr 19, 2023 5:46:50 PM
+*[348725]<tr />
+	*[349896]<td />
+		*[349899]<label />
+			*[349897]<input type=checkbox checked=false id=idscheck45 value=45 />
+	*[349900]<td />
+		Amanda Kim
+	*[349902]<td />
+		amanda.kim@gmail.com
+	*[349904]<td />
+		General
+	*[349906]<td />
+		2015551234
+	*[349908]<td />
+		07030
+	*[349910]<td />
+		United States
+	*[349912]<td />
+		New Jersey
+	*[349914]<td />
+		Apr 23, 2023 12:13:15 AM
+*[348728]<tr />
+	*[349916]<td />
+		*[349919]<label />
+			*[349917]<input type=checkbox checked=false id=idscheck43 value=43 />
+	*[349920]<td />
+		Anna Nguyen
+	*[349922]<td />
+		anna.nguyen@yahoo.com
+	*[349924]<td />
+		General
+	*[349926]<td />
+		7135551212
+	*[349928]<td />
+		77002
+	*[349930]<td />
+		United States
+	*[349932]<td />
+		Texas
+	*[349934]<td />
+		Apr 23, 2023 12:13:09 AM
+*[348731]<tr />
+	*[349936]<td />
+		*[349939]<label />
+			*[349937]<input type=checkbox checked=false id=idscheck21 value=21 />
+	*[349940]<td />
+		Ava Brown
+	*[349942]<td />
+		beachlover99@yahoo.com
+	*[349944]<td />
+		General
+	*[349946]<td />
+		3105555555
+	*[349948]<td />
+		90265
+	*[349950]<td />
+		United States
+	*[349952]<td />
+		California
+	*[349954]<td />
+		Apr 19, 2023 5:46:01 PM
+*[348734]<tr />
+	*[349956]<td />
+		*[349959]<label />
+			*[349957]<input type=checkbox checked=false id=idscheck7 value=7 />
+	*[349960]<td />
+		Bob Johnson
+	*[349962]<td />
+		bob123@hotmail.com
+	*[349964]<td />
+		General
+	*[349966]<td />
+		9721234567
+	*[349968]<td />
+		75080
+	*[349970]<td />
+		United States
+	*[349972]<td />
+		Texas
+	*[349974]<td />
+		Apr 19, 2023 5:45:14 PM
+*[348737]<tr />
+	*[349976]<td />
+		*[349979]<label />
+			*[349977]<input type=checkbox checked=false id=idscheck4 value=4 />
+	*[349980]<td />
+		Bob Jones
+	*[349982]<td />
+		bbjones@gmail.com
+	*[349984]<td />
+		General
+	*[349986]<td />
+		2141918677
+	*[349988]<td />
+		75202
+	*[349990]<td />
+		United States
+	*[349992]<td />
+		Texas
+	*[349994]<td />
+		Apr 19, 2023 5:45:04 PM
+*[348740]<tr />
+	*[349996]<td />
+		*[349999]<label />
+			*[349997]<input type=checkbox checked=false id=idscheck34 value=34 />
+	*[350000]<td />
+		Brian Smith
+	*[350002]<td />
+		brian.smith@yahoo.com
+	*[350004]<td />
+		General
+	*[350006]<td />
+		7025551212
+	*[350008]<td />
+		89109
+	*[350010]<td />
+		United States
+	*[350012]<td />
+		Nevada
+	*[350014]<td />
+		Apr 19, 2023 5:46:44 PM
+*[348743]<tr />
+	*[350016]<td />
+		*[350019]<label />
+			*[350017]<input type=checkbox checked=false id=idscheck11 value=11 />
+	*[350020]<td />
+		Daniel Jackson
+	*[350022]<td />
+		daniel.jackson@hotmail.com
+	*[350024]<td />
+		General
+	*[350026]<td />
+		2155556789
+	*[350028]<td />
+		19102
+	*[350030]<td />
+		United States
+	*[350032]<td />
+		Pennsylvania
+	*[350034]<td />
+		Apr 19, 2023 5:45:27 PM
+*[348746]<tr />
+	*[350036]<td />
+		*[350039]<label />
+			*[350037]<input type=checkbox checked=false id=idscheck30 value=30 />
+	*[350040]<td />
+		David Lee
+	*[350042]<td />
+		david.lee@gmail.com
+	*[350044]<td />
+		General
+	*[350046]<td />
+		6175551212
+	*[350048]<td />
+		02108
+	*[350050]<td />
+		United States
+	*[350052]<td />
+		Massachusetts
+	*[350054]<td />
+		Apr 19, 2023 5:46:30 PM
+*[348749]<tr />
+	*[350056]<td />
+		*[350059]<label />
+			*[350057]<input type=checkbox checked=false id=idscheck39 value=39 />
+	*[350060]<td />
+		David Smith
+	*[350062]<td />
+		david.smith@gmail.com
+	*[350064]<td />
+		General
+	*[350066]<td />
+		2145551212
+	*[350068]<td />
+		75201
+	*[350070]<td />
+		United States
+	*[350072]<td />
+		Texas
+	*[350074]<td />
+		Apr 23, 2023 12:12:54 AM
+*[348752]<tr />
+	*[350076]<td />
+		*[350079]<label />
+			*[350077]<input type=checkbox checked=false id=idscheck42 value=42 />
+	*[350080]<td />
+		Emily Chen
+	*[350082]<td />
+		emily.chen@hotmail.com
+	*[350084]<td />
+		General
+	*[350086]<td />
+		6175551212
+	*[350088]<td />
+		02108
+	*[350090]<td />
+		United States
+	*[350092]<td />
+		Massachusetts
+	*[350094]<td />
+		Apr 23, 2023 12:13:05 AM
+*[348755]<tr />
+	*[350096]<td />
+		*[350099]<label />
+			*[350097]<input type=checkbox checked=false id=idscheck62 value=62 />
+	*[350100]<td />
+		Emily Wilson
+	*[350102]<td />
+		emily.wilson@gmail.com
+	*[350104]<td />
+		General
+	*[350106]<td />
+		3125551212
+	*[350108]<td />
+		60611
+	*[350110]<td />
+		United States
+	*[350112]<td />
+		Illinois
+	*[350114]<td />
+		Apr 23, 2023 12:14:24 AM
+*[348758]<tr />
+	*[350116]<td />
+		*[350119]<label />
+			*[350117]<input type=checkbox checked=false id=idscheck24 value=24 />
+	*[350120]<td />
+		Emma Davis
+	*[350122]<td />
+		musiclover99@hotmail.com
+	*[350124]<td />
+		General
+	*[350126]<td />
+		5125555555
+	*[350128]<td />
+		78701
+	*[350130]<td />
+		United States
+	*[350132]<td />
+		Texas
+	*[350134]<td />
+		Apr 19, 2023 5:46:10 PM
+*[348761]<tr />
+	*[350136]<td />
+		*[350139]<label />
+			*[350137]<input type=checkbox checked=false id=idscheck70 value=70 />
+	*[350140]<td />
+		Emma Lopez
+	*[350142]<td />
+		emma.lopez@gmail.com
+	*[350144]<td />
+		General
+	*[350146]<td />
+		6505551212
+	*[350148]<td />
+		94010
+	*[350150]<td />
+		United States
+	*[350152]<td />
+		California
+	*[350154]<td />
+		Apr 23, 2023 12:14:57 AM
+*[348764]<tr />
+	*[350156]<td />
+		*[350159]<label />
+			*[350157]<input type=checkbox checked=false id=idscheck55 value=55 />
+	*[350160]<td />
+		Ethan Garcia
+	*[350162]<td />
+		ethan.garcia@yahoo.com
+	*[350164]<td />
+		General
+	*[350166]<td />
+		2145551212
+	*[350168]<td />
+		75201
+	*[350170]<td />
+		United States
+	*[350172]<td />
+		Texas
+	*[350174]<td />
+		Apr 23, 2023 12:13:53 AM
+*[348767]<tr />
+	*[350176]<td />
+		*[350179]<label />
+			*[350177]<input type=checkbox checked=false id=idscheck18 value=18 />
+	*[350180]<td />
+		Grace Nguyen
+	*[350182]<td />
+		avidreader99@yahoo.com
+	*[350184]<td />
+		General
+	*[350186]<td />
+		6175555555
+	*[350188]<td />
+		02138
+	*[350190]<td />
+		United States
+	*[350192]<td />
+		Massachusetts
+	*[350194]<td />
+		Apr 19, 2023 5:45:51 PM
+*[348770]<tr />
+	*[350196]<td />
+		*[350199]<label />
+			*[350197]<input type=checkbox checked=false id=idscheck66 value=66 />
+	*[350200]<td />
+		Hannah Lim
+	*[350202]<td />
+		hannah.lim@gmail.com
+	*[350204]<td />
+		General
+	*[350206]<td />
+		7035551212
+	*[350208]<td />
+		22030
+	*[350210]<td />
+		United States
+	*[350212]<td />
+		Virginia
+	*[350214]<td />
+		Apr 23, 2023 12:14:40 AM
+*[348773]<tr />
+	*[350216]<td />
+		*[350219]<label />
+			*[350217]<input type=checkbox checked=false id=idscheck67 value=67 />
+	*[350220]<td />
+		Isaac Rodriguez
+	*[350222]<td />
+		isaac.rodriguez@gmail.com
+	*[350224]<td />
+		General
+	*[350226]<td />
+		6025551212
+	*[350228]<td />
+		85004
+	*[350230]<td />
+		United States
+	*[350232]<td />
+		Arizona
+	*[350234]<td />
+		Apr 23, 2023 12:14:45 AM
+*[348776]<tr />
+	*[350236]<td />
+		*[350239]<label />
+			*[350237]<input type=checkbox checked=false id=idscheck64 value=64 />
+	*[350240]<td />
+		Isabella Santos
+	*[350242]<td />
+		isabella.santos@gmail.com
+	*[350244]<td />
+		General
+	*[350246]<td />
+		3055551212
+	*[350248]<td />
+		33130
+	*[350250]<td />
+		United States
+	*[350252]<td />
+		Florida
+	*[350254]<td />
+		Apr 23, 2023 12:14:32 AM
+*[348779]<tr />
+	*[350256]<td />
+		*[350259]<label />
+			*[350257]<input type=checkbox checked=false id=idscheck57 value=57 />
+	*[350260]<td />
+		Jacob Rivera
+	*[350262]<td />
+		jacob.rivera@hotmail.com
+	*[350264]<td />
+		General
+	*[350266]<td />
+		6025551212
+	*[350268]<td />
+		85004
+	*[350270]<td />
+		United States
+	*[350272]<td />
+		Arizona
+	*[350274]<td />
+		Apr 23, 2023 12:14:01 AM
+*[348782]<tr />
+	*[350276]<td />
+		*[350279]<label />
+			*[350277]<input type=checkbox checked=false id=idscheck63 value=63 />
+	*[350280]<td />
+		James Baker
+	*[350282]<td />
+		james.baker@gmail.com
+	*[350284]<td />
+		General
+	*[350286]<td />
+		2145551212
+	*[350288]<td />
+		75201
+	*[350290]<td />
+		United States
+	*[350292]<td />
+		Texas
+	*[350294]<td />
+		Apr 23, 2023 12:14:28 AM

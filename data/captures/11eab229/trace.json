@@ -1,0 +1,328 @@
+{
+  "host": "localhost",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1788409627880,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Sales",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "Sales"
+      }
+    },
+    {
+      "timestamp": 1788409629368,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard_1",
+      "target": "Orders",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "Orders"
+      }
+    },
+    {
+      "timestamp": 1788409631086,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order",
+      "target": "Remove",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Remove"
+      }
+    },
+    {
+      "timestamp": 1788409632591,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order_2",
+      "target": "Filters",
+      "element_attrs": {
+        "tag": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Filters"
+      }
+    },
+    {
+      "timestamp": 1788409633750,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "WUPF8CG",
+        "name": "increment_id",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788409635536,
+      "type": "input",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "WUPF8CG",
+        "name": "increment_id",
+        "type": "text"
+      },
+      "value": "299"
+    },
+    {
+      "timestamp": 1788409636069,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order",
+      "target": "Apply Filters",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "data-tw-jsclick": "1",
+        "visible_text": "Apply Filters"
+      }
+    },
+    {
+      "timestamp": 1788409637505,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788409638107,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/",
+      "stage": "order_3",
+      "target": "View",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "View"
+      }
+    },
+    {
+      "timestamp": 1788409639947,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+      "stage": "299",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788409640497,
+      "type": "click",
+      "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+      "stage": "299_4",
+      "target": "Ship",
+      "element_attrs": {
+        "tag": "button",
+        "id": "order_ship",
+        "type": "button",
+        "aria-label": "Ship",
+        "visible_text": "Ship"
+      }
+    },
+    {
+      "timestamp": 1788409642715,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299",
+      "value": "8"
+    },
+    {
+      "timestamp": 1788409643376,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "target": "Add Tracking Number",
+      "element_attrs": {
+        "tag": "button",
+        "id": "id_5Bmu2qJV6atutKoQmFrSh7fDXlkLNYGj",
+        "type": "button",
+        "aria-label": "Add Tracking Number",
+        "visible_text": "Add Tracking Number"
+      }
+    },
+    {
+      "timestamp": 1788409644256,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "target": "Custom Value DHL Federal Express United Parcel Service Unite",
+      "element_attrs": {
+        "tag": "select",
+        "id": "trackingC1",
+        "name": "tracking[1][carrier_code]",
+        "visible_text": "Custom Value DHL Federal Express United Parcel Service United States Postal Service"
+      }
+    },
+    {
+      "timestamp": 1788409645425,
+      "type": "input",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "target": "Custom Value DHL Federal Express United Parcel Service Unite",
+      "element_attrs": {
+        "tag": "select",
+        "id": "trackingC1",
+        "name": "tracking[1][carrier_code]",
+        "visible_text": "Custom Value DHL Federal Express United Parcel Service United States Postal Service"
+      },
+      "value": ""
+    },
+    {
+      "timestamp": 1788409645425,
+      "type": "select_dropdown",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "target": "Custom Value DHL Federal Express United Parcel Service Unite",
+      "element_attrs": {
+        "tag": "select",
+        "id": "trackingC1",
+        "name": "tracking[1][carrier_code]",
+        "visible_text": "Custom Value DHL Federal Express United Parcel Service United States Postal Service"
+      },
+      "value": "fedex"
+    },
+    {
+      "timestamp": 1788409645426,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "target": "Custom Value DHL Federal Express United Parcel Service Unite",
+      "element_attrs": {
+        "tag": "select",
+        "id": "trackingC1",
+        "name": "tracking[1][carrier_code]",
+        "visible_text": "Custom Value DHL Federal Express United Parcel Service United States Postal Service"
+      }
+    },
+    {
+      "timestamp": 1788409646201,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "trackingN1",
+        "name": "tracking[1][number]",
+        "type": "text"
+      }
+    },
+    {
+      "timestamp": 1788409650374,
+      "type": "send_keys",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "element_attrs": {
+        "tag": "input",
+        "id": "trackingN1",
+        "name": "tracking[1][number]",
+        "type": "text"
+      },
+      "key": "Control+v"
+    },
+    {
+      "timestamp": 1788409650868,
+      "type": "input",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "trackingN1",
+        "name": "tracking[1][number]",
+        "type": "text"
+      },
+      "value": "8974568499"
+    },
+    {
+      "timestamp": 1788409650938,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "target": "Order & Account Information Order # 000000299 (The order con",
+      "element_attrs": {
+        "tag": "form",
+        "id": "edit_form",
+        "data-tw-jsclick": "1",
+        "visible_text": "Order & Account Information Order # 000000299 (The order confirmation email was sent) Order Date May 31, 2023, 2:55:09 AM Order Status Pending Purchased From Main WebsiteMain Website StoreDefault Store View Placed from IP 128.2.205.52 Account Information Edit Customer Customer Name Sarah Miller Email helloworld@yahoo.com Customer Group General Address Information Billing Address Edit Sarah Miller 456 Oak Avenue Apartment 5B New York, New York, 10001 United States T: 5107819902 Shipping Address Edit Sarah Miller 456 Oak Avenue Apartment 5B New York, New York, 10001 New Caledonia T: 5107819902 Payment & Shipping Method Payment Information Check / Money order The order was placed using USD. Shipping Information Flat Rate - Fixed Total Shipping Charges: $25.00 require(['prototype'], function(){ //<![CDATA[ var trackingControl; trackingControl = { index : 0, add : function () { this.index++; var data = {index:this.index}; Element.insert($('track_row_container'), { bottom: this.template({ data: data }) }); $('trackingC' + this.index).disabled = false; $('trackingT' + this.index).disabled = false; $('trackingN' + this.index).disabled = false; this.bindCurrierOnchange(); }, deleteRow : function(event) { var row = Event.findElement(event, 'tr'); if (row) { row.parentNode.removeChild(row) } }, bindCurrierOnchange : function() { var elems = $('tracking_numbers_table').select('.select'); elems.each(function (elem) { if (!elem.onchangeBound) { elem.onchangeBound = true; elem.valueInput = $(elem.parentNode.parentNode).select('.number-title')[0]; elem.observe('change', this.currierOnchange); } }.bind(this)); }, currierOnchange : function(event) { var elem = Event.element(event); var option = elem.options[elem.selectedIndex]; if (option.value && option.value != 'custom') { elem.valueInput.value = option.text; } else { elem.valueInput.value = ''; } } }; window.trackingControl = trackingControl; //]]> }); <tr> <td class=\"col-carrier\"> <select name=\"tracking[<%- data.index %>][carrier_code]\" id=\"trackingC<%- data.index %>\" class=\"select admin__control-select carrier\" disabled=\"disabled\"> <option value=\"custom\">Custom Value</option> <option value=\"dhl\">DHL</option> <option value=\"fedex\">Federal Express</option> <option value=\"ups\">United Parcel Service</option> <option value=\"usps\">United States Postal Service</option> </select> </td> <td class=\"col-title\"> <input class=\"input-text admin__control-text number-title\" type=\"text\" name=\"tracking[<%- data.index %>][title]\" id=\"trackingT<%- data.index %>\" value=\"\" disabled=\"disabled\" /> </td> <td class=\"col-number\"> <input class=\"input-text admin__control-text required-entry\" type=\"text\" name=\"tracking[<%- data.index %>][number]\" id=\"trackingN<%- data.index %>\" value=\"\" disabled=\"disabled\" /> </td> <td class=\"col-delete\"> <button type=\"button\" class=\"action-default action-delete\" onclick=\"trackingControl.deleteRow(event);return false\"> <span>Delete</span> </button> </td> </tr> Carrier Title Number Action Add Tracking Number function eventListener6RQVoeTXuk () { trackingControl.add(); } var listenedElement6RQVoeTXukArray = document.querySelectorAll(\"*[backend-button-widget-hook-id='buttonIdt8ZQitybL5']\"); if(listenedElement6RQVoeTXukArray.length !== 'undefined'){ listenedElement6RQVoeTXukArray.forEach(function(element) { if (element) { element.onclick = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListener6RQVoeTXuk.apply(targetElement); }; } }); } Custom Value DHL Federal Express United Parcel Service United States Postal Service Delete require([ 'mage/template', 'prototype' ], function (mageTemplate) { //<![CDATA[ trackingControl.template = mageTemplate('#track_row_template'); //]]> }); Inventory Source: Default Source Items to Ship Product Qty Qty to Ship Argus All-Weather Tank SKU: MT07-M-Gray Color: Gray Size: M Ordered 1 Marco Lightweight Active Hoodie SKU: MH13-S-Green Color: Green Size: S Ordered 1 Tiffany Fitness Tee SKU: WS09-XL-Blue Color: Blue Size: XL Ordered 1 Nadia Elements Shell SKU: WJ10-XS-Yellow Color: Yellow Size: XS Ordered 1 Gwen Drawstring Bike Short SKU: WSH03-28-Orange Color: Orange Size: 28 Ordered 1 Shipment Total Shipment Comments Comment Text Shipment Options Append Comments Email Copy of Shipment Submit Shipment function eventListenerRk3WOvQaCv () { submitShipment(this);; } var listenedElementRk3WOvQaCvArray = document.querySelectorAll(\"*[backend-button-widget-hook-id='buttonIdIPMkcv41An']\"); if(listenedElementRk3WOvQaCvArray.length !== 'undefined'){ listenedElementRk3WOvQaCvArray.forEach(function(element) { if (element) { element.onclick = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerRk3WOvQaCv.apply(targetElement); }; } }); } require([ \"jquery\", \"Magento_Ui/js/modal/alert\", \"prototype\" ], function(jQuery, alert){ //<![CDATA[ var sendEmailCheckbox = $('send_email'); if (sendEmailCheckbox) { var notifyCustomerCheckbox = $('notify_customer'); var shipmentCommentText = $('shipment_comment_text'); Event.observe(sendEmailCheckbox, 'change', bindSendEmail); bindSendEmail(); } function bindSendEmail() { if (sendEmailCheckbox.checked == true) { notifyCustomerCheckbox.disabled = false; } else { notifyCustomerCheckbox.disabled = true; } } window.toggleCreateLabelCheckbox = function() { var checkbox = $('create_shipping_label'); var submitButton = checkbox.up('.order-totals').select('.submit-button span')[0]; if (checkbox.checked) { submitButton.innerText += '...'; } else { submitButton.innerText = submitButton.innerText.replace(/\\.\\.\\.$/, ''); } } window.submitShipment = function(btn) { if (!validQtyItems()) { alert({ content: 'Invalid\\u0020value\\u0028s\\u0029\\u0020for\\u0020Qty\\u0020to\\u0020Ship' }); return; } var checkbox = $(btn).up('.order-totals').select('#create_shipping_label')[0]; if (checkbox && checkbox.checked) { packaging.showWindow(); } else { disableElements('submit-button'); // Temporary solution will be replaced after refactoring order functionality jQuery('#edit_form').on('invalid-form.validate', function() { enableElements('submit-button'); jQuery('#edit_form').off('invalid-form.validate'); }); jQuery('#edit_form').triggerHandler('save'); } } window.validQtyItems = function() { var valid = true; $$('.qty-item').each(function(item) { var val = parseFloat(item.value); if (isNaN(val) || val < 0) { valid = false; } }); return valid; } window.bindSendEmail = bindSendEmail; window.shipmentCommentText = shipmentCommentText; window.notifyCustomerCheckbox = notifyCustomerCheckbox; window.sendEmailCheckbox = sendEmailCheckbox; //]]> });"
+      }
+    },
+    {
+      "timestamp": 1788409652562,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299_5",
+      "value": "10"
+    },
+    {
+      "timestamp": 1788409652660,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/order_shipment/new/order_id/299/",
+      "stage": "299",
+      "target": "Submit Shipment",
+      "element_attrs": {
+        "tag": "button",
+        "id": "id_so8G9JUXxL4rQ0yN1fasSDx5P0mQq8Ab",
+        "type": "button",
+        "aria-label": "Submit Shipment",
+        "visible_text": "Submit Shipment"
+      }
+    },
+    {
+      "timestamp": 1788409657753,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+      "stage": "299_6",
+      "value": "10"
+    },
+    {
+      "timestamp": 1788409658340,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+      "stage": "299",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788409660832,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+      "stage": "299",
+      "value": "1"
+    },
+    {
+      "timestamp": 1788409662520,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+      "stage": "299",
+      "value": "8"
+    },
+    {
+      "timestamp": 1788409664093,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+      "stage": "299",
+      "value": "10"
+    }
+  ],
+  "page_context": {
+    "dashboard": "[639439]<a />\n[639443]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[639444]<a />\n\t\tDashboard\n[639446]<li id=menu-magento-sales-sales role=menu-item />\n\t[639447]<a />\n\t\tSales\n[639467]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[639468]<a />\n\t\tCatalog\n[639478]<li id=menu-magento-customer-customer role=menu-item />\n\t[639479]<a />\n\t\tCustomers\n[639491]<li id=menu-magento-backend-marketing role=menu-item />\n\t[639492]<a />\n\t\tMarketing\n[639532]<li id=menu-magento-backend-content role=menu-item />\n\t[639533]<a />\n\t\tContent\n[639559]<li id=menu-magento-reports-report role=menu-item />\n\t[639560]<a />\n\t\tReports\n[639636]<li id=menu-magento-backend-stores role=menu-item />\n\t[639637]<a />\n\t\tStores\n[639682]<li id=menu-magento-backend-system role=menu-item />\n\t[639683]<a />\n\t\tSystem\n[639731]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[639732]<a />\n\t\tFind Partners & Extensions\nDashboard\n[639738]<a title=My Account />\n\tadmin\n[639740]<a title=Notifications />\n[640005]<div />\n\t[639431]<form id=form-search />\n\t\t[640693]<div />\n\t\t\t[639432]<input type=text id=search-global autocomplete=off />\n[640717]<span />\n\tScope:\n[639749]<button id=store-change-button />\n\tAll Store Views\n[639752]<a title=What is this? />\n\t[639753]<span />\n\t\tWhat is this?\n[639755]<button title=Reload Data type=submit />\n\tReload Data\nAdvanced Reporting\nGain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\n[639762]<a title=Go to Advanced Reporting />\n\tGo to Advanced Reporting\nChart is disabled. To enable the chart, click\n[639765]<a />\n\there\nRevenue\n$0.00\nTax\n$0.00\nShipping\n$0.00\nQuantity\n[640849]<strong />\n[639786]<li role=tab selected=true expanded=true />\n\t[639787]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />\n\t\t[640865]<span title=The information in this tab has been changed. />\n\t\t[640867]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[640869]<span title=Loading... />\n\t\tBestsellers\n[639789]<li role=tab selected=false expanded=false />\n\t[639790]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />\n\t\t[640881]<span title=The information in this tab has been changed. />\n\t\t[640883]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[640885]<span title=Loading... />\n\t\tMost Viewed Products\n[639792]<li role=tab selected=false expanded=false />\n\t[639793]<a title=New Customers id=grid_tab_new_customers role=presentation />\n\t\t[640899]<span title=The information in this tab has been changed. />\n\t\t[640901]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[640903]<span title=Loading... />\n\t\tNew Customers\n[639795]<li role=tab selected=false expanded=false />\n\t[639796]<a title=Customers id=grid_tab_customers role=presentation />\n\t\t[640917]<span title=The information in this tab has been changed. />\n\t\t[640919]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t[640921]<span title=Loading... />\n\t\tCustomers\n[639801]<tr />\n\tProduct\n\tPrice\n\tQuantity\n[639808]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />\n\t[639809]<td />\n\t\tSprite Stasis Ball 65 cm\n\t[639811]<td />\n\t\t$27.00\n\t[639813]<td />\n[639815]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />\n\t[639816]<td />\n\t\tQuest Lumaflex™ Band\n\t[639818]<td />\n\t\t$19.00\n\t[639820]<td />\n[639822]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />\n\t[639823]<td />\n\t\tSprite Yoga Strap 6 foot\n\t[639825]<td />\n\t\t$14.00\n\t[639827]<td />\n[639829]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />\n\t[639830]<td />\n\t\tOvernight Duffle\n\t[639832]<td />\n\t\t$45.00\n\t[639834]<td />\n[639836]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />\n\t[639837]<td />\n\t\tSprite Stasis Ball 55 cm\n\t[639839]<td />\n\t\t$23.00\n\t[639841]<td />\nLifetime Sales\n$0.00\nAverage Order\n$0.00\nLast Orders\n[639849]<tr />\n\tCustomer\n\tItems\n\tTotal\n[639856]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />\n\t[639857]<td />\n\t\tSarah Miller\n\t[639859]<td />\n\t[639861]<td />\n\t\t$194.40\n[639863]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />\n\t[639864]<td />\n\t\tGrace Nguyen\n\t[639866]<td />\n\t[639868]<td />\n\t\t$190.00\n[639870]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />\n\t[639871]<td />\n\t\tMatt Baker\n\t[639873]<td />\n\t[639875]<td />\n\t\t$151.40\n[639877]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />\n\t[639878]<td />\n\t\tLily Potter\n\t[639880]<td />\n\t[639882]<td />\n\t\t$188.20\n[639884]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />\n\t[639885]<td />\n\t\tAva Brown\n\t[639887]<td />\n\t[639889]<td />\n\t\t$83.40\nLast Search Terms\n[639892]<table id=lastSearchGrid_table />\n\t[639893]<tr />\n\t\t[639894]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[639900]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[639901]<td />\n\t\t\tAntonia\n\t\t[639903]<td />\n\t\t[639905]<td />\n\t[639907]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[639908]<td />\n\t\t\ttanks\n\t\t[639910]<td />\n\t\t\t23\n\t\t[639912]<td />\n\t[639914]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />\n\t\t[639915]<td />\n\t\t\tnike\n\t\t[639917]<td />\n\t\t[639919]<td />\n\t[639921]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[639922]<td />\n\t\t\tJoust Bag\n\t\t[639924]<td />\n\t\t\t10\n\t\t[639926]<td />\n\t[639928]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[639929]<td />\n\t\t\thollister\n\t\t[639931]<td />\n\t\t[639933]<td />\n\t\t\t19\nTop Search Terms\n[639936]<table id=topSearchGrid_table />\n\t[639937]<tr />\n\t\t[639938]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t[639944]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t[639945]<td />\n\t\t\thollister\n\t\t[639947]<td />\n\t\t[639949]<td />\n\t\t\t19\n\t[639951]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t[639952]<td />\n\t\t\tJoust Bag\n\t\t[639954]<td />\n\t\t\t10\n\t\t[639956]<td />\n\t[639958]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />\n\t\t[639959]<td />\n\t\t\tAntonia Racer Tank\n\t\t[639961]<td />\n\t\t\t23\n\t\t[639963]<td />\n\t[639965]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t[639966]<td />\n\t\t\tAntonia\n\t\t[639968]<td />\n\t\t[639970]<td />\n\t[639972]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t[639973]<td />\n\t\t\ttanks\n\t\t[639975]<td />\n\t\t\t23\n\t\t[639977]<td />\n[639983]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[639988]<a id=footer_privacy />\n\tPrivacy Policy\n[639991]<a id=footer_account_activity />\n\tAccount Activity\n[639994]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "dashboard_1": "*[641321]<a />\n*[641330]<a />\n\tDashboard\n*[641222]<a />\n\tSales\n*[641223]<a />\n\tCatalog\n*[641224]<a />\n\tCustomers\n*[641225]<a />\n\tMarketing\n*[641226]<a />\n\tContent\n*[641227]<a />\n\tReports\n*[641228]<a />\n\tStores\n*[641229]<a />\n\tSystem\n*[641931]<a />\n\tFind Partners & Extensions\nOrders\n*[641993]<a title=My Account />\n\tadmin\n*[642031]<a title=Notifications />\n*[642036]<div />\n\t*[641212]<form id=form-search />\n\t\t*[642039]<div />\n\t\t\t*[641213]<input type=text id=search-global name=query />\n*[641230]<button title=Create New Order id=add />\n\tCreate New Order\n*[642082]<div />\n*[642106]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[642116]<a id=footer_privacy />\n\tPrivacy Policy\n*[642119]<a id=footer_account_activity />\n\tAccount Activity\n*[642122]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "order": "[641321]<a />\n[641329]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[641330]<a />\n\t\tDashboard\n[641335]<li id=menu-magento-sales-sales role=menu-item />\n\t[641222]<a />\n\t\tSales\n[641378]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[641223]<a />\n\t\tCatalog\n[641401]<li id=menu-magento-customer-customer role=menu-item />\n\t[641224]<a />\n\t\tCustomers\n[641426]<li id=menu-magento-backend-marketing role=menu-item />\n\t[641225]<a />\n\t\tMarketing\n[641510]<li id=menu-magento-backend-content role=menu-item />\n\t[641226]<a />\n\t\tContent\n[641569]<li id=menu-magento-reports-report role=menu-item />\n\t[641227]<a />\n\t\tReports\n[641729]<li id=menu-magento-backend-stores role=menu-item />\n\t[641228]<a />\n\t\tStores\n[641825]<li id=menu-magento-backend-system role=menu-item />\n\t[641229]<a />\n\t\tSystem\n[641930]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[641931]<a />\n\t\tFind Partners & Extensions\nOrders\n[641993]<a title=My Account />\n\tadmin\n[642031]<a title=Notifications />\n[642036]<div />\n\t[641212]<form id=form-search />\n\t\t[642039]<div />\n\t\t\t[641213]<input type=text id=search-global autocomplete=off />\n[641230]<button title=Create New Order id=add />\n\tCreate New Order\n[642562]<button />\n\tDefault View\n[642581]<button />\n\tColumns\n[642691]<button />\n\tExport\n[642716]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />\n[642717]<button aria-label=Search />\n[642725]<button />\n\tFilters\nActive filters:\nID:\n299\n*[684890]<button />\n*[643413]<button />\n\tClear all\n[642767]<button title=Select Items />\n\tActions\nrecords found\n[643838]<div />\n\t[643840]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />\n[643841]<button />\n\tSelect\nper page\n[642906]<button title=Previous Page disabled=true />\n*[642911]<input type=number id=25 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />\nof 1\n[642913]<button title=Next Page disabled=true />\n[642416]<tr />\n\t[643173]<div />\n\t\t[643174]<input type=checkbox checked=false id=51 />\n\t\t[643176]<button />\n\t\t\tOptions\n\t[643196]<th />\n\t\t[643195]<span />\n\t\t\tID\n\t[643199]<th />\n\t\tPurchase Point\n\t[643202]<th />\n\t\t[643201]<span />\n\t\t\tPurchase Date\n\t[643205]<th />\n\t\t[643204]<span />\n\t\t\tBill-to Name\n\t[643208]<th />\n\t\t[643207]<span />\n\t\t\tShip-to Name\n\t[643211]<th />\n\t\t[643210]<span />\n\t\t\tGrand Total (Base)\n\t[643214]<th />\n\t\t[643213]<span />\n\t\t\tGrand Total (Purchased)\n\t[643217]<th />\n\t\t[643216]<span />\n\t\t\tStatus\n\t[643220]<th />\n\t\t[643219]<span />\n\t\t\tAction\n\t[643223]<th />\n\t\tAllocated sources\n\t[643226]<th />\n\t\t[643225]<span />\n\t\t\tBraintree Transaction Source\n[659563]<tr />\n\t[659567]<td />\n\t\t[659607]<label />\n\t\t\t[659605]<input type=checkbox checked=false id=idscheck299 value=299 />\n\t[659568]<td />\n\t\t000000299\n\t[659569]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[659570]<td />\n\t\tMay 31, 2023 2:55:09 AM\n\t[659571]<td />\n\t\tSarah Miller\n\t[659572]<td />\n\t\tSarah Miller\n\t[659573]<td />\n\t\t$219.40\n\t[659574]<td />\n\t\t$219.40\n\t[659575]<td />\n\t\t*[659614]<div />\n\t\t\tPending\n\t[659576]<td />\n\t\t[659626]<a />\n\t\t\tView\n\t[659577]<td />\n\t[659578]<td />\n*[642106]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[642116]<a id=footer_privacy />\n\tPrivacy Policy\n*[642119]<a id=footer_account_activity />\n\tAccount Activity\n*[642122]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "order_2": "[641321]<a />\n[641329]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[641330]<a />\n\t\tDashboard\n[641335]<li id=menu-magento-sales-sales role=menu-item />\n\t[641222]<a />\n\t\tSales\n[641378]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[641223]<a />\n\t\tCatalog\n[641401]<li id=menu-magento-customer-customer role=menu-item />\n\t[641224]<a />\n\t\tCustomers\n[641426]<li id=menu-magento-backend-marketing role=menu-item />\n\t[641225]<a />\n\t\tMarketing\n[641510]<li id=menu-magento-backend-content role=menu-item />\n\t[641226]<a />\n\t\tContent\n[641569]<li id=menu-magento-reports-report role=menu-item />\n\t[641227]<a />\n\t\tReports\n[641729]<li id=menu-magento-backend-stores role=menu-item />\n\t[641228]<a />\n\t\tStores\n[641825]<li id=menu-magento-backend-system role=menu-item />\n\t[641229]<a />\n\t\tSystem\n[641930]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[641931]<a />\n\t\tFind Partners & Extensions\nOrders\n[641993]<a title=My Account />\n\tadmin\n[642031]<a title=Notifications />\n[642036]<div />\n\t[641212]<form id=form-search />\n\t\t[642039]<div />\n\t\t\t[641213]<input type=text id=search-global autocomplete=off />\n[641230]<button title=Create New Order id=add />\n\tCreate New Order\n[642562]<button />\n\tDefault View\n[642581]<button />\n\tColumns\n[642691]<button />\n\tExport\n*[642716]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />\n[642717]<button aria-label=Search />\n[642725]<button />\n\tFilters\nPurchase Date\nfrom\n*[644640]<input type=text id=W2H261S name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[644647]<button />\n\t*[644650]<span />\n\t\tundefined\nto\n*[644642]<input type=text id=IQLAXM3 name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />\n*[651940]<button />\n\t*[651943]<span />\n\t\tundefined\nGrand Total (Base)\nfrom\n*[644582]<input type=text id=VBMPG31 name=base_grand_total[from] maxlength=255 />\nto\n*[644584]<input type=text id=GHUK17W name=base_grand_total[to] maxlength=255 />\nGrand Total (Purchased)\nfrom\n*[644586]<input type=text id=NJAU4P0 name=grand_total[from] maxlength=255 />\nto\n*[644588]<input type=text id=XIPG7MQ name=grand_total[to] maxlength=255 />\nPurchase Point\n*[644396]<select id=U5LE1WO name=store_id aria-label=notice-U5LE1WO expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />\nID\n*[644562]<input type=text id=WUPF8CG name=increment_id maxlength=255 />\nBill-to Name\n*[644564]<input type=text id=DRF7RA5 name=billing_name maxlength=255 />\nShip-to Name\n*[644566]<input type=text id=IB8812Y name=shipping_name maxlength=255 />\nStatus\n*[644417]<select id=WYAC3NL name=status aria-label=notice-WYAC3NL expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Canceled|Closed|Complete|Suspected Fraud) />\nBraintree Transaction Source\n*[644580]<input type=text id=BVVIP0U name=transaction_source maxlength=255 />\n*[642733]<button />\n\tCancel\n*[642735]<button />\n\tApply Filters\n[642767]<button title=Select Items />\n\tActions\n308\nrecords found\n[643838]<div />\n\t*[643840]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />\n[643841]<button />\n\tSelect\nper page\n[642906]<button title=Previous Page disabled=true />\n*[642911]<input type=number id=25 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />\nof 2\n[642913]<button title=Next Page />\n*[642416]<tr />\n\t*[643173]<div />\n\t\t[643174]<input type=checkbox checked=false id=51 />\n\t\t[643176]<button />\n\t\t\tOptions\n\t[643196]<th />\n\t\t*[643195]<span />\n\t\t\tID\n\t[643199]<th />\n\t\tPurchase Point\n\t[643202]<th />\n\t\t*[643201]<span />\n\t\t\tPurchase Date\n\t[643205]<th />\n\t\t*[643204]<span />\n\t\t\tBill-to Name\n\t[643208]<th />\n\t\t*[643207]<span />\n\t\t\tShip-to Name\n\t[643211]<th />\n\t\t*[643210]<span />\n\t\t\tGrand Total (Base)\n\t[643214]<th />\n\t\t*[643213]<span />\n\t\t\tGrand Total (Purchased)\n\t[643217]<th />\n\t\t*[643216]<span />\n\t\t\tStatus\n\t[643220]<th />\n\t\t*[643219]<span />\n\t\t\tAction\n\t[643223]<th />\n\t\tAllocated sources\n\t[643226]<th />\n\t\t*[643225]<span />\n\t\t\tBraintree Transaction Source\n*[659563]<tr />\n\t[659567]<td />\n\t\t*[659607]<label />\n\t\t\t[659605]<input type=checkbox checked=false id=idscheck1 value=1 />\n\t[659568]<td />\n\t\t000000001\n\t[659569]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t[659570]<td />\n\t\tMar 29, 2022 9:36:37 PM\n\t[659571]<td />\n\t\tVeronica Costello\n\t[659572]<td />\n\t\tVeronica Costello\n\t[659573]<td />\n\t\t$36.39\n\t[659574]<td />\n\t\t$36.39\n\t[659575]<td />\n\t\tCanceled\n\t[659576]<td />\n\t\t[659626]<a />\n\t\t\tView\n\t[659577]<td />\n\t\tDefault Source\n\t[659578]<td />\n*[661578]<tr />\n\t*[662176]<td />\n\t\t*[662179]<label />\n\t\t\t*[662177]<input type=checkbox checked=false id=idscheck2 value=2 />\n\t*[662180]<td />\n\t\t000000002\n\t*[662182]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t*[662187]<td />\n\t\tApr 24, 2022 4:36:28 PM\n\t*[662189]<td />\n\t\tVeronica Costello\n\t*[662191]<td />\n\t\tVeronica Costello\n\t*[662193]<td />\n\t\t$39.64\n\t*[662195]<td />\n\t\t$39.64\n\t*[662197]<td />\n\t\tClosed\n\t*[662199]<td />\n\t\t*[662206]<a />\n\t\t\tView\n\t*[662211]<td />\n\t\tDefault Source\n\t*[662224]<td />\n*[661581]<tr />\n\t*[662226]<td />\n\t\t*[662229]<label />\n\t\t\t*[662227]<input type=checkbox checked=false id=idscheck211 value=211 />\n\t*[662230]<td />\n\t\t000000211\n\t*[662232]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t*[662237]<td />\n\t\tApr 7, 2022 8:51:14 PM\n\t*[662239]<td />\n\t\tSophie Taylor\n\t*[662241]<td />\n\t\tSophie Taylor\n\t*[662243]<td />\n\t\t$107.40\n\t*[662245]<td />\n\t\t$107.40\n\t*[662247]<td />\n\t\tCanceled\n\t*[662249]<td />\n\t\t*[662256]<a />\n\t\t\tView\n\t*[662261]<td />\n\t*[662272]<td />\n*[661584]<tr />\n\t*[662274]<td />\n\t\t*[662277]<label />\n\t\t\t*[662275]<input type=checkbox checked=false id=idscheck269 value=269 />\n\t*[662278]<td />\n\t\t000000269\n\t*[662280]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t*[662285]<td />\n\t\tAug 23, 2022 11:13:41 PM\n\t*[662287]<td />\n\t\tSophie Taylor\n\t*[662289]<td />\n\t\tSophie Taylor\n\t*[662291]<td />\n\t\t$76.40\n\t*[662293]<td />\n\t\t$76.40\n\t*[662295]<td />\n\t\tComplete\n\t*[662297]<td />\n\t\t*[662304]<a />\n\t\t\tView\n\t*[662309]<td />\n\t*[662320]<td />\n*[661587]<tr />\n\t*[662322]<td />\n\t\t*[662325]<label />\n\t\t\t*[662323]<input type=checkbox checked=false id=idscheck212 value=212 />\n\t*[662326]<td />\n\t\t000000212\n\t*[662328]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t*[662333]<td />\n\t\tDec 5, 2022 3:55:05 PM\n\t*[662335]<td />\n\t\tSophie Taylor\n\t*[662337]<td />\n\t\tSophie Taylor\n\t*[662339]<td />\n\t\t$68.00\n\t*[662341]<td />\n\t\t$68.00\n\t*[662343]<td />\n\t\tCanceled\n\t*[662345]<td />\n\t\t*[662352]<a />\n\t\t\tView\n\t*[662357]<td />\n\t*[662368]<td />\n*[661590]<tr />\n\t*[662370]<td />\n\t\t*[662373]<label />\n\t\t\t*[662371]<input type=checkbox checked=false id=idscheck18 value=18 />\n\t*[662374]<td />\n\t\t000000018\n\t*[662376]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t*[662381]<td />\n\t\tApr 6, 2022 10:02:58 AM\n\t*[662383]<td />\n\t\tSophie Taylor\n\t*[662385]<td />\n\t\tSophie Taylor\n\t*[662387]<td />\n\t\t$105.00\n\t*[662389]<td />\n\t\t$105.00\n\t*[662391]<td />\n\t\tCanceled\n\t*[662393]<td />\n\t\t*[662400]<a />\n\t\t\tView\n\t*[662405]<td />\n\t*[662416]<td />\n*[661593]<tr />\n\t*[662418]<td />\n\t\t*[662421]<label />\n\t\t\t*[662419]<input type=checkbox checked=false id=idscheck124 value=124 />\n\t*[662422]<td />\n\t\t000000124\n\t*[662424]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t*[662429]<td />\n\t\tJan 10, 2023 11:55:01 AM\n\t*[662431]<td />\n\t\tSophie Taylor\n\t*[662433]<td />\n\t\tSophie Taylor\n\t*[662435]<td />\n\t\t$193.64\n\t*[662437]<td />\n\t\t$193.64\n\t*[662439]<td />\n\t\tCanceled\n\t*[662441]<td />\n\t\t*[662448]<a />\n\t\t\tView\n\t*[662453]<td />\n\t*[662464]<td />\n*[661596]<tr />\n\t*[662466]<td />\n\t\t*[662469]<label />\n\t\t\t*[662467]<input type=checkbox checked=false id=idscheck229 value=229 />\n\t*[662470]<td />\n\t\t000000229\n\t*[662472]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n\t*[662477]<td />\n\t\tMay 22, 2022 4:40:32 AM\n\t*[662479]<td />\n\t\tSarah Miller\n\t*[662481]<td />\n\t\tSarah Miller\n\t*[662483]<td />\n\t\t$55.00\n\t*[662485]<td />\n\t\t$55.00\n\t*[662487]<td />\n\t\tCanceled\n\t*[662489]<td />\n\t\t*[662496]<a />\n\t\t\tView\n\t*[662501]<td />\n\t*[662512]<td />\n*[661599]<tr />\n\t*[662514]<td />\n\t*[662518]<td />\n\t*[662520]<td />\n\t\tMain Website\n\t*[662525]<td />\n\t*[662527]<td />\n\t*[662529]<td />\n\t*[662531]<td />\n\t*[662533]<td />\n\t*[662535]<td />\n\t*[662537]<td />\n\t*[662549]<td />\n\t*[662560]<td />",
+    "order_3": "*[685190]<a />\n*[685199]<a />\n\tDashboard\n*[685051]<a />\n\tSales\n*[685052]<a />\n\tCatalog\n*[685053]<a />\n\tCustomers\n*[685054]<a />\n\tMarketing\n*[685055]<a />\n\tContent\n*[685056]<a />\n\tReports\n*[685057]<a />\n\tStores\n*[685058]<a />\n\tSystem\n*[685801]<a />\n\tFind Partners & Extensions\n#000000299\n*[685863]<a title=My Account />\n\tadmin\n*[685901]<a title=Notifications />\n*[685906]<div />\n\t*[685026]<form id=form-search />\n\t\t*[685909]<div />\n\t\t\t*[685027]<input type=text id=search-global name=query />\n*[685059]<button title=Back id=back />\n\tBack\n*[685060]<button title=Login as Customer id=guest_to_customer />\n\tLogin as Customer\n*[685061]<button title=Edit id=order_edit />\n\tEdit\n*[685956]<button title=Cancel id=order-view-cancel-button />\n\tCancel\n*[685062]<button title=Send Email id=send_notification />\n\tSend Email\n*[685969]<button title=Hold id=order-view-hold-button />\n\tHold\n*[685063]<button title=Invoice id=order_invoice />\n\tInvoice\n*[685064]<button title=Ship id=order_ship />\n\tShip\n*[685065]<button title=Reorder id=order_reorder />\n\tReorder\nOrder View\n*[686035]<li id=sales_order_view_tabs_order_info selected=true expanded=true />\n\t*[686037]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info />\n\t\tInformation\n\t\t*[686042]<span />\n*[687141]<li id=sales_order_view_tabs_order_invoices selected=false expanded=false />\n\t*[687143]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices />\n\t\tInvoices\n\t\t*[687148]<span />\n*[687218]<li id=sales_order_view_tabs_order_creditmemos selected=false expanded=false />\n\t*[687220]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos />\n\t\tCredit Memos\n\t\t*[687225]<span />\n*[687295]<li id=sales_order_view_tabs_order_shipments selected=false expanded=false />\n\t*[687297]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments />\n\t\tShipments\n\t\t*[687302]<span />\n*[687372]<li id=sales_order_view_tabs_order_history selected=false expanded=false />\n\t*[687374]<a title=Order History id=sales_order_view_tabs_order_history name=order_history />\n\t\tComments History\n\t\t*[687379]<span />\n*[687446]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[687456]<a id=footer_privacy />\n\tPrivacy Policy\n*[687459]<a id=footer_account_activity />\n\tAccount Activity\n*[687462]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "299": "[787824]<a />\n[787832]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[787833]<a />\n\t\tDashboard\n[787838]<li id=menu-magento-sales-sales role=menu-item />\n\t[787698]<a />\n\t\tSales\n[787881]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[787699]<a />\n\t\tCatalog\n[787904]<li id=menu-magento-customer-customer role=menu-item />\n\t[787700]<a />\n\t\tCustomers\n[787929]<li id=menu-magento-backend-marketing role=menu-item />\n\t[787701]<a />\n\t\tMarketing\n[788014]<li id=menu-magento-backend-content role=menu-item />\n\t[787702]<a />\n\t\tContent\n[788073]<li id=menu-magento-reports-report role=menu-item />\n\t[787703]<a />\n\t\tReports\n[788234]<li id=menu-magento-backend-stores role=menu-item />\n\t[787704]<a />\n\t\tStores\n[788329]<li id=menu-magento-backend-system role=menu-item />\n\t[787705]<a />\n\t\tSystem\n[788434]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[788435]<a />\n\t\tFind Partners & Extensions\n#000000299\n[788497]<a title=My Account />\n\tadmin\n[788535]<a title=Notifications />\n[788540]<div />\n\t[787692]<form id=form-search />\n\t\t[788543]<div />\n\t\t\t[787693]<input type=text id=search-global autocomplete=off />\n[787706]<button title=Back id=back />\n\tBack\n[787707]<button title=Login as Customer id=guest_to_customer />\n\tLogin as Customer\n[787708]<button title=Edit id=order_edit />\n\tEdit\n[788590]<button title=Cancel id=order-view-cancel-button />\n\tCancel\n[787709]<button title=Send Email id=send_notification />\n\tSend Email\n[788603]<button title=Hold id=order-view-hold-button />\n\tHold\n[787710]<button title=Invoice id=order_invoice />\n\tInvoice\n[787711]<button title=Reorder id=order_reorder />\n\tReorder\nThe shipment has been created.\nOrder & Account Information\nOrder # 000000299 (\nThe order confirmation email was sent\n[788742]<tr />\n\tOrder Date\n\t[788747]<td />\n\t\tMay 31, 2023, 2:55:09 AM\n[788751]<tr />\n\tOrder Status\n\t[788756]<td />\n\t\tPending\n[788761]<tr />\n\tPurchased From\n\t[788766]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n[788774]<tr />\n\tPlaced from IP\n\t[788779]<td />\n\t\t128.2.205.52\nAccount Information\n[788795]<a />\n\tEdit Customer\n[788805]<tr />\n\tCustomer Name\n\t[788810]<td />\n\t\t[788812]<a />\n\t\t\tSarah Miller\n[788820]<tr />\n\tEmail\n\t[788825]<td />\n\t\t[788826]<a />\n\t\t\thelloworld@yahoo.com\n[788830]<tr />\n\tCustomer Group\n\t[788835]<td />\n\t\tGeneral\nAddress Information\nBilling Address\n[788861]<div />\n\t[788862]<a />\n\t\tEdit\nSarah Miller\n456 Oak Avenue\nApartment 5B\nNew York,  New York, 10001\nUnited States\nT: 5107819902\nShipping Address\n[788887]<div />\n\t[788888]<a />\n\t\tEdit\nSarah Miller\n456 Oak Avenue\nApartment 5B\nNew York,  New York, 10001\nNew Caledonia\nT: 5107819902\nPayment & Shipping Method\nPayment Information\nCheck / Money order\nThe order was placed using USD.\nShipping & Handling Information\n[787712]<a title=Track Order id=linkId />\n\tTrack Order\nFlat Rate - Fixed\n[788962]<span />\n\t$25.00\nItems Ordered\n[788983]<tr />\n\tProduct\n\tItem Status\n\tOriginal Price\n\tPrice\n\tQty\n\tSubtotal\n\tTax Amount\n\tTax Percent\n\tDiscount Amount\n\tRow Total\n[789029]<tr />\n\t[789031]<td />\n\t\tArgus All-Weather Tank\n\t\tSKU:\n\t\tMT07-M-Gray\n\t\tColor:\n\t\tGray\n\t\tSize:\n\t[789061]<td />\n\t\tMixed\n\t[789064]<td />\n\t\t[789066]<span />\n\t\t\t$22.00\n\t[789070]<td />\n\t\t[789072]<div />\n\t\t\t[789074]<span />\n\t\t\t\t$22.00\n\t[789079]<td />\n\t\t[789084]<tr />\n\t\t\tOrdered\n\t\t\t[789089]<td />\n\t\t[789093]<tr />\n\t\t\tShipped\n\t\t\t[789098]<td />\n\t[789104]<td />\n\t\t[789108]<span />\n\t\t\t$22.00\n\t[789113]<td />\n\t\t[789115]<span />\n\t\t\t$0.00\n\t[789119]<td />\n\t\t0%\n\t[789122]<td />\n\t\t[789124]<span />\n\t\t\t$4.40\n\t[789128]<td />\n\t\t[789130]<span />\n\t\t\t$17.60\n[789138]<tr />\n\t[789140]<td />\n\t\tMarco Lightweight Active Hoodie\n\t\tSKU:\n\t\tMH13-S-Green\n\t\tColor:\n\t\tGreen\n\t\tSize:\n\t[789170]<td />\n\t\tMixed\n\t[789173]<td />\n\t\t[789175]<span />\n\t\t\t$74.00\n\t[789179]<td />\n\t\t[789181]<div />\n\t\t\t[789183]<span />\n\t\t\t\t$74.00\n\t[789188]<td />\n\t\t[789193]<tr />\n\t\t\tOrdered\n\t\t\t[789198]<td />\n\t\t[789202]<tr />\n\t\t\tShipped\n\t\t\t[789207]<td />\n\t[789213]<td />\n\t\t[789217]<span />\n\t\t\t$74.00\n\t[789222]<td />\n\t\t[789224]<span />\n\t\t\t$0.00\n\t[789228]<td />\n\t\t0%\n\t[789231]<td />\n\t\t[789233]<span />\n\t\t\t$14.80\n\t[789237]<td />\n\t\t[789239]<span />\n\t\t\t$59.20\n[789247]<tr />\n\t[789249]<td />\n\t\tTiffany Fitness Tee\n\t\tSKU:\n\t\tWS09-XL-Blue\n\t\tColor:\n\t\tBlue\n\t\tSize:\n\t\tXL\n\t[789279]<td />\n\t\tMixed\n\t[789282]<td />\n\t\t[789284]<span />\n\t\t\t$28.00\n\t[789288]<td />\n\t\t[789290]<div />\n\t\t\t[789292]<span />\n\t\t\t\t$28.00\n\t[789297]<td />\n\t\t[789302]<tr />\n\t\t\tOrdered\n\t\t\t[789307]<td />\n\t\t[789311]<tr />\n\t\t\tShipped\n\t\t\t[789316]<td />\n\t[789322]<td />\n\t\t[789326]<span />\n\t\t\t$28.00\n\t[789331]<td />\n\t\t[789333]<span />\n\t\t\t$0.00\n\t[789337]<td />\n\t\t0%\n\t[789340]<td />\n\t\t[789342]<span />\n\t\t\t$5.60\n\t[789346]<td />\n\t\t[789348]<span />\n\t\t\t$22.40\n[789356]<tr />\n\t[789358]<td />\n\t\tNadia Elements Shell\n\t\tSKU:\n\t\tWJ10-XS-Yellow\n\t\tColor:\n\t\tYellow\n\t\tSize:\n\t\tXS\n\t[789388]<td />\n\t\tMixed\n\t[789391]<td />\n\t\t[789393]<span />\n\t\t\t$69.00\n\t[789397]<td />\n\t\t[789399]<div />\n\t\t\t[789401]<span />\n\t\t\t\t$69.00\n\t[789406]<td />\n\t\t[789411]<tr />\n\t\t\tOrdered\n\t\t\t[789416]<td />\n\t\t[789420]<tr />\n\t\t\tShipped\n\t\t\t[789425]<td />\n\t[789431]<td />\n\t\t[789435]<span />\n\t\t\t$69.00\n\t[789440]<td />\n\t\t[789442]<span />\n\t\t\t$0.00\n\t[789446]<td />\n\t\t0%\n\t[789449]<td />\n\t\t[789451]<span />\n\t\t\t$13.80\n\t[789455]<td />\n\t\t[789457]<span />\n\t\t\t$55.20\n[789465]<tr />\n\t[789467]<td />\n\t\tGwen Drawstring Bike Short\n\t\tSKU:\n\t\tWSH03-28-Orange\n\t\tColor:\n\t\tOrange\n\t\tSize:\n\t\t28\n\t[789497]<td />\n\t\tMixed\n\t[789500]<td />\n\t\t[789502]<span />\n\t\t\t$50.00\n\t[789506]<td />\n\t\t[789508]<div />\n\t\t\t[789510]<span />\n\t\t\t\t$50.00\n\t[789515]<td />\n\t\t[789520]<tr />\n\t\t\tOrdered\n\t\t\t[789525]<td />\n\t\t[789529]<tr />\n\t\t\tShipped\n\t\t\t[789534]<td />\n\t[789540]<td />\n\t\t[789544]<span />\n\t\t\t$50.00\n\t[789549]<td />\n\t\t[789551]<span />\n\t\t\t$0.00\n\t[789555]<td />\n\t\t0%\n\t[789558]<td />\n\t\t[789560]<span />\n\t\t\t$10.00\n\t[789564]<td />\n\t\t[789566]<span />\n\t\t\t$40.00\nOrder Total\nNotes for this Order\nStatus\n*[787694]<select id=history_status name=history[status] expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox) />\nComment\n[787695]<textarea id=history_comment name=history[comment] />\n[787696]<input type=checkbox checked=false id=history_notify name=history[is_customer_notified] value=1 />\nNotify Customer by Email\n[787697]<input type=checkbox checked=false id=history_visible name=history[is_visible_on_front] value=1 />\nVisible on Storefront\n[787713]<button title=Submit Comment id=id_VfbpfWomIvx67ZZydE21gDcmNFVnFFAS />\n\tSubmit Comment\nOrder Totals\n[789669]<tr />\n\t[789671]<td />\n\t\tGrand Total\n\t[789677]<td />\n\t\t$219.40\n[789685]<tr />\n\t[789687]<td />\n\t\tTotal Paid\n\t[789693]<td />\n\t\t[789696]<span />\n\t\t\t$0.00\n[789701]<tr />\n\t[789703]<td />\n\t\tTotal Refunded\n\t[789709]<td />\n\t\t[789712]<span />\n\t\t\t$0.00\n[789717]<tr />\n\t[789719]<td />\n\t\tTotal Due\n\t[789725]<td />\n\t\t$219.40\n[789736]<tr />\n\t[789738]<td />\n\t\tSubtotal\n\t[789741]<td />\n\t\t$243.00\n[789749]<tr />\n\t[789751]<td />\n\t\tDiscount\n\t[789754]<td />\n\t\t[789757]<span />\n\t\t\t-$48.60\n[789762]<tr />\n\t[789764]<td />\n\t\tShipping & Handling\n\t[789767]<td />\n\t\t[789770]<span />\n\t\t\t$25.00\nOrder View\n[788668]<li id=sales_order_view_tabs_order_info role=tab selected=true expanded=true />\n\t[788670]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info role=presentation />\n\t\tInformation\n\t\t[788675]<span />\n[789827]<li id=sales_order_view_tabs_order_invoices role=tab selected=false expanded=false />\n\t[789829]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices role=presentation />\n\t\tInvoices\n\t\t[789834]<span />\n[789904]<li id=sales_order_view_tabs_order_creditmemos role=tab selected=false expanded=false />\n\t[789906]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos role=presentation />\n\t\tCredit Memos\n\t\t[789911]<span />\n[789981]<li id=sales_order_view_tabs_order_shipments role=tab selected=false expanded=false />\n\t[789983]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments role=presentation />\n\t\tShipments\n\t\t[789988]<span />\n[790058]<li id=sales_order_view_tabs_order_history role=tab selected=false expanded=false />\n\t[790060]<a title=Order History id=sales_order_view_tabs_order_history name=order_history role=presentation />\n\t\tComments History\n\t\t[790065]<span />",
+    "299_5": "[784699]<a />\n[784703]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[784704]<a />\n\t\tDashboard\n[784706]<li id=menu-magento-sales-sales role=menu-item />\n\t[784707]<a />\n\t\tSales\n[784739]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[784740]<a />\n\t\tCatalog\n[784757]<li id=menu-magento-customer-customer role=menu-item />\n\t[784758]<a />\n\t\tCustomers\n[784776]<li id=menu-magento-backend-marketing role=menu-item />\n\t[784777]<a />\n\t\tMarketing\n[784843]<li id=menu-magento-backend-content role=menu-item />\n\t[784844]<a />\n\t\tContent\n[784889]<li id=menu-magento-reports-report role=menu-item />\n\t[784890]<a />\n\t\tReports\n[785014]<li id=menu-magento-backend-stores role=menu-item />\n\t[785015]<a />\n\t\tStores\n[785090]<li id=menu-magento-backend-system role=menu-item />\n\t[785091]<a />\n\t\tSystem\n[785173]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[785174]<a />\n\t\tFind Partners & Extensions\nNew Shipment\n[785200]<a title=My Account />\n\tadmin\n[785212]<a title=Notifications />\n[785213]<div />\n\t[785214]<form id=form-search />\n\t\t[785215]<div />\n\t\t\t[785217]<input type=text id=search-global autocomplete=off />\n[785225]<button title=Back id=back />\n\tBack\n[785228]<button title=Reset id=reset />\n\tReset\n[785234]<form id=edit_form />\n\tOrder & Account Information\n\t[785244]<a />\n\t\tOrder # 000000299\n\t(The order confirmation email was sent)\n\t[785249]<tr />\n\t\tOrder Date\n\t\t[785251]<td />\n\t\t\tMay 31, 2023, 2:55:09 AM\n\t[785252]<tr />\n\t\tOrder Status\n\t\t[785254]<td />\n\t\t\tPending\n\t[785256]<tr />\n\t\tPurchased From\n\t\t[785258]<td />\n\t\t\tMain Website\n\t\t\tMain Website Store\n\t\t\tDefault Store View\n\t[785261]<tr />\n\t\tPlaced from IP\n\t\t[785263]<td />\n\t\t\t128.2.205.52\n\tAccount Information\n\t[785268]<a />\n\t\tEdit Customer\n\t[785272]<tr />\n\t\tCustomer Name\n\t\t[785274]<td />\n\t\t\t[785275]<a />\n\t\t\t\tSarah Miller\n\t[785277]<tr />\n\t\tEmail\n\t\t[785279]<td />\n\t\t\t[785280]<a />\n\t\t\t\thelloworld@yahoo.com\n\t[785281]<tr />\n\t\tCustomer Group\n\t\t[785283]<td />\n\t\t\tGeneral\n\tAddress Information\n\tBilling Address\n\t[785291]<div />\n\t\t[785292]<a />\n\t\t\tEdit\n\tSarah Miller\n\t456 Oak Avenue\n\tApartment 5B\n\tNew York,  New York, 10001\n\tUnited States\n\tT: 5107819902\n\tShipping Address\n\t[785302]<div />\n\t\t[785303]<a />\n\t\t\tEdit\n\tSarah Miller\n\t456 Oak Avenue\n\tApartment 5B\n\tNew York,  New York, 10001\n\tNew Caledonia\n\tT: 5107819902\n\tPayment & Shipping Method\n\tPayment Information\n\tCheck / Money order\n\tThe order was placed using USD.\n\tShipping Information\n\tFlat Rate - Fixed\n\tTotal Shipping Charges:\n\t[785326]<span />\n\t\t$25.00\n\t[785333]<tr />\n\t\tCarrier\n\t\tTitle\n\t\tNumber\n\t\tAction\n\t[785339]<tr />\n\t\t[785340]<td />\n\t\t\t[785341]<button title=Add Tracking Number id=id_5Bmu2qJV6atutKoQmFrSh7fDXlkLNYGj />\n\t\t\t\tAdd Tracking Number\n\t*[787001]<tr />\n\t\t*[787002]<td />\n\t\t\t*[787009]<select id=trackingC1 name=tracking[1][carrier_code] expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=Custom Value|DHL|Federal Express|United Parcel Service) />\n\t\t*[787025]<td />\n\t\t\t*[787026]<input type=text id=trackingT1 name=tracking[1][title] />\n\t\t*[787027]<td />\n\t\t\t*[787028]<input type=text id=trackingN1 name=tracking[1][number] />\n\t\t*[787029]<td />\n\t\t\t*[787030]<button />\n\tInventory\n\tSource:        Default Source\n\tItems to Ship\n\t[785359]<tr />\n\t\tProduct\n\t\tQty\n\t\tQty to Ship\n\t[785367]<tr />\n\t\t[785368]<td />\n\t\t\tArgus All-Weather Tank\n\t\t\tSKU:\n\t\t\tMT07-M-Gray\n\t\t\tColor:\n\t\t\tGray\n\t\t\tSize:\n\t\t[785377]<td />\n\t\t\t[785380]<tr />\n\t\t\t\tOrdered\n\t\t\t\t[785382]<td />\n\t\t[785383]<td />\n\t\t\t[785384]<input type=text name=shipment[items][1565] value=1 />\n\t[785386]<tr />\n\t\t[785387]<td />\n\t\t\tMarco Lightweight Active Hoodie\n\t\t\tSKU:\n\t\t\tMH13-S-Green\n\t\t\tColor:\n\t\t\tGreen\n\t\t\tSize:\n\t\t[785396]<td />\n\t\t\t[785399]<tr />\n\t\t\t\tOrdered\n\t\t\t\t[785401]<td />\n\t\t[785402]<td />\n\t\t\t[785403]<input type=text name=shipment[items][1567] value=1 />\n\t[785405]<tr />\n\t\t[785406]<td />\n\t\t\tTiffany Fitness Tee\n\t\t\tSKU:\n\t\t\tWS09-XL-Blue\n\t\t\tColor:\n\t\t\tBlue\n\t\t\tSize:\n\t\t\tXL\n\t\t[785415]<td />\n\t\t\t[785418]<tr />\n\t\t\t\tOrdered\n\t\t\t\t[785420]<td />\n\t\t[785421]<td />\n\t\t\t[785422]<input type=text name=shipment[items][1569] value=1 />\n\t[785424]<tr />\n\t\t[785425]<td />\n\t\t\tNadia Elements Shell\n\t\t\tSKU:\n\t\t\tWJ10-XS-Yellow\n\t\t\tColor:\n\t\t\tYellow\n\t\t\tSize:\n\t\t\tXS\n\t\t[785434]<td />\n\t\t\t[785437]<tr />\n\t\t\t\tOrdered\n\t\t\t\t[785439]<td />\n\t\t[785440]<td />\n\t\t\t[785441]<input type=text name=shipment[items][1571] value=1 />\n\t[785443]<tr />\n\t\t[785444]<td />\n\t\t\tGwen Drawstring Bike Short\n\t\t\tSKU:\n\t\t\tWSH03-28-Orange\n\t\t\tColor:\n\t\t\tOrange\n\t\t\tSize:\n\t\t\t28\n\t\t[785453]<td />\n\t\t\t[785456]<tr />\n\t\t\t\tOrdered\n\t\t\t\t[785458]<td />\n\t\t[785459]<td />\n\t\t\t[785460]<input type=text name=shipment[items][1573] value=1 />\n\tShipment Total\n\tShipment Comments\n\tComment Text\n\t[785475]<textarea id=shipment_comment_text name=shipment[comment_text] />\n\tShipment Options\n\tAppend Comments\n\t[785485]<input type=checkbox checked=false id=send_email name=shipment[send_email] value=1 />\n\t[785487]<span />\n\t\tEmail Copy of Shipment\n\t[785489]<button title=Submit Shipment id=id_so8G9JUXxL4rQ0yN1fasSDx5P0mQq8Ab />\n\t\tSubmit Shipment\n[785587]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[785591]<a id=footer_privacy />\n\tPrivacy Policy\n[785592]<a id=footer_account_activity />\n\tAccount Activity\n[785593]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "299_6": "[787824]<a />\n*[787832]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[787833]<a />\n\t\tDashboard\n*[787838]<li id=menu-magento-sales-sales role=menu-item />\n\t[787698]<a />\n\t\tSales\n*[787881]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[787699]<a />\n\t\tCatalog\n*[787904]<li id=menu-magento-customer-customer role=menu-item />\n\t[787700]<a />\n\t\tCustomers\n*[787929]<li id=menu-magento-backend-marketing role=menu-item />\n\t[787701]<a />\n\t\tMarketing\n*[788014]<li id=menu-magento-backend-content role=menu-item />\n\t[787702]<a />\n\t\tContent\n*[788073]<li id=menu-magento-reports-report role=menu-item />\n\t[787703]<a />\n\t\tReports\n*[788234]<li id=menu-magento-backend-stores role=menu-item />\n\t[787704]<a />\n\t\tStores\n*[788329]<li id=menu-magento-backend-system role=menu-item />\n\t[787705]<a />\n\t\tSystem\n*[788434]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[788435]<a />\n\t\tFind Partners & Extensions\n#000000299\n[788497]<a title=My Account />\n\tadmin\n[788535]<a title=Notifications />\n[788540]<div />\n\t[787692]<form id=form-search />\n\t\t[788543]<div />\n\t\t\t[787693]<input type=text id=search-global autocomplete=off />\n[787706]<button title=Back id=back />\n\tBack\n[787707]<button title=Login as Customer id=guest_to_customer />\n\tLogin as Customer\n[787708]<button title=Edit id=order_edit />\n\tEdit\n[788590]<button title=Cancel id=order-view-cancel-button />\n\tCancel\n[787709]<button title=Send Email id=send_notification />\n\tSend Email\n[788603]<button title=Hold id=order-view-hold-button />\n\tHold\n[787710]<button title=Invoice id=order_invoice />\n\tInvoice\n[787711]<button title=Reorder id=order_reorder />\n\tReorder\nThe shipment has been created.\nOrder & Account Information\nOrder # 000000299 (\nThe order confirmation email was sent\n*[788742]<tr />\n\tOrder Date\n\t*[788747]<td />\n\t\tMay 31, 2023, 2:55:09 AM\n*[788751]<tr />\n\tOrder Status\n\t*[788756]<td />\n\t\tPending\n*[788761]<tr />\n\tPurchased From\n\t*[788766]<td />\n\t\tMain Website\n\t\tMain Website Store\n\t\tDefault Store View\n*[788774]<tr />\n\tPlaced from IP\n\t*[788779]<td />\n\t\t128.2.205.52\nAccount Information\n*[788795]<a />\n\tEdit Customer\n*[788805]<tr />\n\tCustomer Name\n\t*[788810]<td />\n\t\t*[788812]<a />\n\t\t\tSarah Miller\n*[788820]<tr />\n\tEmail\n\t*[788825]<td />\n\t\t*[788826]<a />\n\t\t\thelloworld@yahoo.com\n*[788830]<tr />\n\tCustomer Group\n\t*[788835]<td />\n\t\tGeneral\nAddress Information\nBilling Address\n*[788861]<div />\n\t*[788862]<a />\n\t\tEdit\nSarah Miller\n456 Oak Avenue\nApartment 5B\nNew York,  New York, 10001\nUnited States\nT: 5107819902\nShipping Address\n*[788887]<div />\n\t*[788888]<a />\n\t\tEdit\nSarah Miller\n456 Oak Avenue\nApartment 5B\nNew York,  New York, 10001\nNew Caledonia\nT: 5107819902\nPayment & Shipping Method\nPayment Information\nCheck / Money order\nThe order was placed using USD.\nShipping & Handling Information\n*[787712]<a title=Track Order id=linkId />\n\tTrack Order\nFlat Rate - Fixed\n*[788962]<span />\n\t$25.00\nItems Ordered\n*[788983]<tr />\n\tProduct\n\tItem Status\n\tOriginal Price\n\tPrice\n\tQty\n\tSubtotal\n\tTax Amount\n\tTax Percent\n\tDiscount Amount\n\tRow Total\n*[789029]<tr />\n\t*[789031]<td />\n\t\tArgus All-Weather Tank\n\t\tSKU:\n\t\tMT07-M-Gray\n\t\tColor:\n\t\tGray\n\t\tSize:\n\t*[789061]<td />\n\t\tMixed\n\t*[789064]<td />\n\t\t*[789066]<span />\n\t\t\t$22.00\n\t*[789070]<td />\n\t\t*[789072]<div />\n\t\t\t*[789074]<span />\n\t\t\t\t$22.00\n\t*[789079]<td />\n\t\t*[789084]<tr />\n\t\t\tOrdered\n\t\t\t*[789089]<td />\n\t\t*[789093]<tr />\n\t\t\tShipped\n\t\t\t*[789098]<td />\n\t*[789104]<td />\n\t\t*[789108]<span />\n\t\t\t$22.00\n\t*[789113]<td />\n\t\t*[789115]<span />\n\t\t\t$0.00\n\t*[789119]<td />\n\t\t0%\n\t*[789122]<td />\n\t\t*[789124]<span />\n\t\t\t$4.40\n\t*[789128]<td />\n\t\t*[789130]<span />\n\t\t\t$17.60\n*[789138]<tr />\n\t*[789140]<td />\n\t\tMarco Lightweight Active Hoodie\n\t\tSKU:\n\t\tMH13-S-Green\n\t\tColor:\n\t\tGreen\n\t\tSize:\n\t*[789170]<td />\n\t\tMixed\n\t*[789173]<td />\n\t\t*[789175]<span />\n\t\t\t$74.00\n\t*[789179]<td />\n\t\t*[789181]<div />\n\t\t\t*[789183]<span />\n\t\t\t\t$74.00\n\t*[789188]<td />\n\t\t*[789193]<tr />\n\t\t\tOrdered\n\t\t\t*[789198]<td />\n\t\t*[789202]<tr />\n\t\t\tShipped\n\t\t\t*[789207]<td />\n\t*[789213]<td />\n\t\t*[789217]<span />\n\t\t\t$74.00\n\t*[789222]<td />\n\t\t*[789224]<span />\n\t\t\t$0.00\n\t*[789228]<td />\n\t\t0%\n\t*[789231]<td />\n\t\t*[789233]<span />\n\t\t\t$14.80\n\t*[789237]<td />\n\t\t*[789239]<span />\n\t\t\t$59.20\n*[789247]<tr />\n\t*[789249]<td />\n\t\tTiffany Fitness Tee\n\t\tSKU:\n\t\tWS09-XL-Blue\n\t\tColor:\n\t\tBlue\n\t\tSize:\n\t\tXL\n\t*[789279]<td />\n\t\tMixed\n\t*[789282]<td />\n\t\t*[789284]<span />\n\t\t\t$28.00\n\t*[789288]<td />\n\t\t*[789290]<div />\n\t\t\t*[789292]<span />\n\t\t\t\t$28.00\n\t*[789297]<td />\n\t\t*[789302]<tr />\n\t\t\tOrdered\n\t\t\t*[789307]<td />\n\t\t*[789311]<tr />\n\t\t\tShipped\n\t\t\t*[789316]<td />\n\t*[789322]<td />\n\t\t*[789326]<span />\n\t\t\t$28.00\n\t*[789331]<td />\n\t\t*[789333]<span />\n\t\t\t$0.00\n\t*[789337]<td />\n\t\t0%\n\t*[789340]<td />\n\t\t*[789342]<span />\n\t\t\t$5.60\n\t*[789346]<td />\n\t\t*[789348]<span />\n\t\t\t$22.40\n*[789356]<tr />\n\t*[789358]<td />\n\t\tNadia Elements Shell\n\t\tSKU:\n\t\tWJ10-XS-Yellow\n\t\tColor:\n\t\tYellow\n\t\tSize:\n\t\tXS\n\t*[789388]<td />\n\t\tMixed\n\t*[789391]<td />\n\t\t*[789393]<span />\n\t\t\t$69.00\n\t*[789397]<td />\n\t\t*[789399]<div />\n\t\t\t*[789401]<span />\n\t\t\t\t$69.00\n\t*[789406]<td />\n\t\t*[789411]<tr />\n\t\t\tOrdered\n\t\t\t*[789416]<td />\n\t\t*[789420]<tr />\n\t\t\tShipped\n\t\t\t*[789425]<td />\n\t*[789431]<td />\n\t\t*[789435]<span />\n\t\t\t$69.00\n\t*[789440]<td />\n\t\t*[789442]<span />\n\t\t\t$0.00\n\t*[789446]<td />\n\t\t0%\n\t*[789449]<td />\n\t\t*[789451]<span />\n\t\t\t$13.80\n\t*[789455]<td />\n\t\t*[789457]<span />\n\t\t\t$55.20\n*[789465]<tr />\n\t*[789467]<td />\n\t\tGwen Drawstring Bike Short\n\t\tSKU:\n\t\tWSH03-28-Orange\n\t\tColor:\n\t\tOrange\n\t\tSize:\n\t\t28\n\t*[789497]<td />\n\t\tMixed\n\t*[789500]<td />\n\t\t*[789502]<span />\n\t\t\t$50.00\n\t*[789506]<td />\n\t\t*[789508]<div />\n\t\t\t*[789510]<span />\n\t\t\t\t$50.00\n\t*[789515]<td />\n\t\t*[789520]<tr />\n\t\t\tOrdered\n\t\t\t*[789525]<td />\n\t\t*[789529]<tr />\n\t\t\tShipped\n\t\t\t*[789534]<td />\n\t*[789540]<td />\n\t\t*[789544]<span />\n\t\t\t$50.00\n\t*[789549]<td />\n\t\t*[789551]<span />\n\t\t\t$0.00\n\t*[789555]<td />\n\t\t0%\n\t*[789558]<td />\n\t\t*[789560]<span />\n\t\t\t$10.00\n\t*[789564]<td />\n\t\t*[789566]<span />\n\t\t\t$40.00\nOrder Total\nNotes for this Order\nStatus\n*[787694]<select id=history_status name=history[status] expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox) />\nComment\n*[787695]<textarea id=history_comment name=history[comment] />\n*[787696]<input type=checkbox checked=false id=history_notify name=history[is_customer_notified] value=1 />\nNotify Customer by Email\n*[787697]<input type=checkbox checked=false id=history_visible name=history[is_visible_on_front] value=1 />\nVisible on Storefront\n*[787713]<button title=Submit Comment id=id_VfbpfWomIvx67ZZydE21gDcmNFVnFFAS />\n\tSubmit Comment\nOrder Totals\n*[789669]<tr />\n\t*[789671]<td />\n\t\tGrand Total\n\t*[789677]<td />\n\t\t$219.40\n*[789685]<tr />\n\t*[789687]<td />\n\t\tTotal Paid\n\t*[789693]<td />\n\t\t*[789696]<span />\n\t\t\t$0.00\n*[789701]<tr />\n\t*[789703]<td />\n\t\tTotal Refunded\n\t*[789709]<td />\n\t\t*[789712]<span />\n\t\t\t$0.00\n*[789717]<tr />\n\t*[789719]<td />\n\t\tTotal Due\n\t*[789725]<td />\n\t\t$219.40\n*[789736]<tr />\n\t*[789738]<td />\n\t\tSubtotal\n\t*[789741]<td />\n\t\t$243.00\n*[789749]<tr />\n\t*[789751]<td />\n\t\tDiscount\n\t*[789754]<td />\n\t\t*[789757]<span />\n\t\t\t-$48.60\n*[789762]<tr />\n\t*[789764]<td />\n\t\tShipping & Handling\n\t*[789767]<td />\n\t\t*[789770]<span />\n\t\t\t$25.00\nOrder View\n[788668]<li id=sales_order_view_tabs_order_info role=tab selected=true expanded=true />\n\t[788670]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info role=presentation />\n\t\tInformation\n\t\t[788675]<span />\n[789827]<li id=sales_order_view_tabs_order_invoices role=tab selected=false expanded=false />\n\t[789829]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices role=presentation />\n\t\tInvoices\n\t\t[789834]<span />\n[789904]<li id=sales_order_view_tabs_order_creditmemos role=tab selected=false expanded=false />\n\t[789906]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos role=presentation />\n\t\tCredit Memos\n\t\t[789911]<span />\n[789981]<li id=sales_order_view_tabs_order_shipments role=tab selected=false expanded=false />\n\t[789983]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments role=presentation />\n\t\tShipments\n\t\t[789988]<span />\n[790058]<li id=sales_order_view_tabs_order_history role=tab selected=false expanded=false />\n\t[790060]<a title=Order History id=sales_order_view_tabs_order_history name=order_history role=presentation />\n\t\tComments History\n\t\t[790065]<span />\n[790154]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[790162]<a id=footer_privacy />\n\tPrivacy Policy\n[790165]<a id=footer_account_activity />\n\tAccount Activity\n[790168]<a id=footer_bug_tracking />\n\tReport an Issue"
+  }
+}

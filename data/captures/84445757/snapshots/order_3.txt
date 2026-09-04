@@ -1,0 +1,118 @@
+[2434]<a />
+[2442]<li id=menu-magento-backend-dashboard role=menu-item />
+	[2443]<a />
+		Dashboard
+[2448]<li id=menu-magento-sales-sales role=menu-item />
+	[2341]<a />
+		Sales
+[2491]<li id=menu-magento-catalog-catalog role=menu-item />
+	[2342]<a />
+		Catalog
+[2514]<li id=menu-magento-customer-customer role=menu-item />
+	[2343]<a />
+		Customers
+[2539]<li id=menu-magento-backend-marketing role=menu-item />
+	[2344]<a />
+		Marketing
+[2624]<li id=menu-magento-backend-content role=menu-item />
+	[2345]<a />
+		Content
+[2683]<li id=menu-magento-reports-report role=menu-item />
+	[2346]<a />
+		Reports
+[2843]<li id=menu-magento-backend-stores role=menu-item />
+	[2347]<a />
+		Stores
+[2939]<li id=menu-magento-backend-system role=menu-item />
+	[2348]<a />
+		System
+[3044]<li id=menu-magento-marketplace-partners role=menu-item />
+	[3045]<a />
+		Find Partners & Extensions
+Orders
+[3107]<a title=My Account />
+	admin
+[3145]<a title=Notifications />
+[3150]<div />
+	[2326]<form id=form-search />
+		[3153]<div />
+			[2327]<input type=text id=search-global autocomplete=off />
+[2349]<button title=Create New Order id=add />
+	Create New Order
+[3571]<button />
+	Default View
+[3713]<button />
+	Columns
+[3823]<button />
+	Export
+[3699]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[3700]<button aria-label=Search />
+[3846]<button />
+	Filters
+Active filters:
+Status:
+Suspected Fraud
+*[50159]<button />
+*[4527]<button />
+	Clear all
+[3888]<button title=Select Items />
+	Actions
+records found
+[4904]<div />
+	[4906]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />
+[4907]<button />
+	Select
+per page
+[4020]<button title=Previous Page disabled=true />
+*[4025]<input type=number id=25 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+[4027]<button title=Next Page disabled=true />
+[3536]<tr />
+	[4287]<div />
+		[4288]<input type=checkbox checked=false id=51 disabled=true />
+		[4290]<button disabled=true />
+			Options
+	[4310]<th />
+		[4309]<span />
+			ID
+	[4313]<th />
+		Purchase Point
+	[4316]<th />
+		[4315]<span />
+			Purchase Date
+	[4319]<th />
+		[4318]<span />
+			Bill-to Name
+	[4322]<th />
+		[4321]<span />
+			Ship-to Name
+	[4325]<th />
+		[4324]<span />
+			Grand Total (Base)
+	[4328]<th />
+		[4327]<span />
+			Grand Total (Purchased)
+	[4331]<th />
+		[4330]<span />
+			Status
+	[4334]<th />
+		[4333]<span />
+			Action
+	[4337]<th />
+		Allocated sources
+	[4340]<th />
+		[4339]<span />
+			Braintree Transaction Source
+*[50213]<tr />
+	*[50212]<td />
+		We couldn't find any records.
+*[3220]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[3230]<a id=footer_privacy />
+	Privacy Policy
+*[3233]<a id=footer_account_activity />
+	Account Activity
+*[3236]<a id=footer_bug_tracking />
+	Report an Issue

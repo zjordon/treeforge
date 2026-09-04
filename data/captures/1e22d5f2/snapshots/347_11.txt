@@ -1,0 +1,85 @@
+[155176]<a />
+[155184]<li id=menu-magento-backend-dashboard role=menu-item />
+	[155185]<a />
+		Dashboard
+[155190]<li id=menu-magento-sales-sales role=menu-item />
+	[155069]<a />
+		Sales
+[155233]<li id=menu-magento-catalog-catalog role=menu-item />
+	[155070]<a />
+		Catalog
+[155256]<li id=menu-magento-customer-customer role=menu-item />
+	[155071]<a />
+		Customers
+[155281]<li id=menu-magento-backend-marketing role=menu-item />
+	[155072]<a />
+		Marketing
+[155366]<li id=menu-magento-backend-content role=menu-item />
+	[155073]<a />
+		Content
+[155425]<li id=menu-magento-reports-report role=menu-item />
+	[155074]<a />
+		Reports
+[155586]<li id=menu-magento-backend-stores role=menu-item />
+	[155075]<a />
+		Stores
+[155682]<li id=menu-magento-backend-system role=menu-item />
+	[155076]<a />
+		System
+[155787]<li id=menu-magento-marketplace-partners role=menu-item />
+	[155788]<a />
+		Find Partners & Extensions
+Edit Review
+[155850]<a title=My Account />
+	admin
+[155888]<a title=Notifications />
+[155893]<div />
+	[155046]<form id=form-search />
+		[155896]<div />
+			[155047]<input type=text id=search-global autocomplete=off />
+[155077]<button title=Back id=back />
+	Back
+[155078]<button title=Reset id=reset />
+	Reset
+[155079]<button title=Delete Review id=delete />
+	Delete Review
+[155943]<button title=Save Review id=save_button />
+	Save Review
+[155080]<button title=Previous id=previous />
+	Previous
+[155956]<button title=Save and Previous id=save_and_previous />
+	Save and Previous
+[155057]<form id=edit_form />
+	Review Details
+	Product
+	[155081]<a />
+		Olivia 1/4 Zip Light Jacket
+	Author
+	[156007]<div id=customer />
+		Guest
+	Summary Rating
+	Detailed Rating
+	Rating
+	[156055]<label />
+	[156059]<label />
+	[156063]<label />
+	[156067]<label />
+	[156071]<label />
+	Status
+	*[155053]<select id=status_id expanded=true compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	Nickname
+	[155054]<input type=text id=nickname value=Jane Smith required=true />
+	Summary of Review
+	[155055]<input type=text id=title name=title value=Quite good required=true />
+	Review
+	[155056]<textarea id=detail required=true />
+[156165]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[156175]<a id=footer_privacy />
+	Privacy Policy
+[156178]<a id=footer_account_activity />
+	Account Activity
+[156181]<a id=footer_bug_tracking />
+	Report an Issue

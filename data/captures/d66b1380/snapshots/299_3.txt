@@ -1,0 +1,78 @@
+*[172227]<a />
+*[172236]<a />
+	Dashboard
+*[172103]<a />
+	Sales
+*[172104]<a />
+	Catalog
+*[172105]<a />
+	Customers
+*[172106]<a />
+	Marketing
+*[172107]<a />
+	Content
+*[172108]<a />
+	Reports
+*[172109]<a />
+	Stores
+*[172110]<a />
+	System
+*[172839]<a />
+	Find Partners & Extensions
+#000000065
+*[172901]<a title=My Account />
+	admin
+*[172939]<a title=Notifications />
+*[172944]<div />
+	*[172097]<form id=form-search />
+		*[172947]<div />
+			*[172098]<input type=text id=search-global name=query />
+*[172111]<button title=Back id=back />
+	Back
+*[172112]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+*[172113]<button title=Edit id=order_edit />
+	Edit
+*[172994]<button title=Cancel id=order-view-cancel-button />
+	Cancel
+*[172114]<button title=Send Email id=send_notification />
+	Send Email
+*[173007]<button title=Hold id=order-view-hold-button />
+	Hold
+*[172115]<button title=Invoice id=order_invoice />
+	Invoice
+*[172116]<button title=Ship id=order_ship />
+	Ship
+*[172117]<button title=Reorder id=order_reorder />
+	Reorder
+Order View
+*[173072]<li id=sales_order_view_tabs_order_info selected=true expanded=true />
+	*[173074]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info />
+		Information
+		*[173079]<span />
+*[174061]<li id=sales_order_view_tabs_order_invoices selected=false expanded=false />
+	*[174063]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices />
+		Invoices
+		*[174068]<span />
+*[174138]<li id=sales_order_view_tabs_order_creditmemos selected=false expanded=false />
+	*[174140]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos />
+		Credit Memos
+		*[174145]<span />
+*[174215]<li id=sales_order_view_tabs_order_shipments selected=false expanded=false />
+	*[174217]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments />
+		Shipments
+		*[174222]<span />
+*[174292]<li id=sales_order_view_tabs_order_history selected=false expanded=false />
+	*[174294]<a title=Order History id=sales_order_view_tabs_order_history name=order_history />
+		Comments History
+		*[174299]<span />
+*[174364]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[174372]<a id=footer_privacy />
+	Privacy Policy
+*[174375]<a id=footer_account_activity />
+	Account Activity
+*[174378]<a id=footer_bug_tracking />
+	Report an Issue

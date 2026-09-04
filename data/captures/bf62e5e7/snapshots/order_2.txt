@@ -1,0 +1,367 @@
+[2834]<a />
+[2842]<li id=menu-magento-backend-dashboard role=menu-item />
+	[2843]<a />
+		Dashboard
+[2848]<li id=menu-magento-sales-sales role=menu-item />
+	[2751]<a />
+		Sales
+[2891]<li id=menu-magento-catalog-catalog role=menu-item />
+	[2752]<a />
+		Catalog
+[2914]<li id=menu-magento-customer-customer role=menu-item />
+	[2753]<a />
+		Customers
+[2939]<li id=menu-magento-backend-marketing role=menu-item />
+	[2754]<a />
+		Marketing
+[3024]<li id=menu-magento-backend-content role=menu-item />
+	[2755]<a />
+		Content
+[3083]<li id=menu-magento-reports-report role=menu-item />
+	[2756]<a />
+		Reports
+[3244]<li id=menu-magento-backend-stores role=menu-item />
+	[2757]<a />
+		Stores
+[3340]<li id=menu-magento-backend-system role=menu-item />
+	[2758]<a />
+		System
+[3445]<li id=menu-magento-marketplace-partners role=menu-item />
+	[3446]<a />
+		Find Partners & Extensions
+Orders
+[3508]<a title=My Account />
+	admin
+[3546]<a title=Notifications />
+[3551]<div />
+	[2743]<form id=form-search />
+		[3554]<div />
+			[2744]<input type=text id=search-global autocomplete=off />
+[2759]<button title=Create New Order id=add />
+	Create New Order
+[3988]<button />
+	Default View
+[4406]<button />
+	Columns
+[4626]<button />
+	Export
+*[4122]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[4123]<button aria-label=Search />
+[4131]<button />
+	Filters
+Purchase Date
+from
+*[6843]<input type=text id=HCNLBOQ name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[6850]<button />
+	*[6853]<span />
+		undefined
+to
+*[6845]<input type=text id=KO3B2VV name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[14202]<button />
+	*[14205]<span />
+		undefined
+Grand Total (Base)
+from
+*[6823]<input type=text id=STQU2CI name=base_grand_total[from] maxlength=255 />
+to
+*[6825]<input type=text id=I6U6V9G name=base_grand_total[to] maxlength=255 />
+Grand Total (Purchased)
+from
+*[6827]<input type=text id=MYA20NE name=grand_total[from] maxlength=255 />
+to
+*[6829]<input type=text id=KH6M014 name=grand_total[to] maxlength=255 />
+Purchase Point
+*[6600]<select id=CDOF5EV name=store_id aria-label=notice-CDOF5EV expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />
+ID
+*[6803]<input type=text id=FJ8ALMK name=increment_id maxlength=255 />
+Bill-to Name
+*[6805]<input type=text id=GQBIO6K name=billing_name maxlength=255 />
+Ship-to Name
+*[6807]<input type=text id=UYXF4D4 name=shipping_name maxlength=255 />
+Status
+*[6621]<select id=HAJTX4R name=status aria-label=notice-HAJTX4R expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Canceled|Closed|Complete|Suspected Fraud) />
+Braintree Transaction Source
+*[6821]<input type=text id=C9LK5WU name=transaction_source maxlength=255 />
+*[4139]<button />
+	Cancel
+*[4141]<button />
+	Apply Filters
+[4173]<button title=Select Items />
+	Actions
+308
+records found
+[5262]<div />
+	*[5264]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />
+[5265]<button />
+	Select
+per page
+[4241]<button title=Previous Page disabled=true />
+*[4246]<input type=number id=1 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 2
+[4248]<button title=Next Page />
+*[3953]<tr />
+	*[4670]<div />
+		[4671]<input type=checkbox checked=false id=51 />
+		[4673]<button />
+			Options
+	[4693]<th />
+		*[4692]<span />
+			ID
+	[4696]<th />
+		Purchase Point
+	[4699]<th />
+		*[4698]<span />
+			Purchase Date
+	[4702]<th />
+		*[4701]<span />
+			Bill-to Name
+	[4705]<th />
+		*[4704]<span />
+			Ship-to Name
+	[4708]<th />
+		*[4707]<span />
+			Grand Total (Base)
+	[4711]<th />
+		*[4710]<span />
+			Grand Total (Purchased)
+	[4714]<th />
+		*[4713]<span />
+			Status
+	[4717]<th />
+		*[4716]<span />
+			Action
+	[4720]<th />
+		Allocated sources
+	[4723]<th />
+		*[4722]<span />
+			Braintree Transaction Source
+*[21902]<tr />
+	[22362]<td />
+		*[24208]<label />
+			[24206]<input type=checkbox checked=false id=idscheck172 value=172 />
+	[22363]<td />
+		000000172
+	[22364]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[22365]<td />
+		Jan 28, 2023 3:12:54 AM
+	[22366]<td />
+		Adam Garcia
+	[22367]<td />
+		Adam Garcia
+	[22368]<td />
+		$64.00
+	[22369]<td />
+		$64.00
+	[22370]<td />
+		Canceled
+	[22371]<td />
+		[28361]<a />
+			View
+	[22372]<td />
+	[22373]<td />
+*[21905]<tr />
+	[22374]<td />
+		*[24211]<label />
+			[24209]<input type=checkbox checked=false id=idscheck57 value=57 />
+	[22375]<td />
+		000000057
+	[22376]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[22377]<td />
+		Apr 21, 2022 9:15:05 AM
+	[22378]<td />
+		Adam Garcia
+	[22379]<td />
+		Adam Garcia
+	[22380]<td />
+		$180.16
+	[22381]<td />
+		$180.16
+	[22382]<td />
+		Complete
+	[22383]<td />
+		[28381]<a />
+			View
+	[22384]<td />
+	[22385]<td />
+*[21908]<tr />
+	[22386]<td />
+		*[24214]<label />
+			[24212]<input type=checkbox checked=false id=idscheck184 value=184 />
+	[22387]<td />
+		000000184
+	[22388]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[22389]<td />
+		Jun 11, 2022 8:29:39 PM
+	[22390]<td />
+		Adam Garcia
+	[22391]<td />
+		Adam Garcia
+	[22392]<td />
+		$163.00
+	[22393]<td />
+		$163.00
+	[22394]<td />
+		Complete
+	[22395]<td />
+		[28401]<a />
+			View
+	[22396]<td />
+	[22397]<td />
+*[21911]<tr />
+	[22398]<td />
+		*[24217]<label />
+			[24215]<input type=checkbox checked=false id=idscheck56 value=56 />
+	[22399]<td />
+		000000056
+	[22400]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[22401]<td />
+		Aug 25, 2022 1:19:21 AM
+	[22402]<td />
+		Adam Garcia
+	[22403]<td />
+		Adam Garcia
+	[22404]<td />
+		$198.60
+	[22405]<td />
+		$198.60
+	[22406]<td />
+		Canceled
+	[22407]<td />
+		[28421]<a />
+			View
+	[22408]<td />
+	[22409]<td />
+*[21914]<tr />
+	[22410]<td />
+		*[24220]<label />
+			[24218]<input type=checkbox checked=false id=idscheck214 value=214 />
+	[22411]<td />
+		000000214
+	[22412]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[22413]<td />
+		Nov 7, 2022 1:55:03 PM
+	[22414]<td />
+		Adam Garcia
+	[22415]<td />
+		Adam Garcia
+	[22416]<td />
+		$21.00
+	[22417]<td />
+		$21.00
+	[22418]<td />
+		Complete
+	[22419]<td />
+		[28441]<a />
+			View
+	[22420]<td />
+	[22421]<td />
+*[21917]<tr />
+	[22422]<td />
+		*[24223]<label />
+			[24221]<input type=checkbox checked=false id=idscheck82 value=82 />
+	[22423]<td />
+		000000082
+	[22424]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[22425]<td />
+		Jan 17, 2022 11:48:24 AM
+	[22426]<td />
+		Adam Garcia
+	[22427]<td />
+		Adam Garcia
+	[22428]<td />
+		$96.40
+	[22429]<td />
+		$96.40
+	[22430]<td />
+		Complete
+	[22431]<td />
+		[28461]<a />
+			View
+	[22432]<td />
+	[22433]<td />
+*[21920]<tr />
+	[22434]<td />
+		*[24226]<label />
+			[24224]<input type=checkbox checked=false id=idscheck7 value=7 />
+	[22435]<td />
+		000000007
+	[22436]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[22437]<td />
+		Jul 16, 2022 4:17:56 AM
+	[22438]<td />
+		Adam Garcia
+	[22439]<td />
+		Adam Garcia
+	[22440]<td />
+		$108.25
+	[22441]<td />
+		$108.25
+	[22442]<td />
+		Canceled
+	[22443]<td />
+		[28481]<a />
+			View
+	[22444]<td />
+	[22445]<td />
+*[21923]<tr />
+	[22446]<td />
+		*[24229]<label />
+			[24227]<input type=checkbox checked=false id=idscheck256 value=256 />
+	[22447]<td />
+		000000256
+	[22448]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[22449]<td />
+		May 14, 2023 1:22:46 AM
+	[22450]<td />
+		Adam Garcia
+	[22451]<td />
+		Adam Garcia
+	[22452]<td />
+		$89.00
+	[22453]<td />
+		$89.00
+	[22454]<td />
+		Complete
+	[22455]<td />
+		[28501]<a />
+			View
+	[22456]<td />
+	[22457]<td />
+*[21926]<tr />
+	[22458]<td />
+	[22459]<td />
+	[22460]<td />
+		Main Website
+	[22461]<td />
+	[22462]<td />
+	[22463]<td />
+	[22464]<td />
+	[22465]<td />
+	[22466]<td />
+	[22467]<td />
+	[22468]<td />
+	[22469]<td />

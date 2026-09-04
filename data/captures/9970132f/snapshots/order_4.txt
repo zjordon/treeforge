@@ -1,0 +1,318 @@
+*[434711]<a />
+*[434720]<a />
+	Dashboard
+*[434633]<a />
+	Sales
+*[434634]<a />
+	Catalog
+*[434635]<a />
+	Customers
+*[434636]<a />
+	Marketing
+*[434637]<a />
+	Content
+*[434638]<a />
+	Reports
+*[434639]<a />
+	Stores
+*[434640]<a />
+	System
+*[435331]<a />
+	Find Partners & Extensions
+#000000302
+*[435393]<a title=My Account />
+	admin
+*[435431]<a title=Notifications />
+*[435436]<div />
+	*[434610]<form id=form-search />
+		*[435439]<div />
+			*[434611]<input type=text id=search-global autocomplete=off />
+*[434641]<button title=Back id=back />
+	Back
+*[434642]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+*[434643]<button title=Edit id=order_edit />
+	Edit
+*[435487]<button title=Cancel id=order-view-cancel-button />
+	Cancel
+*[434644]<button title=Send Email id=send_notification />
+	Send Email
+*[435500]<button title=Hold id=order-view-hold-button />
+	Hold
+*[434645]<button title=Invoice id=order_invoice />
+	Invoice
+*[434646]<button title=Ship id=order_ship />
+	Ship
+*[434647]<button title=Reorder id=order_reorder />
+	Reorder
+Order & Account Information
+Order # 000000302 (
+The order confirmation email was sent
+*[435640]<tr />
+	Order Date
+	*[435645]<td />
+		Apr 19, 2023, 7:41:29 PM
+*[435649]<tr />
+	Order Status
+	*[435654]<td />
+		Pending
+*[435659]<tr />
+	Purchased From
+	*[435664]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+*[435672]<tr />
+	Placed from IP
+	*[435677]<td />
+		128.2.205.52
+Account Information
+*[435693]<a />
+	Edit Customer
+*[435703]<tr />
+	Customer Name
+	*[435708]<td />
+		*[435710]<a />
+			Jane Doe
+*[435718]<tr />
+	Email
+	*[435723]<td />
+		*[435724]<a />
+			jane.doe@hotmail.com
+*[435728]<tr />
+	Customer Group
+	*[435733]<td />
+		General
+Address Information
+Billing Address
+*[435759]<div />
+	*[435760]<a />
+		Edit
+Jane Doe
+567 Ocean Drive
+Miami,  Florida, 33139
+United States
+T: 4123671901
+Shipping Address
+*[435783]<div />
+	*[435784]<a />
+		Edit
+Jane Doe
+567 Ocean Drive
+Miami,  Florida, 33139
+United States
+T: 4123671901
+Payment & Shipping Method
+Payment Information
+Check / Money order
+The order was placed using USD.
+Shipping & Handling Information
+Flat Rate - Fixed
+*[435848]<span />
+	$25.00
+Items Ordered
+*[435869]<tr />
+	Product
+	Item Status
+	Original Price
+	Price
+	Qty
+	Subtotal
+	Tax Amount
+	Tax Percent
+	Discount Amount
+	Row Total
+*[435915]<tr />
+	*[435917]<td />
+		Troy Yoga Short
+		SKU:
+		MSH09-32-Black
+		Color:
+		Black
+		Size:
+		32
+	*[435947]<td />
+		Ordered
+	*[435950]<td />
+		*[435952]<span />
+			$24.00
+	*[435956]<td />
+		*[435958]<div />
+			*[435960]<span />
+				$24.00
+	*[435965]<td />
+		*[435970]<tr />
+			Ordered
+			*[435975]<td />
+	*[435981]<td />
+		*[435985]<span />
+			$24.00
+	*[435990]<td />
+		*[435992]<span />
+			$0.00
+	*[435996]<td />
+		0%
+	*[435999]<td />
+		*[436001]<span />
+			$0.00
+	*[436005]<td />
+		*[436007]<span />
+			$24.00
+*[436015]<tr />
+	*[436017]<td />
+		Gabrielle Micro Sleeve Top
+		SKU:
+		WS02-L-Green
+		Color:
+		Green
+		Size:
+	*[436047]<td />
+		Ordered
+	*[436050]<td />
+		*[436052]<span />
+			$28.00
+	*[436056]<td />
+		*[436058]<div />
+			*[436060]<span />
+				$28.00
+	*[436065]<td />
+		*[436070]<tr />
+			Ordered
+			*[436075]<td />
+	*[436081]<td />
+		*[436085]<span />
+			$28.00
+	*[436090]<td />
+		*[436092]<span />
+			$0.00
+	*[436096]<td />
+		0%
+	*[436099]<td />
+		*[436101]<span />
+			$0.00
+	*[436105]<td />
+		*[436107]<span />
+			$28.00
+*[436115]<tr />
+	*[436117]<td />
+		Sprite Yoga Strap 6 foot
+		SKU:
+		24-WG085
+	*[436132]<td />
+		Ordered
+	*[436135]<td />
+		*[436137]<span />
+			$14.00
+	*[436141]<td />
+		*[436143]<div />
+			*[436145]<span />
+				$14.00
+	*[436150]<td />
+		*[436155]<tr />
+			Ordered
+			*[436160]<td />
+	*[436166]<td />
+		*[436170]<span />
+			$14.00
+	*[436175]<td />
+		*[436177]<span />
+			$0.00
+	*[436181]<td />
+		0%
+	*[436184]<td />
+		*[436186]<span />
+			$0.00
+	*[436190]<td />
+		*[436192]<span />
+			$14.00
+*[436200]<tr />
+	*[436202]<td />
+		Cora Parachute Pant
+		SKU:
+		WP04-29-Blue
+		Color:
+		Blue
+		Size:
+		29
+	*[436232]<td />
+		Ordered
+	*[436235]<td />
+		*[436237]<span />
+			$75.00
+	*[436241]<td />
+		*[436243]<div />
+			*[436245]<span />
+				$60.00
+	*[436250]<td />
+		*[436255]<tr />
+			Ordered
+			*[436260]<td />
+	*[436266]<td />
+		*[436270]<span />
+			$60.00
+	*[436275]<td />
+		*[436277]<span />
+			$0.00
+	*[436281]<td />
+		0%
+	*[436284]<td />
+		*[436286]<span />
+			$0.00
+	*[436290]<td />
+		*[436292]<span />
+			$60.00
+*[436300]<tr />
+	*[436302]<td />
+		Apollo Running Short
+		SKU:
+		MSH02-33-Black
+		Color:
+		Black
+	*[436332]<td />
+		Ordered
+	*[436335]<td />
+		*[436337]<span />
+			$32.50
+	*[436341]<td />
+		*[436343]<div />
+			*[436345]<span />
+				$32.50
+	*[436350]<td />
+		*[436355]<tr />
+			Ordered
+			*[436360]<td />
+	*[436366]<td />
+		*[436370]<span />
+			$32.50
+	*[436375]<td />
+		*[436377]<span />
+			$0.00
+	*[436381]<td />
+		0%
+	*[436384]<td />
+		*[436386]<span />
+			$0.00
+	*[436390]<td />
+		*[436392]<span />
+			$32.50
+Order View
+*[435566]<li id=sales_order_view_tabs_order_info role=tab selected=true expanded=true />
+	*[435568]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info role=presentation />
+		Information
+		*[435573]<span />
+*[436643]<li id=sales_order_view_tabs_order_invoices role=tab selected=false expanded=false />
+	*[436645]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices role=presentation />
+		Invoices
+		*[436650]<span />
+*[436720]<li id=sales_order_view_tabs_order_creditmemos role=tab selected=false expanded=false />
+	*[436722]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos role=presentation />
+		Credit Memos
+		*[436727]<span />
+*[436797]<li id=sales_order_view_tabs_order_shipments role=tab selected=false expanded=false />
+	*[436799]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments role=presentation />
+		Shipments
+		*[436804]<span />
+*[436874]<li id=sales_order_view_tabs_order_history role=tab selected=false expanded=false />
+	*[436876]<a title=Order History id=sales_order_view_tabs_order_history name=order_history role=presentation />
+		Comments History
+		*[436881]<span />

@@ -7,6 +7,13 @@
     ├── selectors.md
     └── quirks.md
 
+P4 起同一 host 下还有任务卡子目录（``tasks/<slug>/``，P4 双产物跳 B 的落点）——
+TreeWalker 注入不受影响（按固定三件文件名读，不递归子目录）：
+
+    <output_dir>/domain-skills/<host>/
+    ├── _sop.md / selectors.md / quirks.md   # 站点级累积卡（host 卡）
+    └── tasks/<slug>/                        # 任务级独立卡（含 _task.json 元数据）
+
 【消费侧约束】TreeWalker 的 browser-harness 加载逻辑（详见知识库
 skill-auto-evolution-migration.md + browser-agent/dev-plan.md）：
 
@@ -19,7 +26,9 @@ skill-auto-evolution-migration.md + browser-agent/dev-plan.md）：
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
+from typing import Any
 
 from harness.install import atomic_write_text
 from harness.models import SkillCard
@@ -130,3 +139,80 @@ def _merge_field(cards: list[SkillCard], field: str, host: str) -> str:
         body = "\n".join(body_lines).strip()
         out.append(f"\n## {capacity}\n\n{body}\n")
     return "".join(out)
+
+
+# ---------------------------------------------------------------------------
+# 任务卡（P4 双产物跳 B）：domain-skills/<host>/tasks/<slug>/
+# 模块函数（非 adapter 方法）——任务卡不走 INSTALL 合并路径，管线直接调。
+# ---------------------------------------------------------------------------
+
+
+def task_card_dir(output_dir: Path | str, host: str, slug: str) -> Path:
+    """任务卡目录：``output_dir/domain-skills/<host>/tasks/<slug>``。"""
+    return Path(output_dir) / "domain-skills" / host / "tasks" / slug
+
+
+def write_task_card(
+    output_dir: Path | str,
+    host: str,
+    slug: str,
+    card: SkillCard,
+    task_meta: dict[str, Any],
+    source_traces: list[str] | None = None,
+) -> Path:
+    """写任务卡：三件套 + ``_task.json`` 元数据。
+
+    同 slug 已存在 → 覆盖（同任务重蒸的预期行为）；``source_traces`` 与旧卡
+    ``_task.json`` **并集追加**（历次录制来源可追溯）。
+    """
+    d = task_card_dir(output_dir, host, slug)
+    d.mkdir(parents=True, exist_ok=True)
+    for fname, field in _FILES:
+        content = getattr(card, field, "") or ""
+        label = fname.replace("_", "").replace(".md", "").title() or "SOP"
+        title = f"{host} · {slug} — {label}"
+        atomic_write_text(d / fname, _ensure_header(content, title))
+
+    # 覆盖时与旧 _task.json 并集 source_traces
+    old: dict[str, Any] = {}
+    meta_path = d / "_task.json"
+    try:
+        loaded = json.loads(meta_path.read_text(encoding="utf-8"))
+        old = loaded if isinstance(loaded, dict) else {}
+    except (OSError, json.JSONDecodeError):
+        old = {}
+    sources = list(dict.fromkeys([*(old.get("source_traces") or []), *(source_traces or [])]))
+
+    meta = {
+        "slug": slug,
+        "task_description": task_meta.get("task_description", ""),
+        "task_keywords": task_meta.get("task_keywords", []),
+        "source_traces": sources,
+        "distilled_at": task_meta.get("distilled_at", ""),
+    }
+    atomic_write_text(meta_path, json.dumps(meta, ensure_ascii=False, indent=2))
+    return d
+
+
+def list_task_cards(output_dir: Path | str, host: str) -> list[dict[str, Any]]:
+    """列 host 的现有任务卡（slug + task_description），供 slug 稳定化参照。
+
+    损坏的 ``_task.json`` 跳过（容错）。返回按 slug 字母序。
+    """
+    tasks_root = Path(output_dir) / "domain-skills" / host / "tasks"
+    if not tasks_root.is_dir():
+        return []
+    out: list[dict[str, Any]] = []
+    for meta_path in sorted(tasks_root.glob("*/_task.json")):
+        try:
+            data = json.loads(meta_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if isinstance(data, dict) and data.get("slug"):
+            out.append(
+                {
+                    "slug": str(data["slug"]),
+                    "task_description": str(data.get("task_description") or ""),
+                }
+            )
+    return out

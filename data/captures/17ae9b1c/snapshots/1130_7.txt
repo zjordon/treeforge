@@ -1,0 +1,56 @@
+*[1659694]<li id=menu-magento-backend-dashboard role=menu-item />
+	*[1659695]<a />
+		Dashboard
+*[1659700]<li id=menu-magento-sales-sales role=menu-item />
+	*[1659701]<a />
+		Sales
+*[1659745]<li id=menu-magento-catalog-catalog role=menu-item />
+	*[1659746]<a />
+		Catalog
+*[1659770]<li id=menu-magento-customer-customer role=menu-item />
+	*[1659771]<a />
+		Customers
+*[1659797]<li id=menu-magento-backend-marketing role=menu-item />
+	*[1659798]<a />
+		Marketing
+*[1659884]<li id=menu-magento-backend-content role=menu-item />
+	*[1659885]<a />
+		Content
+*[1659945]<li id=menu-magento-reports-report role=menu-item />
+	*[1659946]<a />
+		Reports
+*[1660108]<li id=menu-magento-backend-stores role=menu-item />
+	*[1660109]<a />
+		Stores
+*[1660206]<li id=menu-magento-backend-system role=menu-item />
+	*[1660207]<a />
+		System
+*[1660313]<li id=menu-magento-marketplace-partners role=menu-item />
+	*[1660314]<a />
+		Find Partners & Extensions
+Phoebe Zipper Sweatshirt
+*[1660382]<a title=My Account />
+	admin
+*[1660434]<input type=text id=search-global autocomplete=off />
+Scope:
+*[1660478]<button id=store-change-button />
+	All Store Views
+*[1660511]<a title=What is this? />
+	What is this?
+*[1660522]<div title=Save />
+	*[1660526]<button title=Save id=save-button />
+		Save
+	*[1660532]<button title=Save aria-label=Save options />
+*[1660566]<button title=Back id=back />
+	Back
+*[1660575]<button title=Add Attribute id=addAttribute />
+	Add Attribute
+You saved the product.
+[1660596]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+*[1660733]<a id=footer_account_activity />
+	Account Activity
+Report an Issue

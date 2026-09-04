@@ -1,0 +1,369 @@
+[8272]<a />
+[8280]<li id=menu-magento-backend-dashboard role=menu-item />
+	[8281]<a />
+		Dashboard
+[8286]<li id=menu-magento-sales-sales role=menu-item />
+	[8180]<a />
+		Sales
+[8329]<li id=menu-magento-catalog-catalog role=menu-item />
+	[8181]<a />
+		Catalog
+[8352]<li id=menu-magento-customer-customer role=menu-item />
+	[8182]<a />
+		Customers
+[8377]<li id=menu-magento-backend-marketing role=menu-item />
+	[8183]<a />
+		Marketing
+[8462]<li id=menu-magento-backend-content role=menu-item />
+	[8184]<a />
+		Content
+[8521]<li id=menu-magento-reports-report role=menu-item />
+	[8185]<a />
+		Reports
+[8682]<li id=menu-magento-backend-stores role=menu-item />
+	[8186]<a />
+		Stores
+[8778]<li id=menu-magento-backend-system role=menu-item />
+	[8187]<a />
+		System
+[8883]<li id=menu-magento-marketplace-partners role=menu-item />
+	[8884]<a />
+		Find Partners & Extensions
+Orders
+[8946]<a title=My Account />
+	admin
+[8984]<a title=Notifications />
+[8989]<div />
+	[8165]<form id=form-search />
+		[8992]<div />
+			[8166]<input type=text id=search-global autocomplete=off />
+[8188]<button title=Create New Order id=add />
+	Create New Order
+[9410]<button />
+	Default View
+[9676]<button />
+	Columns
+[9786]<button />
+	Export
+[9544]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[9545]<button aria-label=Search />
+[9553]<button />
+	Filters
+Purchase Date
+from
+[12229]<input type=text id=ERSEFDF name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+[12272]<button />
+	[12275]<span />
+		undefined
+to
+[12231]<input type=text id=OMFCJHG name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+[19565]<button />
+	[19568]<span />
+		undefined
+Grand Total (Base)
+from
+[12209]<input type=text id=U2WPPW4 name=base_grand_total[from] maxlength=255 />
+to
+[12211]<input type=text id=BXTV6LW name=base_grand_total[to] maxlength=255 />
+Grand Total (Purchased)
+from
+[12213]<input type=text id=R979JKU name=grand_total[from] maxlength=255 />
+to
+[12215]<input type=text id=O0MV1WL name=grand_total[to] maxlength=255 />
+Purchase Point
+*[12023]<select id=L6EYCRR name=store_id aria-label=notice-L6EYCRR expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />
+ID
+[12189]<input type=text id=TRA8NUR name=increment_id maxlength=255 autocomplete=list />
+Bill-to Name
+[12191]<input type=text id=UVQR3MB name=billing_name maxlength=255 />
+Ship-to Name
+[12193]<input type=text id=XYFSXB0 name=shipping_name maxlength=255 />
+Status
+*[12044]<select id=U67T68V name=status aria-label=notice-U67T68V expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=12,options=Canceled|Closed|Complete|Suspected Fraud) />
+Braintree Transaction Source
+[12207]<input type=text id=R0OXW44 name=transaction_source maxlength=255 />
+[9561]<button />
+	Cancel
+[9563]<button />
+	Apply Filters
+[9595]<button title=Select Items />
+	Actions
+308
+records found
+[11418]<div />
+	[11420]<input type=text id=sales_order_grid.sales_order_grid.listing_top.listing_paging_sizes />
+[11421]<button />
+	Select
+per page
+[9663]<button title=Previous Page disabled=true />
+*[9668]<input type=number id=1 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 2
+[9670]<button title=Next Page />
+[9375]<tr />
+	[10062]<div />
+		[10063]<input type=checkbox checked=false id=51 />
+		[10065]<button />
+			Options
+	[10085]<th />
+		[10084]<span />
+			ID
+	[10088]<th />
+		Purchase Point
+	[10091]<th />
+		[10090]<span />
+			Purchase Date
+	[10094]<th />
+		[10093]<span />
+			Bill-to Name
+	[10097]<th />
+		[10096]<span />
+			Ship-to Name
+	[10100]<th />
+		[10099]<span />
+			Grand Total (Base)
+	[10103]<th />
+		[10102]<span />
+			Grand Total (Purchased)
+	[10106]<th />
+		[10105]<span />
+			Status
+	[10109]<th />
+		[10108]<span />
+			Action
+	[10112]<th />
+		Allocated sources
+	[10115]<th />
+		[10114]<span />
+			Braintree Transaction Source
+[27192]<tr />
+	[27196]<td />
+		[27218]<label />
+			[27216]<input type=checkbox checked=false id=idscheck2 value=2 />
+	[27197]<td />
+		000000002
+	[27198]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[27199]<td />
+		Apr 24, 2022 4:36:28 PM
+	[27200]<td />
+		Veronica Costello
+	[27201]<td />
+		Veronica Costello
+	[27202]<td />
+		$39.64
+	[27203]<td />
+		$39.64
+	[27204]<td />
+		Closed
+	[27205]<td />
+		[27267]<a />
+			View
+	[27206]<td />
+		Default Source
+	[27207]<td />
+[29203]<tr />
+	[29801]<td />
+		[29804]<label />
+			[29802]<input type=checkbox checked=false id=idscheck1 value=1 />
+	[29805]<td />
+		000000001
+	[29807]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[29812]<td />
+		Mar 29, 2022 9:36:37 PM
+	[29814]<td />
+		Veronica Costello
+	[29816]<td />
+		Veronica Costello
+	[29818]<td />
+		$36.39
+	[29820]<td />
+		$36.39
+	[29822]<td />
+		Canceled
+	[29824]<td />
+		[29831]<a />
+			View
+	[29836]<td />
+		Default Source
+	[29849]<td />
+[29206]<tr />
+	[29851]<td />
+		[29854]<label />
+			[29852]<input type=checkbox checked=false id=idscheck269 value=269 />
+	[29855]<td />
+		000000269
+	[29857]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[29862]<td />
+		Aug 23, 2022 11:13:41 PM
+	[29864]<td />
+		Sophie Taylor
+	[29866]<td />
+		Sophie Taylor
+	[29868]<td />
+		$76.40
+	[29870]<td />
+		$76.40
+	[29872]<td />
+		Complete
+	[29874]<td />
+		[29881]<a />
+			View
+	[29886]<td />
+	[29897]<td />
+[29209]<tr />
+	[29899]<td />
+		[29902]<label />
+			[29900]<input type=checkbox checked=false id=idscheck212 value=212 />
+	[29903]<td />
+		000000212
+	[29905]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[29910]<td />
+		Dec 5, 2022 3:55:05 PM
+	[29912]<td />
+		Sophie Taylor
+	[29914]<td />
+		Sophie Taylor
+	[29916]<td />
+		$68.00
+	[29918]<td />
+		$68.00
+	[29920]<td />
+		Canceled
+	[29922]<td />
+		[29929]<a />
+			View
+	[29934]<td />
+	[29945]<td />
+[29212]<tr />
+	[29947]<td />
+		[29950]<label />
+			[29948]<input type=checkbox checked=false id=idscheck18 value=18 />
+	[29951]<td />
+		000000018
+	[29953]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[29958]<td />
+		Apr 6, 2022 10:02:58 AM
+	[29960]<td />
+		Sophie Taylor
+	[29962]<td />
+		Sophie Taylor
+	[29964]<td />
+		$105.00
+	[29966]<td />
+		$105.00
+	[29968]<td />
+		Canceled
+	[29970]<td />
+		[29977]<a />
+			View
+	[29982]<td />
+	[29993]<td />
+[29215]<tr />
+	[29995]<td />
+		[29998]<label />
+			[29996]<input type=checkbox checked=false id=idscheck124 value=124 />
+	[29999]<td />
+		000000124
+	[30001]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[30006]<td />
+		Jan 10, 2023 11:55:01 AM
+	[30008]<td />
+		Sophie Taylor
+	[30010]<td />
+		Sophie Taylor
+	[30012]<td />
+		$193.64
+	[30014]<td />
+		$193.64
+	[30016]<td />
+		Canceled
+	[30018]<td />
+		[30025]<a />
+			View
+	[30030]<td />
+	[30041]<td />
+[29218]<tr />
+	[30043]<td />
+		[30046]<label />
+			[30044]<input type=checkbox checked=false id=idscheck211 value=211 />
+	[30047]<td />
+		000000211
+	[30049]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[30054]<td />
+		Apr 7, 2022 8:51:14 PM
+	[30056]<td />
+		Sophie Taylor
+	[30058]<td />
+		Sophie Taylor
+	[30060]<td />
+		$107.40
+	[30062]<td />
+		$107.40
+	[30064]<td />
+		Canceled
+	[30066]<td />
+		[30073]<a />
+			View
+	[30078]<td />
+	[30089]<td />
+[29221]<tr />
+	[30091]<td />
+		[30094]<label />
+			[30092]<input type=checkbox checked=false id=idscheck15 value=15 />
+	[30095]<td />
+		000000015
+	[30097]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	[30102]<td />
+		Jan 17, 2022 4:04:24 AM
+	[30104]<td />
+		Sarah Miller
+	[30106]<td />
+		Sarah Miller
+	[30108]<td />
+		$61.00
+	[30110]<td />
+		$61.00
+	[30112]<td />
+		Canceled
+	[30114]<td />
+		[30121]<a />
+			View
+	[30126]<td />
+	[30137]<td />
+[29224]<tr />
+	[30139]<td />
+	[30143]<td />
+	[30145]<td />
+		Main Website
+	[30150]<td />
+	[30152]<td />
+	[30154]<td />
+	[30156]<td />
+	[30158]<td />
+	[30160]<td />
+	[30162]<td />
+	[30174]<td />
+	[30185]<td />

@@ -1,0 +1,36 @@
+Dashboard
+*[1291660]<a />
+	Sales
+*[1291661]<a />
+	Catalog
+*[1291662]<a />
+	Customers
+*[1291663]<a />
+	Marketing
+*[1291664]<a />
+	Content
+*[1291665]<a />
+	Reports
+*[1291666]<a />
+	Stores
+*[1291667]<a />
+	System
+Find Partners & Extensions
+Hollister Backyard Sweatshirt
+admin
+Scope:
+All Store Views
+*[1291671]<a title=What is this? />
+	What is this?
+Save
+*[1291672]<button title=Back id=back />
+	Back
+Add Attribute
+You saved the product.
+*[1292685]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

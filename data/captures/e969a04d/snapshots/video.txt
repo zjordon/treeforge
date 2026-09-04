@@ -1,0 +1,148 @@
+[319]<div id=root />
+	[2]<button />
+		高清发布
+	[53]<li id=douyin-creator-master-menu-nav-home role=menuitem />
+		[1048]<i />
+			[1049]<span role=img />
+				[54]<svg /> <!-- SVG content collapsed -->
+		[1051]<span />
+			首页
+		[1052]<i />
+	[321]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />
+		[1053]<i />
+			[1054]<span role=img />
+				[1055]<svg /> <!-- SVG content collapsed -->
+		[1057]<span />
+			活动管理
+		[1059]<i />
+	[56]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />
+		[322]<div role=menuitem expanded=false />
+			[1060]<div />
+				[1061]<i />
+					[1062]<span role=img />
+						[57]<svg /> <!-- SVG content collapsed -->
+				[1065]<span />
+					内容管理
+				[1066]<i />
+					[1067]<span role=img aria-label=chevron_down />
+						[59]<svg /> <!-- SVG content collapsed -->
+		[1070]<div />
+	[60]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />
+		[323]<div role=menuitem expanded=false />
+			[1071]<div />
+				[1072]<i />
+					[1073]<span role=img />
+						[61]<svg /> <!-- SVG content collapsed -->
+				[1076]<span />
+					互动管理
+				[1077]<i />
+					[1078]<span role=img aria-label=chevron_down />
+						[63]<svg /> <!-- SVG content collapsed -->
+		[1081]<div />
+	[64]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />
+		[324]<div role=menuitem expanded=false />
+			[1082]<div />
+				[1083]<i />
+					[1084]<span role=img />
+						[65]<svg /> <!-- SVG content collapsed -->
+				[1087]<span />
+					数据中心
+				[1088]<i />
+					[1089]<span role=img aria-label=chevron_down />
+						[67]<svg /> <!-- SVG content collapsed -->
+		[1092]<div />
+	[68]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />
+		[325]<div role=menuitem expanded=false />
+			[1093]<div />
+				[1094]<i />
+					[1095]<span role=img />
+						[69]<svg /> <!-- SVG content collapsed -->
+				[1097]<span />
+					变现中心
+				[1098]<i />
+					[1099]<span role=img aria-label=chevron_down />
+						[71]<svg /> <!-- SVG content collapsed -->
+		[1102]<div />
+	[72]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />
+		[326]<div role=menuitem expanded=false />
+			[1103]<div />
+				[1104]<i />
+					[1105]<span role=img />
+						[73]<svg /> <!-- SVG content collapsed -->
+				[1107]<span />
+					创作中心
+				[1108]<i />
+					[1109]<span role=img aria-label=chevron_down />
+						[75]<svg /> <!-- SVG content collapsed -->
+		[1112]<div />
+	[327]<div />
+		[6]<img />
+	[77]<a />
+		通知
+		[1120]<span />
+	[11]<div />
+		[1122]<div />
+			[1123]<div />
+				[1124]<span role=img />
+					[12]<svg /> <!-- SVG content collapsed -->
+			[13]<div />
+				网址
+	[329]<div />
+		[1127]<div />
+			[1128]<span role=img />
+				[14]<svg /> <!-- SVG content collapsed -->
+		[15]<div />
+			抖音
+	[16]<div id=header-avatar />
+		[3]<div />
+	[5]<div id=micro />
+		[1195]<div id=root />
+			*[5529]<div />
+				发布视频
+			*[5530]<div />
+				发布图文
+			*[5531]<div />
+				发布全景视频
+			*[5532]<div />
+				发布文章
+			*[5527]<a />
+				了解上传规则详情
+			<svg /> <!-- SVG content collapsed -->
+			<svg /> <!-- SVG content collapsed -->
+			你还有上次未发布的视频，是否继续编辑？
+			*[5626]<span />
+				继续编辑
+			*[5627]<span />
+				放弃
+			<svg /> <!-- SVG content collapsed -->
+			视频大小和格式
+			视频时长60分钟以内，文件大小16G以内，推荐上传mp4、webm格式视频
+			<svg /> <!-- SVG content collapsed -->
+			视频画质
+			分辨率最高支持4K，帧率最大支持60帧，智能识别输出HDR视频
+			*[5563]<svg /> <!-- SVG content collapsed -->
+			<svg /> <!-- SVG content collapsed -->
+			视频画幅
+			建议上传宽高比为16:9、9:16、3:4、4:3、9:19.5（5.8寸）的视频
+			*[5607]<div role=presentation />
+				*[5604]<div />
+					*[5597]<div />
+						*[5589]<img />
+					*[5598]<div />
+						点击上传 或直接将视频文件拖入此区域
+					*[5599]<div />
+						为了更好的观看体验和平台安全，平台将对上传的视频预审。超过40秒的视频建议上传横版视频
+					*[5600]<div />
+						*[5595]<button />
+							上传
+							视频
+						*[5596]<img />
+				*[5605]<input type=file accept=video/x-flv,video/mp4,video/x-m4v,video/*,.flv,.avi,.wmv,.webm,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,. compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+	[1509]<div />
+		[1507]<span role=img />
+			[1505]<svg /> <!-- SVG content collapsed -->
+|IFRAME|<iframe id=summon-web-iframe />
+	[2]<div id=root />
+[2007]<div id=portal-container />
+[3260]<div />
+[3376]<div id=toast-wrapper-178554971753 />

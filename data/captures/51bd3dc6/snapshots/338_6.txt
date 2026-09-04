@@ -1,0 +1,89 @@
+[1380760]<a />
+[1380768]<li id=menu-magento-backend-dashboard role=menu-item />
+	[1380769]<a />
+		Dashboard
+[1380774]<li id=menu-magento-sales-sales role=menu-item />
+	[1380654]<a />
+		Sales
+[1380817]<li id=menu-magento-catalog-catalog role=menu-item />
+	[1380655]<a />
+		Catalog
+[1380840]<li id=menu-magento-customer-customer role=menu-item />
+	[1380656]<a />
+		Customers
+[1380865]<li id=menu-magento-backend-marketing role=menu-item />
+	[1380657]<a />
+		Marketing
+[1380950]<li id=menu-magento-backend-content role=menu-item />
+	[1380658]<a />
+		Content
+[1381009]<li id=menu-magento-reports-report role=menu-item />
+	[1380659]<a />
+		Reports
+[1381170]<li id=menu-magento-backend-stores role=menu-item />
+	[1380660]<a />
+		Stores
+[1381266]<li id=menu-magento-backend-system role=menu-item />
+	[1380661]<a />
+		System
+[1381371]<li id=menu-magento-marketplace-partners role=menu-item />
+	[1381372]<a />
+		Find Partners & Extensions
+Edit Review
+[1381434]<a title=My Account />
+	admin
+[1381472]<a title=Notifications />
+[1381477]<div />
+	[1380631]<form id=form-search />
+		[1381480]<div />
+			[1380632]<input type=text id=search-global autocomplete=off />
+[1380662]<button title=Back id=back />
+	Back
+[1380663]<button title=Reset id=reset />
+	Reset
+[1380664]<button title=Delete Review id=delete />
+	Delete Review
+[1381527]<button title=Save Review id=save_button />
+	Save Review
+[1380665]<button title=Previous id=previous />
+	Previous
+[1381540]<button title=Save and Previous id=save_and_previous />
+	Save and Previous
+[1381546]<button title=Save and Next id=save_and_next />
+	Save and Next
+[1380666]<button title=Next id=next />
+	Next
+[1380642]<form id=edit_form />
+	Review Details
+	Product
+	[1380667]<a />
+		Antonia Racer Tank
+	Author
+	[1381607]<div id=customer />
+		Guest
+	Summary Rating
+	Detailed Rating
+	Rating
+	[1381655]<label />
+	[1381659]<label />
+	[1381663]<label />
+	[1381667]<label />
+	[1381671]<label />
+	Status
+	*[1380638]<select id=status_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	Nickname
+	[1380639]<input type=text id=nickname value=Merrie required=true />
+	Summary of Review
+	[1380640]<input type=text id=title name=title value=Not for high impact required=true />
+	Review
+	[1380641]<textarea id=detail required=true />
+[1381765]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[1381775]<a id=footer_privacy />
+	Privacy Policy
+[1381778]<a id=footer_account_activity />
+	Account Activity
+[1381781]<a id=footer_bug_tracking />
+	Report an Issue

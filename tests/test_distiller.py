@@ -170,6 +170,30 @@ def test_distill_prompt_requires_element_description_format():
     # 关键判据措辞：agent 能从 DOM 看到的不写
     assert "CANNOT tell from reading the DOM" in prompt, "prompt 应明确 quirks 判定核心标准"
 
+    # P4 S3（2026-08-30 形态修订，对齐 Browser-BC）：站点级 = 有界摘要——
+    # 功能地图 + 站点通用操作知识；不按 capacity 逐任务列序列（那是任务卡的事）
+    assert "站点功能地图（Site Function Map）" in prompt, "P4：sop_md 应必写站点功能地图开头段"
+    assert "站点通用操作知识" in prompt, "P4：sop_md 应为站点通用操作知识（非逐任务序列）"
+    assert "MUST start with the site function map" in prompt, "P4：地图应是必写开头段"
+    assert "BOUNDED site-level digest" in prompt, "P4：站点级应是有界摘要"
+    assert "compress wording — never drop topics wholesale" in prompt, (
+        "P4：超限时压缩措辞而非丢主题（反丢弃约束）"
+    )
+    # 逐任务序列明确排除（归任务卡）+ capacities 降级为信息性
+    assert "Do NOT write per-task step-by-step sequences" in prompt
+    assert "NOT step-by-step task playbooks" in prompt
+    assert "informational" in prompt
+    # 旧的按 capacity 分组指令应已移除（它导致旧任务被挤出/丢弃）
+    assert "GROUPED" not in prompt, "P4 修订：不应再按 capacity 分组逐任务列序列"
+    assert "典型操作序列" not in prompt, "P4 修订：「典型操作序列」逐任务节已废"
+
+    # P4 S4：任务级模板与站点级共用 spec 块（拼装而非复制）
+    task_prompt = distiller._TASK_PROMPT_TEMPLATE
+    assert "ELEMENT DESCRIPTION TABLE" in task_prompt, "任务模板应共用 selectors spec 块"
+    assert "WRITE these" in task_prompt, "任务模板应共用 quirks spec 块"
+    assert "Required opening section" not in task_prompt, "任务模板不应要求站点地图段"
+    assert "task_slug" in task_prompt, "任务模板应返回 task_slug/task_keywords"
+
 
 # ---------------------------------------------------------------------------
 # skill 精简重构：host 级蒸馏测试

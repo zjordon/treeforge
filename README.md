@@ -82,16 +82,29 @@ uv run treeforge distill examples/bilibili-upload.trace.json --output ./data/ski
 # 或：uv run python -m treeforge distill examples/bilibili-upload.trace.json --output ./data/skills
 
 ls ./data/skills/domain-skills/bilibili.com/
-# → _sop.md / selectors.md / quirks.md（三件套）
+# → _sop.md / selectors.md / quirks.md（三件套，站点级累积卡）
+# → tasks/<slug>/（任务级独立卡 + _task.json，P4 双产物）
 ```
 
 模板模式（不调 LLM）：`uv run treeforge distill examples/bilibili-upload.trace.json --output ./data/skills --no-llm`
+
+同 host 多任务**累积蒸馏**（站点级知识跨任务合并，registry 记版本增量更新）：
+
+```bash
+uv run treeforge distill data/captures/<任务1>/trace.json data/captures/<任务2>/trace.json --output ./data/skills
+# --task "上传并发布视频"：任务描述（可选）——存进任务级 skill 供 TreeWalker 侧语义检索，
+#                              同时喂进蒸馏 prompt 反哺意图；缺省用 trace 的 task_instruction
+# --fresh：忽略旧卡从头蒸馏（默认增量）
+```
+
+同一任务不同时间段重录再蒸 → 任务卡**复用同 slug 覆盖**（prompt 注入现有任务卡清单，
+LLM 判定语义相同即复用），`_task.json` 的 `source_traces` 累积历次录制来源。
 
 ### 三种子命令
 
 | 命令 | 用途 |
 |---|---|
-| `treeforge distill <trace.json>` | 蒸馏一份 trace → skill 文件 |
+| `treeforge distill <trace.json>...` | 蒸馏 trace → skill 文件（可多 trace 同 host 累积；产站点级 + 任务级双产物） |
 | `treeforge capture` | 起 aiohttp 采集后端 + 连 Chrome CDP，扩展发事件，录完导出 trace（一次性命令） |
 | `treeforge serve` | 起 FastAPI **常驻服务**：采集（4 端点，扩展零改动）+ 蒸馏 API + 配置/状态 API + 控制面板 SPA |
 | `treeforge info` | 打印当前生效配置（脱敏 key） |
@@ -105,8 +118,8 @@ uv run treeforge serve --port 8765
 ```
 
 关键端点：
-- 采集（扩展用）：`POST /start` `/ingest` `/stop`，`GET /health`
-- 蒸馏：`POST /api/distill`（返 job_id）→ 轮询 `GET /api/distill/{id}`
+- 采集（扩展用）：`POST /start` `/ingest` `/signal` `/stop`，`GET /health`
+- 蒸馏：`POST /api/distill`（`trace_path` 单份 或 `host` 累积模式二选一，可带 `task_description`；返 job_id）→ 轮询 `GET /api/distill/{id}`
 - 配置：`GET/POST /api/config`；状态/产物：`GET /api/status` `/api/captures` `/api/skills`
 
 ### 采集真实操作（配合扩展）

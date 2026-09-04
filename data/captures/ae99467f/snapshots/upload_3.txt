@@ -1,0 +1,160 @@
+[10492]<div id=root />
+	[10493]<button />
+		高清发布
+	[10495]<li id=douyin-creator-master-menu-nav-home role=menuitem />
+		[11294]<i />
+			[11295]<span role=img />
+				[11296]<svg /> <!-- SVG content collapsed -->
+		[11298]<span />
+			首页
+		[11300]<i />
+	[10496]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />
+		[11301]<i />
+			[11302]<span role=img />
+				[11303]<svg /> <!-- SVG content collapsed -->
+		[11305]<span />
+			活动管理
+		[11307]<i />
+	[10478]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />
+		[10497]<div role=menuitem expanded=false />
+			[11308]<div />
+				[11309]<i />
+					[11310]<span role=img />
+						[11311]<svg /> <!-- SVG content collapsed -->
+				[11314]<span />
+					内容管理
+				[11316]<i />
+					[11317]<span role=img aria-label=chevron_down />
+						[11318]<svg /> <!-- SVG content collapsed -->
+		[11321]<div />
+	[10479]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />
+		[10498]<div role=menuitem expanded=false />
+			[11322]<div />
+				[11323]<i />
+					[11324]<span role=img />
+						[11325]<svg /> <!-- SVG content collapsed -->
+				[11328]<span />
+					互动管理
+				[11330]<i />
+					[11331]<span role=img aria-label=chevron_down />
+						[11332]<svg /> <!-- SVG content collapsed -->
+		[11335]<div />
+	[10480]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />
+		[10499]<div role=menuitem expanded=false />
+			[11336]<div />
+				[11337]<i />
+					[11338]<span role=img />
+						[11339]<svg /> <!-- SVG content collapsed -->
+				[11342]<span />
+					数据中心
+				[11344]<i />
+					[11345]<span role=img aria-label=chevron_down />
+						[11346]<svg /> <!-- SVG content collapsed -->
+		[11349]<div />
+	[10481]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />
+		[10500]<div role=menuitem expanded=false />
+			[11350]<div />
+				[11351]<i />
+					[11352]<span role=img />
+						[11353]<svg /> <!-- SVG content collapsed -->
+				[11355]<span />
+					变现中心
+				[11357]<i />
+					[11358]<span role=img aria-label=chevron_down />
+						[11359]<svg /> <!-- SVG content collapsed -->
+		[11362]<div />
+	[10482]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />
+		[10501]<div role=menuitem expanded=false />
+			[11363]<div />
+				[11364]<i />
+					[11365]<span role=img />
+						[11366]<svg /> <!-- SVG content collapsed -->
+				[11368]<span />
+					创作中心
+				[11370]<i />
+					[11371]<span role=img aria-label=chevron_down />
+						[11372]<svg /> <!-- SVG content collapsed -->
+		[11375]<div />
+	[10502]<div />
+		[10504]<img />
+	[10505]<a />
+		通知
+		[11387]<span />
+	[10472]<div />
+		[11388]<div />
+			[11389]<div />
+				[11390]<span role=img />
+					[10473]<svg /> <!-- SVG content collapsed -->
+			[11393]<div />
+				网址
+	[10474]<div />
+		[11395]<div />
+			[11396]<span role=img />
+				[10475]<svg /> <!-- SVG content collapsed -->
+		[11398]<div />
+			抖音
+	[11401]<div id=header-avatar />
+		[11402]<div />
+	[10469]<div id=micro />
+		[10507]<div id=root />
+			[15855]<div />
+				发布视频
+			[15856]<div />
+				发布图文
+			[15857]<div />
+				发布全景视频
+			[15858]<div />
+				发布文章
+			[15853]<a />
+				了解上传规则详情
+			<svg /> <!-- SVG content collapsed -->
+			<svg /> <!-- SVG content collapsed -->
+			你还有上次未发布的视频，是否继续编辑？
+			[15952]<span />
+				继续编辑
+			[15953]<span />
+				放弃
+			<svg /> <!-- SVG content collapsed -->
+			视频大小和格式
+			视频时长60分钟以内，文件大小16G以内，推荐上传mp4、webm格式视频
+			<svg /> <!-- SVG content collapsed -->
+			视频画质
+			分辨率最高支持4K，帧率最大支持60帧，智能识别输出HDR视频
+			[15889]<svg /> <!-- SVG content collapsed -->
+			<svg /> <!-- SVG content collapsed -->
+			视频画幅
+			建议上传宽高比为16:9、9:16、3:4、4:3、9:19.5（5.8寸）的视频
+			[15933]<div role=presentation />
+				[15930]<div />
+					[15923]<div />
+						[15915]<img />
+					[15924]<div />
+						点击上传 或直接将视频文件拖入此区域
+					[15925]<div />
+						为了更好的观看体验和平台安全，平台将对上传的视频预审。超过40秒的视频建议上传横版视频
+					[15926]<div />
+						[15921]<button />
+							上传
+							视频
+						[15922]<img />
+				*[15931]<input type=file accept=video/x-flv,video/mp4,video/x-m4v,video/*,.flv,.avi,.wmv,.webm,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,. compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+			*[15944]<div />
+				*[15993]<div />
+					*[15986]<div />
+						*[15985]<div />
+							*[15984]<div />
+								*[15983]<div />
+									*[15982]<div />
+										*[15981]<div />
+											*[15980]<img />
+				*[15996]<div />
+					*[15992]<div />
+						*[15991]<div />
+	[11851]<div />
+		[11852]<span role=img />
+			[11853]<svg /> <!-- SVG content collapsed -->
+|IFRAME|<iframe id=summon-web-iframe />
+	[565]<div id=root />
+[12111]<div id=portal-container />
+[13525]<div id=toast-wrapper-178627646463 />
+[13728]<div />

@@ -1,0 +1,109 @@
+*[11951]<a />
+*[11960]<a />
+	Dashboard
+*[11846]<a />
+	Sales
+*[11847]<a />
+	Catalog
+*[11848]<a />
+	Customers
+*[11849]<a />
+	Marketing
+*[11850]<a />
+	Content
+*[11851]<a />
+	Reports
+*[11852]<a />
+	Stores
+*[11853]<a />
+	System
+*[12562]<a />
+	Find Partners & Extensions
+Bestsellers Report
+*[12624]<a title=My Account />
+	admin
+*[12662]<a title=Notifications />
+*[12667]<div />
+	*[11838]<form id=form-search />
+		*[12670]<div />
+			*[11839]<input type=text id=search-global name=query />
+*[12696]<span />
+	Scope:
+*[12715]<button id=store-change-button />
+	All Websites
+*[11857]<a title=What is this? />
+	*[12748]<span />
+		What is this?
+*[11858]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+*[12776]<a />
+	statistics
+, click
+*[12779]<a />
+	here
+Filter
+Period
+*[11840]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+From
+*[11841]<input title=From type=text id=sales_report_from name=from value=1/1/22 required=true />
+To
+*[11842]<input title=To type=text id=sales_report_to name=to value=12/31/22 required=true />
+Empty Rows
+*[11843]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[11844]<select id=id_a9YKYe1SUr8ftIY6zfaH4d4RKZpZqKOV_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+*[11859]<button title=Export id=id_dWsYvgg0WXZfqpdyWXjNDcwvYPrYxQOI />
+	Export
+records found
+Interval
+Product
+Price
+Order Quantity
+*[12960]<tr />
+	Total
+	20
+*[12978]<tr title=# />
+	*[12980]<td />
+		*[12982]<span />
+			2022
+	*[12986]<td />
+		Quest Lumaflex™ Band
+	*[12989]<td />
+		$19.00
+	*[12992]<td />
+*[12996]<tr />
+	*[12998]<td />
+		Cruise Dual Analog Watch
+	*[13001]<td />
+		$55.00
+	*[13004]<td />
+*[13008]<tr />
+	*[13010]<td />
+		Sprite Stasis Ball 55 cm
+	*[13013]<td />
+		$23.00
+	*[13016]<td />
+*[13020]<tr />
+	*[13022]<td />
+		Sprite Stasis Ball 65 cm
+	*[13025]<td />
+		$27.00
+	*[13028]<td />
+*[13032]<tr />
+	*[13034]<td />
+		Affirm Water Bottle
+	*[13037]<td />
+		$7.00
+	*[13040]<td />
+*[13058]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[13068]<a id=footer_privacy />
+	Privacy Policy
+*[13071]<a id=footer_account_activity />
+	Account Activity
+*[13074]<a id=footer_bug_tracking />
+	Report an Issue

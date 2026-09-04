@@ -1,0 +1,35 @@
+Dashboard
+*[127955]<a />
+	Sales
+*[127956]<a />
+	Catalog
+*[127957]<a />
+	Customers
+*[127958]<a />
+	Marketing
+*[127959]<a />
+	Content
+*[127960]<a />
+	Reports
+*[127961]<a />
+	Stores
+*[127962]<a />
+	System
+Find Partners & Extensions
+spring sale
+admin
+Save
+*[127963]<button title=Back id=back />
+	Back
+*[127964]<button title=Delete id=delete />
+	Delete
+*[127965]<button title=Reset id=reset />
+	Reset
+Save and Continue Edit
+*[128842]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

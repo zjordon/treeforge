@@ -1,0 +1,178 @@
+[450457]<a />
+*[450465]<li id=menu-magento-backend-dashboard role=menu-item />
+	[450466]<a />
+		Dashboard
+*[450471]<li id=menu-magento-sales-sales role=menu-item />
+	[450360]<a />
+		Sales
+*[450514]<li id=menu-magento-catalog-catalog role=menu-item />
+	[450361]<a />
+		Catalog
+*[450537]<li id=menu-magento-customer-customer role=menu-item />
+	[450362]<a />
+		Customers
+*[450562]<li id=menu-magento-backend-marketing role=menu-item />
+	[450363]<a />
+		Marketing
+*[450647]<li id=menu-magento-backend-content role=menu-item />
+	[450364]<a />
+		Content
+*[450705]<li id=menu-magento-reports-report role=menu-item />
+	[450365]<a />
+		Reports
+*[450866]<li id=menu-magento-backend-stores role=menu-item />
+	[450366]<a />
+		Stores
+*[450962]<li id=menu-magento-backend-system role=menu-item />
+	[450367]<a />
+		System
+*[451067]<li id=menu-magento-marketplace-partners role=menu-item />
+	[451068]<a />
+		Find Partners & Extensions
+Products
+[450347]<a title=My Account />
+	admin
+[451167]<a title=Notifications />
+[451172]<div />
+	[450343]<form id=form-search />
+		[451175]<div />
+			[450344]<input type=text id=search-global autocomplete=off />
+*[451201]<div title=Add Product id=add_new_product />
+	[451205]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[451211]<button title=Add Product aria-label=Add product of type />
+*[451700]<button />
+	Default View
+*[451773]<button />
+	Columns
+*[451944]<button />
+	Filters
+Active filters:
+Name:
+Cronus
+*[455704]<button />
+SKU:
+MP12-33-Blue
+*[455718]<button />
+*[452732]<button />
+	Clear all
+*[451971]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+*[451972]<button aria-label=Search />
+*[451979]<button title=Select Items />
+	Actions
+records found
+*[453274]<div />
+	*[453276]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+*[453277]<button />
+	Select
+per page
+*[452035]<button title=Previous Page disabled=true />
+*[452040]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[452042]<button title=Next Page disabled=true />
+*[451620]<tr />
+	*[452409]<div />
+		*[452410]<input type=checkbox checked=false id=77 />
+		*[452412]<button />
+			Options
+	*[452432]<th />
+		*[452431]<span />
+			ID
+	*[452435]<th />
+		Thumbnail
+	*[452438]<th />
+		*[452437]<span />
+			Name
+	*[452441]<th />
+		*[452440]<span />
+			Type
+	*[452444]<th />
+		*[452443]<span />
+			Attribute Set
+	*[452447]<th />
+		*[452446]<span />
+			SKU
+	*[452450]<th />
+		*[452449]<span />
+			Price
+	*[452453]<th />
+		*[452452]<span />
+			Quantity
+	*[452456]<th />
+		Salable Quantity
+	*[452459]<th />
+		*[452458]<span />
+			Visibility
+	*[452462]<th />
+		*[452461]<span />
+			Status
+	*[452465]<th />
+		*[452464]<span />
+			Websites
+	*[452468]<th />
+		*[452467]<span />
+			Last Updated At
+	*[452471]<th />
+		*[452470]<span />
+			Action
+*[470771]<tr />
+	*[470775]<td />
+		*[470796]<label />
+			*[470794]<input type=checkbox checked=false id=idscheck872 value=872 />
+	*[470776]<td />
+		*[470820]<div />
+			872
+	*[470777]<td />
+		*[470831]<span />
+			*[470829]<span />
+				*[470830]<img alt=Cronus Yoga Pant -33-Blue />
+	*[470778]<td />
+		*[470832]<div />
+			Cronus Yoga Pant -33-Blue
+	*[470779]<td />
+		*[470821]<div />
+			Simple Product
+	*[470780]<td />
+		*[470822]<div />
+			Bottom
+	*[470781]<td />
+		*[470833]<div />
+			MP12-33-Blue
+	*[470782]<td />
+		*[470823]<div />
+			$48.00
+	*[470783]<td />
+		*[470824]<div />
+			5.0000
+	*[470784]<td />
+		*[470840]<div />
+			*[470834]<ul />
+				*[470860]<li level=1 />
+					*[470863]<strong />
+						Default Stock
+					*[470864]<span />
+	*[470785]<td />
+		*[470825]<div />
+			Not Visible Individually
+	*[470786]<td />
+		*[470826]<div />
+			Enabled
+	*[470787]<td />
+		*[470827]<div />
+			Main Website
+	*[470788]<td />
+		*[470828]<div />
+			Sep 2, 2026 7:47:20 AM
+	*[470789]<td />
+		*[470875]<a aria-label=Edit Cronus Yoga Pant -33-Blue />
+			Edit
+[451304]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[451314]<a id=footer_privacy />
+	Privacy Policy
+[451317]<a id=footer_account_activity />
+	Account Activity
+[451320]<a id=footer_bug_tracking />
+	Report an Issue

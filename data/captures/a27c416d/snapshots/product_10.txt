@@ -1,0 +1,35 @@
+Dashboard
+*[734304]<a />
+	Sales
+*[734305]<a />
+	Catalog
+*[734306]<a />
+	Customers
+*[734307]<a />
+	Marketing
+*[734308]<a />
+	Content
+*[734309]<a />
+	Reports
+*[734310]<a />
+	Stores
+*[734288]<a />
+	System
+Find Partners & Extensions
+Aero Daily Fitness Tee-S-Brown
+admin
+Scope:
+All Store Views
+*[734314]<a title=What is this? />
+	What is this?
+Save
+*[734315]<button title=Back id=back />
+	Back
+Add Attribute
+*[734326]<div />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+Privacy Policy
+Account Activity
+Report an Issue

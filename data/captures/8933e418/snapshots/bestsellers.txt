@@ -1,0 +1,175 @@
+*[15731]<a />
+*[15740]<a />
+	Dashboard
+*[15613]<a />
+	Sales
+*[15614]<a />
+	Catalog
+*[15615]<a />
+	Customers
+*[15616]<a />
+	Marketing
+*[15617]<a />
+	Content
+*[15618]<a />
+	Reports
+*[15619]<a />
+	Stores
+*[15620]<a />
+	System
+*[16341]<a />
+	Find Partners & Extensions
+Bestsellers Report
+*[16403]<a title=My Account />
+	admin
+*[16441]<a title=Notifications />
+*[16446]<div />
+	*[15605]<form id=form-search />
+		*[16449]<div />
+			*[15606]<input type=text id=search-global name=query />
+*[16475]<span />
+	Scope:
+*[16494]<button id=store-change-button />
+	All Websites
+*[15624]<a title=What is this? />
+	*[16527]<span />
+		What is this?
+*[15625]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+*[16555]<a />
+	statistics
+, click
+*[16558]<a />
+	here
+Filter
+Period
+*[15607]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+From
+*[15608]<input title=From type=text id=sales_report_from name=from value=1/1/22 />
+To
+*[15609]<input title=To type=text id=sales_report_to name=to value=3/31/22 />
+Empty Rows
+*[15610]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[15611]<select id=id_c0XXPf527QJ3k2WllufuMNT7KWTchSMo_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+*[15626]<button title=Export id=id_GKGI9ETMOzx24Jff3NgEKOHSBgmkBKBv />
+	Export
+records found
+Interval
+Product
+Price
+Order Quantity
+*[16739]<tr />
+	Total
+	19
+*[16757]<tr title=# />
+	*[16759]<td />
+		*[16761]<span />
+			1/2022
+	*[16765]<td />
+		Cronus Yoga Pant -36-Red
+	*[16768]<td />
+		$38.40
+	*[16771]<td />
+*[16775]<tr />
+	*[16777]<td />
+		Cassia Funnel Sweatshirt-L-Orange
+	*[16780]<td />
+		$48.00
+	*[16783]<td />
+*[16787]<tr />
+	*[16789]<td />
+		Dash Digital Watch
+	*[16792]<td />
+		$92.00
+	*[16795]<td />
+*[16799]<tr />
+	*[16801]<td />
+		Kenobi Trail Jacket-L-Black
+	*[16804]<td />
+		$47.00
+	*[16807]<td />
+*[16811]<tr />
+	*[16813]<td />
+		Helios EverCool™ Tee-M-Black
+	*[16816]<td />
+		$24.00
+	*[16819]<td />
+*[16823]<tr title=# />
+	*[16825]<td />
+		*[16827]<span />
+			2/2022
+	*[16831]<td />
+		Sprite Yoga Strap 6 foot
+	*[16834]<td />
+		$14.00
+	*[16837]<td />
+*[16841]<tr />
+	*[16843]<td />
+		Sprite Yoga Strap 8 foot
+	*[16846]<td />
+		$17.00
+	*[16849]<td />
+*[16853]<tr />
+	*[16855]<td />
+		Dash Digital Watch
+	*[16858]<td />
+		$92.00
+	*[16861]<td />
+*[16865]<tr />
+	*[16867]<td />
+		Cassia Funnel Sweatshirt-XL-Orange
+	*[16870]<td />
+		$48.00
+	*[16873]<td />
+*[16877]<tr />
+	*[16879]<td />
+		Aeon Capri-29-Orange
+	*[16882]<td />
+		$38.40
+	*[16885]<td />
+*[16889]<tr title=# />
+	*[16891]<td />
+		*[16893]<span />
+			3/2022
+	*[16897]<td />
+		Quest Lumaflex™ Band
+	*[16900]<td />
+		$19.00
+	*[16903]<td />
+*[16907]<tr />
+	*[16909]<td />
+		Beaumont Summit Kit-S-Orange
+	*[16912]<td />
+		$42.00
+	*[16915]<td />
+*[16919]<tr />
+	*[16921]<td />
+		Helios Endurance Tank-L-Blue
+	*[16924]<td />
+		$32.00
+	*[16927]<td />
+*[16931]<tr />
+	*[16933]<td />
+		Impulse Duffle
+	*[16936]<td />
+		$74.00
+	*[16939]<td />
+*[16943]<tr />
+	*[16945]<td />
+		Marco Lightweight Active Hoodie-S-Lavender
+	*[16948]<td />
+		$74.00
+	*[16951]<td />
+*[16969]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[16979]<a id=footer_privacy />
+	Privacy Policy
+*[16982]<a id=footer_account_activity />
+	Account Activity
+*[16985]<a id=footer_bug_tracking />
+	Report an Issue

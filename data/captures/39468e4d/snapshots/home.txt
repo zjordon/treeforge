@@ -1,0 +1,106 @@
+*[588]<div id=root />
+	*[11]<button expanded=false />
+		高清发布
+	*[75]<li id=douyin-creator-master-menu-nav-home role=menuitem />
+		*[1318]<i />
+			*[1319]<span role=img />
+				[76]<svg /> <!-- SVG content collapsed -->
+		*[1321]<span />
+			首页
+		*[1322]<i />
+	*[78]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />
+		*[1323]<i />
+			*[1324]<span role=img />
+				*[79]<svg /> <!-- SVG content collapsed -->
+		*[1326]<span />
+			活动管理
+		*[1327]<i />
+	*[14]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />
+		*[590]<div role=menuitem expanded=false />
+			*[1328]<div />
+				*[1329]<i />
+					*[1330]<span role=img />
+						*[81]<svg /> <!-- SVG content collapsed -->
+				*[1333]<span />
+					内容管理
+				*[1334]<i />
+					*[1335]<span role=img aria-label=chevron_down />
+						*[83]<svg /> <!-- SVG content collapsed -->
+		*[1338]<div />
+	[15]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />
+		*[591]<div role=menuitem expanded=false />
+			*[1339]<div />
+				*[1340]<i />
+					*[1341]<span role=img />
+						*[84]<svg /> <!-- SVG content collapsed -->
+				*[1344]<span />
+					互动管理
+				*[1345]<i />
+					*[1346]<span role=img aria-label=chevron_down />
+						*[86]<svg /> <!-- SVG content collapsed -->
+		*[1349]<div />
+	[16]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />
+		*[592]<div role=menuitem expanded=false />
+			*[1350]<div />
+				*[1351]<i />
+					*[1352]<span role=img />
+						*[87]<svg /> <!-- SVG content collapsed -->
+				*[1355]<span />
+					数据中心
+				*[1356]<i />
+					*[1357]<span role=img aria-label=chevron_down />
+						*[89]<svg /> <!-- SVG content collapsed -->
+		*[1360]<div />
+	[17]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />
+		*[593]<div role=menuitem expanded=false />
+			*[1361]<div />
+				*[1362]<i />
+					*[1363]<span role=img />
+						*[90]<svg /> <!-- SVG content collapsed -->
+				*[1365]<span />
+					变现中心
+				*[1366]<i />
+					*[1367]<span role=img aria-label=chevron_down />
+						*[92]<svg /> <!-- SVG content collapsed -->
+		[1370]<div />
+	[18]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />
+		*[594]<div role=menuitem expanded=false />
+			*[1371]<div />
+				*[1372]<i />
+					*[1373]<span role=img />
+						*[93]<svg /> <!-- SVG content collapsed -->
+				*[1375]<span />
+					创作中心
+				*[1376]<i />
+					*[1377]<span role=img aria-label=chevron_down />
+						*[95]<svg /> <!-- SVG content collapsed -->
+		*[1380]<div />
+	*[595]<div />
+		[13]<img />
+	*[97]<a />
+		通知
+	[6]<div />
+		*[1389]<div />
+			*[1390]<div />
+				*[1391]<span role=img />
+					[7]<svg /> <!-- SVG content collapsed -->
+			[22]<div />
+				网址
+	*[8]<div />
+		*[1394]<div />
+			*[1395]<span role=img />
+				[9]<svg /> <!-- SVG content collapsed -->
+		[23]<div />
+			抖音
+	[24]<div id=header-avatar />
+		*[12]<div />
+	*[1400]<div />
+		*[1401]<div />
+			<svg /> <!-- SVG content collapsed -->
+	加载中，请稍候...
+	*[3]<div id=micro />
+	*[571]<div />
+		*[1414]<span role=img />
+			*[572]<svg /> <!-- SVG content collapsed -->
+|IFRAME|<iframe id=summon-web-iframe />
+	[5]<div id=root />

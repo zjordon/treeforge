@@ -1,0 +1,347 @@
+[71]<i />
+[72]<a />
+	主站
+[12]<div />
+	试试更多AI创作工具吧
+[14]<div />
+	[77]<a />
+[78]<div />
+	成为UP主的第
+	62
+[86]<a />
+[89]<div />
+	[90]<div role=region aria-label=scrollable content />
+		[92]<a id=nav_upload_btn />
+			投稿
+		[93]<div />
+			[94]<span />
+				首页
+		[95]<div />
+			[96]<span />
+				内容管理
+		[163]<div />
+			[164]<span />
+				数据中心
+		[171]<div />
+			[172]<span />
+				粉丝管理
+		[181]<div />
+			[182]<span />
+				互动管理
+		[197]<div />
+			[198]<span />
+				收益管理
+		[225]<div />
+			花生
+		[226]<div />
+			updream
+		[227]<div />
+			[228]<span />
+				创作成长
+		[229]<div />
+			[230]<span />
+				任务中心
+		[231]<div />
+			[232]<span />
+				必火推广
+		[233]<div />
+			[234]<a />
+				创作学院
+		[15]<div />
+			[237]<div />
+				[16]<span />
+					[1913]<i />
+					[17]<span />
+						[1915]<span />
+							创作权益
+		[18]<div />
+			[248]<div />
+				[19]<span />
+					[1968]<i />
+					[20]<span />
+						[1970]<span />
+							社区公约
+		[21]<div />
+			[251]<div />
+				[22]<span />
+					[1988]<i />
+					[23]<span />
+						[1990]<span />
+							创作设置
+*[3643]<input type=file accept=.mp4,.flv,.avi,.wmv,.mov,.webm,.mpeg4,.ts,.mpg,.rm,.rmvb,.mkv,.m4v,.vob,.swf,.3gp,.mts,.m2v,.m2ts,.f multiple=multiple compound_components=(name=Browse Files,role=button),(name=Files Selected,role=textbox,current=None) />
+发布视频
+[3887]<button />
+	批量操作
+[4417]<div title=2026-04-29-20-41-59 />
+	2026-04-29-20-41-59
+	*[5147]<svg /> <!-- SVG content collapsed -->
+	上传完成
+[3895]<div />
+	[3893]<svg /> <!-- SVG content collapsed -->
+	添加视频
+[3901]<button />
+	添加分P
+[3903]<div />
+	[4421]<div />
+		2026-04-29-20-41-59
+	*[5149]<svg /> <!-- SVG content collapsed -->
+	上传完成
+	[4431]<div />
+		[4430]<svg /> <!-- SVG content collapsed -->
+		更换视频
+基本设置
+[3909]<span />
+	一键填写
+封面
+[3918]<div />
+	添加封面
+以下为系统推荐封面，使用AI生成可获取更优质封面
+[3929]<svg /> <!-- SVG content collapsed -->
+[3936]<div />
+	[3933]<svg /> <!-- SVG content collapsed -->
+	AI生成
+*[5166]<div />
+*[5168]<div />
+*[5170]<div />
+*[5172]<div />
+*[5174]<div />
+|scroll element|<div /> (scroll: 0%, 0.2 pages below, total: 1.2 pages)
+	封面制作
+	*[5177]<div />
+		*[5176]<img />
+	*[5181]<div />
+		*[5180]<img />
+		智能
+	*[5183]<div />
+		*[5182]<img />
+		模版
+	*[5185]<div />
+		*[5184]<img />
+		文字
+	*[5187]<div />
+		*[5186]<img />
+		贴纸
+	*[5189]<div />
+		*[5188]<img />
+		滤镜
+	*[5195]<div />
+		*[5193]<span />
+			*[5192]<svg /> <!-- SVG content collapsed -->
+		*[5194]<span />
+			智能生成封面
+	*[5199]<div />
+		*[5197]<svg /> <!-- SVG content collapsed -->
+		*[5198]<div />
+			不使用
+	*[5200]<div />
+	*[5202]<div />
+	*[5204]<div />
+	*[5206]<div />
+	*[5208]<div />
+	*[5237]<svg /> <!-- SVG content collapsed -->
+	两个比例的封面都会被展示给观众，请确认 4:3、16:9 比例下的封面效果
+	*[5239]<span />
+		配置封面遇到问题？
+	*[5244]<span />
+		首页推荐封面（4:3）
+	*[5246]<svg /> <!-- SVG content collapsed -->
+	*[5251]<div />
+		*[5250]<div />
+			*[5249]<div role=slider aria-valuemin=0 aria-valuemax=1 aria-valuenow=0 valuemin=0 valuemax=1 />
+				*[5248]<div />
+	*[5253]<svg /> <!-- SVG content collapsed -->
+	*[5262]<div />
+		*[5256]<span />
+			双比例同步改动
+		*[5261]<label />
+			*[5259]<span />
+				*[5257]<i />
+	*[5276]<span />
+		个人空间封面（16:9）
+	*[5323]<div />
+		*[5318]<div />
+			*[5316]<div />
+				*[5309]<span />
+					上传封面
+				*[5315]<div />
+					*[5311]<svg /> <!-- SVG content collapsed -->
+			*[5317]<span />
+				拖拽图片或点击上传
+		*[5322]<input type=file accept=image/png, image/jpeg compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />
+	*[5522]<div />
+		*[5520]<div role=slider aria-valuemin=0 aria-valuemax=92 aria-valuenow=0 valuemin=0 valuemax=92 />
+			*[5516]<div />
+	*[5524]<div />
+	*[5525]<div />
+	*[5526]<div />
+	*[5527]<div />
+	*[5528]<div />
+	*[5529]<div />
+	*[5327]<div />
+		首页推荐
+	*[5328]<div />
+		个人空间
+	这些UP主，带着粉丝们干了件“大事儿”……
+	哔哩哔哩创作中心
+	*[5335]<span />
+		*[5333]<img alt=player />
+		--
+	*[5338]<span />
+		*[5336]<img alt=danmu />
+		--
+	--
+	2026-04-29-20-41-59
+	树哥ai
+	*[5347]<span />
+		*[5345]<img alt=player />
+		--
+	*[5350]<span />
+		*[5348]<img alt=danmu />
+		--
+	--
+	干杯！去做喜欢的一切
+	哔哩哔哩创作中心
+	4:3封面预览
+	*[5379]<img alt=help />
+	*[5385]<div />
+		取消
+	*[5386]<div />
+		完成
+标题
+19/80
+创作声明
+[3967]<svg /> <!-- SVG content collapsed -->
+[4014]<div />
+	[3973]<input type=text placeholder=请选择符合您视频内容的创作声明 />
+	[3974]<i />
+[4020]<p />
+[4021]<h3 level=3 />
+	分区
+[4026]<div />
+	[4023]<p />
+		游戏
+	[4025]<svg /> <!-- SVG content collapsed -->
+[4047]<div id=tag-container />
+	[4032]<p />
+	[4033]<h3 level=3 />
+		标签
+	[4036]<i />
+		[4035]<svg /> <!-- SVG content collapsed -->
+	*[4935]<div />
+		*[4932]<p />
+			记录
+		*[4934]<svg /> <!-- SVG content collapsed -->
+	*[4939]<div />
+		*[4936]<p />
+			喵星人
+		*[4938]<svg /> <!-- SVG content collapsed -->
+	*[4943]<div />
+		*[4940]<p />
+			情感
+		*[4942]<svg /> <!-- SVG content collapsed -->
+	[4042]<input type=text placeholder=按回车键Enter创建标签 maxlength=20 />
+	还可以添加7个标签
+推荐标签：
+*[4946]<div />
+	*[4945]<div />
+		记录
+*[4949]<div />
+	*[4948]<div />
+		喵星人
+*[4952]<div />
+	*[4951]<div />
+		情感
+*[4955]<div />
+	*[4954]<div />
+		*[4953]<span />
+			Vlog
+*[4958]<div />
+	*[4957]<div />
+		*[4956]<span />
+			高能
+*[4961]<div />
+	*[4960]<div />
+		*[4959]<span />
+			爱情
+*[4964]<div />
+	*[4963]<div />
+		*[4962]<span />
+			美食
+*[4967]<div />
+	*[4966]<div />
+		*[4965]<span />
+			搞笑
+参与话题：
+*[5001]<div />
+	*[5000]<div />
+		*[4996]<svg /> <!-- SVG content collapsed -->
+		*[4997]<span />
+			穿越火线18周年嘉年华
+		*[4999]<svg /> <!-- SVG content collapsed -->
+*[5012]<div />
+	*[5011]<div />
+		*[5007]<svg /> <!-- SVG content collapsed -->
+		*[5008]<span />
+			蛋仔派对宝藏乐园地图
+		*[5010]<svg /> <!-- SVG content collapsed -->
+*[5023]<div />
+	*[5022]<div />
+		*[5018]<svg /> <!-- SVG content collapsed -->
+		*[5019]<span />
+			绝区零UP主激励计划
+		*[5021]<svg /> <!-- SVG content collapsed -->
+*[5034]<div />
+	*[5033]<div />
+		*[5029]<svg /> <!-- SVG content collapsed -->
+		*[5030]<span />
+			崩坏：星穹铁道创作者激励计划
+		*[5032]<svg /> <!-- SVG content collapsed -->
+*[5045]<div />
+	*[5044]<div />
+		*[5040]<svg /> <!-- SVG content collapsed -->
+		*[5041]<span />
+			蛋仔奇思妙想计划
+		*[5043]<svg /> <!-- SVG content collapsed -->
+*[5056]<div />
+	*[5055]<div />
+		*[5051]<svg /> <!-- SVG content collapsed -->
+		*[5052]<span />
+			王者荣耀UP主激励计划
+		*[5054]<svg /> <!-- SVG content collapsed -->
+*[4901]<div />
+	搜索更多话题 >
+[4069]<div />
+	[4056]<h3 level=3 />
+		简介
+	[4058]<div />
+		[4288]<div contenteditable=true />
+			[4401]<p />
+				[4402]<br />
+	[4066]<div />
+		/2000
+定时发布
+[4075]<div />
+	[4074]<span />
+(可选择距离当前最早≥5分钟/最晚≤15天的时间，花火、预约、互动视频稿件不可修改/取消)
+加入合集
+合集功能可用于收集整理系列性稿件
+开通合集功能需满足权益中心等级达Lv2，您可前往创作中心-权益中心查看相关数据
+商业推广
+[4445]<i />
+	[4444]<svg /> <!-- SVG content collapsed -->
+[4100]<label />
+	[4098]<span />
+	[4099]<span />
+		增加商业推广信息
+[4110]<span />
+	更多设置
+	[4106]<span />
+		（含声明与权益、视频元素、互动管理等）
+	[4109]<span />
+		[4108]<svg /> <!-- SVG content collapsed -->
+[4224]<span />
+	存草稿
+[4225]<span />
+	立即投稿
+遇到问题
+[380]<div id=topBtn />

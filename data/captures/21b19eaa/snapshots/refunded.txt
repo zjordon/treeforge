@@ -1,0 +1,92 @@
+*[62736]<a />
+*[62745]<a />
+	Dashboard
+*[62623]<a />
+	Sales
+*[62624]<a />
+	Catalog
+*[62625]<a />
+	Customers
+*[62626]<a />
+	Marketing
+*[62627]<a />
+	Content
+*[62628]<a />
+	Reports
+*[62629]<a />
+	Stores
+*[62630]<a />
+	System
+*[63346]<a />
+	Find Partners & Extensions
+Refunds Report
+*[63408]<a title=My Account />
+	admin
+*[63446]<a title=Notifications />
+*[63451]<div />
+	*[62612]<form id=form-search />
+		*[63454]<div />
+			*[62613]<input type=text id=search-global name=query />
+*[63480]<span />
+	Scope:
+*[63499]<button id=store-change-button />
+	All Websites
+*[62634]<a title=What is this? />
+	*[63532]<span />
+		What is this?
+*[62635]<button title=Show Report id=filter_form_submit />
+	Show Report
+For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.
+Last updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's
+*[63560]<a />
+	statistics
+, click
+*[63563]<a />
+	here
+Filter
+Date Used
+*[62614]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Last Credit Memo Created Date) />
+Period
+*[62615]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />
+From
+*[62616]<input title=From type=text id=sales_report_from name=from value=1/1/23 />
+To
+*[62617]<input title=To type=text id=sales_report_to name=to value=3/31/23 />
+Order Status
+*[62618]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />
+Applies to Any of the Specified Order Statuses except canceled orders
+*[62619]<select id=sales_report_order_statuses name=order_statuses[] multiple=multiple />
+	*[63694]<option id=optIdtyoc0E4o value=canceled />
+	*[63697]<option id=optIdVSYAs4OI value=closed />
+	*[63700]<option id=optIdEPSaZrZE value=complete />
+	*[63703]<option id=optIdsSl0ZC0J value=fraud />
+	*[63706]<option id=optIdbwEZcx2l value=holded />
+	*[63709]<option id=optIdOmJy7qxg value=payment_review />
+	*[63712]<option id=optIdcymclaQo value=paypal_canceled_reversal />
+	*[63715]<option id=optIdVQan5LiC value=paypal_reversed />
+	*[63718]<option id=optId4S21P2lu value=processing />
+Empty Rows
+*[62620]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />
+Export to:
+*[62621]<select id=id_fVXS83Jn0qwLk7uhbCWs1IlIrYi3Ga43_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />
+*[62636]<button title=Export id=id_J0ldInWCPnkjVfNwoEBdA2XIzFJSMTft />
+	Export
+records found
+Interval
+Refunded Orders
+Total Refunded
+Online Refunds
+Offline Refunds
+*[63833]<tr />
+	*[63835]<td />
+		We couldn't find any records.
+*[63853]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[63863]<a id=footer_privacy />
+	Privacy Policy
+*[63866]<a id=footer_account_activity />
+	Account Activity
+*[63869]<a id=footer_bug_tracking />
+	Report an Issue

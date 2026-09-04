@@ -290,8 +290,11 @@ def test_distill_job_lifecycle(tmp_path, monkeypatch):
     # mock 掉 run_distill_pipeline（不真跑 LLM）
     from server import distill_api
 
-    def fake_pipeline(trace_path, output_dir, adapter_name, no_llm):
-        return _make_done_result(trace_path)
+    def fake_pipeline(
+        trace_paths, output_dir, adapter_name, no_llm, fresh=False, task_description=None
+    ):
+        first = trace_paths[0] if isinstance(trace_paths, list) else trace_paths
+        return _make_done_result(first)
 
     monkeypatch.setattr(distill_api, "run_distill_pipeline", fake_pipeline)
 
@@ -330,10 +333,13 @@ def test_distill_job_failed_records_error(tmp_path, monkeypatch):
 
     from server import distill_api
 
-    def failing_pipeline(trace_path, output_dir, adapter_name, no_llm):
+    def failing_pipeline(
+        trace_paths, output_dir, adapter_name, no_llm, fresh=False, task_description=None
+    ):
         from server.distill_api import DistillResult
 
-        return DistillResult(ok=False, error="boom", trace_path=trace_path)
+        first = trace_paths[0] if isinstance(trace_paths, list) else trace_paths
+        return DistillResult(ok=False, error="boom", trace_path=first)
 
     monkeypatch.setattr(distill_api, "run_distill_pipeline", failing_pipeline)
 
@@ -361,6 +367,118 @@ def test_distill_unknown_job_returns_404(client):
     """GET /api/distill/{不存在} → 404。"""
     resp = client.get("/api/distill/doesnotexist")
     assert resp.status_code == 404
+
+
+# ---------------------------------------------------------------------------
+# P4：host 模式累积蒸馏 + 任务描述透传
+# ---------------------------------------------------------------------------
+
+
+def test_distill_requires_trace_or_host_exactly_one(client):
+    """POST /api/distill：trace_path 与 host 必须恰好提供一个（都空/都给 → 400）。"""
+    # 都空
+    resp = client.post("/api/distill", json={"no_llm": True})
+    assert resp.status_code == 400
+    assert "二选一" in resp.json()["error"]
+    # 都给
+    resp = client.post(
+        "/api/distill", json={"trace_path": "a.json", "host": "x.com", "no_llm": True}
+    )
+    assert resp.status_code == 400
+    assert "二选一" in resp.json()["error"]
+
+
+def test_distill_host_mode_collects_traces(tmp_path, monkeypatch):
+    """host 模式：扫 captures 收集该 host 全部 trace → 多 trace 走管线。"""
+    import json as json_mod
+
+    # 造两份同 host trace + 一份其它 host
+    caps = tmp_path / "caps"
+    for name, host in [("cap-a", "x.com"), ("cap-b", "x.com"), ("cap-c", "other.com")]:
+        d = caps / name
+        d.mkdir(parents=True)
+        (d / "trace.json").write_text(
+            json_mod.dumps({"host": host, "events": []}), encoding="utf-8"
+        )
+    # 损坏 trace（应跳过）
+    bad = caps / "cap-bad"
+    bad.mkdir()
+    (bad / "trace.json").write_text("{broken", encoding="utf-8")
+
+    from server import distill_api
+
+    captured_kwargs: list = []
+
+    async def fake_start(
+        trace_paths,
+        output_dir,
+        adapter_name="treewalker",
+        no_llm=False,
+        fresh=False,
+        task_description=None,
+    ):
+        captured_kwargs.append({"traces": list(trace_paths), "task_description": task_description})
+        return "job-1"
+
+    monkeypatch.setattr(distill_api, "start_distill_job", fake_start)
+
+    app = create_app(captures_dir=caps, skills_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.post(
+            "/api/distill",
+            json={"host": "x.com", "no_llm": True, "task_description": "上传视频"},
+        )
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["ok"] is True
+    assert data["traces"] == 2  # cap-a + cap-b（cap-c 不同 host、cap-bad 损坏均跳过）
+    # 收集到的 trace 路径
+    got = captured_kwargs[0]["traces"]
+    assert len(got) == 2
+    assert all("trace.json" in str(p) for p in got)
+    # 任务描述透传
+    assert captured_kwargs[0]["task_description"] == "上传视频"
+
+
+def test_distill_host_mode_no_traces_returns_400(tmp_path):
+    """host 模式：captures 里没有该 host 的 trace → 400。"""
+    app = create_app(captures_dir=tmp_path / "empty", skills_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.post("/api/distill", json={"host": "nope.com"})
+    assert resp.status_code == 400
+    assert "nope.com" in resp.json()["error"]
+
+
+def test_distill_task_description_passthrough(tmp_path, monkeypatch):
+    """trace_path 模式：task_description 透传进 start_distill_job。"""
+    trace = tmp_path / "t.trace.json"
+    trace.write_text("{}", encoding="utf-8")
+
+    from server import distill_api
+
+    captured: list = []
+
+    async def fake_start(
+        trace_paths,
+        output_dir,
+        adapter_name="treewalker",
+        no_llm=False,
+        fresh=False,
+        task_description=None,
+    ):
+        captured.append(task_description)
+        return "job-2"
+
+    monkeypatch.setattr(distill_api, "start_distill_job", fake_start)
+
+    app, _ = _make_app(skills_dir=tmp_path)
+    with TestClient(app) as c:
+        resp = c.post(
+            "/api/distill",
+            json={"trace_path": str(trace), "task_description": "发布抖音视频"},
+        )
+    assert resp.status_code == 200
+    assert captured == ["发布抖音视频"]
 
 
 # ---------------------------------------------------------------------------
@@ -730,7 +848,7 @@ def test_run_distill_pipeline_no_llm_template_mode(bilibili_trace_path, tmp_outp
     from server.distill_api import run_distill_pipeline
 
     result = run_distill_pipeline(
-        trace_path=bilibili_trace_path,
+        trace_paths=bilibili_trace_path,
         output_dir=tmp_output_dir,
         adapter_name="treewalker",
         no_llm=True,
@@ -748,7 +866,7 @@ def test_run_distill_pipeline_missing_trace(tmp_path):
     from server.distill_api import run_distill_pipeline
 
     result = run_distill_pipeline(
-        trace_path=tmp_path / "nope.json",
+        trace_paths=tmp_path / "nope.json",
         output_dir=tmp_path,
         no_llm=True,
     )

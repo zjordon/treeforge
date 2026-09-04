@@ -1,0 +1,200 @@
+*[1377404]<a />
+*[1377413]<a />
+	Dashboard
+*[1377300]<a />
+	Sales
+*[1377301]<a />
+	Catalog
+*[1377302]<a />
+	Customers
+*[1377303]<a />
+	Marketing
+*[1377304]<a />
+	Content
+*[1377305]<a />
+	Reports
+*[1377306]<a />
+	Stores
+*[1377307]<a />
+	System
+*[1378016]<a />
+	Find Partners & Extensions
+Reviews
+*[1378078]<a title=My Account />
+	admin
+*[1378116]<a title=Notifications />
+*[1378121]<div />
+	*[1377262]<form id=form-search />
+		*[1378124]<div />
+			*[1377263]<input type=text id=search-global name=query />
+*[1377308]<button title=New Review id=add />
+	New Review
+*[1377309]<button title=Search id=id_0otXMpRyjg4ieOltFtvGhQ8GRpVyaXwh />
+	Search
+*[1377310]<button title=Reset Filter id=id_EAVkO5m59UGknpQvOS7gkgnQXEkryFY6 />
+	Reset Filter
+*[1377272]<select id=reviewGrid_massaction-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Actions|Delete|Update Status) />
+*[1378257]<div />
+	*[1377265]<select id=reviewGrid_massaction-mass-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Select All|Unselect All|Select Visible|Unselect Visible) />
+records found
+*[1377266]<select id=reviewGrid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />
+per page
+*[1378325]<button />
+*[1377267]<input type=text id=reviewGrid_page-current name=page value=1 />
+of
+*[1378342]<button />
+*[1378359]<tr />
+	*[1378364]<th />
+		*[1378366]<span />
+			ID
+	*[1378369]<th />
+		*[1378370]<span />
+			Created
+	*[1378373]<th />
+		*[1378374]<span />
+			Status
+	*[1378377]<th />
+		*[1378378]<span />
+			Title
+	*[1378381]<th />
+		*[1377320]<span />
+			Nickname
+	*[1378384]<th />
+		*[1378385]<span />
+			Review
+	Visibility
+	*[1378392]<th />
+		*[1378393]<span />
+			Type
+	*[1378396]<th />
+		*[1378397]<span />
+			Product
+	*[1378400]<th />
+		*[1378401]<span />
+			SKU
+	Action
+*[1378409]<tr />
+	*[1378411]<td />
+		*[1377273]<select id=reviewGrid_filter_massaction name=massaction expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Any|Yes|No) />
+	*[1378422]<td />
+		*[1377274]<input type=text id=reviewGrid_filter_review_id name=review_id />
+	*[1378426]<td />
+		*[1377275]<input type=text id=reviewGrid_filter_created_atQyZC8jmpo37gIHeti8NAs7ZPBp4Ic3ld_from name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[1378430]<button />
+			*[1378432]<span />
+				undefined
+		*[1377276]<input type=text id=reviewGrid_filter_created_atQyZC8jmpo37gIHeti8NAs7ZPBp4Ic3ld_to name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[1378435]<button />
+			*[1378437]<span />
+				undefined
+	*[1378444]<td />
+		*[1377277]<select id=reviewGrid_filter_status name=status expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	*[1378455]<td />
+		*[1377278]<input type=text id=reviewGrid_filter_title name=title />
+	*[1378459]<td />
+		*[1377279]<input type=text id=reviewGrid_filter_nickname name=nickname />
+	*[1378463]<td />
+		*[1377280]<input type=text id=reviewGrid_filter_detail name=detail />
+	*[1378467]<td />
+		*[1377281]<select name=visible_in expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Default Store View) />
+	*[1378476]<td />
+		*[1377282]<select id=reviewGrid_filter_type name=type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Administrator|Customer|Guest,format=numeric) />
+	*[1378487]<td />
+		*[1377283]<input type=text id=reviewGrid_filter_name name=name value=Antonia Racer Tank />
+	*[1378491]<td />
+		*[1377284]<input type=text id=reviewGrid_filter_sku name=sku />
+	*[1378495]<td />
+*[1378502]<tr title=http://localhost:7780/admin/review/product/edit/id/339/ />
+	*[1378504]<td />
+		*[1377268]<input type=checkbox checked=false id=id_168 name=reviews value=339 />
+	*[1378511]<td />
+		339
+	*[1378514]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[1378517]<td />
+		Approved
+	*[1378520]<td />
+		A regular or me
+	*[1378523]<td />
+		Pearl
+	*[1378526]<td />
+		This is in regular rotation at the gym. Its col...
+	*[1378529]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[1378538]<td />
+		Guest
+	*[1378541]<td />
+		Antonia Racer Tank
+	*[1378544]<td />
+		WT08
+	*[1378547]<td />
+		*[1378549]<a id=id3Acx7H52VA />
+			Edit
+*[1378554]<tr title=http://localhost:7780/admin/review/product/edit/id/338/ />
+	*[1378556]<td />
+		*[1377269]<input type=checkbox checked=false id=id_121 name=reviews value=338 />
+	*[1378563]<td />
+		338
+	*[1378566]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[1378569]<td />
+		Approved
+	*[1378572]<td />
+		Not for high impact
+	*[1377321]<td />
+		Merrie
+	*[1378577]<td />
+		Definitely not good for anything high-impact, b...
+	*[1378580]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[1378589]<td />
+		Guest
+	*[1378592]<td />
+		Antonia Racer Tank
+	*[1378595]<td />
+		WT08
+	*[1378598]<td />
+		*[1378600]<a id=idPsJtJJF1wa />
+			Edit
+*[1378605]<tr title=http://localhost:7780/admin/review/product/edit/id/337/ />
+	*[1378607]<td />
+		*[1377270]<input type=checkbox checked=false id=id_679 name=reviews value=337 />
+	*[1378614]<td />
+		337
+	*[1378617]<td />
+		Apr 19, 2023, 12:15:20 PM
+	*[1378620]<td />
+		Approved
+	*[1378623]<td />
+		Zero support/modesty
+	*[1378626]<td />
+		Shaunte
+	*[1378629]<td />
+		I would never wear this bra to anything but a l...
+	*[1378632]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+	*[1378641]<td />
+		Guest
+	*[1378644]<td />
+		Antonia Racer Tank
+	*[1378647]<td />
+		WT08
+	*[1378650]<td />
+		*[1378652]<a id=idxOnR2VpBE9 />
+			Edit
+*[1378668]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[1378678]<a id=footer_privacy />
+	Privacy Policy
+*[1378681]<a id=footer_account_activity />
+	Account Activity
+*[1378684]<a id=footer_bug_tracking />
+	Report an Issue

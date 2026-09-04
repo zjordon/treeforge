@@ -1,0 +1,70 @@
+*[627849]<a />
+*[627858]<a />
+	Dashboard
+*[627760]<a />
+	Sales
+*[627761]<a />
+	Catalog
+*[627762]<a />
+	Customers
+*[627763]<a />
+	Marketing
+*[627764]<a />
+	Content
+*[627765]<a />
+	Reports
+*[627766]<a />
+	Stores
+*[627767]<a />
+	System
+*[628460]<a />
+	Find Partners & Extensions
+Edit Review
+*[628522]<a title=My Account />
+	admin
+*[628560]<a title=Notifications />
+*[628565]<div />
+	*[627736]<form id=form-search />
+		*[628568]<div />
+			*[627737]<input type=text id=search-global name=query />
+*[627768]<button title=Back id=back />
+	Back
+*[627769]<button title=Reset id=reset />
+	Reset
+*[627770]<button title=Delete Review id=delete />
+	Delete Review
+*[628615]<button title=Save Review id=save_button />
+	Save Review
+*[628621]<button title=Save and Next id=save_and_next />
+	Save and Next
+*[627771]<button title=Next id=next />
+	Next
+Review Details
+Product
+*[627772]<a />
+	Circe Hooded Ice Fleece
+Author
+*[628682]<div id=customer />
+	Guest
+Summary Rating
+*[628700]<div />
+Detailed Rating
+Rating
+Status
+*[627743]<select id=status_id expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+Nickname
+*[627744]<input type=text id=nickname value=Hannah Lim />
+Summary of Review
+*[627745]<input type=text id=title name=title value=Bad! />
+Review
+*[627746]<textarea id=detail />
+*[628840]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+*[628850]<a id=footer_privacy />
+	Privacy Policy
+*[628853]<a id=footer_account_activity />
+	Account Activity
+*[628856]<a id=footer_bug_tracking />
+	Report an Issue

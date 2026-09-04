@@ -1,0 +1,387 @@
+[242681]<a />
+[242689]<li id=menu-magento-backend-dashboard role=menu-item />
+	[242690]<a />
+		Dashboard
+[242695]<li id=menu-magento-sales-sales role=menu-item />
+	[242584]<a />
+		Sales
+[242738]<li id=menu-magento-catalog-catalog role=menu-item />
+	[242585]<a />
+		Catalog
+[242761]<li id=menu-magento-customer-customer role=menu-item />
+	[242586]<a />
+		Customers
+[242786]<li id=menu-magento-backend-marketing role=menu-item />
+	[242587]<a />
+		Marketing
+[242871]<li id=menu-magento-backend-content role=menu-item />
+	[242588]<a />
+		Content
+[242930]<li id=menu-magento-reports-report role=menu-item />
+	[242589]<a />
+		Reports
+[243091]<li id=menu-magento-backend-stores role=menu-item />
+	[242590]<a />
+		Stores
+[243187]<li id=menu-magento-backend-system role=menu-item />
+	[242591]<a />
+		System
+[243292]<li id=menu-magento-marketplace-partners role=menu-item />
+	[243293]<a />
+		Find Partners & Extensions
+Products
+[243355]<a title=My Account />
+	admin
+[243393]<a title=Notifications />
+[243398]<div />
+	[242568]<form id=form-search />
+		[243401]<div />
+			[242569]<input type=text id=search-global autocomplete=off />
+[243427]<div title=Add Product id=add_new_product />
+	[243431]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[243437]<button title=Add Product aria-label=Add product of type />
+*[243935]<button />
+	Default View
+*[243987]<button />
+	Columns
+*[244158]<button />
+	Filters
+Active filters:
+Keyword:
+Hollister Backyard
+*[245711]<button />
+Name:
+green
+*[247519]<button />
+*[245658]<button />
+	Clear all
+*[244183]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+*[244184]<button aria-label=Search />
+*[244191]<button title=Select Items />
+	Actions
+records found
+*[244984]<div />
+	*[244986]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+*[244987]<button />
+	Select
+per page
+*[244247]<button title=Previous Page disabled=true />
+*[244252]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[244254]<button title=Next Page disabled=true />
+*[243834]<tr />
+	*[244565]<div />
+		[244566]<input type=checkbox checked=false id=77 />
+		[244568]<button />
+			Options
+	[244588]<th />
+		*[244587]<span />
+			ID
+	[244591]<th />
+		Thumbnail
+	[244594]<th />
+		*[244593]<span />
+			Name
+	[244597]<th />
+		*[244596]<span />
+			Type
+	[244600]<th />
+		*[244599]<span />
+			Attribute Set
+	[244603]<th />
+		*[244602]<span />
+			SKU
+	[244606]<th />
+		*[244605]<span />
+			Price
+	[244609]<th />
+		*[244608]<span />
+			Quantity
+	[244612]<th />
+		Salable Quantity
+	[244615]<th />
+		*[244614]<span />
+			Visibility
+	[244618]<th />
+		*[244617]<span />
+			Status
+	[244621]<th />
+		*[244620]<span />
+			Websites
+	[244624]<th />
+		*[244623]<span />
+			Last Updated At
+	[244627]<th />
+		*[244626]<span />
+			Action
+[262541]<tr />
+	[262557]<td />
+		[262654]<label />
+			[262652]<input type=checkbox checked=false id=idscheck111 value=111 />
+	[262558]<td />
+		[262674]<div />
+			111
+	[262559]<td />
+		[262776]<span />
+			[262774]<span />
+				[262775]<img alt=Hollister Backyard Sweatshirt-XS-Green />
+	[262560]<td />
+		[262789]<div />
+			Hollister Backyard Sweatshirt-XS-Green
+	[262561]<td />
+		[262675]<div />
+			Simple Product
+	[262562]<td />
+		[262676]<div />
+			Top
+	[262563]<td />
+		[262790]<div />
+			MH05-XS-Green
+	[262564]<td />
+		[262677]<div />
+			$47.00
+	[262565]<td />
+		[262678]<div />
+			100.0000
+	[262566]<td />
+		[262805]<div />
+			[262799]<ul />
+				[262825]<li level=1 />
+					[262828]<strong />
+						Default Stock
+					[262829]<span />
+						100
+	[262567]<td />
+		[262679]<div />
+			Not Visible Individually
+	[262568]<td />
+		[262680]<div />
+			Enabled
+	[262569]<td />
+		[262681]<div />
+			Main Website
+	[262570]<td />
+		[262682]<div />
+			Sep 2, 2026 7:34:41 AM
+	[262571]<td />
+		[262980]<a aria-label=Edit Hollister Backyard Sweatshirt-XS-Green />
+			Edit
+[262544]<tr />
+	[262572]<td />
+		[262657]<label />
+			[262655]<input type=checkbox checked=false id=idscheck123 value=123 />
+	[262573]<td />
+		[262683]<div />
+			123
+	[262574]<td />
+		[262779]<span />
+			[262777]<span />
+				[262778]<img alt=Hollister Backyard Sweatshirt-XL-Green />
+	[262575]<td />
+		[262791]<div />
+			Hollister Backyard Sweatshirt-XL-Green
+	[262576]<td />
+		[262684]<div />
+			Simple Product
+	[262577]<td />
+		[262685]<div />
+			Top
+	[262578]<td />
+		[262792]<div />
+			MH05-XL-Green
+	[262579]<td />
+		[262686]<div />
+			$52.00
+	[262580]<td />
+		[262687]<div />
+			100.0000
+	[262581]<td />
+		[262840]<div />
+			[262834]<ul />
+				[262860]<li level=1 />
+					[262863]<strong />
+						Default Stock
+					[262864]<span />
+						99
+	[262582]<td />
+		[262688]<div />
+			Not Visible Individually
+	[262583]<td />
+		[262689]<div />
+			Enabled
+	[262584]<td />
+		[262690]<div />
+			Main Website
+	[262585]<td />
+		[262691]<div />
+			Apr 19, 2023 12:13:24 PM
+	[262586]<td />
+		[263000]<a aria-label=Edit Hollister Backyard Sweatshirt-XL-Green />
+			Edit
+[262547]<tr />
+	[262587]<td />
+		[262660]<label />
+			[262658]<input type=checkbox checked=false id=idscheck114 value=114 />
+	[262588]<td />
+		[262692]<div />
+			114
+	[262589]<td />
+		[262782]<span />
+			[262780]<span />
+				[262781]<img alt=Hollister Backyard Sweatshirt-S-Green />
+	[262590]<td />
+		[262793]<div />
+			Hollister Backyard Sweatshirt-S-Green
+	[262591]<td />
+		[262693]<div />
+			Simple Product
+	[262592]<td />
+		[262694]<div />
+			Top
+	[262593]<td />
+		[262794]<div />
+			MH05-S-Green
+	[262594]<td />
+		[262695]<div />
+			$47.00
+	[262595]<td />
+		[262696]<div />
+			100.0000
+	[262596]<td />
+		[262875]<div />
+			[262869]<ul />
+				[262895]<li level=1 />
+					[262898]<strong />
+						Default Stock
+					[262899]<span />
+						100
+	[262597]<td />
+		[262697]<div />
+			Not Visible Individually
+	[262598]<td />
+		[262698]<div />
+			Enabled
+	[262599]<td />
+		[262699]<div />
+			Main Website
+	[262600]<td />
+		[262700]<div />
+			Sep 2, 2026 7:34:26 AM
+	[262601]<td />
+		[263020]<a aria-label=Edit Hollister Backyard Sweatshirt-S-Green />
+			Edit
+[262550]<tr />
+	[262602]<td />
+		[262663]<label />
+			[262661]<input type=checkbox checked=false id=idscheck117 value=117 />
+	[262603]<td />
+		[262701]<div />
+			117
+	[262604]<td />
+		[262785]<span />
+			[262783]<span />
+				[262784]<img alt=Hollister Backyard Sweatshirt-M-Green />
+	[262605]<td />
+		[262795]<div />
+			Hollister Backyard Sweatshirt-M-Green
+	[262606]<td />
+		[262702]<div />
+			Simple Product
+	[262607]<td />
+		[262703]<div />
+			Top
+	[262608]<td />
+		[262796]<div />
+			MH05-M-Green
+	[262609]<td />
+		[262704]<div />
+			$47.00
+	[262610]<td />
+		[262705]<div />
+			100.0000
+	[262611]<td />
+		[262910]<div />
+			[262904]<ul />
+				[262930]<li level=1 />
+					[262933]<strong />
+						Default Stock
+					[262934]<span />
+						100
+	[262612]<td />
+		[262706]<div />
+			Not Visible Individually
+	[262613]<td />
+		[262707]<div />
+			Enabled
+	[262614]<td />
+		[262708]<div />
+			Main Website
+	[262615]<td />
+		[262709]<div />
+			Sep 2, 2026 7:34:55 AM
+	[262616]<td />
+		[263040]<a aria-label=Edit Hollister Backyard Sweatshirt-M-Green />
+			Edit
+[262553]<tr />
+	[262617]<td />
+		[262666]<label />
+			[262664]<input type=checkbox checked=false id=idscheck120 value=120 />
+	[262618]<td />
+		[262710]<div />
+			120
+	[262619]<td />
+		[262788]<span />
+			[262786]<span />
+				[262787]<img alt=Hollister Backyard Sweatshirt-L-Green />
+	[262620]<td />
+		[262797]<div />
+			Hollister Backyard Sweatshirt-L-Green
+	[262621]<td />
+		[262711]<div />
+			Simple Product
+	[262622]<td />
+		[262712]<div />
+			Top
+	[262623]<td />
+		[262798]<div />
+			MH05-L-Green
+	[262624]<td />
+		[262713]<div />
+			$52.00
+	[262625]<td />
+		[262714]<div />
+			100.0000
+	[262626]<td />
+		[262945]<div />
+			[262939]<ul />
+				[262965]<li level=1 />
+					[262968]<strong />
+						Default Stock
+					[262969]<span />
+						99
+	[262627]<td />
+		[262715]<div />
+			Not Visible Individually
+	[262628]<td />
+		[262716]<div />
+			Enabled
+	[262629]<td />
+		[262717]<div />
+			Main Website
+	[262630]<td />
+		[262718]<div />
+			Apr 19, 2023 12:13:24 PM
+	[262631]<td />
+		[263060]<a aria-label=Edit Hollister Backyard Sweatshirt-L-Green />
+			Edit
+[243530]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[243540]<a id=footer_privacy />
+	Privacy Policy
+[242571]<a id=footer_account_activity />
+	Account Activity
+[243545]<a id=footer_bug_tracking />
+	Report an Issue

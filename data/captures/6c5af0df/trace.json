@@ -1,0 +1,312 @@
+{
+  "host": "localhost",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1788305324577,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Scope: function eventListenerX8HKDtDaB6 () { switchScope(thi",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "Scope: function eventListenerX8HKDtDaB6 () { switchScope(this);; } var listenedElementX8HKDtDaB6Array = document.querySelectorAll(\"#store_switcher\"); if(listenedElementX8HKDtDaB6Array.length !== 'undefined'){ listenedElementX8HKDtDaB6Array.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerX8HKDtDaB6.apply(targetElement); }; } }); } function eventListenerQqTax0DLhm () { switchScope(this);; } var listenedElementQqTax0DLhmArray = document.querySelectorAll(\"#store_group_switcher\"); if(listenedElementQqTax0DLhmArray.length !== 'undefined'){ listenedElementQqTax0DLhmArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListenerQqTax0DLhm.apply(targetElement); }; } }); } function eventListener84UR1jTzbb () { switchScope(this);; } var listenedElement84UR1jTzbbArray = document.querySelectorAll(\"#website_switcher\"); if(listenedElement84UR1jTzbbArray.length !== 'undefined'){ listenedElement84UR1jTzbbArray.forEach(function(element) { if (element) { element.onchange = function (event) { var targetElement = element; if (event && event.target) { targetElement = event.target; } return eventListener84UR1jTzbb.apply(targetElement); }; } }); } All Store Views All Store Views Main Website Main Website Store Default Store View What is this? Reload Data"
+      }
+    },
+    {
+      "timestamp": 1788305326176,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard",
+      "target": "Reports",
+      "element_attrs": {
+        "tag": "a",
+        "data-tw-jsclick": "1",
+        "visible_text": "Reports"
+      }
+    },
+    {
+      "timestamp": 1788305327341,
+      "type": "click",
+      "url": "http://localhost:7780/admin/admin/dashboard/",
+      "stage": "dashboard_1",
+      "target": "Orders",
+      "element_attrs": {
+        "tag": "a",
+        "visible_text": "Orders"
+      }
+    },
+    {
+      "timestamp": 1788305328987,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales",
+      "value": "4"
+    },
+    {
+      "timestamp": 1788305329358,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_from",
+        "name": "from",
+        "type": "text",
+        "aria-label": "From"
+      }
+    },
+    {
+      "timestamp": 1788305330878,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_from",
+        "name": "from",
+        "type": "text",
+        "aria-label": "From"
+      },
+      "value": "1/1/23"
+    },
+    {
+      "timestamp": 1788305331293,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      }
+    },
+    {
+      "timestamp": 1788305337577,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "12/31/23"
+    },
+    {
+      "timestamp": 1788305338066,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      }
+    },
+    {
+      "timestamp": 1788305339138,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      }
+    },
+    {
+      "timestamp": 1788305340679,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "1/31/23"
+    },
+    {
+      "timestamp": 1788305341632,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      }
+    },
+    {
+      "timestamp": 1788305342802,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "1//23"
+    },
+    {
+      "timestamp": 1788305343441,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "1/2/23"
+    },
+    {
+      "timestamp": 1788305343929,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "1/28/23"
+    },
+    {
+      "timestamp": 1788305344368,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "Filter Date Used Order Created Order Updated The Order Updat",
+      "element_attrs": {
+        "tag": "form",
+        "id": "filter_form",
+        "data-tw-jsclick": "1",
+        "visible_text": "Filter Date Used Order Created Order Updated The Order Updated report is created in real time and does not require a refresh. Period Day Month Year From undefined To undefined Order Status Any Specified Applies to Any of the Specified Order Statuses except canceled orders Canceled Closed Complete Suspected Fraud On Hold Payment Review PayPal Canceled Reversal PayPal Reversed Processing Empty Rows Yes No Show Actual Values Yes No"
+      }
+    },
+    {
+      "timestamp": 1788305347533,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      }
+    },
+    {
+      "timestamp": 1788305348967,
+      "type": "input",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "id": "sales_report_to",
+        "name": "to",
+        "type": "text",
+        "aria-label": "To"
+      },
+      "value": "2/28/23"
+    },
+    {
+      "timestamp": 1788305349230,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales_2",
+      "target": "Filter Date Used Order Created Order Updated The Order Updat",
+      "element_attrs": {
+        "tag": "form",
+        "id": "filter_form",
+        "data-tw-jsclick": "1",
+        "visible_text": "Filter Date Used Order Created Order Updated The Order Updated report is created in real time and does not require a refresh. Period Day Month Year From undefined To undefined Order Status Any Specified Applies to Any of the Specified Order Statuses except canceled orders Canceled Closed Complete Suspected Fraud On Hold Payment Review PayPal Canceled Reversal PayPal Reversed Processing Empty Rows Yes No Show Actual Values Yes No"
+      }
+    },
+    {
+      "timestamp": 1788305351253,
+      "type": "click",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/",
+      "stage": "sales",
+      "target": "Show Report",
+      "element_attrs": {
+        "tag": "button",
+        "id": "filter_form_submit",
+        "type": "button",
+        "aria-label": "Show Report",
+        "visible_text": "Show Report"
+      }
+    },
+    {
+      "timestamp": 1788305352681,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1kYXkmZnJvbT0xJTJGMSUyRjIzJnRvPTIlMkYyOCUyRjIzJnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MCZzaG93X2FjdHVhbF9jb2x1bW5zPTA=/",
+      "stage": "cmvwb3j0x3r5cgu9y3jlyxrlzf9hdf9vcmrlcizwzxjpb2rfdhlwzt1kyxkmznjvbt0xjtjgmsuyrjizjnrvptilmkyyocuyrjizjnnob3dfb3jkzxjfc3rhdhvzzxm9mczzag93x2vtchr5x3jvd3m9mczzag93x2fjdhvhbf9jb2x1bw5zpta=",
+      "value": "3"
+    },
+    {
+      "timestamp": 1788305353874,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1kYXkmZnJvbT0xJTJGMSUyRjIzJnRvPTIlMkYyOCUyRjIzJnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MCZzaG93X2FjdHVhbF9jb2x1bW5zPTA=/",
+      "stage": "cmvwb3j0x3r5cgu9y3jlyxrlzf9hdf9vcmrlcizwzxjpb2rfdhlwzt1kyxkmznjvbt0xjtjgmsuyrjizjnrvptilmkyyocuyrjizjnnob3dfb3jkzxjfc3rhdhvzzxm9mczzag93x2vtchr5x3jvd3m9mczzag93x2fjdhvhbf9jb2x1bw5zpta=_3",
+      "value": "7"
+    },
+    {
+      "timestamp": 1788305354403,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1kYXkmZnJvbT0xJTJGMSUyRjIzJnRvPTIlMkYyOCUyRjIzJnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MCZzaG93X2FjdHVhbF9jb2x1bW5zPTA=/",
+      "stage": "cmvwb3j0x3r5cgu9y3jlyxrlzf9hdf9vcmrlcizwzxjpb2rfdhlwzt1kyxkmznjvbt0xjtjgmsuyrjizjnrvptilmkyyocuyrjizjnnob3dfb3jkzxjfc3rhdhvzzxm9mczzag93x2vtchr5x3jvd3m9mczzag93x2fjdhvhbf9jb2x1bw5zpta=_3",
+      "value": "2"
+    },
+    {
+      "timestamp": 1788305354943,
+      "type": "scroll",
+      "url": "http://localhost:7780/admin/reports/report_sales/sales/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1kYXkmZnJvbT0xJTJGMSUyRjIzJnRvPTIlMkYyOCUyRjIzJnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MCZzaG93X2FjdHVhbF9jb2x1bW5zPTA=/",
+      "stage": "cmvwb3j0x3r5cgu9y3jlyxrlzf9hdf9vcmrlcizwzxjpb2rfdhlwzt1kyxkmznjvbt0xjtjgmsuyrjizjnrvptilmkyyocuyrjizjnnob3dfb3jkzxjfc3rhdhvzzxm9mczzag93x2vtchr5x3jvd3m9mczzag93x2fjdhvhbf9jb2x1bw5zpta=_3",
+      "value": "2"
+    }
+  ],
+  "page_context": {
+    "dashboard": "*[37114]<a />\n*[37118]<li id=menu-magento-backend-dashboard role=menu-item />\n\t*[37119]<a />\n\t\tDashboard\n*[37121]<li id=menu-magento-sales-sales role=menu-item />\n\t*[37122]<a />\n\t\tSales\n*[37142]<li id=menu-magento-catalog-catalog role=menu-item />\n\t*[37143]<a />\n\t\tCatalog\n*[37153]<li id=menu-magento-customer-customer role=menu-item />\n\t*[37154]<a />\n\t\tCustomers\n*[37166]<li id=menu-magento-backend-marketing role=menu-item />\n\t*[37167]<a />\n\t\tMarketing\n*[37207]<li id=menu-magento-backend-content role=menu-item />\n\t*[37208]<a />\n\t\tContent\n*[37234]<li id=menu-magento-reports-report role=menu-item />\n\t*[37235]<a />\n\t\tReports\n*[37311]<li id=menu-magento-backend-stores role=menu-item />\n\t*[37312]<a />\n\t\tStores\n*[37357]<li id=menu-magento-backend-system role=menu-item />\n\t*[37358]<a />\n\t\tSystem\n*[37406]<li id=menu-magento-marketplace-partners role=menu-item />\n\t*[37407]<a />\n\t\tFind Partners & Extensions\nDashboard\n*[37413]<a title=My Account />\n\tadmin\n*[37415]<a title=Notifications />\n*[37679]<div />\n\t*[37105]<form id=form-search />\n\t\t*[38367]<div />\n\t\t\t*[37106]<input type=text id=search-global autocomplete=off />\n*[38391]<span />\n\tScope:\n*[37424]<button id=store-change-button />\n\tAll Store Views\n*[37427]<a title=What is this? />\n\t*[37428]<span />\n\t\tWhat is this?\n*[37430]<button title=Reload Data type=submit />\n\tReload Data\nAdvanced Reporting\nGain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\n*[37437]<a title=Go to Advanced Reporting />\n\tGo to Advanced Reporting\nChart is disabled. To enable the chart, click\n*[37440]<a />\n\there\nRevenue\n$0.00\nTax\n$0.00\nShipping\n$0.00\nQuantity\n*[38523]<strong />\n*[37461]<li role=tab selected=true expanded=true />\n\t*[37462]<a title=Bestsellers id=grid_tab_ordered_products role=presentation />\n\t\t*[38539]<span title=The information in this tab has been changed. />\n\t\t*[38541]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t*[38543]<span title=Loading... />\n\t\tBestsellers\n*[37464]<li role=tab selected=false expanded=false />\n\t*[37465]<a title=Most Viewed Products id=grid_tab_reviewed_products role=presentation />\n\t\t*[38555]<span title=The information in this tab has been changed. />\n\t\t*[38557]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t*[38559]<span title=Loading... />\n\t\tMost Viewed Products\n*[37467]<li role=tab selected=false expanded=false />\n\t*[37468]<a title=New Customers id=grid_tab_new_customers role=presentation />\n\t\t*[38573]<span title=The information in this tab has been changed. />\n\t\t*[38575]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t*[38577]<span title=Loading... />\n\t\tNew Customers\n*[37470]<li role=tab selected=false expanded=false />\n\t*[37471]<a title=Customers id=grid_tab_customers role=presentation />\n\t\t*[38591]<span title=The information in this tab has been changed. />\n\t\t*[38593]<span title=This tab contains invalid data. Please resolve this before saving. />\n\t\t*[38595]<span title=Loading... />\n\t\tCustomers\n*[37476]<tr />\n\tProduct\n\tPrice\n\tQuantity\n*[37482]<tr title=http://localhost:7780/admin/catalog/product/edit/id/20/ />\n\t*[37483]<td />\n\t\tQuest Lumaflex™ Band\n\t*[37485]<td />\n\t\t$19.00\n\t*[37487]<td />\n*[37489]<tr title=http://localhost:7780/admin/catalog/product/edit/id/33/ />\n\t*[37490]<td />\n\t\tSprite Yoga Strap 6 foot\n\t*[37492]<td />\n\t\t$14.00\n\t*[37494]<td />\n*[37496]<tr title=http://localhost:7780/admin/catalog/product/edit/id/29/ />\n\t*[37497]<td />\n\t\tSprite Stasis Ball 65 cm\n\t*[37499]<td />\n\t\t$27.00\n\t*[37501]<td />\n*[37503]<tr title=http://localhost:7780/admin/catalog/product/edit/id/25/ />\n\t*[37504]<td />\n\t\tSprite Stasis Ball 55 cm\n\t*[37506]<td />\n\t\t$23.00\n\t*[37508]<td />\n*[37510]<tr title=http://localhost:7780/admin/catalog/product/edit/id/13/ />\n\t*[37511]<td />\n\t\tOvernight Duffle\n\t*[37513]<td />\n\t\t$45.00\n\t*[37515]<td />\nLifetime Sales\n$0.00\nAverage Order\n$0.00\nLast Orders\n*[37523]<tr />\n\tCustomer\n\tItems\n\tTotal\n*[37530]<tr title=http://localhost:7780/admin/sales/order/view/order_id/299/ />\n\t*[37531]<td />\n\t\tSarah Miller\n\t*[37533]<td />\n\t*[37535]<td />\n\t\t$194.40\n*[37537]<tr title=http://localhost:7780/admin/sales/order/view/order_id/65/ />\n\t*[37538]<td />\n\t\tGrace Nguyen\n\t*[37540]<td />\n\t*[37542]<td />\n\t\t$190.00\n*[37544]<tr title=http://localhost:7780/admin/sales/order/view/order_id/125/ />\n\t*[37545]<td />\n\t\tMatt Baker\n\t*[37547]<td />\n\t*[37549]<td />\n\t\t$151.40\n*[37551]<tr title=http://localhost:7780/admin/sales/order/view/order_id/136/ />\n\t*[37552]<td />\n\t\tLily Potter\n\t*[37554]<td />\n\t*[37556]<td />\n\t\t$188.20\n*[37558]<tr title=http://localhost:7780/admin/sales/order/view/order_id/230/ />\n\t*[37559]<td />\n\t\tAva Brown\n\t*[37561]<td />\n\t*[37563]<td />\n\t\t$83.40\nLast Search Terms\n*[37566]<table id=lastSearchGrid_table />\n\t*[37567]<tr />\n\t\t*[37568]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t*[37574]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t*[37575]<td />\n\t\t\tAntonia\n\t\t*[37577]<td />\n\t\t*[37579]<td />\n\t*[37581]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t*[37582]<td />\n\t\t\ttanks\n\t\t*[37584]<td />\n\t\t\t23\n\t\t*[37586]<td />\n\t*[37588]<tr title=http://localhost:7780/admin/search/term/edit/id/19/ />\n\t\t*[37589]<td />\n\t\t\tnike\n\t\t*[37591]<td />\n\t\t*[37593]<td />\n\t*[37595]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t*[37596]<td />\n\t\t\tJoust Bag\n\t\t*[37598]<td />\n\t\t\t10\n\t\t*[37600]<td />\n\t*[37602]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t*[37603]<td />\n\t\t\thollister\n\t\t*[37605]<td />\n\t\t*[37607]<td />\n\t\t\t19\nTop Search Terms\n*[37610]<table id=topSearchGrid_table />\n\t*[37611]<tr />\n\t\t*[37612]<th />\n\t\t\tSearch Term\n\t\tResults\n\t\tUses\n\t*[37618]<tr title=http://localhost:7780/admin/search/term/edit/id/11/ />\n\t\t*[37619]<td />\n\t\t\thollister\n\t\t*[37621]<td />\n\t\t*[37623]<td />\n\t\t\t19\n\t*[37625]<tr title=http://localhost:7780/admin/search/term/edit/id/1/ />\n\t\t*[37626]<td />\n\t\t\tJoust Bag\n\t\t*[37628]<td />\n\t\t\t10\n\t\t*[37630]<td />\n\t*[37632]<tr title=http://localhost:7780/admin/search/term/edit/id/13/ />\n\t\t*[37633]<td />\n\t\t\tAntonia Racer Tank\n\t\t*[37635]<td />\n\t\t\t23\n\t\t*[37637]<td />\n\t*[37639]<tr title=http://localhost:7780/admin/search/term/edit/id/28/ />\n\t\t*[37640]<td />\n\t\t\tAntonia\n\t\t*[37642]<td />\n\t\t*[37644]<td />\n\t*[37646]<tr title=http://localhost:7780/admin/search/term/edit/id/25/ />\n\t\t*[37647]<td />\n\t\t\ttanks\n\t\t*[37649]<td />\n\t\t\t23\n\t\t*[37651]<td />\n*[37657]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[37662]<a id=footer_privacy />\n\tPrivacy Policy\n*[37665]<a id=footer_account_activity />\n\tAccount Activity\n*[37668]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "dashboard_1": "*[39046]<a />\n*[39055]<a />\n\tDashboard\n*[38915]<a />\n\tSales\n*[38916]<a />\n\tCatalog\n*[38917]<a />\n\tCustomers\n*[38918]<a />\n\tMarketing\n*[38919]<a />\n\tContent\n*[38920]<a />\n\tReports\n*[38921]<a />\n\tStores\n*[38922]<a />\n\tSystem\n*[39658]<a />\n\tFind Partners & Extensions\nOrders Report\n*[39720]<a title=My Account />\n\tadmin\n*[39758]<a title=Notifications />\n*[39763]<div />\n\t*[38886]<form id=form-search />\n\t\t*[39766]<div />\n\t\t\t*[38887]<input type=text id=search-global name=query />\n*[39791]<span />\n\tScope:\n*[39810]<button id=store-change-button />\n\tAll Websites\n*[38926]<a title=What is this? />\n\t*[39843]<span />\n\t\tWhat is this?\n*[38927]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n*[39871]<a />\n\tstatistics\n, click\n*[39874]<a />\n\there\nFilter\nDate Used\n*[38888]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />\nThe Order Updated report is created in real time and does not require a refresh.\nPeriod\n*[38889]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\nFrom\n*[38890]<input title=From type=text id=sales_report_from name=from />\nTo\n*[38891]<input title=To type=text id=sales_report_to name=to />\nOrder Status\n*[38892]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\nApplies to Any of the Specified Order Statuses except canceled orders\nEmpty Rows\n*[38894]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nShow Actual Values\n*[38895]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[38896]<select id=id_ZSG9IAmJeH7jDlJZzuzZKYgUkkkuOJZq_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n*[38928]<button title=Export id=id_yMxtg9cgXPCv4obmryvsvb67GwF74gFn />\n\tExport\nrecords found\n*[40138]<tr />\n\tInterval\n\tOrders\n\tSales Items\n\tSales Total\n\tInvoiced\n\tRefunded\n\tSales Tax\n\tSales Shipping\n\tSales Discount\n\tCanceled\n*[40184]<tr />\n\t*[40186]<td />\n\t\tWe couldn't find any records.\n*[40204]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[40214]<a id=footer_privacy />\n\tPrivacy Policy\n*[40217]<a id=footer_account_activity />\n\tAccount Activity\n*[40220]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "sales": "*[48365]<a />\n*[48374]<a />\n\tDashboard\n*[48252]<a />\n\tSales\n*[48253]<a />\n\tCatalog\n*[48254]<a />\n\tCustomers\n*[48255]<a />\n\tMarketing\n*[48256]<a />\n\tContent\n*[48257]<a />\n\tReports\n*[48258]<a />\n\tStores\n*[48259]<a />\n\tSystem\n*[48977]<a />\n\tFind Partners & Extensions\nOrders Report\n*[49039]<a title=My Account />\n\tadmin\n*[49077]<a title=Notifications />\n*[49082]<div />\n\t*[48240]<form id=form-search />\n\t\t*[49085]<div />\n\t\t\t*[48241]<input type=text id=search-global name=query />\n*[49110]<span />\n\tScope:\n*[49129]<button id=store-change-button />\n\tAll Websites\n*[48263]<a title=What is this? />\n\t*[49162]<span />\n\t\tWhat is this?\n*[48264]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n*[49190]<a />\n\tstatistics\n, click\n*[49193]<a />\n\there\nFilter\nDate Used\n*[48242]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />\nThe Order Updated report is created in real time and does not require a refresh.\nPeriod\n*[48243]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\nFrom\n*[48244]<input title=From type=text id=sales_report_from name=from value=1/1/23 />\nTo\n*[48245]<input title=To type=text id=sales_report_to name=to value=2/28/23 />\nOrder Status\n*[48246]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\nApplies to Any of the Specified Order Statuses except canceled orders\n*[48247]<select id=sales_report_order_statuses name=order_statuses[] multiple=multiple />\n\t*[49326]<option id=optIdiRTiABXP value=canceled />\n\t*[49329]<option id=optIdtYcg6aUL value=closed />\n\t*[49332]<option id=optIdkFBofHzc value=complete />\n\t*[49335]<option id=optIdOXpPTH6b value=fraud />\n\t*[49338]<option id=optIdg5fSvRrh value=holded />\n\t*[49341]<option id=optIdtYoEK0Bv value=payment_review />\n\t*[49344]<option id=optIdmsLgQcbG value=paypal_canceled_reversal />\n\t*[49347]<option id=optIdJU0ohGLn value=paypal_reversed />\n\t*[49350]<option id=optIdqYuqUcB2 value=processing />\nEmpty Rows\n*[48248]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nShow Actual Values\n*[48249]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[48250]<select id=id_4hXfBG2oPWWhvcN9DpH42vmc5rU8odFa_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n*[48265]<button title=Export id=id_2G3zZPCh748blKWduLlIQZK3DZXMkDjc />\n\tExport\n18\nrecords found\n*[49459]<tr />\n\tInterval\n\tOrders\n\tSales Items\n\tSales Total\n\tInvoiced\n\tRefunded\n\tSales Tax\n\tSales Shipping\n\tSales Discount\n\tCanceled\n*[49541]<tr title=# />\n\t*[49543]<td />\n\t\tJan 2, 2023\n\t*[49549]<td />\n\t*[49552]<td />\n\t*[49555]<td />\n\t\t$196.20\n\t*[49558]<td />\n\t\t$0.00\n\t*[49561]<td />\n\t\t$0.00\n\t*[49564]<td />\n\t\t$0.00\n\t*[49567]<td />\n\t\t$20.00\n\t*[49570]<td />\n\t\t$0.00\n\t*[49573]<td />\n\t\t$0.00\n*[49577]<tr title=# />\n\t*[49579]<td />\n\t\tJan 3, 2023\n\t*[49585]<td />\n\t*[49588]<td />\n\t*[49591]<td />\n\t\t$202.39\n\t*[49594]<td />\n\t\t$0.00\n\t*[49597]<td />\n\t\t$0.00\n\t*[49600]<td />\n\t\t$0.00\n\t*[49603]<td />\n\t\t$20.00\n\t*[49606]<td />\n\t\t$45.60\n\t*[49609]<td />\n\t\t$0.00\n*[49613]<tr title=# />\n\t*[49615]<td />\n\t\tJan 6, 2023\n\t*[49621]<td />\n\t*[49624]<td />\n\t*[49627]<td />\n\t\t$215.00\n\t*[49630]<td />\n\t\t$0.00\n\t*[49633]<td />\n\t\t$0.00\n\t*[49636]<td />\n\t\t$0.00\n\t*[49639]<td />\n\t\t$25.00\n\t*[49642]<td />\n\t\t$0.00\n\t*[49645]<td />\n\t\t$0.00\n*[49649]<tr title=# />\n\t*[49651]<td />\n\t\tJan 9, 2023\n\t*[49657]<td />\n\t*[49660]<td />\n\t*[49663]<td />\n\t\t$238.40\n\t*[49666]<td />\n\t\t$0.00\n\t*[49669]<td />\n\t\t$0.00\n\t*[49672]<td />\n\t\t$0.00\n\t*[49675]<td />\n\t\t$35.00\n\t*[49678]<td />\n\t\t$0.00\n\t*[49681]<td />\n\t\t$0.00\n*[49685]<tr title=# />\n\t*[49687]<td />\n\t\tJan 12, 2023\n\t*[49693]<td />\n\t*[49696]<td />\n\t*[49699]<td />\n\t\t$226.60\n\t*[49702]<td />\n\t\t$0.00\n\t*[49705]<td />\n\t\t$0.00\n\t*[49708]<td />\n\t\t$0.00\n\t*[49711]<td />\n\t\t$25.00\n\t*[49714]<td />\n\t\t$50.40\n\t*[49717]<td />\n\t\t$0.00\n*[49721]<tr title=# />\n\t*[49723]<td />\n\t\tJan 13, 2023\n\t*[49729]<td />\n\t*[49732]<td />\n\t*[49735]<td />\n\t\t$204.04\n\t*[49738]<td />\n\t\t$0.00\n\t*[49741]<td />\n\t\t$0.00\n\t*[49744]<td />\n\t\t$0.00\n\t*[49747]<td />\n\t\t$25.00\n\t*[49750]<td />\n\t\t$44.76\n\t*[49753]<td />\n\t\t$0.00\n*[49757]<tr title=# />\n\t*[49759]<td />\n\t\tJan 16, 2023\n\t*[49765]<td />\n\t*[49768]<td />\n\t*[49771]<td />\n\t\t$209.40\n\t*[49774]<td />\n\t\t$0.00\n\t*[49777]<td />\n\t\t$0.00\n\t*[49780]<td />\n\t\t$0.00\n\t*[49783]<td />\n\t\t$25.00\n\t*[49786]<td />\n\t\t$34.85\n\t*[49789]<td />\n\t\t$0.00\n*[49793]<tr title=# />\n\t*[49795]<td />\n\t\tJan 17, 2023\n\t*[49801]<td />\n\t*[49804]<td />\n\t*[49807]<td />\n\t\t$188.00\n\t*[49810]<td />\n\t\t$0.00\n\t*[49813]<td />\n\t\t$0.00\n\t*[49816]<td />\n\t\t$0.00\n\t*[49819]<td />\n\t\t$20.00\n\t*[49822]<td />\n\t\t$42.00\n\t*[49825]<td />\n\t\t$0.00\n*[49829]<tr title=# />\n\t*[49831]<td />\n\t\tJan 23, 2023\n\t*[49837]<td />\n\t*[49840]<td />\n\t*[49843]<td />\n\t\t$121.00\n\t*[49846]<td />\n\t\t$0.00\n\t*[49849]<td />\n\t\t$0.00\n\t*[49852]<td />\n\t\t$0.00\n\t*[49855]<td />\n\t\t$15.00\n\t*[49858]<td />\n\t\t$0.00\n\t*[49861]<td />\n\t\t$0.00\n*[49865]<tr title=# />\n\t*[49867]<td />\n\t*[49873]<td />\n\t*[49876]<td />\n\t*[49879]<td />\n\t*[49882]<td />\n\t*[49885]<td />\n\t*[49888]<td />\n\t*[49891]<td />\n\t*[49894]<td />\n\t*[49897]<td />",
+    "sales_2": "[39046]<a />\n[39054]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[39055]<a />\n\t\tDashboard\n[39060]<li id=menu-magento-sales-sales role=menu-item />\n\t[38915]<a />\n\t\tSales\n[39103]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[38916]<a />\n\t\tCatalog\n[39126]<li id=menu-magento-customer-customer role=menu-item />\n\t[38917]<a />\n\t\tCustomers\n[39151]<li id=menu-magento-backend-marketing role=menu-item />\n\t[38918]<a />\n\t\tMarketing\n[39236]<li id=menu-magento-backend-content role=menu-item />\n\t[38919]<a />\n\t\tContent\n[39295]<li id=menu-magento-reports-report role=menu-item />\n\t[38920]<a />\n\t\tReports\n[39456]<li id=menu-magento-backend-stores role=menu-item />\n\t[38921]<a />\n\t\tStores\n[39552]<li id=menu-magento-backend-system role=menu-item />\n\t[38922]<a />\n\t\tSystem\n[39657]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[39658]<a />\n\t\tFind Partners & Extensions\nOrders Report\n[39720]<a title=My Account />\n\tadmin\n[39758]<a title=Notifications />\n[39763]<div />\n\t[38886]<form id=form-search />\n\t\t[39766]<div />\n\t\t\t[38887]<input type=text id=search-global autocomplete=off />\n[38927]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n[39871]<a />\n\tstatistics\n, click\n[39874]<a />\n\there\n[38897]<form id=filter_form />\n\tFilter\n\tDate Used\n\tThe Order Updated report is created in real time and does not require a refresh.\n\tPeriod\n\t*[38889]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\n\tFrom\n\t[38890]<input title=From type=text id=sales_report_from name=from placeholder=mm/dd/yyyy autocomplete=list format=mm/dd/yyyy required=true />\n\t[40438]<button />\n\t\t[40441]<span />\n\t\t\tundefined\n\tTo\n\t[38891]<input title=To type=text id=sales_report_to name=to placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[43967]<button />\n\t\t[43970]<span />\n\t\t\tundefined\n\tOrder Status\n\t*[38892]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\n\tApplies to Any of the Specified Order Statuses except canceled orders\n\tEmpty Rows\n\t*[38894]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\n\tShow Actual Values\n\t*[38895]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[38896]<select id=id_ZSG9IAmJeH7jDlJZzuzZKYgUkkkuOJZq_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n[38928]<button title=Export id=id_yMxtg9cgXPCv4obmryvsvb67GwF74gFn />\n\tExport\nrecords found\n[40138]<tr />\n\tInterval\n\tOrders\n\tSales Items\n\tSales Total\n\tInvoiced\n\tRefunded\n\tSales Tax\n\tSales Shipping\n\tSales Discount\n\tCanceled\n[40184]<tr />\n\t[40186]<td />\n\t\tWe couldn't find any records.\n[40204]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[40214]<a id=footer_privacy />\n\tPrivacy Policy\n[40217]<a id=footer_account_activity />\n\tAccount Activity\n[40220]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "cmvwb3j0x3r5cgu9y3jlyxrlzf9hdf9vcmrlcizwzxjpb2rfdhlwzt1kyxkmznjvbt0xjtjgmsuyrjizjnrvptilmkyyocuyrjizjnnob3dfb3jkzxjfc3rhdhvzzxm9mczzag93x2vtchr5x3jvd3m9mczzag93x2fjdhvhbf9jb2x1bw5zpta=": "[48365]<a />\n*[48373]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[48374]<a />\n\t\tDashboard\n*[48379]<li id=menu-magento-sales-sales role=menu-item />\n\t[48252]<a />\n\t\tSales\n*[48422]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[48253]<a />\n\t\tCatalog\n*[48445]<li id=menu-magento-customer-customer role=menu-item />\n\t[48254]<a />\n\t\tCustomers\n*[48470]<li id=menu-magento-backend-marketing role=menu-item />\n\t[48255]<a />\n\t\tMarketing\n*[48555]<li id=menu-magento-backend-content role=menu-item />\n\t[48256]<a />\n\t\tContent\n*[48614]<li id=menu-magento-reports-report role=menu-item />\n\t[48257]<a />\n\t\tReports\n*[48775]<li id=menu-magento-backend-stores role=menu-item />\n\t[48258]<a />\n\t\tStores\n*[48871]<li id=menu-magento-backend-system role=menu-item />\n\t[48259]<a />\n\t\tSystem\n*[48976]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[48977]<a />\n\t\tFind Partners & Extensions\nOrders Report\n[49039]<a title=My Account />\n\tadmin\n[49077]<a title=Notifications />\n[49082]<div />\n\t[48240]<form id=form-search />\n\t\t[49085]<div />\n\t\t\t[48241]<input type=text id=search-global autocomplete=off />\n[48264]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\nstatistics\n, click\nhere\n*[48251]<form id=filter_form />\n\tFilter\n\tDate Used\n\t*[48242]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />\n\tThe Order Updated report is created in real time and does not require a refresh.\n\tPeriod\n\t*[48243]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\n\tFrom\n\t[48244]<input title=From type=text id=sales_report_from name=from value=1/1/23 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t*[50472]<button />\n\t\t*[50475]<span />\n\t\t\tundefined\n\tTo\n\t[48245]<input title=To type=text id=sales_report_to name=to value=2/28/23 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t*[50478]<button />\n\t\t*[50481]<span />\n\t\t\tundefined\n\tOrder Status\n\t*[48246]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\n\tApplies to Any of the Specified Order Statuses except canceled orders\n\tEmpty Rows\n\t*[48248]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\n\tShow Actual Values\n\t*[48249]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[48250]<select id=id_4hXfBG2oPWWhvcN9DpH42vmc5rU8odFa_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n[48265]<button title=Export id=id_2G3zZPCh748blKWduLlIQZK3DZXMkDjc />\n\tExport\n18\nrecords found\n[49459]<tr />\n\tInterval\n\tOrders\n\tSales Items\n\tSales Total\n\tInvoiced\n\tRefunded\n\tSales Tax\n\tSales Shipping\n\tSales Discount\n\tCanceled\n*[49505]<tr />\n\tTotal\n\t19\n\t63\n\t$2,809.23\n\t$0.00\n\t$0.00\n\t$0.00\n\t$315.00\n\t$217.61\n\t$0.00\n[49541]<tr title=# />\n\t[49543]<td />\n\t\tJan 2, 2023\n\t[49549]<td />\n\t[49552]<td />\n\t[49555]<td />\n\t\t$196.20\n\t[49558]<td />\n\t\t$0.00\n\t[49561]<td />\n\t\t$0.00\n\t[49564]<td />\n\t\t$0.00\n\t[49567]<td />\n\t\t$20.00\n\t[49570]<td />\n\t\t$0.00\n\t[49573]<td />\n\t\t$0.00\n[49577]<tr title=# />\n\t[49579]<td />\n\t\tJan 3, 2023\n\t[49585]<td />\n\t[49588]<td />\n\t[49591]<td />\n\t\t$202.39\n\t[49594]<td />\n\t\t$0.00\n\t[49597]<td />\n\t\t$0.00\n\t[49600]<td />\n\t\t$0.00\n\t[49603]<td />\n\t\t$20.00\n\t[49606]<td />\n\t\t$45.60\n\t[49609]<td />\n\t\t$0.00\n[49613]<tr title=# />\n\t[49615]<td />\n\t\tJan 6, 2023\n\t[49621]<td />\n\t[49624]<td />\n\t[49627]<td />\n\t\t$215.00\n\t[49630]<td />\n\t\t$0.00\n\t[49633]<td />\n\t\t$0.00\n\t[49636]<td />\n\t\t$0.00\n\t[49639]<td />\n\t\t$25.00\n\t[49642]<td />\n\t\t$0.00\n\t[49645]<td />\n\t\t$0.00\n[49649]<tr title=# />\n\t[49651]<td />\n\t\tJan 9, 2023\n\t[49657]<td />\n\t[49660]<td />\n\t[49663]<td />\n\t\t$238.40\n\t[49666]<td />\n\t\t$0.00\n\t[49669]<td />\n\t\t$0.00\n\t[49672]<td />\n\t\t$0.00\n\t[49675]<td />\n\t\t$35.00\n\t[49678]<td />\n\t\t$0.00\n\t[49681]<td />\n\t\t$0.00\n[49685]<tr title=# />\n\t[49687]<td />\n\t\tJan 12, 2023\n\t[49693]<td />\n\t[49696]<td />\n\t[49699]<td />\n\t\t$226.60\n\t[49702]<td />\n\t\t$0.00\n\t[49705]<td />\n\t\t$0.00\n\t[49708]<td />\n\t\t$0.00\n\t[49711]<td />\n\t\t$25.00\n\t[49714]<td />\n\t\t$50.40\n\t[49717]<td />\n\t\t$0.00\n[49721]<tr title=# />\n\t[49723]<td />\n\t\tJan 13, 2023\n\t[49729]<td />\n\t[49732]<td />\n\t[49735]<td />\n\t\t$204.04\n\t[49738]<td />\n\t\t$0.00\n\t[49741]<td />\n\t\t$0.00\n\t[49744]<td />\n\t\t$0.00\n\t[49747]<td />\n\t\t$25.00\n\t[49750]<td />\n\t\t$44.76\n\t[49753]<td />\n\t\t$0.00\n[49757]<tr title=# />\n\t[49759]<td />\n\t\tJan 16, 2023\n\t[49765]<td />\n\t[49768]<td />\n\t[49771]<td />\n\t\t$209.40\n\t[49774]<td />\n\t\t$0.00\n\t[49777]<td />\n\t\t$0.00\n\t[49780]<td />\n\t\t$0.00\n\t[49783]<td />\n\t\t$25.00\n\t[49786]<td />\n\t\t$34.85\n\t[49789]<td />\n\t\t$0.00\n[49793]<tr title=# />\n\t[49795]<td />\n\t\tJan 17, 2023\n\t[49801]<td />\n\t[49804]<td />\n\t[49807]<td />\n\t\t$188.00\n\t[49810]<td />\n\t\t$0.00\n\t[49813]<td />\n\t\t$0.00\n\t[49816]<td />\n\t\t$0.00\n\t[49819]<td />\n\t\t$20.00\n\t[49822]<td />\n\t\t$42.00\n\t[49825]<td />\n\t\t$0.00\n[49829]<tr title=# />\n\t[49831]<td />\n\t\tJan 23, 2023\n\t[49837]<td />\n\t[49840]<td />\n\t[49843]<td />\n\t\t$121.00\n\t[49846]<td />\n\t\t$0.00\n\t[49849]<td />\n\t\t$0.00\n\t[49852]<td />\n\t\t$0.00\n\t[49855]<td />\n\t\t$15.00\n\t[49858]<td />\n\t\t$0.00\n\t[49861]<td />\n\t\t$0.00\n[49865]<tr title=# />\n\t[49867]<td />\n\t\tJan 24, 2023\n\t[49873]<td />\n\t[49876]<td />\n\t[49879]<td />\n\t\t$43.40\n\t[49882]<td />\n\t\t$0.00\n\t[49885]<td />\n\t\t$0.00\n\t[49888]<td />\n\t\t$0.00\n\t[49891]<td />\n\t\t$5.00\n\t[49894]<td />\n\t\t$0.00\n\t[49897]<td />\n\t\t$0.00\n*[49901]<tr title=# />\n\t*[49903]<td />\n\t\tJan 28, 2023\n\t*[49909]<td />\n\t*[49912]<td />\n\t*[49915]<td />\n\t\t$215.80\n\t*[49918]<td />\n\t\t$0.00\n\t*[49921]<td />\n\t\t$0.00\n\t*[49924]<td />\n\t\t$0.00\n\t*[49927]<td />\n\t\t$20.00\n\t*[49930]<td />\n\t\t$0.00\n\t*[49933]<td />\n\t\t$0.00\n*[49937]<tr title=# />\n\t*[49939]<td />\n\t\tFeb 1, 2023\n\t*[49945]<td />\n\t*[49948]<td />\n\t*[49951]<td />\n\t\t$29.00\n\t*[49954]<td />\n\t\t$0.00\n\t*[49957]<td />\n\t\t$0.00\n\t*[49960]<td />\n\t\t$0.00\n\t*[49963]<td />\n\t\t$5.00\n\t*[49966]<td />\n\t\t$0.00\n\t*[49969]<td />\n\t\t$0.00\n*[49973]<tr title=# />\n\t*[49975]<td />\n\t\tFeb 3, 2023\n\t*[49981]<td />\n\t*[49984]<td />\n\t*[49987]<td />\n\t\t$106.00\n\t*[49990]<td />\n\t\t$0.00\n\t*[49993]<td />\n\t\t$0.00\n\t*[49996]<td />\n\t\t$0.00\n\t*[49999]<td />\n\t\t$15.00\n\t*[50002]<td />\n\t\t$0.00\n\t*[50005]<td />\n\t\t$0.00\n*[50009]<tr title=# />\n\t*[50011]<td />\n\t\tFeb 7, 2023\n\t*[50017]<td />\n\t*[50020]<td />\n\t*[50023]<td />\n\t\t$29.00\n\t*[50026]<td />\n\t\t$0.00\n\t*[50029]<td />\n\t\t$0.00\n\t*[50032]<td />\n\t\t$0.00\n\t*[50035]<td />\n\t\t$5.00\n\t*[50038]<td />\n\t\t$0.00\n\t*[50041]<td />\n\t\t$0.00\n*[50045]<tr title=# />\n\t*[50047]<td />\n\t\tFeb 10, 2023\n\t*[50053]<td />\n\t*[50056]<td />\n\t*[50059]<td />\n\t\t$107.00\n\t*[50062]<td />\n\t\t$0.00\n\t*[50065]<td />\n\t\t$0.00\n\t*[50068]<td />\n\t\t$0.00\n\t*[50071]<td />\n\t\t$10.00\n\t*[50074]<td />\n\t\t$0.00\n\t*[50077]<td />\n\t\t$0.00\n*[50081]<tr title=# />\n\t*[50083]<td />\n\t\tFeb 11, 2023\n\t*[50089]<td />\n\t*[50092]<td />\n\t*[50095]<td />\n\t\t$179.00\n\t*[50098]<td />\n\t\t$0.00\n\t*[50101]<td />\n\t\t$0.00\n\t*[50104]<td />\n\t\t$0.00\n\t*[50107]<td />\n\t\t$15.00\n\t*[50110]<td />\n\t\t$0.00\n\t*[50113]<td />\n\t\t$0.00\n*[50117]<tr title=# />\n\t*[50119]<td />\n\t\tFeb 16, 2023\n\t*[50125]<td />\n\t*[50128]<td />\n\t*[50131]<td />\n\t\t$181.00\n\t*[50134]<td />\n\t\t$0.00\n\t*[50137]<td />\n\t\t$0.00\n\t*[50140]<td />\n\t\t$0.00\n\t*[50143]<td />\n\t\t$15.00\n\t*[50146]<td />\n\t\t$0.00\n\t*[50149]<td />\n\t\t$0.00\n*[50153]<tr title=# />\n\t*[50155]<td />\n\t\tFeb 25, 2023\n\t*[50161]<td />\n\t*[50164]<td />\n\t*[50167]<td />\n\t\t$118.00\n\t*[50170]<td />\n\t\t$0.00\n\t*[50173]<td />\n\t\t$0.00\n\t*[50176]<td />\n\t\t$0.00\n\t*[50179]<td />\n\t\t$15.00\n\t*[50182]<td />\n\t\t$0.00\n\t*[50185]<td />\n\t\t$0.00\n*[50203]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n*[50213]<a id=footer_privacy />\n\tPrivacy Policy\n*[50216]<a id=footer_account_activity />\n\tAccount Activity\n*[50219]<a id=footer_bug_tracking />\n\tReport an Issue",
+    "cmvwb3j0x3r5cgu9y3jlyxrlzf9hdf9vcmrlcizwzxjpb2rfdhlwzt1kyxkmznjvbt0xjtjgmsuyrjizjnrvptilmkyyocuyrjizjnnob3dfb3jkzxjfc3rhdhvzzxm9mczzag93x2vtchr5x3jvd3m9mczzag93x2fjdhvhbf9jb2x1bw5zpta=_3": "[48365]<a />\n[48373]<li id=menu-magento-backend-dashboard role=menu-item />\n\t[48374]<a />\n\t\tDashboard\n[48379]<li id=menu-magento-sales-sales role=menu-item />\n\t[48252]<a />\n\t\tSales\n[48422]<li id=menu-magento-catalog-catalog role=menu-item />\n\t[48253]<a />\n\t\tCatalog\n[48445]<li id=menu-magento-customer-customer role=menu-item />\n\t[48254]<a />\n\t\tCustomers\n[48470]<li id=menu-magento-backend-marketing role=menu-item />\n\t[48255]<a />\n\t\tMarketing\n[48555]<li id=menu-magento-backend-content role=menu-item />\n\t[48256]<a />\n\t\tContent\n[48614]<li id=menu-magento-reports-report role=menu-item />\n\t[48257]<a />\n\t\tReports\n[48775]<li id=menu-magento-backend-stores role=menu-item />\n\t[48258]<a />\n\t\tStores\n[48871]<li id=menu-magento-backend-system role=menu-item />\n\t[48259]<a />\n\t\tSystem\n[48976]<li id=menu-magento-marketplace-partners role=menu-item />\n\t[48977]<a />\n\t\tFind Partners & Extensions\nOrders Report\n[49039]<a title=My Account />\n\tadmin\n[49077]<a title=Notifications />\n[49082]<div />\n\t[48240]<form id=form-search />\n\t\t[49085]<div />\n\t\t\t[48241]<input type=text id=search-global autocomplete=off />\n[48264]<button title=Show Report id=filter_form_submit />\n\tShow Report\nFor accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\nLast updated: Aug 31, 2026, 12:00:01 AM. To refresh last day's\n*[49190]<a />\n\tstatistics\n, click\n*[49193]<a />\n\there\n[48251]<form id=filter_form />\n\tFilter\n\tDate Used\n\t*[48242]<select id=sales_report_report_type name=report_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Order Created|Order Updated) />\n\tThe Order Updated report is created in real time and does not require a refresh.\n\tPeriod\n\t*[48243]<select title=Period id=sales_report_period_type name=period_type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Day|Month|Year) />\n\tFrom\n\t[48244]<input title=From type=text id=sales_report_from name=from value=1/1/23 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[50472]<button />\n\t\t[50475]<span />\n\t\t\tundefined\n\tTo\n\t[48245]<input title=To type=text id=sales_report_to name=to value=2/28/23 placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy required=true />\n\t[50478]<button />\n\t\t[50481]<span />\n\t\t\tundefined\n\tOrder Status\n\t*[48246]<select id=sales_report_show_order_statuses name=show_order_statuses expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Any|Specified,format=numeric) />\n\tApplies to Any of the Specified Order Statuses except canceled orders\n\tEmpty Rows\n\t*[48248]<select title=Empty Rows id=sales_report_show_empty_rows name=show_empty_rows expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\n\tShow Actual Values\n\t*[48249]<select id=sales_report_show_actual_columns name=show_actual_columns expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Yes|No,format=numeric) />\nExport to:\n*[48250]<select id=id_4hXfBG2oPWWhvcN9DpH42vmc5rU8odFa_export expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=CSV|Excel XML,format=date/path format) />\n[48265]<button title=Export id=id_2G3zZPCh748blKWduLlIQZK3DZXMkDjc />\n\tExport\n18\nrecords found\nInterval\nOrders\nSales Items\nSales Total\nInvoiced\nRefunded\nSales Tax\nSales Shipping\nSales Discount\nCanceled\n[49505]<tr />\n\tTotal\n\t19\n\t63\n\t$2,809.23\n\t$0.00\n\t$0.00\n\t$0.00\n\t$315.00\n\t$217.61\n\t$0.00\n[49541]<tr title=# />\n\t[49543]<td />\n\t\tJan 2, 2023\n\t[49549]<td />\n\t[49552]<td />\n\t[49555]<td />\n\t\t$196.20\n\t[49558]<td />\n\t\t$0.00\n\t[49561]<td />\n\t\t$0.00\n\t[49564]<td />\n\t\t$0.00\n\t[49567]<td />\n\t\t$20.00\n\t[49570]<td />\n\t\t$0.00\n\t[49573]<td />\n\t\t$0.00\n[49577]<tr title=# />\n\t[49579]<td />\n\t\tJan 3, 2023\n\t[49585]<td />\n\t[49588]<td />\n\t[49591]<td />\n\t\t$202.39\n\t[49594]<td />\n\t\t$0.00\n\t[49597]<td />\n\t\t$0.00\n\t[49600]<td />\n\t\t$0.00\n\t[49603]<td />\n\t\t$20.00\n\t[49606]<td />\n\t\t$45.60\n\t[49609]<td />\n\t\t$0.00\n[49613]<tr title=# />\n\t[49615]<td />\n\t\tJan 6, 2023\n\t[49621]<td />\n\t[49624]<td />\n\t[49627]<td />\n\t\t$215.00\n\t[49630]<td />\n\t\t$0.00\n\t[49633]<td />\n\t\t$0.00\n\t[49636]<td />\n\t\t$0.00\n\t[49639]<td />\n\t\t$25.00\n\t[49642]<td />\n\t\t$0.00\n\t[49645]<td />\n\t\t$0.00\n[49649]<tr title=# />\n\t[49651]<td />\n\t\tJan 9, 2023\n\t[49657]<td />\n\t[49660]<td />\n\t[49663]<td />\n\t\t$238.40\n\t[49666]<td />\n\t\t$0.00\n\t[49669]<td />\n\t\t$0.00\n\t[49672]<td />\n\t\t$0.00\n\t[49675]<td />\n\t\t$35.00\n\t[49678]<td />\n\t\t$0.00\n\t[49681]<td />\n\t\t$0.00\n[49685]<tr title=# />\n\t[49687]<td />\n\t\tJan 12, 2023\n\t[49693]<td />\n\t[49696]<td />\n\t[49699]<td />\n\t\t$226.60\n\t[49702]<td />\n\t\t$0.00\n\t[49705]<td />\n\t\t$0.00\n\t[49708]<td />\n\t\t$0.00\n\t[49711]<td />\n\t\t$25.00\n\t[49714]<td />\n\t\t$50.40\n\t[49717]<td />\n\t\t$0.00\n[49721]<tr title=# />\n\t[49723]<td />\n\t\tJan 13, 2023\n\t[49729]<td />\n\t[49732]<td />\n\t[49735]<td />\n\t\t$204.04\n\t[49738]<td />\n\t\t$0.00\n\t[49741]<td />\n\t\t$0.00\n\t[49744]<td />\n\t\t$0.00\n\t[49747]<td />\n\t\t$25.00\n\t[49750]<td />\n\t\t$44.76\n\t[49753]<td />\n\t\t$0.00\n[49757]<tr title=# />\n\t[49759]<td />\n\t\tJan 16, 2023\n\t[49765]<td />\n\t[49768]<td />\n\t[49771]<td />\n\t\t$209.40\n\t[49774]<td />\n\t\t$0.00\n\t[49777]<td />\n\t\t$0.00\n\t[49780]<td />\n\t\t$0.00\n\t[49783]<td />\n\t\t$25.00\n\t[49786]<td />\n\t\t$34.85\n\t[49789]<td />\n\t\t$0.00\n[49793]<tr title=# />\n\t[49795]<td />\n\t\t*[49797]<span />\n\t\t\tJan 17, 2023\n\t[49801]<td />\n\t[49804]<td />\n\t[49807]<td />\n\t\t$188.00\n\t[49810]<td />\n\t\t$0.00\n\t[49813]<td />\n\t\t$0.00\n\t[49816]<td />\n\t\t$0.00\n\t[49819]<td />\n\t\t$20.00\n\t[49822]<td />\n\t\t$42.00\n\t[49825]<td />\n\t\t$0.00\n[49829]<tr title=# />\n\t[49831]<td />\n\t\tJan 23, 2023\n\t[49837]<td />\n\t[49840]<td />\n\t[49843]<td />\n\t\t$121.00\n\t[49846]<td />\n\t\t$0.00\n\t[49849]<td />\n\t\t$0.00\n\t[49852]<td />\n\t\t$0.00\n\t[49855]<td />\n\t\t$15.00\n\t[49858]<td />\n\t\t$0.00\n\t[49861]<td />\n\t\t$0.00\n[49865]<tr title=# />\n\t[49867]<td />\n\t\tJan 24, 2023\n\t[49873]<td />\n\t[49876]<td />\n\t[49879]<td />\n\t\t$43.40\n\t[49882]<td />\n\t\t$0.00\n\t[49885]<td />\n\t\t$0.00\n\t[49888]<td />\n\t\t$0.00\n\t[49891]<td />\n\t\t$5.00\n\t[49894]<td />\n\t\t$0.00\n\t[49897]<td />\n\t\t$0.00\n[49901]<tr title=# />\n\t[49903]<td />\n\t\tJan 28, 2023\n\t[49909]<td />\n\t[49912]<td />\n\t[49915]<td />\n\t\t$215.80\n\t[49918]<td />\n\t\t$0.00\n\t[49921]<td />\n\t\t$0.00\n\t[49924]<td />\n\t\t$0.00\n\t[49927]<td />\n\t\t$20.00\n\t[49930]<td />\n\t\t$0.00\n\t[49933]<td />\n\t\t$0.00\n[49937]<tr title=# />\n\t[49939]<td />\n\t\tFeb 1, 2023\n\t[49945]<td />\n\t[49948]<td />\n\t[49951]<td />\n\t\t$29.00\n\t[49954]<td />\n\t\t$0.00\n\t[49957]<td />\n\t\t$0.00\n\t[49960]<td />\n\t\t$0.00\n\t[49963]<td />\n\t\t$5.00\n\t[49966]<td />\n\t\t$0.00\n\t[49969]<td />\n\t\t$0.00\n[49973]<tr title=# />\n\t[49975]<td />\n\t\tFeb 3, 2023\n\t[49981]<td />\n\t[49984]<td />\n\t[49987]<td />\n\t\t$106.00\n\t[49990]<td />\n\t\t$0.00\n\t[49993]<td />\n\t\t$0.00\n\t[49996]<td />\n\t\t$0.00\n\t[49999]<td />\n\t\t$15.00\n\t[50002]<td />\n\t\t$0.00\n\t[50005]<td />\n\t\t$0.00\n[50009]<tr title=# />\n\t[50011]<td />\n\t\tFeb 7, 2023\n\t[50017]<td />\n\t[50020]<td />\n\t[50023]<td />\n\t\t$29.00\n\t[50026]<td />\n\t\t$0.00\n\t[50029]<td />\n\t\t$0.00\n\t[50032]<td />\n\t\t$0.00\n\t[50035]<td />\n\t\t$5.00\n\t[50038]<td />\n\t\t$0.00\n\t[50041]<td />\n\t\t$0.00\n[50045]<tr title=# />\n\t[50047]<td />\n\t\tFeb 10, 2023\n\t[50053]<td />\n\t[50056]<td />\n\t[50059]<td />\n\t\t$107.00\n\t[50062]<td />\n\t\t$0.00\n\t[50065]<td />\n\t\t$0.00\n\t[50068]<td />\n\t\t$0.00\n\t[50071]<td />\n\t\t$10.00\n\t[50074]<td />\n\t\t$0.00\n\t[50077]<td />\n\t\t$0.00\n[50081]<tr title=# />\n\t[50083]<td />\n\t\tFeb 11, 2023\n\t[50089]<td />\n\t[50092]<td />\n\t[50095]<td />\n\t\t$179.00\n\t[50098]<td />\n\t\t$0.00\n\t[50101]<td />\n\t\t$0.00\n\t[50104]<td />\n\t\t$0.00\n\t[50107]<td />\n\t\t$15.00\n\t[50110]<td />\n\t\t$0.00\n\t[50113]<td />\n\t\t$0.00\n[50117]<tr title=# />\n\t[50119]<td />\n\t\tFeb 16, 2023\n\t[50125]<td />\n\t[50128]<td />\n\t[50131]<td />\n\t\t$181.00\n\t[50134]<td />\n\t\t$0.00\n\t[50137]<td />\n\t\t$0.00\n\t[50140]<td />\n\t\t$0.00\n\t[50143]<td />\n\t\t$15.00\n\t[50146]<td />\n\t\t$0.00\n\t[50149]<td />\n\t\t$0.00\n[50153]<tr title=# />\n\t[50155]<td />\n\t\tFeb 25, 2023\n\t[50161]<td />\n\t[50164]<td />\n\t[50167]<td />\n\t\t$118.00\n\t[50170]<td />\n\t\t$0.00\n\t[50173]<td />\n\t\t$0.00\n\t[50176]<td />\n\t\t$0.00\n\t[50179]<td />\n\t\t$15.00\n\t[50182]<td />\n\t\t$0.00\n\t[50185]<td />\n\t\t$0.00\n[50203]<a title=Magento />\nCopyright © 2026 Magento Commerce Inc. All rights reserved.\nMagento\nver. 2.4.6\n[50213]<a id=footer_privacy />\n\tPrivacy Policy\n[50216]<a id=footer_account_activity />\n\tAccount Activity\n[50219]<a id=footer_bug_tracking />\n\tReport an Issue"
+  }
+}

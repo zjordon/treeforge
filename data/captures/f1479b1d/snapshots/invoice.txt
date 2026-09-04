@@ -1,0 +1,133 @@
+[431671]<a />
+*[431679]<li id=menu-magento-backend-dashboard role=menu-item />
+	[431680]<a />
+		Dashboard
+*[431685]<li id=menu-magento-sales-sales role=menu-item />
+	[431589]<a />
+		Sales
+*[431728]<li id=menu-magento-catalog-catalog role=menu-item />
+	[431590]<a />
+		Catalog
+*[431751]<li id=menu-magento-customer-customer role=menu-item />
+	[431591]<a />
+		Customers
+*[431776]<li id=menu-magento-backend-marketing role=menu-item />
+	[431592]<a />
+		Marketing
+*[431861]<li id=menu-magento-backend-content role=menu-item />
+	[431593]<a />
+		Content
+*[431920]<li id=menu-magento-reports-report role=menu-item />
+	[431594]<a />
+		Reports
+*[432081]<li id=menu-magento-backend-stores role=menu-item />
+	[431595]<a />
+		Stores
+*[432176]<li id=menu-magento-backend-system role=menu-item />
+	[431596]<a />
+		System
+*[432281]<li id=menu-magento-marketplace-partners role=menu-item />
+	[432282]<a />
+		Find Partners & Extensions
+Invoices
+[432344]<a title=My Account />
+	admin
+[432382]<a title=Notifications />
+[432387]<div />
+	[431579]<form id=form-search />
+		[432390]<div />
+			[431580]<input type=text id=search-global autocomplete=off />
+*[432861]<button />
+	Default View
+*[432907]<button />
+	Columns
+*[433005]<button />
+	Export
+*[433030]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+*[433031]<button aria-label=Search />
+*[433039]<button />
+	Filters
+Active filters:
+Keyword:
+000000001
+*[433408]<button />
+*[433355]<button />
+	Clear all
+*[433083]<div />
+	*[433079]<button />
+		Actions
+records found
+*[433527]<div />
+	*[433529]<input type=text id=sales_order_invoice_grid.sales_order_invoice_grid.listing_top.listing_paging_sizes />
+*[433530]<button />
+	Select
+per page
+*[433101]<button title=Previous Page disabled=true />
+*[433106]<input type=number id=22 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 1
+*[433108]<button title=Next Page disabled=true />
+*[432759]<tr />
+	*[433114]<div />
+		*[433115]<input type=checkbox checked=false id=23 />
+		*[433117]<button />
+			Options
+	*[433137]<th />
+		*[433136]<span />
+			Invoice
+	*[433140]<th />
+		*[433139]<span />
+			Invoice Date
+	*[433143]<th />
+		*[433142]<span />
+			Order #
+	*[433146]<th />
+		*[433145]<span />
+			Order Date
+	*[433149]<th />
+		*[433148]<span />
+			Bill-to Name
+	*[433152]<th />
+		*[433151]<span />
+			Status
+	*[433155]<th />
+		*[433154]<span />
+			Grand Total (Base)
+	*[433158]<th />
+		*[433157]<span />
+			Grand Total (Purchased)
+	*[433161]<th />
+		*[433160]<span />
+			Action
+*[464318]<tr />
+	*[464322]<td />
+		*[464340]<label />
+			*[464338]<input type=checkbox checked=false id=idscheck1 value=1 />
+	*[464323]<td />
+		000000001
+	*[464324]<td />
+		Apr 19, 2023 12:15:45 PM
+	*[464325]<td />
+		000000001
+	*[464326]<td />
+		Apr 19, 2023 12:15:45 PM
+	*[464327]<td />
+		Veronica Costello
+	*[464328]<td />
+		Paid
+	*[464329]<td />
+		$36.39
+	*[464330]<td />
+		$36.39
+	*[464331]<td />
+		*[464372]<a />
+			View
+[432441]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[432451]<a id=footer_privacy />
+	Privacy Policy
+[432454]<a id=footer_account_activity />
+	Account Activity
+[432457]<a id=footer_bug_tracking />
+	Report an Issue

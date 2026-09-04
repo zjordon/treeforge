@@ -84,6 +84,9 @@
       <label class="muted"><input type="checkbox" id="no-llm" /> 模板模式</label>
       <button id="distill-btn">开始蒸馏</button>
     </div>
+    <div class="row" style="margin-top:.5rem">
+      <input type="text" id="task-desc" placeholder="任务描述（可选，如「上传并发布抖音视频」——存进任务级 skill 供检索）" style="flex:1" />
+    </div>
   </div>
 
   <h2>蒸馏任务</h2>
@@ -212,7 +215,7 @@
         $('skills-dir-hint').textContent = '（' + (s.skills_dir || '-') + '）';
         const hosts = s.hosts || [];
         $('skills-card').innerHTML = hosts.length
-          ? hosts.map(h => `<div class="tree-item"><span class="clickable" onclick="toggleHost('${escapeHtml(h.name)}')">▸ ${escapeHtml(h.name)}</span> <span class="muted">(${h.md_count} md)</span><div class="tree-children" id="host-${escapeHtml(h.name)}" style="display:none"></div></div>`).join('')
+          ? hosts.map(h => `<div class="tree-item"><span class="clickable" onclick="toggleHost('${escapeHtml(h.name)}')">▸ ${escapeHtml(h.name)}</span> <span class="muted">(${h.md_count} md)</span> <button class="ghost" style="font-size:.75rem;padding:.15rem .5rem" onclick="distillHost('${escapeHtml(h.name)}')">累积再蒸馏</button><div class="tree-children" id="host-${escapeHtml(h.name)}" style="display:none"></div></div>`).join('')
           : '<span class="muted">暂无蒸馏产物</span>';
       } catch (e) { $('skills-card').textContent = '失败：' + e; }
     }
@@ -269,12 +272,16 @@
       const pctTxt = (!finished && j.total > 0) ? Math.round(j.current / j.total * 100) + '%' : '';
       const err = j.error ? ` <span class="muted" title="${escapeHtml(j.error)}">⚠ ${escapeHtml(j.error.slice(0, 60))}</span>` : '';
       // done 时展开列出产出的文件（对齐旧版行为，不只是「N 文件」摘要）
+      // 双产物口径：written = 站点级三件套（INSTALL）；task_dir/task_slug = 任务级卡（跳 B）
       let result = '';
       if (j.status === 'done' && j.result) {
         const written = j.result.written || [];
-        const fileList = written.length
-          ? `<div class="tree-children"><span class="muted">产出 ${written.length} 文件 → ${escapeHtml(j.result.host_dir || '')}：</span><br>${written.map(p => `<code class="muted" style="font-size:.8rem">  ${escapeHtml(p)}</code>`).join('<br>')}</div>`
+        let fileList = written.length
+          ? `<div class="tree-children"><span class="muted">站点级 ${written.length} 文件 → ${escapeHtml(j.result.host_dir || '')}：</span><br>${written.map(p => `<code class="muted" style="font-size:.8rem">  ${escapeHtml(p)}</code>`).join('<br>')}</div>`
           : '';
+        if (j.result.task_dir) {
+          fileList += `<div class="tree-children"><span class="muted">任务级 skill（slug=${escapeHtml(j.result.task_slug || '')}）→ ${escapeHtml(j.result.task_dir)}</span></div>`;
+        }
         result = fileList;
       }
       return `<div class="job-row ${j.status}" data-job="${escapeHtml(j.job_id)}">
@@ -295,11 +302,12 @@
     $('distill-btn').addEventListener('click', async () => {
       const trace = $('trace-path').value.trim();
       const noLlm = $('no-llm').checked;
+      const taskDesc = $('task-desc').value.trim();
       if (!trace) { showToast('请填 trace 路径或从下拉选择', 'error'); return; }
       try {
         const r = await api('/api/distill', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ trace_path: trace, no_llm: noLlm })
+          body: JSON.stringify({ trace_path: trace, no_llm: noLlm, task_description: taskDesc || null })
         });
         if (!r.ok) { showToast('触发失败：' + (r.error || ''), 'error'); return; }
         showToast('已提交蒸馏 job=' + r.job_id, 'success');
@@ -307,6 +315,22 @@
         startJobPoll(r.job_id);
       } catch (e) { showToast('错误：' + e, 'error'); }
     });
+
+    // host 模式累积蒸馏：扫 captures 收集该 host 全部 trace → 多任务累积（P4）
+    window.distillHost = async function (host) {
+      const taskDesc = $('task-desc').value.trim();
+      const noLlm = $('no-llm').checked;
+      try {
+        const r = await api('/api/distill', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ host: host, no_llm: noLlm, task_description: taskDesc || null })
+        });
+        if (!r.ok) { showToast('触发失败：' + (r.error || ''), 'error'); return; }
+        showToast(`已提交 ${host} 累积蒸馏（${r.traces} 份 trace）job=` + r.job_id, 'success');
+        await refreshJobs();
+        startJobPoll(r.job_id);
+      } catch (e) { showToast('错误：' + e, 'error'); }
+    };
 
     function startJobPoll(jobId) {
       if (activeJobPoll) clearInterval(activeJobPoll);
@@ -317,7 +341,10 @@
           if (r.ok && (r.job.status === 'done' || r.job.status === 'failed')) {
             clearInterval(activeJobPoll); activeJobPoll = null;
             if (r.job.status === 'done') {
-              showToast('蒸馏完成：' + ((r.job.result || {}).written || []).length + ' 文件', 'success');
+              const res = r.job.result || {};
+              const siteN = (res.written || []).length;
+              const taskMsg = res.task_dir ? ` + 任务卡「${res.task_slug}」` : '';
+              showToast(`蒸馏完成：站点级 ${siteN} 文件${taskMsg}`, 'success');
             } else {
               showToast('蒸馏失败：' + (r.job.error || ''), 'error');
             }

@@ -1,0 +1,189 @@
+[629309]<a />
+*[629317]<li id=menu-magento-backend-dashboard role=menu-item />
+	[629215]<a />
+		Dashboard
+*[629322]<li id=menu-magento-sales-sales role=menu-item />
+	[629224]<a />
+		Sales
+*[629365]<li id=menu-magento-catalog-catalog role=menu-item />
+	[629225]<a />
+		Catalog
+*[629388]<li id=menu-magento-customer-customer role=menu-item />
+	[629226]<a />
+		Customers
+*[629413]<li id=menu-magento-backend-marketing role=menu-item />
+	[629227]<a />
+		Marketing
+*[629498]<li id=menu-magento-backend-content role=menu-item />
+	[629228]<a />
+		Content
+*[629557]<li id=menu-magento-reports-report role=menu-item />
+	[629229]<a />
+		Reports
+*[629718]<li id=menu-magento-backend-stores role=menu-item />
+	[629230]<a />
+		Stores
+*[629814]<li id=menu-magento-backend-system role=menu-item />
+	[629231]<a />
+		System
+*[629918]<li id=menu-magento-marketplace-partners role=menu-item />
+	[629919]<a />
+		Find Partners & Extensions
+Reviews
+[629981]<a title=My Account />
+	admin
+[630019]<a title=Notifications />
+[630024]<div />
+	[629191]<form id=form-search />
+		[630027]<div />
+			[629192]<input type=text id=search-global autocomplete=off />
+[629232]<button title=New Review id=add />
+	New Review
+[629233]<button title=Search id=id_fKUzDY8BwZVNLb6B1RVTRU7hRKE9qoSL />
+	Search
+[629234]<button title=Reset Filter id=id_96k7qpxhXHS1qxs8tigWIZD0dwmB4xV4 />
+	Reset Filter
+*[629199]<form id=reviewGrid_massaction-form />
+	*[629200]<select id=reviewGrid_massaction-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Actions|Delete|Update Status) />
+[630160]<div />
+	*[629194]<select id=reviewGrid_massaction-mass-select expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Select All|Unselect All|Select Visible|Unselect Visible) />
+records found
+*[629195]<select id=reviewGrid_page-limit name=limit expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=5,options=20|30|50|100,format=numeric) />
+per page
+[630228]<button />
+[629196]<input type=text id=reviewGrid_page-current name=page value=1 />
+of
+[630245]<button />
+[630262]<tr />
+	[630267]<th />
+		[630269]<span />
+			ID
+	[630272]<th />
+		[630273]<span />
+			Created
+	[630276]<th />
+		[630277]<span />
+			Status
+	[630280]<th />
+		[630281]<span />
+			Title
+	[630284]<th />
+		[630285]<span />
+			Nickname
+	[630288]<th />
+		[630289]<span />
+			Review
+	Visibility
+	[630296]<th />
+		[630297]<span />
+			Type
+	[630300]<th />
+		[630301]<span />
+			Product
+	[630304]<th />
+		[630305]<span />
+			SKU
+	Action
+[630313]<tr />
+	[630315]<td />
+		*[629201]<select id=reviewGrid_filter_massaction name=massaction expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Any|Yes|No) />
+	[630326]<td />
+		[629202]<input type=text id=reviewGrid_filter_review_id name=review_id />
+	[630330]<td />
+		[629203]<input type=text id=reviewGrid_filter_created_athJ3QuWkVaxQzfZcke3qEtOhzPXRO1j7G_from name=created_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[630753]<button />
+			*[630755]<span />
+				undefined
+		[629204]<input type=text id=reviewGrid_filter_created_athJ3QuWkVaxQzfZcke3qEtOhzPXRO1j7G_to name=created_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+		*[630760]<button />
+			*[630762]<span />
+				undefined
+	[630340]<td />
+		*[629205]<select id=reviewGrid_filter_status name=status expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Approved|Pending|Not Approved,format=numeric) />
+	[630351]<td />
+		[629206]<input type=text id=reviewGrid_filter_title name=title />
+	[630355]<td />
+		[629207]<input type=text id=reviewGrid_filter_nickname name=nickname />
+	[630359]<td />
+		[629208]<input type=text id=reviewGrid_filter_detail name=detail />
+	[630363]<td />
+		*[629209]<select name=visible_in expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Default Store View) />
+	[630372]<td />
+		*[629210]<select id=reviewGrid_filter_type name=type expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=3,options=Administrator|Customer|Guest,format=numeric) />
+	[630383]<td />
+		[629211]<input type=text id=reviewGrid_filter_name name=name value=Circe />
+	[630387]<td />
+		[629212]<input type=text id=reviewGrid_filter_sku name=sku />
+	[630391]<td />
+[630398]<tr title=http://localhost:7780/admin/review/product/edit/id/353/ />
+	[630400]<td />
+		[629197]<input type=checkbox checked=false id=id_522 name=reviews value=353 />
+	[630407]<td />
+		353
+	[630410]<td />
+		Apr 24, 2023, 2:55:10 PM
+	[630413]<td />
+		Pending
+	[630416]<td />
+		Bad!
+	[630419]<td />
+		Hannah Lim
+	[630422]<td />
+		I was really disappointed with the Circe Hooded...
+	[630425]<td />
+		Main Website
+		*[630427]<br />
+		Main Website Store
+		*[630429]<br />
+		Default Store View
+		*[630431]<br />
+	[630434]<td />
+		Guest
+	[630437]<td />
+		Circe Hooded Ice Fleece
+	[630440]<td />
+		WH12
+	[630443]<td />
+		[630445]<a id=idrDii7I3xAh />
+			Edit
+[630450]<tr title=http://localhost:7780/admin/review/product/edit/id/352/ />
+	[630452]<td />
+		[629198]<input type=checkbox checked=false id=id_381 name=reviews value=352 />
+	[630459]<td />
+		352
+	[630462]<td />
+		Apr 24, 2023, 2:53:49 PM
+	[630465]<td />
+		Pending
+	[630468]<td />
+		Good but not perfect
+	[630471]<td />
+		customer
+	[630474]<td />
+		I recently purchased the Circe Hooded Ice Fleec...
+	[630477]<td />
+		Main Website
+		*[630479]<br />
+		Main Website Store
+		*[630481]<br />
+		Default Store View
+		*[630483]<br />
+	[630486]<td />
+		Guest
+	[630489]<td />
+		Circe Hooded Ice Fleece
+	[630492]<td />
+		WH12
+	[630495]<td />
+		[630497]<a id=idAHbbP9DY0E />
+			Edit
+[630513]<a title=Magento />
+Copyright © 2026 Magento Commerce Inc. All rights reserved.
+Magento
+ver. 2.4.6
+[630523]<a id=footer_privacy />
+	Privacy Policy
+[630526]<a id=footer_account_activity />
+	Account Activity
+[630529]<a id=footer_bug_tracking />
+	Report an Issue

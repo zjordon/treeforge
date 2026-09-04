@@ -1,0 +1,739 @@
+[56900]<a />
+[56908]<li id=menu-magento-backend-dashboard role=menu-item />
+	[56909]<a />
+		Dashboard
+[56914]<li id=menu-magento-sales-sales role=menu-item />
+	[56816]<a />
+		Sales
+[56957]<li id=menu-magento-catalog-catalog role=menu-item />
+	[56817]<a />
+		Catalog
+[56980]<li id=menu-magento-customer-customer role=menu-item />
+	[56818]<a />
+		Customers
+[57005]<li id=menu-magento-backend-marketing role=menu-item />
+	[56819]<a />
+		Marketing
+[57090]<li id=menu-magento-backend-content role=menu-item />
+	[56820]<a />
+		Content
+[57149]<li id=menu-magento-reports-report role=menu-item />
+	[56821]<a />
+		Reports
+[57309]<li id=menu-magento-backend-stores role=menu-item />
+	[56822]<a />
+		Stores
+[57404]<li id=menu-magento-backend-system role=menu-item />
+	[56823]<a />
+		System
+[57509]<li id=menu-magento-marketplace-partners role=menu-item />
+	[57510]<a />
+		Find Partners & Extensions
+Products
+[57572]<a title=My Account />
+	admin
+[57610]<a title=Notifications />
+[57615]<div />
+	[56806]<form id=form-search />
+		[57618]<div />
+			[56807]<input type=text id=search-global autocomplete=off />
+[57644]<div title=Add Product id=add_new_product />
+	[57648]<button title=Add Product id=add_new_product-button />
+		Add Product
+	[57654]<button title=Add Product aria-label=Add product of type />
+[58216]<button />
+	Default View
+[58235]<button />
+	Columns
+[58459]<button />
+	Filters
+*[60223]<legend />
+	ID
+from
+*[61322]<input type=text id=ERXCPM8 name=entity_id[from] maxlength=255 />
+to
+*[61387]<input type=text id=II4T42F name=entity_id[to] maxlength=255 />
+*[60229]<legend />
+	Price
+from
+*[61452]<input type=text id=GYCJLT0 name=price[from] maxlength=255 />
+to
+*[61517]<input type=text id=T98X1L0 name=price[to] maxlength=255 />
+Quantity
+from
+*[61582]<input type=text id=PHS74DC name=qty[from] maxlength=255 autocomplete=list />
+to
+*[61647]<input type=text id=SQ57YUG name=qty[to] maxlength=255 />
+Last Updated At
+from
+*[61834]<input type=text id=L3ABH2W name=updated_at[from] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[61841]<button />
+	*[61844]<span />
+		undefined
+to
+*[61836]<input type=text id=UMDGNPG name=updated_at[to] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+*[69193]<button />
+	*[69196]<span />
+		undefined
+Store View
+*[60292]<select id=MH4PFXT name=store_id aria-label=notice-MH4PFXT expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=All Store Views|Default Store View) />
+Asset
+*[60121]<div />
+	*[60122]<div />
+		Select...
+Name
+*[61250]<input type=text id=KIQK6FA name=name maxlength=255 />
+Type
+*[60313]<select id=PLYMF9D name=type_id aria-label=notice-PLYMF9D expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=6,options=Simple Product|Virtual Product|Bundle Product|Downloadable Product) />
+Attribute Set
+*[60341]<select id=HL5CJ0V name=attribute_set_id aria-label=notice-HL5CJ0V expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=8,options=Default|Top|Bottom|Gear,format=numeric) />
+SKU
+*[61252]<input type=text id=NC3RGBP name=sku maxlength=255 />
+Visibility
+*[60375]<select id=CIFLUHV name=visibility aria-label=notice-CIFLUHV expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />
+Status
+*[60397]<select id=MDNV30V name=status aria-label=notice-MDNV30V expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=Enabled|Disabled,format=numeric) />
+*[58467]<button />
+	Cancel
+*[58469]<button />
+	Apply Filters
+*[58484]<input type=text id=fulltext placeholder=Search by keyword aria-label=Search by keyword />
+[58485]<button aria-label=Search />
+[58492]<button title=Select Items />
+	Actions
+2040
+records found
+[59402]<div />
+	*[59404]<input type=text id=product_listing.product_listing.listing_top.listing_paging_sizes />
+[59405]<button />
+	Select
+per page
+[58548]<button title=Previous Page disabled=true />
+*[58553]<input type=number id=38 value=1 valuemin=0 valuemax=0 valuetext=1 compound_components=(name=Increment,role=button),(name=Decrement,role=button),(name=Value,role=textbox) />
+of 11
+[58555]<button title=Next Page />
+*[58087]<tr />
+	*[58841]<div />
+		[58842]<input type=checkbox checked=false id=77 />
+		[58844]<button />
+			Options
+	[58864]<th />
+		*[58863]<span />
+			ID
+	[58867]<th />
+		Thumbnail
+	[58870]<th />
+		*[58869]<span />
+			Name
+	[58873]<th />
+		*[58872]<span />
+			Type
+	[58876]<th />
+		*[58875]<span />
+			Attribute Set
+	[58879]<th />
+		*[58878]<span />
+			SKU
+	[58882]<th />
+		*[58881]<span />
+			Price
+	[58885]<th />
+		*[58884]<span />
+			Quantity
+	[58888]<th />
+		Salable Quantity
+	[58891]<th />
+		*[58890]<span />
+			Visibility
+	[58894]<th />
+		*[58893]<span />
+			Status
+	[58897]<th />
+		*[58896]<span />
+			Websites
+	[58900]<th />
+		*[58899]<span />
+			Last Updated At
+	[58903]<th />
+		*[58902]<span />
+			Action
+*[79652]<tr />
+	*[80251]<td />
+		*[83263]<label />
+			*[83261]<input type=checkbox checked=false id=idscheck1819 value=1819 />
+	*[80252]<td />
+		*[83861]<div />
+			1819
+	*[80253]<td />
+		*[87870]<span />
+			*[87868]<span />
+				*[87869]<img alt=Karmen Yoga Pant />
+	*[80254]<td />
+		*[88475]<div />
+			Karmen Yoga Pant
+	*[80255]<td />
+		*[83862]<div />
+			Configurable Product
+	*[80256]<td />
+		*[83863]<div />
+			Bottom
+	*[80257]<td />
+		*[88476]<div />
+			WP01
+	*[80258]<td />
+		*[83864]<div />
+			$39.00
+	*[80259]<td />
+		*[83865]<div />
+			0.0000
+	*[80260]<td />
+		*[88881]<div />
+			*[88875]<ul />
+	*[80261]<td />
+		*[83866]<div />
+			Catalog, Search
+	*[80262]<td />
+		*[83867]<div />
+			Enabled
+	*[80263]<td />
+		*[83868]<div />
+			Main Website
+	*[80264]<td />
+		*[83869]<div />
+			Apr 19, 2023 12:13:53 PM
+	*[80265]<td />
+		*[94540]<a aria-label=Edit Karmen Yoga Pant />
+			Edit
+*[79655]<tr />
+	*[80266]<td />
+		*[83266]<label />
+			*[83264]<input type=checkbox checked=false id=idscheck1847 value=1847 />
+	*[80267]<td />
+		*[83870]<div />
+			1847
+	*[80268]<td />
+		*[87873]<span />
+			*[87871]<span />
+				*[87872]<img alt=Sahara Leggings />
+	*[80269]<td />
+		*[88477]<div />
+			Sahara Leggings
+	*[80270]<td />
+		*[83871]<div />
+			Configurable Product
+	*[80271]<td />
+		*[83872]<div />
+			Bottom
+	*[80272]<td />
+		*[88478]<div />
+			WP05
+	*[80273]<td />
+		*[83873]<div />
+			$75.00
+	*[80274]<td />
+		*[83874]<div />
+			0.0000
+	*[80275]<td />
+		*[88907]<div />
+			*[88901]<ul />
+	*[80276]<td />
+		*[83875]<div />
+			Catalog, Search
+	*[80277]<td />
+		*[83876]<div />
+			Enabled
+	*[80278]<td />
+		*[83877]<div />
+			Main Website
+	*[80279]<td />
+		*[83878]<div />
+			Apr 19, 2023 12:13:53 PM
+	*[80280]<td />
+		*[94560]<a aria-label=Edit Sahara Leggings />
+			Edit
+*[79658]<tr />
+	*[80281]<td />
+		*[83269]<label />
+			*[83267]<input type=checkbox checked=false id=idscheck1875 value=1875 />
+	*[80282]<td />
+		*[83879]<div />
+			1875
+	*[80283]<td />
+		*[87876]<span />
+			*[87874]<span />
+				*[87875]<img alt=Carina Basic Capri />
+	*[80284]<td />
+		*[88479]<div />
+			Carina Basic Capri
+	*[80285]<td />
+		*[83880]<div />
+			Configurable Product
+	*[80286]<td />
+		*[83881]<div />
+			Bottom
+	*[80287]<td />
+		*[88480]<div />
+			WP09
+	*[80288]<td />
+		*[83882]<div />
+			$51.00
+	*[80289]<td />
+		*[83883]<div />
+			0.0000
+	*[80290]<td />
+		*[88933]<div />
+			*[88927]<ul />
+	*[80291]<td />
+		*[83884]<div />
+			Catalog, Search
+	*[80292]<td />
+		*[83885]<div />
+			Enabled
+	*[80293]<td />
+		*[83886]<div />
+			Main Website
+	*[80294]<td />
+		*[83887]<div />
+			Apr 19, 2023 12:13:54 PM
+	*[80295]<td />
+		*[94580]<a aria-label=Edit Carina Basic Capri />
+			Edit
+*[79661]<tr />
+	*[80296]<td />
+		*[83272]<label />
+			*[83270]<input type=checkbox checked=false id=idscheck1903 value=1903 />
+	*[80297]<td />
+		*[83888]<div />
+			1903
+	*[80298]<td />
+		*[87879]<span />
+			*[87877]<span />
+				*[87878]<img alt=Portia Capri />
+	*[80299]<td />
+		*[88481]<div />
+			Portia Capri
+	*[80300]<td />
+		*[83889]<div />
+			Configurable Product
+	*[80301]<td />
+		*[83890]<div />
+			Bottom
+	*[80302]<td />
+		*[88482]<div />
+			WP13
+	*[80303]<td />
+		*[83891]<div />
+			$49.00
+	*[80304]<td />
+		*[83892]<div />
+			0.0000
+	*[80305]<td />
+		*[88959]<div />
+			*[88953]<ul />
+	*[80306]<td />
+		*[83893]<div />
+			Catalog, Search
+	*[80307]<td />
+		*[83894]<div />
+			Enabled
+	*[80308]<td />
+		*[83895]<div />
+			Main Website
+	*[80309]<td />
+		*[83896]<div />
+			Apr 19, 2023 12:13:54 PM
+	*[80310]<td />
+		*[94600]<a aria-label=Edit Portia Capri />
+			Edit
+*[79664]<tr />
+	*[80311]<td />
+		*[83275]<label />
+			*[83273]<input type=checkbox checked=false id=idscheck1919 value=1919 />
+	*[80312]<td />
+		*[83897]<div />
+			1919
+	*[80313]<td />
+		*[87882]<span />
+			*[87880]<span />
+				*[87881]<img alt=Fiona Fitness Short />
+	*[80314]<td />
+		*[88483]<div />
+			Fiona Fitness Short
+	*[80315]<td />
+		*[83898]<div />
+			Configurable Product
+	*[80316]<td />
+		*[83899]<div />
+			Bottom
+	*[80317]<td />
+		*[88484]<div />
+			WSH01
+	*[80318]<td />
+		*[83900]<div />
+			$29.00
+	*[80319]<td />
+		*[83901]<div />
+			0.0000
+	*[80320]<td />
+		*[88985]<div />
+			*[88979]<ul />
+	*[80321]<td />
+		*[83902]<div />
+			Catalog, Search
+	*[80322]<td />
+		*[83903]<div />
+			Enabled
+	*[80323]<td />
+		*[83904]<div />
+			Main Website
+	*[80324]<td />
+		*[83905]<div />
+			Apr 19, 2023 12:13:54 PM
+	*[80325]<td />
+		*[94620]<a aria-label=Edit Fiona Fitness Short />
+			Edit
+*[79667]<tr />
+	*[80326]<td />
+		*[83278]<label />
+			*[83276]<input type=checkbox checked=false id=idscheck1935 value=1935 />
+	*[80327]<td />
+		*[83906]<div />
+			1935
+	*[80328]<td />
+		*[87885]<span />
+			*[87883]<span />
+				*[87884]<img alt=Maxima Drawstring Short />
+	*[80329]<td />
+		*[88485]<div />
+			Maxima Drawstring Short
+	*[80330]<td />
+		*[83907]<div />
+			Configurable Product
+	*[80331]<td />
+		*[83908]<div />
+			Bottom
+	*[80332]<td />
+		*[88486]<div />
+			WSH02
+	*[80333]<td />
+		*[83909]<div />
+			$28.00
+	*[80334]<td />
+		*[83910]<div />
+			0.0000
+	*[80335]<td />
+		*[89011]<div />
+			*[89005]<ul />
+	*[80336]<td />
+		*[83911]<div />
+			Catalog, Search
+	*[80337]<td />
+		*[83912]<div />
+			Enabled
+	*[80338]<td />
+		*[83913]<div />
+			Main Website
+	*[80339]<td />
+		*[83914]<div />
+			Apr 19, 2023 12:13:54 PM
+	*[80340]<td />
+		*[94640]<a aria-label=Edit Maxima Drawstring Short />
+			Edit
+*[79670]<tr />
+	*[80341]<td />
+		*[83281]<label />
+			*[83279]<input type=checkbox checked=false id=idscheck1951 value=1951 />
+	*[80342]<td />
+		*[83915]<div />
+			1951
+	*[80343]<td />
+		*[87888]<span />
+			*[87886]<span />
+				*[87887]<img alt=Gwen Drawstring Bike Short />
+	*[80344]<td />
+		*[88487]<div />
+			Gwen Drawstring Bike Short
+	*[80345]<td />
+		*[83916]<div />
+			Configurable Product
+	*[80346]<td />
+		*[83917]<div />
+			Bottom
+	*[80347]<td />
+		*[88488]<div />
+			WSH03
+	*[80348]<td />
+		*[83918]<div />
+			$50.00
+	*[80349]<td />
+		*[83919]<div />
+			0.0000
+	*[80350]<td />
+		*[89037]<div />
+			*[89031]<ul />
+	*[80351]<td />
+		*[83920]<div />
+			Catalog, Search
+	*[80352]<td />
+		*[83921]<div />
+			Enabled
+	*[80353]<td />
+		*[83922]<div />
+			Main Website
+	*[80354]<td />
+		*[83923]<div />
+			Apr 19, 2023 12:13:55 PM
+	*[80355]<td />
+		*[94660]<a aria-label=Edit Gwen Drawstring Bike Short />
+			Edit
+*[79673]<tr />
+	*[80356]<td />
+		*[83284]<label />
+			*[83282]<input type=checkbox checked=false id=idscheck1967 value=1967 />
+	*[80357]<td />
+		*[83924]<div />
+			1967
+	*[80358]<td />
+		*[87891]<span />
+			*[87889]<span />
+				*[87890]<img alt=Artemis Running Short />
+	*[80359]<td />
+		*[88489]<div />
+			Artemis Running Short
+	*[80360]<td />
+		*[83925]<div />
+			Configurable Product
+	*[80361]<td />
+		*[83926]<div />
+			Bottom
+	*[80362]<td />
+		*[88490]<div />
+			WSH04
+	*[80363]<td />
+		*[83927]<div />
+			$45.00
+	*[80364]<td />
+		*[83928]<div />
+			0.0000
+	*[80365]<td />
+		*[89063]<div />
+			*[89057]<ul />
+	*[80366]<td />
+		*[83929]<div />
+			Catalog, Search
+	*[80367]<td />
+		*[83930]<div />
+			Enabled
+	*[80368]<td />
+		*[83931]<div />
+			Main Website
+	*[80369]<td />
+		*[83932]<div />
+			Apr 19, 2023 12:13:55 PM
+	*[80370]<td />
+		*[94680]<a aria-label=Edit Artemis Running Short />
+			Edit
+*[79676]<tr />
+	*[80371]<td />
+		*[83287]<label />
+			*[83285]<input type=checkbox checked=false id=idscheck1983 value=1983 />
+	*[80372]<td />
+		*[83933]<div />
+			1983
+	*[80373]<td />
+		*[87894]<span />
+			*[87892]<span />
+				*[87893]<img alt=Bess Yoga Short />
+	*[80374]<td />
+		*[88491]<div />
+			Bess Yoga Short
+	*[80375]<td />
+		*[83934]<div />
+			Configurable Product
+	*[80376]<td />
+		*[83935]<div />
+			Bottom
+	*[80377]<td />
+		*[88492]<div />
+			WSH05
+	*[80378]<td />
+		*[83936]<div />
+			$28.00
+	*[80379]<td />
+		*[83937]<div />
+			0.0000
+	*[80380]<td />
+		*[89089]<div />
+			*[89083]<ul />
+	*[80381]<td />
+		*[83938]<div />
+			Catalog, Search
+	*[80382]<td />
+		*[83939]<div />
+			Enabled
+	*[80383]<td />
+		*[83940]<div />
+			Main Website
+	*[80384]<td />
+		*[83941]<div />
+			Apr 19, 2023 12:13:55 PM
+	*[80385]<td />
+		*[94700]<a aria-label=Edit Bess Yoga Short />
+			Edit
+*[79679]<tr />
+	*[80386]<td />
+		*[83290]<label />
+			*[83288]<input type=checkbox checked=false id=idscheck2024 value=2024 />
+	*[80387]<td />
+		*[83942]<div />
+			2024
+	*[80388]<td />
+		*[87897]<span />
+			*[87895]<span />
+				*[87896]<img alt=Ina Compression Short />
+	*[80389]<td />
+		*[88493]<div />
+			Ina Compression Short
+	*[80390]<td />
+		*[83943]<div />
+			Configurable Product
+	*[80391]<td />
+		*[83944]<div />
+			Bottom
+	*[80392]<td />
+		*[88494]<div />
+			WSH11
+	*[80393]<td />
+		*[83945]<div />
+			$49.00
+	*[80394]<td />
+		*[83946]<div />
+			0.0000
+	*[80395]<td />
+		*[89115]<div />
+			*[89109]<ul />
+	*[80396]<td />
+		*[83947]<div />
+			Catalog, Search
+	*[80397]<td />
+		*[83948]<div />
+			Enabled
+	*[80398]<td />
+		*[83949]<div />
+			Main Website
+	*[80399]<td />
+		*[83950]<div />
+			Apr 19, 2023 12:13:56 PM
+	*[80400]<td />
+		*[94720]<a aria-label=Edit Ina Compression Short />
+			Edit
+*[79682]<tr />
+	*[80401]<td />
+		*[83293]<label />
+			*[83291]<input type=checkbox checked=false id=idscheck2040 value=2040 />
+	*[80402]<td />
+		*[83951]<div />
+			2040
+	*[80403]<td />
+		*[87900]<span />
+			*[87898]<span />
+				*[87899]<img alt=Erika Running Short />
+	*[80404]<td />
+		*[88495]<div />
+			Erika Running Short
+	*[80405]<td />
+		*[83952]<div />
+			Configurable Product
+	*[80406]<td />
+		*[83953]<div />
+			Bottom
+	*[80407]<td />
+		*[88496]<div />
+			WSH12
+	*[80408]<td />
+		*[83954]<div />
+			$45.00
+	*[80409]<td />
+		*[83955]<div />
+			0.0000
+	*[80410]<td />
+		*[89141]<div />
+			*[89135]<ul />
+	*[80411]<td />
+		*[83956]<div />
+			Catalog, Search
+	*[80412]<td />
+		*[83957]<div />
+			Enabled
+	*[80413]<td />
+		*[83958]<div />
+			Main Website
+	*[80414]<td />
+		*[83959]<div />
+			Apr 19, 2023 12:13:56 PM
+	*[80415]<td />
+		*[94740]<a aria-label=Edit Erika Running Short />
+			Edit
+*[79685]<tr />
+	*[80416]<td />
+		*[83296]<label />
+			*[83294]<input type=checkbox checked=false id=idscheck737 value=737 />
+	*[80417]<td />
+		*[83960]<div />
+			737
+	*[80418]<td />
+		*[87903]<span />
+			*[87901]<span />
+				*[87902]<img alt=Caesar Warm-Up Pant />
+	*[80419]<td />
+		*[88497]<div />
+			Caesar Warm-Up Pant
+	*[80420]<td />
+		*[83961]<div />
+			Configurable Product
+	*[80421]<td />
+		*[83962]<div />
+			Bottom
+	*[80422]<td />
+		*[88498]<div />
+			MP01
+	*[80423]<td />
+		*[83963]<div />
+			$35.00
+	*[80424]<td />
+		*[83964]<div />
+			0.0000
+	*[80425]<td />
+		*[89167]<div />
+			*[89161]<ul />
+	*[80426]<td />
+		*[83965]<div />
+			Catalog, Search
+	*[80427]<td />
+		*[83966]<div />
+			Enabled
+	*[80428]<td />
+		*[83967]<div />
+			Main Website
+	*[80429]<td />
+		*[83968]<div />
+			Apr 19, 2023 12:13:35 PM
+	*[80430]<td />
+		*[94760]<a aria-label=Edit Caesar Warm-Up Pant />
+			Edit
+*[79688]<tr />
+	*[80431]<td />
+	*[80432]<td />
+	*[80433]<td />
+	*[80434]<td />
+	*[80435]<td />
+	*[80436]<td />
+	*[80437]<td />
+	*[80438]<td />
+	*[80439]<td />
+	*[80440]<td />
+	*[80441]<td />
+	*[80442]<td />
+	*[80443]<td />
+	*[80444]<td />
+	*[80445]<td />

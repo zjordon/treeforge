@@ -1,0 +1,350 @@
+{
+  "host": "creator.douyin.com",
+  "task_instruction": "",
+  "events": [
+    {
+      "timestamp": 1785549694187,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/home",
+      "stage": "home",
+      "target": "img",
+      "element_attrs": {
+        "tag": "img"
+      }
+    },
+    {
+      "timestamp": 1785549696927,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/upload",
+      "stage": "upload",
+      "target": "上传视频",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "visible_text": "上传视频"
+      }
+    },
+    {
+      "timestamp": 1785549696927,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/upload",
+      "stage": "upload",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "video/x-flv,video/mp4,video/x-m4v,video/*,.flv,.avi,.wmv,.webm,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,.m4"
+      }
+    },
+    {
+      "timestamp": 1785549702544,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "video/x-flv,video/mp4,video/x-m4v,video/*,.flv,.avi,.wmv,.webm,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,.m4"
+      },
+      "value": "C:\\fakepath\\2026-04-29-20-41-59.mp4"
+    },
+    {
+      "timestamp": 1785549705039,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover_1",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      }
+    },
+    {
+      "timestamp": 1785549707680,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover_1",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "aii"
+    },
+    {
+      "timestamp": 1785549710952,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover_1",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器第5期"
+    },
+    {
+      "timestamp": 1785549712276,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover_1",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器第5期-br"
+    },
+    {
+      "timestamp": 1785549716136,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover_1",
+      "target": "​",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true",
+        "visible_text": "​"
+      }
+    },
+    {
+      "timestamp": 1785549716196,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover_1",
+      "target": "填写作品标题，为作品获得更多流量",
+      "element_attrs": {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "填写作品标题，为作品获得更多流量"
+      },
+      "value": "ai浏览器第5期-browser-use"
+    },
+    {
+      "timestamp": 1785549720163,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover_1",
+      "target": "brwoser-usew​",
+      "element_attrs": {
+        "tag": "div",
+        "contenteditable": "true",
+        "visible_text": "brwoser-usew​"
+      },
+      "value": "brwoser-usew​"
+    },
+    {
+      "timestamp": 1785549724579,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "选择封面",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "选择封面"
+      }
+    },
+    {
+      "timestamp": 1785549726467,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "点击上传文件或拖拽文件到这里",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "点击上传文件或拖拽文件到这里"
+      }
+    },
+    {
+      "timestamp": 1785549726467,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif"
+      }
+    },
+    {
+      "timestamp": 1785549731785,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif"
+      },
+      "value": "C:\\fakepath\\browser-harness-heng.png"
+    },
+    {
+      "timestamp": 1785549732327,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "设置竖封面",
+      "element_attrs": {
+        "tag": "span",
+        "visible_text": "设置竖封面"
+      }
+    },
+    {
+      "timestamp": 1785549733887,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "点击上传文件或拖拽文件到这里",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "点击上传文件或拖拽文件到这里"
+      }
+    },
+    {
+      "timestamp": 1785549733887,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif"
+      }
+    },
+    {
+      "timestamp": 1785549736457,
+      "type": "input",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "type": "file",
+        "accept": "image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif"
+      },
+      "value": "C:\\fakepath\\browser-harness-shu.png"
+    },
+    {
+      "timestamp": 1785549736471,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "target": "完成",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "visible_text": "完成"
+      }
+    },
+    {
+      "timestamp": 1785549744250,
+      "type": "scroll",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "edit-cover",
+      "value": "3"
+    },
+    {
+      "timestamp": 1785549744516,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover",
+      "target": "请选择合集",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "请选择合集"
+      }
+    },
+    {
+      "timestamp": 1785549745825,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover",
+      "target": "AI浏览器",
+      "element_attrs": {
+        "tag": "span",
+        "visible_text": "AI浏览器"
+      }
+    },
+    {
+      "timestamp": 1785549746618,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover",
+      "target": "请选择自主声明",
+      "element_attrs": {
+        "tag": "div",
+        "visible_text": "请选择自主声明"
+      }
+    },
+    {
+      "timestamp": 1785549747746,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover",
+      "target": "对作品内容添加声明可在作品发布前添加声明，帮助他人减少困惑移动端展示效果作者声明：此处显示具体的声明内容请选择声明类型（",
+      "element_attrs": {
+        "tag": "div",
+        "role": "modal",
+        "visible_text": "对作品内容添加声明可在作品发布前添加声明，帮助他人减少困惑移动端展示效果作者声明：此处显示具体的声明内容请选择声明类型（单选）内容由AI生成内容为个人观点或见解内容为转载信息内容含营销推广信息虚构演绎，仅供娱乐无需添加自主声明取消确定"
+      }
+    },
+    {
+      "timestamp": 1785549747747,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover",
+      "target": "input",
+      "element_attrs": {
+        "tag": "input",
+        "name": "default",
+        "type": "radio"
+      }
+    },
+    {
+      "timestamp": 1785549748658,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover",
+      "target": "确定",
+      "element_attrs": {
+        "tag": "button",
+        "type": "button",
+        "visible_text": "确定"
+      }
+    },
+    {
+      "timestamp": 1785549751604,
+      "type": "scroll",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "upload-cover",
+      "value": "6"
+    },
+    {
+      "timestamp": 1785549752264,
+      "type": "click",
+      "url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+      "stage": "video",
+      "target": "暂存离开",
+      "element_attrs": {
+        "tag": "button",
+        "visible_text": "暂存离开"
+      }
+    }
+  ],
+  "page_context": {
+    "home": "*[319]<div id=root />\n\t*[2]<button />\n\t\t高清发布\n\t[53]<li id=douyin-creator-master-menu-nav-home role=menuitem />\n\t\t*[1048]<i />\n\t\t\t*[1049]<span role=img />\n\t\t\t\t[54]<svg /> <!-- SVG content collapsed -->\n\t\t*[1051]<span />\n\t\t\t首页\n\t\t*[1052]<i />\n\t*[321]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />\n\t\t*[1053]<i />\n\t\t\t*[1054]<span role=img />\n\t\t\t\t*[1055]<svg /> <!-- SVG content collapsed -->\n\t\t*[1057]<span />\n\t\t\t活动管理\n\t\t*[1059]<i />\n\t[56]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />\n\t\t*[322]<div role=menuitem expanded=false />\n\t\t\t*[1060]<div />\n\t\t\t\t*[1061]<i />\n\t\t\t\t\t*[1062]<span role=img />\n\t\t\t\t\t\t[57]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t*[1065]<span />\n\t\t\t\t\t内容管理\n\t\t\t\t*[1066]<i />\n\t\t\t\t\t*[1067]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[59]<svg /> <!-- SVG content collapsed -->\n\t\t*[1070]<div />\n\t*[60]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />\n\t\t*[323]<div role=menuitem expanded=false />\n\t\t\t*[1071]<div />\n\t\t\t\t*[1072]<i />\n\t\t\t\t\t*[1073]<span role=img />\n\t\t\t\t\t\t[61]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t*[1076]<span />\n\t\t\t\t\t互动管理\n\t\t\t\t*[1077]<i />\n\t\t\t\t\t*[1078]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t*[63]<svg /> <!-- SVG content collapsed -->\n\t\t*[1081]<div />\n\t[64]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />\n\t\t*[324]<div role=menuitem expanded=false />\n\t\t\t*[1082]<div />\n\t\t\t\t*[1083]<i />\n\t\t\t\t\t*[1084]<span role=img />\n\t\t\t\t\t\t[65]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t*[1087]<span />\n\t\t\t\t\t数据中心\n\t\t\t\t*[1088]<i />\n\t\t\t\t\t*[1089]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[67]<svg /> <!-- SVG content collapsed -->\n\t\t*[1092]<div />\n\t[68]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />\n\t\t*[325]<div role=menuitem expanded=false />\n\t\t\t*[1093]<div />\n\t\t\t\t*[1094]<i />\n\t\t\t\t\t*[1095]<span role=img />\n\t\t\t\t\t\t[69]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t*[1097]<span />\n\t\t\t\t\t变现中心\n\t\t\t\t*[1098]<i />\n\t\t\t\t\t*[1099]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[71]<svg /> <!-- SVG content collapsed -->\n\t\t*[1102]<div />\n\t*[72]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />\n\t\t*[326]<div role=menuitem expanded=false />\n\t\t\t*[1103]<div />\n\t\t\t\t*[1104]<i />\n\t\t\t\t\t*[1105]<span role=img />\n\t\t\t\t\t\t*[73]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t*[1107]<span />\n\t\t\t\t\t创作中心\n\t\t\t\t*[1108]<i />\n\t\t\t\t\t*[1109]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t*[75]<svg /> <!-- SVG content collapsed -->\n\t\t*[1112]<div />\n\t*[327]<div />\n\t\t[6]<img />\n\t[77]<a />\n\t\t通知\n\t*[11]<div />\n\t\t*[1122]<div />\n\t\t\t*[1123]<div />\n\t\t\t\t*[1124]<span role=img />\n\t\t\t\t\t*[12]<svg /> <!-- SVG content collapsed -->\n\t\t\t[13]<div />\n\t\t\t\t网址\n\t*[329]<div />\n\t\t*[1127]<div />\n\t\t\t*[1128]<span role=img />\n\t\t\t\t*[14]<svg /> <!-- SVG content collapsed -->\n\t\t[15]<div />\n\t\t\t抖音\n\t[16]<div id=header-avatar />\n\t\t*[3]<div />\n\t*[1132]<div />\n\t\t*[1133]<div />\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t加载中，请稍候...\n\t[5]<div id=micro />",
+    "upload": "[319]<div id=root />\n\t[2]<button />\n\t\t高清发布\n\t[53]<li id=douyin-creator-master-menu-nav-home role=menuitem />\n\t\t[1048]<i />\n\t\t\t[1049]<span role=img />\n\t\t\t\t[54]<svg /> <!-- SVG content collapsed -->\n\t\t[1051]<span />\n\t\t\t首页\n\t\t[1052]<i />\n\t[321]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />\n\t\t[1053]<i />\n\t\t\t[1054]<span role=img />\n\t\t\t\t[1055]<svg /> <!-- SVG content collapsed -->\n\t\t[1057]<span />\n\t\t\t活动管理\n\t\t[1059]<i />\n\t[56]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />\n\t\t[322]<div role=menuitem expanded=false />\n\t\t\t[1060]<div />\n\t\t\t\t[1061]<i />\n\t\t\t\t\t[1062]<span role=img />\n\t\t\t\t\t\t[57]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1065]<span />\n\t\t\t\t\t内容管理\n\t\t\t\t[1066]<i />\n\t\t\t\t\t[1067]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[59]<svg /> <!-- SVG content collapsed -->\n\t\t[1070]<div />\n\t[60]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />\n\t\t[323]<div role=menuitem expanded=false />\n\t\t\t[1071]<div />\n\t\t\t\t[1072]<i />\n\t\t\t\t\t[1073]<span role=img />\n\t\t\t\t\t\t[61]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1076]<span />\n\t\t\t\t\t互动管理\n\t\t\t\t[1077]<i />\n\t\t\t\t\t[1078]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[63]<svg /> <!-- SVG content collapsed -->\n\t\t[1081]<div />\n\t[64]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />\n\t\t[324]<div role=menuitem expanded=false />\n\t\t\t[1082]<div />\n\t\t\t\t[1083]<i />\n\t\t\t\t\t[1084]<span role=img />\n\t\t\t\t\t\t[65]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1087]<span />\n\t\t\t\t\t数据中心\n\t\t\t\t[1088]<i />\n\t\t\t\t\t[1089]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[67]<svg /> <!-- SVG content collapsed -->\n\t\t[1092]<div />\n\t[68]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />\n\t\t[325]<div role=menuitem expanded=false />\n\t\t\t[1093]<div />\n\t\t\t\t[1094]<i />\n\t\t\t\t\t[1095]<span role=img />\n\t\t\t\t\t\t[69]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1097]<span />\n\t\t\t\t\t变现中心\n\t\t\t\t[1098]<i />\n\t\t\t\t\t[1099]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[71]<svg /> <!-- SVG content collapsed -->\n\t\t[1102]<div />\n\t[72]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />\n\t\t[326]<div role=menuitem expanded=false />\n\t\t\t[1103]<div />\n\t\t\t\t[1104]<i />\n\t\t\t\t\t[1105]<span role=img />\n\t\t\t\t\t\t[73]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1107]<span />\n\t\t\t\t\t创作中心\n\t\t\t\t[1108]<i />\n\t\t\t\t\t[1109]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[75]<svg /> <!-- SVG content collapsed -->\n\t\t[1112]<div />\n\t[327]<div />\n\t\t[6]<img />\n\t[77]<a />\n\t\t通知\n\t\t*[1120]<span />\n\t[11]<div />\n\t\t[1122]<div />\n\t\t\t[1123]<div />\n\t\t\t\t[1124]<span role=img />\n\t\t\t\t\t[12]<svg /> <!-- SVG content collapsed -->\n\t\t\t[13]<div />\n\t\t\t\t网址\n\t[329]<div />\n\t\t[1127]<div />\n\t\t\t[1128]<span role=img />\n\t\t\t\t[14]<svg /> <!-- SVG content collapsed -->\n\t\t[15]<div />\n\t\t\t抖音\n\t[16]<div id=header-avatar />\n\t\t[3]<div />\n\t[5]<div id=micro />\n\t\t*[1195]<div id=root />\n\t\t\t*[1369]<div />\n\t\t\t\t发布视频\n\t\t\t*[1370]<div />\n\t\t\t\t发布图文\n\t\t\t*[1371]<div />\n\t\t\t\t发布全景视频\n\t\t\t*[1372]<div />\n\t\t\t\t发布文章\n\t\t\t*[1367]<a />\n\t\t\t\t了解上传规则详情\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t视频大小和格式\n\t\t\t视频时长60分钟以内，文件大小16G以内，推荐上传mp4、webm格式视频\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t视频画质\n\t\t\t分辨率最高支持4K，帧率最大支持60帧，智能识别输出HDR视频\n\t\t\t*[1403]<svg /> <!-- SVG content collapsed -->\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t视频画幅\n\t\t\t建议上传宽高比为16:9、9:16、3:4、4:3、9:19.5（5.8寸）的视频\n\t\t\t*[1447]<div role=presentation />\n\t\t\t\t*[1444]<div />\n\t\t\t\t\t*[1437]<div />\n\t\t\t\t\t\t*[1429]<img />\n\t\t\t\t\t*[1438]<div />\n\t\t\t\t\t\t点击上传 或直接将视频文件拖入此区域\n\t\t\t\t\t*[1439]<div />\n\t\t\t\t\t\t为了更好的观看体验和平台安全，平台将对上传的视频预审。超过40秒的视频建议上传横版视频\n\t\t\t\t\t*[1440]<div />\n\t\t\t\t\t\t*[1435]<button />\n\t\t\t\t\t\t\t上传\n\t\t\t\t\t\t\t视频\n\t\t\t\t\t\t*[1436]<img />\n\t\t\t\t*[1445]<input type=file accept=video/x-flv,video/mp4,video/x-m4v,video/*,.flv,.avi,.wmv,.webm,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,. compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t\t*[1458]<div />\n\t\t\t\t*[1494]<div />\n\t\t\t\t\t*[1487]<div />\n\t\t\t\t\t\t*[1486]<div />\n\t\t\t\t\t\t\t*[1485]<div />\n\t\t\t\t\t\t\t\t*[1484]<div />\n\t\t\t\t\t\t\t\t\t*[1483]<div />\n\t\t\t\t\t\t\t\t\t\t*[1482]<div />\n\t\t\t\t\t\t\t\t\t\t\t*[1481]<img />\n\t\t\t\t*[1497]<div />\n\t\t\t\t\t*[1493]<div />\n\t\t\t\t\t\t*[1492]<div />\n\t*[1509]<div />\n\t\t*[1507]<span role=img />\n\t\t\t*[1505]<svg /> <!-- SVG content collapsed -->\n|IFRAME|<iframe id=summon-web-iframe />",
+    "upload-cover": "[319]<div id=root />\n\t[2]<button />\n\t\t高清发布\n\t[53]<li id=douyin-creator-master-menu-nav-home role=menuitem />\n\t\t[1048]<i />\n\t\t\t[1049]<span role=img />\n\t\t\t\t[54]<svg /> <!-- SVG content collapsed -->\n\t\t[1051]<span />\n\t\t\t首页\n\t\t[1052]<i />\n\t[321]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />\n\t\t[1053]<i />\n\t\t\t[1054]<span role=img />\n\t\t\t\t[1055]<svg /> <!-- SVG content collapsed -->\n\t\t[1057]<span />\n\t\t\t活动管理\n\t\t[1059]<i />\n\t[56]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />\n\t\t[322]<div role=menuitem expanded=false />\n\t\t\t[1060]<div />\n\t\t\t\t[1061]<i />\n\t\t\t\t\t[1062]<span role=img />\n\t\t\t\t\t\t[57]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1065]<span />\n\t\t\t\t\t内容管理\n\t\t\t\t[1066]<i />\n\t\t\t\t\t[1067]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[59]<svg /> <!-- SVG content collapsed -->\n\t\t[1070]<div />\n\t[60]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />\n\t\t[323]<div role=menuitem expanded=false />\n\t\t\t[1071]<div />\n\t\t\t\t[1072]<i />\n\t\t\t\t\t[1073]<span role=img />\n\t\t\t\t\t\t[61]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1076]<span />\n\t\t\t\t\t互动管理\n\t\t\t\t[1077]<i />\n\t\t\t\t\t[1078]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[63]<svg /> <!-- SVG content collapsed -->\n\t\t[1081]<div />\n\t[64]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />\n\t\t[324]<div role=menuitem expanded=false />\n\t\t\t[1082]<div />\n\t\t\t\t[1083]<i />\n\t\t\t\t\t[1084]<span role=img />\n\t\t\t\t\t\t[65]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1087]<span />\n\t\t\t\t\t数据中心\n\t\t\t\t[1088]<i />\n\t\t\t\t\t[1089]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[67]<svg /> <!-- SVG content collapsed -->\n\t\t[1092]<div />\n\t[68]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />\n\t\t[325]<div role=menuitem expanded=false />\n\t\t\t[1093]<div />\n\t\t\t\t[1094]<i />\n\t\t\t\t\t[1095]<span role=img />\n\t\t\t\t\t\t[69]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1097]<span />\n\t\t\t\t\t变现中心\n\t\t\t\t[1098]<i />\n\t\t\t\t\t[1099]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[71]<svg /> <!-- SVG content collapsed -->\n\t\t[1102]<div />\n\t[72]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />\n\t\t[326]<div role=menuitem expanded=false />\n\t\t\t[1103]<div />\n\t\t\t\t[1104]<i />\n\t\t\t\t\t[1105]<span role=img />\n\t\t\t\t\t\t[73]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1107]<span />\n\t\t\t\t\t创作中心\n\t\t\t\t[1108]<i />\n\t\t\t\t\t[1109]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[75]<svg /> <!-- SVG content collapsed -->\n\t\t[1112]<div />\n\t[327]<div />\n\t\t[6]<img />\n\t[77]<a />\n\t\t通知\n\t\t[1120]<span />\n\t[11]<div />\n\t\t[1122]<div />\n\t\t\t[1123]<div />\n\t\t\t\t[1124]<span role=img />\n\t\t\t\t\t[12]<svg /> <!-- SVG content collapsed -->\n\t\t\t[13]<div />\n\t\t\t\t网址\n\t[329]<div />\n\t\t[1127]<div />\n\t\t\t[1128]<span role=img />\n\t\t\t\t[14]<svg /> <!-- SVG content collapsed -->\n\t\t[15]<div />\n\t\t\t抖音\n\t[16]<div id=header-avatar />\n\t\t[3]<div />\n\t[5]<div id=micro />\n\t\t[1195]<div id=root />\n\t\t\t基础信息\n\t\t\t作品描述\n\t\t\t[2103]<span />\n\t\t\t\t[2101]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2429]<div />\n\t\t\t\t[2513]<div />\n\t\t\t\t\t[2511]<input type=text value=ai浏览器第5期-browser-use placeholder=填写作品标题，为作品获得更多流量 />\n\t\t\t\t\t[2512]<div />\n\t\t\t\t\t\t[2510]<div />\n\t\t\t\t\t\t\t[2509]<div />\n\t\t\t\t\t\t\t\t20\n\t\t\t\t\t\t\t\t30\n\t\t\t[2109]<div contenteditable=true />\n\t\t\t\t[3373]<div />\n\t\t\t\t\tbrwoser-use体验及技术分析\n\t\t\t[2431]<div />\n\t\t\t\t[2515]<div />\n\t\t\t\t\t#添加话题\n\t\t\t\t[2516]<div />\n\t\t\t\t\t@好友\n\t\t\t18 / 1000\n\t\t\t[2433]<div />\n\t\t\t\t[3331]<div />\n\t\t\t\t\t推荐\n\t\t\t\t[3346]<div />\n\t\t\t\t\t[3340]<div />\n\t\t\t\t\t\t安卓\n\t\t\t\t[3347]<div />\n\t\t\t\t\t[3341]<div />\n\t\t\t\t\t\tae教程\n\t\t\t\t[3348]<div />\n\t\t\t\t\t[3342]<div />\n\t\t\t\t\t\t电竞显示器\n\t\t\t\t[3349]<div />\n\t\t\t\t\t[3343]<div />\n\t\t\t\t\t\t初学ps\n\t\t\t\t[3350]<div />\n\t\t\t\t\t[3344]<div />\n\t\t\t\t\t\t小米手机\n\t\t\t\t[3351]<div />\n\t\t\t\t\t[3345]<div />\n\t\t\t\t\t\t在线学习\n\t\t\t\t[3337]<div />\n\t\t\t\t\t[3336]<div />\n\t\t\t\t\t\t14\n\t\t\t[2434]<div />\n\t\t\t\t官方活动\n\t\t\t\t[3230]<span />\n\t\t\t\t\t[3228]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[3250]<div />\n\t\t\t\t\t[3236]<div />\n\t\t\t\t\t\t[3233]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t\t[3234]<span />\n\t\t\t\t\t\t\t千万流量！征集难题，回答时代困惑\n\t\t\t\t\t[3237]<div />\n\t\t\t\t\t\t[3235]<div />\n\t\t\t\t\t\t\t热度：281\n\t\t\t\t[3251]<div />\n\t\t\t\t\t[3242]<div />\n\t\t\t\t\t\t[3239]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t\t[3240]<span />\n\t\t\t\t\t\t\t音为有你全民开唱挑战赛\n\t\t\t\t\t[3243]<div />\n\t\t\t\t\t\t[3241]<div />\n\t\t\t\t\t\t\t热度：2.6k\n\t\t\t\t[3252]<div />\n\t\t\t\t\t[3248]<div />\n\t\t\t\t\t\t[3245]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t\t[3246]<span />\n\t\t\t\t\t\t\t火山拍作品分10万\n\t\t\t\t\t[3249]<div />\n\t\t\t\t\t\t[3247]<div />\n\t\t\t\t\t\t\t热度：102\n\t\t\t\t[3253]<div />\n\t\t\t设置封面\n\t\t\t[2121]<span />\n\t\t\t\t[2119]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2782]<div />\n\t\t\t横封面4:3\n\t\t\t[2790]<div />\n\t\t\t竖封面3:4\n\t\t\t[5302]<svg /> <!-- SVG content collapsed -->\n\t\t\t封面检测中70%\n\t\t\tAi智能推荐封面\n\t\t\t[5310]<div />\n\t\t\t\t[5308]<div />\n\t\t\t[3309]<div />\n\t\t\t[3310]<div />\n\t\t\t好封面会吸引更多人浏览作品\n\t\t\t优质封面示例\n\t\t\t添加合集\n\t\t\t[2159]<div />\n\t\t\t\t[2151]<div />\n\t\t\t\t\t[2148]<div />\n\t\t\t\t\t\t[2147]<span />\n\t\t\t\t\t\t\t合集\n\t\t\t\t[2152]<div />\n\t\t\t\t\t[2150]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2160]<div />\n\t\t\t\t[2157]<div />\n\t\t\t\t\t[2154]<div />\n\t\t\t\t\t\t[2153]<span />\n\t\t\t\t\t\t\t[2495]<div />\n\t\t\t\t\t\t\t\t请选择合集\n\t\t\t\t[2158]<div />\n\t\t\t\t\t[2156]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2177]<section />\n\t\t\t\t[2172]<div />\n\t\t\t\t\t[2167]<div />\n\t\t\t\t\t\t自主声明\n\t\t\t\t[2173]<div />\n\t\t\t\t\t[2171]<div />\n\t\t\t\t\t\t[2169]<div />\n\t\t\t\t\t\t\t请选择自主声明\n\t\t\t\t\t\t[2170]<span />\n\t\t\t\t\t\t\t[2168]<img />\n\t\t\t扩展信息\n\t\t\t*[2240]<input type=file name=upload-btn accept=image/png,image/jpeg,image/jpg class=upload-btn-input-UY_qeY compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t\t视频章节\n\t\t\t[2310]<div />\n\t\t\t\t[2307]<div />\n\t\t\t\t\t[2304]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[2308]<div />\n\t\t\t\t\t[2305]<p />\n\t\t\t\t\t\t为进度条增加章节信息，让视频结构更清晰\n\t\t\t\t\t[2306]<p />\n\t\t\t\t\t\t已添加的章节数量会在这里显示\n\t\t\t\t[2309]<div />\n\t\t\t\t\t[3468]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t[3469]<p />\n\t\t\t\t\t\t智能章节已上线，试试吧\n\t\t\t\t\t[3471]<svg /> <!-- SVG content collapsed -->\n\t\t\t如上传视频属于中插植入类型，请您按照标准添加章节信息，具体详见\n\t\t\t[2543]<a />\n\t\t\t\t查看详情\n\t\t\t添加标签\n\t\t\t[3177]<span />\n\t\t\t\t[3175]<svg /> <!-- SVG content collapsed -->\n\t\t\t[3191]<div />\n\t\t\t\t[3183]<div />\n\t\t\t\t\t[3180]<div />\n\t\t\t\t\t\t[3179]<span />\n\t\t\t\t\t\t\t[3205]<div />\n\t\t\t\t\t\t\t\t位置\n\t\t\t\t[3184]<div />\n\t\t\t\t\t[3182]<svg /> <!-- SVG content collapsed -->\n\t\t\t[3189]<div />\n\t\t\t\t[3187]<div />\n\t\t\t\t\t[3186]<div />\n\t\t\t\t\t\t[3185]<span />\n\t\t\t\t\t\t\t输入地理位置\n\t\t\t\t[3188]<div />\n\t\t\t关联热点\n\t\t\t[2319]<span />\n\t\t\t\t[2317]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2327]<div />\n\t\t\t\t[2325]<div />\n\t\t\t\t\t[2322]<div />\n\t\t\t\t\t\t[2321]<span />\n\t\t\t\t\t\t\t点击输入热点词\n\t\t\t\t[2326]<div />\n\t\t\t\t\t[2324]<svg /> <!-- SVG content collapsed -->\n\t\t\t发布设置\n\t\t\t同时发布\n\t\t\t[3273]<span />\n\t\t\t\t[3271]<svg /> <!-- SVG content collapsed -->\n\t\t\t[3283]<label />\n\t\t\t\t[3277]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t不同时发布\n\t\t\t[3284]<label />\n\t\t\t\t[3281]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t同时发布到\n\t\t\t谁可以看\n\t\t\t[2497]<label />\n\t\t\t\t[2468]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t公开\n\t\t\t[2498]<label />\n\t\t\t\t[2472]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t好友可见\n\t\t\t[2499]<label />\n\t\t\t\t[2476]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t仅自己可见\n\t\t\t保存权限\n\t\t\t[2347]<span />\n\t\t\t\t[2345]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2357]<label />\n\t\t\t\t[2525]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t允许\n\t\t\t[2358]<label />\n\t\t\t\t[2526]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t不允许\n\t\t\t发布时间\n\t\t\t[2367]<span />\n\t\t\t\t[2365]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2377]<label />\n\t\t\t\t[2371]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t立即发布\n\t\t\t[2378]<label />\n\t\t\t\t[2375]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t定时发布\n\t\t\t[2401]<div />\n\t\t\t\t快速填写\n\t\t\t[2390]<button />\n\t\t\t\t发布\n\t\t\t[2392]<button />\n\t\t\t\t暂存离开\n\t\t\t[3461]<div />\n\t\t\t\t预览视频\n\t\t\t\t[3460]<div />\n\t\t\t\t\t[3459]<svg /> <!-- SVG content collapsed -->\n\t\t\t[3462]<div />\n\t\t\t\t预览封面/标题\n\t\t\tai浏览器第5期-browser-use\n\t\t\t[5183]<div />\n\t\t\t树哥AI\n\t\t\t[5188]<div />\n\t\t\t************************\n\t\t\t[5194]<div />\n\t\t\t***\n\t\t\t[5199]<div />\n\t\t\t************************\n\t\t\t***\n\t\t\t************************\n\t\t\t***\n\t\t\t************************\n\t\t\t[5230]<div />\n\t\t\t***\n\t\t\t[5235]<div />\n\t\t\t************************\n\t\t\t[5241]<div />\n\t\t\t***\n\t\t\t[5258]<div />\n\t\t\t\t横封面\n\t\t\t[5259]<div />\n\t\t\t\t竖封面\n\t\t\t[3403]<div />\n\t\t\t\t[3402]<svg /> <!-- SVG content collapsed -->\n\t\t\t添加音乐\n\t\t\t[3413]<label />\n\t\t\t\t*[3411]<input type=file name=upload-btn accept=video/mp4,video/x-m4v,video/x-flv,.flv,.avi,.wmv,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,.m4,video/* class=upload-btn-input-UY_qeY compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t\t\t[3412]<button />\n\t\t\t重新上传\n\t\t\t[3220]<section />\n\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t\t发文助手\n\t\t\t\t[3421]<div />\n\t\t\t\t\t[3419]<p />\n\t\t\t\t\t\t快速检测\n\t\t\t\t\t\t[3418]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[3465]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t检测中27%\n\t\t\t\t[5297]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t封面检测中\n\t\t\t\t[3215]<p />\n\t\t\t\t\t[3214]<svg /> <!-- SVG content collapsed -->\n\t[1509]<div />\n\t\t[1507]<span role=img />\n\t\t\t[1505]<svg /> <!-- SVG content collapsed -->\n|IFRAME|<iframe id=summon-web-iframe />\n\t[2]<div id=root />\n[2007]<div id=portal-container />\n[2465]<div />\n[3260]<div />\n[3376]<div id=toast-wrapper-178554971753 />\n[3429]<div />\n*[5364]<div role=listbox multiselectable=false />\n\t*[5359]<div role=option selected=false />\n\t\t*[5321]<div />\n\t\t\t不选择合集\n\t*[5360]<div role=option selected=false />\n\t\t*[5330]<div />\n\t\t\t*[5327]<div />\n\t\t\t\t*[5325]<div />\n\t\t\t\t\t*[5324]<img />\n\t\t\t\t*[5326]<span />\n\t\t\t\t\tTreeWalker合集\n\t\t\t*[5328]<span />\n\t\t\t\t共12个作品\n\t*[5361]<div role=option selected=false />\n\t\t*[5339]<div />\n\t\t\t*[5336]<div />\n\t\t\t\t*[5334]<div />\n\t\t\t\t\t*[5333]<img />\n\t\t\t\t*[5335]<span />\n\t\t\t\t\tAI浏览器\n\t\t\t*[5337]<span />\n\t\t\t\t共13个作品\n\t*[5362]<div role=option selected=false />\n\t\t*[5348]<div />\n\t\t\t*[5345]<div />\n\t\t\t\t*[5343]<div />\n\t\t\t\t\t*[5342]<img />\n\t\t\t\t*[5344]<span />\n\t\t\t\t\tOpenClaw合集\n\t\t\t*[5346]<span />\n\t\t\t\t共11个作品\n\t*[5363]<div role=option selected=false />\n\t\t*[5357]<div />\n\t\t\t*[5354]<div />\n\t\t\t\t*[5352]<div />\n\t\t\t\t\t*[5351]<img />\n\t\t\t\t*[5353]<span />\n\t\t\t\t\t拆解ai agent\n\t\t\t*[5355]<span />\n\t\t\t\t共3个作品",
+    "upload-cover_1": "[319]<div id=root />\n\t[2]<button />\n\t\t高清发布\n\t[53]<li id=douyin-creator-master-menu-nav-home role=menuitem />\n\t\t[1048]<i />\n\t\t\t[1049]<span role=img />\n\t\t\t\t[54]<svg /> <!-- SVG content collapsed -->\n\t\t[1051]<span />\n\t\t\t首页\n\t\t[1052]<i />\n\t[321]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />\n\t\t[1053]<i />\n\t\t\t[1054]<span role=img />\n\t\t\t\t[1055]<svg /> <!-- SVG content collapsed -->\n\t\t[1057]<span />\n\t\t\t活动管理\n\t\t[1059]<i />\n\t[56]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />\n\t\t[322]<div role=menuitem expanded=false />\n\t\t\t[1060]<div />\n\t\t\t\t[1061]<i />\n\t\t\t\t\t[1062]<span role=img />\n\t\t\t\t\t\t[57]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1065]<span />\n\t\t\t\t\t内容管理\n\t\t\t\t[1066]<i />\n\t\t\t\t\t[1067]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[59]<svg /> <!-- SVG content collapsed -->\n\t\t[1070]<div />\n\t[60]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />\n\t\t[323]<div role=menuitem expanded=false />\n\t\t\t[1071]<div />\n\t\t\t\t[1072]<i />\n\t\t\t\t\t[1073]<span role=img />\n\t\t\t\t\t\t[61]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1076]<span />\n\t\t\t\t\t互动管理\n\t\t\t\t[1077]<i />\n\t\t\t\t\t[1078]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[63]<svg /> <!-- SVG content collapsed -->\n\t\t[1081]<div />\n\t[64]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />\n\t\t[324]<div role=menuitem expanded=false />\n\t\t\t[1082]<div />\n\t\t\t\t[1083]<i />\n\t\t\t\t\t[1084]<span role=img />\n\t\t\t\t\t\t[65]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1087]<span />\n\t\t\t\t\t数据中心\n\t\t\t\t[1088]<i />\n\t\t\t\t\t[1089]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[67]<svg /> <!-- SVG content collapsed -->\n\t\t[1092]<div />\n\t[68]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />\n\t\t[325]<div role=menuitem expanded=false />\n\t\t\t[1093]<div />\n\t\t\t\t[1094]<i />\n\t\t\t\t\t[1095]<span role=img />\n\t\t\t\t\t\t[69]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1097]<span />\n\t\t\t\t\t变现中心\n\t\t\t\t[1098]<i />\n\t\t\t\t\t[1099]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[71]<svg /> <!-- SVG content collapsed -->\n\t\t[1102]<div />\n\t[72]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />\n\t\t[326]<div role=menuitem expanded=false />\n\t\t\t[1103]<div />\n\t\t\t\t[1104]<i />\n\t\t\t\t\t[1105]<span role=img />\n\t\t\t\t\t\t[73]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1107]<span />\n\t\t\t\t\t创作中心\n\t\t\t\t[1108]<i />\n\t\t\t\t\t[1109]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[75]<svg /> <!-- SVG content collapsed -->\n\t\t[1112]<div />\n\t[327]<div />\n\t\t[6]<img />\n\t[77]<a />\n\t\t通知\n\t\t[1120]<span />\n\t[11]<div />\n\t\t[1122]<div />\n\t\t\t[1123]<div />\n\t\t\t\t[1124]<span role=img />\n\t\t\t\t\t[12]<svg /> <!-- SVG content collapsed -->\n\t\t\t[13]<div />\n\t\t\t\t网址\n\t[329]<div />\n\t\t[1127]<div />\n\t\t\t[1128]<span role=img />\n\t\t\t\t[14]<svg /> <!-- SVG content collapsed -->\n\t\t[15]<div />\n\t\t\t抖音\n\t[16]<div id=header-avatar />\n\t\t[3]<div />\n\t[5]<div id=micro />\n\t\t[1195]<div id=root />\n\t\t\t基础信息\n\t\t\t作品描述\n\t\t\t[2103]<span />\n\t\t\t\t[2101]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2429]<div />\n\t\t\t\t[2513]<div />\n\t\t\t\t\t[2511]<input type=text placeholder=填写作品标题，为作品获得更多流量 />\n\t\t\t\t\t[2512]<div />\n\t\t\t\t\t\t[2510]<div />\n\t\t\t\t\t\t\t[2509]<div />\n\t\t\t\t\t\t\t\t30\n\t\t\t[2109]<div contenteditable=true />\n\t\t\t\t[2107]<div />\n\t\t\t[2431]<div />\n\t\t\t\t[2515]<div />\n\t\t\t\t\t#添加话题\n\t\t\t\t[2516]<div />\n\t\t\t\t\t@好友\n\t\t\t0 / 1000\n\t\t\t[2434]<div />\n\t\t\t\t官方活动\n\t\t\t\t*[3230]<span />\n\t\t\t\t\t*[3228]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t*[3250]<div />\n\t\t\t\t\t*[3236]<div />\n\t\t\t\t\t\t*[3233]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t\t*[3234]<span />\n\t\t\t\t\t\t\t千万流量！征集难题，回答时代困惑\n\t\t\t\t\t*[3237]<div />\n\t\t\t\t\t\t*[3235]<div />\n\t\t\t\t\t\t\t热度：281\n\t\t\t\t*[3251]<div />\n\t\t\t\t\t*[3242]<div />\n\t\t\t\t\t\t*[3239]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t\t*[3240]<span />\n\t\t\t\t\t\t\t音为有你全民开唱挑战赛\n\t\t\t\t\t*[3243]<div />\n\t\t\t\t\t\t*[3241]<div />\n\t\t\t\t\t\t\t热度：2.6k\n\t\t\t\t*[3252]<div />\n\t\t\t\t\t*[3248]<div />\n\t\t\t\t\t\t*[3245]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t\t*[3246]<span />\n\t\t\t\t\t\t\t火山拍作品分10万\n\t\t\t\t\t*[3249]<div />\n\t\t\t\t\t\t*[3247]<div />\n\t\t\t\t\t\t\t热度：102\n\t\t\t\t*[3253]<div />\n\t\t\t设置封面\n\t\t\t[2121]<span />\n\t\t\t\t[2119]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2782]<div />\n\t\t\t\t[2777]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t选择封面\n\t\t\t横封面4:3\n\t\t\t[2790]<div />\n\t\t\t\t[2785]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t选择封面\n\t\t\t竖封面3:4\n\t\t\tAi智能推荐封面生成中...\n\t\t\t[2795]<div />\n\t\t\t\t[2792]<div />\n\t\t\t\t[2793]<div />\n\t\t\t\t\t生成中\n\t\t\t*[3309]<div />\n\t\t\t*[3310]<div />\n\t\t\t好封面会吸引更多人浏览作品\n\t\t\t优质封面示例\n\t\t\t添加合集\n\t\t\t[2159]<div />\n\t\t\t\t[2151]<div />\n\t\t\t\t\t[2148]<div />\n\t\t\t\t\t\t[2147]<span />\n\t\t\t\t\t\t\t合集\n\t\t\t\t[2152]<div />\n\t\t\t\t\t[2150]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2160]<div />\n\t\t\t\t[2157]<div />\n\t\t\t\t\t[2154]<div />\n\t\t\t\t\t\t[2153]<span />\n\t\t\t\t\t\t\t[2495]<div />\n\t\t\t\t\t\t\t\t请选择合集\n\t\t\t\t[2158]<div />\n\t\t\t\t\t[2156]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2177]<section />\n\t\t\t\t[2172]<div />\n\t\t\t\t\t[2167]<div />\n\t\t\t\t\t\t自主声明\n\t\t\t\t[2173]<div />\n\t\t\t\t\t[2171]<div />\n\t\t\t\t\t\t[2169]<div />\n\t\t\t\t\t\t\t请选择自主声明\n\t\t\t\t\t\t[2170]<span />\n\t\t\t\t\t\t\t[2168]<img />\n\t\t\t扩展信息\n\t\t\t*[2240]<input type=file name=upload-btn accept=image/png,image/jpeg,image/jpg class=upload-btn-input-UY_qeY compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t\t视频章节\n\t\t\t[2310]<div />\n\t\t\t\t[2307]<div />\n\t\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t\t为进度条增加章节信息，让视频结构更清晰\n\t\t\t\t已添加的章节数量会在这里显示\n\t\t\t如上传视频属于中插植入类型，请您按照标准添加章节信息，具体详见\n\t\t\t[2543]<a />\n\t\t\t\t查看详情\n\t\t\t添加标签\n\t\t\t*[3177]<span />\n\t\t\t\t*[3175]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3191]<div />\n\t\t\t\t*[3183]<div />\n\t\t\t\t\t*[3180]<div />\n\t\t\t\t\t\t*[3179]<span />\n\t\t\t\t\t\t\t*[3205]<div />\n\t\t\t\t\t\t\t\t位置\n\t\t\t\t*[3184]<div />\n\t\t\t\t\t*[3182]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3189]<div />\n\t\t\t\t*[3187]<div />\n\t\t\t\t\t*[3186]<div />\n\t\t\t\t\t\t*[3185]<span />\n\t\t\t\t\t\t\t输入地理位置\n\t\t\t\t*[3188]<div />\n\t\t\t关联热点\n\t\t\t[2319]<span />\n\t\t\t\t[2317]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2327]<div />\n\t\t\t\t[2325]<div />\n\t\t\t\t\t[2322]<div />\n\t\t\t\t\t\t[2321]<span />\n\t\t\t\t\t\t\t点击输入热点词\n\t\t\t\t[2326]<div />\n\t\t\t\t\t[2324]<svg /> <!-- SVG content collapsed -->\n\t\t\t发布设置\n\t\t\t同时发布\n\t\t\t*[3273]<span />\n\t\t\t\t*[3271]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3283]<label />\n\t\t\t\t*[3277]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t不同时发布\n\t\t\t*[3284]<label />\n\t\t\t\t*[3281]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t同时发布到\n\t\t\t谁可以看\n\t\t\t[2497]<label />\n\t\t\t\t[2468]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t公开\n\t\t\t[2498]<label />\n\t\t\t\t[2472]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t好友可见\n\t\t\t[2499]<label />\n\t\t\t\t[2476]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t仅自己可见\n\t\t\t保存权限\n\t\t\t[2347]<span />\n\t\t\t\t[2345]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2357]<label />\n\t\t\t\t[2525]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t允许\n\t\t\t[2358]<label />\n\t\t\t\t[2526]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t不允许\n\t\t\t发布时间\n\t\t\t[2367]<span />\n\t\t\t\t[2365]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2377]<label />\n\t\t\t\t[2371]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t立即发布\n\t\t\t[2378]<label />\n\t\t\t\t[2375]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t定时发布\n\t\t\t[2401]<div />\n\t\t\t\t快速填写\n\t\t\t[2390]<button />\n\t\t\t\t发布\n\t\t\t[2392]<button />\n\t\t\t\t暂存离开\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t2026-04-29...9.mp4\n\t\t\t上传过程中请不要删除/移动文件\n\t\t\t[2821]<span />\n\t\t\t\t0%\n\t\t\t文件解析中，请稍等...\n\t\t\t[2823]<div />\n\t\t\t\t取消上传\n\t\t\t*[3220]<section />\n\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t\t发文助手\n\t\t\t\t*[3215]<p />\n\t\t\t\t\t*[3214]<svg /> <!-- SVG content collapsed -->\n\t[1509]<div />\n\t\t[1507]<span role=img />\n\t\t\t[1505]<svg /> <!-- SVG content collapsed -->\n|IFRAME|<iframe id=summon-web-iframe />\n\t[2]<div id=root />\n[2007]<div id=portal-container />\n[2465]<div />\n*[3260]<div />",
+    "edit-cover": "[319]<div id=root />\n\t[2]<button />\n\t\t高清发布\n\t[53]<li id=douyin-creator-master-menu-nav-home role=menuitem />\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t首页\n\t[321]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t活动管理\n\t[56]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />\n\t\t[322]<div role=menuitem expanded=false />\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t内容管理\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t[60]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />\n\t\t[323]<div role=menuitem expanded=false />\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t互动管理\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t[64]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />\n\t\t[324]<div role=menuitem expanded=false />\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t数据中心\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t[68]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />\n\t\t[325]<div role=menuitem expanded=false />\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t变现中心\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t[72]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />\n\t\t[326]<div role=menuitem expanded=false />\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t创作中心\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t[327]<div />\n\t[77]<a />\n\t\t通知\n\t<svg /> <!-- SVG content collapsed -->\n\t网址\n\t[329]<div />\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t抖音\n\t[5]<div id=micro />\n\t\t[1195]<div id=root />\n\t\t\t基础信息\n\t\t\t作品描述\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t[2429]<div />\n\t\t\t\t[2513]<div />\n\t\t\t\t\t[2512]<div />\n\t\t\t\t\t\t20\n\t\t\t\t\t\t30\n\t\t\tbrwoser-use体验及技术分析\n\t\t\t[2431]<div />\n\t\t\t\t[2515]<div />\n\t\t\t\t\t#添加话题\n\t\t\t\t[2516]<div />\n\t\t\t\t\t@好友\n\t\t\t18 / 1000\n\t\t\t[2433]<div />\n\t\t\t\t推荐\n\t\t\t\t[3346]<div />\n\t\t\t\t\t安卓\n\t\t\t\t[3347]<div />\n\t\t\t\t\tae教程\n\t\t\t\t[3348]<div />\n\t\t\t\t\t电竞显示器\n\t\t\t\t[3349]<div />\n\t\t\t\t\t初学ps\n\t\t\t\t[3350]<div />\n\t\t\t\t\t小米手机\n\t\t\t\t[3351]<div />\n\t\t\t\t\t在线学习\n\t\t\t\t[3337]<div />\n\t\t\t\t\t14\n\t\t\t[2434]<div />\n\t\t\t\t官方活动\n\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[3250]<div />\n\t\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t千万流量！征集难题，回答时代困惑\n\t\t\t\t\t热度：281\n\t\t\t\t[3251]<div />\n\t\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t音为有你全民开唱挑战赛\n\t\t\t\t\t热度：2.6k\n\t\t\t\t[3252]<div />\n\t\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t火山拍作品分10万\n\t\t\t\t\t热度：102\n\t\t\t\t[3253]<div />\n\t\t\t设置封面\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t[2782]<div />\n\t\t\t\t[2777]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t选择封面\n\t\t\t横封面4:3\n\t\t\t[2790]<div />\n\t\t\t\t[2785]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t选择封面\n\t\t\t竖封面3:4\n\t\t\tAi智能推荐封面生成中...\n\t\t\t生成中\n\t\t\t[3309]<div />\n\t\t\t[3310]<div />\n\t\t\t好封面会吸引更多人浏览作品\n\t\t\t优质封面示例\n\t\t\t添加合集\n\t\t\t[2159]<div />\n\t\t\t\t合集\n\t\t\t\t[2150]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2160]<div />\n\t\t\t\t请选择合集\n\t\t\t\t[2156]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2177]<section />\n\t\t\t\t[2172]<div />\n\t\t\t\t\t[2167]<div />\n\t\t\t\t\t\t自主声明\n\t\t\t\t[2173]<div />\n\t\t\t\t\t[2171]<div />\n\t\t\t\t\t\t[2169]<div />\n\t\t\t\t\t\t\t请选择自主声明\n\t\t\t扩展信息\n\t\t\t*[2240]<input type=file name=upload-btn accept=image/png,image/jpeg,image/jpg class=upload-btn-input-UY_qeY compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t\t视频章节\n\t\t\t[2310]<div />\n\t\t\t\t[2307]<div />\n\t\t\t\t\t[2304]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[2308]<div />\n\t\t\t\t\t[2305]<p />\n\t\t\t\t\t\t为进度条增加章节信息，让视频结构更清晰\n\t\t\t\t\t[2306]<p />\n\t\t\t\t\t\t已添加的章节数量会在这里显示\n\t\t\t\t[2309]<div />\n\t\t\t\t\t[3468]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t\t[3469]<p />\n\t\t\t\t\t\t智能章节已上线，试试吧\n\t\t\t\t\t[3471]<svg /> <!-- SVG content collapsed -->\n\t\t\t如上传视频属于中插植入类型，请您按照标准添加章节信息，具体详见\n\t\t\t[2543]<a />\n\t\t\t\t查看详情\n\t\t\t添加标签\n\t\t\t[3177]<span />\n\t\t\t\t[3175]<svg /> <!-- SVG content collapsed -->\n\t\t\t[3191]<div />\n\t\t\t\t[3183]<div />\n\t\t\t\t\t[3180]<div />\n\t\t\t\t\t\t[3179]<span />\n\t\t\t\t\t\t\t[3205]<div />\n\t\t\t\t\t\t\t\t位置\n\t\t\t\t[3184]<div />\n\t\t\t\t\t[3182]<svg /> <!-- SVG content collapsed -->\n\t\t\t[3189]<div />\n\t\t\t\t[3187]<div />\n\t\t\t\t\t[3186]<div />\n\t\t\t\t\t\t[3185]<span />\n\t\t\t\t\t\t\t输入地理位置\n\t\t\t\t[3188]<div />\n\t\t\t关联热点\n\t\t\t[2319]<span />\n\t\t\t\t[2317]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2327]<div />\n\t\t\t\t[2325]<div />\n\t\t\t\t\t[2322]<div />\n\t\t\t\t\t\t[2321]<span />\n\t\t\t\t\t\t\t点击输入热点词\n\t\t\t\t[2326]<div />\n\t\t\t\t\t[2324]<svg /> <!-- SVG content collapsed -->\n\t\t\t发布设置\n\t\t\t同时发布\n\t\t\t[3273]<span />\n\t\t\t\t[3271]<svg /> <!-- SVG content collapsed -->\n\t\t\t[3283]<label />\n\t\t\t\t[3277]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t不同时发布\n\t\t\t[3284]<label />\n\t\t\t\t[3281]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t同时发布到\n\t\t\t谁可以看\n\t\t\t[2497]<label />\n\t\t\t\t[2468]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t公开\n\t\t\t[2498]<label />\n\t\t\t\t[2472]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t好友可见\n\t\t\t[2499]<label />\n\t\t\t\t[2476]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t仅自己可见\n\t\t\t保存权限\n\t\t\t[2347]<span />\n\t\t\t\t[2345]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2357]<label />\n\t\t\t\t[2525]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t允许\n\t\t\t[2358]<label />\n\t\t\t\t[2526]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t不允许\n\t\t\t发布时间\n\t\t\t[2367]<span />\n\t\t\t\t[2365]<svg /> <!-- SVG content collapsed -->\n\t\t\t[2377]<label />\n\t\t\t\t[2371]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t立即发布\n\t\t\t[2378]<label />\n\t\t\t\t[2375]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t定时发布\n\t\t\t[2401]<div />\n\t\t\t\t快速填写\n\t\t\t[2390]<button />\n\t\t\t\t发布\n\t\t\t[2392]<button />\n\t\t\t\t暂存离开\n\t\t\t[3461]<div />\n\t\t\t\t预览视频\n\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t[3462]<div />\n\t\t\t\t预览封面/标题\n\t\t\t树哥AI\n\t\t\tai浏览器第5期-browser-use brwoser-use体验及技术分析\n\t\t\t[3503]<svg /> <!-- SVG content collapsed -->\n\t\t\t树哥AI创作的原声 - @树哥AI   树哥AI创作的原声 - @树哥AI   树哥AI创作的原声 - @树哥AI\n\t\t\t[3403]<div />\n\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t添加音乐\n\t\t\t*[3411]<input type=file name=upload-btn accept=video/mp4,video/x-m4v,video/x-flv,.flv,.avi,.wmv,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,.m4,video/* class=upload-btn-input-UY_qeY compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t\t[3412]<button />\n\t\t\t重新上传\n\t\t\t[3220]<section />\n\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t\t发文助手\n\t\t\t\t[3421]<div />\n\t\t\t\t\t[3419]<p />\n\t\t\t\t\t\t快速检测\n\t\t\t\t\t\t[3418]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[3465]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t检测中6%\n\t\t\t\t横/竖双封面缺失\n\t\t\t\t为增加作品的流量，建议同时设置横版和竖版的封面\n\t\t\t\t[3215]<p />\n\t\t\t\t\t[3214]<svg /> <!-- SVG content collapsed -->\n\t<svg /> <!-- SVG content collapsed -->\n|IFRAME|<iframe id=summon-web-iframe />\n\t[2]<div id=root />\n[2007]<div id=portal-container />\n[2465]<div />\n[3260]<div />\n[3376]<div id=toast-wrapper-178554971753 />\n[3429]<div />\n*[3654]<div />\n\t|scroll element|<div role=none /> (scroll: 0%, 0.1 pages below, total: 1.1 pages)\n\t\t*[3657]<div />\n\t\t\t*[3655]<span />\n\t\t\t\t设置\n\t\t\t\t封面\n\t\t*[3658]<div />\n\t\t\t*[3656]<span />\n\t\t\t\t设置\n\t\t\t\t封面\n\t\t*[3701]<li level=1 />\n\t\t\t*[3663]<div />\n\t\t\t\t*[3662]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3664]<div />\n\t\t\t\tAI封面\n\t\t*[3702]<li level=1 />\n\t\t\t*[3668]<div />\n\t\t\t\t*[3667]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3669]<div />\n\t\t\t\t模板\n\t\t*[3703]<li level=1 />\n\t\t\t*[3676]<div />\n\t\t\t\t*[3675]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3677]<div />\n\t\t\t\t贴纸\n\t\t*[3704]<li level=1 />\n\t\t\t*[3681]<div />\n\t\t\t\t*[3680]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3682]<div />\n\t\t\t\t标题\n\t\t*[3705]<li level=1 />\n\t\t\t*[3689]<div />\n\t\t\t\t*[3688]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3690]<div />\n\t\t\t\t文字\n\t\t*[3706]<li level=1 />\n\t\t\t*[3699]<div />\n\t\t\t\t*[3698]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3700]<div />\n\t\t\t\t滤镜\n\t\t*[3713]<div />\n\t\t\t*[3712]<div />\n\t\t\t\t*[3710]<div />\n\t\t\t\t*[3711]<div />\n\t\t\t\t\t*[3708]<div />\n\t\t\t\t\t*[3709]<div />\n\t\t\t\t\t\t生成中\n\t\t生成参考图\n\t\t*[3724]<div />\n\t\t*[3725]<div />\n\t\t\t*[3721]<div />\n\t\t\t\t*[3718]<div />\n\t\t\t\t\t*[3717]<span />\n\t\t\t\t\t\t智能参考\n\t\t\t*[3722]<div />\n\t\t\t\t*[3720]<svg /> <!-- SVG content collapsed -->\n\t\t*[3735]<input type=file accept=image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif autocomplete=off class=semi-upload-hidden-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t*[3736]<input type=file accept=image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif autocomplete=off class=semi-upload-hidden-input-replace compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t*[3737]<div />\n\t\t\t*[3734]<div />\n\t\t\t\t*[3733]<svg /> <!-- SVG content collapsed -->\n\t\t|scroll element|<div />\n\t\t\t*[3738]<div />\n\t\t\t*[3739]<div />\n\t\t\t*[3740]<div />\n\t\t*[3759]<button />\n\t\t\tAI生成封面\n\t\t*[4160]<canvas />\n\t\t*[3895]<div />\n\t\t\t*[3889]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3890]<div />\n\t\t\t\t增强\n\t\t*[3897]<div />\n\t\t\t*[3893]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3894]<div />\n\t\t\t\t对比\n\t\t*[3913]<svg /> <!-- SVG content collapsed -->\n\t\t*[3904]<div />\n\t\t*[3905]<div />\n\t\t*[3901]<span />\n\t\t*[3915]<svg /> <!-- SVG content collapsed -->\n\t\t*[3938]<div />\n\t\t\t*[3919]<div />\n\t\t\t*[3920]<div />\n\t\t\t*[3921]<div />\n\t\t\t*[3922]<div />\n\t\t\t*[3923]<div />\n\t\t\t*[3924]<div />\n\t\t\t*[3925]<div />\n\t\t\t*[3926]<div />\n\t\t\t*[3927]<div />\n\t\t*[3939]<div />\n\t\t\t*[3933]<div />\n\t\t\t*[3934]<div />\n\t\t\t\t*[3930]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t*[3931]<div />\n\t\t\t\t*[3932]<svg /> <!-- SVG content collapsed -->\n\t\t*[3940]<div />\n\t\t*[3942]<div />\n\t\t*[3944]<div />\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t上传封面\n\t\t*[3963]<input type=file accept=image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif autocomplete=off class=semi-upload-hidden-input compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t*[3964]<input type=file accept=image/png,image/jpeg,image/jpg,image/bmp,image/webp,image/tif autocomplete=off class=semi-upload-hidden-input-replace compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t\t*[3965]<div />\n\t\t\t*[3961]<div />\n\t\t\t\t*[3957]<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3962]<div />\n\t\t\t\t*[3958]<div />\n\t\t\t\t\t点击上传文件或拖拽文件到这里\n\t\t\t\t*[3959]<div />\n\t\t\t\t*[3960]<div />\n\t\t*[3982]<div />\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t*[3977]<span />\n\t\t\t\t封面检测\n\t\t*[3980]<button />\n\t\t\t完成\n\t\t*[3981]<button />\n\t\t\t设置竖封面\n\t\t*[4152]<div />\n\t\t\t*[4157]<div />\n\t\t\t\t设置两张封面将获得更多曝光和推荐\n\t\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t*[4344]<canvas />\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t<svg /> <!-- SVG content collapsed -->\n\t\t横封面预览（4:3）\n\t\t*[4086]<svg /> <!-- SVG content collapsed -->",
+    "video": "[319]<div id=root />\n\t[2]<button />\n\t\t高清发布\n\t[53]<li id=douyin-creator-master-menu-nav-home role=menuitem />\n\t\t[1048]<i />\n\t\t\t[1049]<span role=img />\n\t\t\t\t[54]<svg /> <!-- SVG content collapsed -->\n\t\t[1051]<span />\n\t\t\t首页\n\t\t[1052]<i />\n\t[321]<li id=douyin-creator-master-menu-nav-activity_management role=menuitem />\n\t\t[1053]<i />\n\t\t\t[1054]<span role=img />\n\t\t\t\t[1055]<svg /> <!-- SVG content collapsed -->\n\t\t[1057]<span />\n\t\t\t活动管理\n\t\t[1059]<i />\n\t[56]<li id=douyin-creator-master-menu-nav-content aria-expanded=false />\n\t\t[322]<div role=menuitem expanded=false />\n\t\t\t[1060]<div />\n\t\t\t\t[1061]<i />\n\t\t\t\t\t[1062]<span role=img />\n\t\t\t\t\t\t[57]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1065]<span />\n\t\t\t\t\t内容管理\n\t\t\t\t[1066]<i />\n\t\t\t\t\t[1067]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[59]<svg /> <!-- SVG content collapsed -->\n\t\t[1070]<div />\n\t[60]<li id=douyin-creator-master-menu-nav-interaction aria-expanded=false />\n\t\t[323]<div role=menuitem expanded=false />\n\t\t\t[1071]<div />\n\t\t\t\t[1072]<i />\n\t\t\t\t\t[1073]<span role=img />\n\t\t\t\t\t\t[61]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1076]<span />\n\t\t\t\t\t互动管理\n\t\t\t\t[1077]<i />\n\t\t\t\t\t[1078]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[63]<svg /> <!-- SVG content collapsed -->\n\t\t[1081]<div />\n\t[64]<li id=douyin-creator-master-menu-nav-data-center aria-expanded=false />\n\t\t[324]<div role=menuitem expanded=false />\n\t\t\t[1082]<div />\n\t\t\t\t[1083]<i />\n\t\t\t\t\t[1084]<span role=img />\n\t\t\t\t\t\t[65]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1087]<span />\n\t\t\t\t\t数据中心\n\t\t\t\t[1088]<i />\n\t\t\t\t\t[1089]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[67]<svg /> <!-- SVG content collapsed -->\n\t\t[1092]<div />\n\t[68]<li id=douyin-creator-master-menu-nav-cash aria-expanded=false />\n\t\t[325]<div role=menuitem expanded=false />\n\t\t\t[1093]<div />\n\t\t\t\t[1094]<i />\n\t\t\t\t\t[1095]<span role=img />\n\t\t\t\t\t\t[69]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1097]<span />\n\t\t\t\t\t变现中心\n\t\t\t\t[1098]<i />\n\t\t\t\t\t[1099]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[71]<svg /> <!-- SVG content collapsed -->\n\t\t[1102]<div />\n\t[72]<li id=douyin-creator-master-menu-nav-create aria-expanded=false />\n\t\t[326]<div role=menuitem expanded=false />\n\t\t\t[1103]<div />\n\t\t\t\t[1104]<i />\n\t\t\t\t\t[1105]<span role=img />\n\t\t\t\t\t\t[73]<svg /> <!-- SVG content collapsed -->\n\t\t\t\t[1107]<span />\n\t\t\t\t\t创作中心\n\t\t\t\t[1108]<i />\n\t\t\t\t\t[1109]<span role=img aria-label=chevron_down />\n\t\t\t\t\t\t[75]<svg /> <!-- SVG content collapsed -->\n\t\t[1112]<div />\n\t[327]<div />\n\t\t[6]<img />\n\t[77]<a />\n\t\t通知\n\t\t[1120]<span />\n\t[11]<div />\n\t\t[1122]<div />\n\t\t\t[1123]<div />\n\t\t\t\t[1124]<span role=img />\n\t\t\t\t\t[12]<svg /> <!-- SVG content collapsed -->\n\t\t\t[13]<div />\n\t\t\t\t网址\n\t[329]<div />\n\t\t[1127]<div />\n\t\t\t[1128]<span role=img />\n\t\t\t\t[14]<svg /> <!-- SVG content collapsed -->\n\t\t[15]<div />\n\t\t\t抖音\n\t[16]<div id=header-avatar />\n\t\t[3]<div />\n\t[5]<div id=micro />\n\t\t[1195]<div id=root />\n\t\t\t*[5529]<div />\n\t\t\t\t发布视频\n\t\t\t*[5530]<div />\n\t\t\t\t发布图文\n\t\t\t*[5531]<div />\n\t\t\t\t发布全景视频\n\t\t\t*[5532]<div />\n\t\t\t\t发布文章\n\t\t\t*[5527]<a />\n\t\t\t\t了解上传规则详情\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t你还有上次未发布的视频，是否继续编辑？\n\t\t\t*[5626]<span />\n\t\t\t\t继续编辑\n\t\t\t*[5627]<span />\n\t\t\t\t放弃\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t视频大小和格式\n\t\t\t视频时长60分钟以内，文件大小16G以内，推荐上传mp4、webm格式视频\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t视频画质\n\t\t\t分辨率最高支持4K，帧率最大支持60帧，智能识别输出HDR视频\n\t\t\t*[5563]<svg /> <!-- SVG content collapsed -->\n\t\t\t<svg /> <!-- SVG content collapsed -->\n\t\t\t视频画幅\n\t\t\t建议上传宽高比为16:9、9:16、3:4、4:3、9:19.5（5.8寸）的视频\n\t\t\t*[5607]<div role=presentation />\n\t\t\t\t*[5604]<div />\n\t\t\t\t\t*[5597]<div />\n\t\t\t\t\t\t*[5589]<img />\n\t\t\t\t\t*[5598]<div />\n\t\t\t\t\t\t点击上传 或直接将视频文件拖入此区域\n\t\t\t\t\t*[5599]<div />\n\t\t\t\t\t\t为了更好的观看体验和平台安全，平台将对上传的视频预审。超过40秒的视频建议上传横版视频\n\t\t\t\t\t*[5600]<div />\n\t\t\t\t\t\t*[5595]<button />\n\t\t\t\t\t\t\t上传\n\t\t\t\t\t\t\t视频\n\t\t\t\t\t\t*[5596]<img />\n\t\t\t\t*[5605]<input type=file accept=video/x-flv,video/mp4,video/x-m4v,video/*,.flv,.avi,.wmv,.webm,.ts,.mp4,.mpeg4,.mov,.m4v,.mpg,.mkv,. compound_components=(name=Browse Files,role=button),(name=File Selected,role=textbox,current=None) />\n\t[1509]<div />\n\t\t[1507]<span role=img />\n\t\t\t[1505]<svg /> <!-- SVG content collapsed -->\n|IFRAME|<iframe id=summon-web-iframe />\n\t[2]<div id=root />\n[2007]<div id=portal-container />\n[3260]<div />\n[3376]<div id=toast-wrapper-178554971753 />"
+  }
+}

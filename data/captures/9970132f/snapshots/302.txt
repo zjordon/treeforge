@@ -1,0 +1,352 @@
+[534352]<a />
+[534356]<li id=menu-magento-backend-dashboard role=menu-item />
+	[534357]<a />
+		Dashboard
+[534359]<li id=menu-magento-sales-sales role=menu-item />
+	[534360]<a />
+		Sales
+[534392]<li id=menu-magento-catalog-catalog role=menu-item />
+	[534393]<a />
+		Catalog
+[534410]<li id=menu-magento-customer-customer role=menu-item />
+	[534411]<a />
+		Customers
+[534429]<li id=menu-magento-backend-marketing role=menu-item />
+	[534430]<a />
+		Marketing
+[534496]<li id=menu-magento-backend-content role=menu-item />
+	[534497]<a />
+		Content
+[534542]<li id=menu-magento-reports-report role=menu-item />
+	[534543]<a />
+		Reports
+[534667]<li id=menu-magento-backend-stores role=menu-item />
+	[534668]<a />
+		Stores
+[534743]<li id=menu-magento-backend-system role=menu-item />
+	[534744]<a />
+		System
+[534826]<li id=menu-magento-marketplace-partners role=menu-item />
+	[534827]<a />
+		Find Partners & Extensions
+#000000302
+[534853]<a title=My Account />
+	admin
+[534865]<a title=Notifications />
+[534866]<div />
+	[534867]<form id=form-search />
+		[534868]<div />
+			[534870]<input type=text id=search-global autocomplete=off />
+[534878]<button title=Back id=back />
+	Back
+[534881]<button title=Login as Customer id=guest_to_customer />
+	Login as Customer
+[534884]<button title=Reorder id=order_reorder />
+	Reorder
+You canceled the order.
+Order & Account Information
+Order # 000000302 (
+The order confirmation email was sent
+[534941]<tr />
+	Order Date
+	[534943]<td />
+		Apr 19, 2023, 7:41:29 PM
+[534944]<tr />
+	Order Status
+	[534946]<td />
+		Canceled
+[534948]<tr />
+	Purchased From
+	[534950]<td />
+		Main Website
+		Main Website Store
+		Default Store View
+[534953]<tr />
+	Placed from IP
+	[534955]<td />
+		128.2.205.52
+Account Information
+[534960]<a />
+	Edit Customer
+Customer Name
+Jane Doe
+[534969]<tr />
+	Email
+	[534971]<td />
+		[534972]<a />
+			jane.doe@hotmail.com
+[534973]<tr />
+	Customer Group
+	[534975]<td />
+		General
+Address Information
+Billing Address
+[534983]<div />
+	[534984]<a />
+		Edit
+Jane Doe
+567 Ocean Drive
+Miami,  Florida, 33139
+United States
+T: 4123671901
+Shipping Address
+[534993]<div />
+	[534994]<a />
+		Edit
+Jane Doe
+567 Ocean Drive
+Miami,  Florida, 33139
+United States
+T: 4123671901
+Payment & Shipping Method
+Payment Information
+Check / Money order
+The order was placed using USD.
+Shipping & Handling Information
+Flat Rate - Fixed
+[535017]<span />
+	$25.00
+Items Ordered
+[535024]<tr />
+	Product
+	Item Status
+	Original Price
+	Price
+	Qty
+	Subtotal
+	Tax Amount
+	Tax Percent
+	Discount Amount
+	Row Total
+[535046]<tr />
+	[535047]<td />
+		Troy Yoga Short
+		SKU:
+		MSH09-32-Black
+		Color:
+		Black
+		Size:
+		32
+	[535057]<td />
+		Canceled
+	[535058]<td />
+		[535059]<span />
+			$24.00
+	[535060]<td />
+		[535061]<div />
+			[535062]<span />
+				$24.00
+	[535063]<td />
+		[535066]<tr />
+			Ordered
+			[535068]<td />
+		[535069]<tr />
+			Canceled
+			[535071]<td />
+	[535072]<td />
+		[535074]<span />
+			$24.00
+	[535075]<td />
+		[535076]<span />
+			$0.00
+	[535077]<td />
+		0%
+	[535078]<td />
+		[535079]<span />
+			$0.00
+	[535080]<td />
+		[535081]<span />
+			$24.00
+[535083]<tr />
+	[535084]<td />
+		Gabrielle Micro Sleeve Top
+		SKU:
+		WS02-L-Green
+		Color:
+		Green
+		Size:
+	[535094]<td />
+		Canceled
+	[535095]<td />
+		[535096]<span />
+			$28.00
+	[535097]<td />
+		[535098]<div />
+			[535099]<span />
+				$28.00
+	[535100]<td />
+		[535103]<tr />
+			Ordered
+			[535105]<td />
+		[535106]<tr />
+			Canceled
+			[535108]<td />
+	[535109]<td />
+		[535111]<span />
+			$28.00
+	[535112]<td />
+		[535113]<span />
+			$0.00
+	[535114]<td />
+		0%
+	[535115]<td />
+		[535116]<span />
+			$0.00
+	[535117]<td />
+		[535118]<span />
+			$28.00
+[535120]<tr />
+	[535121]<td />
+		Sprite Yoga Strap 6 foot
+		SKU:
+		24-WG085
+	[535126]<td />
+		Canceled
+	[535127]<td />
+		[535128]<span />
+			$14.00
+	[535129]<td />
+		[535130]<div />
+			[535131]<span />
+				$14.00
+	[535132]<td />
+		[535135]<tr />
+			Ordered
+			[535137]<td />
+		[535138]<tr />
+			Canceled
+			[535140]<td />
+	[535141]<td />
+		[535143]<span />
+			$14.00
+	[535144]<td />
+		[535145]<span />
+			$0.00
+	[535146]<td />
+		0%
+	[535147]<td />
+		[535148]<span />
+			$0.00
+	[535149]<td />
+		[535150]<span />
+			$14.00
+[535152]<tr />
+	[535153]<td />
+		Cora Parachute Pant
+		SKU:
+		WP04-29-Blue
+		Color:
+		Blue
+		Size:
+		29
+	[535163]<td />
+		Canceled
+	[535164]<td />
+		[535165]<span />
+			$75.00
+	[535166]<td />
+		[535167]<div />
+			[535168]<span />
+				$60.00
+	[535169]<td />
+		[535172]<tr />
+			Ordered
+			[535174]<td />
+		[535175]<tr />
+			Canceled
+			[535177]<td />
+	[535178]<td />
+		[535180]<span />
+			$60.00
+	[535181]<td />
+		[535182]<span />
+			$0.00
+	[535183]<td />
+		0%
+	[535184]<td />
+		[535185]<span />
+			$0.00
+	[535186]<td />
+		[535187]<span />
+			$60.00
+[535189]<tr />
+	[535190]<td />
+		Apollo Running Short
+		SKU:
+		MSH02-33-Black
+		Color:
+		Black
+		Size:
+		33
+	[535200]<td />
+		Canceled
+	[535201]<td />
+		[535202]<span />
+			$32.50
+	[535203]<td />
+		[535204]<div />
+			[535205]<span />
+				$32.50
+	[535206]<td />
+		[535209]<tr />
+			Ordered
+			[535211]<td />
+		[535212]<tr />
+			Canceled
+			[535214]<td />
+	[535215]<td />
+		[535217]<span />
+			$32.50
+	[535218]<td />
+		[535219]<span />
+			$0.00
+	[535220]<td />
+		0%
+	[535221]<td />
+		[535222]<span />
+			$0.00
+	[535223]<td />
+		[535224]<span />
+			$32.50
+Order Total
+Notes for this Order
+Status
+*[535243]<select id=history_status name=history[status] expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=1,options=Canceled) />
+Comment
+Order Totals
+[535272]<tr />
+	[535273]<td />
+		Grand Total
+	[535275]<td />
+		$183.50
+[535297]<tr />
+	[535298]<td />
+		Subtotal
+	[535299]<td />
+		$158.50
+[535302]<tr />
+	[535303]<td />
+		Shipping & Handling
+	[535304]<td />
+		[535306]<span />
+			$25.00
+Order View
+[534908]<li id=sales_order_view_tabs_order_info role=tab selected=true expanded=true />
+	[534909]<a title=Order Information id=sales_order_view_tabs_order_info name=order_info role=presentation />
+		Information
+[535322]<li id=sales_order_view_tabs_order_invoices role=tab selected=false expanded=false />
+	[535323]<a title=Order Invoices id=sales_order_view_tabs_order_invoices name=order_invoices role=presentation />
+		Invoices
+		[535325]<span />
+[535357]<li id=sales_order_view_tabs_order_creditmemos role=tab selected=false expanded=false />
+	[535358]<a title=Order Credit Memos id=sales_order_view_tabs_order_creditmemos name=order_creditmemos role=presentation />
+		Credit Memos
+		[535360]<span />
+[535392]<li id=sales_order_view_tabs_order_shipments role=tab selected=false expanded=false />
+	[535393]<a title=Order Shipments id=sales_order_view_tabs_order_shipments name=order_shipments role=presentation />
+		Shipments
+		[535395]<span />
+[535427]<li id=sales_order_view_tabs_order_history role=tab selected=false expanded=false />
+	[535428]<a title=Order History id=sales_order_view_tabs_order_history name=order_history role=presentation />
+		Comments History
+		[535430]<span />

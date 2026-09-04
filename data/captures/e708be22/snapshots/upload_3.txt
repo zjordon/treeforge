@@ -1,0 +1,8 @@
+TreeForge Capture
+录制中（distill）
+后端
+场景
+[4]<button id=toggle />
+	停止录制
+事件数：
+33

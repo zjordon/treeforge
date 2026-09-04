@@ -1,0 +1,201 @@
+[46087]<a />
+[46095]<li id=menu-magento-backend-dashboard role=menu-item />
+	[46096]<a />
+		Dashboard
+[46101]<li id=menu-magento-sales-sales role=menu-item />
+	[45957]<a />
+		Sales
+[46144]<li id=menu-magento-catalog-catalog role=menu-item />
+	[45958]<a />
+		Catalog
+[46167]<li id=menu-magento-customer-customer role=menu-item />
+	[45959]<a />
+		Customers
+[46192]<li id=menu-magento-backend-marketing role=menu-item />
+	[45960]<a />
+		Marketing
+[46277]<li id=menu-magento-backend-content role=menu-item />
+	[45961]<a />
+		Content
+[46336]<li id=menu-magento-reports-report role=menu-item />
+	[45962]<a />
+		Reports
+[46497]<li id=menu-magento-backend-stores role=menu-item />
+	[45963]<a />
+		Stores
+[46593]<li id=menu-magento-backend-system role=menu-item />
+	[45964]<a />
+		System
+[46698]<li id=menu-magento-marketplace-partners role=menu-item />
+	[46699]<a />
+		Find Partners & Extensions
+New Product
+[46767]<a title=My Account />
+	admin
+[46805]<a title=Notifications />
+[46810]<div />
+	[45933]<form id=form-search />
+		[46813]<div />
+			[45934]<input type=text id=search-global autocomplete=off />
+[46839]<div title=Save />
+	[46843]<button title=Save id=save-button />
+		Save
+	[46849]<button title=Save aria-label=Save options />
+[45965]<button title=Back id=back />
+	Back
+[46890]<button title=Add Attribute id=addAttribute />
+	Add Attribute
+[49020]<span />
+	Enable Product
+[50137]<input type=checkbox checked=true id=ION6MG8 name=product[status] value=1 />
+[50139]<span />
+[49069]<span />
+	Attribute Set
+[50142]<div />
+	[50143]<div />
+		Default
+[50159]<div />
+	[50161]<input type=text id=K9WUVC52 />
+[50271]<div />
+	[50274]<label />
+		[50275]<span />
+			Bag
+[50288]<div />
+	[50291]<label />
+		[50292]<span />
+			Bottom
+[50305]<div />
+	[50308]<label />
+		[50309]<span />
+			Default
+[50322]<div />
+	[50325]<label />
+		[50326]<span />
+			Downloadable
+[50339]<div />
+	[50342]<label />
+		[50343]<span />
+			Gear
+[50356]<div />
+	[50359]<label />
+		[50360]<span />
+			Sprite Stasis Ball
+[50373]<div />
+	[50376]<label />
+		[50377]<span />
+			Sprite Yoga Strap
+[50390]<div />
+	[50393]<label />
+		[50394]<span />
+			Top
+[49118]<span />
+	Product Name
+[49167]<span />
+	SKU
+[49433]<div />
+	[49435]<span />
+		Price
+[66405]<button />
+	Advanced Pricing
+[49216]<span />
+	Tax Class
+[49526]<div />
+	[49528]<span />
+		Quantity
+[66426]<button />
+	Advanced Inventory
+[49265]<span />
+	Stock Status
+*[50589]<select id=Q42L7LN name=product[quantity_and_stock_status][is_in_stock] aria-label=notice-Q42L7LN expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=In Stock|Out of Stock,format=numeric) />
+[49627]<div />
+	[49629]<span />
+		Weight
+[50568]<input type=text id=OHUT3CJ name=product[weight] maxlength=255 />
+lbs
+*[51375]<select id=X861W90 name=product[product_has_weight] aria-label=notice-X861W90 expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=2,options=This item has weight|This item has no weight,format=numeric) />
+[49772]<div />
+	[49774]<span />
+		Categories
+[50422]<div />
+	[50423]<div />
+		Select...
+[66447]<button />
+	New Category
+[49314]<span />
+	Visibility
+*[50602]<select id=R8D4Y0M name=product[visibility] aria-label=notice-R8D4Y0M expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=4,options=Not Visible Individually|Catalog|Search|Catalog, Search,format=numeric) />
+[49860]<div />
+	[49862]<span />
+		Set Product as New From
+[51404]<input type=text id=I02TLBV name=product[news_from_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+[51457]<button />
+	[51460]<span />
+		undefined
+[49911]<div />
+	[49913]<span />
+		To
+[51406]<input type=text id=X4GE8W8 name=product[news_to_date] placeholder=mm/dd/yyyy autocomplete=on format=mm/dd/yyyy />
+[58751]<button />
+	[58754]<span />
+		undefined
+[49363]<span />
+	Country of Manufacture
+*[50621]<select id=S4W9IIS name=product[country_of_manufacture] aria-label=notice-S4W9IIS expanded=false compound_components=(name=Dropdown Toggle,role=button),(name=Options,role=listbox,count=248,options=Afghanistan|Albania|Algeria|American Samoa,format=country/state codes) />
+[48172]<div />
+	[48173]<strong />
+		[48174]<span />
+			Content
+		[48175]<span />
+[48451]<div />
+	[48452]<strong />
+		[48453]<span />
+			Configurations
+		[48454]<span />
+[66384]<button />
+	Create Configurations
+Configurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).
+[47940]<div />
+	[47941]<strong />
+		[47942]<span />
+			Images And Videos
+		[47943]<span />
+[48218]<div />
+	[48203]<div />
+		[48204]<strong />
+			[48205]<span />
+				Search Engine Optimization
+			[48206]<span />
+[48420]<div />
+	[48421]<strong />
+		[48422]<span />
+			Related Products, Up-Sells, and Cross-Sells
+		[48423]<span />
+[48389]<div />
+	[48390]<strong />
+		[48391]<span />
+			Customizable Options
+		[48392]<span />
+[48358]<div />
+	[48359]<strong />
+		[48360]<span />
+			Product in Websites
+		[48361]<span />
+[48234]<div />
+	[48235]<strong />
+		*[48236]<span />
+			Design
+		*[48237]<span />
+*[48265]<div />
+	*[48266]<strong />
+		*[48267]<span />
+			Schedule Design Update
+		*[48268]<span />
+*[48296]<div />
+	*[48297]<strong />
+		*[48298]<span />
+			Gift Options
+		*[48299]<span />
+*[48327]<div />
+	*[48328]<strong />
+		*[48329]<span />
+			Downloadable Information
