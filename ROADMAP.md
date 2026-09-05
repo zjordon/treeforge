@@ -506,7 +506,9 @@ Browser-BC 的五阶段管线（atomize → classify 到 capacity → bucket 归
 - [x] **S5 多任务工作流**：`treeforge distill` 支持多 trace 输入 + `--fresh`；serve 侧
   控制面板加「按 host 再蒸馏（累积）」入口
 - [x] **S6 评测对接**：配合 TreeWalker "with site knowledge" 变体口径（分列报告，
-  不进主口径——评测红线）；任务卡目录约定即 TreeWalker 未来检索的读取契约
+  不进主口径——评测红线）；任务卡目录约定即 TreeWalker 检索的读取契约——TreeWalker
+  侧加载任务级 skill 的技术方案见 [docs/task-skill-loading-design.md](./docs/task-skill-loading-design.md)
+  （LLM-as-ranker 命中注入 + 保守匹配 + 三口径评测纪律，2026-09-05）
 - [x] **测试**：mock LLM 验证增量合并 / 多 trace 归并 / 任务卡双产物 / 解析失败重试+保旧卡（268 测试）
   （不破坏现有单任务行为）
 

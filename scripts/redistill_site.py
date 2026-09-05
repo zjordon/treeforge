@@ -9,9 +9,12 @@
   - 每张任务卡用它的全部 source_traces（同任务多次重录的合并重蒸）
 
 用法：
-    uv run python scripts/redistill_site.py --host localhost --dry-run   # 先看计划
-    uv run python scripts/redistill_site.py --host localhost             # 真跑（调 LLM）
-    uv run python scripts/redistill_site.py --host localhost --output ./data/skills
+    uv run python scripts/redistill_site.py --host localhost_7780 --dry-run   # 先看计划
+    uv run python scripts/redistill_site.py --host localhost_7780             # 真跑（调 LLM）
+    uv run python scripts/redistill_site.py --host localhost_7780 --output ./data/skills
+
+    # host 是端口限定 key（S0b issue #9）：localhost:7780 站点 = localhost_7780，
+    # 与 domain-skills/ 目录名一致；无端口站点用裸 hostname（bilibili.com）。
 
 约定：任务卡按 _task.json mtime 旧→新处理（先见的知识先进卡，累积自然）。
 无 LLM_KEY 时拒绝真跑（模板模式重建无意义）。

@@ -26,6 +26,7 @@ from __future__ import annotations
 from urllib.parse import urlparse
 
 from . import config, progress
+from .hostkey import bare_hostname, extract_host_with_port
 from .models import Segment, Trace, TraceEvent
 
 # iframe / 第三方域黑名单：这些域的 pageLoad 是噪声，不切边界
@@ -61,12 +62,15 @@ _INPUT_STABLE_ATTRS: tuple[str, ...] = (
 def _registered_domain(host: str | None) -> str:
     """简化版 eTLD+1：取最后两段。完整 publicsuffix 后续 P1+ 补。
 
-    ``www.bilibili.com → bilibili.com``，``api.x.com → x.com``，``localhost → localhost``
+    ``www.bilibili.com → bilibili.com``，``api.x.com → x.com``，``localhost → localhost``，
+    ``localhost_7780 → localhost_7780``（端口限定 key 原样）
     """
     if not host:
         return ""
     host = host.lower().strip()
-    if host in {"localhost", "127.0.0.1"}:
+    # 端口限定 key（127.0.0.1_7780）按点号分段会算出损坏 key（0.1_7780）——
+    # 裸 hostname 命中本机特例集的原样返回（localhost_7780 无点号本就原样走到这）
+    if host in {"localhost", "127.0.0.1"} or bare_hostname(host) in {"localhost", "127.0.0.1"}:
         return host
     parts = host.split(".")
     if len(parts) <= 2:
@@ -75,13 +79,13 @@ def _registered_domain(host: str | None) -> str:
 
 
 def _host_of(url: str | None) -> str:
-    if not url:
-        return ""
-    try:
-        h = urlparse(url).hostname
-        return (h or "").lower()
-    except Exception:  # noqa: BLE001
-        return ""
+    """事件 URL → host（端口限定 key：``localhost:7780`` → ``localhost_7780``）。
+
+    【产物 key 链路】_host_of → _registered_domain → Segment.domain → domain-skills/
+    落盘目录 / registry / 任务卡（issue #9 S0b）——这里若剥掉端口，localhost:7780
+    会蒸到 ``localhost/``，对 TreeWalker 静默不可见。
+    """
+    return extract_host_with_port(url) or ""
 
 
 def _path_prefix(url: str | None, depth: int) -> str:
