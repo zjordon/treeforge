@@ -17,7 +17,8 @@ TreeWalker 注入不受影响（按固定三件文件名读，不递归子目录
 【消费侧约束】TreeWalker 的 browser-harness 加载逻辑（详见知识库
 skill-auto-evolution-migration.md + browser-agent/dev-plan.md）：
 
-  - 目录按 ``hostname`` 索引（``urlparse(url).hostname``）
+  - 目录按端口限定 host key 索引（hostname；URL 显式带端口时 ``host_port``，如
+    ``localhost_7780``——两端统一语义见 ``harness/hostkey.py``，S0b issue #9）
   - **只加载 .md 文件**，按字母序排序，**硬上限 10 个**
   - ``_sop.md`` 的下划线前缀确保它排第一、作为入口索引
 

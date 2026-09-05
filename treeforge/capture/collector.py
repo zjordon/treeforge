@@ -22,6 +22,7 @@ import logging
 from dataclasses import dataclass, field
 from typing import Any
 
+from harness.hostkey import extract_host_with_port
 from treeforge.capture.cdp_session import CdpSession
 from treeforge.capture.distill_schema import payload_to_trace_fields
 from treeforge.capture.stage import StageTracker
@@ -30,10 +31,12 @@ logger = logging.getLogger(__name__)
 
 
 def _extract_real_host(url: str) -> str:
-    """从 URL 提取真实站点 host，跳过浏览器内部页面。
+    """从 URL 提取真实站点 host key，跳过浏览器内部页面。
 
     chrome://、chrome-extension://、about:、new-tab-page 等不是真实站点，
     hostname 会是 None 或浏览器内部值（如 'new-tab-page'），应跳过等待真实页面。
+    返回端口限定 key（localhost:7780 → localhost_7780，S0b issue #9）——写进
+    trace.json 顶层 host 字段，host 模式累积再蒸馏按它收集。
     """
     if not url:
         return ""
@@ -48,7 +51,7 @@ def _extract_real_host(url: str) -> str:
     internal_hosts = {"new-tab-page", "newtab", "blank"}
     if hostname in internal_hosts:
         return ""
-    return hostname
+    return extract_host_with_port(url) or ""
 
 
 # 可触发 modal/dropdown 副作用的事件类型（attach_signal 找触发 action 用）。

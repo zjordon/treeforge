@@ -202,10 +202,79 @@ def test_normalize_event_signals_defaults_empty():
 
 
 def test_normalize_event_signals_non_list_defaults_empty():
-    """signals 是非 list（异常输入）时应规整为空 list。"""
+    """signals 是非 list（异常输入）时应规整为空 list，不报错。"""
     payload = {
         "host": "x.com",
         "events": [{"type": "click", "timestamp": 0, "signals": "oops"}],
     }
     trace = adapt(payload, source="test")
     assert trace.events[0].signals == []
+
+
+# ---------------------------------------------------------------------------
+# host key 语义（S0b，issue #9）：端口限定 key 对齐 TreeWalker
+# ---------------------------------------------------------------------------
+
+
+def test_adapt_upgrades_bare_host_to_port_qualified_key():
+    """顶层 host 裸 hostname（老 captures 旧形）+ 事件 URL 带端口 → 升级 localhost_7780。
+
+    存量 localhost captures 的事件 URL 都是 http://localhost:7780/...，不改数据、
+    重蒸即落到新 key（issue #9 待办 1 的存量兼容路径）。
+    """
+    payload = {
+        "host": "localhost",
+        "events": [
+            {"type": "navigate", "timestamp": 0, "url": "http://localhost:7780/admin/dashboard/"},
+            {"type": "click", "timestamp": 500, "url": "http://localhost:7780/admin/sales/"},
+        ],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.host == "localhost_7780"
+
+
+def test_adapt_keeps_port_qualified_host_as_is():
+    """顶层 host 已是端口限定 key（新采集）→ 原样保留（幂等）。"""
+    payload = {
+        "host": "localhost_7780",
+        "events": [
+            {"type": "click", "timestamp": 0, "url": "http://localhost:7780/admin/"},
+        ],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.host == "localhost_7780"
+
+
+def test_adapt_payload_host_wins_over_different_site_url():
+    """事件 URL 与顶层 host 不同站（如登录跳转）→ 仍以顶层 host 为准。"""
+    payload = {
+        "host": "member.bilibili.com",
+        "events": [
+            {"type": "navigate", "timestamp": 0, "url": "https://passport.bilibili.com/login"},
+        ],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.host == "member.bilibili.com"
+
+
+def test_adapt_no_top_host_falls_back_to_port_qualified_url():
+    """顶层缺 host：URL 推断兜底也是端口限定 key。"""
+    payload = {
+        "events": [
+            {"type": "click", "timestamp": 0, "url": "http://localhost:7780/a"},
+        ],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.host == "localhost_7780"
+
+
+def test_adapt_no_port_host_unchanged():
+    """无端口回归：bilibili 等公网站点的 host 不受影响。"""
+    payload = {
+        "host": "member.bilibili.com",
+        "events": [
+            {"type": "click", "timestamp": 0, "url": "https://member.bilibili.com/platform/home"},
+        ],
+    }
+    trace = adapt(payload, source="test")
+    assert trace.host == "member.bilibili.com"

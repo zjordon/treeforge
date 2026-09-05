@@ -12,7 +12,7 @@ from harness.atomizer import (
     _registered_domain,
     _same_input_target,
 )
-from harness.models import TraceEvent
+from harness.models import Trace, TraceEvent
 
 
 def test_registered_domain_basic():
@@ -22,6 +22,47 @@ def test_registered_domain_basic():
     assert _registered_domain("bilibili.com") == "bilibili.com"
     assert _registered_domain("localhost") == "localhost"
     assert _registered_domain("") == ""
+
+
+def test_registered_domain_port_qualified_key_as_is():
+    """S0b（issue #9）：端口限定 key 原样返回——不按点号分段算出损坏 key。"""
+    assert _registered_domain("localhost_7780") == "localhost_7780"
+    # 127.0.0.1_7780 按点号分段会算出 "0.1_7780"（损坏），必须原样返回
+    assert _registered_domain("127.0.0.1_7780") == "127.0.0.1_7780"
+
+
+def test_atomize_port_url_segment_domain_is_port_qualified_key():
+    """S0b：localhost:7780 的事件 → segment.domain = localhost_7780（产物 key 链路源头）。"""
+    events = [
+        TraceEvent(
+            type="click",
+            selector=f"#btn{i}",
+            url="http://localhost:7780/admin/x",
+            timestamp=i * 500,
+        )
+        for i in range(6)
+    ]
+    trace = Trace(host="localhost_7780", events=events, track_id="t-1")
+    segs = atomizer.atomize(trace)
+    assert segs
+    assert all(s.domain == "localhost_7780" for s in segs)
+
+
+def test_atomize_bilibili_segment_domain_regression():
+    """无端口回归：member.bilibili.com 仍按 eTLD+1 归并到 bilibili.com。"""
+    events = [
+        TraceEvent(
+            type="click",
+            selector=f"#btn{i}",
+            url="https://member.bilibili.com/platform/upload",
+            timestamp=i * 500,
+        )
+        for i in range(6)
+    ]
+    trace = Trace(host="member.bilibili.com", events=events, track_id="t-2")
+    segs = atomizer.atomize(trace)
+    assert segs
+    assert all(s.domain == "bilibili.com" for s in segs)
 
 
 def test_filter_noise_drops_iframe_pageload():

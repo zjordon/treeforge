@@ -538,6 +538,17 @@ def test_prompt_quirks_rules_reference_auto_handling():
     )
 
 
+def test_prompt_rules_forbid_hardcoded_volatile_values():
+    """S0b（issue #9 待办 2）：易变结果值规则注入两个模板（共用 _RULES_BLOCK 拼装）。
+
+    证据：tasks/count-pending-reviews/_sop.md 曾把「N records found（本例为 5）」固化进卡
+    ——数据漂移后是错的，读型任务评测还会被 parrot 成阅读理解。
+    """
+    for tmpl in (distiller._DISTILL_PROMPT_TEMPLATE, distiller._TASK_PROMPT_TEMPLATE):
+        assert "易变结果值" in tmpl, "prompt 规则应显式点名「易变结果值」"
+        assert "以页面当前值为准" in tmpl, "确需举例时应要求标注「录制时示例，以页面当前值为准」"
+
+
 def test_distill_bucket_prompt_includes_consumer_context(bilibili_trace_payload):
     """P3.7 验收：真发 LLM 时，user message 应含消费端上下文（mock LLM，不真调）。"""
     bucket = _make_bucket(bilibili_trace_payload)

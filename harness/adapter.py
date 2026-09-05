@@ -17,9 +17,9 @@ import json
 import re
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
 
 from . import progress
+from .hostkey import bare_hostname, extract_host_with_port
 from .models import Trace, TraceEvent
 
 # 敏感字段名（值要脱敏）——大小写不敏感子串匹配
@@ -59,16 +59,6 @@ def _redact_value(field_hint: str, value: str | None) -> str | None:
     v = _EMAIL_RE.sub("<runtime-email>", value)
     v = _CARD_RE.sub("<runtime-payment-card>", v)
     return v
-
-
-def _detect_host_from_url(url: str) -> str | None:
-    if not url:
-        return None
-    try:
-        host = urlparse(url).hostname
-        return host.lower() if host else None
-    except Exception:  # noqa: BLE001
-        return None
 
 
 def _normalize_event(raw: dict[str, Any], fallback_idx: int) -> TraceEvent:
@@ -153,17 +143,30 @@ def adapt(payload: dict[str, Any], *, source: str = "<inline>") -> Trace:
     if not isinstance(raw_events, list):
         raise ValueError(f"trace 缺少 events 列表（source={source}）")
 
+    # host key 语义（S0b，issue #9）：端口限定（localhost:7780 → localhost_7780），
+    # 与 TreeWalker extract_host_with_port 逐字对齐——它是产物目录 / registry / 任务卡
+    # 共用的索引 key。顶层 host 字段是采集期写的，老 trace 是裸 hostname（丢了端口）；
+    # 事件 URL 带端口信息且与顶层同站时，升级为 URL 派生的端口限定 key（存量
+    # localhost captures 重蒸由此落到 localhost_7780/，不改 captures 数据）。
+    # 事件 URL 与顶层不同站（如登录跳转）时仍以顶层 host 为准。
     host = payload.get("host") or payload.get("domain")
-    if not host:
-        for ev in raw_events:
-            host = _detect_host_from_url(ev.get("url") or ev.get("href") or "")
-            if host:
-                break
+    host = str(host).lower().strip() if host else None
+    for ev in raw_events:
+        if not isinstance(ev, dict):
+            continue
+        key = extract_host_with_port(ev.get("url") or ev.get("href") or "")
+        if not key:
+            continue
+        if host is None:
+            host = key
+            break
+        if bare_hostname(key) == host:
+            host = key
+            break
     if not host:
         raise ValueError(
             f"无法确定 host：trace 既无顶层 host/domain，也无事件 url（source={source}）"
         )
-    host = str(host).lower().strip()
 
     events: list[TraceEvent] = []
     for i, raw in enumerate(raw_events):
