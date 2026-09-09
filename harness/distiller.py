@@ -234,6 +234,9 @@ _RULES_BLOCK = """# Rules
 - **产出语言：中文**（除非站点元素本身是英文，如 placeholder 文本）。所有说明文字、备注、quirks 描述用中文写，保持与站点语言一致。元素用途/可见文本保留站点原文。
 - Use OBSERVED element attributes and visible text from the evidence. Quote them verbatim where possible.
 - Do NOT invent selectors, attributes, or endpoints you didn't see. If unsure, say so explicitly.
+- **易变结果值不要写死**：计数 / 金额 / 日期 / 查询结果等随数据漂移的值（如 "N records \\
+found（本例为 5）"）固化进卡，数据一变就是错的，读型任务还会被 parrot 成阅读理解。 \\
+描述「去哪里读、怎么读」，不写「读到的值」；确需举例时显式标注「录制时示例，以页面当前值为准」。
 - If the evidence only contains CSS selectors (legacy trace format), extract any whitelist \\
 attributes embedded in them (e.g. `input[placeholder='x']` → `placeholder=x`), but PREFER \\
 describing what the element IS over reusing the selector syntax. Do NOT echo CSS selectors verbatim.

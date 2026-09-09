@@ -52,7 +52,8 @@ import json
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
+
+from harness.hostkey import extract_host_with_port
 
 # ---------------------------------------------------------------------------
 # 常量
@@ -150,11 +151,10 @@ def _ts_ms(step_meta: dict) -> int:
 
 
 def _host_from_url(url: str) -> str:
-    """从 url 提取主域名（host）。"""
+    """从 url 提取 host key（端口限定，S0b issue #9——与蒸馏产物 key 对齐）。"""
     if not url:
         return ""
-    host = urlparse(url).hostname or ""
-    return host.lower()
+    return extract_host_with_port(url) or ""
 
 
 # ---------------------------------------------------------------------------

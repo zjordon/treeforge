@@ -449,6 +449,41 @@ def test_distill_host_mode_no_traces_returns_400(tmp_path):
     assert "nope.com" in resp.json()["error"]
 
 
+# ---------------------------------------------------------------------------
+# S0b（issue #9）：host 模式收集的存量兼容双匹配
+# ---------------------------------------------------------------------------
+
+
+def test_collect_host_traces_dual_match_legacy_bare_hostname(tmp_path):
+    """请求端口限定 key 时双匹配存量裸 hostname captures；方向单一，不混其它端口服务。"""
+    import json as json_mod
+
+    from server.server import _collect_host_traces
+
+    caps = tmp_path / "caps"
+    for name, host in [
+        ("cap-legacy", "localhost"),  # 老采集：裸 hostname（顶层 host 丢端口）
+        ("cap-new", "localhost_7780"),  # 新采集：端口限定 key
+        ("cap-other-port", "localhost_5173"),  # 同机另一个服务，不该混入
+        ("cap-bili", "member.bilibili.com"),
+    ]:
+        d = caps / name
+        d.mkdir(parents=True)
+        (d / "trace.json").write_text(
+            json_mod.dumps({"host": host, "events": []}), encoding="utf-8"
+        )
+
+    def names(paths):
+        return {p.parent.name for p in paths}
+
+    # 新 key：收齐 新形 + 存量裸 hostname 旧形，不混 5173
+    assert names(_collect_host_traces(caps, "localhost_7780")) == {"cap-new", "cap-legacy"}
+    # 方向单一：请求裸 hostname 不收集新形 trace（localhost_7780 是另一个服务）
+    assert names(_collect_host_traces(caps, "localhost")) == {"cap-legacy"}
+    # 无端口 host：双匹配退化为精确匹配（回归不变）
+    assert names(_collect_host_traces(caps, "member.bilibili.com")) == {"cap-bili"}
+
+
 def test_distill_task_description_passthrough(tmp_path, monkeypatch):
     """trace_path 模式：task_description 透传进 start_distill_job。"""
     trace = tmp_path / "t.trace.json"

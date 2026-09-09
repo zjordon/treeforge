@@ -698,11 +698,12 @@ def test_extract_real_host_skips_new_tab_page():
 
 
 def test_extract_real_host_real_site():
-    """真实站点返回 hostname。"""
+    """真实站点返回端口限定 host key（S0b issue #9：localhost_8080，写进 trace 顶层 host）。"""
     from treeforge.capture.collector import _extract_real_host
 
     assert _extract_real_host("https://member.bilibili.com/platform/home") == "member.bilibili.com"
-    assert _extract_real_host("http://localhost:8080/") == "localhost"
+    assert _extract_real_host("http://localhost:8080/") == "localhost_8080"
+    assert _extract_real_host("http://localhost:7780/admin/") == "localhost_7780"
 
 
 async def test_collector_host_filled_on_real_page(tmp_path):

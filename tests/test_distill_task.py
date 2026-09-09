@@ -339,3 +339,117 @@ def test_pipeline_template_mode_skips_registry(bilibili_trace_payload, tmp_path)
     )
     assert result.ok is True
     assert not (out / "registry").exists()  # 模板模式不落 registry
+
+
+# ---------------------------------------------------------------------------
+# S0b（issue #9）：localhost:7780 → 端口限定 key，三处 key 一致
+# （skills 目录 / registry 文件名 / tasks/ 子目录）
+# ---------------------------------------------------------------------------
+
+
+def _localhost_7780_payload(bilibili_trace_payload: dict) -> dict:
+    """把 bilibili fixture 改造成 localhost:7780 站点（顶层 host 用存量裸 hostname 旧形）。"""
+    import copy
+
+    payload = copy.deepcopy(bilibili_trace_payload)
+    payload["host"] = "localhost"  # 存量 captures 的顶层 host（采集期只写裸 hostname）
+    for ev in payload["events"]:
+        if isinstance(ev, dict) and ev.get("url"):
+            ev["url"] = ev["url"].replace("https://member.bilibili.com", "http://localhost:7780")
+    return payload
+
+
+def test_pipeline_port_qualified_host_key_no_llm(bilibili_trace_payload, tmp_path):
+    """--no-llm：localhost:7780 trace → host 三件套 + 任务卡统一落 localhost_7780/。"""
+    from server.distill_api import run_distill_pipeline
+
+    trace_path = tmp_path / "cap777" / "trace.json"
+    trace_path.parent.mkdir()
+    trace_path.write_text(
+        json.dumps(_localhost_7780_payload(bilibili_trace_payload), ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    out = tmp_path / "skills"
+    result = run_distill_pipeline(
+        trace_paths=trace_path, output_dir=out, adapter_name="treewalker", no_llm=True
+    )
+    assert result.ok is True
+    host_dir = out / "domain-skills" / "localhost_7780"
+    assert (host_dir / "_sop.md").is_file()
+    assert not (out / "domain-skills" / "localhost").exists()  # 不再落裸 hostname 旧 key
+    # 跳 B：任务卡挂在新 key 下
+    assert result.task_dir is not None
+    assert result.task_dir == host_dir / "tasks" / str(result.task_slug)
+
+
+def test_pipeline_port_qualified_registry_key(bilibili_trace_payload, tmp_path):
+    """LLM 模式（mock）：registry 卡按端口限定 key 落盘（localhost_7780.json）。
+
+    「存量迁移两半缺一不可」的另一半：registry 若按裸 hostname 落盘，下一次增量蒸馏
+    load_card 找不到 prev，distill_version 会静默归 1（安全降级的静默失效形态）。
+    """
+    from harness.models import CapacityLabel
+    from server.distill_api import run_distill_pipeline
+
+    trace_path = tmp_path / "cap778" / "trace.json"
+    trace_path.parent.mkdir()
+    trace_path.write_text(
+        json.dumps(_localhost_7780_payload(bilibili_trace_payload), ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    def fake_classify(segments, use_llm=False):
+        return [
+            (seg, CapacityLabel(capacity="operate-site", description="站点操作"))
+            for seg in segments
+        ]
+
+    def fake_call_llm(prompt, **kwargs):
+        if "TASK-LEVEL" in prompt:
+            return (
+                json.dumps(
+                    {
+                        "task_slug": "count-reviews",
+                        "task_keywords": ["评论", "数量"],
+                        "sop_md": "# 流程",
+                        "selectors_md": "# Selectors",
+                        "quirks_md": "# Quirks",
+                    },
+                    ensure_ascii=False,
+                ),
+                {},
+            )
+        return (
+            json.dumps(
+                {
+                    "skill_name": "Localhost Site",
+                    "scope": "站点操作",
+                    "sop_md": "# 站点摘要",
+                    "selectors_md": "# Selectors",
+                    "quirks_md": "# Quirks",
+                },
+                ensure_ascii=False,
+            ),
+            {},
+        )
+
+    out = tmp_path / "skills"
+    with (
+        patch("harness.classifier.classify", fake_classify),
+        patch("harness.distiller.call_llm", side_effect=fake_call_llm),
+        # 钉死 LLM 开关：patch load 防 config.load() 从 .env 回填覆盖 patch 值
+        patch("harness.config.load", lambda: None),
+        patch("harness.config.LLM_KEY", "fake"),
+    ):
+        result = run_distill_pipeline(
+            trace_paths=trace_path, output_dir=out, adapter_name="treewalker"
+        )
+    assert result.ok is True
+    reg = out / "registry" / "localhost_7780.json"
+    assert reg.is_file(), "registry 卡应按端口限定 key 落盘"
+    data = json.loads(reg.read_text(encoding="utf-8"))
+    assert data["host"] == "localhost_7780"
+    assert not (out / "registry" / "localhost.json").exists()
+    # 三处 key 一致：任务卡同在新 key 下
+    assert (out / "domain-skills" / "localhost_7780" / "tasks" / "count-reviews").is_dir()

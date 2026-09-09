@@ -30,6 +30,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from harness import config
+from harness.hostkey import bare_hostname
 from server import distill_api
 from treeforge.capture.cdp_session import CdpSession
 from treeforge.capture.collector import Collector
@@ -270,11 +271,17 @@ def _collect_host_traces(captures_dir: Path | str, host: str) -> list[Path]:
     """扫 captures 收集指定 host 的全部 trace.json（host 模式累积蒸馏用）。
 
     损坏/无 host 字段的 trace 跳过（容错）。按目录名排序（确定性）。
+
+    【S0b 存量兼容·双匹配】老 captures 顶层 host 是裸 hostname（localhost），新 key 是
+    端口限定（localhost_7780）——按「新 key 或裸 hostname 旧形」双匹配，不改存量数据。
+    方向单一：请求裸 hostname（localhost）不收集新形 trace（localhost_7780 是另一个
+    本机服务，不混入）。ADAPT 会按事件 URL 把两者统一到端口限定 key，产物落点一致。
     """
     root = Path(captures_dir)
     out: list[Path] = []
     if not root.is_dir():
         return out
+    matched = {host, bare_hostname(host)}  # 无端口 host 两者相等 → 退化为精确匹配
     for child in sorted(root.iterdir()):
         tp = child / "trace.json"
         if not tp.is_file():
@@ -283,7 +290,7 @@ def _collect_host_traces(captures_dir: Path | str, host: str) -> list[Path]:
             data = json.loads(tp.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
-        if isinstance(data, dict) and data.get("host") == host:
+        if isinstance(data, dict) and data.get("host") in matched:
             out.append(tp)
     return out
 

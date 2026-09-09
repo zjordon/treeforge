@@ -100,6 +100,19 @@ uv run treeforge distill data/captures/<任务1>/trace.json data/captures/<任�
 同一任务不同时间段重录再蒸 → 任务卡**复用同 slug 覆盖**（prompt 注入现有任务卡清单，
 LLM 判定语义相同即复用），`_task.json` 的 `source_traces` 累积历次录制来源。
 
+### 蒸馏直装到消费仓库（TreeWalker）
+
+`--output` 直接指向消费仓库根即「蒸馏完成 = 安装完成」——产物落
+`<消费仓库>/domain-skills/<host_key>/`，TreeWalker 侧下一个 run 即读到，零拷贝：
+
+```bash
+uv run treeforge distill data/captures/<name>/trace.json --output /path/to/TreeWalker
+```
+
+host key 是端口限定的（`localhost:7780` → `localhost_7780`，与 TreeWalker
+`extract_host_with_port` 对齐）。提示：增量蒸馏用的 `registry/` 也会写在 output 下，
+消费仓库建议把 `registry/` 加进 `.gitignore`（运行态数据，不提交）。
+
 ### 三种子命令
 
 | 命令 | 用途 |
